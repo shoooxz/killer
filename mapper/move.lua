@@ -53,6 +53,13 @@ function mapper:move(dir)
 			dir = command
 		end
 	end
+	-- ostatecznie sprawdz czy wyjscie jest polaczone na sztywno w mecie
+	if not roomID then
+		command, roomID = self:getCommandViaMeta(dir)
+		if command then
+			dir = command
+		end
+	end
 	-- killer doors start
 	if self:doorExists(dir) then
 		send("open "..dir)
@@ -131,6 +138,13 @@ function mapper:getCommandViaDir(dir)
 				end
 			end
 		end
+	end
+end
+
+function mapper:getCommandViaMeta(dir)
+	if self.room.id then
+		local out = utils:split(getRoomUserData(self.room.id, dir),  "=")
+		return out[1], out[2]
 	end
 end
 

@@ -20,6 +20,7 @@ mapper.color2sector = {
 	["miasto"] = 272,
 	["wewnatrz"] = 259,
 	["podziemia"] = 272,
+	["laka"] = 258,
 }
 mapper.short2en = { --> mapper:getRoomViaExit, mapper:connectRooms
 	["n"]    = "north",

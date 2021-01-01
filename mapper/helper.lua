@@ -26,3 +26,30 @@ function mapper:helperGetExitsForComparison()
 	end
 	return output
 end
+
+function mapper:showConnected()
+	if self.room.id then
+		local connected = {
+			["n"] = getRoomUserData(self.room.id, "n"),
+			["s"] = getRoomUserData(self.room.id, "s"),
+			["w"] = getRoomUserData(self.room.id, "w"),
+			["e"] = getRoomUserData(self.room.id, "e"),
+			["nw"] = getRoomUserData(self.room.id, "nw"),
+			["ne"] = getRoomUserData(self.room.id, "ne"),
+			["sw"] = getRoomUserData(self.room.id, "sw"),
+			["se"] = getRoomUserData(self.room.id, "se"),
+			["d"] = getRoomUserData(self.room.id, "d"),
+			["u"] = getRoomUserData(self.room.id, "u"),
+		}
+		local out = {}
+		for k, v in pairs(connected) do
+			if v ~= "" then
+				table.insert(out, {
+					k,
+					v
+				})
+			end
+		end
+		printer:connectedInfo(out)
+	end
+end

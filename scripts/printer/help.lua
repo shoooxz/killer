@@ -1,5 +1,5 @@
 function printer:help()
-    self:title("Barsawia Pomoc")
+    self:title("Killer Pomoc")
     self:command("/opcje", "Ustawienia ui, mappera i skryptow")
     self:info("Ustawienia sa zapisane do pliku settings.lua w twoim katalogu profilu")
     self:command("/mapper", "Komendy do mappera")
@@ -8,7 +8,7 @@ function printer:help()
 end
 
 function printer:settings()
-    self:title("Barsawia Ustawienia")
+    self:title("Killer Ustawienia")
     self:command("/opcje szerokosc "..settings:get("mainWindowWidth"), "Szerokosc glownego okna w Mudlecie")
     self:command("/opcje wysokosc "..settings:get("mainWindowHeight"), "Wysokosc glownego okna w Mudlecie")
     self:command("/opcje mapper_szerokosc "..settings:get("mapperWidth"), "Szerokosc okna mappera")
@@ -31,7 +31,7 @@ function printer:settings()
 end
 
 function printer:scripts()
-    self:title("Barsawia Skrypty")
+    self:title("Killer Skrypty")
     self:command("/liaj_wyczysc", "Wyczysc mape Liaj (zmienia sie co apokalipse)")
     self:info("W przypadku poruszania sie na terenie puszczy Liaj wyjscia")
     self:info("generowane sa automatycznie")
@@ -59,7 +59,7 @@ function printer:scripts()
 end
 
 function printer:bowHelp()
-    self:title("Barsawia Lucznik")
+    self:title("Killer Lucznik")
     self:info("Lucznik to jeden z trybow dostepny w skryptach. Mozna go wlaczyc")
     self:info("przez szybkie menu oraz ustawic w /opcje aby aktywowal sie na starcie.")
     self:info("W momencie gdy tryb jest aktywny kombinacja klawiszy CTRL + (kierunek)")
@@ -72,7 +72,7 @@ function printer:bowHelp()
 end
 
 function printer:woodHelp()
-    self:title("Barsawia Drwal")
+    self:title("Killer Drwal")
     self:info("Drwal to jeden z trybow dostepny w skryptach. Mozna go wlaczyc")
     self:info("przez szybkie menu oraz ustawic w /opcje aby aktywowal sie na starcie.")
     self:info("W momencie gdy tryb jest aktywny '/' na klawiaturze numerycznej")
@@ -81,7 +81,7 @@ function printer:woodHelp()
 end
 
 function printer:minerHelp()
-    self:title("Barsawia Gornik")
+    self:title("Killer Gornik")
     self:section("Podstawowe wyposazenie to oskardzik i kilof z Ered Luin")
     self:info("Gornik to jeden z trybow dostepny w skryptach. Mozna go wlaczyc")
     self:info("przez szybkie menu oraz ustawic w /opcje aby aktywowal sie na starcie.")
@@ -93,7 +93,7 @@ function printer:minerHelp()
 end
 
 function printer:binds()
-    self:title("Barsawia Bindy")
+    self:title("Killer Bindy")
     self:command("/bind (komendy)", "Dodanie binda do aktualnej lokacji")
     self:info("Komendy powinny byc oddzielone hashem '#'")
     self:info("np. napij sie wody z fontanny#usmiechnij sie")
@@ -105,7 +105,7 @@ function printer:binds()
 end
 
 function printer:aliases()
-    self:title("Barsawia Aliasy")
+    self:title("Killer Aliasy")
     self:command("do", "dobadz bron z pokrowca")
     self:command("op", "opusc bron do pokrowca")
     self:command("wem", "wez monety z kontenera")
@@ -115,7 +115,7 @@ function printer:aliases()
 end
 
 function printer:mapper()
-    self:title("Barsawia Mapper")
+    self:title("Killer Mapper")
     self:section("Obszary:")
     self:command("/obszary", "Dostepny obszary oraz ich ID")
     self:command("/dodaj_obszar (nazwa)", "Dodanie nowego obszaru oraz lokacji startowej")
@@ -155,7 +155,13 @@ function printer:mapper()
     self:command("/lokacja (kierunek) (id)", "Stworz lokacje w tym kierunku z tym id")
     self:info("(Id 0 wygeneruje losowy numer pomieszczenia)")
     self:command("/bindy", "Komendy dla bindow do mapy")
-    self:command("/polacz (kierunek)", "Polacz obecna lokacje z lokacja w kierunku")
+    self:command("/polacz (kierunek) (specjalne)", "Polacz kierunek z przejsciem specjalnym")
+    self:info("(Przejscie specjalne musi juz ISTNIEC.")
+    self:info("/polacz n brama - przypisuje na stale kierunek N dla bramy")
+    self:info("Wykorzystujemy tylko wtedy gdy kierunki dwoch lokacji nie sa ulozone ")
+    self:info("w logiczny sposob na osi x i y)")
+    self:command("/odlacz (kierunek)", "Odlacz kierunek od przejscia specjalnego")
+    self:command("/polaczenia", "Wyswietla wszystkie polaczenia na lokacji")
     self:command("/poi (kierunek)", "Dodaj specjalne przejscie z `wyjscie` i kolorem poi")
     self:bottom()
 end
@@ -163,6 +169,12 @@ end
 function printer:roomInfo(arr)
     self:title("Aktualna lokacja")
     self:dumpArray(arr, 20, {"Nazwa", "Wartosc"})
+    self:bottom()
+end
+
+function printer:connectedInfo(arr)
+    self:title("Polaczenia lokacji")
+    self:dumpArray(arr, 11, {"Kierunek", "Polaczenie"})
     self:bottom()
 end
 

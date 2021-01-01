@@ -29,7 +29,15 @@ function mapper:addLine(dir)
 	if self.drawing and self:matchRose(dir) then
 		local command, roomID = self:getCommandViaDir(dir)
 		if command then
-			self:addCustomLine(self.room.id, roomID, command)
+			local dst = getRoomArea(roomID)
+			local src = getRoomArea(self.room.id)
+			if dst ~= src then
+				local c = self:convertCoords(dir)
+				local colors = getCustomEnvColorTable()
+				addCustomLine(self.room.id, {{c.x, c.y, c.z}}, command, "dot line", colors[getRoomEnv(roomID)], true)
+			else
+				self:addCustomLine(self.room.id, roomID, command)
+			end
 		end
 	end
 end
@@ -47,14 +55,34 @@ function mapper:generateRoom(from, to, dir, command)
 	return roomID
 end
 
-function mapper:connectViaDirection(dir)
-	if self.drawing and (self:matchRose(dir) or self:matchZ(dir)) then
-		roomID = self:getRoomViaCoords(dir)
-		if roomID then
-			self:connectRooms(self.room.id, roomID, dir)
-			printer:success("Polacz lokacje",
-				"Polaczono lokacje za pomoca "..dir.."!"
-			)
+function mapper:clearMeta(dir)
+	if self.room.id then
+		clearRoomUserDataItem(self.room.id, dir)
+		printer:success("Usuwam mete",
+			"Usunieto meta tag "..dir.."!"
+		)
+	end
+end
+
+function mapper:connectViaDirection(dir, spe)
+	if  self.drawing and (self:matchRose(dir) or self:matchZ(dir)) then 
+		if spe then
+			spe = spe:sub(2)
+			local exits = getSpecialExitsSwap(self.room.id)
+			if exits[spe] then
+				setRoomUserData(self.room.id, dir, spe.."="..exits[spe])
+				printer:success("Polacz lokacje",
+					"Polaczono lokacje za pomoca "..dir.." i "..spe.." z "..exits[spe].."!"
+				)
+			end
+		else
+			roomID = self:getRoomViaCoords(dir)
+			if roomID then
+				self:connectRooms(self.room.id, roomID, dir)
+				printer:success("Polacz lokacje",
+					"Polaczono lokacje za pomoca "..dir.."!"
+				)
+			end
 		end
 	end
 end
