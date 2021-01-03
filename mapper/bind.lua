@@ -50,8 +50,8 @@ function mapper:removeBinds()
 end
 
 function mapper:roomBinded()
-	if self.room.id then
-		local data = getAllRoomUserData(self.room.id)
+	if gmcp.Room.Info.num then
+		local data = getAllRoomUserData(gmcp.Room.Info.num)
 		if next(data) then
 			--display(mudlet.key)
 			local room = ""

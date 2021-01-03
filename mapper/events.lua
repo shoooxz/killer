@@ -20,8 +20,8 @@ function mapper:roomLoaded()
 			end
 		end
 		-- wejdz na lokacje i uzyj gmcp
-		if gmcpID ~= 0 and gmcpID ~= self.lastKnownID then
-			if self.drawing then
+		if gmcpID ~= 0 then --
+			if self.drawing and gmcpID ~= self.lastKnownID then
 				if self.draw then
 
 					if self.draw.special then
@@ -71,7 +71,7 @@ function mapper:roomLoaded()
 					end
 					if self.dir2door[command] then
 						if command == "u" then command = "up" end
-						if command == "d" then command = "down" end 
+						if command == "d" then command = "down" end
 						setDoor(self.draw.from, command, 2)
 					end
 					if mapper.color2sector[gmcp.Room.Info.sector] then
