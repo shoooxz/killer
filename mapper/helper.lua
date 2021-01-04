@@ -3,6 +3,9 @@ function mapper:helper()
 		-- porownaj wyjscia z gmcp z wyjsciami z mappera
 		local diff = utils:arrayDiff(self.gmcp.exits, self:helperGetExitsForComparison())
 		if next(diff) then
+			  for i=1, #diff do
+					self:addStub(diff[i])
+				end
 				tempTimer(0.5, function()
 					printer:error("Mapper Pomocnik",
 						"Nie zmapowano wyjsc: "..table.concat(diff, ", ")

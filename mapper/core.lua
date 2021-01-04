@@ -22,6 +22,13 @@ mapper.color2sector = {
 	["podziemia"] = 272,
 	["laka"] = 258,
 	["trawa"] = 258,
+	["las"] = 262,
+	["puszcza"] = 262,
+	["pole"] = 267,
+	["step"] = 258,
+	["gory"] = 271,
+	["jezioro"] = 268,
+	["rzeka"] = 268,
 }
 mapper.short2en = { --> mapper:getRoomViaExit, mapper:connectRooms
 	["n"]    = "north",

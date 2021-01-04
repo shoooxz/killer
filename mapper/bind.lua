@@ -1,21 +1,11 @@
-function mapper:setBoxBind()
+function mapper:setWaterBind(from)
 	if self.room.id then
-		setRoomUserData(self.room.id, "box", 1)
+		setRoomUserData(self.room.id, "water", from)
 		printer:success("Mapper Bindy",
-			"Bind `przeczytaj plakat` dodany do lokacji!"
+			"Bind `wodopoj` dodany do lokacji!"
 		)
 	end
 end
-
-function mapper:setDepositBind()
-	if self.room.id then
-		setRoomUserData(self.room.id, "deposit", 1)
-		printer:success("Mapper Bindy",
-			"Bind `popros o wydanie schowka` dodany do lokacji!"
-		)
-	end
-end
-
 
 function mapper:setBind(str)
 	if self.room.id and str then
@@ -58,14 +48,11 @@ function mapper:roomBinded()
 			if data.bind then
 				room = room..data.bind..";"
 			end
-			if data.box then
-				room = room.."przeczytaj plakat"..";"
-			end
 			if room ~= "" then
 				keybind:room(room)
 			end
-			if data.deposit then
-				keybind:deposit()
+			if data.water then
+				keybind:water(data.water)
 			end
 		end
 	end

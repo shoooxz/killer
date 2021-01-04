@@ -1,3 +1,9 @@
+function mapper:addStub(dir)
+	if self.room.id then
+		setExitStub(self.room.id, dir, true)
+	end
+end
+
 function mapper:addRoom(areaID, roomID, x, y, z)
 	addRoom(roomID)
 	setRoomCoordinates(roomID, x, y, z)
@@ -28,15 +34,20 @@ end
 function mapper:addLine(dir)
 	if self.drawing and self:matchRose(dir) then
 		local command, roomID = self:getCommandViaDir(dir)
+		local c = self:convertCoords(dir)
+		local colors = getCustomEnvColorTable()
 		if command then
 			local dst = getRoomArea(roomID)
 			local src = getRoomArea(self.room.id)
 			if dst ~= src then
-				local c = self:convertCoords(dir)
-				local colors = getCustomEnvColorTable()
 				addCustomLine(self.room.id, {{c.x, c.y, c.z}}, command, "dot line", colors[getRoomEnv(roomID)], true)
 			else
-				self:addCustomLine(self.room.id, roomID, command)
+					self:addCustomLine(self.room.id, roomID, command)
+			end
+		else
+			command, roomID = self:getCommandViaMeta(dir)
+			if command then
+				addCustomLine(self.room.id, {{c.x, c.y, c.z}}, command, "dot line", colors[getRoomEnv(roomID)], true)
 			end
 		end
 	end
@@ -65,7 +76,7 @@ function mapper:clearMeta(dir)
 end
 
 function mapper:connectViaDirection(dir, spe)
-	if  self.drawing and (self:matchRose(dir) or self:matchZ(dir)) then 
+	if  self.drawing and (self:matchRose(dir) or self:matchZ(dir)) then
 		if spe then
 			spe = spe:sub(2)
 			local exits = getSpecialExitsSwap(self.room.id)

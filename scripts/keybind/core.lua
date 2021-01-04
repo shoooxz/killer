@@ -24,6 +24,10 @@ keybind.conf = {
 		["modifier"] = {"Control"},
 		["key"] = "W",
 	},
+	["keybindWater"] = {
+		["modifier"] = {"Control"},
+		["key"] = "N",
+	},
 	["keybindLamp"] = {
 		["modifier"] = {"Control"},
 		["key"] = "4",

@@ -20,6 +20,12 @@ function keybindSupport()
 	send("wesprzyj")
 end
 
+function keybindWater(from)
+	if keybind.triggerCommand then
+		send(keybind.triggerCommand)
+	end
+end
+
 function keybindLamp()
 	send("napelnij lampe olejem")
 end
