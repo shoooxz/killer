@@ -27,6 +27,9 @@ function mapper:move(dir)
 				roomID = self:getRoomViaCoords(dir)
 				if roomID then
 					-- connect
+					if self.dir2door[dir] then
+						send("open "..dir) -- profilaktycznie??
+					end
 					self.draw = {}
 					self.draw.connect = true
 					self.draw.from = self.room.id
@@ -36,6 +39,9 @@ function mapper:move(dir)
 					return
 				else
 					-- jesli nie istnieje - wygeneruj nowa lokacje w evencie roomLoaded
+					if self.dir2door[dir] then
+						send("open "..dir) -- profilaktycznie??\
+					end
 					self.draw = {}
 					self.draw.new = true
 					self.draw.from = self.room.id
@@ -47,20 +53,23 @@ function mapper:move(dir)
 			end
 		end
 	end
+
 	-- jesli nie ma standardowego wyjscia
 	if not roomID then
 		command, roomID = self:getCommandViaDir(dir)
-		if command then
+		if command and roomID then
 			dir = command
 		end
 	end
+
 	-- ostatecznie sprawdz czy wyjscie jest polaczone na sztywno w mecie
 	if not roomID then
 		command, roomID = self:getCommandViaMeta(dir)
-		if command then
+		if command and roomID then
 			dir = command
 		end
 	end
+
 	-- killer doors start
 	if self:doorExists(dir) then
 		send("open "..dir)

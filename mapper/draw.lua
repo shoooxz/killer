@@ -4,6 +4,12 @@ function mapper:addStub(dir)
 	end
 end
 
+function mapper:removeStub(roomID, dir)
+	if roomID then
+		setExitStub(roomID, dir, false)
+	end
+end
+
 function mapper:addRoom(areaID, roomID, x, y, z)
 	addRoom(roomID)
 	setRoomCoordinates(roomID, x, y, z)
@@ -128,6 +134,7 @@ function mapper:addSpecialExitAndRoom(dir, command)
 			end
 			-- doors killers end
 			send(command)
+			self:removeStub(self.room.id, dir)
 		else
 			self.draw = {}
 			self.draw.from = self.room.id

@@ -31,7 +31,8 @@ function mapper:roomLoaded()
 						-- dodaj wyjscie specjalne
 						self:addSpecialExit(self.draw.from, roomID, self.draw.command)
 						self:addCustomLine(self.draw.from, roomID, self.draw.command)
-
+						self:removeStub(self.draw.from, self.draw.dir)
+						
 					elseif self.draw.new then
 
 						--  DRAW NORMAL NEW ROOM

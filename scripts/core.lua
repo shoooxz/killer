@@ -35,8 +35,12 @@ function scripts:prefix(str, color)
     resetFormat()
 end
 
-function scripts:dead()
-	send("ob cialo")
+function scripts:dead(who)
+	if string.find(who, "keton") or string.find(who, "rzewiec") then
+		send("exam drzewo")
+	else
+		send("exam cialo")
+	end
 end
 
 function scripts:beep()
