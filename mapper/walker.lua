@@ -4,14 +4,12 @@ function doSpeedWalk()
     --speedWalkDir
     --speedWalkPath
     --display(speedWalkDir)
-
     if not mapper.walker.going then
         mapper.walker.path = speedWalkDir
         mapper.walker.going = true
         mapper:speedwalk()
+        -- TODO obliczyc czas delay x ilosc lokacji
     end
-
-
 end
 function mapper:speedwalk()
     if self.walker.path[self.walker.step] then
@@ -57,6 +55,7 @@ function mapper:walkerMove(dir)
     end
     if roomID then
         send(dir)
+        send("herb") --- TODO Ogarnac alias
         self:center(roomID)
     else
         printer:error("Walker", "Chodzik wstrzymany!")

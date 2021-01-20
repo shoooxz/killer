@@ -16,8 +16,15 @@ mapper.gmcpNextLocation = nil -- zsiadz ze statku, wyjdz z dylizansu
 mapper.spe2dir = {} -- special exit dla dir
 mapper.dir2spe = {} -- dir dla special exit
 mapper.dir2door = {} -- dir dla drzwi
+mapper.walker = {
+	["step"] = 1,
+	["going"] = false,
+	["delay"] = 10,
+	["path"] = {},
+}
 mapper.color2sector = {
 	["miasto"] = 272,
+	["jaskinia"] = 272,
 	["wewnatrz"] = 259,
 	["podziemia"] = 272,
 	["kopalnia"] = 272,
@@ -27,10 +34,13 @@ mapper.color2sector = {
 	["las"] = 262,
 	["puszcza"] = 262,
 	["pole"] = 267,
+	["plaza"] = 267,
 	["step"] = 258,
 	["gory"] = 271,
 	["jezioro"] = 268,
 	["rzeka"] = 268,
+	["ocean"] = 268,
+	["bagno"] = 261,
 }
 mapper.short2en = { --> mapper:getRoomViaExit, mapper:connectRooms
 	["n"]    = "north",
@@ -79,12 +89,6 @@ mapper.shortMirror = { --> events.lua
 	["sw"]   = "ne",
 	["u"]    = "d",
 	["d"]    = "u",
-}
-mapper.walker = {
-	["step"] = 1,
-	["going"] = false,
-	["delay"] = 1,
-	["path"] = {},
 }
 
 function mapper:init()

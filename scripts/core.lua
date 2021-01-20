@@ -35,11 +35,18 @@ function scripts:prefix(str, color)
     resetFormat()
 end
 
-function scripts:dead(who)
-	if string.find(who, "keton") or string.find(who, "rzewiec") then
+function scripts:dead(str)
+	who = str:lower()
+	if string.find(who, "keton") or string.find(who, "drzewiec") then
 		send("exam drzewo")
+	elseif string.find(who, "szkielet") then
+		send("exam kup")
+		send("get klej kup; get mon kup")
 	else
 		send("exam cialo")
+	end
+	if string.find(who, "krzykacz") then
+		send("get klej cialo")
 	end
 end
 
