@@ -1,3 +1,4 @@
+--test
 function mapper:getAreaTable()
 	local out = {}
 	for name, id in pairs(getAreaTable()) do

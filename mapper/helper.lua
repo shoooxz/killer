@@ -6,11 +6,13 @@ function mapper:helper()
 			  for i=1, #diff do
 					self:addStub(diff[i])
 				end
+				--[[
 				tempTimer(0.5, function()
 					printer:error("Mapper Pomocnik",
 						"Nie zmapowano wyjsc: "..table.concat(diff, ", ")
 					)
 				end)
+				]]--
 		end
 	end
 end
