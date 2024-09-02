@@ -1,4 +1,7 @@
 function mapper:move(dir)
+	--[[if not next(gmcp) then
+		send(dir)
+	end]]--
 	keybind.show = true
 	self:walkerStop()
 	-- czy istnieje lokacja w tamta strone w exitach

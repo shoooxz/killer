@@ -23,6 +23,7 @@ function loadObjects(force)
         "scripts/inventory/repair",
         "scripts/character/core",
         "scripts/character/tables",
+        "scripts/roller/roller",
         "scripts/gag",
         "scripts/box",
         "scripts/miner",
@@ -41,7 +42,7 @@ function loadObjects(force)
         require(obj[i])
     end
     loaded = true
-    printer:success("Skrypty Barsawii", "Zaladowane!")
+    printer:success("Skrypty Killer", "Zaladowane!")
 end
 function reloadObjects()
     package.loaded.init = nil
