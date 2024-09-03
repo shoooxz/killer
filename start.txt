@@ -1,0 +1,14 @@
+start
+forteca
+config hints
+config gmcp
+config group prompt
+config show position
+config memtime
+config num_skill
+config show_condition
+config exp num
+config codepage nopol
+config spellcolour styl1
+
+prompt  [%h/%Hhp %xxp %v/%Vmv] %m %y 

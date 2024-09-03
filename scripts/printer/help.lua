@@ -253,13 +253,24 @@ end
 
 function printer:roller(arr)
     self:title("Roller")
+    self:line("Im dluzej rollujesz - maxy sie zwiekszaja.", self.sectionColor)
+    self:line("Perfect oznacza trafienie maxa w sesji.", self.sectionColor)
     self:space()
     if next(arr) then
-        self:tableRow({10,10,10}, {"Stat", "Obecnie", "Max"}, arr)
+        self:tableRow({10,10,10, 10, 10}, {"Stat", "Obecnie", "Max", "Target", "Perfect"}, arr)
     end
     self:bottom(false, true)
 end
 
+function printer:rollerHelp()
+    self:title("Roller Help")
+    self:command("/roller_target sum=466, str=75, dex=75, con=75, int=75, wis=75, cha=75", "Copy")
+    self:info("Atrybuty ustawione sa na srednie ustawienia")
+    self:info("Musisz chwile poobserwowac mozliwe maxy za pomoca: ")
+    self:command("/roller_start", "Sprawdza mozliwe statystyki")
+    self:command("/roller_stop", "Zatrzymuje szukanie")
+    self:bottom()
+end
 
 -- Bree
 --  karczma usciskac +

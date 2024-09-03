@@ -1,8 +1,19 @@
 roller = roller or {}
 roller.maxStats = roller.maxStats or {}
 roller.running = false
+roller.targetStats = { sum = 466, str=75, wis=75, dex=75, con=75, cha=75, int=75}
 
 -- by Laszlo
+function roller:help()
+  printer:rollerHelp()
+end
+
+--^/roller_target sum=(.*), str=(.*), dex=(.*), con=(.*), int=(.*), wis=(.*), cha=(.*).*$
+function roller:target(sum, str, dex, con, int, wis, cha)
+  self.targetStats = { sum = tonumber (sum), str=tonumber (str), wis=tonumber (wis), dex=tonumber (dex), con=tonumber (con), cha=tonumber (cha), int=tonumber (int)}
+  printer:one("Roller", "Ustawione", False)
+end
+
 
 function roller:start()
   self.running = true
@@ -21,97 +32,93 @@ function roller:catch(multimatches)
   local con = tonumber ( multimatches[3][2] )
   local cha = tonumber ( multimatches[3][3] )
   local sum = str + int + wis + dex + con + cha
+  local localStats = { sum = sum, str = str, int = int, wis = wis, dex = dex, con = con, cha = cha}
+
   --getting highest rolls
-  if roller.maxStats["str"] == nil or roller.maxStats["str"] < str then roller.maxStats["str"] = str end
-  if roller.maxStats["int"] == nil or roller.maxStats["int"] < int then roller.maxStats["int"] = int end
-  if roller.maxStats["wis"] == nil or roller.maxStats["wis"] < wis then roller.maxStats["wis"] = wis end
-  if roller.maxStats["dex"] == nil or roller.maxStats["dex"] < dex then roller.maxStats["dex"] = dex end
-  if roller.maxStats["con"] == nil or roller.maxStats["con"] < con then roller.maxStats["con"] = con end
-  if roller.maxStats["cha"] == nil or roller.maxStats["cha"] < cha then roller.maxStats["cha"] = cha end
-  if roller.maxStats["sum"] == nil or roller.maxStats["sum"] < sum then roller.maxStats["sum"] = sum end
+  if self.maxStats["str"] == nil or self.maxStats["str"] < str then self.maxStats["str"] = str end
+  if self.maxStats["int"] == nil or self.maxStats["int"] < int then self.maxStats["int"] = int end
+  if self.maxStats["wis"] == nil or self.maxStats["wis"] < wis then self.maxStats["wis"] = wis end
+  if self.maxStats["dex"] == nil or self.maxStats["dex"] < dex then self.maxStats["dex"] = dex end
+  if self.maxStats["con"] == nil or self.maxStats["con"] < con then self.maxStats["con"] = con end
+  if self.maxStats["cha"] == nil or self.maxStats["cha"] < cha then self.maxStats["cha"] = cha end
+  if self.maxStats["sum"] == nil or self.maxStats["sum"] < sum then self.maxStats["sum"] = sum end
+
+  -- validate
+  local targetStats = {}
+  local targetImprove = {}
+  local match = 0
+  for name, _ in pairs(localStats) do
+    if localStats[name] >= self.targetStats[name] then
+      match = match + 1
+      targetStats[name] = {"green", localStats[name]}
+    else
+      targetStats[name] = {"red", localStats[name]}
+    end
+    if localStats[name] ==  self.maxStats[name] then
+      -- place to improve
+      targetImprove[name] = {"green", "Yes"}
+    else
+      targetImprove[name] = {"red", "No"}
+    end
+  end
 
   local render = {
     {
       "Suma",
       sum,
-      roller.maxStats["sum"]
+      self.maxStats["sum"],
+      targetStats["sum"],
+      targetImprove["sum"]
     },
     {
       "STR",
       str,
-      roller.maxStats["str"],
+      self.maxStats["str"],
+      targetStats["str"],
+      targetImprove["str"]
     },
     {
       "DEX",
       dex,
-      roller.maxStats["dex"],
+      self.maxStats["dex"],
+      targetStats["dex"],
+      targetImprove["dex"]
     },
     {
       "CON",
       con,
-      roller.maxStats["con"],
+      self.maxStats["con"],
+      targetStats["con"],
+      targetImprove["con"]
     },
     {
       "INT",
       int,
-      roller.maxStats["int"],
+      self.maxStats["int"],
+      targetStats["int"],
+      targetImprove["int"]
     },
     {
       "WIS",
       wis,
-      roller.maxStats["wis"],
+      self.maxStats["wis"],
+      targetStats["wis"],
+      targetImprove["wis"]
     },
     {
       "CHA",
       cha,
-      roller.maxStats["cha"],
+      self.maxStats["cha"],
+      targetStats["cha"],
+      targetImprove["cha"]
     }
   }
 
   printer:roller(render)
 
-  roller.targetStats = { sum = 468, str=80, wis=80, dex=80, con=80, cha=80, int=83}
-
-
-
-  local localStats = { sum = sum, str = str, int = int, wis = wis, dex = dex, con = con, cha = cha}
-
-
-
-  function roller.FormatTargetStats()
-      local text = "\n<DarkSlateGrey>Target:"
-      for stat, value in pairs(roller.targetStats) do
-          text = text .. string.format("\n %s >= %s [%s]", tostring(stat), tostring(value), tostring(roller.maxStats[stat]))
-      end
-      cecho(text)
-  end
-
-  function roller.ColorNumber(number, color)
-      return color .. tostring(number) .. "<DarkSlateGrey>"
-  end
-
-  local continue = false
-
-  function roller.ValidateRoll(name)
-
-      if roller.targetStats[name] == nil then
-          return false
-      end
-
-      if localStats[name] >= roller.targetStats[name] then
-          if localStats[name] < roller.maxStats[name] then
-              cecho(string.format("\n<DarkSlateGrey>%s: %s [max: %s]", name, roller.ColorNumber(localStats[name], "<red>"), tostring(roller.maxStats[name])))
-          else
-              cecho(string.format("\n<DarkSlateGrey>%s: %s [max: %s]", name, roller.ColorNumber(localStats[name], "<green>"), tostring(roller.maxStats[name])))
-          end
-          return false
-      end
-      return true
-  end
-
   if self.running then
     tempTimer(0.3, function()
-      if sum >= 470 or int >= roller.maxStats["int"] then
+      if match == 7 then
         scripts:beep()
       else
         send("nie")
@@ -134,8 +141,5 @@ function roller:catch(multimatches)
     ]]--
     end )
   end
-
-
-
 
 end

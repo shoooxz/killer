@@ -534,6 +534,46 @@
 					</regexCodePropertyList>
 				</Trigger>
 			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Roller</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="yes" isPerlSlashGOption="yes" isColorizerTrigger="no" isFilterTrigger="yes" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Catch</name>
+					<script>roller:catch(multimatches)</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>4</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>STR: (\d\d).*INT: (\d\d)</string>
+						<string>WIS: (\d\d).*DEX: (\d\d)</string>
+						<string>CON: (\d\d).*CHA: (\d\d)</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
 		</TriggerGroup>
 		<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 			<name>Mapper</name>
@@ -1071,7 +1111,7 @@ send("as")</script>
 			<packageName></packageName>
 			<time>00:03:59.000</time>
 		</Timer>
-		<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+		<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 			<name>New timer</name>
 			<script>send("who")</script>
 			<command></command>
@@ -1598,6 +1638,41 @@ printer:settings()</script>
 					<command></command>
 					<packageName></packageName>
 					<regex>^carve$</regex>
+				</Alias>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>Roller</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>^/roller_start$</name>
+					<script>roller:start()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/roller_start$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>^/roller_stop$</name>
+					<script>roller:stop()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/roller_stop$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>^/roller_help$</name>
+					<script>roller:help()</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/roller_help$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>^/roller_target$</name>
+					<script>roller:target(matches[2], matches[3], matches[4],matches[5],matches[6],matches[7],matches[8])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/roller_target sum=(\d+), str=(\d+), dex=(\d+), con=(\d+), int=(\d+), wis=(\d+), cha=(\d+).*$</regex>
 				</Alias>
 			</AliasGroup>
 		</AliasGroup>

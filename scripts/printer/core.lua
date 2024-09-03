@@ -127,7 +127,12 @@ function printer:tableRow(size, header, arr)
 		end
 		for index, value in pairs(arr[row]) do
 			out = out.."<"..self.borderColor..">|"..string.rep(" ", 1)
-			out = out.."<"..color..">"..value..string.rep(" ", size[index]-string.len(value))
+			if type(value) == "table" then
+				-- if array color it
+				out = out.."<"..value[1]..">"..value[2]..string.rep(" ", size[index]-string.len(value[2]))
+			else
+				out = out.."<"..color..">"..value..string.rep(" ", size[index]-string.len(value))
+			end
 		end
 
 		out = out..string.rep(" ", fill).."<"..self.borderColor..">|\n"
