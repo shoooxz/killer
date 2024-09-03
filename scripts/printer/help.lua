@@ -251,6 +251,15 @@ function printer:gps(arr)
     self:bottom(false, true)
 end
 
+function printer:roller(arr)
+    self:title("Roller")
+    self:space()
+    if next(arr) then
+        self:tableRow({10,10,10}, {"Stat", "Obecnie", "Max"}, arr)
+    end
+    self:bottom(false, true)
+end
+
 
 -- Bree
 --  karczma usciskac +

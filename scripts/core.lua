@@ -51,7 +51,7 @@ function scripts:dead(str)
 end
 
 function scripts:beep()
-	playSoundFile(getMudletHomeDir().. [[/barsawia/beep.wav]])
+	playSoundFile(getMudletHomeDir().. [[/killer/beep.wav]])
 end
 
 function scripts:unbindEvents()

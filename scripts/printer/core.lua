@@ -109,6 +109,42 @@ function printer:command(name, desc)
 	)
 end
 
+function printer:tableRow(size, header, arr)
+	local len = 0
+	for i in pairs(size) do
+		len = len + size[i]+2 -- kreska + spacja odzielajace kazdy cell
+	end
+
+	local fill = self.length-len+1
+	local out = ""
+
+	table.insert(arr, 1, header)
+
+	for row in pairs(arr) do
+		local color = self.textColor
+		if row == 1 then
+			color = self.commandColor
+		end
+		for index, value in pairs(arr[row]) do
+			out = out.."<"..self.borderColor..">|"..string.rep(" ", 1)
+			out = out.."<"..color..">"..value..string.rep(" ", size[index]-string.len(value))
+		end
+
+		out = out..string.rep(" ", fill).."<"..self.borderColor..">|\n"
+
+		if row < #arr then
+			out = out..self:getHr()
+		end
+
+	end
+
+
+
+
+
+	cecho(out)
+end
+
 function printer:desc(name, desc)
 	local len = self.length-string.len(name)-string.len(desc)-3-self.tabLength*2 -- -3  2 spacje i myslnik
 	cecho(
@@ -219,6 +255,13 @@ function printer:hr()
 		"<"..self.borderColor..">|"..string.rep(" ", self.tabLength)..string.rep("-", len)..string.rep(" ", self.tabLength)..
 		"<"..self.borderColor..">|\n"
 	)
+end
+
+function printer:getHr()
+	local len = self.length-self.tabLength*2
+	return
+		"<"..self.borderColor..">|"..string.rep(" ", self.tabLength)..string.rep("-", len)..string.rep(" ", self.tabLength)..
+		"<"..self.borderColor..">|\n"
 end
 
 function printer:errorLine(msg)
