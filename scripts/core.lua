@@ -17,6 +17,29 @@ function scripts:init()
 	setMainWindowSize(settings:get("mainWindowWidth"), settings:get("mainWindowHeight"))
 end
 
+--komenda /start
+function scripts:start(index)
+	local arr = {
+		"config hints",
+		"config gmcp",
+		"config group prompt",
+		"config show position",
+		"config memtime",
+		"config num_skill",
+		"config show_condition",
+		"config exp num",
+		"config codepage nopol",
+		"config spellcolour styl1",
+		"prompt  [%h/%Hhp %xxp %v/%Vmv] %m %y [%r] %e"
+	}
+	if arr[index] then
+		greeting_timer_id = tempTimer(2, function()
+			send(arr[index])
+			self:start(index+1)
+		end)
+  end
+end
+
 function scripts:loaded()
 	send('opcje szerokosc 0', false)
 	send('opcje sortowanie +', false)

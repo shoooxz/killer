@@ -32,9 +32,8 @@ function miner:num5()
 end
 
 function miner:pick()
-	send("sp")
-	send("opusc "..self.toolDown[profile:get("miner")]..";dobadz drugiego kilofa;napelnij lampe olejem")
-	send("kuj "..self.dir.." sciane")
+  send("get all")
+	send("min")
 end
 
 function miner:slash()
