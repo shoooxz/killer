@@ -19,29 +19,22 @@ mode.buttonStyleActive = [[
 -- kazda z klas powinna posiadac .active = false
 -- kazda z klas powinna byc zdeklarowana w order i exec
 mode.order = {
-	"bow",
-	"wood",
 	"miner",
+	"herbalist"
 }
 mode.exec = {
-	["bow"] = {
-		["name"] = "Lucznik",
-		["func"] = function()
-			mode:active("bow", "Opis i dostepne komendy /lucznik")
-		end,
-	},
-	["wood"] = {
-		["name"] = "Drwal",
-		["func"] = function()
-			mode:active("wood", "Opis i dostepne komendy /drwal")
-		end,
-	},
 	["miner"] = {
 		["name"] = "Gornik",
 		["func"] = function()
 			mode:active("miner", "Opis i dostepne komendy /gornik")
 		end,
 	},
+	["herbalist"] = {
+		["name"] = "Zielarz",
+		["func"] = function()
+			mode:active("herbalist", "Opis i dostepne komendy /zielarz")
+		end,
+	}
 }
 mode.button = {}
 

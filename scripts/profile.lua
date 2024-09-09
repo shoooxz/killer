@@ -2,41 +2,34 @@ profile = profile or {}
 profile.file = nil
 profile.list = profile.list or {}
 profile.func = {
-	["gornik"] = function(val)
-		val = tonumber(val)
-		if miner:toolExists(val) then
-			profile.list.miner = val
+	["jedzenie"] = function(val)
+			profile.list.food = val
 			profile:save()
-		else
-			printer:one("Opcje", "ID narzedzia nie istnieje")
-		end
+	end,
+	["woda"] = function(val)
+			profile.list.water = val
+			profile:save()
 	end,
 	["pojemnik"] = function(val)
-		val = tonumber(val)
-		if inventory:bagExists(val) then
 			profile.list.bag = val
 			profile:save()
-		else
-			printer:one("Opcje", "ID pojemnika nie istnieje")
-		end
 	end,
-	["styl"] = function(val)
-		val = tonumber(val)
-		if inventory:styleExists(val) then
-			profile.list.style = val
+	["mh"] = function(val)
+			profile.list.mh = val
 			profile:save()
-		else
-			printer:one("Opcje", "ID stylu nie istnieje")
-		end
 	end,
-	["bron"] = function(val)
-		val = tonumber(val)
-		if inventory:weaponExists(val) then
-			profile.list.weapon = val
+	["oh"] = function(val)
+			if val == "0" then
+				profile.list.oh = ""
+			else
+				profile.list.oh = val
+			end
 			profile:save()
-		else
-			printer:one("Opcje", "ID broni nie istnieje")
-		end
+	end,
+	["chodzik"] = function(val)
+		  val = tonumber(val)
+			profile.list.walker = val
+			profile:save()
 	end,
 	["tryb"] = function(val)
 		val = tonumber(val)
@@ -49,27 +42,12 @@ profile.func = {
 		else
 			printer:one("Opcje", "Podany tryb nie istnieje")
 		end
-	end,
-	["filtr_bron"] = function(val)
-		if val == "0" then
-			profile.list.filter_weapon = 0
-			profile:save()
-			return
-		end
-		local arr = utils:split(val, ",")
-		for i=1, #arr do
-			if not inventory.filter:weaponExists(arr[i]) then
-				printer:one("Opcje", "ID "..arr[i].." filtru broni nie istnieje")
-				return
-			end
-		end
-		profile.list.filter_weapon = arr
-		profile:save()
-	end,
+	end
 }
 
 function profile:init(name)
 	if not name then return false end
+	self.name = name
 	local msg = name..", profil zostal zaladowany, mozesz go modyfikowac w /opcje"
 	self.file = getMudletHomeDir().."/"..name..".lua"
 	self.last = name
@@ -77,13 +55,14 @@ function profile:init(name)
 		table.load(self.file, self.list)
 	else
 		local default = {
-			["miner"] = 1,
-			["bag"] = 1,
-			["style"] = 1,
-			["weapon"] = 1,
-			["filter_weapon"] = 0,
+			["bag"] = "torba",
+			["mh"] = "miecz",
+			["oh"] = "",
 			["stats_progress"] = 0,
 			["mode"] = 0,
+			["walker"] = 1,
+			["water"] = "buklak",
+			["food"] = "racja"
 		}
 		self:save(default)
 		self.list = default
@@ -110,6 +89,7 @@ function profile:set(name, val)
 	end
 end
 
+-- /opcje [opccja] [value]
 function profile:change(match)
 	if match then
 		local func, arg = match[2], match[3]

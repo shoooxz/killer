@@ -14,6 +14,7 @@ function scripts:init()
 	settings:init()
 	footer:init()
 	mode:init()
+	state:init()
 	setMainWindowSize(settings:get("mainWindowWidth"), settings:get("mainWindowHeight"))
 end
 

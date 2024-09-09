@@ -19,7 +19,6 @@ mapper.dir2door = {} -- dir dla drzwi
 mapper.walker = {
 	["step"] = 1,
 	["going"] = false,
-	["delay"] = 10,
 	["path"] = {},
 }
 mapper.color2sector = {
@@ -327,7 +326,7 @@ function mapper:ui(mapperWidth)
 		x = 0,
 		y = 0,
 		width = "100%",
-		height = -footer.height
+		height = -state.lsheight
 	}, self.mapperContainer)
 end
 

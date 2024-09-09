@@ -13,7 +13,7 @@ function doSpeedWalk()
 end
 function mapper:speedwalk()
     if self.walker.path[self.walker.step] then
-        tempTimer(self.walker.delay, function()
+        tempTimer(profile:get("walker"), function()
             if self.walker.going then
                 self:walkerMove(self.walker.path[self.walker.step])
                 self.walker.step = self.walker.step +1

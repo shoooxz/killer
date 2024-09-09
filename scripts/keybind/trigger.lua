@@ -27,6 +27,8 @@ function keybind:water(from)
 		self.triggerCommand = "drink "..from
 		printer:bind(self.conf.keybindWater.modifier, self.conf.keybindWater.key, "napij sie")
 		self.show = false
+		send("drink "..from..";drink "..from..";drink "..from)
+		send("fill "..profile:get("water"))
 	end
 end
 
