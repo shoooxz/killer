@@ -118,3 +118,22 @@ function utils:concat(arr, glue)
         return arr
     end
 end
+
+utils.plremove = {
+  ['ą'] = 'a',
+  ['ć'] = 'c',
+  ['ę'] = 'e',
+  ['ł'] = 'l',
+  ['ń'] = 'n',
+  ['ó'] = 'o',
+  ['ś'] = 's',
+  ['ź'] = 'z',
+  ['ż'] = 'z'
+};
+
+function utils:replacePolish(text)
+  for k,v in pairs(self.plremove) do
+    text = text:gsub(k,v);
+  end
+  return text;
+end

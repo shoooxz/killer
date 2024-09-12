@@ -3,16 +3,12 @@ state.lsheight = 500
 state.team = {}
 
 function state:init()
-
   state:createLocationState()
-
-
   scripts.events["gmcpRoomPeople"] = registerAnonymousEventHandler("gmcp.Room.People", self:gmcpRoomPeople())
 
 end
 
 function state:createLocationState()
-
   ls = Geyser.MiniConsole:new({
     name="locationState",
     x=-settings:get("mapperWidth"), y=-self.lsheight,
@@ -22,75 +18,146 @@ function state:createLocationState()
     fontSize = 15,
     width=settings:get("mapperWidth"), height=self.lsheight,
   })
-
-  local test = "bonk"
-
-  ls:clear()
-  ls:cechoLink("<green>>>", [[state:link("]] .. test .. [[")]], "", true)
 end
 
-function state:link(id)
-
-  echo(id)
-
+function state:rescue(name)
+  send("rescue "..name)
 end
-
-
 
 function state:gmcpRoomPeople()
-  --[[
-  People = { {
-    enemy = "   ",
-    is_fighting = false,
-    name = "Meier"
-  },
-  ]]--
-    --echo(gmcp.Room.People[1].name)
   return function()
 
     ls:clear()
-    for k, v in pairs(gmcp.Char.Group.members) do
-      state.team[v.name] = v
-      state.team[v.name].mv = state:getMove(state.team[v.name].mv)
-      state.team[v.name].hp = state:getHealth(state.team[v.name].hp)
+    local me = {}
+    local mate = {}
+    local npc = {}
+    --[[
+    enemy = "Giraz ogrodnik",
+    is_fighting = true,
+    name = "Meier"
+    ]]
+    local enemy = {}
 
-      local test = "bonk"
-      ls:cechoLink("<green>>>", [[state:link("]] .. test .. [[")]], "", true)
-      ls:cecho(v.name..'\n')
+    local loc = gmcp.Room.People
 
+    for _, v in pairs(gmcp.Char.Group.members) do
+      local obj = v
+      -- convert data
+      obj.mv = state:getMove(obj.mv)
+      obj.hp = state:getHealth(obj.hp)
+      obj.is_fighting = false
+      obj.tank = false
 
+      for i, p in pairs(gmcp.Room.People) do
+        -- jesli ktoras z osob w lokacji atakuje kogos z teamu
+        if p.enemy == obj.name then
+          -- staje sie enemy
+          table.insert(enemy, p)
+          loc[i] = nil
+          -- a dany obiekt tankiem
+          obj.tank = true
+        elseif p.name == obj.name then
+            loc[i] = nil
+        end
+      end
+      -- order objects
+      if obj.name == profile.name then
+        me = obj
+        me.name = "JA"
+        state.myroom = me.room
+      else
+        if obj.is_npc then
+          table.insert(npc, obj)
+        else
+          table.insert(mate, obj)
+        end
+      end
     end
 
+    -- print all    me > mates > npc
+    state:printTeamMember(me)
+    for _, v in pairs(mate) do
+      state:printTeamMember(v)
+    end
+    for _, v in pairs(npc) do
+      state:printTeamMember(v)
+    end
+    -- enemy
+    for _, v in pairs(enemy) do
+      state:printEnemy(v)
+    end
+    -- neutral
+    for _, v in pairs(loc) do
+      state:printNeutral(v)
+    end
 
   end
+end
 
+function state:printNeutral(obj)
+  obj.name = utils:replacePolish(obj.name)
+  ls:echo("   ")
+  ls:echo(obj.name)
+  ls:echo("\n")
+end
+
+function state:printEnemy(obj)
+  obj.name = utils:replacePolish(obj.name)
+  ls:echo("   ")
+  ls:echo(obj.name)
+  ls:echo("\n")
+end
+
+function state:getNameColor(obj)
+  if obj.room ~= state.myroom then
+    return "<dark_slate_blue>"
+  else
+    return "<white>"
+  end
+end
+
+function state:printTeamMember(obj)
+  obj.name = utils:replacePolish(obj.name)
+  if obj.name == "JA" then
+    ls:echo("   ")
+  else
+    ls:cechoLink("<white>(<green>R<white>)", [[state:rescue("]] .. obj.name .. [[")]], "", true)
+  end
+  local tank = "[ ]"
+  if obj.tank then
+    tank = "<white>[<orange>T<white>]"
+  end
+  ls:cecho(tank.." "..obj.hp.." "..obj.mv.." "..self:getNameColor(obj)..obj.name)
+  ls:echo("\n")
 end
 
 function state:getHealth(state)
   local man = {
-    ["żadnych śladów"] = 8,
-    ["zadrapania"] = 7,
-    ["lekkie rany"] = 6,
-    ["średnie rany"] = 5,
-    ["ciężkie rany"] = 4,
-    ["ogromne rany"] = 3,
-    ["ledwo stoi"] = 2,
-    ["umiera"] = 1
+    ["żadnych śladów"] =        "<green>#######",
+    ["zadrapania"] =            "<green>###### ",
+    ["lekkie rany"] =           "<green>#####  ",
+    ["średnie rany"] =          "<yellow>####   ",
+    ["ciężkie rany"] =          "<yellow>###    ",
+    ["ogromne rany"] =          "<red>##     ",
+    ["ledwo stoi"] =            "<red>#      ",
+    ["umiera"] =                "<red>       "
   }
   local construct = {
-    ["żadnych śladów"] = 8,
-    ["zadrapania"] = 7,
-    ["lekkie uszkodzenia"] = 6,
-    ["średnie uszkodzenia"] = 5,
-    ["ciężkie uszkodzenia"] = 4,
-    ["ogromne uszkodzenia"] = 3,
-    ["ledwo stoi"] = 2,
-    ["unieruchomiony"] = 1
+    ["żadnych śladów"] =        "<green>#######",
+    ["zadrapania"] =            "<green>###### ",
+    ["lekkie uszkodzenia"] =    "<green>#####  ",
+    ["średnie uszkodzenia"] =   "<yellow>####   ",
+    ["ciężkie uszkodzenia"] =   "<yellow>###    ",
+    ["ogromne uszkodzenia"] =   "<red>##     ",
+    ["ledwo stoi"] =            "<red>#      ",
+    ["unieruchomiony"] =        "<red>       "
   }
+  local left = "<white>["
+  local right = "<white>]"
   if man[state] then
-    return man[state]
+    return left..man[state]..right
   elseif construct[state] then
-    return construct[state]
+    return left..construct[state]..right
   else
     printer:one("State", "Podane zycie w gmcp nie istnieje")
     return 0
@@ -99,29 +166,53 @@ end
 
 function state:getMove(state)
   local man = {
-    ["wypoczęty"] = 5,
-    ["lekko zmęczony"] = 4,
-    ["zmęczony"] = 3,
-    ["bardzo zmęczony"] = 2,
-    ["zamęczony"] = 1
+    ["wypoczęty"] =         "<pale_green>#####",
+    ["lekko zmęczony"] =    "<pale_green>#### ",
+    ["zmęczony"] =          "<khaki>###  ",
+    ["bardzo zmęczony"] =   "<khaki>##   ",
+    ["zamęczony"] =         "<indian_red>#    ",
   }
   local woman = {
-    ["wypoczęta"] = 5,
-    ["lekko zmęczona"] = 4,
-    ["zmęczona"] = 3,
-    ["bardzo zmęczona"] = 2,
-    ["zamęczona"] = 1
+    ["wypoczęta"] =         "<pale_green>#####",
+    ["lekko zmęczona"] =    "<pale_green>#### ",
+    ["zmęczona"] =          "<khaki>###  ",
+    ["bardzo zmęczona"] =   "<khaki>##   ",
+    ["zamęczona"] =         "<indian_red>#    ",
   }
+  local left = "<white>["
+  local right = "<white>]"
   if man[state] then
-    return man[state]
+    return left..man[state]..right
   elseif woman[state] then
-    return woman[state]
+    return left..woman[state]..right
   else
     printer:one("State", "Podane zmeczenie w gmcp nie istnieje")
     return 0
   end
 end
 
+
+--[[
+},
+People = { {
+    enemy = "Giraz ogrodnik",
+    is_fighting = true,
+    name = "Meier"
+  }, {
+    enemy = "   ",
+    is_fighting = false,
+    name = "Krasnoludzkie dziecko"
+  }, {
+    enemy = "Meier",
+    is_fighting = true,
+    name = "Giraz ogrodnik"
+  }, {
+    enemy = "   ",
+    is_fighting = false,
+    name = "Krasnoludzkie dziecko"
+  } }
+]]--
+  --echo(gmcp.Room.People[1].name)
 
 --[[
 
