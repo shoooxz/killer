@@ -137,3 +137,21 @@ function utils:replacePolish(text)
   end
   return text;
 end
+
+function utils:uniqueTable(Table)
+    local EndTable = {}
+    for i, v in pairs(Table) do
+        if not table.find(EndTable, v) then
+            table.insert(EndTable, v)
+        end
+    end
+    return EndTable
+end
+
+function utils:shallowCopy(t)
+  local t2 = {}
+  for k,v in pairs(t) do
+    t2[k] = v
+  end
+  return t2
+end

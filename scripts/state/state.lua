@@ -1,6 +1,7 @@
 state = state or {}
 state.lsheight = 500
 state.team = {}
+state.groupNaming = {"B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "Q", "W", "V", "X", "Y", "Z"}
 
 function state:init()
   state:createLocationState()
@@ -37,22 +38,41 @@ function state:gmcpRoomPeople()
     name = "Meier"
     ]]
     local enemy = {}
+    local attacking = {}
+    local loc = utils:shallowCopy(gmcp.Room.People)
+    local namingInc = 1
 
-    local loc = gmcp.Room.People
-
-    for _, v in pairs(gmcp.Char.Group.members) do
+    for index, v in pairs(gmcp.Char.Group.members) do
       local obj = v
       -- convert data
       obj.mv = state:getMove(obj.mv)
       obj.hp = state:getHealth(obj.hp)
       obj.is_fighting = false
       obj.tank = false
+      obj.attackers = ""
+
+      -- index abcdefg for the team
+      if obj.name == profile.name then
+        obj.index = "A"
+      else
+        obj.index =  state.groupNaming[namingInc]
+        namingInc = namingInc+1
+      end
 
       for i, p in pairs(gmcp.Room.People) do
-        -- jesli ktoras z osob w lokacji atakuje kogos z teamu
+         -- jesli osoba na lokacji jest osoba z teamu
+        if p.name == obj.name then
+          -- ustal, kogo atakuje
+          if not attacking[p.enemy] then
+            attacking[p.enemy] = ""
+          end
+          attacking[p.enemy] = attacking[p.enemy]..obj.index..","
+        end
+          -- jesli ktoras z osob w lokacji atakuje kogos z teamu
         if p.enemy == obj.name then
           -- staje sie enemy
           table.insert(enemy, p)
+          obj.attackers = obj.attackers..#enemy..","
           loc[i] = nil
           -- a dany obiekt tankiem
           obj.tank = true
@@ -83,8 +103,8 @@ function state:gmcpRoomPeople()
       state:printTeamMember(v)
     end
     -- enemy
-    for _, v in pairs(enemy) do
-      state:printEnemy(v)
+    for i, v in pairs(enemy) do
+      state:printEnemy(i, v, attacking[v.name])
     end
     -- neutral
     for _, v in pairs(loc) do
@@ -101,10 +121,15 @@ function state:printNeutral(obj)
   ls:echo("\n")
 end
 
-function state:printEnemy(obj)
+function state:printEnemy(i, obj, att)
   obj.name = utils:replacePolish(obj.name)
   ls:echo("   ")
-  ls:echo(obj.name)
+  ls:cecho("<white>[<white>"..self:twoSpaceNumber(i).."<white>] ")
+  ls:cecho("<ansi_magenta>"..obj.name)
+  if att then
+    -- usun ostatni przecinek
+    ls:cecho("<red> << <white>["..att:sub(1, -2).."]")
+  end
   ls:echo("\n")
 end
 
@@ -123,11 +148,12 @@ function state:printTeamMember(obj)
   else
     ls:cechoLink("<white>(<green>R<white>)", [[state:rescue("]] .. obj.name .. [[")]], "", true)
   end
-  local tank = "[ ]"
-  if obj.tank then
-    tank = "<white>[<orange>T<white>]"
+  local index = "<white>[<white> "..obj.index.."<white>]"
+  ls:cecho(index.." "..obj.hp.." "..obj.mv.." "..self:getNameColor(obj)..obj.name)
+  if obj.attackers ~= "" then
+    -- usun ostatni przecinek
+    ls:cecho("<red> << <white>["..obj.attackers:sub(1, -2).."]")
   end
-  ls:cecho(tank.." "..obj.hp.." "..obj.mv.." "..self:getNameColor(obj)..obj.name)
   ls:echo("\n")
 end
 
@@ -188,6 +214,14 @@ function state:getMove(state)
   else
     printer:one("State", "Podane zmeczenie w gmcp nie istnieje")
     return 0
+  end
+end
+
+function state:twoSpaceNumber(i)
+  if string.len(i) == 1 then
+    return " "..i
+  else
+    return i
   end
 end
 
