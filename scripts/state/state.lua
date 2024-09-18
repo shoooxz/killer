@@ -2,11 +2,33 @@ state = state or {}
 state.lsheight = 500
 state.team = {}
 state.groupNaming = {"B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "Q", "W", "V", "X", "Y", "Z"}
+state.iTeamColor = "gold"
+state.iEnemyColor = "light_coral"
+state.enemyHP = ""
 
 function state:init()
   state:createLocationState()
   scripts.events["gmcpRoomPeople"] = registerAnonymousEventHandler("gmcp.Room.People", self:gmcpRoomPeople())
+end
 
+function state:catchEnemyHP(hp)
+  local plman = {
+    ["zadnych sladow"]="żadnych śladów",
+    ["srednie rany"]="średnie rany",
+    ["ciezkie rany"]="ciężkie rany"
+  }
+  local plcons = {
+    ["zadnych sladow"]="żadnych śladów",
+    ["srednie uszkodzenia"]="średnie uszkodzenia",
+    ["ciezkie uszkodzenia"]="ciężkie uszkodzenia"
+  }
+  if plman[hp] then
+    state.enemyHP = plman[hp]
+  elseif plcons[hp] then
+    state.enemyHP = plcons[hp]
+  else
+    state.enemyHP = hp
+  end
 end
 
 function state:createLocationState()
@@ -41,6 +63,7 @@ function state:gmcpRoomPeople()
     local attacking = {}
     local loc = utils:shallowCopy(gmcp.Room.People)
     local namingInc = 1
+    local targetColor = {}
 
     for index, v in pairs(gmcp.Char.Group.members) do
       local obj = v
@@ -66,13 +89,17 @@ function state:gmcpRoomPeople()
           if not attacking[p.enemy] then
             attacking[p.enemy] = ""
           end
-          attacking[p.enemy] = attacking[p.enemy]..obj.index..","
+          -- jesli to ja
+          if obj.index == "A" then
+            targetColor[p.enemy] = "red"
+          end
+          attacking[p.enemy] = attacking[p.enemy].."<"..state.iTeamColor..">"..obj.index.."<white>,"
         end
           -- jesli ktoras z osob w lokacji atakuje kogos z teamu
         if p.enemy == obj.name then
           -- staje sie enemy
           table.insert(enemy, p)
-          obj.attackers = obj.attackers..#enemy..","
+          obj.attackers = obj.attackers.."<"..self.iEnemyColor..">"..#enemy.."<white>,"
           loc[i] = nil
           -- a dany obiekt tankiem
           obj.tank = true
@@ -104,7 +131,7 @@ function state:gmcpRoomPeople()
     end
     -- enemy
     for i, v in pairs(enemy) do
-      state:printEnemy(i, v, attacking[v.name])
+      state:printEnemy(i, v, attacking[v.name], targetColor[v.name])
     end
     -- neutral
     for _, v in pairs(loc) do
@@ -121,14 +148,20 @@ function state:printNeutral(obj)
   ls:echo("\n")
 end
 
-function state:printEnemy(i, obj, att)
+function state:printEnemy(i, obj, att, targetColor)
   obj.name = utils:replacePolish(obj.name)
   ls:echo("   ")
-  ls:cecho("<white>[<white>"..self:twoSpaceNumber(i).."<white>] ")
-  ls:cecho("<ansi_magenta>"..obj.name)
+  ls:cecho("<white>[<white><"..state.iEnemyColor..">"..self:twoSpaceNumber(i).."<white>] ")
+  if not targetColor then
+    targetColor = "light_coral"
+  else
+    -- jesli moj target, pobierz z triggera hp
+    ls:cecho(state:getHealth(state.enemyHP).." ")
+  end
+  ls:cecho("<"..targetColor..">"..obj.name)
   if att then
     -- usun ostatni przecinek
-    ls:cecho("<red> << <white>["..att:sub(1, -2).."]")
+    ls:cecho("<rosy_brown> << <white>["..att:sub(1, -2).."]")
   end
   ls:echo("\n")
 end
@@ -148,11 +181,11 @@ function state:printTeamMember(obj)
   else
     ls:cechoLink("<white>(<green>R<white>)", [[state:rescue("]] .. obj.name .. [[")]], "", true)
   end
-  local index = "<white>[<white> "..obj.index.."<white>]"
+  local index = "<white>[<white> <"..self.iTeamColor..">"..obj.index.."<white>]"
   ls:cecho(index.." "..obj.hp.." "..obj.mv.." "..self:getNameColor(obj)..obj.name)
   if obj.attackers ~= "" then
     -- usun ostatni przecinek
-    ls:cecho("<red> << <white>["..obj.attackers:sub(1, -2).."]")
+    ls:cecho("<rosy_brown> << <white>["..obj.attackers:sub(1, -2).."]")
   end
   ls:echo("\n")
 end
