@@ -2,6 +2,10 @@ profile = profile or {}
 profile.file = nil
 profile.list = profile.list or {}
 profile.func = {
+	["cel"] = function(val)
+			profile.list.sub = val
+			profile:save()
+	end,
 	["jedzenie"] = function(val)
 			profile.list.food = val
 			profile:save()
@@ -59,10 +63,11 @@ function profile:init(name)
 			["mh"] = "miecz",
 			["oh"] = "",
 			["stats_progress"] = 0,
-			["mode"] = 0,
+			["mode"] = 1,
 			["walker"] = 1,
 			["water"] = "buklak",
-			["food"] = "racja"
+			["food"] = "racja",
+			["sub"] = "Link"
 		}
 		self:save(default)
 		self.list = default
@@ -70,6 +75,7 @@ function profile:init(name)
 	end
 	tempTimer(.3, function ()
 		printer:one("Profil", msg)
+		state.sub = profile:get("sub")
 		if self.list.mode > 0 then
 			mode.exec[mode.order[self.list.mode]].func()
 		end

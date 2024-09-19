@@ -1,7 +1,7 @@
 state = state or {}
 state.lsheight = 500
 state.team = {}
-state.groupNaming = {"B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "R", "S", "T", "Q", "W", "V", "X", "Y", "Z"}
+state.groupNaming = {"b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "q", "w", "v", "x", "y", "z"}
 state.iTeamColor = "gold"
 state.iEnemyColor = "light_coral"
 state.enemyHP = ""
@@ -43,22 +43,22 @@ function state:createLocationState()
   })
 end
 
-function state:rescue(name)
-  send("rescue "..name)
+function state:orderTeam(order, skipSub)
+  for _, v in pairs(state.team) do
+    if skipSub and (v.name == state.sub) then else
+      send("order "..v.name.." "..order)
+    end
+  end
 end
 
 function state:gmcpRoomPeople()
   return function()
+    --expandAlias("lua gmcp.Char.Skills")
 
     ls:clear()
+    state.team = {}
     local me = {}
-    local mate = {}
     local npc = {}
-    --[[
-    enemy = "Giraz ogrodnik",
-    is_fighting = true,
-    name = "Meier"
-    ]]
     local enemy = {}
     local attacking = {}
     local loc = utils:shallowCopy(gmcp.Room.People)
@@ -76,7 +76,7 @@ function state:gmcpRoomPeople()
 
       -- index abcdefg for the team
       if obj.name == profile.name then
-        obj.index = "A"
+        obj.index = "a"
       else
         obj.index =  state.groupNaming[namingInc]
         namingInc = namingInc+1
@@ -90,7 +90,7 @@ function state:gmcpRoomPeople()
             attacking[p.enemy] = ""
           end
           -- jesli to ja
-          if obj.index == "A" then
+          if obj.index == "a" then
             targetColor[p.enemy] = "red"
           end
           attacking[p.enemy] = attacking[p.enemy].."<"..state.iTeamColor..">"..obj.index.."<white>,"
@@ -116,14 +116,14 @@ function state:gmcpRoomPeople()
         if obj.is_npc then
           table.insert(npc, obj)
         else
-          table.insert(mate, obj)
+          table.insert(state.team, obj)
         end
       end
     end
 
     -- print all    me > mates > npc
     state:printTeamMember(me)
-    for _, v in pairs(mate) do
+    for _, v in pairs(state.team) do
       state:printTeamMember(v)
     end
     for _, v in pairs(npc) do
@@ -143,8 +143,10 @@ end
 
 function state:printNeutral(obj)
   obj.name = utils:replacePolish(obj.name)
-  ls:echo("   ")
-  ls:echo(obj.name)
+  ls:cechoLink("<white>(<red>K<white>)", [[send("kill ]]..obj.name..[["); state:orderTeam("ass")]], "", true)
+  ls:cecho(" <slate_grey>Order: ")
+  ls:cechoLink("<white><<red>K<white>>", [[send("order ]]..self.sub.." kill "..obj.name..[[; ass")]], "", true)
+  ls:echo(" "..obj.name)
   ls:echo("\n")
 end
 
@@ -161,7 +163,7 @@ function state:printEnemy(i, obj, att, targetColor)
   ls:cecho("<"..targetColor..">"..obj.name)
   if att then
     -- usun ostatni przecinek
-    ls:cecho("<rosy_brown> << <white>["..att:sub(1, -2).."]")
+    ls:cecho("<rosy_brown> ← <white>["..att:sub(1, -2).."]")
   end
   ls:echo("\n")
 end
@@ -174,18 +176,32 @@ function state:getNameColor(obj)
   end
 end
 
+function state:setSub(name)
+  printer:one("Druzyna", "Cel rozkazow ustawiony na "..name)
+  self.sub = name
+end
+
 function state:printTeamMember(obj)
   obj.name = utils:replacePolish(obj.name)
   if obj.name == "JA" then
-    ls:echo("   ")
+    ls:cechoLink("<white><<green>R<white>>", [[send("order ]]..self.sub.." rescue "..profile.name..[[")]], "", true)
   else
-    ls:cechoLink("<white>(<green>R<white>)", [[state:rescue("]] .. obj.name .. [[")]], "", true)
+    ls:cechoLink("<white>(<green>R<white>)", [[send("rescue ]]..obj.name..[[")]], "", true)
   end
   local index = "<white>[<white> <"..self.iTeamColor..">"..obj.index.."<white>]"
-  ls:cecho(index.." "..obj.hp.." "..obj.mv.." "..self:getNameColor(obj)..obj.name)
+  ls:cecho(index.." "..obj.hp.." "..obj.mv.." "..self:getNameColor(obj))
+  if obj.name == "JA" then
+    ls:echo(obj.name)
+  else
+    if self.sub == obj.name then
+      ls:echo("*")
+    end
+    ls:cechoLink(obj.name, [[state:setSub("]] .. obj.name .. [[")]], "", true)
+  end
+
   if obj.attackers ~= "" then
     -- usun ostatni przecinek
-    ls:cecho("<rosy_brown> << <white>["..obj.attackers:sub(1, -2).."]")
+    ls:cecho("<rosy_brown> ← <white>["..obj.attackers:sub(1, -2).."]")
   end
   ls:echo("\n")
 end

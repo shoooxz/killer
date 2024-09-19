@@ -20,6 +20,7 @@ function printer:settings()
     self:command("/opcje chodzik "..profile:get("walker"), "Opoznienie chodzika")
     self:command("/opcje woda "..profile:get("water"), "Pojemnik na wode")
     self:command("/opcje jedzenie "..profile:get("food"), "Jedzenie")
+    self:command("/opcje cel "..profile:get("sub"), "Domyslny cel rozkazow")
     self:bottom()
 end
 
