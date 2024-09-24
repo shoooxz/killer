@@ -4,38 +4,42 @@ footer.baseFunc = {
 	[1] = {
 		["name"] = "Stand",
 		["func"] = function()
-			send("stand")
-			state:teamOrder("stand")
+			 send("stand")
+			 state:wakeTeam()
+			 state:orderTeam("stand")
 		end,
 		["style"] = ""
 	},
 	[2] = {
 		["name"] = "Rest",
 		["func"] = function()
-			send("rest")
-			state:teamOrder("rest")
+			 state:orderTeam("rest")
+			 send("rest")
 		end,
 		["style"] = ""
 	},
 	[3] = {
 		["name"] = "Sleep",
 		["func"] = function()
+		 	state:orderTeam("sleep")
 			send("sleep")
-			state:teamOrder("sleep")
 		end,
 		["style"] = ""
 	},
 	[4] = {
-		["name"] = "Dupa",
+		["name"] = "Learn",
 		["func"] = function()
-			echo("Sraka")
+			send("learn")
+			state:orderTeam("learn")
 		end,
 		["style"] = ""
 	},
 	[5] = {
-		["name"] = "Dupa",
+		["name"] = "Jablon",
 		["func"] = function()
-			echo("Sraka")
+			for i = 1, 25 do
+			  send("zerwij jablko; get jablko")
+			end
 		end,
 		["style"] = ""
 	},

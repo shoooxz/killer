@@ -1,6 +1,15 @@
 multi = multi or {}
 multi.group = multi.group or {}
 
+function multi:processOrder(order)
+  -- learn, jesli ktos rozkazuje ci learn, odpal dodatkowo auto learn
+  if order ==  "learn" then
+    learn.auto = true
+  end
+  send(order)
+
+end
+
 --(.*) bedzie teraz chodzil za toba.
 function multi:add(name)
   self.group[name] = name

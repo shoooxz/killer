@@ -43,6 +43,12 @@ function state:createLocationState()
   })
 end
 
+function state:wakeTeam()
+  for _, v in pairs(state.team) do
+      send("wake "..v.name)
+  end
+end
+
 function state:orderTeam(order, skipSub)
   for _, v in pairs(state.team) do
     if skipSub and (v.name == state.sub) then else

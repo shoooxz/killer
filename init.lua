@@ -29,6 +29,7 @@ function loadObjects(force)
         "scripts/box",
         "scripts/miner",
         "scripts/herbalist",
+        "scripts/learn",
         "mapper/core",
         "mapper/area",
         "mapper/helper",
