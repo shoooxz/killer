@@ -1,5 +1,5 @@
 footer = footer or {}
-footer.height = 90
+footer.height = 150
 footer.baseFunc = {
 	[1] = {
 		["name"] = "Stand",
@@ -79,41 +79,31 @@ footer.baseFunc = {
 		["style"] = ""
 	},
 }
-
+footer.container = {}
+footer.overlay = {}
+footer.buttons = {}
 
 
 function footer:init()
+	-- pozniej moze to przerzucic do opcji
+	character.warriorEnabled = true
+	character.necroEnabled = true
+	-----------------------------------------------------
 	self.width = settings:get("mainWindowWidth")-settings:get("mapperWidth")-10
 	self:createUI()
 end
 
 function footer:createUI()
 	setBorderBottom(self.height)
-	MyButtons = {}
 
-	-- create a label for the entire margin, for now
-	MyButtons.Top = Geyser.Label:new({
-	  name = "MyButtons.Top",
+	footer.overlay = Geyser.Label:new({
+	  name = "MyButtons.Overlay",
 	  x = 0, y = -self.height,
 	  width = self.width,
 	  height = self.height,
 	})
 
-	-- create a horizontal box to organise the buttons equally
-	MyButtons.TopHBox = Geyser.HBox:new({
-	  name = "MyButtons.TopHBox",
-	  x = 0, y = 0,
-	  width = "100%",
-	  height = "100%",
-	},MyButtons.Top)
-
-	-- add some buttons to the HBox using a Geyser label
-	for i=1,10 do
-		  MyButtons["MyButton"..i] = Geyser.Label:new({
-		    name = "MyButtons.Button"..i,
-		  },MyButtons.TopHBox)
-		  MyButtons["MyButton"..i]:echo("<center>"..footer.baseFunc[i]["name"])
-			MyButtons["MyButton"..i]:setStyleSheet([[
+	footer:createButtons("Basic", footer.baseFunc, 100, false, [[
 				background-color: rgba(135,206,250,100);
 				border-style: solid;
 				border-width: 1px;
@@ -121,9 +111,73 @@ function footer:createUI()
 				border-radius: 5px;
 				margin: 5px;
 				qproperty-wordWrap: true;
-				padding: 10px;
+				padding: 0px;
+	]])
+
+	if character.warriorEnabled then
+		footer:createButtons("Warrior", character.warrior, 0, footer:fastSkillCallback(),  [[
+					background-color: #905923;
+					border-style: solid;
+					border-width: 1px;
+					border-color: white;
+					border-radius: 5px;
+					margin: 5px;
+					qproperty-wordWrap: true;
+					padding: 0px;
 			]])
-			MyButtons["MyButton"..i]:setFontSize(15)
-			MyButtons["MyButton"..i]:setClickCallback(footer.baseFunc[i]["func"])
+	end
+
+	if character.necroEnabled then
+		footer:createButtons("Necro", character.necro, 50, footer:fastSpellCallback(), [[
+					background-color: #9400d3;
+					border-style: solid;
+					border-width: 1px;
+					border-color: white;
+					border-radius: 5px;
+					margin: 5px;
+					qproperty-wordWrap: true;
+					padding: 0px;
+			]])
+	end
+end
+
+function footer:fastSpellCallback()
+	return function(i)
+		send("c `"..profile:get("k"..i).."`")
+	end
+end
+
+function footer:fastSkillCallback()
+	return function()
+		echo('sraka')
+	end
+end
+
+function footer:setFastSpellLabel(i, name)
+	footer.buttons["MyButtonNecro"..i]:echo("<center>"..name)
+end
+
+function footer:createButtons(name, data, y, func, style)
+	footer.container[name] = Geyser.HBox:new({
+		name = "MyButtons.TopHBox"..name,
+		x = 0, y = y,
+		width = "100%",
+		height = 50,
+		color = "black",
+		fgColor = "black"
+	}, footer.overlay)
+	for i=1,10 do
+			footer.buttons["MyButton"..name..i] = Geyser.Label:new({
+				name = "MyButtons.Button"..name..i,
+			}, footer.container[name])
+			footer.buttons["MyButton"..name..i]:echo("<center>"..data[i]["name"])
+			footer.buttons["MyButton"..name..i]:setStyleSheet(style)
+			footer.buttons["MyButton"..name..i]:setFontSize(12)
+			local callback = data[i]["func"]
+			if func then
+				callback = function() func(i) end
+			end
+			footer.buttons["MyButton"..name..i]:setClickCallback(callback)
+			-- data[i]["func"]
 	end
 end

@@ -234,20 +234,22 @@ function mapper:convertExits(arr)
 	self.spe2dir = {}
 	self.dir2door = {}
 	local output = {}
-	for i = 1, #arr do
-		if arr[i].dir then
-			output[i] = arr[i].dir:lower()
-			if arr[i].name ~= "" then
-				self.dir2spe[output[i]] = arr[i].name:lower()
-				self.spe2dir[arr[i].name:lower()] = output[i]
-			end
-			if arr[i].door then
-				self.dir2door[output[i]] = true
-				if output[i] == "u" then
-					self.dir2door["up"] = true
+	if arr then
+		for i = 1, #arr do
+			if arr[i].dir then
+				output[i] = arr[i].dir:lower()
+				if arr[i].name ~= "" then
+					self.dir2spe[output[i]] = arr[i].name:lower()
+					self.spe2dir[arr[i].name:lower()] = output[i]
 				end
-				if output[i] == "d" then
-					self.dir2door["down"] = true
+				if arr[i].door then
+					self.dir2door[output[i]] = true
+					if output[i] == "u" then
+						self.dir2door["up"] = true
+					end
+					if output[i] == "d" then
+						self.dir2door["down"] = true
+					end
 				end
 			end
 		end

@@ -49,6 +49,10 @@ function state:wakeTeam()
   end
 end
 
+function state:orderSub(order)
+  send("order "..state.sub.." "..order)
+end
+
 function state:orderTeam(order, skipSub)
   for _, v in pairs(state.team) do
     if skipSub and (v.name == state.sub) then else

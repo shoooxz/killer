@@ -44,6 +44,7 @@ function mapper:roomBinded()
 		local data = getAllRoomUserData(gmcp.Room.Info.num)
 		if next(data) then
 			--display(mudlet.key)
+			--display(data)
 			local room = ""
 			if data.bind then
 				room = room..data.bind..";"

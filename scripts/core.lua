@@ -30,7 +30,7 @@ function scripts:start(index)
 		"config show_condition",
 		"config exp num",
 		"config codepage nopol",
-		"config spellcolour styl1",
+		"config spellcolour styl3",
 		"prompt  [%h/%Hhp %xxp %v/%Vmv] %m %y [%r] %e"
 	}
 	if arr[index] then

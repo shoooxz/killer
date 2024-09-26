@@ -2,6 +2,56 @@ profile = profile or {}
 profile.file = nil
 profile.list = profile.list or {}
 profile.func = {
+	["k1"] = function(val)
+			profile.list.k1 = val
+			footer:setFastSpellLabel(1, val);
+			profile:save()
+	end,
+	["k2"] = function(val)
+			profile.list.k2 = val
+			footer:setFastSpellLabel(2, val)
+			profile:save()
+	end,
+	["k3"] = function(val)
+			profile.list.k3 = val
+			footer:setFastSpellLabel(3, val)
+			profile:save()
+	end,
+	["k4"] = function(val)
+			profile.list.k4 = val
+			footer:setFastSpellLabel(4, val)
+			profile:save()
+	end,
+	["k5"] = function(val)
+			profile.list.k5 = val
+			footer:setFastSpellLabel(5, val)
+			profile:save()
+	end,
+	["k6"] = function(val)
+			profile.list.k6 = val
+			footer:setFastSpellLabel(6, val)
+			profile:save()
+	end,
+	["k7"] = function(val)
+			profile.list.k7 = val
+			footer:setFastSpellLabel(7, val)
+			profile:save()
+	end,
+	["k8"] = function(val)
+			profile.list.k8 = val
+			footer:setFastSpellLabel(8, val)
+			profile:save()
+	end,
+	["k9"] = function(val)
+			profile.list.k9 = val
+			footer:setFastSpellLabel(9, val)
+			profile:save()
+	end,
+	["k10"] = function(val)
+			profile.list.k10 = val
+			footer:setFastSpellLabel(10, val)
+			profile:save()
+	end,
 	["cel"] = function(val)
 			profile.list.sub = val
 			profile:save()
@@ -49,6 +99,20 @@ profile.func = {
 	end
 }
 
+function profile:onProfileLoaded()
+	state.sub = profile:get("sub")
+	footer:setFastSpellLabel(1, profile:get("k1"));
+	footer:setFastSpellLabel(2, profile:get("k2"));
+	footer:setFastSpellLabel(3, profile:get("k3"));
+	footer:setFastSpellLabel(4, profile:get("k4"));
+	footer:setFastSpellLabel(5, profile:get("k5"));
+	footer:setFastSpellLabel(6, profile:get("k6"));
+	footer:setFastSpellLabel(7, profile:get("k7"));
+	footer:setFastSpellLabel(8, profile:get("k8"));
+	footer:setFastSpellLabel(9, profile:get("k9"));
+	footer:setFastSpellLabel(10, profile:get("k10"));
+end
+
 function profile:init(name)
 	if not name then return false end
 	self.name = name
@@ -67,15 +131,25 @@ function profile:init(name)
 			["walker"] = 1,
 			["water"] = "buklak",
 			["food"] = "racja",
-			["sub"] = "Link"
-		}
+			["sub"] = "Link",
+			["k1"] = "Magic Missile",
+			["k2"] = "Chill Touch",
+			["k3"] = "Lightning Bolt",
+			["k4"] = "Vampiric Touch",
+			["k5"] = "Force Bolt",
+			["k6"] = "Fireball",
+			["k7"] = "Horrid Wilting",
+			["k8"] = "Orb of Entropy",
+			["k9"] = "Banshee`s Howl",
+			["k10"] = "Nexus",
+ 		}
 		self:save(default)
 		self.list = default
 		msg = name..", utworzono twoj nowy profil, mozesz go modyfikowac w /opcje"
 	end
 	tempTimer(.3, function ()
 		printer:one("Profil", msg)
-		state.sub = profile:get("sub")
+		profile:onProfileLoaded()
 		if self.list.mode > 0 then
 			mode.exec[mode.order[self.list.mode]].func()
 		end
