@@ -10,6 +10,7 @@ function loadObjects(force)
         "scripts/utils",
         "scripts/settings",
         "scripts/mode",
+        "scripts/state/top",
         "scripts/state/state",
         "scripts/footer",
         "scripts/character/core",

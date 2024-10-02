@@ -1,74 +1,64 @@
--- pierwej order zeby nie zatykalo bufforu 
 character.warrior = {
 	[1] = {
-		["name"] = "Wardance",
+		["name"] = "Fast Skill 1",
 		["func"] = function()
-			state:orderSub("wardance")
-			send("wardance")
 		end,
 		["style"] = ""
 	},
 	[2] = {
-		["name"] = "Disarm",
+		["name"] = "Fast Skill 2",
 		["func"] = function()
-			state:orderSub("disarm")
-			send("disarm")
 		end,
 		["style"] = ""
 	},
 	[3] = {
-		["name"] = "Sleep",
+		["name"] = "Fast Skill 3",
 		["func"] = function()
 
 		end,
 		["style"] = ""
 	},
 	[4] = {
-		["name"] = "Learn",
+		["name"] = "Fast Skill 4",
 		["func"] = function()
 
 		end,
 		["style"] = ""
 	},
 	[5] = {
-		["name"] = "Jablon",
+		["name"] = "Fast Skill 5",
 		["func"] = function()
 
 		end,
 		["style"] = ""
 	},
 	[6] = {
-		["name"] = "Dupa",
+		["name"] = "Fast Skill 6",
 		["func"] = function()
-			echo("Sraka")
 		end,
 		["style"] = ""
 	},
 	[7] = {
-		["name"] = "Dupa",
+		["name"] = "Fast Skill 7",
 		["func"] = function()
-			echo("Sraka")
 		end,
 		["style"] = ""
 	},
 	[8] = {
-		["name"] = "Dupa",
+		["name"] = "Fast Skill 8",
 		["func"] = function()
-			echo("Sraka")
 		end,
 		["style"] = ""
 	},
 	[9] = {
-		["name"] = "Dupa",
+		["name"] = "Fast Skill 9",
 		["func"] = function()
-			echo("Sraka")
 		end,
 		["style"] = ""
 	},
 	[10] = {
-		["name"] = "Dupa",
+		["name"] = "Fast Skill 10",
 		["func"] = function()
-			echo("Sraka")
 		end,
 		["style"] = ""
 	},

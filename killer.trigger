@@ -159,8 +159,10 @@
 					<string>(Krzykacz) rozpada sie na kawaleczki.</string>
 					<string>(Szkielet) .* rozpada sie na kawaleczki.</string>
 					<string>(Szkielet) poszukiwacza przygod wydaje z siebie ostatni skowyt.*</string>
+					<string>(.*)ziemie... MARTWY!!</string>
 				</regexCodeList>
 				<regexCodePropertyList>
+					<integer>1</integer>
 					<integer>1</integer>
 					<integer>1</integer>
 					<integer>1</integer>
@@ -757,6 +759,26 @@
 						<integer>0</integer>
 					</regexCodePropertyList>
 				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Ass</name>
+					<script>character:assist()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>wspierasz heroicznie</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
 			</TriggerGroup>
 			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 				<name>Learn</name>
@@ -1055,7 +1077,8 @@ mapper:moveBackward()</script>
 				</Trigger>
 				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 					<name>follow</name>
-					<script>mapper:centerGMCP()</script>
+					<script>mapper:centerGMCP()
+keybind.show = true</script>
 					<triggerType>0</triggerType>
 					<conditonLineDelta>0</conditonLineDelta>
 					<mStayOpen>0</mStayOpen>
@@ -1067,12 +1090,14 @@ mapper:moveBackward()</script>
 					<colorTriggerFgColor>#000000</colorTriggerFgColor>
 					<colorTriggerBgColor>#000000</colorTriggerBgColor>
 					<regexCodeList>
-						<string>Podazasz.*za .*\.</string>
-						<string>Wraz z druzyna.*</string>
+						<string>Idziesz za</string>
+						<string>Lewitujesz za </string>
+						<string>Lecisz za</string>
 					</regexCodeList>
 					<regexCodePropertyList>
-						<integer>1</integer>
-						<integer>1</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
 					</regexCodePropertyList>
 				</Trigger>
 				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
@@ -1239,7 +1264,7 @@ send("as")</script>
 		</Trigger>
 		<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 			<name>rozbraja</name>
-			<script>send("get miecz;wield miecz;get szty;wield szty")</script>
+			<script>send("get miecz;wield miecz;")</script>
 			<triggerType>0</triggerType>
 			<conditonLineDelta>0</conditonLineDelta>
 			<mStayOpen>0</mStayOpen>
@@ -1804,13 +1829,13 @@ send("as")</script>
 				</Alias>
 			</AliasGroup>
 			<Alias isActive="yes" isFolder="no">
-				<name>^/opcje\s?([a-z_]+)?\s?([a-z0-9]+)?$</name>
+				<name>^/opcje\s?([a-z_]+)?\s?([A-Za-z0-9]+)?$</name>
 				<script>settings:change(matches)
 profile:change(matches)
 printer:settings()</script>
 				<command></command>
 				<packageName></packageName>
-				<regex>^/opcje\s?([a-z_]+)?\s?([a-z0-9,]+)?$</regex>
+				<regex>^/opcje\s?([a-z_0-9]+)?\s?([A-Za-z0-9,]+)?$</regex>
 			</Alias>
 			<AliasGroup isActive="yes" isFolder="yes">
 				<name>Help</name>
@@ -1965,6 +1990,13 @@ printer:settings()</script>
 				<command></command>
 				<packageName></packageName>
 				<regex>^/start$</regex>
+			</Alias>
+			<Alias isActive="yes" isFolder="no">
+				<name>^/def$</name>
+				<script>character:defensiveSpells()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^/def$</regex>
 			</Alias>
 		</AliasGroup>
 		<Alias isActive="yes" isFolder="no">

@@ -17,7 +17,8 @@ function keybindTrigger()
 end
 
 function keybindSupport()
-	send("wesprzyj")
+	send("ass")
+	state:orderTeam("ass")
 end
 
 function keybindWater(from)

@@ -56,14 +56,24 @@ end
 function state:orderTeam(order, skipSub)
   for _, v in pairs(state.team) do
     if skipSub and (v.name == state.sub) then else
-      send("order "..v.name.." "..order)
+      local arr = utils:split(order, ";")
+      for _, o in pairs(arr) do
+        send("order "..v.name.." "..o)
+      end
     end
+  end
+end
+
+function state:addOrder(sub, o)
+  if o == "ass" then
+    send("order "..sub.." order 1.follower ass")
   end
 end
 
 function state:gmcpRoomPeople()
   return function()
     --expandAlias("lua gmcp.Char.Skills")
+    top:setTime(gmcp.Mud)
 
     ls:clear()
     state.team = {}

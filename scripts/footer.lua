@@ -103,7 +103,7 @@ function footer:createUI()
 	  height = self.height,
 	})
 
-	footer:createButtons("Basic", footer.baseFunc, 100, false, [[
+	footer:createButtons("Basic2", footer.baseFunc, 100, false, [[
 				background-color: rgba(135,206,250,100);
 				border-style: solid;
 				border-width: 1px;
@@ -143,18 +143,26 @@ end
 
 function footer:fastSpellCallback()
 	return function(i)
-		send("c `"..profile:get("k"..i).."`")
+		local v = "c '"..profile:get("k"..i).."'"
+		state:orderSub(v)
+		send(v)
 	end
 end
 
 function footer:fastSkillCallback()
-	return function()
-		echo('sraka')
+	return function(i)
+		local v = profile:get("s"..i)
+		state:orderSub(v)
+		send(v)
 	end
 end
 
 function footer:setFastSpellLabel(i, name)
 	footer.buttons["MyButtonNecro"..i]:echo("<center>"..name)
+end
+
+function footer:setFastSkillLabel(i, name)
+	footer.buttons["MyButtonWarrior"..i]:echo("<center>"..name)
 end
 
 function footer:createButtons(name, data, y, func, style)
@@ -176,8 +184,9 @@ function footer:createButtons(name, data, y, func, style)
 			local callback = data[i]["func"]
 			if func then
 				callback = function() func(i) end
+			else
+			
 			end
 			footer.buttons["MyButton"..name..i]:setClickCallback(callback)
-			-- data[i]["func"]
 	end
 end
