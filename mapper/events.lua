@@ -4,14 +4,15 @@ function mapper:roomLoaded()
 		-- connect na wejsciu na lokacje dla wszystkich modow
 		if self.drawing and self.draw and self.draw.connect then
 			local to = nil
-			if self.mode == 4 then
+			-- jesli mode laki czy brak sprawdzania przejsc, pobierz obecnej lokacji id
+			if self.mode == 4 or self.mode == 5 then
 				to = gmcpID
 			else
 				to = self.draw.to
 			end
 			self:connectRooms(self.draw.from, to, self.draw.dir)
 			-- obustronnie
-			if self.mode == 2 then
+			if self.mode == 2 or self.mode == 5 then -- 5 free
 				self:connectRooms(to, self.draw.from, self.shortMirror[self.draw.dir])
 			end
 			-- centruj bez gmcp
@@ -34,7 +35,6 @@ function mapper:roomLoaded()
 						self:removeStub(self.draw.from, self.draw.dir)
 
 					elseif self.draw.new then
-
 						--  DRAW NORMAL NEW ROOM
 						if self.draw.from ~= gmcpID then
 							roomID = self:generateRoom(self.draw.from, gmcpID, self.draw.dir, self.draw.command)
@@ -56,8 +56,9 @@ function mapper:roomLoaded()
 									end
 									-- doors killers end
 
-								elseif self.mode == 2 then
+								elseif self.mode == 2 or self.mode == 5 then
 									-- ustaw polaczenie obustronne dla traktow
+									-- dodatkowo do free move obustonnie -- jak cos mozna pokombinowac z laczanymi flagami zyg
 									self:connectRooms(roomID, self.draw.from, self.shortMirror[self.draw.dir])
 								end
 							end

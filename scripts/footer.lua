@@ -58,23 +58,23 @@ footer.baseFunc = {
 		["style"] = ""
 	},
 	[8] = {
-		["name"] = "Dupa",
+		["name"] = "Float",
 		["func"] = function()
-			echo("Sraka")
+			send("c float; c float "..profile:get("sub"))
 		end,
 		["style"] = ""
 	},
 	[9] = {
-		["name"] = "Dupa",
+		["name"] = "Light",
 		["func"] = function()
-			echo("Sraka")
+			send("c light; wear kula")
 		end,
 		["style"] = ""
 	},
 	[10] = {
-		["name"] = "Dupa",
+		["name"] = "Pic/Jesc",
 		["func"] = function()
-			echo("Sraka")
+			inventory:eat()
 		end,
 		["style"] = ""
 	},
@@ -185,7 +185,7 @@ function footer:createButtons(name, data, y, func, style)
 			if func then
 				callback = function() func(i) end
 			else
-			
+
 			end
 			footer.buttons["MyButton"..name..i]:setClickCallback(callback)
 	end

@@ -6,6 +6,11 @@ function character:defensiveSpells()
   send(def)
 end
 
-function character:assist()
-  send("order 1.follower kill")
+function character:assist(sub)
+  local prefix = ""
+  if sub then
+    prefix = "order "..sub.." "
+  end
+  -- kazdy send musi miec prefix, order idzie ze state
+  send(prefix.."order 1.follower ass")
 end

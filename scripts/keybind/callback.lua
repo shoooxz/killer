@@ -19,6 +19,7 @@ end
 function keybindSupport()
 	send("ass")
 	state:orderTeam("ass")
+	character:assist()
 end
 
 function keybindWater(from)

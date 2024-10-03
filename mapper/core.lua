@@ -185,6 +185,12 @@ function mapper:setMode(mode)
 			"Mapper ustawiony na laczenie lokacji przez GMCP (Laki)"
 		)
 	end
+	if mode == "5" then
+		self.mode = 5
+		printer:success("Mapper",
+			"Mapper ustawiony na brak ograniczen kierunkow"
+		)
+	end
 end
 
 function mapper:getRoomInfo()

@@ -2,9 +2,14 @@ inventory = inventory or {}
 
 function inventory:eat()
   local food = profile:get("food")
-  local bag =  profile:get("bag")
-  send("get "..food.." "..bag..";get "..food.." "..bag)
-  send("eat "..food..";eat "..food..";eat "..food)
+  local water = profile:get("water")
+  --local bag =  profile:get("bag")
+  --send("get "..food.." "..bag..";get "..food.." "..bag)
+  local f = "eat "..food..";eat "..food..";eat "..food
+  local w = "drink "..water..";drink "..water..";drink "..water
+  send(f)
+  send(w)
+  state:orderSub("eat")
 end
 
 function inventory:weaponRemove(ret)

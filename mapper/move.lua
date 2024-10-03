@@ -10,9 +10,11 @@ function mapper:move(dir)
 	if self.drawing then
 		self.draw = nil
 		-- gdy istnieje wyjscie w gmcp z kolei nie ma takiego wyjscia w exitach
-		if (self:gmcpExitExists(dir) and not roomID) or self.mode == 3 then
+		-- lub gdy jest free mode (5)
+		if (self:gmcpExitExists(dir) and not roomID) or self.mode == 3 or self.mode == 5 then
 			if self.mode == 4 then
 				-- connect gmcp, straszne laczenia na lakach
+				-- free move
 				self.draw = {}
 				self.draw.connect = true
 				self.draw.from = self.room.id
@@ -30,6 +32,7 @@ function mapper:move(dir)
 				roomID = self:getRoomViaCoords(dir)
 				if roomID then
 					-- connect
+
 					if self.dir2door[dir] then
 						send("open "..dir) -- profilaktycznie??
 					end

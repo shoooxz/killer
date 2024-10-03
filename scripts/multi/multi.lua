@@ -6,6 +6,10 @@ function multi:processOrder(order)
   if order ==  "learn" then
     learn.auto = true
   end
+  if order ==  "eat" then
+    inventory:eat()
+    return
+  end
   send(order)
 
 end

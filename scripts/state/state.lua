@@ -163,9 +163,9 @@ end
 
 function state:printNeutral(obj)
   obj.name = utils:replacePolish(obj.name)
-  ls:cechoLink("<white>(<red>K<white>)", [[send("kill ]]..obj.name..[["); state:orderTeam("ass")]], "", true)
+  ls:cechoLink("<white>(<red>K<white>)", [[send("kill ]]..obj.name..[["); state:orderTeam("ass"); character:assist(false)]], "", true)
   ls:cecho(" <slate_grey>Order: ")
-  ls:cechoLink("<white><<red>K<white>>", [[send("order ]]..self.sub.." kill "..obj.name..[[; ass")]], "", true)
+  ls:cechoLink("<white><<red>K<white>>", [[send("order ]]..self.sub.." kill "..obj.name..[[; ass"); character:assist("]]..self.sub..[[")]], "", true)
   ls:echo(" "..obj.name)
   ls:echo("\n")
 end

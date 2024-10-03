@@ -42,7 +42,7 @@ end
 function mapper:roomBinded()
 	if gmcp.Room.Info.num then
 		local data = getAllRoomUserData(gmcp.Room.Info.num)
-		if next(data) then
+		if data then
 			--display(mudlet.key)
 			--display(data)
 			local room = ""
