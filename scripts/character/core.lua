@@ -13,4 +13,5 @@ function character:assist(sub)
   end
   -- kazdy send musi miec prefix, order idzie ze state
   send(prefix.."order 1.follower ass")
+  send(prefix.."order 2.follower ass")
 end

@@ -179,7 +179,9 @@ year = 70
   self.time:cecho("<center><white>Godzina: <gold>"..time.time.."    <white>Dzien: "..time.day.." ("..utils:replacePolish(time.dayname)..") ")
   self.time2:cecho("<center><white>Miesiac: "..utils:replacePolish(time.month).." ("..utils:replacePolish(time.era)..") ")
   self.sky:cecho("<center><white>Pogoda: <gold>"..utils:replacePolish(weather.sky))
-  self.sky2:cecho("<center><white>Pogoda: "..utils:replacePolish(weather.wind))
+  if weather.wind then
+    self.sky2:cecho("<center><white>Pogoda: "..utils:replacePolish(weather.wind))
+  end
 end
 
 

@@ -132,10 +132,12 @@ utils.plremove = {
 };
 
 function utils:replacePolish(text)
-  for k,v in pairs(self.plremove) do
-    text = text:gsub(k,v);
+  if text then
+    for k,v in pairs(self.plremove) do
+      text = text:gsub(k,v);
+    end
+    return text;
   end
-  return text;
 end
 
 function utils:uniqueTable(Table)
@@ -185,4 +187,8 @@ end
 function utils:replace(from, to)
   selectString(from, 1)
   replace(to)
+end
+
+function utils:endsWith(str, suffix)
+    return string.sub(str, -#suffix) == suffix
 end
