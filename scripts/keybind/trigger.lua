@@ -38,7 +38,7 @@ function keybind:gate(str)
 	local gate2command = {
 		["Wschodnia brama jest zamknieta."] = "zastukaj we wschodnie wrota",
 	}
-	local command = "pociagnij;zapukaj"
+	local command = "pociagnij;zapukaj;zadzwon"
 	if gate2command[str] then
 		command = gate2command[str]
 	end

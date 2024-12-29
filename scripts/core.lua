@@ -16,6 +16,7 @@ function scripts:init()
 	top:init()
 	mode:init()
 	state:init()
+	base:init()
 	setMainWindowSize(settings:get("mainWindowWidth"), settings:get("mainWindowHeight"))
 end
 

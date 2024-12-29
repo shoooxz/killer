@@ -40,6 +40,8 @@ mapper.color2sector = {
 	["rzeka"] = 268,
 	["ocean"] = 268,
 	["bagno"] = 261,
+	["pustynia"] = 267,
+	["góry"] = 271,
 }
 mapper.short2en = { --> mapper:getRoomViaExit, mapper:connectRooms
 	["n"]    = "north",

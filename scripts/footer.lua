@@ -13,8 +13,9 @@ footer.baseFunc = {
 	[2] = {
 		["name"] = "Rest",
 		["func"] = function()
-			 state:orderTeam("rest")
+			 state:orderTeam("rest;medi")
 			 send("rest")
+			 send("medit")
 		end,
 		["style"] = ""
 	},
@@ -67,7 +68,7 @@ footer.baseFunc = {
 	[9] = {
 		["name"] = "Light",
 		["func"] = function()
-			send("c light; wear kula")
+			send("c firefly; wear kula")
 		end,
 		["style"] = ""
 	},

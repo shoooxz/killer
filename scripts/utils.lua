@@ -1,5 +1,15 @@
 utils = utils or {}
 
+
+function utils:readJson(path)
+  path = getMudletHomeDir() .. '/killer/'..path
+  local file = io.open(path, "r")
+  if not file then return nil end
+  local content = file:read "*a"
+  file:close()
+  return yajl.to_value(content)
+end
+
 function utils:trim(s)
     return s:gsub("^%s+", ""):gsub("%s+$", "")
 end

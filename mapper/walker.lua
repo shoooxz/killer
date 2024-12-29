@@ -7,10 +7,27 @@ function doSpeedWalk()
     if not mapper.walker.going then
         mapper.walker.path = speedWalkDir
         mapper.walker.going = true
+        mapper.walker.ids = speedWalkPath
+        mapper:highlight(speedWalkPath)
         mapper:speedwalk()
         -- TODO obliczyc czas delay x ilosc lokacji
     end
 end
+
+function mapper:highlight(path)
+  for _, roomId in ipairs(path) do
+    highlightRoom(tonumber(roomId), 255, 255, 255, 0, 0, 0, 1, 255, 0)
+  end
+end
+
+function mapper:unhighlight(path)
+  for _, roomId in ipairs(path) do
+    if roomId then
+      unHighlightRoom(roomId)
+    end
+  end
+end
+
 function mapper:speedwalk()
     if self.walker.path[self.walker.step] then
         tempTimer(profile:get("walker"), function()
@@ -28,6 +45,7 @@ end
 function mapper:walkerStop()
     self.walker.going = false
     self.walker.step = 1
+    mapper:unhighlight(mapper.walker.ids)
 end
 
 function mapper:walkerInterrupted(command)
@@ -54,11 +72,28 @@ function mapper:walkerMove(dir)
         end
     end
     if roomID then
+        if mapper:walkerDirHasDoor(dir) then
+          send("open "..dir)
+        end
         send(dir)
-        send("herb") --- TODO Ogarnac alias
+        unHighlightRoom(roomID)
+        --send("herb") --- TODO Ogarnac alias
         self:center(roomID)
     else
         printer:error("Walker", "Chodzik wstrzymany!")
         self:walkerStop()
     end
+end
+
+
+function mapper:walkerDirHasDoor(exit)
+  local doors = getDoors(getPlayerRoom())
+  if exit == "d" then exit = "down" end
+  if exit == "u" then exit = "up" end
+  for dir, _ in pairs(doors) do
+    if dir == exit then
+      return true
+    end
+  end
+  return false
 end

@@ -16,6 +16,7 @@ function loadObjects(force)
         "scripts/character/core",
         "scripts/character/warrior",
         "scripts/character/necro",
+        "scripts/base/base",
         "scripts/core",
         "scripts/keybind/callback",
         "scripts/keybind/core",
