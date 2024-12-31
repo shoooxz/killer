@@ -21,9 +21,11 @@ function mapper:highlight(path)
 end
 
 function mapper:unhighlight(path)
-  for _, roomId in ipairs(path) do
-    if roomId then
-      unHighlightRoom(roomId)
+  if path then
+    for _, roomId in ipairs(path) do
+      if roomId then
+        unHighlightRoom(roomId)
+      end
     end
   end
 end

@@ -49,6 +49,7 @@ function loadObjects(force)
     end
     loaded = true
     printer:success("Skrypty Killer", "Zaladowane!")
+    mapper:centerGMCP()
 end
 function reloadObjects()
     package.loaded.init = nil

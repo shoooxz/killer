@@ -1,5 +1,6 @@
 footer = footer or {}
 footer.height = 150
+footer.promptHeight = 50
 footer.baseFunc = {
 	[1] = {
 		["name"] = "Stand",
@@ -68,7 +69,7 @@ footer.baseFunc = {
 	[9] = {
 		["name"] = "Light",
 		["func"] = function()
-			send("c firefly; wear kula")
+			send("c light; wear kula")
 		end,
 		["style"] = ""
 	},
@@ -92,10 +93,40 @@ function footer:init()
 	-----------------------------------------------------
 	self.width = settings:get("mainWindowWidth")-settings:get("mapperWidth")-10
 	self:createUI()
+	self:createPrompt()
+end
+
+function footer:createPrompt()
+	self.prompt = Geyser.Label:new({
+		name = "Footer.Prompt",
+		x = 0, y = -(self.height+self.promptHeight),
+		width = self.width,
+		height = self.promptHeight,
+	})
+	self.prompt:setFontSize(15)
+	self.prompt:setStyleSheet([[background-color: black]])
+
+end
+
+function footer:promptFight(matches)
+	self.prompt:echo(copy2html(matches[2]))
+	deleteLine()
+end
+
+function footer:promptUpdate()
+	-- "[<Lin: (******  )>n:k ] "  dziwny prompt jak jest walka
+	if string.find(getCurrentLine(), ": %(") then
+		-- walka
+		deleteLine()
+	else
+		-- normalka
+		self.prompt:echo(copy2html())
+		deleteLine()
+	end
 end
 
 function footer:createUI()
-	setBorderBottom(self.height)
+	setBorderBottom(self.height+self.promptHeight)
 
 	footer.overlay = Geyser.Label:new({
 	  name = "MyButtons.Overlay",

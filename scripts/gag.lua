@@ -1,4 +1,5 @@
 gag = gag or {}
+gag.me = "<gold>JA<reset> "
 gag.dt = {
 	["boska moc"] = "HOLY",
 	["szokujace ugryzienie"] = "LIGHTNING",
@@ -48,9 +49,14 @@ dziala jakos:
 -- Klasa pancerza: 9 klujace, 9 obuchowe, 9 ciecie   miazdzace walniecie (BASH) drzewca muska cie.BASH
 
 function gag:hit(me, type, rest)
+	-- czasem podobne sa chybienia, nie przerabiaj ich
+	if string.find(rest, "chybiasz") or string.find(rest, "chybiajac") or string.find(rest, "chybia") then
+		return
+  end
+
 	local out = ""
 	if me == "Twoje " then
-		out = out.."<gold>JA<reset> "
+		out = out..self.me
 	end
 	local type = string.lower(type)
 	local dt = gag.dt[type]
@@ -58,14 +64,29 @@ function gag:hit(me, type, rest)
 		out = out.."<red>OBRAZENIA<reset> "
 	end
 
+	local debug = rest
 	rest = gag:damage(rest)
-
 
 	out = out..type.." ("..dt..")"..rest
 	creplaceLine(out)
 
+	if not rest  or rest == "" then
+		printer:error("gag", "Error: ".. debug)
+	end
+
 end
 
+
+
+function gag:missMe(victim)
+	deleteLine()
+	--creplaceLine(self.me.."<ansi_light_black>MISS")
+end
+
+function gag:missLocation(attacker, victim)
+	deleteLine()
+	--creplaceLine(attacker.." <ansi_light_black>MISS<reset> "..victim)
+end
 
 function gag:damage(s)
 
@@ -115,6 +136,9 @@ function gag:damage(s)
 		return  string.gsub(s, "USMIERCA", gag:color("USMIERCA", 200, 3))
 	elseif string.find(s, "UNICESTWIA") then
 		return  string.gsub(s, "UNICESTWIA", gag:color("UNICESTWIA", 250, 3))
+	else
+		printer:error("gag", "<red>gag:damage() BRAKUJE typu obrazen")
+		return ""
 	end
 
 end
@@ -127,3 +151,49 @@ function gag:color(s, dmg, threat)
 	}
 	return col[threat]..s.." <reset>("..col[threat]..dmg.."<reset>)"
 end
+
+
+--[[
+-- osoba moja 'cie'
+-- Moje
+Probujesz wyprowadzic cios, ale chybiasz (.*) haniebnie\.
+Atakujesz, ale w ostatniej chwili tracisz rownowage i chybiasz (.*)\.
+Chybiasz (.*)\.
+Niestety mimo calego wysilku wlozonego w uderzenie chybiasz (.*)\.
+Twoje uderzenie przecina z sykiem powietrze chybiajac (.*) o wlos\.
+Balansujesz cialem probujac trafic (.*), ale chybiasz\.
+Probujesz walnac (.*), ale mijasz sie ze swoim celem\.
+(.*) w ostatniej chwili odskakuje do tylu i twoj atak nie trafia
+
+
+-- lokacja
+(.*) probuje wyprowadzic cios, ale chybia (.*) haniebnie\.
+(.*) atakuje (.*), ale w ostatniej chwili traci rownowage i chybia\.
+(.*) chybia (.*)\.
+(.*) wklada sporo wysilku w ten cios, jednak chybia (.*)\.
+Uderzenie (.*) przecina z sykiem powietrze chybiajac (.*) o wlos\.
+(.*) balansuje cialem probujac trafic (.*), ale chybia\.
+(.*) probuje walnac (.*), ale mija sie ze swoim celem\.
+
+-- Lokacja reverse
+(.*) z latwoscia unika ataku i cios (.*) nie trafia\.
+(.*) w ostatniej chwili odskakuje do tylu i cios (.*) nie trafia\.
+(.*) w ostatniej chwili robi unik i cios (.*) nie trafia\.
+(.*) zrecznie robi unik i cios (.*) nie trafia\.
+(.*) w ostatniej chwili odtacza sie i cios (.*) nie trafia\.
+
+
+
+
+
+-- POWALENIA
+Gwardzista powala Linka na ziemie uderzajac calym cialem.
+
+
+
+
+
+
+
+
+]]--

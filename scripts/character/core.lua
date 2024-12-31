@@ -15,3 +15,25 @@ function character:assist(sub)
   send(prefix.."order 1.follower ass")
   send(prefix.."order 2.follower ass")
 end
+
+function character:knockdown()
+  send("stand")
+  deleteLine()
+  cecho("<red>UWAGA! POWALENIE!")
+  scripts:beep()
+end
+
+
+function character:disarm()
+  deleteLine()
+  cecho("<red>UWAGA! ROZBROJENIE!")
+  scripts:beep()
+  local mh = profile:get("mh")
+  local oh = profile:get("oh")
+  send("get "..mh)
+  if not oh  or oh == "" then
+    send("grip "..mh)
+  else
+    send("wield "..mh)
+  end
+end
