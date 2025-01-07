@@ -204,7 +204,7 @@
     "region": "Arras",
     "class": "Kleryk",
     "spells": [
-      "lesser restoration", "create healing water", "divine power", "cure serious", "mass aid"
+      "lesser restoration", "create healing water", "divine power", "cure critical", "mass aid"
     ]
   },
   {

@@ -1,17 +1,18 @@
 multi = multi or {}
 multi.group = multi.group or {}
 
-function multi:processOrder(order)
+function multi:processOrder(who, order)
   -- learn, jesli ktos rozkazuje ci learn, odpal dodatkowo auto learn
-  if order ==  "learn" then
-    learn.auto = true
+  if who == profile:get("master") then
+    if order ==  "learn" then
+      learn.auto = true
+    end
+    if order ==  "eat" then
+      inventory:eat()
+      return
+    end
+    send(order)
   end
-  if order ==  "eat" then
-    inventory:eat()
-    return
-  end
-  send(order)
-
 end
 
 --(.*) bedzie teraz chodzil za toba.

@@ -67,6 +67,7 @@ function mapper:generateRoom(from, to, dir, command)
 	local coords = self:convertCoords(dir)
 	local roomID = self:addRoom(self.room.area, to, coords.x, coords.y, coords.z)
 	if roomID and command then
+		display("connect")
 		self:connectRooms(from, roomID, command)
 	end
 	return roomID

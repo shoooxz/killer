@@ -2,6 +2,10 @@ profile = profile or {}
 profile.file = nil
 profile.list = profile.list or {}
 profile.func = {
+	["master"] = function(val)
+			profile.list.master = val
+			profile:save()
+	end,
 	["s1"] = function(val)
 			profile.list.s1 = val
 			footer:setFastSkillLabel(1, val);
@@ -185,6 +189,7 @@ function profile:init(name)
 		table.load(self.file, self.list)
 	else
 		local default = {
+			["master"] = " Thalorian",
 			["bag"] = "torba",
 			["mh"] = "miecz",
 			["oh"] = "",

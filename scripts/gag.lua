@@ -66,12 +66,13 @@ function gag:hit(me, type, rest)
 
 	local debug = rest
 	rest = gag:damage(rest)
-
-	out = out..type.." ("..dt..")"..rest
-	creplaceLine(out)
+	if rest then
+		out = out..type.." ("..dt..")"..rest
+		creplaceLine(out)
+	end
 
 	if not rest  or rest == "" then
-		printer:error("gag", "Error: ".. debug)
+		--printer:error("gag", "Error: ".. debug)
 	end
 
 end
@@ -137,8 +138,8 @@ function gag:damage(s)
 	elseif string.find(s, "UNICESTWIA") then
 		return  string.gsub(s, "UNICESTWIA", gag:color("UNICESTWIA", 250, 3))
 	else
-		printer:error("gag", "<red>gag:damage() BRAKUJE typu obrazen")
-		return ""
+		--printer:error("gag", "<red>gag:damage() BRAKUJE typu obrazen")
+		return false
 	end
 
 end

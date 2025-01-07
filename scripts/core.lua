@@ -68,6 +68,10 @@ function scripts:dead(str)
 	elseif string.find(who, "szkielet") then
 		send("exam kup")
 		send("get klej kup; get mon kup")
+	elseif string.find(who, "yugoloth") then
+		send("exam cialo; get klej cialo")
+	elseif string.find(who, "istota") then
+		send("get all.klej;look")
 	else
 		send("exam cialo")
 	end
