@@ -12,21 +12,25 @@ function character:assist(sub)
     prefix = "order "..sub.." "
   end
   -- kazdy send musi miec prefix, order idzie ze state
-  send(prefix.."order 1.follower ass")
-  send(prefix.."order 2.follower ass")
+  local fol = tonumber(profile:get("follower"))
+  if fol > 0 then
+    for i=1, fol do
+      send(prefix.."order "..i..".follower ass")
+    end
+  end
 end
 
 function character:knockdown()
   send("stand")
   deleteLine()
-  cecho("<red>UWAGA! POWALENIE!")
+  cecho("\n<red>UWAGA! POWALENIE!")
   scripts:beep()
 end
 
 
 function character:disarm()
   deleteLine()
-  cecho("<red>UWAGA! ROZBROJENIE!")
+  cecho("\n<red>UWAGA! ROZBROJENIE!")
   scripts:beep()
   local mh = profile:get("mh")
   local oh = profile:get("oh")

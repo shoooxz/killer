@@ -158,29 +158,31 @@ function top:astralState(state)
 end
 
 function top:setTime(mud)
-  local time = mud.TimeInfo
-  local weather = mud.Weather
---[[
+  if mud then
+    local time = mud.TimeInfo
+    local weather = mud.Weather
+  --[[
 
-Wymawiasz slowa, 'astral search'.
+  Wymawiasz slowa, 'astral search'.
 
-Znowu mozesz przeszukiwac plany astralne
+  Znowu mozesz przeszukiwac plany astralne
 
-TimeInfo = {
-day = 20,
-dayname = "Przyjaciół",
-era = "Pierwsza Era Magicznych Portali",
-month = "Wielkiego Zła",
-time = 5,
-timename = "godzina piąta",
-year = 70
-]]
+  TimeInfo = {
+  day = 20,
+  dayname = "Przyjaciół",
+  era = "Pierwsza Era Magicznych Portali",
+  month = "Wielkiego Zła",
+  time = 5,
+  timename = "godzina piąta",
+  year = 70
+  ]]
 
-  self.time:cecho("<center><white>Godzina: <gold>"..time.time.."    <white>Dzien: "..time.day.." ("..utils:replacePolish(time.dayname)..") ")
-  self.time2:cecho("<center><white>Miesiac: "..utils:replacePolish(time.month).." ("..utils:replacePolish(time.era)..") ")
-  self.sky:cecho("<center><white>Pogoda: <gold>"..utils:replacePolish(weather.sky))
-  if weather.wind then
-    self.sky2:cecho("<center><white>Pogoda: "..utils:replacePolish(weather.wind))
+    self.time:cecho("<center><white>Godzina: <gold>"..time.time.."    <white>Dzien: "..time.day.." ("..utils:replacePolish(time.dayname)..") ")
+    self.time2:cecho("<center><white>Miesiac: "..utils:replacePolish(time.month).." ("..utils:replacePolish(time.era)..") ")
+    self.sky:cecho("<center><white>Pogoda: <gold>"..utils:replacePolish(weather.sky))
+    if weather.wind then
+      self.sky2:cecho("<center><white>Pogoda: "..utils:replacePolish(weather.wind))
+    end
   end
 end
 

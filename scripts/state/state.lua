@@ -1,3 +1,4 @@
+
 state = state or {}
 state.lsheight = 500
 state.team = {}
@@ -5,6 +6,7 @@ state.groupNaming = {"b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 state.iTeamColor = "gold"
 state.iEnemyColor = "light_coral"
 state.enemyHP = ""
+state.tevent = 0
 
 function state:init()
   state:createLocationState()
@@ -12,6 +14,8 @@ function state:init()
 end
 
 function state:catchEnemyHP(hp)
+  display(hp)
+  
   local plman = {
     ["zadnych sladow"]="żadnych śladów",
     ["srednie rany"]="średnie rany",
@@ -85,6 +89,8 @@ function state:gmcpRoomPeople()
     local namingInc = 1
     local targetColor = {}
 
+    if not gmcp.Char.Group.members then return false end
+
     for index, v in pairs(gmcp.Char.Group.members) do
       local obj = v
       -- convert data
@@ -105,6 +111,8 @@ function state:gmcpRoomPeople()
       for i, p in pairs(gmcp.Room.People) do
          -- jesli osoba na lokacji jest osoba z teamu
         if p.name == obj.name then
+          -- COPY people to obj
+          obj.is_fighting = p.is_fighting
           -- ustal, kogo atakuje
           if not attacking[p.enemy] then
             attacking[p.enemy] = ""
@@ -141,6 +149,9 @@ function state:gmcpRoomPeople()
       end
     end
 
+
+    state:checkForAss(me)
+
     -- print all    me > mates > npc
     state:printTeamMember(me)
     for _, v in pairs(state.team) do
@@ -158,6 +169,24 @@ function state:gmcpRoomPeople()
       state:printNeutral(v)
     end
 
+  end
+end
+
+  -- jesli ja nie walcze a ktos z teamu zwiazany jest walka
+function state:checkForAss(me)
+  -- time event co kilka sekund - jest blad spam przy zacince ws przy kilu
+  if utils:isTimeEventHappend(self.tevent) then
+    if not me.is_fighting then
+      for _, mate in pairs(state.team) do
+         if mate.is_fighting and me.room == mate.room then
+            send("ass")
+            character:assist()
+            self.tevent = utils:setTimeEvent(3)
+            display(self.tevent)
+            return true
+        end
+      end
+    end
   end
 end
 
@@ -206,7 +235,11 @@ function state:printTeamMember(obj)
   if obj.name == "JA" then
     ls:cechoLink("<white><<green>R<white>>", [[send("order ]]..self.sub.." rescue "..profile.name..[[")]], "", true)
   else
-    ls:cechoLink("<white>(<green>R<white>)", [[send("rescue ]]..obj.name..[[")]], "", true)
+    if obj.name then
+      ls:cechoLink("<white>(<green>R<white>)", [[send("rescue ]]..obj.name..[[")]], "", true)
+    else
+      display(obj)
+    end
   end
   local index = "<white>[<white> <"..self.iTeamColor..">"..obj.index.."<white>]"
   ls:cecho(index.." "..obj.hp.." "..obj.mv.." "..self:getNameColor(obj))

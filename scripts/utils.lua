@@ -1,5 +1,13 @@
 utils = utils or {}
 
+function utils:setTimeEvent(sec)
+    return math.floor(getEpoch())+sec
+end
+
+function utils:isTimeEventHappend(event)
+    return event <= math.floor(getEpoch())
+end
+
 
 function utils:readJson(path)
   path = getMudletHomeDir() .. '/killer/'..path

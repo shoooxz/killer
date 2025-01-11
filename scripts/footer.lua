@@ -53,16 +53,18 @@ footer.baseFunc = {
 		["style"] = ""
 	},
 	[7] = {
-		["name"] = "Dupa",
+		["name"] = "Rent",
 		["func"] = function()
-			echo("Sraka")
+			state:orderTeam("rent here")
+			send("rent here")
 		end,
 		["style"] = ""
 	},
 	[8] = {
-		["name"] = "Float",
+		["name"] = "Fly",
 		["func"] = function()
-			send("c float; c float "..profile:get("sub"))
+			local s = profile:get("fly")
+			send("c "..s.."; c "..s.." "..profile:get("sub"))
 		end,
 		["style"] = ""
 	},
