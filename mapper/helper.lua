@@ -1,6 +1,7 @@
 function mapper:helper()
 	if self.drawing then
 		-- porownaj wyjscia z gmcp z wyjsciami z mappera
+
 		local diff = utils:arrayDiff(self.gmcp.exits, self:helperGetExitsForComparison())
 		if next(diff) then
 			  for i=1, #diff do

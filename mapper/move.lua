@@ -4,37 +4,30 @@ function mapper:move(dir)
 	end]]--
 	keybind.show = true
 	self:walkerStop()
-	-- czy istnieje lokacja w tamta strone w exitach
+
+	-- CZY ISTNIEJE ROOM ID W TAMTA STRONE PRZEZ API MUDLETA
 	local roomID = self:getRoomViaExit(dir)
 	local command = false
 	if self.drawing then
 		self.draw = nil
-		-- gdy istnieje wyjscie w gmcp z kolei nie ma takiego wyjscia w exitach
-		-- lub gdy jest free mode (5)
-		if (self:gmcpExitExists(dir) and not roomID) or self.mode == 3 or self.mode == 5 then
-			if self.mode == 4 then
-				-- connect gmcp, straszne laczenia na lakach
-				-- free move
-				self.draw = {}
-				self.draw.connect = true
-				self.draw.from = self.room.id
-				self.draw.dir = dir
-				send(dir)
-				return
-			else
-				-- addspecial exit sprawdza coordynaty dlatego, ze w barsawii byla to oddzielna komenda /spe
+
+		-- JESLI Z GMCP JEST WYJSCIE A NIE MA Z API MUDLETA (omin juz istniejace)
+		-- jesli 3 bez gmcp rysowanie, albo 4 gdy nie ma pokazanych wyjsc z gmcp
+		if (self:gmcpExitExists(dir) and not roomID) or self.mode == 3 or self.mode == 4 then
+
+				-- AUTMATYCZNIE DODAJ SPECJALNE PRZEJSCIE Z GMCP
 				if self.dir2spe[dir] then
-					send("open "..self.dir2spe[dir]) -- profilaktycznie??
+					send("open "..self.dir2spe[dir])
 					self:addSpecialExitAndRoom(dir, self.dir2spe[dir])
 					return
 				end
-				-- czy istnieje lokacja w tamta strone po koordynatach
+
+				-- CZY ISTNIEJE LOKACJA W TAMTA STRONE PO KOORDYNATACH X Y
 				roomID = self:getRoomViaCoords(dir)
 				if roomID then
-					-- connect
-
+					-- CONNECT
 					if self.dir2door[dir] then
-						send("open "..dir) -- profilaktycznie??
+						send("open "..dir)
 					end
 					self.draw = {}
 					self.draw.connect = true
@@ -44,9 +37,9 @@ function mapper:move(dir)
 					send(dir)
 					return
 				else
-					-- jesli nie istnieje - wygeneruj nowa lokacje w evencie roomLoaded
+					-- GENERATE NEW
 					if self.dir2door[dir] then
-						send("open "..dir) -- profilaktycznie??\
+						send("open "..dir)
 					end
 					self.draw = {}
 					self.draw.new = true
@@ -55,7 +48,6 @@ function mapper:move(dir)
 					self.draw.command = dir
 					send(dir)
 					return
-				end
 			end
 		end
 	end

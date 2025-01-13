@@ -129,7 +129,7 @@ function mapper:addSpecialExitAndRoom(dir, command)
 				"Polaczono lokacje specjalnym przejsciem '"..command.."' na "..dir.." !"
 			)
 			-- doors killers start
-			local doors = self.dir2door[dir]
+			local doors = self.dir2door[command]
 			if doors then
 				setDoor(self.room.id, command, 2)
 			end

@@ -42,6 +42,7 @@ mapper.color2sector = {
 	["bagno"] = 261,
 	["pustynia"] = 267,
 	["góry"] = 271,
+	["łąka"] = 258,
 }
 mapper.short2en = { --> mapper:getRoomViaExit, mapper:connectRooms
 	["n"]    = "north",
@@ -251,7 +252,13 @@ function mapper:convertExits(arr)
 					self.spe2dir[arr[i].name:lower()] = output[i]
 				end
 				if arr[i].door then
-					self.dir2door[output[i]] = true
+					-- jesli jest to przejscie specjalnie
+					if self.dir2spe[output[i]]  then
+						self.dir2door[self.dir2spe[output[i]]] = true
+					-- jesli to przejscie zwykle
+					else
+						self.dir2door[output[i]] = true
+					end
 					if output[i] == "u" then
 						self.dir2door["up"] = true
 					end

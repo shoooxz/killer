@@ -14,8 +14,6 @@ function state:init()
 end
 
 function state:catchEnemyHP(hp)
-  display(hp)
-  
   local plman = {
     ["zadnych sladow"]="żadnych śladów",
     ["srednie rany"]="średnie rany",
@@ -182,7 +180,6 @@ function state:checkForAss(me)
             send("ass")
             character:assist()
             self.tevent = utils:setTimeEvent(3)
-            display(self.tevent)
             return true
         end
       end
