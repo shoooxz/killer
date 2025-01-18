@@ -1,5 +1,27 @@
 utils = utils or {}
 
+function utils:arrayKeyExists(key, arr)
+    for k,v in pairs(arr) do
+      if k == key then return true end
+    end
+    return false
+end
+
+
+function utils:arrayRemoveByValue(val, arr)
+    for i=1, #arr do
+      if arr[i] == val then
+        table.remove(arr, i)
+        return true
+      end
+    end
+    return false
+end
+
+function utils:mod(a, b)
+    return a - (math.floor(a/b)*b)
+end
+
 function utils:setTimeEvent(sec)
     return math.floor(getEpoch())+sec
 end

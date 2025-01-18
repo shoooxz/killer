@@ -18,6 +18,7 @@ function scripts:init()
 	state:init()
 	base:init()
 	setMainWindowSize(settings:get("mainWindowWidth"), settings:get("mainWindowHeight"))
+
 end
 
 --komenda /start
@@ -72,6 +73,8 @@ function scripts:dead(str)
 		send("exam cialo; get klej cialo")
 	elseif string.find(who, "istota") then
 		send("get all.klej;look")
+  elseif string.find(who, "goblin") or string.find(who, "ork") then
+		send("exam cialo; get klej cialo")
 	else
 		send("exam cialo")
 	end

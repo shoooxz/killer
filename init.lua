@@ -33,6 +33,7 @@ function loadObjects(force)
         "scripts/miner",
         "scripts/herbalist",
         "scripts/learn",
+        "scripts/buff",
         "mapper/core",
         "mapper/area",
         "mapper/helper",
@@ -49,7 +50,6 @@ function loadObjects(force)
     end
     loaded = true
     printer:success("Skrypty Killer", "Zaladowane!")
-    mapper:centerGMCP()
 end
 function reloadObjects()
     package.loaded.init = nil

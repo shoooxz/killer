@@ -109,7 +109,7 @@ function printer:command(name, desc)
 	)
 end
 
-function printer:tableRow(size, header, arr)
+function printer:tableRow(size, header, arr, link)
 	local len = 0
 	for i in pairs(size) do
 		len = len + size[i]+2 -- kreska + spacja odzielajace kazdy cell
@@ -117,8 +117,9 @@ function printer:tableRow(size, header, arr)
 
 	local fill = self.length-len+1
 	local out = ""
-
-	table.insert(arr, 1, header)
+	if next(header) then
+		table.insert(arr, 1, header)
+	end
 
 	for row in pairs(arr) do
 		local color = self.textColor
@@ -126,28 +127,34 @@ function printer:tableRow(size, header, arr)
 			color = self.commandColor
 		end
 		for index, value in pairs(arr[row]) do
-			out = out.."<"..self.borderColor..">|"..string.rep(" ", 1)
+			--out = out.."<"..self.borderColor..">|"..string.rep(" ", 1)
+			cecho("<"..self.borderColor..">|"..string.rep(" ", 1))
 			if type(value) == "table" then
 				-- if array color it
-				out = out.."<"..value[1]..">"..value[2]..string.rep(" ", size[index]-string.len(value[2]))
+				local filler = string.rep(" ", size[index]-string.len(value[2]))
+				if link then
+					cechoLink("<"..value[1]..">"..value[2], value[3], "", true)
+					cecho(filler)
+				else
+					out = out.."<"..value[1]..">"..value[2]..filler
+				end
 			else
-				out = out.."<"..color..">"..value..string.rep(" ", size[index]-string.len(value))
+					local filler = string.rep(" ", size[index]-string.len(value))
+					--out = out.."<"..color..">"..value..filler
+					cecho("<"..color..">"..value..filler)
 			end
 		end
 
-		out = out..string.rep(" ", fill).."<"..self.borderColor..">|\n"
+		--out = out..string.rep(" ", fill).."<"..self.borderColor..">|\n"
+		cecho(string.rep(" ", fill).."<"..self.borderColor..">|\n")
 
 		if row < #arr then
-			out = out..self:getHr()
+			--out = out..self:getHr()
+			cecho(self:getHr())
 		end
 
 	end
-
-
-
-
-
-	cecho(out)
+	--cecho(out)
 end
 
 function printer:desc(name, desc)

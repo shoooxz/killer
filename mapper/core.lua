@@ -100,6 +100,12 @@ function mapper:init()
 	--self:addRoom(1, 514, 0, 0, 0) -- start point
 end
 
+function mapper:detectGMCP()
+	if not self.gmcp.id then
+		self:centerGMCP(true)
+	end
+end
+
 function mapper:setGMCP()
 	if gmcp.Room then
 		self.gmcp.id = gmcp.Room.Info.num

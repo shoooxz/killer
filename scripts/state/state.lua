@@ -75,6 +75,7 @@ end
 function state:gmcpRoomPeople()
   return function()
     --expandAlias("lua gmcp.Char.Skills")
+    mapper:detectGMCP()
     top:setTime(gmcp.Mud)
 
     ls:clear()

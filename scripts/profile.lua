@@ -2,6 +2,14 @@ profile = profile or {}
 profile.file = nil
 profile.list = profile.list or {}
 profile.func = {
+	["buffbasic2"] = function(val)
+			profile.list.buffbasic2 = val
+			profile:save()
+	end,
+	["buffbasic"] = function(val)
+			profile.list.buffbasic = val
+			profile:save()
+	end,
 	["follower"] = function(val)
 			profile.list.follower = val
 			profile:save()
@@ -197,6 +205,8 @@ function profile:init(name)
 		table.load(self.file, self.list)
 	else
 		local default = {
+			["buffbasic"] = {},
+			["buffbasic2"] = {},
 			["follower"] = 0,
 			["fly"] = "float",
 			["master"] = " Thalorian",
