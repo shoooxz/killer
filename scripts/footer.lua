@@ -127,6 +127,51 @@ function footer:promptUpdate()
 	end
 end
 
+function footer:createRightUI()
+
+	footer.right = Geyser.Label:new({
+		name = "MyButtons.FooterRight",
+		x = footer.width+10, y = -70,
+		height = 70,
+		width = settings:get("mapperWidth")-20
+	})
+
+	footer.right:raise()
+
+	local btnStyle = [[
+				background-color: rgba(135,206,250,100);
+				border-style: solid;
+				border-width: 0px;
+				border-color: white;
+				border-radius: 0px;
+				margin: 0px;
+				padding: 0px;
+	]]
+
+	self:createButton("RES", function() echo("sraka") end, btnStyle, 10)
+	self:createButton("BMS", function() buff:basicCast("ms") end, btnStyle, 80)
+	self:createButton("BM", function() buff:basicCast("m")  end, btnStyle, 150)
+	self:createButton("BS", function() buff:basicCast("s")  end, btnStyle, 220)
+
+end
+
+function footer:createButton(name, func, style, x)
+	footer.buttons["FRight"..name] = Geyser.Label:new({
+		name = "Fright.Button"..name,
+		width =  60,
+		height = 50,
+		x = x
+	}, footer.right)
+	footer.buttons["FRight"..name]:echo("<center>"..name)
+	footer.buttons["FRight"..name]:setStyleSheet(style)
+	footer.buttons["FRight"..name]:setFontSize(10)
+	if func then
+		callback = function() func(i) end
+	end
+	footer.buttons["FRight"..name]:setClickCallback(callback)
+	footer.buttons["FRight"..name]:raise()
+end
+
 function footer:createUI()
 	setBorderBottom(self.height+self.promptHeight)
 
@@ -136,6 +181,10 @@ function footer:createUI()
 	  width = self.width,
 	  height = self.height,
 	})
+
+
+
+	self:createRightUI()
 
 	footer:createButtons("Basic2", footer.baseFunc, 100, false, [[
 				background-color: rgba(135,206,250,100);

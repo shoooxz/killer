@@ -7,6 +7,10 @@ function multi:processOrder(who, order)
     if order ==  "learn" then
       learn.auto = true
     end
+    if string.find(order, "buff") then
+      local arr = utils:split(order, " ")
+      buff:basicCast(arr[2])
+    end
     if order ==  "eat" then
       inventory:eat()
       return

@@ -38,6 +38,7 @@ function mapper:roomLoaded()
 						if self.draw.from ~= gmcpID then
 							roomID = self:generateRoom(self.draw.from, gmcpID, self.draw.dir, self.draw.command)
 							if roomID then
+								-- UP AND DOWN
 								if self.draw.command == "up" or self.draw.command == "down" then
 									local reverse = {
 										["up"] = "down",
@@ -52,12 +53,20 @@ function mapper:roomLoaded()
 										setDoor(self.draw.from, self.draw.command, 2)
 										setDoor(roomID, reverse[self.draw.command], 2)
 									end
-									-- doors killers end
+								-- OBUSTRONNE LACZENIA
 								elseif self.mode == 2 or self.mode == 4 then
 									-- ustaw polaczenie obustronne dla traktow
 									-- dodatkowo do free move obustonnie -- jak cos mozna pokombinowac z laczanymi flagami zyg
 									self:connectRooms(roomID, self.draw.from, self.shortMirror[self.draw.dir])
+
+									-- door przed
+									if self.dir2door[self.draw.dir] then
+										setDoor(self.draw.from, self.draw.dir, 2)
+									end
+
 									self:centerGMCP()
+
+									-- door po
 									if self.dir2door[self.shortMirror[self.draw.dir]] then
 										setDoor(roomID, self.shortMirror[self.draw.dir], 2)
 									end

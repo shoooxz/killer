@@ -44,6 +44,13 @@ function utils:trim(s)
     return s:gsub("^%s+", ""):gsub("%s+$", "")
 end
 
+function utils:inArray2(val, arr)
+    for i=1, #arr do
+      if arr[i] == val then return true end
+    end
+    return false
+end
+
 function utils:inArray(val, tab)
     for _, value in ipairs(tab) do
         if value == val then

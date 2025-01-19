@@ -209,7 +209,7 @@ function profile:init(name)
 			["buffbasic2"] = {},
 			["follower"] = 0,
 			["fly"] = "float",
-			["master"] = " Thalorian",
+			["master"] = "Thalorian",
 			["bag"] = "torba",
 			["mh"] = "miecz",
 			["oh"] = "",
