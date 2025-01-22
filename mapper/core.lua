@@ -43,6 +43,8 @@ mapper.color2sector = {
 	["pustynia"] = 267,
 	["góry"] = 271,
 	["łąka"] = 258,
+	["plaża"] = 267,
+	["wzgórza"] = 263,
 }
 mapper.short2en = { --> mapper:getRoomViaExit, mapper:connectRooms
 	["n"]    = "north",

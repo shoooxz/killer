@@ -1,3 +1,4 @@
+
 [
   {
     "roomVnum": 0,
@@ -502,7 +503,9 @@
     "spells": [
       "Misfortune", "Dismiss Person", "Bonelace", "Ray of enfeeblement"
     ],
-    "notes": "Chodzi po cmentarzu"
+    "notes": "Chodzi po cmentarzu",
+    "bookVnum": 2022,
+    "bookName": "ksiega czarow"
   },
   {
     "roomVnum": 6436,
@@ -512,7 +515,9 @@
     "spells": [
       "Identify", "Cautious sleep", "Silence", "Embalm"
     ],
-    "notes": "Ksiega jest niewidzialna"
+    "notes": "Ksiega jest niewidzialna",
+    "bookVnum": 6440,
+    "bookName": "stara ksiega"
   },
   {
     "roomVnum": 27770,
@@ -522,7 +527,9 @@
     "spells": [
       "Dismiss animal", "Perfect senses", "Invisibility", "Faerie fog", "hold animal"
     ],
-    "notes": "Ukryta"
+    "notes": "Ukryta",
+    "bookVnum": 27830,
+    "bookName": "ksiega czarow"
   },
   {
     "roomVnum": 24919,
@@ -531,7 +538,9 @@
     "class": "Mag",
     "spells": [
       "Water breathing", "Dismiss plant", "Flame Arrow", "Summon greenskin"
-    ]
+    ],
+    "bookVnum": 27876,
+    "bookName": "ksiega czarow"
   },
   {
     "roomVnum": 26992,
@@ -540,7 +549,9 @@
     "class": "Mag",
     "spells": [
       "Mirror image", "Misfortune", "Dismiss insect", "Slow"
-    ]
+    ],
+    "bookVnum": 26998,
+    "bookName": "ksiega mocy",
   },
   {
     "roomVnum": 540,
@@ -550,7 +561,9 @@
     "spells": [
       "Change sex", "Dismiss insect", "Fox Cunning", "hardiness"
     ],
-    "difficulty": 1
+    "difficulty": 1,
+    "bookVnum": 1401,
+    "bookName": "ksiazka z podstawami magii",
   },
   {
     "roomVnum": 10847,
@@ -559,7 +572,9 @@
     "class": "Mag",
     "spells": [
       "Healing sleep", "Ray of enfeeblement", "Lightning bolt", "float"
-    ]
+    ],
+    "bookVnum": 885,
+    "bookName": "stara ksiega",
   },
   {
     "roomVnum": 14013,
@@ -567,9 +582,11 @@
     "region": "Carrallak",
     "class": "Mag",
     "spells": [
-      "lightning bolt", "Cat grace", "invisibility", "Silence"
+      "lightning bolt", "Cat grace", "invisibility", "Silence", "Identify"
     ],
-    "notes": "Niewidzialny i Ukryty"
+    "notes": "Niewidzialny i Ukryty",
+    "bookVnum": 14072,
+    "bookName": "ksiega czarow",
   },
   {
     "roomVnum": 5642,
@@ -578,27 +595,33 @@
     "class": "Mag",
     "spells": [
       "Cat grace", "Daze", "Invisibility", "Mirror Image"
-    ]
+    ],
+    "bookVnum": 1402,
+    "bookName": "brudna ksiega",
   },
   {
     "roomVnum": 6864,
-    "mob": "Śmietnikowy mag",
+    "mob": "Smietnikowy mag",
     "region": "Arras",
     "class": "Mag",
     "spells": [
       "Bear endurance", "Detect hidden", "Mirror image", "Cautious sleep"
-    ]
+    ],
+    "bookVnum": 1403,
+    "bookName": "pozolkla ksiega",
   },
   {
     "roomVnum": 0,
-    "mob": "Wędrowny mag",
+    "mob": "Wedrowny mag",
     "region": "",
     "class": "Mag",
     "spells": [
       "Fox cunning", "Lightning bolt", "invisibility", "Maze"
     ],
     "notes": "Wędruje",
-    "roaming": "t"
+    "roaming": "t",
+    "bookVnum": 14079,
+    "bookName": "magiczna ksiega",
   },
   {
     "roomVnum": 17185,
@@ -608,7 +631,9 @@
     "spells": [
       "bull strength", "Mind fortess", "Mind blast", "Perfect Self"
     ],
-    "notes": "Niewidzialny"
+    "notes": "Niewidzialny",
+    "bookVnum": 14062,
+    "bookName": "ksiega czarow",
   },
   {
     "roomVnum": 541,
@@ -618,7 +643,9 @@
     "spells": [
       "Dismiss monster", "Lightning bolt", "lower resistance", "Acid Arrow"
     ],
-    "difficulty": 3
+    "difficulty": 3,
+    "bookVnum": 1405,
+    "bookName": "ksiega elementow",
   },
   {
     "roomVnum": 14034,
@@ -629,7 +656,9 @@
       "vampiric touch", "perfect senses", "hallucinations", "bull strength", "animate dead"
     ],
     "dangerous": "t",
-    "difficulty": 4
+    "difficulty": 4,
+    "bookVnum": 14078,
+    "bookName": "ksiega mocy",
   },
   {
     "roomVnum": 28828,
@@ -639,7 +668,9 @@
     "spells": [
       "Increase wounds", "Vampiric Touch", "Soul Trap", "Lower Resistance", "raise zombie"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 28805,
+    "bookName": "czarna ksiega",
   },
   {
     "roomVnum": 45550,
@@ -647,8 +678,10 @@
     "region": "Carrallak",
     "class": "Mag",
     "spells": [
-      "Summon greenskin", "Water breathing", "Resist lightning", "Flame arrow"
-    ]
+      "Summon greenskin", "Detect Hidden", "Resist lightning", "Flame arrow"
+    ],
+    "bookVnum": 45557,
+    "bookName": "magiczna ksiega",
   },
   {
     "roomVnum": 10764,
@@ -657,7 +690,9 @@
     "class": "Mag",
     "spells": [
       "Lightning bolt", "Resist Fire", "Haste", "Summon Flying Creature"
-    ]
+    ],
+    "bookVnum": 1407,
+    "bookName": "niezniszczona ksiega",
   },
   {
     "roomVnum": 3710,
@@ -665,8 +700,10 @@
     "region": "Forteca",
     "class": "Mag",
     "spells": [
-      "Resist Cold", "Ethereal armor", "raise zombie", "Haste"
-    ]
+      "Resist Cold", "Decay", "raise zombie", "Haste"
+    ],
+    "bookVnum": 3707,
+    "bookName": "zakurzona ksiega",
   },
   {
     "roomVnum": 18443,
@@ -678,7 +715,9 @@
     ],
     "notes": "Ksiega niewidzialna, dwa chodzą po pustyni",
     "dangerous": "t",
-    "difficulty": 5
+    "difficulty": 5,
+    "bookVnum": 6607,
+    "bookName": "piaskowa ksiega",
   },
   {
     "roomVnum": 16619,
@@ -688,7 +727,9 @@
     "spells": [
       "Force bolt", "Resist Acid", "Confusion", "Free action", "razorblade hands"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 16615,
+    "bookName": "zakurzona ksiega",
   },
   {
     "roomVnum": 28626,
@@ -698,7 +739,9 @@
     "spells": [
       "Fly", "force missiles", "confusion shell", "hallucinations"
     ],
-    "difficulty": 5
+    "difficulty": 5,
+    "bookVnum": 28600,
+    "bookName": "magiczna ksiega",
   },
   {
     "roomVnum": 4519,
@@ -708,7 +751,9 @@
     "spells": [
       "Hold Undead", "free action", "remove paralysis", "repayment"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 4510,
+    "bookName": "zakurzona ksiega",
   },
   {
     "roomVnum": 46364,
@@ -717,7 +762,9 @@
     "class": "Mag",
     "spells": [
       "haste", "dismiss monster", "summon flying creature", "minor globe of invulnerability", "flame arrow"
-    ]
+    ],
+    "bookVnum": 46363,
+    "bookName": "szara ksiega",
   },
   {
     "roomVnum": 2519,
@@ -727,7 +774,9 @@
     "spells": [
       "hold monster", "fly", "Fireshield", "remove paralysis"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 14020,
+    "bookName": "ksiega zaklec",
   },
   {
     "roomVnum": 17817,
@@ -735,9 +784,11 @@
     "region": "Easterial",
     "class": "Mag",
     "spells": [
-      "hold plant", "fly", "hold monster", "Charm person"
+      "dismiss outsider", "loyalty", "resist normal weapon", "noble look", "loop"
     ],
-    "notes": "Niewidzialny"
+    "notes": "Niewidzialny",
+    "bookVnum": 17801,
+    "bookName": "ksiega zaklec",
   },
   {
     "roomVnum": 1315,
@@ -747,7 +798,9 @@
     "spells": [
       "hold person", "reflect spell I", "Iceshield", "Charm person"
     ],
-    "difficulty": 6
+    "difficulty": 6,
+    "bookVnum": 1354,
+    "bookName": "ksiega mocy",
   },
   {
     "roomVnum": 15942,
@@ -758,7 +811,9 @@
       "lesser magic resist", "Stability", "Mental barrier", "summon distortion"
     ],
     "dangerous": "t",
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 14060,
+    "bookName": "ksiega zaklec",
   },
   {
     "roomVnum": 43088,
@@ -768,7 +823,9 @@
     "spells": [
       "decay", "raise ghast", "shadow weapon", "banshee`s howl"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 43068,
+    "bookName": "ksiega magii",
   },
   {
     "roomVnum": 1443,
@@ -779,7 +836,9 @@
       "Force field", "protection from summon", "antimagic manacles", "hold monster"
     ],
     "dangerous": "t",
-    "difficulty": 7
+    "difficulty": 7,
+    "bookVnum": 1331,
+    "bookName": "zdobiona ksiega",
   },
   {
     "roomVnum": 9317,
@@ -790,7 +849,9 @@
       "resist normal weapon", "reflect spell I", "resist elements", "dimension door"
     ],
     "dangerous": "t",
-    "difficulty": 7
+    "difficulty": 7,
+    "bookVnum": 14077,
+    "bookName": "ksiega mocy",
   },
   {
     "roomVnum": 11148,
@@ -802,7 +863,9 @@
     ],
     "notes": "Niewidzialny",
     "dangerous": "t",
-    "difficulty": 5
+    "difficulty": 5,
+    "bookVnum": 11134,
+    "bookName": "ksiega mrocznej potegi",
   },
   {
     "roomVnum": 42348,
@@ -810,9 +873,11 @@
     "region": "Nowy Kontynent",
     "class": "Mag",
     "spells": [
-      "shadow conjuration", "create greater illusion", "shadow swarm", "blink", "inspiring presence"
+      "shadow conjuration", "create greater illusion", "shadow swarm", "power word blind", "inspiring presence"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 42348,
+    "bookName": "ksiega magii",
   },
   {
     "roomVnum": 5440,
@@ -820,11 +885,13 @@
     "region": "Carrallak",
     "class": "Mag",
     "spells": [
-      "stone skin", "change staff", "draconic wisdom", "major haste", "giant strength"
+      "stone skin", "change weapon", "draconic wisdom", "major haste", "giant strength"
     ],
     "dangerous": "t",
     "boss": "t",
-    "difficulty": 8
+    "difficulty": 8,
+    "bookVnum": 5413,
+    "bookName": "starozytna elfia ksiega",
   },
   {
     "roomVnum": 17972,
@@ -835,7 +902,9 @@
       "great dispel magic", "behemot toughness", "deflect wounds", "major globe of invulnerability"
     ],
     "dangerous": "t",
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 17957,
+    "bookName": "stara ksiega",
   },
   {
     "roomVnum": 33068,
@@ -847,7 +916,9 @@
     ],
     "notes": "Ksiega Nekromancji: Ksiegi laduja sie w szczelinie, na mobie laduje sie klucz",
     "dangerous": "t",
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 33020,
+    "bookName": "ksiega najwyzszej nekromancji",
   },
   {
     "roomVnum": 33068,
@@ -859,7 +930,9 @@
     ],
     "notes": "Ksiega Magiczna Zakurzona: Ksiegi laduja sie w szczelinie, na mobie laduje sie klucz",
     "dangerous": "t",
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 33021,
+    "bookName": "magiczna ksiega",
   },
   {
     "roomVnum": 25670,
@@ -871,7 +944,9 @@
     ],
     "dangerous": "t",
     "boss": "t",
-    "difficulty": 5
+    "difficulty": 5,
+    "bookVnum": 25669,
+    "bookName": "czarna ksiega",
   },
   {
     "roomVnum": 33068,
@@ -883,17 +958,20 @@
     ],
     "notes": "Ksiega Magii Wysokiej: Ksiegi laduja sie w szczelinie, na mobie laduje sie klucz",
     "dangerous": "t",
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 33027,
+    "bookName": "ksiega magii wysokiej",
   },
   {
-    "roomVnum": 27609,
     "mob": "Asher Verys",
     "region": "Forteca",
     "class": "Mag",
     "spells": [
-      "minor globe of inv", "flame lace", "chaotic shock", "force bolt"
+      "minor globe of invulnerability", "flame lace", "chaotic shock", "force bolt"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 14076,
+    "bookName": "opasla ksiega",
   },
   {
     "roomVnum": 33516,
@@ -901,9 +979,11 @@
     "region": "Forteca",
     "class": "Mag",
     "spells": [
-      "force missiles", "acid blast", "hold person", "maze"
+      "force missiles", "acid blast", "hold person", "vampiric touch", "raise zombie"
     ],
-    "difficulty": 4
+    "difficulty": 4,
+    "bookVnum": 1406,
+    "bookName": "ksiega czarow",
   },
   {
     "roomVnum": 1761,
@@ -915,18 +995,22 @@
     ],
     "notes": "Wymaga wlozenia pieczeci do posagu",
     "dangerous": "t",
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 1811,
+    "bookName": "starozytna ksiega",
   },
   {
-    "roomVnum": 27594,
-    "mob": "Urthen Medevi",
-    "region": "Forteca",
+    "roomVnum": 0,
+    "mob": "Quaz'gyved",
+    "region": "Arras",
     "class": "Mag",
     "spells": [
-      "inspire", "fetch", "loop", "psychic scream", "blink"
+      "inspire", "fetch", "create greater illusion", "psychic scream", "shadow conjuration"
     ],
     "boss": "t",
-    "difficulty": 10
+    "difficulty": 10,
+    "bookVnum": 27612,
+    "bookName": "magiczna ksiega",
   },
   {
     "roomVnum": 17965,
@@ -936,7 +1020,9 @@
     "spells": [
       "exile", "mantle", "imbue with element", "puppet master", "minor globe of invulnerability"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 17965,
+    "bookName": "zniszczona ksiega",
   },
   {
     "roomVnum": 64915,
@@ -944,10 +1030,12 @@
     "region": "Carrallak",
     "class": "Mag",
     "spells": [
-      "summon strong creature", "eye of vision", "mantle", "mass fly", "puppet master"
+      "insight", "slippery floor", "nimbleness", "mass fly", "mass invis"
     ],
     "dangerous": "t",
-    "locked": "t"
+    "locked": "t",
+    "bookVnum": 25670,
+    "bookName": "tajemnicza ksiega zaklec",
   },
   {
     "roomVnum": 2059,
@@ -959,7 +1047,9 @@
     ],
     "dangerous": "t",
     "boss": "t",
-    "difficulty": 7
+    "difficulty": 7,
+    "bookVnum": 2058,
+    "bookName": "ksiega oprawiona w skore",
   },
   {
     "roomVnum": 2899,
@@ -970,7 +1060,9 @@
       "resist magic weapon", "charm monster", "summon strong creature", "summon greater meteor"
     ],
     "dangerous": "t",
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 2895,
+    "bookName": "ksiega zaklec magicznych",
   },
   {
     "roomVnum": 19447,
@@ -981,7 +1073,9 @@
       "energy strike", "globe of invulnerability", "chain lightning", "rain of blades","thunder bolt"
     ],
     "dangerous": "t",
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 19407,
+    "bookName": "lodowa ksiega",
   },
   {
     "roomVnum": 9320,
@@ -992,7 +1086,9 @@
       "summon greater meteor", "summon", "summon ancient creature", "draconic wisdom"
     ],
     "dangerous": "t",
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 9303,
+    "bookName": "prastara ksiega",
   },
   {
     "roomVnum": 41221,
@@ -1003,7 +1099,9 @@
       "master of piercing sight", "enchant artefact", "absolute magic protection", "summon", "revive"
     ],
     "dangerous": "t",
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 41232,
+    "bookName": "antyczna, magiczna ksiega",
   },
   {
     "roomVnum": 41221,
@@ -1040,13 +1138,15 @@
   },
   {
     "roomVnum": 11020,
-    "mob": "Arail Kabraxis",
+    "mob": "Upadly Kaplan",
     "region": "Easterial",
     "class": "Mag",
     "spells": [
-      "Wall of mist", "Flame arrow", "Spirit armor", "hold person"
+      "Wall of mist", "eagle splendor", "Spirit armor", "remove paralysis"
     ],
-    "notes": "upadły kapłan u duergarów dropi ciemnoszarą księge ze spirit armorem, moze to ta"
+    "notes": "upadly kaplan u duergarow",
+    "bookVnum": 1404,
+    "bookName": "ciemnoszara ksiega",
   },
   {
     "roomVnum": 5118,
@@ -1056,17 +1156,21 @@
     "spells": [
       "decay", "minor globe of invulnerability", "raise ghoul", "ghoul touch"
     ],
-    "difficulty": 6
+    "difficulty": 6,
+    "bookVnum": 5113,
+    "bookName": "plugawa ksiega",
   },
   {
     "roomVnum": 5771,
-    "mob": "Złoty Smok",
+    "mob": "Zloty Smok",
     "region": "Forteca",
     "class": "Mag",
     "spells": [
       "energy shield", "power word kill", "reflect spell II", "wizard eye", "eyes of the torturer"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 5766,
+    "bookName": "zwyczajny notatnik",
   },
   {
     "roomVnum": 27450,
@@ -1075,7 +1179,9 @@
     "class": "Mag",
     "spells": [
       "power word stun", "loyalty", "enchant armor", "resist magic weapon", "free action"
-    ]
+    ],
+    "bookVnum": 27433,
+    "bookName": "ksiega wiedzy zakonu Vigorsterei",
   },
   {
     "roomVnum": 44471,
@@ -1084,7 +1190,9 @@
     "class": "Mag",
     "spells": [
       "charm monster", "summon flying creature", "cone of cold", "mass fly"
-    ]
+    ],
+    "bookVnum": 44406,
+    "bookName": "ksiega magii drowow",
   },
   {
     "roomVnum": 22795,
@@ -1095,7 +1203,9 @@
       "nexus", "portal", "master of piercing sight", "enchant artefact", "lightingshield"
     ],
     "dangerous": "t",
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 22704,
+    "bookName": "ksiega arcymaga",
   }
 
 ]

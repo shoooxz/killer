@@ -5,6 +5,11 @@ function mapper:move(dir)
 	keybind.show = true
 	self:walkerStop()
 
+	-- BLOKUJ WYJSCIA  /blokuj /odblokuj
+	if utils:inArray2(dir, utils:split(getRoomUserData(self.room.id, "block"), "#")) then
+		return false
+	end
+
 	-- CZY ISTNIEJE ROOM ID W TAMTA STRONE PRZEZ API MUDLETA
 	local roomID = self:getRoomViaExit(dir)
 	local command = false

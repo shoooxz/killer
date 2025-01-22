@@ -3,9 +3,15 @@ inventory = inventory or {}
 function inventory:eat()
   local food = profile:get("food")
   local water = profile:get("water")
+  local sub = profile:get("sub")
   --local bag =  profile:get("bag")
   --send("get "..food.." "..bag..";get "..food.." "..bag)
-  local f = "eat "..food..";eat "..food..";eat "..food
+  local f = ""
+  if food == "owoc" then
+    f = "eat owoc; eat owoc; eat owoc; feed "..sub.." owoc; feed "..sub.." owoc; feed "..sub.." owoc";
+  else
+    f = "eat "..food..";eat "..food..";eat "..food
+  end
   local w = "drink "..water..";drink "..water..";drink "..water
   send(f)
   send(w)

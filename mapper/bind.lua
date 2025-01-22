@@ -7,6 +7,42 @@ function mapper:setWaterBind(from)
 	end
 end
 
+function mapper:unblock(dir)
+	if self.room.id and dir then
+		local stored = getRoomUserData(self.room.id, "block")
+	  stored = utils:split(stored, "#")
+		if utils:inArray2(dir, stored) then
+			utils:arrayRemoveByValue(dir, stored)
+		end
+		setRoomUserData(self.room.id, "block", table.concat(stored,"#"))
+		printer:success("Mapper Bindy",
+			"Zablokowane `"..getRoomUserData(self.room.id, "block").."`"
+		)
+	else
+		printer:error("Mapper Bindy",
+			"Nie moge odnalezc ID lokacji, sprobuj /zlok"
+		)
+	end
+end
+
+function mapper:block(dir)
+	if self.room.id and dir then
+		local stored = getRoomUserData(self.room.id, "block")
+	  stored = utils:split(stored, "#")
+		if not utils:inArray2(dir, stored) then
+			table.insert(stored, dir)
+		end
+		setRoomUserData(self.room.id, "block", table.concat(stored,"#"))
+		printer:success("Mapper Bindy",
+			"Zablokowane `"..getRoomUserData(self.room.id, "block").."`"
+		)
+	else
+		printer:error("Mapper Bindy",
+			"Nie moge odnalezc ID lokacji, sprobuj /zlok"
+		)
+	end
+end
+
 function mapper:setBind(str)
 	if self.room.id and str then
 		setRoomUserData(self.room.id, "bind", str)
