@@ -82,7 +82,7 @@ ponury mag (+# Gory nad Jaskiniami Naugrimow):
 
 
 NK:
--nekromanta Nagash
+-nekromanta Nagash     lokacja 55420
 [55418] ksiega magii: 'fly' 'unholy fury' 'cone of cold' 'raise ghoul' 'orb of entropy'
 
 

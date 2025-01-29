@@ -551,7 +551,7 @@
       "Mirror image", "Misfortune", "Dismiss insect", "Slow"
     ],
     "bookVnum": 26998,
-    "bookName": "ksiega mocy",
+    "bookName": "ksiega mocy"
   },
   {
     "roomVnum": 540,
@@ -563,7 +563,7 @@
     ],
     "difficulty": 1,
     "bookVnum": 1401,
-    "bookName": "ksiazka z podstawami magii",
+    "bookName": "ksiazka z podstawami magii"
   },
   {
     "roomVnum": 10847,
@@ -574,7 +574,7 @@
       "Healing sleep", "Ray of enfeeblement", "Lightning bolt", "float"
     ],
     "bookVnum": 885,
-    "bookName": "stara ksiega",
+    "bookName": "stara ksiega"
   },
   {
     "roomVnum": 14013,
@@ -586,7 +586,7 @@
     ],
     "notes": "Niewidzialny i Ukryty",
     "bookVnum": 14072,
-    "bookName": "ksiega czarow",
+    "bookName": "ksiega czarow"
   },
   {
     "roomVnum": 5642,
@@ -597,7 +597,7 @@
       "Cat grace", "Daze", "Invisibility", "Mirror Image"
     ],
     "bookVnum": 1402,
-    "bookName": "brudna ksiega",
+    "bookName": "brudna ksiega"
   },
   {
     "roomVnum": 6864,
@@ -608,7 +608,7 @@
       "Bear endurance", "Detect hidden", "Mirror image", "Cautious sleep"
     ],
     "bookVnum": 1403,
-    "bookName": "pozolkla ksiega",
+    "bookName": "pozolkla ksiega"
   },
   {
     "roomVnum": 0,
@@ -621,7 +621,7 @@
     "notes": "Wędruje",
     "roaming": "t",
     "bookVnum": 14079,
-    "bookName": "magiczna ksiega",
+    "bookName": "magiczna ksiega"
   },
   {
     "roomVnum": 17185,
@@ -633,7 +633,7 @@
     ],
     "notes": "Niewidzialny",
     "bookVnum": 14062,
-    "bookName": "ksiega czarow",
+    "bookName": "ksiega czarow"
   },
   {
     "roomVnum": 541,
@@ -645,7 +645,7 @@
     ],
     "difficulty": 3,
     "bookVnum": 1405,
-    "bookName": "ksiega elementow",
+    "bookName": "ksiega elementow"
   },
   {
     "roomVnum": 14034,
@@ -658,7 +658,7 @@
     "dangerous": "t",
     "difficulty": 4,
     "bookVnum": 14078,
-    "bookName": "ksiega mocy",
+    "bookName": "ksiega mocy"
   },
   {
     "roomVnum": 28828,
@@ -670,7 +670,7 @@
     ],
     "dangerous": "t",
     "bookVnum": 28805,
-    "bookName": "czarna ksiega",
+    "bookName": "czarna ksiega"
   },
   {
     "roomVnum": 45550,
@@ -681,7 +681,7 @@
       "Summon greenskin", "Detect Hidden", "Resist lightning", "Flame arrow"
     ],
     "bookVnum": 45557,
-    "bookName": "magiczna ksiega",
+    "bookName": "magiczna ksiega"
   },
   {
     "roomVnum": 10764,
@@ -692,7 +692,7 @@
       "Lightning bolt", "Resist Fire", "Haste", "Summon Flying Creature"
     ],
     "bookVnum": 1407,
-    "bookName": "niezniszczona ksiega",
+    "bookName": "niezniszczona ksiega"
   },
   {
     "roomVnum": 3710,
@@ -703,7 +703,7 @@
       "Resist Cold", "Decay", "raise zombie", "Haste"
     ],
     "bookVnum": 3707,
-    "bookName": "zakurzona ksiega",
+    "bookName": "zakurzona ksiega"
   },
   {
     "roomVnum": 18443,
@@ -717,7 +717,7 @@
     "dangerous": "t",
     "difficulty": 5,
     "bookVnum": 6607,
-    "bookName": "piaskowa ksiega",
+    "bookName": "piaskowa ksiega"
   },
   {
     "roomVnum": 16619,
@@ -729,7 +729,7 @@
     ],
     "dangerous": "t",
     "bookVnum": 16615,
-    "bookName": "zakurzona ksiega",
+    "bookName": "zakurzona ksiega"
   },
   {
     "roomVnum": 28626,
@@ -741,7 +741,7 @@
     ],
     "difficulty": 5,
     "bookVnum": 28600,
-    "bookName": "magiczna ksiega",
+    "bookName": "magiczna ksiega"
   },
   {
     "roomVnum": 4519,
@@ -753,7 +753,7 @@
     ],
     "dangerous": "t",
     "bookVnum": 4510,
-    "bookName": "zakurzona ksiega",
+    "bookName": "zakurzona ksiega"
   },
   {
     "roomVnum": 46364,
@@ -764,7 +764,7 @@
       "haste", "dismiss monster", "summon flying creature", "minor globe of invulnerability", "flame arrow"
     ],
     "bookVnum": 46363,
-    "bookName": "szara ksiega",
+    "bookName": "szara ksiega"
   },
   {
     "roomVnum": 2519,
@@ -776,7 +776,7 @@
     ],
     "dangerous": "t",
     "bookVnum": 14020,
-    "bookName": "ksiega zaklec",
+    "bookName": "ksiega zaklec"
   },
   {
     "roomVnum": 17817,
@@ -788,7 +788,7 @@
     ],
     "notes": "Niewidzialny",
     "bookVnum": 17801,
-    "bookName": "ksiega zaklec",
+    "bookName": "ksiega zaklec"
   },
   {
     "roomVnum": 1315,
@@ -800,7 +800,7 @@
     ],
     "difficulty": 6,
     "bookVnum": 1354,
-    "bookName": "ksiega mocy",
+    "bookName": "ksiega mocy"
   },
   {
     "roomVnum": 15942,
@@ -813,7 +813,7 @@
     "dangerous": "t",
     "boss": "t",
     "bookVnum": 14060,
-    "bookName": "ksiega zaklec",
+    "bookName": "ksiega zaklec"
   },
   {
     "roomVnum": 43088,
@@ -825,7 +825,7 @@
     ],
     "dangerous": "t",
     "bookVnum": 43068,
-    "bookName": "ksiega magii",
+    "bookName": "ksiega magii"
   },
   {
     "roomVnum": 1443,
@@ -838,7 +838,7 @@
     "dangerous": "t",
     "difficulty": 7,
     "bookVnum": 1331,
-    "bookName": "zdobiona ksiega",
+    "bookName": "zdobiona ksiega"
   },
   {
     "roomVnum": 9317,
@@ -851,7 +851,7 @@
     "dangerous": "t",
     "difficulty": 7,
     "bookVnum": 14077,
-    "bookName": "ksiega mocy",
+    "bookName": "ksiega mocy"
   },
   {
     "roomVnum": 11148,
@@ -865,7 +865,7 @@
     "dangerous": "t",
     "difficulty": 5,
     "bookVnum": 11134,
-    "bookName": "ksiega mrocznej potegi",
+    "bookName": "ksiega mrocznej potegi"
   },
   {
     "roomVnum": 42348,
@@ -877,7 +877,7 @@
     ],
     "dangerous": "t",
     "bookVnum": 42348,
-    "bookName": "ksiega magii",
+    "bookName": "ksiega magii"
   },
   {
     "roomVnum": 5440,
@@ -891,7 +891,7 @@
     "boss": "t",
     "difficulty": 8,
     "bookVnum": 5413,
-    "bookName": "starozytna elfia ksiega",
+    "bookName": "starozytna elfia ksiega"
   },
   {
     "roomVnum": 17972,
@@ -904,7 +904,7 @@
     "dangerous": "t",
     "boss": "t",
     "bookVnum": 17957,
-    "bookName": "stara ksiega",
+    "bookName": "stara ksiega"
   },
   {
     "roomVnum": 33068,
@@ -918,7 +918,7 @@
     "dangerous": "t",
     "boss": "t",
     "bookVnum": 33020,
-    "bookName": "ksiega najwyzszej nekromancji",
+    "bookName": "ksiega najwyzszej nekromancji"
   },
   {
     "roomVnum": 33068,
@@ -932,7 +932,7 @@
     "dangerous": "t",
     "boss": "t",
     "bookVnum": 33021,
-    "bookName": "magiczna ksiega",
+    "bookName": "magiczna ksiega"
   },
   {
     "roomVnum": 25670,
@@ -946,7 +946,7 @@
     "boss": "t",
     "difficulty": 5,
     "bookVnum": 25669,
-    "bookName": "czarna ksiega",
+    "bookName": "czarna ksiega"
   },
   {
     "roomVnum": 33068,
@@ -960,7 +960,7 @@
     "dangerous": "t",
     "boss": "t",
     "bookVnum": 33027,
-    "bookName": "ksiega magii wysokiej",
+    "bookName": "ksiega magii wysokiej"
   },
   {
     "mob": "Asher Verys",
@@ -971,7 +971,7 @@
     ],
     "dangerous": "t",
     "bookVnum": 14076,
-    "bookName": "opasla ksiega",
+    "bookName": "opasla ksiega"
   },
   {
     "roomVnum": 33516,
@@ -983,7 +983,7 @@
     ],
     "difficulty": 4,
     "bookVnum": 1406,
-    "bookName": "ksiega czarow",
+    "bookName": "ksiega czarow"
   },
   {
     "roomVnum": 1761,
@@ -997,7 +997,7 @@
     "dangerous": "t",
     "boss": "t",
     "bookVnum": 1811,
-    "bookName": "starozytna ksiega",
+    "bookName": "starozytna ksiega"
   },
   {
     "roomVnum": 0,
@@ -1010,7 +1010,7 @@
     "boss": "t",
     "difficulty": 10,
     "bookVnum": 27612,
-    "bookName": "magiczna ksiega",
+    "bookName": "magiczna ksiega"
   },
   {
     "roomVnum": 17965,
@@ -1022,7 +1022,7 @@
     ],
     "dangerous": "t",
     "bookVnum": 17965,
-    "bookName": "zniszczona ksiega",
+    "bookName": "zniszczona ksiega"
   },
   {
     "roomVnum": 64915,
@@ -1035,7 +1035,7 @@
     "dangerous": "t",
     "locked": "t",
     "bookVnum": 25670,
-    "bookName": "tajemnicza ksiega zaklec",
+    "bookName": "tajemnicza ksiega zaklec"
   },
   {
     "roomVnum": 2059,
@@ -1049,7 +1049,7 @@
     "boss": "t",
     "difficulty": 7,
     "bookVnum": 2058,
-    "bookName": "ksiega oprawiona w skore",
+    "bookName": "ksiega oprawiona w skore"
   },
   {
     "roomVnum": 2899,
@@ -1062,7 +1062,7 @@
     "dangerous": "t",
     "boss": "t",
     "bookVnum": 2895,
-    "bookName": "ksiega zaklec magicznych",
+    "bookName": "ksiega zaklec magicznych"
   },
   {
     "roomVnum": 19447,
@@ -1075,7 +1075,7 @@
     "dangerous": "t",
     "boss": "t",
     "bookVnum": 19407,
-    "bookName": "lodowa ksiega",
+    "bookName": "lodowa ksiega"
   },
   {
     "roomVnum": 9320,
@@ -1088,7 +1088,7 @@
     "dangerous": "t",
     "boss": "t",
     "bookVnum": 9303,
-    "bookName": "prastara ksiega",
+    "bookName": "prastara ksiega"
   },
   {
     "roomVnum": 41221,
@@ -1101,7 +1101,7 @@
     "dangerous": "t",
     "boss": "t",
     "bookVnum": 41232,
-    "bookName": "antyczna, magiczna ksiega",
+    "bookName": "antyczna, magiczna ksiega"
   },
   {
     "roomVnum": 41221,
@@ -1146,7 +1146,7 @@
     ],
     "notes": "upadly kaplan u duergarow",
     "bookVnum": 1404,
-    "bookName": "ciemnoszara ksiega",
+    "bookName": "ciemnoszara ksiega"
   },
   {
     "roomVnum": 5118,
@@ -1158,7 +1158,7 @@
     ],
     "difficulty": 6,
     "bookVnum": 5113,
-    "bookName": "plugawa ksiega",
+    "bookName": "plugawa ksiega"
   },
   {
     "roomVnum": 5771,
@@ -1170,7 +1170,7 @@
     ],
     "dangerous": "t",
     "bookVnum": 5766,
-    "bookName": "zwyczajny notatnik",
+    "bookName": "zwyczajny notatnik"
   },
   {
     "roomVnum": 27450,
@@ -1181,7 +1181,7 @@
       "power word stun", "loyalty", "enchant armor", "resist magic weapon", "free action"
     ],
     "bookVnum": 27433,
-    "bookName": "ksiega wiedzy zakonu Vigorsterei",
+    "bookName": "ksiega wiedzy zakonu Vigorsterei"
   },
   {
     "roomVnum": 44471,
@@ -1192,7 +1192,7 @@
       "charm monster", "summon flying creature", "cone of cold", "mass fly"
     ],
     "bookVnum": 44406,
-    "bookName": "ksiega magii drowow",
+    "bookName": "ksiega magii drowow"
   },
   {
     "roomVnum": 22795,
@@ -1205,7 +1205,7 @@
     "dangerous": "t",
     "boss": "t",
     "bookVnum": 22704,
-    "bookName": "ksiega arcymaga",
+    "bookName": "ksiega arcymaga"
   }
 
 ]

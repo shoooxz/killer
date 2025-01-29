@@ -40,7 +40,7 @@ buff.basic = {
   ["absolute magic p"] = 36,
   ["deflect wounds"] = 37,
   ["defense curl"] = 38,
-  ["pustak"] = 39,
+  ["holy weapon"] = 39,
 }
 
 buff.short = {
@@ -48,6 +48,8 @@ buff.short = {
   "mantle",
   "stability",
   "mirror image",
+  "free action",
+  "fireshield",
 }
 
 function buff:masterAllowed(target)

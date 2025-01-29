@@ -69,11 +69,11 @@ function scripts:dead(str)
 	elseif string.find(who, "szkielet") then
 		send("exam kup")
 		send("get klej kup; get mon kup")
-	elseif string.find(who, "yugoloth") then
-		send("exam cialo; get klej cialo")
+	elseif string.find(who, "yugoloth") or string.find(who, "sniezny troll") or string.find(who, "lodowy troll") then    
+		send("exam cialo; get all.klej cialo")
 	elseif string.find(who, "istota") then
 		send("get all.klej;look")
-  elseif string.find(who, "goblin") or string.find(who, "ork") or string.find(who, "wzgorzowy gigant") then 
+  elseif string.find(who, "goblin") or string.find(who, "ork") or string.find(who, "wzgorzowy gigant") then
 		send("exam cialo; get klej cialo")
 	else
 		send("exam cialo")
