@@ -282,9 +282,9 @@ end
 
 function printer:roller(arr)
     self:title("Roller")
-    self:line("Im dluzej rollujesz - maxy sie zwiekszaja.", self.sectionColor)
-    self:line("Perfect oznacza trafienie maxa w sesji.", self.sectionColor)
-    self:space()
+    --self:line("Im dluzej rollujesz - maxy sie zwiekszaja.", self.sectionColor)
+    --self:line("Perfect oznacza trafienie maxa w sesji.", self.sectionColor)
+    --self:space()
     if next(arr) then
         self:tableRow({10,10,10, 10, 10}, {"Stat", "Obecnie", "Max", "Target", "Perfect"}, arr)
     end

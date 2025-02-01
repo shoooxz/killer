@@ -136,7 +136,8 @@ function printer:tableRow(size, header, arr, link)
 					cechoLink("<"..value[1]..">"..value[2], value[3], "", true)
 					cecho(filler)
 				else
-					out = out.."<"..value[1]..">"..value[2]..filler
+					--out = out.."<"..value[1]..">"..value[2]..filler
+					cecho("<"..value[1]..">"..value[2]..filler)
 				end
 			else
 					local filler = string.rep(" ", size[index]-string.len(value))

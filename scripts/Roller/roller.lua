@@ -121,7 +121,7 @@ function roller:catch(multimatches)
       if match == 7 then
         scripts:beep()
       else
-        send("nie")
+        send("nie", false)
       end
     --[[
     for stat, _ in pairs(localStats) do

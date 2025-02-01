@@ -21,10 +21,10 @@ function character:assist(sub)
 end
 
 function character:knockdown()
-  send("stand")
   deleteLine()
   cecho("\n<red>UWAGA! POWALENIE!")
   scripts:beep()
+  send("stand")
 end
 
 

@@ -40,7 +40,7 @@ function state:createLocationState()
     autoWrap = true,
     color = "black",
     scrollBar = false,
-    fontSize = 15,
+    fontSize = 13,
     width=settings:get("mapperWidth"), height=self.lsheight,
   })
 end
@@ -228,8 +228,17 @@ function state:setSub(name)
   self.sub = name
 end
 
+function state:setDoubleMem(mem)
+  if string.len(mem) == 1 then
+    return " "..mem
+  end
+  return mem
+end
+
 function state:printTeamMember(obj)
   obj.name = utils:replacePolish(obj.name)
+
+  -- RESUCE
   if obj.name == "JA" then
     ls:cechoLink("<white><<green>R<white>>", [[send("order ]]..self.sub.." rescue "..profile.name..[[")]], "", true)
   else
@@ -239,17 +248,25 @@ function state:printTeamMember(obj)
       display(obj)
     end
   end
+
+  -- HP MV
   local index = "<white>[<white> <"..self.iTeamColor..">"..obj.index.."<white>]"
-  ls:cecho(index.." "..obj.hp.." "..obj.mv.." "..self:getNameColor(obj))
+  ls:cecho(index.." "..obj.hp.." "..obj.mv.." ")
+
+  -- MEM
+  ls:cecho("<white>[<dodger_blue>"..self:setDoubleMem(obj.mem).."<white>] ")
+
+  -- NAME
   if obj.name == "JA" then
-    ls:echo(obj.name)
+    ls:cecho("<white>"..obj.name)
   else
     if self.sub == obj.name then
       ls:echo("*")
     end
-    ls:cechoLink(obj.name, [[state:setSub("]] .. obj.name .. [[")]], "", true)
+    ls:cechoLink(self:getNameColor(obj)..obj.name, [[state:setSub("]] .. obj.name .. [[")]], "", true)
   end
 
+  -- ATTACKERS
   if obj.attackers ~= "" then
     -- usun ostatni przecinek
     ls:cecho("<rosy_brown> ← <white>["..obj.attackers:sub(1, -2).."]")
