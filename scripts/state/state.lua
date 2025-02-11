@@ -148,7 +148,7 @@ function state:gmcpRoomPeople()
       end
     end
 
-
+    --WSPARCIE ZROBIC CHECK CZY MA BYC
     state:checkForAss(me)
 
     -- print all    me > mates > npc

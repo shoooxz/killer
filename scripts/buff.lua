@@ -41,6 +41,10 @@ buff.basic = {
   ["deflect wounds"] = 37,
   ["defense curl"] = 38,
   ["holy weapon"] = 39,
+  ["res magi weapon"] = 40,
+  ["pustak"] = 41,
+  ["pustak"] = 42,
+--  ["pustak"] = 43,
 }
 
 buff.short = {
@@ -50,6 +54,7 @@ buff.short = {
   "mirror image",
   "free action",
   "fireshield",
+  "res magi weapon",
 }
 
 function buff:masterAllowed(target)

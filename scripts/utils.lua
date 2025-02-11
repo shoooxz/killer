@@ -239,3 +239,7 @@ end
 function utils:endsWith(str, suffix)
     return string.sub(str, -#suffix) == suffix
 end
+
+function utils:startsWith(str, prefix)
+    return string.sub(str, 1, #prefix) == prefix
+end

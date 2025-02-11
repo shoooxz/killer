@@ -160,7 +160,7 @@ end
 function top:setTime(mud)
   if mud then
     local time = mud.TimeInfo
-    local weather = mud.Weather
+    local weather = mud.Weather or {}
   --[[
 
   Wymawiasz slowa, 'astral search'.
@@ -179,9 +179,11 @@ function top:setTime(mud)
 
     self.time:cecho("<center><white>Godzina: <gold>"..time.time.."    <white>Dzien: "..time.day.." ("..utils:replacePolish(time.dayname)..") ")
     self.time2:cecho("<center><white>Miesiac: "..utils:replacePolish(time.month).." ("..utils:replacePolish(time.era)..") ")
-    self.sky:cecho("<center><white>Pogoda: <gold>"..utils:replacePolish(weather.sky))
-    if weather.wind then
-      self.sky2:cecho("<center><white>Pogoda: "..utils:replacePolish(weather.wind))
+    if weather then
+      self.sky:cecho("<center><white>Pogoda: <gold>"..utils:replacePolish(weather.sky))
+      if weather.wind then
+        self.sky2:cecho("<center><white>Pogoda: "..utils:replacePolish(weather.wind))
+      end
     end
   end
 end

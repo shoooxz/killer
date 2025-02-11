@@ -63,15 +63,17 @@ function scripts:prefix(str, color)
 end
 
 function scripts:dead(str)
+	-- zrobic check zeby nie examowalo
+
 	who = str:lower()
 	if string.find(who, "keton") or string.find(who, "drzewiec") then
 		send("exam drzewo")
 	elseif string.find(who, "szkielet") then
 		send("exam kup")
 		send("get klej kup; get mon kup")
-	elseif string.find(who, "yugoloth") or string.find(who, "sniezny troll") or string.find(who, "lodowy troll") then    
+	elseif string.find(who, "yugoloth") or string.find(who, "sniezny troll") or string.find(who, "lodowy troll") then
 		send("exam cialo; get all.klej cialo")
-	elseif string.find(who, "istota") then
+	elseif string.find(who, "istota") or string.find(who, "blotny elemental") then
 		send("get all.klej;look")
   elseif string.find(who, "goblin") or string.find(who, "ork") or string.find(who, "wzgorzowy gigant") then
 		send("exam cialo; get klej cialo")
@@ -81,7 +83,7 @@ function scripts:dead(str)
 	if string.find(who, "krzykacz") then
 		send("get klej cialo")
 	end
-end
+end 
 
 function scripts:beep()
 	playSoundFile(getMudletHomeDir().. [[/killer/beep.wav]])

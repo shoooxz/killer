@@ -37,6 +37,82 @@ gag.dt = {
 	["chlod"] = "COLD",
 	["ukaszenie"] = "PIERCE",
 }
+gag.spellTranslate = {
+	{ " ",		" "		},
+	{ "ar",		"abra"		},
+	{ "au",		"kada"		},
+	{ "bless",	"fido"		},
+	{ "blind",	"nose"		},
+	{ "bur",	"mosa"		},
+	{ "cu",		"judi"		},
+	{ "de",		"oculo"		},
+	{ "en",		"unso"		},
+	{ "light",	"dies"		},
+	{ "lo",		"hi"		},
+	{ "mor",	"zak"		},
+	{ "move",	"sido"		},
+	{ "ness",	"lacri"		},
+	{ "ning",	"illa"		},
+	{ "per",	"duda"		},
+	{ "ra",		"gru"		},
+	{ "fresh",	"ima"		},
+	{ "re",		"candus"	},
+	{ "son",	"sabru"		},
+	{ "tect",	"infra"		},
+	{ "tri",	"cula"		},
+	{ "ven",	"nofo"		},
+	{ "a", "a" }, { "b", "b" }, { "c", "q" }, { "d", "e" },
+	{ "e", "z" }, { "f", "y" }, { "g", "o" }, { "h", "p" },
+	{ "i", "u" }, { "j", "y" }, { "k", "t" }, { "l", "r" },
+	{ "m", "w" }, { "n", "i" },  { "p", "s" },
+	{ "q", "d" }, { "r", "f" }, { "s", "g" }, { "t", "h" },
+	{ "u", "j" }, { "w", "x" }, { "x", "n" },
+	{ "y", "l" }, { "z", "k" },
+	{ "v", "z" },
+	{ "o", "a" },
+	{ "", "" },
+}
+
+
+gag.spellTranslateFix = {
+	["DIEINE FAEAR"] = "DIVINE FAVOUR",
+	["DIEINE PAWER"] = "DIVINE POWER",
+	["FLAME ARRAW"] = "FLAME ARROW",
+	["EAMPIRIC TAUCH"] = "VAMPIRIC TOUCH",
+	["SPRAY AF THARNS"] = "SPRAY OF THORNS",
+	["SUMMAN ANIMAL"] = "SUMMON ANIMAL",
+}
+
+function gag:spellTransGetPart(str)
+	if str then
+		for i=1, #self.spellTranslate do
+			local prefix = self.spellTranslate[i][2]
+			if utils:startsWith(str, prefix) then
+					return {self.spellTranslate[i][1], prefix}
+			end
+		end
+	end
+end
+
+function gag:spellTrans(who, str)
+	local out = ""
+	while true do
+		local part = self:spellTransGetPart(str)
+		out = out..part[1]
+		str = string.sub(str, #part[2]+1)
+		if str == "" then break end
+	end
+	out = string.upper(out)
+	deleteLine()
+	echo("\n")
+	if self.spellTranslateFix[out] then -- out
+		cecho(who.." <tomato>"..self.spellTranslateFix[out])
+	else
+		cecho(who.." <tomato>"..out)
+	end
+	echo("\n")
+end
+
 --[[
 uderzenie|ciecie|pchniecie|smagniecie|szczypniecie|podmuch|walniecie|miazdzace walniecie|ugryzienie|uklucie|ssanie|zrace uderzenie|szarza|klepniecie|wyssanie umyslu|magia|boska moc|drapniecie|dziobniecie|siekniecie|uzadlenie|szokujace ugryzienie|plomienne ugryzienie|mrozace ugryzienie|kwasowe ugryzienie|wyssanie zycia|dzgniecie|wstrzasniecie|lupniecie|plomien|chlod|ukaszenie|precyzyjne ciecie|zamaszyste ciecie|uderzenie tarcza
 ^.*(boska moc|szokujace ugryzienie|mrozace ugryzienie|wyssanie umyslu|kwasowe ugryzienie|zrace uderzenie|miazdzace walniecie|plomienne ugryzienie|wyssanie zycia|zamaszyste ciecie|uderzenie tarcza|precyzyjne ciecie|uderzenie|ciecie|pchniecie|smagniecie|szczypniecie|podmuch|walniecie|ugryzienie|uklucie|ssanie|szarza|klepniecie|magia|drapniecie|dziobniecie|siekniecie|uzadlenie|dzgniecie|wstrzasniecie|lupniecie|plomien|chlod|ukaszenie).*$
