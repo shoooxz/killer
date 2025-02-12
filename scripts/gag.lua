@@ -81,6 +81,9 @@ gag.spellTranslateFix = {
 	["EAMPIRIC TAUCH"] = "VAMPIRIC TOUCH",
 	["SPRAY AF THARNS"] = "SPRAY OF THORNS",
 	["SUMMAN ANIMAL"] = "SUMMON ANIMAL",
+	["FARCE BALT"] = "FORCE BOLT",
+	["MIRRAR IMAGE"] = "MIRROR IMAGE",
+	["HALD UNDEAD"] = "HOLD UNDEAD",
 }
 
 function gag:spellTransGetPart(str)
