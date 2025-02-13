@@ -34,6 +34,8 @@ function loadObjects(force)
         "scripts/herbalist",
         "scripts/learn",
         "scripts/buff",
+        "scripts/exp/exp",
+        "scripts/exp/fort",
         "mapper/core",
         "mapper/area",
         "mapper/helper",

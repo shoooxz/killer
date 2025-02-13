@@ -1,21 +1,36 @@
 settings = settings or {}
 settings.file = getMudletHomeDir().."/settings.lua"
 settings.list = settings.list or {}
+settings.dpiScaling = 100
 settings.func = {
 	["szerokosc"] = function(val)
-		setMainWindowSize(val, settings:get("mainWindowHeight"))
 		settings.list.mainWindowWidth = tonumber(val)
 		settings:save()
+		setMainWindowSize(settings:get("mainWindowWidth"), settings:get("mainWindowHeight"))
 	end,
 	["wysokosc"] = function(val)
-		setMainWindowSize(settings:get("mainWindowWidth"), val)
 		settings.list.mainWindowHeight = tonumber(val)
 		settings:save()
+		setMainWindowSize(settings:get("mainWindowWidth"), settings:get("mainWindowHeight"))
 	end,
 	["mapper_szerokosc"] = function(val)
-		mapper:ui(val)
 		settings.list.mapperWidth = tonumber(val)
 		settings:save()
+		mapper:ui(settings:get("mapperWidth"), settings:get("mapperHeight"))
+		state:createLocationState()
+	end,
+	["mapper_wysokosc"] = function(val)
+		settings.list.mapperHeight = tonumber(val)
+		settings:save()
+		mapper:ui(settings:get("mapperWidth"), settings:get("mapperHeight"))
+		state:createLocationState()
+	end,
+	["skalowanie_dpi"] = function(val)
+		settings.list.dpiScaling = tonumber(val)
+		settings:save()
+		settings:applyDpiScaling()
+		mapper:ui(settings:get("mapperWidth"), settings:get("mapperHeight"))
+		state:createLocationState()
 	end,
 }
 
@@ -26,16 +41,27 @@ function settings:init()
 		local default = {
 			["mainWindowWidth"] = 1920,
 			["mainWindowHeight"] = 1080,
-			["mapperWidth"] = 700
+			["mapperWidth"] = 700,
+			["mapperHeight"] = 400,
+			["dpiScaling"] = 100,
 		}
 		self:save(default)
 		self.list = default
 	end
+	self:applyDpiScaling()
 end
 
-function settings:get(name)
+function settings:applyDpiScaling()
+	self.dpiScaling = self:get("dpiScaling")/100
+end
+
+function settings:get(name, scaled)
 	if self.list[name] then
-		return self.list[name]
+		if (name == "mapperWidth" or name == "mapperHeight" or name == "mainWindowWidth" or name == "mainWindowHeight") and not scaled then
+				return self.list[name]/self.dpiScaling
+		else
+				return self.list[name]
+		end
 	end
 end
 

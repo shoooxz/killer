@@ -97,7 +97,7 @@ mapper.shortMirror = { --> events.lua
 
 function mapper:init()
 	self:unbindEvents()
-	self:ui(settings:get("mapperWidth"))
+	self:ui(settings:get("mapperWidth"), settings:get("mapperHeight"))
 	self:centerGMCP()
 	--self:addRoom(1, 514, 0, 0, 0) -- start point
 end
@@ -335,14 +335,14 @@ function mapper:load()
 	end
 end
 
-function mapper:ui(mapperWidth)
+function mapper:ui(mapperWidth, mapperHeight)
 	setBorderRight(mapperWidth)
 	self.mapperContainer = nil
 	self.mapperContainer = Geyser.Container:new({
 		x = -mapperWidth,
 		y = 0,
 		width = mapperWidth,
-		height = "100%",
+		height = mapperHeight,
 		name = "mapperContainer"
 	})
 	self.window = nil
@@ -351,7 +351,7 @@ function mapper:ui(mapperWidth)
 		x = 0,
 		y = 0,
 		width = "100%",
-		height = -state.lsheight
+		height = "100%",
 	}, self.mapperContainer)
 end
 

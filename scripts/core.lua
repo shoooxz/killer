@@ -83,7 +83,7 @@ function scripts:dead(str)
 	if string.find(who, "krzykacz") then
 		send("get klej cialo")
 	end
-end 
+end
 
 function scripts:beep()
 	playSoundFile(getMudletHomeDir().. [[/killer/beep.wav]])

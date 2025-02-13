@@ -1,6 +1,5 @@
 
 state = state or {}
-state.lsheight = 500
 state.team = {}
 state.groupNaming = {"b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "r", "s", "t", "q", "w", "v", "x", "y", "z"}
 state.iTeamColor = "gold"
@@ -34,15 +33,19 @@ function state:catchEnemyHP(hp)
 end
 
 function state:createLocationState()
+  local mapperWidth = settings:get("mapperWidth")
+  local mapperHeight = settings:get("mapperHeight")
+  local mainHeight = settings:get("mainWindowHeight")
   ls = Geyser.MiniConsole:new({
     name="locationState",
-    x=-settings:get("mapperWidth"), y=-self.lsheight,
+    x=-mapperWidth, y=mapperHeight,
     autoWrap = true,
     color = "black",
     scrollBar = false,
     fontSize = 13,
-    width=settings:get("mapperWidth"), height=self.lsheight,
+    width=mapperWidth, height=mainHeight-mapperHeight,
   })
+  setBackgroundColor("locationState",255,0,0,200)
 end
 
 function state:wakeTeam()

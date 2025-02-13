@@ -99,20 +99,28 @@ end
 
 function gag:spellTrans(who, str)
 	local out = ""
+	local safe = 1
 	while true do
+		sefe = safe + 1
 		local part = self:spellTransGetPart(str)
 		out = out..part[1]
-		str = string.sub(str, #part[2]+1)
+		--str = string.sub(str, #part[2]+1)
 		if str == "" then break end
+		if safe == 30 then
+			printer:error("gag", "Spell translate")
+			break
+		end
 	end
 	out = string.upper(out)
 	deleteLine()
 	echo("\n")
+	--[[
 	if self.spellTranslateFix[out] then -- out
 		cecho(who.." <tomato>"..self.spellTranslateFix[out])
 	else
 		cecho(who.." <tomato>"..out)
 	end
+	]]--
 	echo("\n")
 end
 
