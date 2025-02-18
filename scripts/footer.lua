@@ -184,7 +184,7 @@ function footer:createUI()
 
 
 
-	self:createRightUI()
+	--self:createRightUI()
 
 	footer:createButtons("Basic2", footer.baseFunc, 100, false, [[
 				background-color: rgba(135,206,250,100);

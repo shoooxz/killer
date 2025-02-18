@@ -72,6 +72,7 @@ gag.spellTranslate = {
 	{ "o", "a" },
 	{ "", "" },
 }
+--yuiozf ay oculoahp   finger of death
 
 
 gag.spellTranslateFix = {
@@ -97,7 +98,7 @@ function gag:spellTransGetPart(str)
 	end
 end
 
-function gag:spellTrans(who, str)
+function gag:spellTrans2(who, str)
 	local out = ""
 	local safe = 1
 	while true do

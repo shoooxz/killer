@@ -45,7 +45,7 @@ function state:createLocationState()
     fontSize = 13,
     width=mapperWidth, height=mainHeight-mapperHeight,
   })
-  setBackgroundColor("locationState",255,0,0,200)
+  --setBackgroundColor("locationState",255,0,0,200)
 end
 
 function state:wakeTeam()
