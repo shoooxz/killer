@@ -42,7 +42,7 @@ buff.basic = {
   ["defense curl"] = 38,
   ["holy weapon"] = 39,
   ["res magi weapon"] = 40,
-  ["pustak"] = 41,
+  ["divine shield"] = 41,
   ["pustak"] = 42,
 --  ["pustak"] = 43,
 }
@@ -55,6 +55,7 @@ buff.short = {
   "free action",
   "fireshield",
   "res magi weapon",
+  "reflect spell",
 }
 
 function buff:masterAllowed(target)

@@ -303,37 +303,9 @@ function printer:rollerHelp()
     self:bottom()
 end
 
--- Bree
---  karczma usciskac +
---  srodek bree tajemniczy - mapa u bossa szczurolazow, cmentarz ???
--- biblioteke, muzeum, ratusz i zielarnie
---  pracownik na poczcie listy Paralon Bargins - Igielniczka  +
---  pracownik na poczcie Dunwig - po calym swiecie lata zamglone oczy ?????? skrang ???
--- Stary rumiany olbrzym przedstawia sie jako: Dunwig, olbrzym. lsniace szczyty
--- Dunwig podaza przed siebie i znika ci z pola widzenia.  -- znika kompletnie i spawn gdzie indziej ?
--- Rivendell
---  niespokojny elf - Mandork, hobbit. Bystry Brod, norka w hobbitonie - wilczy leb
--- Hobbiton
---  sheryf - zaatakowac moba i prowadzic go do robina (obrywajac w plecy) +
---  Perin - tukon <> hobbiton +
---  zielarz - stary las ziele ???
--- Michel Delving
---  Colin Manelio - "dwie godziny" - sylaby w slowach 'pustelniku' 'kobiecie' 'mlocie' 'niesmiertelnosci' bez odmiany +
---  Pryszczaty pulchny hobbit - wiezienie > kowal > ratusz > sklepik (zapytaj o noz/burmistrza/czlowieka) > karczma (postaw piwo rainabowi) > Wiesz juz wystarczajo duzo. Opowiedz o tym burmistrzowi. +
--- Mithlond
---  Wrak - Lond Daer > zapytaj karczmarza o statki > biblioteka (przeszukaj rupiecie) > magazyn (przeszukaj papiery) > opowiedz o <nazwa statku> +
-
-
--- Ustrekt
--- Listy i questy robic parami List do Draosa/Lustro(klej)    List do Valronda/Urzednik(papier kredowy)
--- Kratas
--- ork z kratas - kapitan > rybak > magazyn > karczma > stajenny > krawiec > skup skor > krawiec > stajenny > karczma > o nagrode kapitana
--- Dorath
--- zielarz - skore triplikatna, pudelko do miecznik vivane
--- wiesniak - przeszukaj siano, wloz slome do otworu, zakrec korba, nakarm kury
--- Vivane
--- gubernator - straznik na polnocnym murze, do celi w wiezieniu z inicjalami sprawcy na scianie, przeszukac prycze, do kanalow przeszukac dziure
--- swiatynia - lustro - 'dziecko' w miescie - mury n przeszukaj kosze - klej kelevine masc -
--- urzednik w ratuszu n - papier kratas sklep, okragle ciastko z s cukierni + sol (wyglada jak cukier) z karczmy n (przeszukaj pudeleczka) "posyp ciastko"
--- szewc - dorath karczma
--- poczta - Velrond, Kratas (/npc Velrond)
+function printer:spellList(spell, teacher, book)
+  self:title(string.upper(spell))
+  if next(teacher) then
+    self:spellTeacher(teacher)
+  end
+end

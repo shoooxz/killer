@@ -20,6 +20,14 @@ function character:assist(sub)
   end
 end
 
+function character:feeble()
+  deleteLine()
+  cecho("\n<red>UWAGA! FEEBLE!")
+  scripts:beep()
+  send("say FEEBLE!")
+end
+
+
 function character:knockdown()
   deleteLine()
   cecho("\n<red>UWAGA! POWALENIE!")

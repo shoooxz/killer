@@ -302,3 +302,23 @@ function printer:progress(msg, val, max)
 	local progress = string.rep("#", val)
  	self:one(msg, "["..progress..total.."]", true)
 end
+
+function printer:spellTeacher(list)
+	local class = {
+		"mag",
+		"kleryk",
+		"druid",
+		"nomad",
+		"paladyn",
+	}
+	for i, v in pairs(list) do
+		local msg = v.mob
+		
+		local len = self.length-string.len(msg)-self.tabLength
+		cecho(
+			"<"..self.borderColor..">|"..string.rep(" ", self.tabLength)..
+			"<white>"..msg..string.rep(" ", len)..
+			"<"..self.borderColor..">|\n"
+		)
+	end
+end

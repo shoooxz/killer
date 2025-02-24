@@ -243,3 +243,7 @@ end
 function utils:startsWith(str, prefix)
     return string.sub(str, 1, #prefix) == prefix
 end
+
+function utils:arrFirstInSecond(arr1, arr2)
+  
+end

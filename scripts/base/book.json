@@ -2,6 +2,39 @@
 [
   {
     "roomVnum": 0,
+    "mob": "Nieumarly Kaplan",
+    "region": "Piramida",
+    "class": "Nomad",
+    "spells": [
+      "Sand Shroud", "Brave Cloak", "Desert Light", "Neutralize Poison", "Fetch"
+    ],
+    "bookVnum": 23611,
+    "bookName": "piaskowy tom"
+  },
+  {
+    "roomVnum": 0,
+    "mob": "Feniks",
+    "region": "Piramida",
+    "class": "Nomad",
+    "spells": [
+      "Sand Storm", "Quiet Step", "Resist Elements", "Desert Light", "Lesser Magic Resist"
+    ],
+    "bookVnum": 23621,
+    "bookName": "ognista ksiega"
+  },
+  {
+    "roomVnum": 0,
+    "mob": "Dostojny Mykonid",
+    "region": "Podmrok",
+    "class": "Kleryk",
+    "spells": [
+      "Cure Critical", "Cause Critical", "Free Action", "Remove Paralysis", "Cure Serious"
+    ],
+    "bookVnum": 16848,
+    "bookName": "dostojna ksiega wiedzy"
+  },
+  {
+    "roomVnum": 500,
     "mob": "Adept Turlitha",
     "region": "Carrallak",
     "class": "Kleryk",
@@ -9,7 +42,9 @@
       "Transmute Staff", "Change Liquid", "Blindness", "Prayer"
     ],
     "notes": "Biega po Carrallak",
-    "roaming": "t"
+    "roaming": "t",
+    "bookVnum": 11831,
+    "bookName": "ksiega w niebieskiej okladce"
   },
   {
     "roomVnum": 34145,
@@ -18,7 +53,9 @@
     "class": "Kleryk",
     "spells": [
       "bull strength", "Cure moderate", "Aid", "Detect Invis"
-    ]
+    ],
+    "bookVnum": 11842,
+    "bookName": "szara ksiega"
   },
   {
     "roomVnum": 2029,
@@ -28,7 +65,9 @@
     "spells": [
       "Cause moderate", "Silence", "Sense life", "Curse"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 2015,
+    "bookName": "niepozorny modlitewnik"
   },
   {
     "roomVnum": 6998,
@@ -37,7 +76,9 @@
     "class": "Kleryk",
     "spells": [
       "Cure moderate", "Cure blindness", "Cure disease"
-    ]
+    ],
+    "bookVnum": 6906,
+    "bookName": "szara ksiega"
   },
   {
     "roomVnum": 10839,
@@ -46,7 +87,9 @@
     "class": "Kleryk",
     "spells": [
       "Poison", "Transmute Staff", "Change Liquid", "Blindness"
-    ]
+    ],
+    "bookVnum": 11832,
+    "bookName": "podniszczony modlitewnik"
   },
   {
     "roomVnum": 1963,
@@ -57,7 +100,9 @@
       "Poison", "Confusion", "Fear", "Weaken"
     ],
     "notes": "Mob jest ukryty",
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 1963,
+    "bookName": "szara ksiega"
   },
   {
     "roomVnum": 28595,
@@ -67,7 +112,9 @@
     "spells": [
       "Cure Serious", "Dispel Magic", "cause serious", "Sanctuary"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 11840,
+    "bookName": "szara ksiega"
   },
   {
     "roomVnum": 3903,
@@ -75,10 +122,12 @@
     "region": "Ukryta kaplica w puszczy pod Carrallak",
     "class": "Kleryk",
     "spells": [
-      "Animate Dead", "Hold Person", "Fear", "Cause serious"
+      "Animate Dead", "Blindness", "Fear", "Cause serious"
     ],
-    "notes": "Mob jest w podziemiach, trzeba pociągnąc dzwignię",
-    "locked": "t"
+    "notes": "Mob jest w podziemiach, trzeba pociagnac dzwignie",
+    "locked": "t",
+    "bookVnum": 3908,
+    "bookName": "czarna ksiega modlitw"
   },
   {
     "roomVnum": 6435,
@@ -86,8 +135,10 @@
     "region": "Carrallak",
     "class": "Kleryk",
     "spells": [
-      "Holy bolt", "Undead Invis", "Cure moderate", "Mass cure light"
-    ]
+      "Holy bolt", "Undead Invisibility", "Cure moderate", "Mass cure light"
+    ],
+    "bookVnum": 6442,
+    "bookName": "modlitewnik"
   },
   {
     "roomVnum": 2140,
@@ -96,7 +147,9 @@
     "class": "Kleryk",
     "spells": [
       "Hold Person", "Divine power", "Owl Wisdom", "Holy bolt"
-    ]
+    ],
+    "bookVnum": 2124,
+    "bookName": "stara ksiega"
   },
   {
     "roomVnum": 11482,
@@ -106,7 +159,9 @@
     "spells": [
       "Cure serious", "Cause serious", "Lesser Restoration", "Brave Cloak"
     ],
-    "locked": "t"
+    "locked": "t",
+    "bookVnum": 11493,
+    "bookName": "kaplanska ksiega"
   },
   {
     "roomVnum": 3763,
@@ -117,7 +172,9 @@
       "create healing water", "Resist fire", "Resist fire", "Free Action"
     ],
     "notes": "Niewidzialny, ksiega ładuje się w szczelinie po zabiciu",
-    "locked": "t"
+    "locked": "t",
+    "bookVnum": 3734,
+    "bookName": "ksiega wiedzy"
   },
   {
     "roomVnum": 27682,
@@ -127,7 +184,9 @@
     "spells": [
       "Restoration", "Detect hidden", "Resist cold", "Cure Critical", "Mass aid"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 27683,
+    "bookName": "kaplanska ksiega"
   },
   {
     "roomVnum": 27613,
@@ -136,7 +195,9 @@
     "class": "Kleryk",
     "spells": [
       "Cure Critical", "Cause Critical", "Champion Strength", "Resist acid", "mass cure moderate"
-    ]
+    ],
+    "bookVnum": 64941,
+    "bookName": "kaplanska ksiega"
   },
   {
     "roomVnum": 27633,
@@ -146,7 +207,9 @@
     "spells": [
       "Resist lightning", "Cause Critical", "Dispel Evil", "Cure Poison"
     ],
-    "locked": "t"
+    "locked": "t",
+    "bookVnum": 27637,
+    "bookName": "ksiega boskich inwokacji"
   },
   {
     "roomVnum": 15942,
@@ -157,7 +220,10 @@
       "Hold Undead", "Remove paralysis", "Restoration", "Mass Cure Serious"
     ],
     "dangerous": "t",
-    "boss": "t"
+    "boss": "t",
+    "notes": "W skrzyni, connect 2 czesci klucza z wodza i room wczesniej, wybuch fire",
+    "bookVnum": 15905,
+    "bookName": "zakurzona ksiega"
   },
   {
     "roomVnum": 4519,
@@ -167,7 +233,9 @@
     "spells": [
       "Heat Metal", "Dispel Good", "Energy shield", "Hold Person"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 4511,
+    "bookName": "zakurzona ksiega"
   },
   {
     "roomVnum": 6181,
@@ -176,7 +244,9 @@
     "class": "Kleryk",
     "spells": [
       "Pyrotechnics", "heat metal", "resist magic", "hold person", "chill metal"
-    ]
+    ],
+    "bookVnum": 6149,
+    "bookName": "niepozorna ksiega"
   },
   {
     "roomVnum": 33098,
@@ -186,7 +256,9 @@
     "spells": [
       "Life Transfer", "Restoration", "Mass Resist Negative", "Energy shield", "Mass Luck"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 33024,
+    "bookName": "kaplanska ksiega"
   },
   {
     "roomVnum": 10951,
@@ -197,7 +269,9 @@
       "mass cure critical", "mass protection evil", "mass bless", "harm", "heal"
     ],
     "dangerous": "t",
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 10950,
+    "bookName": "czarna ksiega"
   },
   {
     "roomVnum": 5120,
@@ -206,7 +280,9 @@
     "class": "Kleryk",
     "spells": [
       "lesser restoration", "create healing water", "divine power", "cure critical", "mass aid"
-    ]
+    ],
+    "bookVnum": 5112,
+    "bookName": "kaplanska ksiega"
   },
   {
     "roomVnum": 30138,
@@ -216,7 +292,9 @@
     "spells": [
       "fear", "harm", "cause critical", "dispel good", "heal"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 30119,
+    "bookName": "czarna kaplanska ksiega"
   },
   {
     "roomVnum": 46400,
@@ -226,17 +304,21 @@
     "spells": [
       "sanctuary", "cause critical", "divine power", "mass protection good"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 46376,
+    "bookName": "nadpalona kaplanska ksiega"
   },
   {
     "roomVnum": 14043,
-    "mob": "Ranny Kapłan",
+    "mob": "Ranny Kaplan",
     "region": "Carrallak",
     "class": "Paladyn",
     "spells": [
       "lore undead", "cure disease", "detect undead", "remove curse", "spiritual weapon"
     ],
-    "notes": "Quest"
+    "notes": "Quest",
+    "bookVnum": 20352,
+    "bookName": "zdobiona ksiega"
   },
   {
     "roomVnum": 18361,
@@ -245,7 +327,9 @@
     "class": "Paladyn",
     "spells": [
       "calm", "dispel evil", "cause serious", "lore undead"
-    ]
+    ],
+    "bookVnum": 18370,
+    "bookName": "zakurzona ksiega"
   },
   {
     "roomVnum": 27632,
@@ -255,17 +339,22 @@
     "spells": [
       "cure moderate", "hold evil", "remove fear", "undead invis"
     ],
-    "boss": "t"
+    "boss": "t",
+    "notes": "Quest",
+    "bookVnum": 6483,
+    "bookName": "modlitewnik"
   },
   {
     "roomVnum": 6644,
-    "mob": "Opętany paladyn",
+    "mob": "Opetany paladyn",
     "region": "Carrallak",
     "class": "Paladyn",
     "spells": [
       "brave cloak", "bull strength", "holy weapons", "eagle splendor"
     ],
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 20353,
+    "bookName": "zakurzona ksiega"
   },
   {
     "roomVnum": 34153,
@@ -275,7 +364,9 @@
     "spells": [
       "cure serious", "cure poison", "undead invisibility", "owl wisdom"
     ],
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 6482,
+    "bookName": "zdobiona ksiega"
   },
   {
     "roomVnum": 17866,
@@ -285,7 +376,9 @@
     "spells": [
       "cure blindness", "remove curse", "divine shield"
     ],
-    "notes": "Niewidzialny"
+    "notes": "Niewidzialny",
+    "bookVnum": 20360,
+    "bookName": "zniszczona ksiega"
   },
   {
     "roomVnum": 40899,
@@ -294,16 +387,20 @@
     "class": "Paladyn",
     "spells": [
       "calm", "hold evil", "cure poison", "owl wisdom"
-    ]
+    ],
+    "bookVnum": 40888,
+    "bookName": "ksiega paladynska"
   },
   {
     "roomVnum": 1686,
-    "mob": "Młody Druid",
+    "mob": "Mlody Druid",
     "region": "Carrallak",
     "class": "Druid",
     "spells": [
       "goodbarry", "hold animal", "dismiss plant", "waterwalk"
-    ]
+    ],
+    "bookVnum": 3658,
+    "bookName": "zielona ksiega"
   },
   {
     "roomVnum": 10825,
@@ -312,7 +409,9 @@
     "class": "Druid",
     "spells": [
       "refresh", "immolate", "luck", "goodbarry"
-    ]
+    ],
+    "bookVnum": 1666,
+    "bookName": "pobrudzona ksiega"
   },
   {
     "roomVnum": 19483,
@@ -322,7 +421,9 @@
     "spells": [
       "cure plant", "dismiss plant", "entangle", "luck"
     ],
-    "notes": "Ukryty"
+    "notes": "Ukryty",
+    "bookVnum": 1667,
+    "bookName": "bagienna ksiega"
   },
   {
     "roomVnum": 15979,
@@ -331,7 +432,10 @@
     "class": "Druid",
     "spells": [
       "Dismiss animal", "charm animal", "cat grace", "animal invisibility", "create spring"
-    ]
+    ],
+    "notes": "W ciele druida",
+    "bookVnum": 1668,
+    "bookName": "poszarpana zielona ksiega"
   },
   {
     "roomVnum": 11471,
@@ -341,7 +445,9 @@
     "spells": [
       "alicorn lance", "flame blade", "nature ally II", "hold plant", "magic fang"
     ],
-    "notes": "Ukryty"
+    "notes": "Ukryty",
+    "bookVnum": 1664,
+    "bookName": "zielona ksiega"
   },
   {
     "roomVnum": 10862,
@@ -350,7 +456,9 @@
     "class": "Druid",
     "spells": [
       "faerie fire", "resist poison", "weaken", "poison"
-    ]
+    ],
+    "bookVnum": 1665,
+    "bookName": "poplamiona ksiega"
   },
   {
     "roomVnum": 14036,
@@ -360,7 +468,9 @@
     "spells": [
       "hold animal", "faerie fire", "silence", "cause moderate"
     ],
-    "notes": "Niewidzialny, lata po cmentarzu"
+    "notes": "Niewidzialny, lata po cmentarzu",
+    "bookVnum": 1669,
+    "bookName": "zielona ksiega"
   },
   {
     "roomVnum": 1678,
@@ -369,7 +479,9 @@
     "class": "Druid",
     "spells": [
       "bear endurance", "bark guardian", "ring of vanion", "create tree"
-    ]
+    ],
+    "bookVnum": 1670,
+    "bookName": "zielona ksiega"
   },
   {
     "roomVnum": 32007,
@@ -379,17 +491,21 @@
     "spells": [
       "ice bolt", "cure moderate", "resist acid", "nature ally II"
     ],
-    "notes": "Biega po puszczy"
+    "notes": "Biega po puszczy",
+    "bookVnum": 1671,
+    "bookName": "podniszczona ksiega"
   },
   {
     "roomVnum": 27772,
-    "mob": "Leśna Nimfa",
+    "mob": "Lesna Nimfa",
     "region": "Carrallak",
     "class": "Druid",
     "spells": [
       "owl wisdom", "nature ally II", "reinvigore animal", "resist fire"
     ],
-    "notes": "Ukryta"
+    "notes": "Ukryta",
+    "bookVnum": 27828,
+    "bookName": "zielona ksiega"
   },
   {
     "roomVnum": 27804,
@@ -399,7 +515,9 @@
     "spells": [
       "reinvigore plant", "neutralize poison", "ice bolt", "owl wisdom", "hellfire"
     ],
-    "notes": "Ukryta"
+    "notes": "Ukryta",
+    "bookVnum": 27829,
+    "bookName": "zielona ksiega"
   },
   {
     "roomVnum": 3943,
@@ -408,7 +526,9 @@
     "class": "Druid",
     "spells": [
       "liveoak", "fly", "weaken", "resist cold"
-    ]
+    ],
+    "bookVnum": 1673,
+    "bookName": "zielona ksiega"
   },
   {
     "roomVnum": 24978,
@@ -418,7 +538,9 @@
     "spells": [
       "storm shell", "chill metal", "wind shield", "cure serious"
     ],
-    "boss": "t"
+    "boss": "t",
+    "bookVnum": 24984,
+    "bookName": "zielona ksiega"
   },
   {
     "roomVnum": 25320,
@@ -426,9 +548,11 @@
     "region": "Forteca",
     "class": "Druid",
     "spells": [
-      "call lightning", "fly", "cause serious", "owl wisdom"
+      "call lightning", "fly", "cause serious", "owl wisdom", "ice bolt"
     ],
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 1672,
+    "bookName": "zielona ksiega"
   },
   {
     "roomVnum": 14232,
@@ -436,8 +560,10 @@
     "region": "Nowy Kontynent",
     "class": "Druid",
     "spells": [
-      "flamestrike", "blade barrier", "shield of nature", "reinvigore animal"
-    ]
+      "flamestrike", "blade barrier", "shield of nature", "reinvigore animal", "hold person"
+    ],
+    "bookVnum": 2232,
+    "bookName": "stara ksiega"
   },
   {
     "roomVnum": 8399,
@@ -448,7 +574,9 @@
       "heal plant", "heal animal", "wind shield", "cause critical"
     ],
     "notes": "Ksiega w ciele na wschodzie od Trolla",
-    "dangerous": "t"
+    "dangerous": "t",
+    "bookVnum": 8220,
+    "bookName": "ciemnozielona ksiega"
   },
   {
     "roomVnum": 19059,
@@ -456,8 +584,11 @@
     "region": "Easterial",
     "class": "Druid",
     "spells": [
-      "beast claws", "flamestrike", "heat metal", "blade barrier"
-    ]
+      "beast claws", "flamestrike", "heat metal", "blade barrier", "nature ally III"
+    ],
+    "notes": "Za wodospadem, trzeba fly",
+    "bookVnum": 19033,
+    "bookName": "druidzka ksiega czarow"
   },
   {
     "roomVnum": 42425,
@@ -466,16 +597,20 @@
     "class": "Druid",
     "spells": [
       "Nature ally III", "smashing wave", "freezing rain", "animal rage"
-    ]
+    ],
+    "bookVnum": 42376,
+    "bookName": "druidzka ksiega"
   },
   {
     "roomVnum": 24933,
-    "mob": "Zbłakany Ent",
+    "mob": "Zblakany Ent",
     "region": "Easterial",
     "class": "Druid",
     "spells": [
-      "hold person", "nature ally III", "cure critical", "nature curse", "mass luck"
-    ]
+      "fly", "nature ally III", "cure critical", "nature curse", "mass luck"
+    ],
+    "bookVnum": 24908,
+    "bookName": "zielona ksiega"
   },
   {
     "roomVnum": 42899,
@@ -484,16 +619,31 @@
     "class": "Druid",
     "spells": [
       "stone skin", "circle of vanion", "wind charger", "healing ring", "mass refresh"
-    ]
+    ],
+    "bookVnum": 42826,
+    "bookName": "okuta druidzka ksiega"
   },
   {
     "roomVnum": 19364,
-    "mob": "Gobliński Szaman",
+    "mob": "Goblinski Szaman",
     "region": "Arras",
     "class": "Druid",
     "spells": [
       "sunscorch", "ice bolt", "bark guardian", "entangle"
-    ]
+    ],
+    "bookVnum": 22878,
+    "bookName": "brudny modlitewnik"
+  },
+  {
+    "roomVnum": 0,
+    "mob": "Druid Salamidar",
+    "region": "Obilon",
+    "class": "Druid",
+    "spells": [
+      "neutralize poison", "bark guardian", "cure moderate", "reinvigore animal"
+    ],
+    "bookVnum": 15293,
+    "bookName": "ksiega druidzka"
   },
   {
     "roomVnum": 2009,

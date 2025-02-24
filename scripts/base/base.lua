@@ -7,6 +7,31 @@ function base:init()
   self.jsonBook = utils:readJson("scripts/base/book.json")
 
 end
+
+function base:spellSearch(spell)
+  spell = string.lower(spell)
+  local book = {}
+  local teacher = {}
+  for i, v in pairs(self.jsonBook) do
+    for j, s in pairs(v.spells) do
+      if string.lower(s) == spell then
+        table.insert(book, v)
+      end
+    end
+  end
+  for i, v in pairs(self.jsonTeacher) do
+
+      for j, s in pairs(v.skills) do
+
+        if string.lower(s.name) == spell then
+          display(i)
+          table.insert(teacher, v)
+        end
+      end
+  end
+  printer:spellList(spell, teacher, book)
+end
+
 -- DODAC DROWIEGO CZARNOKSIEZNIKA Z NK I JEGO KSIAZKWE   ksiega magii drowow
 -- QUAZ W BAZIE ID VNUM DO UZUPELNIENIA - umbrowe nowy boss
 function base:bookClosest()
@@ -99,9 +124,6 @@ Podmrok:
 prog:
 -??
 [40532] magiczna ksiega lowcy: 'psychic scream' 'summon'
-
--Narshe
-[28063] starozytna ksiega wywolywan: 'fireball' 'cone of cold' 'iceshield' 'force bolt' 'energy strike'
 
 -??
 [17963] zakrwawiona, magiczna ksiega: 'giant strength' 'behemot toughness' 'deflect wounds' 'change weapon' 'summon ancient creature'

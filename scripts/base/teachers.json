@@ -1,9 +1,9 @@
 {
   "27404": {
     "classes": [
-      "Złodziej"
+      "Zlodziej"
     ],
-    "mob": "Złodziejski mistrz",
+    "mob": "Zlodziejski mistrz",
     "region": "Silea",
     "roomVnum": "27439",
     "skills": [
@@ -68,10 +68,10 @@
   "27552": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -92,11 +92,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -117,10 +117,10 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "mnich",
       "bard",
       "Czarny Rycerz",
@@ -332,7 +332,7 @@
     "classes": [
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "Nomad"
     ],
@@ -410,7 +410,7 @@
   },
   "27402": {
     "classes": [
-      "Złodziej"
+      "Zlodziej"
     ],
 
     "mob": "Zakapturzona postać",
@@ -437,11 +437,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
 
@@ -508,10 +508,10 @@
   "27662": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -619,7 +619,7 @@
       "Kleryk",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
 
@@ -973,14 +973,14 @@
   "24933": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Barbarzyńca",
+    "mob": "Barbarzynca",
     "region": "Easterial",
     "roomVnum": "24957",
     "skills": [
@@ -1140,15 +1140,15 @@
   "19409": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
 
-    "mob": "Doświadczony Barbarzyńca",
+    "mob": "Doświadczony Barbarzynca",
     "region": "Easterial",
     "skills": [
       {
@@ -1250,11 +1250,11 @@
       "Kleryk",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Barbarzyńca Y'ergiz",
+    "mob": "Barbarzynca Y'ergiz",
     "region": "Forteca",
     "roomVnum": "31",
     "skills": [
@@ -1365,13 +1365,13 @@
       }
     ],
     "roaming": "t",
-    "notes": "Trzeba sprezentować mu butelke dobrej gorzały"
+    "notes": "Trzeba sprezentować mu butelke dobrej gorzaly"
   },
   "17168": {
     "classes": [
       "Kleryk"
     ],
-    "mob": "Czarny kapłan Variotha",
+    "mob": "Czarny kaplan Variotha",
     "region": "Forteca",
     "roomVnum": "17192",
     "skills": [
@@ -1590,11 +1590,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -2092,11 +2092,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -2118,7 +2118,7 @@
       "Kleryk",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
     "mob": "Dowódca straży",
@@ -2280,9 +2280,9 @@
   "45413": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -2366,10 +2366,10 @@
   "4507": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -2484,15 +2484,15 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
 
-    "mob": "Półork dozorca kopalni",
+    "mob": "Pólork dozorca kopalni",
     "region": "Easterial",
     "roomVnum": "19033",
     "skills": [
@@ -2509,11 +2509,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -2978,15 +2978,15 @@
   "20397": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
 
-    "mob": "Kapłanka Kedila",
+    "mob": "Kaplanka Kedila",
     "region": "Carrallak",
     "roomVnum": "1448",
     "skills": [
@@ -3039,11 +3039,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -3163,11 +3163,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -3325,9 +3325,9 @@
   "50932": {
     "classes": [
       "Mag",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -3486,10 +3486,10 @@
   "27577": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -3614,7 +3614,7 @@
   },
   "14961": {
     "classes": [
-      "Złodziej"
+      "Zlodziej"
     ],
 
     "mob": "Snat",
@@ -3790,7 +3790,7 @@
       "Kleryk",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
     "mob": "Uwolniona dusza starożytnego paladyna",
@@ -3928,10 +3928,10 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -4074,11 +4074,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -4167,7 +4167,7 @@
       "Czarny Rycerz"
     ],
 
-    "mob": "Władca mroku",
+    "mob": "Wladca mroku",
     "region": "Arras",
     "roomVnum": "33073",
     "skills": [
@@ -4275,11 +4275,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "bard",
       "Czarny Rycerz",
       "szaman"
@@ -4585,7 +4585,7 @@
   },
   "10785": {
     "classes": [
-      "Złodziej"
+      "Zlodziej"
     ],
     "mob": "Nohi",
     "region": "Carrallak",
@@ -4661,11 +4661,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -4720,7 +4720,7 @@
   "40510": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik"
     ],
     "mob": "Mistrz Perodoc",
@@ -4854,7 +4854,7 @@
         "price": 50
       }
     ],
-    "notes": "Uczy tylko niziołki"
+    "notes": "Uczy tylko niziolki"
   },
   "9331": {
     "classes": [
@@ -4969,7 +4969,7 @@
       "Kleryk",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
     "mob": "Paladyn Vaynegar",
@@ -5076,13 +5076,13 @@
   },
   "28650": {
     "classes": [
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Czarnowłosy rycerz",
+    "mob": "Czarnowlosy rycerz",
     "region": "Arras",
     "roomVnum": "28650",
     "skills": [
@@ -5162,14 +5162,14 @@
   "45188": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Potężny kapłan",
+    "mob": "Potężny kaplan",
     "region": "Forteca",
     "roomVnum": "45252",
     "skills": [
@@ -5234,10 +5234,10 @@
   "511": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -5356,7 +5356,7 @@
     "classes": [
       "Kleryk"
     ],
-    "mob": "Kapłanka Blyshaera",
+    "mob": "Kaplanka Blyshaera",
     "region": "Silea",
     "roomVnum": "50263",
     "skills": [
@@ -5439,7 +5439,7 @@
       "Kleryk",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
     "mob": "Pavila",
@@ -5515,7 +5515,7 @@
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
     "mob": "Uwolniona dusza paladyna",
@@ -5620,11 +5620,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -5800,11 +5800,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -6300,11 +6300,11 @@
   "20398": {
     "classes": [
       "Mag",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik"
     ],
 
-    "mob": "Złodziej Herid",
+    "mob": "Zlodziej Herid",
     "region": "Arras",
     "roomVnum": "20396",
     "skills": [
@@ -6497,11 +6497,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -6591,7 +6591,7 @@
       "Kleryk",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
     "mob": "Dzielny paladyn",
@@ -6787,10 +6787,10 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -6893,10 +6893,10 @@
   },
   "534": {
     "classes": [
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
-    "mob": "Barbarzyńca Brahadhan",
+    "mob": "Barbarzynca Brahadhan",
     "region": "Carrallak",
     "roomVnum": "584",
     "skills": [
@@ -7224,11 +7224,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -7247,7 +7247,7 @@
   },
   "3601": {
     "classes": [
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Nomad"
     ],
@@ -7318,10 +7318,10 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "Nomad"
     ],
@@ -7568,10 +7568,10 @@
   "6460": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -7776,9 +7776,9 @@
   "40559": {
     "classes": [
       "Mag",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -7848,11 +7848,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "bard",
       "Czarny Rycerz",
       "szaman"
@@ -7873,10 +7873,10 @@
   "50171": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -7967,7 +7967,7 @@
     "classes": [
       "Kleryk"
     ],
-    "mob": "Młody kapłan",
+    "mob": "Mlody kaplan",
     "region": "Forteca",
     "roomVnum": "125",
     "skills": [
@@ -8108,7 +8108,7 @@
       "Kleryk",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
     "mob": "Paladyn Marteg",
@@ -8204,11 +8204,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -8705,9 +8705,9 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -8797,10 +8797,10 @@
   },
   "50446": {
     "classes": [
-      "Złodziej"
+      "Zlodziej"
     ],
 
-    "mob": "Przełożony gildii",
+    "mob": "Przelożony gildii",
     "region": "Silea",
     "roomVnum": "50318",
     "skills": [
@@ -8859,15 +8859,15 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Wielki łowczy",
+    "mob": "Wielki lowczy",
     "region": "Silea",
     "roomVnum": "17731",
     "skills": [
@@ -8972,14 +8972,14 @@
   "50616": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Potężny Barbarzyńca Grmar",
+    "mob": "Potężny Barbarzynca Grmar",
     "region": "Easterial",
     "roomVnum": "50605",
     "skills": [
@@ -9066,10 +9066,10 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -9246,11 +9246,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -9422,7 +9422,7 @@
       "Kleryk",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
     "mob": "Mężny paladyn",
@@ -9497,14 +9497,14 @@
   "6611": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Wielki półogr Haghburg",
+    "mob": "Wielki pólogr Haghburg",
     "region": "Carrallak",
     "roomVnum": "6651",
     "skills": [
@@ -9645,14 +9645,14 @@
   "17938": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Mistrz barbarzyński",
+    "mob": "Mistrz barbarzynski",
     "region": "Easterial",
     "roomVnum": "17995",
     "skills": [
@@ -9901,14 +9901,14 @@
   "64948": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Wesoły łowca",
+    "mob": "Wesoly lowca",
     "region": "Easterial",
     "roomVnum": "64985",
     "skills": [
@@ -9988,11 +9988,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -10521,7 +10521,7 @@
   },
   "955": {
     "classes": [
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
 
@@ -10603,7 +10603,7 @@
   },
   "16601": {
     "classes": [
-      "Złodziej"
+      "Zlodziej"
     ],
     "mob": "Tankartez",
     "region": "Carrallak",
@@ -10764,7 +10764,7 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Czarny Rycerz"
@@ -10865,7 +10865,7 @@
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -11004,7 +11004,7 @@
   "27683": {
     "classes": [
       "Wojownik",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -11090,18 +11090,18 @@
       }
     ],
     "roomVnum": 27682,
-    "notes": "Trzeba pokonać widmo kapłanki nie zabijając opętanego rycerza",
+    "notes": "Trzeba pokonać widmo kaplanki nie zabijając opętanego rycerza",
     "dangerous": "t"
   },
   "1960": {
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Czarny Rycerz"
     ],
-    "mob": "Chytry Złodziejaszek",
+    "mob": "Chytry Zlodziejaszek",
     "region": "Carrallak",
     "roomVnum": "1971",
     "skills": [
@@ -11307,7 +11307,7 @@
       "Nomad"
     ],
     "mob": "Stary doświadczony Nomad",
-    "region": "Szoła Nomad",
+    "region": "Szola Nomad",
     "roomVnum": "34766",
     "skills": [
       {
@@ -11533,11 +11533,11 @@
     "classes": [
       "Mag",
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
       "Druid",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -11557,13 +11557,13 @@
   "17826": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Zakapturzony Barbarzyńca",
+    "mob": "Zakapturzony Barbarzynca",
     "region": "Forteca",
     "roomVnum": "17865",
     "skills": [
@@ -11634,9 +11634,9 @@
   },
   "6021": {
     "classes": [
-      "Złodziej"
+      "Zlodziej"
     ],
-    "mob": "Mistrz cechu złodziei",
+    "mob": "Mistrz cechu zlodziei",
     "region": "Arras",
     "roomVnum": "6078",
     "skills": [
@@ -11777,12 +11777,12 @@
   },
   "2888": {
     "classes": [
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
-    "mob": "Przebiegły banita",
+    "mob": "Przebiegly banita",
     "region": "Arras",
     "roomVnum": "2884",
     "skills": [
@@ -11849,11 +11849,11 @@
       "Kleryk",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Wysoki półork",
+    "mob": "Wysoki pólork",
     "region": "Arras",
     "roomVnum": "10816",
     "skills": [
@@ -11941,7 +11941,7 @@
       "Kleryk",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
     "mob": "Paladyn Dyne",
@@ -12160,10 +12160,10 @@
   "3810": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -12268,10 +12268,10 @@
   "20399": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -12391,10 +12391,10 @@
   "38": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "mnich",
       "bard",
       "Czarny Rycerz",
@@ -12593,10 +12593,10 @@
       "Kleryk",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
-    "mob": "Młody paladyn",
+    "mob": "Mlody paladyn",
     "region": "Forteca",
     "roomVnum": "3712",
     "skills": [
@@ -12747,7 +12747,7 @@
     "classes": [
       "Kleryk"
     ],
-    "mob": "Kapłan Elradrieldor",
+    "mob": "Kaplan Elradrieldor",
     "region": "Carrallak",
     "roomVnum": "6437",
     "skills": [
@@ -12975,7 +12975,7 @@
       "Kleryk",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
     "mob": "Paladyn Ramahl",
@@ -13229,7 +13229,7 @@
   },
   "16603": {
     "classes": [
-      "Złodziej"
+      "Zlodziej"
     ],
     "mob": "Sarvin, syn Tankarteza",
     "region": "Carrallak",
@@ -13319,7 +13319,7 @@
     "classes": [
       "Kleryk"
     ],
-    "mob": "Złoty kapłan",
+    "mob": "Zloty kaplan",
     "region": "Arras",
     "roomVnum": "16518",
     "skills": [
@@ -13513,7 +13513,7 @@
   },
   "17916": {
     "classes": [
-      "Złodziej"
+      "Zlodziej"
     ],
     "mob": "Fhaana",
     "region": "Easterial",
@@ -13603,10 +13603,10 @@
   "1791": {
     "classes": [
       "Kleryk",
-      "Złodziej",
+      "Zlodziej",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "Czarny Rycerz",
       "szaman"
     ],
@@ -13855,9 +13855,9 @@
   },
   "510": {
     "classes": [
-      "Złodziej"
+      "Zlodziej"
     ],
-    "mob": "Złodziej",
+    "mob": "Zlodziej",
     "region": "Carrallak",
     "roomVnum": "547",
     "skills": [
@@ -14071,7 +14071,7 @@
   },
   "6003": {
     "classes": [
-      "Złodziej"
+      "Zlodziej"
     ],
     "mob": "Signus",
     "region": "Arras",
@@ -14167,7 +14167,7 @@
       "Kleryk",
       "Wojownik",
       "Paladyn",
-      "Barbarzyńca",
+      "Barbarzynca",
       "szaman"
     ],
     "mob": "Paladyn Divuan",
