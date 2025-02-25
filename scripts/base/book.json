@@ -954,7 +954,7 @@
   },
   {
     "roomVnum": 15942,
-    "mob": "Wodz Ogrów",
+    "mob": "Wodz Ogrow",
     "region": "Forteca",
     "class": "Mag",
     "spells": [
@@ -967,7 +967,7 @@
   },
   {
     "roomVnum": 43088,
-    "mob": "Podły Goblin Nekromanta",
+    "mob": "Podly Goblin Nekromanta",
     "region": "Carrallak",
     "class": "Mag",
     "spells": [

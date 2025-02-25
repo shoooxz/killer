@@ -2,8 +2,8 @@
     {
         "acid blast",
         "Mag uzywajacy tego silnego czaru tworzy przed soba chmure kwasu ktora pedzi w kierunku celu i dotkliwie go rani. Istnieje takze szansa, ze zracy kwas uszkodzi przedmioty, ktore ofiara ma na sobie lub w inwentarzu.",
-        {"17654"},
-        {33516},
+        0,
+        0,
         0,
         0,
         0,
@@ -23,7 +23,7 @@
     {
         "armor",
         "Ten stosunkowo slaby czar defensywny zbiera z otoczenia malenkie drobinki materii i formuje je w delikatny jak mgielka pancerz, otaczajacy cel i absorbujacy czesc ciosow.",
-        {"39", "50138", "26983"},
+        0,
         0,
         0,
         0,
@@ -44,7 +44,7 @@
     {
         "bless",
         "Jedno z prostszych zaklec kaplanskich, ale niezwykle uzyteczne. Odwolujac sie do mocy swojego bostwa przekazujesz jego blogoslawienstwo. Osoba poddana dzialaniu tego czaru celniej uderza przeciwnika w walce, a jednoczesnie jej odpornosc na magie bojowa wzrasta. Mozna rowniez blogoslawic przedmioty. Na przyklad blogoslawione bronie moga czasem zadac nieco wieksze niz normalnie obrazenia przeciw niektorym istotom.",
-        {"6143", "6025", "6023", "50263", "503", "41", "530", "16505", "6499", "6437"},
+        0,
         0,
         0,
         0,
@@ -65,7 +65,7 @@
     {
         "purify food",
         "To prosty, ale czasem niezwykle uzyteczny czar. Gdy masz w inwentarzu jakies jedzenie lub pojemnik z napojem, i jest ono zatrute mozesz uzyc tego czaru, aby usunac trucizne z jedzenia czy napoju i przywrocic mu pelna wartosc.",
-        {"6025", "6499", "530", "5817", "41", "503", "1709", "501", "6499", "6437"},
+        0,
         0,
         0,
         0,
@@ -83,7 +83,7 @@
 
     {
         "blindness",
-        0,
+        "Ten czar wywoluje krotkotrwaly, ale bardzo intensywny blysk tuz przed twarza ofiary, w skutek czego zostaje ona czasowo oslepiona, o ile nie uda sie jej obronic przed czarem i na czas zamknac oczu.",
         0,
         0,
         0,
@@ -104,7 +104,7 @@
 
     {
         "burning hands",
-        0,
+        "Ten czar pokrywa dlonie rzucajacego plonaca ciecza, ktora ten nastepnie moze strzasnac na swego przeciwnika. Ow ogien jest calkowicie niegrozny dla maga.",
         0,
         0,
         0,
@@ -123,7 +123,7 @@
 
     {
         "call lightning",
-        0,
+        "Czar zsylajacy boski gniew w postaci pioruna, wyladowanie jest tak duze, ze cierpia wszyscy znajdujacy sie w poblizu.",
         0,
         0,
         0,
@@ -142,7 +142,7 @@
 
     {
         "calm",
-        0,
+        "Czar ten uspokaja wszystkich walczacych w lokacji czyniac ich w ten sposob na chwile niezdolnych do jakiejkolwiek walki.",
         0,
         0,
         0,
@@ -163,7 +163,7 @@
 
     {
         "cause critical",
-        0,
+        "Te czary zadaja obrazenia ofiarze. 'CAUSE LIGHT' moze spowodowac lekkie rany, 'CAUSE MODERATE' srednie, 'CAUSE SERIOUS' powazne, zas 'CAUSE CRITICAL' zadaje ciezkie obrazenia.",
         0,
         0,
         0,
@@ -182,7 +182,7 @@
 
     {
         "cause light",
-        0,
+        "Te czary zadaja obrazenia ofiarze. 'CAUSE LIGHT' moze spowodowac lekkie rany, 'CAUSE MODERATE' srednie, 'CAUSE SERIOUS' powazne, zas 'CAUSE CRITICAL' zadaje ciezkie obrazenia.",
         0,
         0,
         0,
@@ -201,7 +201,7 @@
 
     {
         "cause moderate",
-        0,
+        "Te czary zadaja obrazenia ofiarze. 'CAUSE LIGHT' moze spowodowac lekkie rany, 'CAUSE MODERATE' srednie, 'CAUSE SERIOUS' powazne, zas 'CAUSE CRITICAL' zadaje ciezkie obrazenia.",
         0,
         0,
         0,
@@ -218,9 +218,10 @@
         0
     },
 
+
     {
         "chain lightning",
-        0,
+        "Czar ten wytwarza serie poteznych blyskawic, ktore wylatuja z rak maga i uderzaja wszystko co napotkaja na swojej drodze. Zaklecia  tego nalezy uzywac z rozwaga, poniewaz latajace pioruny uderzaja rowniez w czlonkow druzyny maga, a nawet w niego samego. Modyfikowane przez: 'Control of magic', 'Lightning Mastery' i 'Resist Lightning'.",
         0,
         0,
         0,
@@ -239,7 +240,7 @@
 
     {
         "change sex",
-        0,
+        "Za pomoca tego czaru mozna czasowo zmienic plec swoja lub innej osoby na przeciwna.",
         0,
         0,
         0,
@@ -260,7 +261,7 @@
 
     {
         "charm person",
-        0,
+        "Czar ten probuje przejac kontrole nad umyslem wybranego humanoida i zauroczyc go. Zauroczona ofiara wykonuje wszystkie polecenia maga. W razie niepowodzenia, uzycie czaru bedzie traktowane jako atak.",
         0,
         0,
         0,
@@ -280,7 +281,7 @@
 
     {
         "chill touch",
-        0,
+        "Ten opierajacy sie na magii zimna czar generuje w powietrzu drobna mgielke, ktora nastepnie zamarza i opada na ofiare. Drobne krysztalki lodu dodatkowo chwilowo oslabiaja miesnie ofiary.",
         0,
         0,
         0,
@@ -300,7 +301,7 @@
 
     {
         "colour spray",
-        0,
+        "Ten czar rozpyla w powietrzu przed celem, drobne kolorowe czasteczki wszystkich zywiolow. Nie tylko zadaja one obrazenia, ale moga takze oslepic ofiare.",
         0,
         0,
         0,
@@ -320,7 +321,7 @@
 
     {
         "continual light",
-        0,
+        "Ten czar wykorzystuje te wlasciwosc czasteczek swiatla, zbierajac je w forme kuli, ktora nastepnie moze oswietlac komus droge. Kula ta swiecic bedzie o wiele dluzej niz podobna, stworzona zakleciem 'LIGHT'.",
         0,
         0,
         0,
@@ -339,7 +340,7 @@
 
     {
         "control weather",
-        0,
+        "Dzieki temu zakleciu mozna kontrolowac pogode. Skladnia: lepiej, gorzej.",
         0,
         0,
         0,
@@ -358,7 +359,7 @@
 
     {
         "create food",
-        0,
+        "Czar ten zbiera z otaczajacej przestrzeni nieco materialnych czastek i magicznie je przeksztalca w garsc pozywnych owocow, ktore ktos moze zjesc. Ciekawostka jest, ze sa one tym bardziej sycace, im wyzszy byl poziom osoby rzucajacej ten czar.",
         0,
         0,
         0,
@@ -377,7 +378,7 @@
 
     {
         "transmute staff",
-        0,
+        "Jest to czar zwiekszajacy obrazenia zadawane trzymana przez rzucajacego laska, kosturem czy kijem, a takze ulatwia trafienie nia kogos.",
         0,
         0,
         0,
@@ -396,7 +397,7 @@
 
     {
         "create spring",
-        0,
+        "Ten czar opiera sie na znajomosci zywiolu wody, a zwlaszcza podziemnej sieci rzek i strumieni. Wyszukuje on w najblizszej okolicy jakis podwodny ciek i skierowuje czesc plynacej tam wody w poblize ciebie. W skutek tego z ziemi nieopodal wytryskuje zrodelko z czysta, smaczna woda.",
         0,
         0,
         0,
@@ -415,7 +416,7 @@
 
     {
         "create water",
-        0,
+        "Do rzucenia tego czaru potrzebny jest jakis pusty pojemnik na wode. Inkantacja ta podobna jest troche do czaru 'CREATE FOOD'. Osoba rzucajaca wybiera z powietrza czasteczki wilgoci, ktore zbieraja sie we wskazanym pojemniku, zamieniajac sie w czysta i smaczna wode.",
         0,
         0,
         0,
@@ -434,7 +435,7 @@
 
     {
         "light",
-        0,
+        "Ten czar wykorzystuje te wlasciwosc czasteczek swiatla, zbierajac je w forme kuli, ktora nastepnie moze oswietlac komus droge.",
         0,
         0,
         0,
@@ -453,7 +454,7 @@
 
     {
         "cure blindness",
-        0,
+        "Czar ten generuje kojace cieplo, ktore splywa na oczy wybranej osoby, leczac slepote.",
         0,
         0,
         0,
@@ -472,7 +473,7 @@
 
     {
         "cure critical",
-        0,
+        "Czar 'CURE LIGHT' moze leczyc lekkie rany, 'CURE MODERATE' srednie rany, 'CURE SERIOUS' ciezkie rany, zas 'CURE CRITICAL' leczy bardzo powazne obrazenia.",
         0,
         0,
         0,
@@ -491,7 +492,7 @@
 
     {
         "cure disease",
-        0,
+        "Usuwa skutki zarazy i ropiejace wrzody z ciala oraz zapobiega dalszemu rozprzestrzenianiu sie zarazy.",
         0,
         0,
         0,
@@ -510,7 +511,7 @@
 
     {
         "cure light",
-        0,
+        "Czar 'CURE LIGHT' moze leczyc lekkie rany, 'CURE MODERATE' srednie rany, 'CURE SERIOUS' ciezkie rany, zas 'CURE CRITICAL' leczy bardzo powazne obrazenia.",
         0,
         0,
         0,
@@ -529,7 +530,7 @@
 
     {
         "cure poison",
-        0,
+        "Po rzuceniu na zatruta osobe czar calkowicie neutralizuje trucine.",
         0,
         0,
         0,
@@ -548,7 +549,7 @@
 
     {
         "cure moderate",
-        0,
+        "Czar 'CURE LIGHT' moze leczyc lekkie rany, 'CURE MODERATE' srednie rany, 'CURE SERIOUS' ciezkie rany, zas 'CURE CRITICAL' leczy bardzo powazne obrazenia.",
         0,
         0,
         0,
@@ -567,7 +568,7 @@
 
     {
         "curse",
-        0,
+        "'CURSE' czyli klatwa, to dokladnie przeciwienstwo czaru 'BLESS'. Sciaga ono na ofiare gniew bogow, skutkiem czego jest obnizenie sprawnosci w walce, oraz wieksza podatnosc na magie ofensywna.",
         0,
         0,
         0,
@@ -588,7 +589,7 @@
 
     {
         "detect evil",
-        0,
+        "Istoty zle (evil) otoczone sa czerwona aura, istoty dobre (good) otoczone sa zas zlota aura.",
         0,
         0,
         0,
@@ -608,7 +609,7 @@
     },
     {
         "detect good",
-        0,
+        "Istoty zle (evil) otoczone sa czerwona aura, istoty dobre (good) otoczone sa zas zlota aura.",
         0,
         0,
         0,
@@ -628,7 +629,7 @@
     },
     {
         "detect hidden",
-        0,
+        "Ten czar wyostrza twoje zmysly i czujnosc. Osoba pod jego wplywem jest w stanie dostrzec rzeczy ukryte przed oczyma innych. Czar ten jest czarem personalnym, to znaczy ze mozesz go rzucac tylko na siebie.",
         0,
         0,
         0,
@@ -648,7 +649,7 @@
     },
     {
         "detect invis",
-        0,
+        "Zdolnosc widzenia osob i rzeczy niewidzialnych. Czar ten mozna rzucac tylko na siebie. Nie sa w stanie go opanowac mistrzowie przywolan.",
         0,
         0,
         0,
@@ -668,7 +669,7 @@
     },
     {
         "detect magic",
-        0,
+        "Czar ten sprawia, ze rzucajacy stanie sie wrazliwy na wszelkie formy umagiczniania przedmiotow. Jednym spojrzeniem na obiekt bedzie w stanie rozstrzygac czy jest on magiczny czy nie-magiczny.",
         0,
         0,
         0,
@@ -688,7 +689,7 @@
     },
     {
         "detect poison",
-        0,
+        "Czar ten wykrywa trucizne w jedzeniu lub piciu, ktore masz w inwentarzu. Mozna ja potem usunac czarem 'PURIFY FOOD'.",
         0,
         0,
         0,
@@ -708,7 +709,7 @@
     },
     {
         "dispel evil",
-        0,
+        "Ten czar wymyslili klerycy oddani Praworzadnosci. Przywoluje on skondensowana wiazke pozytywnej energii, ktorej zadaniem jest niszczenie wszelkiego zla, jakie napotka. Jednak aby rzucic ten czar nalezy byc naprawde dobra istota.",
         0,
         0,
         0,
@@ -727,7 +728,7 @@
 
     {
         "dispel good",
-        0,
+        "Czar ten opracowali klerycy, ale ci sluzacy ciemnej stronie. Pozwala niszczyc slugi Dobra, poprzez umieszczenie w ich sercu 'ostrza' z negatywnej, smiercionosnej energii. Aby uzywac tego czaru nalezy jednak byc naprawde zlym.",
         0,
         0,
         0,
@@ -746,7 +747,7 @@
 
     {
         "dispel magic",
-        0,
+        "Czar ten niszczy magie, zarowno pozytywna jak i negatywna, ktora wplywa na ciebie albo inna osobe. Jego uzycie na kims innym jest rownoznaczne z rozpoczeciem walki, dlatego czaru tego nalezy uzywac ostroznie. Mozna usunac niewidzialnosc z przedmiotow.",
         0,
         0,
         0,
@@ -765,7 +766,7 @@
 
     {
         "earthquake",
-        0,
+        "Poprzez stopy rzucajacego energia przekazywana jest do samych korzeni ziemi a nastepnie wraca w postaci fali uderzeniowej, ktora wywoluje trzesienie ziemi. Nalezy pamietac, ze czar dziala obszarowo i atakuje wszystkie istoty w danej lokacji.",
         0,
         0,
         0,
@@ -784,7 +785,7 @@
 
     {
         "enchant armor",
-        0,
+        "Czar ten wplata magie w zbroje, poprawiajac jej wlasciwosci ochronne. Chociaz efekt dzialania czaru jest trwaly, to jednak nalezy zauwazyc, ze 'przeciazenie' przedmiotu nadmierna iloscia energii magicznej moze spowodowac jego zniszczenie.",
         0,
         0,
         0,
@@ -803,7 +804,7 @@
 
     {
         "enchant weapon",
-        0,
+        "Czar ten czasowo umagicznia bron czyniac ja bardziej zabojcza i celna, taka bron po pewnym czasie ulegnie zniszczeniu kiedy magia sie z niej ulotni.",
         0,
         0,
         0,
@@ -822,7 +823,7 @@
 
     {
         "energy drain",
-        0,
+        "Wyssanie doswiadczenia.",
         0,
         0,
         0,
@@ -842,7 +843,7 @@
 
     {
         "faerie fire",
-        0,
+        "Mozesz czasowo naruszyc strukture i spojnosc pancerza ofiary za pomoca tego czaru, znacznie pogarszajac jego wlasciwosci.",
         0,
         0,
         0,
@@ -862,7 +863,7 @@
 
     {
         "faerie fog",
-        0,
+        "Ten uzyteczny czar tworzy chmure purpurowego dymu, ktora otaczajac niewidzialne lub ukryte postacie, odkrywa je.",
         0,
         0,
         0,
@@ -882,7 +883,7 @@
 
     {
         "farsight",
-        0,
+        "Pozwala w trakcie wywolanego rozgladania sie wyostrzyc wzrok na dalej polozonych postaciach - tak jak to odruchowo robia elfy. ",
         0,
         0,
         0,
@@ -902,7 +903,7 @@
 
     {
         "fireball",
-        0,
+        "Tworzy sporych rozmiarow ognista kule, ktora uderza w cel zadajac obrazenia, dodatkowo moze czasami spalic jakies przedmioty w poblizu. Ogniste kule moga trafic kazdego, kto nie jest w grupie z magiem.",
         0,
         0,
         0,
@@ -921,7 +922,7 @@
 
     {
         "fireproof",
-        0,
+        "Czar ten zabezpiecza czasowo wybrany przedmiot przed splonieciem poprzez otoczenie go cienka niewidzialna warstewka ognioodpornej masci. Niestety, po jakims czasie masc wyparowuje.",
         0,
         0,
         0,
@@ -942,7 +943,7 @@
 
     {
         "flamestrike",
-        0,
+        "Czar ten jest jednym ze starszych czarow, uzywanych przez kaste kaplanska.Wywodzi sie z symbolicznych rytualow 'oczyszczania ogniem', podczas ktorych kaplan nad przeznaczonymi dla bogow ofiarami przepuszczal slup ognia. ",
         0,
         0,
         0,
@@ -961,7 +962,7 @@
 
     {
         "pyrotechnics",
-        0,
+        "Czar ten tworzy magiczna flare, blyszczaca oslepiajaco jasnym swiatlem. Pomijajac efekt dekoracyjny, flara ta moze zupelnie oslepic ofiare, utrudniajac jej skuteczna walke.",
         0,
         0,
         0,
@@ -982,7 +983,7 @@
 
     {
         "float",
-        0,
+        "Ten czar sprawia, ze dana postac unosi sie nad ziemie i zaczyna lewitowac. Traci ona wtedy mniej punktow ruchu. Float to gorsza wersja czaru fly. Nie pozwala ona na dostanie sie do powietrznych lokacji.",
         0,
         0,
         0,
@@ -1003,6 +1004,7 @@
 
     {
         "floating disc",
+        "Nie dysponujacy wielka sila magowie opracowali ten czar, aby sprawnie przenosic duze i ciezkie przedmioty.",
         0,
         0,
         0,
@@ -1016,13 +1018,12 @@
         0,
         0,
         0,
-        0,
-        0,
+        0
     },
 
     {
         "spiritual armor",
-        0,
+        "Czar ten tworzy magiczna widmowa zbroje w miejscach ekwipunku, ktore sa wolne. Zbroje mozna zalozyc tylko na siebie a po pewnym czasie rozpada sie w proch.",
         0,
         0,
         0,
@@ -1041,7 +1042,7 @@
 
     {
         "spiritual hammer",
-        0,
+        "Czar ten tworzy magiczna widmowy mlot w miejscach ekwipunku, ktore sa wolne. Orez moze dobyc tylko osoba, ktora go stworzyla. Mlot po pewnym czasie rozpada sie w proch.",
         0,
         0,
         0,
@@ -1060,7 +1061,7 @@
 
     {
         "flame blade",
-        0,
+        "Czar ten przywoluje skondensowana energie, ktora zmienia sie w magiczny, plonacy ogniem miecz, ktorego zaczynasz uzywac jako broni. Jest to jednak dar od twego Bostwa, i dlatego nie mozesz sie go pozbyc, zanim magiczne plomienie nie wypala sie i bron sama nie zniknie.",
         0,
         0,
         0,
@@ -1079,7 +1080,7 @@
 
     {
         "giant strength",
-        0,
+        "Zwieszka sile calej grupy za wyjatkiem istot, ktore nie moga otrzymac tego efektu np. nieumarlaki.",
         0,
         0,
         0,
@@ -1100,7 +1101,7 @@
 
     {
         "harm",
-        0,
+        "Harm, jest najsilniejszym ofensywnym zakleciem kleryka dzialajacym na istoty zywe. Nie dziala wiec np. na nieumarlych i konstrukty. Prawdziwa moc tego zaklecia mozna wywolac jednak uzywajac do tego trudno dostepnego komponentu.",
         0,
         0,
         0,
@@ -1119,7 +1120,7 @@
 
     {
         "haste",
-        0,
+        "Wplywajac na caly organizm, czar ten jest w stanie na krotka chwile znacznie przyspieszyc procesy zyciowe i skrocic czas reakcji danej osoby. Wymiernym tego efektem jest dodatkowy atak, jaki osoba ta zyskuje w trakcie walki.",
         0,
         0,
         0,
@@ -1140,7 +1141,7 @@
 
     {
         "heal",
-        0,
+        "Jeden z najsilniejszych znanych czarow leczniczych.",
         0,
         0,
         0,
@@ -1159,7 +1160,7 @@
 
     {
         "heat metal",
-        0,
+        "Moze byc uzywany przeciwko istotom, ktore nosza na sobie metalowe czesci zbroi. Czar nie uderza bezposrednio w ofiare ale w jej zbroje, nagrzewajac ja do wysokiej temperatury. Zmusza to ofiare do pospiesznego zdjecia i odrzucenia goracego kawalka pancerza.",
         0,
         0,
         0,
@@ -1178,7 +1179,7 @@
 
     {
         "identify",
-        0,
+        "Jest to jeden z bardziej przydatnych czarow, mozna go uzyc, by poznac dokladne informacje na temat jakiegos przedmiotu z inwentarza. Prawdziwa moc zaklecia jednak jest wyzwolona przy uzyciu odpowiednich komponentow.",
         0,
         0,
         0,
@@ -1197,7 +1198,7 @@
 
     {
         "infravision",
-        0,
+        "Niektore rasy, na przyklad elfy, wytworzyly w toku ewolucji specjalna umiejetnosc, pozwalajaca im widziec w absolutnej ciemnosci niektore rzeczy i zywe istoty w postaci czerwonawej otoczki i poswiaty.",
         0,
         0,
         0,
@@ -1218,7 +1219,7 @@
 
     {
         "invisibility",
-        0,
+        "Bardzo potezny czar, ktory wykorzystujac efekt 'obiegania' czasteczek swiatla naokolo postaci czyni ja niewidzialna. Niestety, efekt znika, gdy tylko niewidzialna postac zaangazuje sie w walke. Za pomoca tego czaru mozna takze czynic niewidzialnymi rozmaite obiekty.",
         0,
         0,
         0,
@@ -1239,7 +1240,7 @@
 
     {
         "undead invisibility",
-        0,
+        "Zaklecie, ktore sprawia, ze istoty nieumarle nie widza osob lub rzeczy nim objetych.",
         0,
         0,
         0,
@@ -1260,7 +1261,7 @@
 
     {
         "animal invisibility",
-        0,
+        "Zaklecie, ktore sprawia, ze zwierzeta nie widza osob lub rzeczy nim objetych.",
         0,
         0,
         0,
@@ -1281,7 +1282,7 @@
 
     {
         "know alignment",
-        0,
+        "To zaklecie delikatnie i dyskretnie penetruje umysl ofiary, sprawdzajac jakie mysli w nim przewazaja. Jesli umysl ofiary jest czysty i dobry, dostrzezesz zielonkawa aure, jesli zas zly krwistoczerwona. Osoby, ktore nie opowiadaja sie ani za zlem, ani za dobrem otoczone beda aura o niebieskawym zabarwieniu.",
         0,
         0,
         0,
@@ -1300,7 +1301,7 @@
 
     {
         "lightning bolt",
-        0,
+        "Ten klasyczny czar tworzy pojedyncze wyladowanie energii elektrycznej, w formie blyskawicy, ktora uderza w wybrany cel.",
         0,
         0,
         0,
@@ -1319,7 +1320,7 @@
 
     {
         "locate object",
-        0,
+        "Doswiadczony mag moze wyczuc a nawet poznac miejsce, w ktorym dany przedmiot aktualnie sie znajduje. Magia ta jest tak delikatna, iz nie zawsze udaje sie znalezc wszystkie poszukiwane przedmioty, dlatego zawsze warto probowac kilka razy.",
         0,
         0,
         0,
@@ -1338,7 +1339,7 @@
 
     {
         "magic missile",
-        0,
+        "Zaklecie przywoluje kilka pociskow magicznych. Magowie z odpowiednia specjalizacja moga przywolac wieksza ilosc.",
         0,
         0,
         0,
@@ -1357,7 +1358,7 @@
 
     {
         "mass invis",
-        0,
+        "Czar ten jest podobny do standardowego czaru niewidzialnosci z ta jednak roznica, ze cala grupa maga ktory go rzucil stojaca obok niego znajdzie sie pod jego dzialaniem.",
         0,
         0,
         0,
@@ -1377,7 +1378,7 @@
 
     {
         "nexus",
-        0,
+        "Formuje portal przed wybrana osoba, ktory umozliwia jej dostanie sie do miejsca gdzie znajduje sie czarodziej. Portal czasem bywa niestabilny i moze przeniesc cel do nieoczekiwanego miejsca. Do inkantancji zaklecia wymagany jest kamien portali.",
         0,
         0,
         0,
@@ -1396,7 +1397,7 @@
 
     {
         "pass door",
-        0,
+        "Pozwala czarodziejowi zmienic strukture czasteczek swojego ciala, umozliwiajac mu przejscie przez solidne przeszkody, takie jak zamkniete drzwi.",
         0,
         0,
         0,
@@ -1438,7 +1439,7 @@
 
     {
         "poison",
-        0,
+        "Jesli ten czar zostanie rzucony na postac redukuje jej sile, a takze pogarsza zdolnosc regeneracji. Mozliwe jest tez zatrucie jedzenia.",
         0,
         0,
         0,
@@ -1459,7 +1460,7 @@
 
     {
         "portal",
-        0,
+        "Uzywajac kamieni portali, magowie tworza portal, ktory potrafi zabrac w konkretne miejsce, powiazane z kamieniem. Portal niekiedy bywa niestabilny i moze przeniesc podroznika do nieoczekiwanego miejsca",
         0,
         0,
         0,
@@ -1478,7 +1479,7 @@
 
     {
         "protection evil",
-        0,
+        "Jest to zaklecie dobrych klerykow i paladynow, ktorzy rzucajac je na siebie by chronic sie przed istotami z cienia.",
         0,
         0,
         0,
@@ -1499,7 +1500,7 @@
 
     {
         "protection good",
-        0,
+        "Jest to zaklecie zlych klerykow, ktorzy rzucajac je na siebie chronia sie przed dobrymi istotami.",
         0,
         0,
         0,
@@ -1520,7 +1521,7 @@
 
     {
         "refresh",
-        0,
+        "Pozwala druidowi szybko zregenerowac swoje cialo po dlugiej i meczacej podrozy. Zaklecie przywraca sily, usuwajac zmeczenie, bole miesniowe i inne negatywne skutki wyczerpania, przywracajac energie i swiezosc.",
         0,
         0,
         0,
@@ -1539,7 +1540,7 @@
 
     {
         "remove curse",
-        0,
+        "Ten czar oczyszcza wskazana osobe lub przedmiot z klatwy.",
         0,
         0,
         0,
@@ -1558,7 +1559,7 @@
 
     {
         "sanctuary",
-        0,
+        "Sluzy on do przyzwania najczystszej boskiej energii, ktora formuje sie w tarcze, chroniaca osobe bedaca pod wplywem tego czaru. Ochrona ta jest tak silna, ze niemozliwe staje sie zaatakowanie ofiary, dopoki nie minie efekt.",
         0y,
         0,
         0,
@@ -1579,7 +1580,7 @@
 
     {
         "regenerate",
-        0,
+        "Zmienia on strukture materii wokol ciala poddanej mu osoby w taki sposob, ze czas zdaje sie dla niej plynac o wiele szybciej. Przyspieszane sa wszelkie procesy zyciowe a takze... regeneracja ran.",
         0,
         0,
         0,
@@ -1601,7 +1602,7 @@
 
     {
         "shield",
-        0,
+        "Czar ten tworzy magiczna tarcze, ktora absorbuje przez czas trwania wszystkie pociski magiczne.",
         0,
         0,
         0,
@@ -1622,7 +1623,7 @@
 
     {
         "shocking grasp",
-        0,
+        "Gromadzi w ciele rzucajacego maga, a nastepnie kieruje na ofiare skondensowana wiazke energii elektrycznej.",
         0,
         0,
         0,
@@ -1641,7 +1642,7 @@
 
     {
         "sleep",
-        0,
+        "Czar ten tworzy obrazy zmeczenia i znuzenia w podswiadomosci ofiary, co powoduje, ze w razie gdy czar sie uda ta zapadnie w sen, z ktorego przez jakis czas na pewno sie nie obudzi.",
         0,
         0,
         0,
@@ -1662,7 +1663,7 @@
 
     {
         "slow",
-        0,
+        "Czar ten spowalnia poruszanie sie ofiary, a co za tym idzie takze szybkosc, z jaka zadaje ona ciosy w walce.",
         0,
         0,
         0,
@@ -1683,7 +1684,7 @@
 
     {
         "stone skin",
-        0,
+        "Ten personalny czar ochronny modyfikuje twoja skore w taki sposob, ze staje sie ona twarda niczym kamien. Dzieki temu stajesz sie na krotki czas praktycznie niewrazliwy na zwykle ciosy.",
         0,
         0,
         0,
@@ -1704,7 +1705,7 @@
 
     {
         "mirror image",
-        0,
+        "Ten czar to jedno z najwiekszych osiagniec iluzji. Tworzy on dookola maga jego lustrzane odbicia, sprawiajac, ze przeciwnik nie wie czy faktycznie uderza w zywa osobe. Niestety, gdy lustrzane odbicie zostanie trafione, znika.",
         0,
         0,
         0,
@@ -1725,7 +1726,7 @@
 
     {
         "blur",
-        0,
+        "Efekt 'rozmycia', jaki zaklecie daje, sprawia ze poddana jego dzialaniu postac jest o wiele bardziej odporna na ciosy.",
         0,
         0,
         0,
@@ -1746,7 +1747,7 @@
 
     {
         "summon",
-        0,
+        "Pozwala czarodziejowi przywolac wybrana osobe do siebie w obrabie okreslonego regionu. Zaklecie dziala na zasadzie magicznego polaczenia, które przyciaga ofiare, zmuszajac ja do fizycznego przeniesienia sie w wyznaczone miejsce.",
         0,
         0,
         0,
@@ -1785,32 +1786,13 @@
 
     {
         "weaken",
-        {  4, 0, 32, 32, 32, 16, 32, 32, 32, 32, 32 },
-        spell_weaken,
-        0,
-        0,
-        &gsn_weaken,
-        0,
-        0,
-        0,
-        0,
-        "Czujesz jak powracaj� twoje si�y.",
+        "Czar tworzy w miesniach ofiary zakwasy, wywolujace uczucie zmeczenia i obnizajace sile.",
         0,
         0,
         0,
         0,
         0,
-        "Zosta�<&e�/a�/o�> os�abion<&y/a/e>",
-        "Powoduje os�abienie"
-    },
-
-    {
-        "word of recall",
-        { 32, 16, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_word_of_recall,
         0,
-        POS_RESTING,
-        &gsn_word_of_recall,
         0,
         0,
         0,
@@ -1823,20 +1805,17 @@
         0
     },
 
-    /*
-     * Czary Epickie
-     */
     {
         "finger of death",
-        { 25, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_finger_of_death,
-        0,
-        0,
-        &gsn_finger_of_death,
+        "Polega na wypuszczeniu z palca czarodzieja poteznej fali negatywnej energii. W zaleznosci od mocy czarodzieja, negatywna energia moze spowodowac przedwczesna smierc ofiary.",
+        0
         0,
         0,
         0,
-        "palec �mierci",
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -1847,34 +1826,15 @@
 
     {
         "elemental devastation",
-        { 25, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_elemental_devastation,
-        0,
-        0,
-        &gsn_elemental_devastation,
-        0,
-        0,
-        0,
-        "niszczycielka moc �ywio��w",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    },
-
-    { //100
-        "reverse gravity",
-        { 25, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_reverse_gravity,
         0,
         0,
         0,
         0,
         0,
         0,
-        "odwr�cenie grawitacji",
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -1884,572 +1844,10 @@
     },
 
     {
-        "gas breath",
-        { 25, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_gas_breath,
+        "change weapon",
+        "To potezne zaklecie dostepne jest najwybitniejszym mistrzom przemian. Za jego pomoca potrafia oni zmienic dowolna bron w poteznego golema, ktory bedzie im sluzyl. Jakosc golema zalezy od wagi przedmiotu. Czar ten mozna uzyc na odpowiednich artefaktach, ktore nie zostana zniszczone w procesie inkantancji.",
         0,
         0,
-        &gsn_gas_breath,
-        SAVE_BREATH,
-        -3,
-        0,
-        "zioni�cie gazem",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    },
-
-
-    {
-        "lightning breath2",
-        { 25, 32, 32, 32, 32, 32, 32, 32, 32 , 32, 32 },
-        spell_lightning_breath,
-        0,
-        0,
-        0,
-        SAVE_BREATH,
-        -3,
-        0,
-        "zioni�cie chmur� wy�adowa� elektrycznych",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    },
-
-
-    /* combat and weapons skills */
-
-
-    {
-        "axe",
-        { 32, 32, 32,  1, 1, 32, 1, 32, 1, 1, 1  },
-        spell_0,
-        0,
-        0,
-        &gsn_axe,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "dagger",
-        {  1,  1,  1,  1, 1, 1, 1, 32, 1, 1, 1 },
-        spell_0,
-        0,
-        0,
-        &gsn_dagger,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "flail",
-        { 32,  1,  1,  1, 1, 1, 1, 32, 1, 1, 1 },
-        spell_0,
-        0,
-        0,
-        &gsn_flail,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "mace",
-        { 32,  1,  1,  1, 1, 1, 1, 32, 1, 1, 1  },
-        spell_0,
-        0,
-        0,
-        &gsn_mace,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "polearm",
-        { 32, 32, 32, 1, 1, 32, 1, 32, 1 , 1, 1 },
-        spell_0,
-        0,
-        0,
-        &gsn_polearm,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "staff",
-        { 1, 1, 32, 1, 32, 1, 1, 32, 1, 32, 1 },
-        spell_0,
-        0,
-        0,
-        &gsn_staff,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "shield block",
-        { 32, 10, 32,  4, 8, 10, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_shield_block,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    { //110
-        "spear",
-        {  32, 32, 32, 1, 1, 32, 1, 32, 1, 1, 1  },
-        spell_0,
-        0,
-        0,
-        &gsn_spear,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "sword",
-        { 32, 32,  1,  1, 1, 32, 1, 32, 1, 1, 1 },
-        spell_0,
-        0,
-        0,
-        &gsn_sword,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "whip",
-        { 32, 32,  1,  1,  1, 32, 32, 32, 1, 1, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_whip,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "backstab",
-        { 32, 32,  1, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_0,
-        0,
-        0,
-        &gsn_backstab,
-        0,
-        0,
-        0,
-        "backstab",
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "bash",
-        { 32, 32, 32,  1, 8, 32, 32, 32, 32, 5, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_bash,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-    },
-
-    {
-        "berserk",
-        { 32, 32, 32, 32, 32, 32, 10, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_berserk,
-        0,
-        0,
-        0,
-        0,
-        "Twoj puls uspokaja si�, a sza� powoli mija.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Jeste� opanowan<&y/a/e> przez sza� bitewny",
-        "Dodaje efekt sza�u bitewnego"
-    },
-
-    {
-        "disarm",
-        { 32, 32, 32, 0, 0, 32, 32, 32, 32, 14, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_disarm,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "dodge",
-        { 32, 32, 10, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_dodge,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "envenom",
-        { 32, 32, 0, 32, 32, 32, 32, 32, 18, 14, 32 },
-        spell_0,
-        0,
-        POS_RESTING,
-        &gsn_envenom,
-        0,
-        0,
-        36,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "kick",
-        { 32, 32, 4, 1, 4, 32, 32, 32, 5, 1, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_kick,
-        0,
-        0,
-        0,
-        "kopniecie",
-        "!Kop!",
-        0,
-        FALSE
-    },
-
-    { //120
-        "parry",
-        { 32, 32, 32,  0, 0, 32, 32, 32, 32, 13, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_parry,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "rescue",
-        { 32, 32, 32,  1, 4, 32, 4, 1, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_rescue,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "trip",
-        { 32, 32,  8, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_trip,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-
-    {
-        "riding",
-        { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-        spell_0,
-        0,
-        POS_RESTING,
-        &gsn_riding,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "hide",
-        { 32, 32,  1,  32, 32, 32, 32, 32, 8, 32, 32 },
-        spell_0,
-        0,
-        POS_RESTING,
-        &gsn_hide,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Daje efekt ukrycia"
-    },
-
-    {
-        "lore item",
-        { 32, 32, 32, 32, 32, 32, 10, 32, 32, 32, 4 },
-        spell_0,
-        0,
-        POS_RESTING,
-        &gsn_lore,
-        0,
-        0,
-        36,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "meditation",
-        {  32,  1, 32, 32, 13, 32, 32, 1, 32, 32, 32 },
-        spell_0,
-        0,
-        POS_SLEEPING,
-        &gsn_meditation,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Jeste� pogr��on<&y/a/e> w medytacji"
-    },
-
-    {
-        "peek",
-        {  32, 32,  1, 32, 32, 32, 32, 32, 4, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_peek,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "pick lock",
-        { 32, 32,  1, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_pick_lock,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "sneak",
-        { 32, 32,  1,  32, 32, 32, 32, 4, 8, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_sneak,
-        0,
-        0,
-        0,
-        0,
-        "Przestajesz si� skrada�.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Skradasz si� po cichutku",
-        "Daje efekt skradania si�"
-    },
-
-    { //130
-        "steal",
-        { 32, 32,  1, 32, 32, 32, 32, 32, 4, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_steal,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-
-    {
-        "circle",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_0,
-        0,
-        0,
-        &gsn_circle,
-        0,
-        0,
-        0,
-        "circle",
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "track",
-        { 32, 32, 32, 8, 0, 32, 9, 4, 32, 8, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_track,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "summon animal",
-        { 32, 32, 32, 32, 32, 1, 32, 32, 32, 32, 32  },
-        spell_summon_animals,
-        0,
-        0,
-        &gsn_summon_animals,
-        0,
-        0,
-        0,
-        "przyzywanie zwierz�cia",
-        0,
-        0,
-        0,
-        0,
-        SPELL_COLOUR_LOWGREEN,
-        0
-    },
-
-    {
-        "change staff",
-        { 19, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_changestaff,
-        TAR_OBJ_ROOM,
         0,
         0,
         0,
@@ -2466,8 +1864,8 @@
 
     {
         "liveoak",
-        { 32, 32, 32, 32, 32, 16, 32, 32, 32, 32, 32  },
-        spell_liveoak,
+        "Ten czar sluzy do przywolania poteznego slugi - zywego drzewa. Jednak aby to zrobic musisz odprawic odpowiedni rytual przywolania, do ktorego potrzebny jest debowy zagajnik lub w ostatecznosci zwykly las. Zywodab bedzie przez jakis czas wykonywac Twoje polecenia, a potem zniknie, stapiajac sie z lasem.",
+        0,
         0,
         0,
         0,
@@ -2485,71 +1883,9 @@
 
     {
         "stability",
-        { 10, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_stability,
+        "Czar sprawia, ze zmysl rownowagi maga zaczyna pracowac idealnie, nie da sie go wywrocic.",
         0,
         0,
-        &gsn_stability,
-        0,
-        0,
-        0,
-        0,
-        "Twoje wyczucie r�wnowagi powraca do normalnego stanu.",
-        0,
-        0,
-        Odrzucanie|SpellSpec,
-        0,
-        0,
-        "Masz niesamowite wyczucie r�wnowagi"
-    },
-
-    {
-        "hold person",
-        {  10,  8, 32, 32, 32, 16, 32, 32, 15, 32, 32 },
-        spell_hold_person,
-        0,
-        0,
-        &gsn_holdperson,
-        0,
-        0,
-        0,
-        0,
-        "Odzyskujesz kontrol� nad swoim cia�em.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Zosta�<&e�/a�/o�> sparali�owan<&y/a/e>",
-        "Powoduje parali�"
-    },
-
-    {
-        "confusion",
-        {  13,  0, 32, 32, 32, 32, 32, 32, 20, 32, 32 },
-        spell_confusion,
-        0,
-        0,
-        &gsn_confusion,
-        0,
-        0,
-        0,
-        0,
-        "Odzyskujesz jasno�� umys�u.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Zosta�e� otumanion<&y/a/e> i zdezorientowan<&y/a/e>",
-        "Powoduje dezorientacje"
-    },
-
-    /*no wiec nie jest to offensive... jesli nie wyjdzie wtedy wali*/
-    {
-        "command",
-        {  32,  1, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_command,
         0,
         0,
         0,
@@ -2565,18 +1901,79 @@
         0
     },
 
-    { //140
+    {
+        "hold person",
+        "Czar ten na krotka chwile calkowicie paralizuje miesnie ofiary. Ofiara nie moze sie poruszac ani walczyc, a takze latwiej ja trafic. Zakleciem tym mozna sparalizowac tylko istoty czlekoksztaltne.",
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    },
+
+    {
+        "confusion",
+        "Czar ten powoduje posianie zametu w umysle ofiary i odwrocenie jej uwagi od walki, przez co nie moze sie ona skoncentrowac i walczy gorzej.",
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    },
+
+    {
+        "command",
+        "Czar ten wykorzystuje zdolnosci mentalne i sile woli rzucajacego, pozwalajac mu w ograniczonym zakresie kontrolowac umysl ofiary. ",
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+    },
+
+    {
         "hold animal",
-        {  13, 32, 32, 32, 32, 4, 32, 32, 10, 32, 32 },
-        spell_hold_animal,
-        0,
-        0,
-        &gsn_holdanimal,
+        "Ten czar sluzy do zatrzymania w miejscu jakiegos zwierzecia. Sprowadza on na ofiare chwilowy paraliz miesni, przez co nie moze sie ona poruszac.",
         0,
         0,
         0,
         0,
-        "Odzyskujesz kontrol� nad swoim cia�em.",
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -2586,16 +1983,16 @@
 
     {
         "hold monster",
-        {  16, 20, 32, 32, 32, 32, 32, 32, 20, 32, 32 },
-        spell_hold_monster,
-        0,
-        0,
-        &gsn_holdmonster,
+        "Zakleciem tym mozna sparalizowac kazda istote oprocz nieumarlych.",
         0,
         0,
         0,
         0,
-        "Odzyskujesz kontrol� nad swoim cia�em.",
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -2605,220 +2002,220 @@
 
     {
         "hold plant",
-        {  16, 32, 32, 32, 32, 8, 32, 32, 15, 32, 32 },
-        spell_hold_plant,
-        0,
-        0,
-        &gsn_holdplant,
+        "Ten czar sluzy do zatrzymania w miejscu rosliny. Sprowadza on na ofiare chwilowe otumanienie i zatrzymanie sokow, przez co nie moze sie ona poruszac. ",
         0,
         0,
         0,
         0,
-        "Odzyskujesz kontrol� nad swoim cia�em.",
         0,
         0,
         0,
-        SPELL_COLOUR_LOWGREEN,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0
     },
 
     {
         "resist fire",
-        { 13, 0, 32, 32, 32, 0, 32, 32, 32 , 32, 32 },
-        spell_resist_fire,
-        0,
-        0,
-        &gsn_resist_fire,
-        0,
-        0,
-        0,
-        0,
-        "Nie jeste� ju� chronion<&y/a/e> przed ogniem.",
+        "Czar ten poprzez rozbudzenie we wnetrzu ciala magicznego chlodu sprowadza na ciebie lub na ofiare czesciowa odpornosc na ataki przy pomocy ognia.",
         0,
         0,
         0,
         0,
         0,
-        "Jeste� cz��ciowo chronion<&y/a/e> przed ogniem",
-        "Dodaje efekt cz��ciowej ochrony przed ogniem"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "energy shield",
-        { 19, 20, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_energy_shield,
-        0,
-        0,
-        &gsn_energy_shield,
-        0,
-        0,
-        0,
-        0,
-        "Ochraniaj�ce ci� pole energii znika.",
+        "Jest to silny czar chroniacy przed negatywna i pozytywna energia. Mozna rzucic zarowno go na siebie jak i na wspoltowarzyszy swoich wedrowek.",
         0,
         0,
         0,
         0,
         0,
-        "Jeste� chronion<&y/a/e> przez pole energii",
-        "Dodaje efekt ochronnego pola energii "
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
 
     {
         "resist cold",
-        { 13, 0, 32, 32, 32, 0, 32, 32, 32, 32, 32 },
-        spell_resist_cold,
-        0,
-        0,
-        &gsn_resist_cold,
-        0,
-        0,
-        0,
-        0,
-        "Ochraniaj�ce ci� przed zimnem pole znika.",
+        "Ten czar rozpala we wnetrznosciach ofiary plomien, dzieki ktoremu staje sie ona bardziej odporna na zimno.",
         0,
         0,
         0,
         0,
         0,
-        "Jeste� cz��ciowo chronion<&y/a/e> przed zimnem",
-        "Dodaje efekt cz��ciowej ochrony przed zimnem"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "resist lightning",
-        { 13, 0, 32, 32, 32, 0, 32, 32, 32, 32, 32  },
-        spell_resist_lightning,
-        0,
-        0,
-        &gsn_resist_lightning,
-        0,
-        0,
-        0,
-        0,
-        "Ochraniaj�ce ci� przed b�yskawicami pole znika.",
+        "Czar ten w magiczny sposob uziemia ofiare, dzieki czemu wzrasta jej odpornosc na blyskawice i ataki za pomoca elektrycznosci.",
         0,
         0,
         0,
         0,
         0,
-        "Jeste� cz��ciowo chronion<&y/a/e> przed b�yskawicami",
-        "Dodaje efekt cz��ciowej ochrony przed b�yskawicami"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "resist magic",
-        { 32, 20, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_resist_magic,
-        0,
-        0,
-        &gsn_resist_magic,
+        "Powstrzymuje czysta magie zawarta w zakleciach, ktora jest czescia wiekszosci czarow istniejacych.",
         0,
         0,
         0,
         0,
-        "Ochraniaj�ce ci� przed magi� pole znika.",
         0,
         0,
         0,
-        0,,
         0,
-        "Jeste� cz��ciowo chronion<&y/a/e> przed magi�",
-        "Dodaje efekt cz��ciowej ochrony przed magi�"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "brave cloak",
-        { 32, 0, 32, 32, 25, 32, 32, 32, 32, 32, 32 },
-        spell_brave_cloak,
-        0,
-        0,
-        &gsn_brave_cloak,
-        0,
-        0,
-        0,
-        0,
-        "Ochraniaj�ce ci� przed strachem pole znika.",
+        "Czar ten dziala na cala grupe, w ktorej znajduje sie rzucajaca go osoba. Otacza on wszystkich magicznym plaszczem, sprawiajacym iz niesamowita odwaga splywa na grupe, przez co jej czlonkowie sa bardziej odporni na strach.",
         0,
         0,
         0,
         0,
         0,
-        "Jeste� spowit<&y/a/e> w aur� odwagi",
-        "Dodaje efekt aury odwagi"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "silence",
-        {  4,  4, 32, 32, 32, 0, 32, 32, 10, 32, 32 },
-        spell_silence,
-        0,
-        0,
-        &gsn_silence,
-        0,
-        0,
-        0,
-        0,
-        "Znowu mo�esz m�wi�.",
+        "Powoduje on, ze jezyk kolowacieje i ofiara nie jest zdolna wydobyc z siebie zadnego dzwieku. Oznacza to oczywiscie takze niemoznosc recytowania zaklec.",
         0,
         0,
         0,
         0,
         0,
-        "Zosta�<&e�/a�/o�> uciszon<&y/a/e>",
-        "Powoduje zanik g�osu"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
-    { //150
+    {
         "bark skin",
-        { 32, 32, 32, 32, 32, 8, 32, 32, 32, 32, 32 },
-        spell_bark_skin,
-        0,
-        0,
-        &gsn_bark_skin,
-        0,
-        0,
-        0,
-        0,
-        "Twoja sk�ra wraca do normalnej postaci.",
+        "Zmienia skore ofiary w kore, przez co staje sie ona twardsza. Ofiara jest wiec lepiej zabezpieczona przed ciosami wroga.",
         0,
         0,
         0,
         0,
         0,
-        "Jeste� chronion<&y/a/e> przez sk�r� z kory drzewnej",
-        "Dodaje efekt ochronnej kory drzewnej pokrywaj�cej sk�r�"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "aid",
-        { 32,  4, 32, 32, 17, 32, 32, 32, 32, 32, 32 },
-        spell_aid,
-        0,
-        0,
-        &gsn_aid,
-        0,
-        0,
-        0,
-        0,
-        "Stan twojego zdrowia si� troszk� poprawia.",
+        "Gdy osoba natchniona tym czarem zbliza sie do smierci, moze liczyc na drobna pomoc od bogow w postaci uleczenia mniejszych ran.",
         0,
         0,
         0,
         0,
         0,
-        "Jeste� otoczon<&y/a/e> bosk� moc�",
-        "Dodaje efekt boskiej mocy"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "chant",
-        {  32,  4, 32, 32, 17, 32, 32, 32, 32, 32, 32  },
-        spell_chant,
+        "Zaklecie to mozna rzucac wylacznie podczas walki. Jest to piesn blagajaca bogow o laske i przychylnosc, dzieki czemu wszystkie walczace w lokacji osoby maja szanse celniej uderzyc swego przeciwnika.",
         0,
         0,
-        &gsn_chant,
+        0,
+        0,
         0,
         0,
         0,
@@ -2833,44 +2230,42 @@
 
     {
         "first aid",
-        {  32,  1, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_first_aid,
+        "Kleryk uzywajac tej umiejetnosci moze probowac uleczyc najswiezsze rany odniesione przez postac w czasie ostatniej walki.",
         0,
         0,
         0,
         0,
         0,
         0,
-        FALSE
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "exile",
-        { 19, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_exile,
+        "Wypedza wszystkie istoty, ktore zostaly przywolane na ten swiat za pomoca magii. Nalezy pamietac o tym, ze czar wygoni tez pomocnikow maga, ktory zainkantowal ten czar.",
         0,
         0,
         0,
         0,
         0,
         0,
-        "wygnanie",
         0,
         0,
         0,
-        Odrzucanie|SpellSpec,
+        0,
+        0,
+        0,
         0,
         0
     },
 
     {
         "revive",
-        { 25, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_revive,
-        TAR_OBJ_ROOM,
+        "Jest to jedno z najbardziej mrocznych i poteznych zaklec, jakie posiada mistrz nekromancji w swojej ksiedze. Zaklecie to pozwala calkowicie przywrocic do zycia martwa istote i przejac nad nia kontrole.",
         0,
         0,
         0,
@@ -2880,36 +2275,37 @@
         0,
         0,
         0,
-        Nekromancja|SpellSpec,
+        0,
+        0,
+        0,
         0,
         0
     },
 
     {
         "entangle",
-        {  32, 32, 32, 32, 32, 8, 32, 32, 32, 32, 32  },
-        spell_entangle,
-        0,
-        0,
-        &gsn_entangle,
-        0,
-        0,
-        0,
-        0,
-        "Opl�tuj�ce ci� ro�liny czerniej� i po chwili rozsypuj� si� w py�.",
+        "Dookola ofiary powstaja pnacza i inne rosliny, ktore ja oplataja i utrudniaja poruszanie.",
         0,
         0,
         0,
         0,
         0,
-        "Zosta�<&e�/a�/o�> opl�tan<&y/a/e> przez ro�liny",
-        "Powoduje unieruchamiaj�ce opl�tanie przez ro�liny"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "goodbarry",
-        { 32,  32,  32, 32, 32, 4, 32, 32, 32, 32, 32 },
-        spell_goodbarry,
+        "Ten czar tworzy na ziemi kilka smacznych i pozywnych jagod. Nie tylko zaspokajaja one glod, ale takze wykazuja pewne slabe wlasciwosci lecznicze.",
         0,
         0,
         0,
@@ -2921,59 +2317,56 @@
         0,
         0,
         0,
-        0,,
+        0,
+        0,
         0,
     },
 
     {
         "waterwalk",
-        {  7, 32, 32, 32, 32, 4, 32, 32, 32, 32, 32 },
-        spell_waterwalk,
-        0,
-        0,
-        &gsn_waterwalk,
-        0,
-        0,
-        0,
-        0,
-        "Nie potrafisz ju� chodzi� po wodzie.",
+        "Ten czar pozwala rzucajacemu chodzic po wodzie tak jak po twardym gruncie, zapobiegajac utopieniu sie.",
         0,
         0,
         0,
         0,
         0,
-        "Mo�esz chodzi� po wodzie",
-        "Umo�liwia chodzenie po wodzie"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "water breathing",
-        {  7, 32, 32, 32, 32, 0, 32, 32, 32, 32, 32 },
-        spell_water_breathing,
-        0,
-        0,
-        &gsn_water_breathing,
-        0,
-        0,
-        0,
-        0,
-        "Czujesz, �e nie mo�esz ju� oddycha� po wod�.",
+        "Zapobiega utopieniu sie w lokacjach podwodnych i umozliwia swobodne nurkowanie na czas dzialania czaru.",
         0,
         0,
         0,
         0,
         0,
-        "Mo�esz oddycha� pod wod�",
-        "Umo�liwia oddychanie pod wod�"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
-    { //160
+    {
         "prayer",
-        { 32, 4, 32, 32, 17, 32, 32, 32, 32, 32, 32  },
-        spell_prayer,
-        0,
-        0,
-        &gsn_prayer,
+        "Ta krotka modlitwe wyglosic mozna tylko w czasie walki. Na walczacych splywa blogoslawienstwo, poprawiajace celnosc ich ciosow.",
         0,
         0,
         0,
@@ -2983,34 +2376,38 @@
         0,
         0,
         0,
-        SPELL_COLOUR_HICYAN
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "free action",
-        { 10, 0, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_free_action,
-        0,
-        0,
-        &gsn_free_action,
-        0,
-        0,
-        0,
-        0,
-        "Czujesz si� mniej swobodnie.",
+        "Czar ten zapewnia celowi zaklecia czasowa ochrone przeciwko paralizowi i czarom ograniczajacym swobode ruchow.",
         0,
         0,
         0,
         0,
         0,
-        "Jeste� chronion<&y/a/e> przed unieruchomieniem",
-        "Dodaje efekt ochrony przed unieruchomieniem"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "remove paralysis",
-        { 10, 0, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_remove_paralysis,
+        "Czar usuwajacy paraliz.",
+        0,
         0,
         0,
         0,
@@ -3027,15 +2424,15 @@
     },
     {
         "force bolt",
-        {  13, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_force_bolt,
+        "Czar ten uwalnia skondensowana wiazke energii z reki maga, ktora trafia cel i miazdzy go. Czar ten oddzialujac na plaszczyznie fizycznej moze ranic nawet istoty odporne na magie!",
         0,
         0,
         0,
         0,
         0,
         0,
-        "force bolt",
+        0,
+        0,
         0,
         0,
         0,
@@ -3043,123 +2440,88 @@
         0,
         0
     },
+
     {
         "lay",
-        { 32, 32, 32,  32, 1, 32, 32, 32, 32, 32, 32  },
-        spell_0,
-        0,
-        0,
-        &gsn_lay,
-        0,
-        0,
-        0,
-        "nak�adanie r�k",
-        0,
-        0,
-        FALSE
-    },
-    {
-        "shoot",
-        { 32, 32, 32,  32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_0,
-        0,
-        0,
-        &gsn_shoot,
+        "Paladyni raz na dobe moga przyzwac uzdrawiajaca moc swojego boga. Nakladanie rak slynie z mozliwosci wyleczenia nawet najciezszych przypadkow chorob i ran wojennych.",
         0,
         0,
         0,
         0,
         0,
         0,
-        FALSE
-    },
-
-    {
-        "spray of thorns",
-        {  32, 32, 32, 32, 32, 1, 32, 32, 32, 32, 32  },
-        spell_spray_of_thorns,
         0,
         0,
         0,
         0,
-        0,
-        0,
-        "spray of thorns",
-        0,
-        0,
-        0,
-        0,
-        SPELL_COLOUR_LOWGREEN,
         0
     },
 
+
     {
-        "strength",
-        {  4, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_strength,
-        0,
-        0,
-        &gsn_strength,
-        0,
-        0,
-        0,
-        0,
-        "Twoje mi��nie zaczynaj� pracowa� normalnie.",
+        "spray of thorns",
+        "Zaklecie powoduje, ze z krzewow lub innych roslinnych elementow otoczenia wydobywaja sie ostre kolce, ktore zostaja wyrzucone w strone ofiary.",
         0,
         0,
         0,
         0,
         0,
-        "Jeste� silniejsz<&y/a/e> ni� zwykle",
-        "Dodaje efekt zwiekszonej si�y"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "web",
-        {  7,  32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_web,
-        0,
-        0,
-        &gsn_web,
-        0,
-        0,
-        0,
-        0,
-        "Wypl�tujesz si� z otaczaj�cej ci� sieci.",
+        "Czar ten tworzy magiczna siec, ktora spada na ofiare i przy odrobinie szczescia tak ja oplatuje, ze ofiara nie moze skutecznie walczyc.",
         0,
         0,
         0,
         0,
         0,
-        "Zosta�<&e�/a�/o�> opl�tan<&y/a/e> magiczn� sieci�",
-        "Powoduje opl�tanie magiczna sieci�"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "deafness",
-        {  4,  32, 32, 32, 32, 32, 32, 32, 10, 32, 32 },
-        spell_deafness,
-        0,
-        0,
-        &gsn_deafness,
-        0,
-        0,
-        0,
-        0,
-        "Powraca ci s�uch.",
+        "Czar ten sprawia, ze wskazana osoba na jakis czas traci sluch.",
         0,
         0,
         0,
         0,
         0,
-        "Zosta�<&e�/a�/o�> og�uszon<&y/a/e>",
-        "Powoduje g�uchote"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
-    { //170
+    {
         "mend",
-        { 13, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_mending,
+        "Czar ten naprawia magicznie przedmiot, na ktory zostal rzucony. Przedmiot odzyskuje cala swoja wytrzymalosc.",
         0,
         0,
         0,
@@ -3173,12 +2535,12 @@
         0,
         0,
         0,
+        0
     },
 
     {
         "hold undead",
-        {  13, 0, 32, 32, 32, 16, 32, 32, 20, 32, 32 },
-        spell_hold_undead,
+        "Czar ten na krotka chwile calkowicie unieruchamia istote nieumarla.",
         0,
         0,
         0,
@@ -3186,7 +2548,8 @@
         0,
         0,
         0,
-        "Parali� powoli ust�puje.",
+        0,
+        0,
         0,
         0,
         0,
@@ -3196,46 +2559,30 @@
 
     {
         "fear",
-        { 32, 8, 32, 32, 32, 32, 32, 32, 15, 32, 32 },
-        spell_fear,
-        0,
-        0,
-        &gsn_fear,
-        0,
-        0,
-        0,
-        0,
-        "Przestajesz si� panicznie wszystkiego ba�.",
+        "Czar ten dziala na podswiadomosc ofiary w ten sposob, ze budzi w jej umysle najgorsze leki i koszmary. Ofiara bedzie probowala uciec przy pierwszej nadarzajacej sie okazji.",
         0,
         0,
         0,
         0,
         0,
-        "Zosta�<&e�/a�/o�> zara�on<&y/a/e> panicznym strachem",
-        "Powoduje paniczny strach"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
-    {
-        "charge",
-        { 32, 32, 32,  32, 32, 32, 8, 32, 32, 32, 32  },
-        spell_0,
-        0,
-        0,
-        &gsn_charge,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
+
 
     {
         "darkness",
-        { 10, 32, 32, 32, 32 , 32, 32, 32, 32, 32, 32 },
-        spell_darkness,
-        TAR_OBJ_IGNORE,
+        "Czar opracowany przez nekromantow. Sluzy on do przywolania niezwyklej ciemnosci, ktorej nie rozswietli zadna latarnia.",
         0,
         0,
         0,
@@ -3247,94 +2594,95 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWMAGNETA
+        0,
+        0,
+        0
     },
 
     {
         "resist acid",
-        { 13, 0, 32, 32, 32, 0, 32, 32, 32, 32, 32 },
-        spell_resist_acid,
-        0,
-        0,
-        &gsn_resist_acid,
-        0,
-        0,
-        0,
-        0,
-        "Twoje magiczne pole, chroni�ce przed kwasem zanika.",
+        "Uzywajac tego czaru mozesz tak zmodyfikowac odczyn skory ofiary, aby w polaczeniu z kwasami stawal sie on obojetny. Dzieki temu zwiekszasz odpornosc ofiary na ataki kwasem.",
         0,
         0,
         0,
         0,
         0,
-        "Jeste� cz��ciowo chronion<&y/a/e> przed kwasem",
-        "Dodaje efekt cz��ciowej ochrony przed kwasem"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
 
     {
         "resist normal weapon",
-        { 13, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_resist_normal_weapon,
-        0,
-        0,
-        &gsn_resist_normal_weapon,
-        0,
-        0,
-        0,
-        0,
-        "Twoje magiczne pole, chroni�ce przed zwyk�� broni� zanika.",
+        "Bardzo silny ochronny czar personalny, zapewniajacy calkowita odpornosc na ciosy niemagiczna bronia, ktora po prostu odbija sie od ciala maga.",
+        "Bron +0",
         0,
         0,
         0,
         0,
         0,
-        "Jeste� ca�kowicie chronion<&y/a/e> przed atakami zwyk�� broni�",
-        "Dodaje efekt ca�kowitej ochrony przed atakami zwyk�� broni�"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
     {
         "resist magic weapon",
-        { 22, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_resist_magic_weapon,
-        0,
-        0,
-        &gsn_resist_magic_weapon,
-        0,
-        0,
-        0,
-        0,
-        "Twoje magiczne pole, chroni�ce przed magiczn� broni� zanika.",
+        "Bardzo silny ochronny czar personalny, zapewniajacy calkowita odpornosc na ciosy magicznym orezem.",
+        "Bron +2 +3",
         0,
         0,
         0,
         0,
         0,
-        "Jeste� ca�kowicie chronion<&y/a/e> przed atakami magiczn� broni�",
-        "Dodaje efekt ca�kowitej ochrony przed atakami magiczn� broni�"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
     {
         "resist elements",
-        { 16, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_resist_elements,
-        0,
-        0,
-        &gsn_resist_elements,
-        0,
-        0,
-        0,
-        0,
-        "Twoje magiczne pole, chroni�ce przed �ywio�ami zanika.",
+        "Dodatkowa ochrona przed zywiolami tj. kwas, zimno, ogien, elektrycznosc.",
         0,
         0,
         0,
         0,
         0,
-        "Jeste� cz��ciowo chronion<&y/a/e> przed �ywio�ami",
-        "Dodaje efekt cz��ciowej ochrony przed �ywio�ami"
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
     },
     {
         "lesser magic resist",
-        {  13,  32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_lesser_magic_resist,
+        "Slabsza wersja czaru resist magic.",
         0,
         0,
         0,
@@ -3345,13 +2693,14 @@
         0,
         0,
         0,
-        Odrzucanie|SpellSpec,
-        0,,
         0,
-        "Jeste� lekko chronion<&y/a/e> przed magi�",
-        "Dodaje efekt lekkiej ochrony przed magi�"
+        0,
+        0,
+        0,
+        0,
+        0
     },
-    { //180
+    {
         "fireshield",
         { 13, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
         spell_fireshield,
@@ -3474,89 +2823,6 @@
     },
 
     {
-        "lore self",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_lore,
-        0,
-        0,
-        0,
-        0,0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    },
-    {
-        "twohanded weapon",
-        { 1, 1, 32, 1, 1, 1, 1, 32, 1, 1, 1 },
-        spell_0,
-        0,
-        0,
-        &gsn_two_hands_fighting,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "short-sword",
-        { 32, 1, 1,  1, 1, 1, 1, 32, 1, 1, 32  },
-        spell_0,
-        0,
-        0,
-        &gsn_shortsword,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "sharpen",
-        { 32, 32, 32, 32, 32, 32, 8, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_sharpen,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    { //190
-        "recuperate",
-        { 32, 32, 32, 32, 32, 32, 8, 32, 32, 32, 32  },
-        spell_0,
-        0,
-        0,
-        &gsn_recuperate,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Jeste� w trakcie uzdrawiaj�cego letargu",
-        "Dodaje efekt uzdrawiaj�cego letargu"
-    },
-    {
         "mend",
         { 32, 32, 32, 32, 32, 32, 0, 32, 32, 32, 32  },
         spell_0,
@@ -3569,7 +2835,7 @@
         0,
         0,
         0,
-        FALSE
+        0
     },
     {
         "bladethirst",
@@ -3845,72 +3111,10 @@
         "Jestes ca�kowicie chronion<&y/a/e> przed s�abymi i �rednimi zakl�ciami",
         "Dodaje efekt ca�kowitej ochrony przed s�abymi i �rednimi zakl�ciami"
     },
-    {
-        "wardance",
-        { 32, 32, 32, 8, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_wardance,
-        0,
-        0,
-        0,
-        0,
-        "Ogarnia ci� zm�czenie, nie jeste� w stanie d�u�ej ta�czy�.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Jeste� w trakcie wojennego ta�ca",
-        "Dodaje efekt ta�ca wojennego"
-    },
 
-    {
-        "playerdeath",
-        { 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41  },
-        spell_0,
-        0,
-        0,
-        &gsn_playerdeath,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "playerdeath penalty",
-        { 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41 },
-        spell_0,
-        0,
-        0,
-        &gsn_playerdeathpenalty,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "stun",
-        { 32, 0, 32, 10, 10, 32, 32, 32, 32, 32, 14 },
-        spell_0,
-        0,
-        0,
-        &gsn_stun,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
+
+
+
     { //210
         "flare",
         {  32, 32, 32, 32, 32, 4, 32, 32, 32, 32, 32  },
@@ -3930,37 +3134,7 @@
         0,
         "Zosta�<&e�/a�/o�> lekko o�lepion<&y/a/e> i oszo�omion<&y/a/e> magiczn� flar�"
     },
-    {
-        "dualwield style",
-        { 32, 32, 32, 0, 0, 32, 16, 32, 18, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_two_weapon_fighting,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
 
-    {
-        "twohanded weapon style",
-        { 32, 32, 32, 10, 11, 32, 0, 32, 18, 7, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_twohander_fighting,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
     {
         "charm monster",
         { 16, 32, 32, 32, 32, 32, 32, 32, 20, 32, 32 },
@@ -3995,7 +3169,7 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWGREEN,
+        0,
         0,
         "Mo�esz rozumie� r��ne j�zyki",
         "Umo�liwia rozumienie r�znych j�zyk�w"
@@ -4092,7 +3266,7 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWGREEN,
+        0,
         0
     },
     { //220
@@ -4110,90 +3284,13 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWGREEN,
+        0,
         0
     },
 
-    {
-        "bandage",
-        {  1,  1,  1,  1,  1,  1,  1, 1, 1, 1, 1 },
-        spell_0,
-        0,
-        POS_SLEEPING,
-        &gsn_bandage,
-        0,
-        0,
-        0,
-        0,
-        "Zrywasz banda�e.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Jeste� obanda�owan<&y/a/e>"
-    },
 
-    {
-        "detect traps",
-        {  32,  32,  1,  32,  32,  32,  32, 32, 10, 32, 32  },
-        spell_0,
-        0,
-        POS_SLEEPING,
-        &gsn_detect_traps,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "disarm traps",
-        {  32,  32,  1, 32,  32,  32,  32, 32, 10, 32, 32  },
-        spell_0,
-        0,
-        POS_SLEEPING,
-        &gsn_disarm_traps,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "target",
-        {  32,  32, 32, 8,  0,  32,  32, 8, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_target,
-        0,
-        0,
-        6,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "smite evil",
-        {  32,  32,  32,  32,  4,  32,  32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_smite,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
+
+
     {
         "lesser restoration",
         { 32, 0, 32, 32, 29, 32, 32, 32, 32, 32, 32  },
@@ -4328,125 +3425,9 @@
         0
     },
 
-    {
-        "odwodnienie",
-        { 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41 },
-        spell_0,
-        0,
-        0,
-        &gsn_dehydration,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "{RTw�j organizm jest odwodniony!{X"
-    },
 
-    {
-        "zaglodzenie",
-        { 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41 },
-        spell_0,
-        0,
-        0,
-        &gsn_malnutrition,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "{RTw�j organizm jest na skraju wyczerpania z g�odu!{X"
-    },
-    {
-        "turn undead",
-        {  32,  1,  32,  32,  3,  32,  32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_turn,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "dagger mastery",
-        { 32, 32, 18, 20, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_dagger_mastery,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "power strike",
-        { 32, 32, 32, 32, 32, 32, 0, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_power_strike,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "critical strike",
-        { 32, 32, 32,  32, 32, 32, 20, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_critical_strike,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "damage reduction",
-        { 32, 32, 32, 32, 32, 32, 0, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_damage_reduction,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Jeste� pod wp�ywem sporej dawki adrenaliny redukuj�cej obra�enia",
-        "Dodaje efekt redukcji obra�e�"
-    },
+
+
     { //240
         "sunscorch",
         { 32, 32, 32, 32, 32, 8, 32, 32, 32, 32, 32  },
@@ -4487,24 +3468,7 @@
         "Zosta�<&e�/a�/o�> os�abion<&y/a/e> przez otaczaj�c� ci� srebrzyst� aur�",
         "Powoduje os�abienie"
     },
-    {
-        "produce fire",
-        { 32, 32, 32, 32, 32, 4, 32, 32, 32, 32, 32  },
-        spell_produce_fire,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "produce fire",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    },
+
     {
         "bane",
         { 32,  1, 32, 32, 13, 32, 32, 32, 32, 32, 32  },
@@ -4601,144 +3565,11 @@
         0,
         0
     },
-    {
-        "charm animal",
-        { 32, 32, 32, 32, 32, 8, 32, 32, 10, 32, 32 },
-        spell_charm_animal,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Czujesz, �e odsyskujesz swoj� woln� wol�.",
-        0,
-        0,
-        0,
-        0,
-        0
-    },
-    {
-        "adrenaline rush",
-        { 32, 32, 32, 32, 32, 32, 32, 0, 32, 32, 32  },
-        spell_0,
-        0,
-        0,
-        &gsn_rush,
-        0,
-        0,
-        0,
-        0,
-        "Tw�j puls powoli si� uspokaja",
-        0,
-        FALSE
-    },
-    { //250
-        "unarmed strike",
-        { 32, 32, 32, 32, 32, 32, 32, 1, 32, 32, 32},
-        spell_0,
-        0,
-        0,
-        &gsn_unarmed_strike,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "healing hands",
-        { 32, 32, 32, 32, 32, 32, 32, 8, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_healing_hands,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "flurry of blows",
-        { 32, 32, 32, 32, 32, 32, 32, 4, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_flurry_of_blows,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "monk dodge",
-        { 32, 32, 32, 32, 32, 32, 32, 1, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_monk_dodge,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "concentration",
-        { 32, 32, 32, 32, 32, 32, 32, 6, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_concentration,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "knockdown",
-        { 32, 32, 32, 32, 32, 32, 32, 0, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_knockdown,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "stunning fist",
-        { 32, 32, 32, 32, 32, 32, 32, 4, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_knockdown,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
+
+
+
+
+
     {
         "blade barrier",
         { 32, 32, 32, 32, 32, 20, 32, 32, 32, 32, 32  },
@@ -4815,21 +3646,7 @@
         0,
         0,
     },
-    {
-        "herbs knowledge",
-        {  1,  1,  1,  1,  1,  1,  1,  1,  1,  1,  1 },
-        spell_0,
-        0,
-        0,
-        &gsn_herbs_knowledge,
-        0,
-        0,
-        20,
-        0,
-        0,
-        0,
-        FALSE
-    },
+
     {
         "freezing rain",
         { 32, 32, 32, 32, 32, 20, 32, 32, 32, 32, 32  },
@@ -5059,21 +3876,7 @@
         0
     },
 
-    {
-        "mace mastery",
-        { 32, 32, 32, 20, 20, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_mace_mastery,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
+
 
     {
         "hold evil",
@@ -5171,24 +3974,7 @@
         0,
         0
     },
-    { //280
-        "devour",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_0,
-        0,
-        0,
-        &gsn_devour,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-    },
+
     {
         "orb of entropy",
         { 22, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
@@ -5227,21 +4013,7 @@
         "Jeste� nadzwyczajnie pobudzon<&y/a/e>",
         "Dodaje nadzwyczajn� moc"
     },
-    {
-        "mighty blow",
-        { 32, 32, 32,  32, 32, 32, 4, 32, 32, 32, 8 },
-        spell_0,
-        0,
-        0,
-        &gsn_mighty_blow,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
+
     {
         "frost rift",
         {  32,  32, 32, 32, 32, 1, 32, 32, 32, 32, 32 },
@@ -5314,7 +4086,7 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWGREEN,
+        0,
         0,
     },
 
@@ -5446,21 +4218,7 @@
         "Obni�a odporno�� na magi�"
     },
 
-    {
-        "trapper",
-        {  1,  1,  1,  1,  1,  1,  1, 1, 1, 1, 1 },
-        spell_0,
-        0,
-        0,
-        &gsn_skin,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
+
 
     {
         "force missiles",
@@ -5612,7 +4370,7 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWMAGNETA
+        0
     },
 
     {
@@ -5631,7 +4389,7 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWMAGNETA
+        0
     },
 
     {
@@ -5908,7 +4666,7 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWMAGNETA
+        0
     },
 
     {
@@ -5930,37 +4688,6 @@
         0
     },
 
-    {
-        "crush",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_crush,
-        0,
-        0,
-        0,
-        "druzgocz�cy cios",
-        "!druzgotanie!",
-        0,
-        TRUE
-    },
-
-    { //320
-        "tail",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_tail,
-        0,
-        0,
-        0,
-        "smagni�cie ogonem",
-        "!smagni�cie!",
-        0,
-        TRUE
-    },
 
     {
         "soul trap",
@@ -5979,22 +4706,6 @@
         Nekromancja|SpellSpec,
         0,
         0
-    },
-
-    {
-        "garhal symbiosis",
-        { 32, 32, 32,  32, 32, 0, 32, 32, 32, 32, 32  },
-        spell_0,
-        0,
-        0,
-        &gsn_garhal,
-        0,
-        0,
-        0,
-        "nasienie garhal",
-        0,
-        0,
-        FALSE
     },
 
     {
@@ -6132,28 +4843,6 @@
         "Przemienia d�onie w ostrza"
     },
 
-    { //330
-      // Tener: wylaczam bo zbugowane [20080516]
-        "steel scarfskin",
-        {  41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41 },
-        spell_steel_scarfskin,
-        0,
-        0,
-        &gsn_steel_scarfskin,
-        0,
-        0,
-        0,
-        "stalowy nask�rek",
-        "Tw�j nask�rek powraca do naturalnej postaci.",
-        "Nask�rek $n powraca do naturalnej postaci.",
-        0,
-        0,
-        0,
-        0,
-        "Tw�j nask�rek przemieni� si� w stal",
-        "Przemienia nask�rek w stal"
-    },
-
     {
         "beast claws",
         {  32, 32, 32, 32, 32, 0, 32, 32, 32, 32, 32 },
@@ -6169,31 +4858,10 @@
         "D�onie $n powracaj� do naturalnego stanu.",
         0,
         0,
-        SPELL_COLOUR_LOWGREEN,
+        0,
         0,
         "Twe d�onie zosta�y przemienione w szpony",
         "Przemienia d�onie w szpony"
-    },
-
-    {
-        "energy strike",
-        {  22, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_energy_strike,
-        0,
-        0,
-        &gsn_energy_strike,
-        0,
-        0,
-        0,
-        "atak energi�",
-        "Odzyskujesz utracone si�y witalne.",
-        "$n odzyskuje utracone si�y witalne.",
-        0,
-        Inwokacje|SpellSpec,
-        0,
-        0,
-        "Utraci�<&e�/a�/o�> cz��� si� witalnych",
-        "Uniemo�liwia rzuci� kilka energy strik�w z rz�du"
     },
 
     {
@@ -6213,27 +4881,6 @@
         Poznanie|SpellSpec,
         0,
         0
-    },
-
-    {
-        "listen",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32},
-        spell_0,
-        0,
-        POS_RESTING,
-        &gsn_listen,
-        0,
-        0,
-        0,
-        0,
-        "Tracisz koncentracj� i przestajesz ws�uchiwa� si� w otoczenie.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Przys�uchujesz si� otaczaj�cym ci� d�wi�kom",
-        "Szuka ukrytych"
     },
 
     {
@@ -6275,222 +4922,8 @@
         "Wykorzysta�<&e�/a�/o�> �ask� swego boga."
     },
 
-    {
-        "persuasion",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 18, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_persuasion,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-    },
 
-    {
-        "ocarina",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 1, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_ocarina,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
 
-    {
-        "flute",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 1 , 32, 32},
-        spell_0,
-        0,
-        0,
-        &gsn_flute,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    { //340
-        "lute",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 1, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_lute,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "harp",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 10, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_harp,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "mandolin",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 10, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_mandolin,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "piano",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 10, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_piano,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "music",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 1, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_music,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "trade",
-        {  32, 32, 0, 32, 32, 32, 32, 32, 8, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_trade,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "lore intuition",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 1, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_lore_intuition,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "alter instrument",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 5, 32, 32 },
-        spell_alter_instrument,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-    },
-
-    {
-        "enchant instrument",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 20, 32, 32 },
-        spell_enchant_instrument,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-    },
-
-    {
-        "tune",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 7, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_tune,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
     { //350
         "wind charger",
         {  32, 32, 32, 32, 32, 16, 32, 32, 32, 32, 32 },
@@ -6828,8 +5261,8 @@
     },
     {
         "mantle",
-        { 19, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_mantle,
+        "Bardzo silny ochronny czar personalny, zapewniajacy calkowita odpornosc na niemagiczny oraz a takze niektore bronie magiczne.",
+        "Bron +0 +1",
         0,
         0,
         0,
@@ -6837,14 +5270,14 @@
         0,
         0,
         0,
-        "Otaczaj�ca ci� magiczna opo�cza zanika.",
         0,
         0,
-        Odrzucanie|SpellSpec,
         0,
         0,
-        "Otacza ci� magiczna opo�cza",
-        "Otacza magiczn� opo�cz�"
+        0,
+        0,
+        0,
+        0
     },
 
     {
@@ -6862,7 +5295,7 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWGREEN,
+        0,
         0
     },
 
@@ -6881,7 +5314,7 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWGREEN,
+        0,
         0
     },
 
@@ -7039,26 +5472,6 @@
     },
 
     {
-        "spalenie",
-        { 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41 },
-        spell_0,
-        0,
-        0,
-        &gsn_on_smoke,
-        0,
-        0,
-        0,
-        0,
-        "Ju� nie czujesz si� tak dziwnie lekko, widocznie fajkowe ziele przesta�o dzia�a�.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "{DJeste� upalony.{X"
-    },
-
-    {
         "loyalty",
         { 19, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
         spell_loyalty,
@@ -7115,158 +5528,6 @@
         0,
         "Jeste� nieco zagubion<&y/a/e> w przestrzeni",
         "Powoduje zaburzenia postrzegania kierunk�w"
-    },
-
-    {
-        "flail mastery",
-        { 32, 32, 32, 20, 20, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_flail_mastery,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "sword mastery",
-        { 32, 32, 32, 20, 20, 32, 32, 32, 32, 20, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_sword_mastery,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "axe mastery",
-        { 32, 32, 32, 20, 32, 32, 32, 32, 32, 20, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_axe_mastery,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "whip mastery",
-        { 32, 32, 32, 20, 32, 32, 32, 32, 32, 20, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_whip_mastery,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "short-sword mastery",
-        { 32, 32, 32, 20, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_shortsword_mastery,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "polearm mastery",
-        { 32, 32, 32, 20, 32, 32, 32, 32, 32, 20, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_polearm_mastery,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "staff mastery",
-        { 32, 32, 32, 20, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_staff_mastery,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    /*
-     * 2008-01-03
-     * Gurthg: wywalam, dost�p tylko dla LEVEL_IMMORTAL up wi�c bezuzyteczny
-     */
-    {
-        "nondetection",
-        { LEVEL_IMMORTAL, LEVEL_IMMORTAL, LEVEL_IMMORTAL, LEVEL_IMMORTAL, LEVEL_IMMORTAL, LEVEL_IMMORTAL, LEVEL_IMMORTAL, LEVEL_IMMORTAL, LEVEL_IMMORTAL, LEVEL_IMMORTAL, LEVEL_IMMORTAL },
-        spell_nondetection,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "niewykrywalno��",
-        "Nie jeste� ju� niewykrywaln<&y/a/e> dla prostych czar�w Poznania.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Jeste� niewidoczn<&y/a/e> dla prostych czar�w Poznania"
-    },
-
-    { //390
-        "spear mastery",
-        { 32, 32, 32, 20, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_spear_mastery,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
     },
 
     {
@@ -7349,21 +5610,6 @@
         0,
     },
 
-    {
-        "gsn_yell",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_yell,
-        0,
-        0,
-        0,
-        0,
-        "Znowu mo�esz krzycze�.",
-        0,
-        FALSE
-    },
 
     {
         "psionic blast",
@@ -7404,43 +5650,7 @@
         "Tw�j umys� jest oddzielony od cia�a."
     },
 
-    {
-        "wood master",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_wood_master,
-        0,
-        0,
-        &gsn_wood_master,
-        0,
-        0,
-        0,
-        "master of wood",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    },
 
-    {
-        "stone master",
-        { 32, 32, 32, 32, 32, 28, 32, 32, 32, 32, 32 },
-        spell_stone_master,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "master of stone",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    },
 
     { //400
         "healing ring",
@@ -7579,7 +5789,7 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWMAGNETA
+        0
     },
 
     {
@@ -7640,7 +5850,7 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWMAGNETA
+        0
     },
 
     { //410
@@ -7659,29 +5869,10 @@
         0,
         Poznanie|SpellSpec,
         0,
-        SPELL_COLOUR_LOWMAGNETA
+        0
     },
 
-    {
-        "singing ruff",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_singing_ruff,
-        0,
-        0,
-        &gsn_singing_ruff,
-        0,
-        0,
-        0,
-        0,
-        "Tw�j wzrok ju� nie jest taki przenikliwy.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Tw�j wzrok jest nadzwyczajnie przenikliwy",
-        "Pozwala widzie� przez zamkni�te drzwi"
-    },
+
 
     {
         "shapeshift",
@@ -7880,233 +6071,11 @@
         "Twe d�onie otacza magiczna aura",
     },
 
-    {
-        "mirrorfall",
-        { 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41  },
-        spell_0,
-        0,
-        0,
-        &gsn_mirrorfall,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
 
-    {
-        "torment",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 1, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_torment,
-        0,
-        0,
-        0,
-        "promie� negatywnej energii",
-        "Czujesz przepe�niaj�c� ci� moc. Znowu jeste� w stanie zes�a� na wrog�w chmur� b�lu.",
-        0,
-        FALSE
-    },
 
-    {
-        "overwhelming strike",
-        { 32, 32, 32, 16, 32, 32, 32, 32, 32, 19, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_overwhelming_strike,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "cleave",
-        { 32, 32, 32, 9, 32, 32, 32, 32, 32, 8, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_cleave,
-        0,
-        0,
-        0,
-        "zamaszyste ci�cie",
-        0,
-        0,
-        FALSE
-    },
 
-    {
-        "demon aura",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 9, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_demon_aura,
-        0,
-        0,
-        0,
-        "demoniczna aura",
-        "Otaczaj�ca ci� demoniczna aura zanika.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Jeste� otoczon<&y/a/e> demoniczn� aur�",
-        "Dodaje efekt demonicznej aury"
-    },
 
-    {
-        "vertical slash",
-        { 32, 32, 32, 14, 32, 32, 32, 32, 32, 15, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_vertical_slash,
-        0,
-        0,
-        0,
-        "precyzyjne ci�cie",
-        0,
-        0,
-        FALSE
-    },
-    {
-        "damn weapon",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 11, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_damn_weapon,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "damn armor",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 11, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_damn_armor,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    { //430
-        "smite good",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 4, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_smite_good,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "call avatar",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 2, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_call_avatar,
-        0,
-        0,
-        0,
-        "przyzywanie awatara sfery negatywnej",
-        "Twoja wi�� z awatarem sfery negatywnej w�a�nie si� odnowi�a.",
-        0,
-        FALSE
-    },
 
-    {
-        "hustle",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 5, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_hustle,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "control undead",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 3, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_control_undead,
-        0,
-        0,
-        36,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "undead resemblance",
-        { 1, 32, 32, 32, 32, 32, 32, 32, 32, 1, 32 },
-        spell_0,
-        0,
-        POS_DEAD,
-        &gsn_undead_resemblance,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-
-    {
-        "bleeding wound",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        POS_DEAD,
-        &gsn_bleeding_wound,
-        0,
-        0,
-        0,
-        0,
-        "Twoje rany przestaj� krwawi�.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "{RTwoje rany obficie krwawi�, hamuj�c leczenie!{x"
-    },
 
     {
         "mental barrier",
@@ -8128,44 +6097,8 @@
         "Mentalna bariera uniemo�liwia ci rzucanie zakl�cia",
         "Ogranicza magiczne moce"
     },
-    {
-        "basic shapeshift",
-        { 32, 32, 32, 32, 32, 4, 32, 32, 32, 32, 32  },
-        spell_0,
-        0,
-        POS_DEAD,
-        &gsn_basic_shapeshift,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "shapeshift"
-    },
-    {
-        "healing touch",
-        {  32,  18, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        POS_RESTING,
-        &gsn_healing_touch,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
+
+
     {
         "defense curl",
         { 4, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
@@ -8297,7 +6230,7 @@
         0,
         "Nadszed� ju� czas na kolejn� modlitw�.",
         0,
-        FALSE
+        0
     },
 
     {
@@ -8313,7 +6246,7 @@
         0,
         0,
         0,
-        FALSE
+        0
     },
 
     {
@@ -8337,42 +6270,6 @@
         "Otacza paladyna �wi�t� aur�"
     },
 
-    {
-        "sacre group",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, },
-        spell_0,
-        0,
-        0,
-        &gsn_sacred_group,
-        0,
-        0,
-        0,
-        "po�wiecenie grupy",
-        "Twoja pewno�� siebie znika",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Czujesz w sobie niezmiern� si�� i odwag�",
-        "Wzmacnia grup� paladyna"
-    },
-
-    {
-        "deeds pool",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_deeds_pool,
-        0,
-        0,
-        0,
-        0,
-        "Twoje uczynki zostaj� zapomniane!",
-        0,
-        FALSE
-    },
 
     { //450
         "holy pool",
@@ -8387,7 +6284,7 @@
         0,
         "Tracisz kontakt ze swoim bogiem!",
         0,
-        FALSE
+        0
     },
     {
         "lore undead",
@@ -8451,100 +6348,10 @@
         "Dodaje efekt bariery energii"
     },
 
-    {
-        "bleed",
-        { 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41 },
-        spell_0,
-        0,
-        POS_DEAD,
-        &gsn_bleed,
-        0,
-        0,
-        0,
-        0,
-        "Odzyskujesz sw� sprawno��.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "{RJeste� okaleczon<&y/a/e>!{x"
-    },
 
-    {
-        "thigh_jab",
-        { 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41 },
-        spell_0,
-        0,
-        POS_DEAD,
-        &gsn_thigh_jab,
-        0,
-        0,
-        0,
-        0,
-        "Rana w udzie powoli zaczyna si� zasklepia�.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "{RG��boka rana w udzie spowalnia twe ruchy!{x"
-    },
 
-    {
-        "sing",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 1, 32, 32 },
-        spell_0,
-        0,
-        POS_DEAD,
-        &gsn_sing,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-    },
 
-    {
-        "noob_killer",
-        { 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41 },
-        spell_0,
-        0,
-        0,
-        &gsn_noob_killer,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    {
-        "weapon_wrench",
-        { 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41 },
-        spell_0,
-        0,
-        0,
-        &gsn_weapon_wrench,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-    },
+
 
     {
         "bonelace",
@@ -8724,25 +6531,7 @@
         "Jestes skupion<&y/a/e>",
         "Pozwala lepiej wykorzystywa� mo�liwo�ci ruchu"
     },
-    {
-        "glorious_impale",
-        { 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41 },
-        spell_0,
-        0,
-        0,
-        &gsn_glorious_impale,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-    },
+
     {
         "fury of the wild",
         { 32, 32, 32, 32, 32, 1*32, 32, 32, 32, 32, 32 },
@@ -9256,7 +7045,7 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWGREEN,
+        0,
         0
     },
 
@@ -9275,7 +7064,7 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWGREEN,
+        0,
         0
     },
 
@@ -9294,7 +7083,7 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWGREEN,
+        0,
         0,
         0,
         0,
@@ -9315,7 +7104,7 @@
         0,
         0,
         0,
-        SPELL_COLOUR_LOWGREEN,
+        0,
         0,
         0,
         0,
@@ -9508,442 +7297,9 @@
         0,
         0,
     },
-    { //507
-        "mining",
-        { 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 },
-        spell_0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    { //508
-        "gsn_art_destroy",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_art_destroy,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    { //509
-        "fire breath",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_fire_breath,
-        SAVE_BREATH,
-        0,
-        0,
-        "zianie ogniem",
-        "!zianie ogniem!",
-        0,
-        TRUE
-    },
-    { //510
-        "frost breath",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_frost_breath,
-        SAVE_BREATH,
-        0,
-        0,
-        "zianie lodem",
-        "!zianie lodem!",
-        0,
-        TRUE
-    },
-    { //511
-        "acid breath",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_acid_breath,
-        SAVE_BREATH,
-        0,
-        0,
-        "zianie kwasem",
-        "!zianie kwasem!",
-        0,
-        TRUE
-    },
-    { //512
-        "lightning breath",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_lightning_breath,
-        SAVE_BREATH,
-        0,
-        0,
-        "zianie piorunami",
-        "!zianie piorunami!",
-        0,
-        TRUE
-    },
-    { //513
-        "slam",
-        { 32, 32, 32, 32, 32, 32, 10, 32, 32, 5, 32 },
-        spell_0,
-        0,
-        0,
-        &gsn_slam,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-    },
-    { //514
-        "invoke spirit",
-        { 32, 32, 32,  32, 32, 32, 32, 32, 32, 32, 10 },
-        spell_0,
-        0,
-        0,
-        &gsn_invoke_spirit,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    { //515
-        "spirit of vision",
-        {  32,  32, 32, 32, 32, 32, 32, 32, 32, 32, 10 },
-        spell_spirit_of_vision,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Tw�j wzrok wraca do normy.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Mo�esz widzie� w ciemno�ciach",
-        "Umo�liwia widzenie w ciemno�ciach"
-    },
-    { //516
-        "subdue spirits",
-        {  32,  32, 32, 32, 32, 32, 32, 32, 32, 32, 10 },
-        spell_subdue_spirits,
-        0,
-        0,
-        &gsn_subdue_spirits,
-        0,
-        0,
-        0,
-        0,
-        "Otaczaj�ce ci� sylwetki znikaj�.",
-        0,
-        0,
-        0,
-        0,
-        0,,
-        "Posiadasz przychylno�� duch�w",
-        "Przywo�uje b�ogos�awie�stwo duch�w"
-    },
-    { //517
-        "spirit walk",
-        {  32,  32, 32, 32, 32, 32, 32, 32, 32, 32, 10 },
-        spell_spirit_walk,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Znowu zaczynasz zostawia� �lady.",
-        0,
-        0,
-        0,
-        0,
-        0,,
-        "Nie zostawiasz �lad�w",
-        "Duchy zacieraj� twoje �lady"
-    },
-    { //518
-        "healing salve",
-        { 32,  32, 32, 32, 32, 32, 32, 32, 32, 32, 10  },
-        spell_healing_salve,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Twoje rany przestaj� szybciej si� goi�.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Twoje rany zabli�niaj� si� szybciej",
-        "Dodaje efekt szybszego zabli�niania si� ran"
-    },
-    { //519
-        "seal of weakness",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 10 },
-        spell_seal_of_weakness,
-        0,
-        0,
-        &gsn_seal_of_weakness,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Zosta�<&e�/a�/o�> os�abion<&y/a/e>",
-        0,
-    },
-    { //520
-        "ancestors wisdom",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 25 },
-        spell_ancestors_wisdom,
-        0,
-        0,
-        &gsn_ancestors_wisdom,
-        0,
-        0,
-        0,
-        0,
-        "Duchy przodk�w ci� opuszczaj�.",
-        0,
-        0,
-        0,
-        0,,
-        0,,
-        "Duchy przodk�w szepcz� ci s�owa zapomnianych m�dro�ci",
-        0,
-    },
-    { //521
-        "ancestors protection",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 25 },
-        spell_ancestors_protection,
-        0,
-        0,
-        &gsn_ancestors_protection,
-        0,
-        0,
-        0,
-        0,
-        "Duchy przodk�w ci� opuszczaj�.",
-        0,
-        0,
-        0,
-        0,,
-        0,,
-        "Duchy przodk�w ochraniaj� ci� sw� moc�",
-        0,
-    },
-    { //522
-        "ancestors favor",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 25 },
-        spell_ancestors_favor,
-        0,
-        0,
-        &gsn_ancestors_favor,
-        0,
-        0,
-        0,
-        0,
-        "Duchy przodk�w ci� opuszczaj�.",
-        0,
-        0,
-        0,
-        0,,
-        0,,
-        "Duchy przodk�w pozwalaj� ci lepiej pos�ugiwa� si� �yciodajn� energi�",
-        0,
-    },
-    { //523
-        "ancestors vision",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 25 },
-        spell_ancestors_vision,
-        0,
-        0,
-        &gsn_ancestors_vision,
-        0,
-        0,
-        0,
-        0,
-        "Duchy przodk�w ci� opuszczaj�.",
-        0,
-        0,
-        0,
-        0,,
-        0,,
-        "Duchy przodk�w pozwalaj� ci widzie� to co ukryte i niewidoczne",
-        0,
-    },
-    { //524
-        "ancestors fury",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 25 },
-        spell_ancestors_fury,
-        0,
-        0,
-        &gsn_ancestors_fury,
-        0,
-        0,
-        0,
-        0,
-        "Duchy przodk�w ci� opuszczaj�.",
-        0,
-        0,
-        0,
-        0,,
-        0,,
-        "Duchy przodk�w pot�guj� moc twojej furii",
-        0,
-    },
-    { //525
-        "dismiss outsider",
-        { 7, 32, 32, 32, 32, 16, 32, 32, 32, 32, 15 },
-        spell_dismiss_outsider,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "odes�anie",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    },
-    { //526
-        "spirit shackle",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 20 },
-        spell_spirit_shackle,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Parali� powoli ust�puje.",
-        0,
-        0,
-        0,
-        0,
-        0
-    },
-    { //527
-        "spirit of life",
-        { 32,  32, 32, 32, 32, 32, 32, 32, 32, 32, 20  },
-        spell_spirit_of_life,
-        0,
-        0,
-        &gsn_spirit_of_life,
-        0,
-        0,
-        0,
-        0,
-        "Twoje rany przestaj� si� szybciej leczy�.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Lecznicza energia wype�nia twoje cia�o",
-        "Dodaje efekt szybszego zabli�niania si� ran"
-    },
-    { //528
-        "breath of life",
-        { 32,  32, 32, 32, 32, 32, 32, 32, 32, 32, 25  },
-        spell_breath_of_life,
-        0,
-        0,
-        &gsn_breath_of_life,
-        0,
-        0,
-        0,
-        0,
-        "Twoje rany przestaj� si� regenerowa�.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Pot��na lecznicza energia wype�nia twoje cz�onki",
-        "Dodaje efekt szybszego zabli�niania si� ran"
-    },
-    { //529
-        "spiritual guidance",
-        { 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 20 },
-        spell_spiritual_guidance,
-        0,
-        0,
-        &gsn_spiritual_guidance,
-        0,
-        0,
-        0,
-        0,
-        "Czujesz, �e opuszcza ci� opieka duch�w.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Duchy prowadz� twoj� r�ke w walce",
-        0,
-    },
-    { //530
-        "seal of doom",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 20 },
-        spell_seal_of_doom,
-        0,
-        0,
-        &gsn_seal_of_doom,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Zosta�e� pozbawiony jednego ze swych zmys��w",
-        0,
-    },
-    { //531
+  
+
+    {
         "lesser cure poison",
         { 32,  8, 32, 32, 17, 32, 32, 32, 32, 32, 32  },
         spell_lesser_cure_poison,
@@ -9979,109 +7335,8 @@
         0,
         0
     },
-    { //533
-        "sap",
-        { 32, 32,  1, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_0,
-        0,
-        0,
-        &gsn_sap,
-        0,
-        0,
-        PULSE_VIOLENCE,
-        "sap",
-        0,
-        0,
-        FALSE
-    },
-    { //534
-        "claw-weapons",
-        {  32,  32,  32,  32, 32, 1, 1, 32, 32, 32, 1 },
-        spell_0,
-        0,
-        0,
-        &gsn_claws,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    { //535
-        "sense fatigue",
-        {  32,  32, 32, 32, 32, 4, 32, 32, 32, 32, 32  },
-        spell_sense_fatigue,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Przestajesz wyczuwa� zm�czenie innych.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Potrafisz dostrzec wyczerpanie innych",
-        "Umo�liwia dostrzeganie wyczerpanie innych."
-    },
-    { //536
-        "playerquityes",
-        { 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41 },
-        spell_0,
-        0,
-        0,
-        &gsn_playerquityes,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
-    { //537
-        "playerdeathlearnpenalty",
-        { 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41 },
-        spell_0,
-        0,
-        0,
-        &gsn_playerdeathlearnpenalty,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        FALSE
-    },
 
-    { //538
-        "sense presence",
-        { 25, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_sense_presence,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        Poznanie|SpellSpec,
-        0,
-        0,
-        0,
-        0,
-    },
-
-    { //539
+    {
         "light nova",
         { 16, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
         spell_light_nova,
@@ -10100,105 +7355,6 @@
         0,
         "Zostales o�lepion<&y/a/e> magiczn� flar� �wiat�a",
         "Umo�liwia o�lepienie du�ej liczby wrog�w"
-    },
+    }
 
-    { //540
-        "scrying shield",
-        { 16, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
-        spell_scrying_shield,
-        0,
-        0,
-        &gsn_scrying_shield,
-        0,
-        0,
-        0,
-        0,
-        "Tarcza chroni�ca ci� przed magicznym wzrokiem znika.",
-        0,
-        0,
-        Odrzucanie|SpellSpecAndGeneral,
-        0,,
-        0,
-        "Jeste� chroniony przed magicznym wzrokiem",
-        "Chroni przed wizard eye"
-    },
-    { //541
-        "seal of atrocity",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 20 },
-        spell_seal_of_atrocity,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Pewno�� odp�yne�a z twoich r�k",
-        0,
-    },
-    { //542
-        "seal of despair",
-        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 20 },
-        spell_seal_of_despair,
-        0,
-        0,
-        &gsn_seal_of_despair,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        "Przestajesz widzie� ods�oni�te miejsca na ciele przeciwnik�w",
-        0,
-    },
-
-    { //543
-        "rampage",
-        { 41, 41, 41, 41, 41, 41, 41, 41, 41, 41, 41 },
-        spell_0,
-        0,
-        0,
-        &gsn_rampage,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-     },
-
-     {
-        "resurrection",
-        { 32, 0, 32, 32, 32, 32, 32, 32, 32, 32, 32  },
-        spell_resurrection,
-        TAR_OBJ_ROOM,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    },
 ]
