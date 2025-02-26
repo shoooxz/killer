@@ -1344,5 +1344,25 @@
                         0,
                         0,
                     },
+                    {
+                        "shapeshift",
+                        { 32, 32, 32, 32, 32, 8, 32, 32, 32, 32, 32 },
+                        spell_0,
+                        0,
+                        POS_RESTING,
+                        &gsn_shapeshift,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        "Jeste� poddan<&y/a/e> przemianie w zwierz�.",
+                        "Poddaje przemianie w zwierz�"
+                    }
 
 ]
