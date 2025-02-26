@@ -43,7 +43,7 @@ buff.basic = {
   ["holy weapon"] = 39,
   ["res magi weapon"] = 40,
   ["divine shield"] = 41,
-  ["pustak"] = 42,
+  ["divine power"] = 42,
 --  ["pustak"] = 43,
 }
 
@@ -56,6 +56,7 @@ buff.short = {
   "fireshield",
   "res magi weapon",
   "reflect spell",
+  "divine power",
 }
 
 function buff:masterAllowed(target)
