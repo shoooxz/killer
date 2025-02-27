@@ -1363,6 +1363,72 @@
                         0,
                         "Jeste� poddan<&y/a/e> przemianie w zwierz�.",
                         "Poddaje przemianie w zwierz�"
-                    }
+                    },
+                    {
+                        "holy prayer",
+                        {  32, 32, 32, 32, 1, 32, 32, 32, 32, 32, 32 },
+                        spell_0,
+                        0,
+                        0,
+                        &gsn_holy_prayer,
+                        0,
+                        0,
+                        0,
+                        0,
+                        "Nadszed� ju� czas na kolejn� modlitw�.",
+                        0,
+                        0
+                    },
+                    {
+                        "last prayer",
+                        {  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
+                        spell_0,
+                        0,
+                        0,
+                        &gsn_prayer_last,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0,
+                        0
+                    },
+
+                        {
+                            "sanctification",
+                            {  32, 32, 32, 32, 13, 32, 32, 32, 32, 32, 32 },
+                            spell_0,
+                            0,
+                            0,
+                            &gsn_sanctification,
+                            0,
+                            0,
+                            0,
+                            "u�wiecenie",
+                            "Otaczaj�ca ci� �wietlista aura migocze i zanika",
+                            "�wiat�o wype�niaj�ce $h przygasa i znika",
+                            0,
+                            0,
+                            0,
+                            0,
+                            "Jeste� otoczon<&y/a/e> �wietlist� aur�",
+                            "Otacza paladyna �wi�t� aur�"
+                        },
+                        {
+                            "holy pool",
+                            {  32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32 },
+                            spell_0,
+                            0,
+                            0,
+                            &gsn_holy_pool,
+                            0,
+                            0,
+                            0,
+                            0,
+                            "Tracisz kontakt ze swoim bogiem!",
+                            0,
+                            0
+                        }
 
 ]
