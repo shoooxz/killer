@@ -78,6 +78,8 @@ end
 function state:gmcpRoomPeople()
   return function()
     --expandAlias("lua gmcp.Char.Skills")
+    if not mapper then return false end
+    if not gmcp then return false end
     mapper:detectGMCP()
     top:setTime(gmcp.Mud)
 
@@ -91,7 +93,7 @@ function state:gmcpRoomPeople()
     local namingInc = 1
     local targetColor = {}
 
-    if not gmcp.Char.Group.members then return false end
+    if not gmcp.Char.Group then return false end
 
     for index, v in pairs(gmcp.Char.Group.members) do
       local obj = v
@@ -155,7 +157,9 @@ function state:gmcpRoomPeople()
     state:checkForAss(me)
 
     -- print all    me > mates > npc
-    state:printTeamMember(me)
+    if me then
+      state:printTeamMember(me)
+    end
     for _, v in pairs(state.team) do
       state:printTeamMember(v)
     end

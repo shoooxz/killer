@@ -35,7 +35,7 @@ function loadObjects(force)
         "scripts/learn",
         "scripts/buff",
         "scripts/exp/exp",
-        "scripts/exp/fort",
+        "scripts/exp/path",
         "mapper/core",
         "mapper/area",
         "mapper/helper",

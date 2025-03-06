@@ -195,6 +195,10 @@ function profile:onProfileLoaded()
 	footer:setFastSkillLabel(10, profile:get("s10"));
 end
 
+function profile:getName()
+	return self.name
+end
+
 function profile:init(name)
 	if not name then return false end
 	self.name = name

@@ -85,6 +85,10 @@ gag.spellTranslateFix = {
 	["FARCE BALT"] = "FORCE BOLT",
 	["MIRRAR IMAGE"] = "MIRROR IMAGE",
 	["HALD UNDEAD"] = "HOLD UNDEAD",
+	["CHAATIC SHACK"] = "CHAOTIC SHOCK",
+	["DIEINE SHIELD"] = "DIVINE SHIELD",
+	["AURA AF BATTLE LUST"] = "AURA OF BATTLE LUST",
+	["STANE SKIN"] = "STONE SKIN",
 }
 
 function gag:spellTransGetPart(str)
@@ -100,21 +104,28 @@ end
 
 function gag:spellTrans(who, str)
 	local out = ""
-	local safe = 1
-	while true do
-		safe = safe + 1
-		local part = self:spellTransGetPart(str)
-		out = out..part[1]
-		str = string.sub(str, #part[2]+1)
-		display(str)
-		if str == "" then break end
-		if safe == 30 then
-			printer:error("gag", "Spell translate")
-			break
+	-- jesli nie ma slowniku spelli
+  if not base:isInSpellDictionary(str) then
+		-- dekoduj spell
+		local safe = 1
+		while true do
+			safe = safe + 1
+			local part = self:spellTransGetPart(str)
+			out = out..part[1]
+			str = string.sub(str, #part[2]+1)
+			--display(str)
+			if str == "" then break end
+			if safe == 30 then
+				printer:error("gag", "Spell translate")
+				break
+			end
 		end
+		out = string.upper(out)
+	else
+		-- znasz juz ten spell
+		out = string.upper(str)
 	end
-	out = string.upper(out)
-	--deleteLine()
+	deleteLine()
 	echo("\n")
 	if self.spellTranslateFix[out] then -- out
 		cecho(who.." <tomato>"..self.spellTranslateFix[out])

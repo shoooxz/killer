@@ -1,4 +1,14 @@
 buff = buff or {}
+buff.db = db:create("buff", {
+    buff = {
+        name = "",
+        set1 = "",
+        set2 = "",
+        owner = "",
+        _index = { "name" },
+		    _violations = "IGNORE",
+    }
+})
 -- zjawa w domku ressist frost
 -- basic
 buff.basic = {
@@ -59,6 +69,35 @@ buff.short = {
   "divine power",
 }
 
+function buff:listAdd(name)
+  local ok, err = db:add(self.db.buff, {name = name, set1 = yajl.to_string(profile:get("buffbasic")), set2 = yajl.to_string(profile:get("buffbasic2")), owner = profile:getName()})
+  if not ok then
+    	printer:error("Buff", err)
+    return
+  end
+end
+
+function buff:setSerialized(res1, res2)
+  profile:set("buffbasic", yajl.to_value(res1))
+  profile:set("buffbasic2", yajl.to_value(res2))
+  self:basicShow()
+end
+
+function buff:listRender()
+	local res = db:fetch(self.db.buff, db:eq(self.db.buff.owner, profile:getName()), {self.db.buff.name})
+	local out = {}
+	for i=1, #res do
+		table.insert(out,
+			{
+				["label"] = res[i].name,
+				["command"] = [[buff:setSerialized("]]..res[i].set1..[[", ']]..res[i].set2..[[')]],
+				["tooltip"] = "",
+			}
+		)
+	end
+	printer:gps(out)
+end
+
 function buff:masterAllowed(target)
   if string.find(target, "M") then return true end
   return false
@@ -96,9 +135,9 @@ function buff:basicCast(target)
         table.insert(me, spell)
       end
       -- master or slave
-      if utils:arrayKeyExists(id, tar) then
+      if utils:arrayKeyExists(tostring(id), tar) then
         -- cast on master
-        if self:masterAllowed(tar[id]) and M then
+        if self:masterAllowed(tar[tostring(id)]) and M then
           -- short
           if utils:inArray2(spell, self.short) then
             table.insert(masterShort, spell)
@@ -107,7 +146,7 @@ function buff:basicCast(target)
           end
         end
         -- cast on slave
-        if self:slaveAllowed(tar[id]) and S then
+        if self:slaveAllowed(tar[tostring(id)]) and S then
             --short
             if utils:inArray2(spell, self.short) then
               table.insert(slaveShort, spell)
@@ -149,6 +188,11 @@ function buff:buffSend(arr, who)
   end
 end
 
+function buff:reset()
+  profile:set("buffbasic", {})
+  profile:set("buffbasic2", {})
+  self:basicShow()
+end
 
 function buff:basic2Set(id, str)
   local arr = profile:get("buffbasic2")
@@ -158,7 +202,11 @@ function buff:basic2Set(id, str)
   if string.find(arr[id], str) then
     -- jesli w stringu jest M albo S, usun to
     arr[id] = string.gsub(arr[id], str, "")
-  else
+    -- jesli puste usun
+    if arr[id] == "" then
+      arr[id] = nil
+    end
+   else
     -- jesli nie ma, dodaj
     arr[id] = arr[id]..str
   end
@@ -205,8 +253,8 @@ function buff:basicShow()
   local saved = profile:get("buffbasic")
   local saved2 = profile:get("buffbasic2")
   for spell, id in pairs(self.basic) do
-    table.insert(arr, {self:colorStringCheck(id, saved2, "M"), "M", [[buff:basic2Set(]]..id..[[, "M")]]})
-    table.insert(arr, {self:colorStringCheck(id, saved2, "S"), "S", [[buff:basic2Set(]]..id..[[, "S")]]})
+    table.insert(arr, {self:colorStringCheck(tostring(id), saved2, "M"), "M", [[buff:basic2Set("]]..id..[[", "M")]]})
+    table.insert(arr, {self:colorStringCheck(tostring(id), saved2, "S"), "S", [[buff:basic2Set("]]..id..[[", "S")]]})
     table.insert(arr, {self:colorArrayCheck(id, saved), spell, [[buff:basicSet(]]..id..[[)]]})
     if utils:mod(i, 3) == 0 then
       table.insert(print, arr)

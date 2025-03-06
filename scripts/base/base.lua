@@ -1,11 +1,53 @@
 base = base or {}
 base.jsonTeacher = {}
 base.jsonBook = {}
+base.jsonSpell = {}
+base.spellDictionary = {}
+--[[
+
+3. Wprowadzono nowe umiejętności ( skile dostępne tylko dla magów na 31 levelu ) (nauczyć się można wcześniej ale używać dopiero na 31) - dostępne tylko z ksiąg ze skilami.
+- fire mastery
+- cold mastery
+- acid mastery
+- lighting mastery
+
+Dana masterka szkoli się podczas używania speli ofensywnych z danego żywiołu.
+Jak masterka się odpali nakłada na przeciwnika czasowy affekt.
+- zmiejsza odporność przeciwnika na dany żywioł (wartość zależna od poziomu masterki)
+- co runde mob otrzymuje dodatkowe obrażenia od danego affektu.
+- rzucając czar z tego samego żywiołu co mob otrzymal affect mamy szansę ( zależy od masterki) na wzrost obrażeń danego spella + bonus zależnie od zywiołu
+(ogien - mocniejsze obrazenia, zimno - szansa na zamrozenie, pioruny - szansa na porażenie i wywrotkę, kwas - mocniejsze obrazenia ).
+
+Można posiadać wiele masterek i rzucając czary różnych żywiołów można na przeciwnika nałożyć affecty ze wszystkich masterek.
+
+
+]]--
+
 
 function base:init()
   self.jsonTeacher = utils:readJson("scripts/base/teachers.json")
   self.jsonBook = utils:readJson("scripts/base/book.json")
+  self.jsonSpell = utils:readJson("scripts/base/spell.json")
+  self:buildSpellDictionary()
+end
 
+function base:buildSpellDictionary()
+  for i=1, #self.jsonSpell do
+    local name = self.jsonSpell[i][1]
+    local first = string.sub(name, 1, 1)
+    if not self.spellDictionary[first] then
+      self.spellDictionary[first] = {}
+    end
+    table.insert(self.spellDictionary[first], name)
+  end
+end
+
+function base:isInSpellDictionary(name)
+  local first = string.sub(name, 1, 1)
+  if self.spellDictionary[first] then
+    return utils:inArray2(name, self.spellDictionary[first])
+  end
+  return false
 end
 
 function base:spellSearch(spell)

@@ -1,5 +1,5 @@
 [
-    {
+    [
         "acid blast",
         "Mag uzywajacy tego silnego czaru tworzy przed soba chmure kwasu ktora pedzi w kierunku celu i dotkliwie go rani. Istnieje takze szansa, ze zracy kwas uszkodzi przedmioty, ktore ofiara ma na sobie lub w inwentarzu.",
         0,
@@ -18,9 +18,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "armor",
         "Ten stosunkowo slaby czar defensywny zbiera z otoczenia malenkie drobinki materii i formuje je w delikatny jak mgielka pancerz, otaczajacy cel i absorbujacy czesc ciosow.",
         0,
@@ -39,9 +39,9 @@
         0,
         "Jestes chronion.* przez magiczny pancerz",
         0
-    },
+    ],
 
-    {
+    [
         "bless",
         "Jedno z prostszych zaklec kaplanskich, ale niezwykle uzyteczne. Odwolujac sie do mocy swojego bostwa przekazujesz jego blogoslawienstwo. Osoba poddana dzialaniu tego czaru celniej uderza przeciwnika w walce, a jednoczesnie jej odpornosc na magie bojowa wzrasta. Mozna rowniez blogoslawic przedmioty. Na przyklad blogoslawione bronie moga czasem zadac nieco wieksze niz normalnie obrazenia przeciw niektorym istotom.",
         0,
@@ -60,9 +60,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "purify food",
         "To prosty, ale czasem niezwykle uzyteczny czar. Gdy masz w inwentarzu jakies jedzenie lub pojemnik z napojem, i jest ono zatrute mozesz uzyc tego czaru, aby usunac trucizne z jedzenia czy napoju i przywrocic mu pelna wartosc.",
         0,
@@ -79,9 +79,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "blindness",
         "Ten czar wywoluje krotkotrwaly, ale bardzo intensywny blysk tuz przed twarza ofiary, w skutek czego zostaje ona czasowo oslepiona, o ile nie uda sie jej obronic przed czarem i na czas zamknac oczu.",
         0,
@@ -100,9 +100,9 @@
         0,
         "Zostal.* oslepion.*",
         0
-    },
+    ],
 
-    {
+    [
         "burning hands",
         "Ten czar pokrywa dlonie rzucajacego plonaca ciecza, ktora ten nastepnie moze strzasnac na swego przeciwnika. Ow ogien jest calkowicie niegrozny dla maga.",
         0,
@@ -119,9 +119,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "call lightning",
         "Czar zsylajacy boski gniew w postaci pioruna, wyladowanie jest tak duze, ze cierpia wszyscy znajdujacy sie w poblizu.",
         0,
@@ -138,9 +138,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "calm",
         "Czar ten uspokaja wszystkich walczacych w lokacji czyniac ich w ten sposob na chwile niezdolnych do jakiejkolwiek walki.",
         0,
@@ -159,9 +159,9 @@
         0,
         "Zostal.* uspokojon.*",
         0
-    },
+    ],
 
-    {
+    [
         "cause serious",
         "Te czary zadaja obrazenia ofiarze. 'CAUSE LIGHT' moze spowodowac lekkie rany, 'CAUSE MODERATE' srednie, 'CAUSE SERIOUS' powazne, zas 'CAUSE CRITICAL' zadaje ciezkie obrazenia.",
         0,
@@ -178,10 +178,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "cause critical",
         "Te czary zadaja obrazenia ofiarze. 'CAUSE LIGHT' moze spowodowac lekkie rany, 'CAUSE MODERATE' srednie, 'CAUSE SERIOUS' powazne, zas 'CAUSE CRITICAL' zadaje ciezkie obrazenia.",
         0,
@@ -198,9 +198,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "cause light",
         "Te czary zadaja obrazenia ofiarze. 'CAUSE LIGHT' moze spowodowac lekkie rany, 'CAUSE MODERATE' srednie, 'CAUSE SERIOUS' powazne, zas 'CAUSE CRITICAL' zadaje ciezkie obrazenia.",
         0,
@@ -217,9 +217,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "cause moderate",
         "Te czary zadaja obrazenia ofiarze. 'CAUSE LIGHT' moze spowodowac lekkie rany, 'CAUSE MODERATE' srednie, 'CAUSE SERIOUS' powazne, zas 'CAUSE CRITICAL' zadaje ciezkie obrazenia.",
         0,
@@ -236,10 +236,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "chain lightning",
         "Czar ten wytwarza serie poteznych blyskawic, ktore wylatuja z rak maga i uderzaja wszystko co napotkaja na swojej drodze. Zaklecia  tego nalezy uzywac z rozwaga, poniewaz latajace pioruny uderzaja rowniez w czlonkow druzyny maga, a nawet w niego samego. Modyfikowane przez: 'Control of magic', 'Lightning Mastery' i 'Resist Lightning'.",
         0,
@@ -256,9 +256,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "change sex",
         "Za pomoca tego czaru mozna czasowo zmienic plec swoja lub innej osoby na przeciwna.",
         0,
@@ -277,9 +277,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "charm person",
         "Czar ten probuje przejac kontrole nad umyslem wybranego humanoida i zauroczyc go. Zauroczona ofiara wykonuje wszystkie polecenia maga. W razie niepowodzenia, uzycie czaru bedzie traktowane jako atak.",
         0,
@@ -297,9 +297,9 @@
         0,
         0,
         "Zosta.* zauroczon.*"
-    },
+    ],
 
-    {
+    [
         "chill touch",
         "Ten opierajacy sie na magii zimna czar generuje w powietrzu drobna mgielke, ktora nastepnie zamarza i opada na ofiare. Drobne krysztalki lodu dodatkowo chwilowo oslabiaja miesnie ofiary.",
         0,
@@ -317,9 +317,9 @@
         0,
         0,
         "Zosta.* wyziebion.*"
-    },
+    ],
 
-    {
+    [
         "colour spray",
         "Ten czar rozpyla w powietrzu przed celem, drobne kolorowe czasteczki wszystkich zywiolow. Nie tylko zadaja one obrazenia, ale moga takze oslepic ofiare.",
         0,
@@ -337,9 +337,9 @@
         0,
         0,
         "Zosta.* oslepion.*"
-    },
+    ],
 
-    {
+    [
         "continual light",
         "Ten czar wykorzystuje te wlasciwosc czasteczek swiatla, zbierajac je w forme kuli, ktora nastepnie moze oswietlac komus droge. Kula ta swiecic bedzie o wiele dluzej niz podobna, stworzona zakleciem 'LIGHT'.",
         0,
@@ -356,9 +356,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "control weather",
         "Dzieki temu zakleciu mozna kontrolowac pogode. Skladnia: lepiej, gorzej.",
         0,
@@ -375,9 +375,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "create food",
         "Czar ten zbiera z otaczajacej przestrzeni nieco materialnych czastek i magicznie je przeksztalca w garsc pozywnych owocow, ktore ktos moze zjesc. Ciekawostka jest, ze sa one tym bardziej sycace, im wyzszy byl poziom osoby rzucajacej ten czar.",
         0,
@@ -394,9 +394,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "transmute staff",
         "Jest to czar zwiekszajacy obrazenia zadawane trzymana przez rzucajacego laska, kosturem czy kijem, a takze ulatwia trafienie nia kogos.",
         0,
@@ -413,9 +413,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "create spring",
         "Ten czar opiera sie na znajomosci zywiolu wody, a zwlaszcza podziemnej sieci rzek i strumieni. Wyszukuje on w najblizszej okolicy jakis podwodny ciek i skierowuje czesc plynacej tam wody w poblize ciebie. W skutek tego z ziemi nieopodal wytryskuje zrodelko z czysta, smaczna woda.",
         0,
@@ -432,9 +432,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "create water",
         "Do rzucenia tego czaru potrzebny jest jakis pusty pojemnik na wode. Inkantacja ta podobna jest troche do czaru 'CREATE FOOD'. Osoba rzucajaca wybiera z powietrza czasteczki wilgoci, ktore zbieraja sie we wskazanym pojemniku, zamieniajac sie w czysta i smaczna wode.",
         0,
@@ -451,9 +451,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "light",
         "Ten czar wykorzystuje te wlasciwosc czasteczek swiatla, zbierajac je w forme kuli, ktora nastepnie moze oswietlac komus droge.",
         0,
@@ -470,9 +470,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "cure blindness",
         "Czar ten generuje kojace cieplo, ktore splywa na oczy wybranej osoby, leczac slepote.",
         0,
@@ -489,9 +489,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "cure critical",
         "Czar 'CURE LIGHT' moze leczyc lekkie rany, 'CURE MODERATE' srednie rany, 'CURE SERIOUS' ciezkie rany, zas 'CURE CRITICAL' leczy bardzo powazne obrazenia.",
         0,
@@ -508,9 +508,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "cure disease",
         "Usuwa skutki zarazy i ropiejace wrzody z ciala oraz zapobiega dalszemu rozprzestrzenianiu sie zarazy.",
         0,
@@ -527,9 +527,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "cure light",
         "Czar 'CURE LIGHT' moze leczyc lekkie rany, 'CURE MODERATE' srednie rany, 'CURE SERIOUS' ciezkie rany, zas 'CURE CRITICAL' leczy bardzo powazne obrazenia.",
         0,
@@ -546,9 +546,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "cure serious",
         "Czar 'CURE LIGHT' moze leczyc lekkie rany, 'CURE MODERATE' srednie rany, 'CURE SERIOUS' ciezkie rany, zas 'CURE CRITICAL' leczy bardzo powazne obrazenia.",
         0,
@@ -565,9 +565,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "cure poison",
         "Po rzuceniu na zatruta osobe czar calkowicie neutralizuje trucine.",
         0,
@@ -584,9 +584,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "cure moderate",
         "Czar 'CURE LIGHT' moze leczyc lekkie rany, 'CURE MODERATE' srednie rany, 'CURE SERIOUS' ciezkie rany, zas 'CURE CRITICAL' leczy bardzo powazne obrazenia.",
         0,
@@ -603,9 +603,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "curse",
         "'CURSE' czyli klatwa, to dokladnie przeciwienstwo czaru 'BLESS'. Sciaga ono na ofiare gniew bogow, skutkiem czego jest obnizenie sprawnosci w walce, oraz wieksza podatnosc na magie ofensywna.",
         0,
@@ -624,9 +624,9 @@
         0,
         "Zosta.* przekle.*",
         0
-    },
+    ],
 
-    {
+    [
         "detect evil",
         "Istoty zle (evil) otoczone sa czerwona aura, istoty dobre (good) otoczone sa zas zlota aura.",
         0,
@@ -645,8 +645,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "detect good",
         "Istoty zle (evil) otoczone sa czerwona aura, istoty dobre (good) otoczone sa zas zlota aura.",
         0,
@@ -665,8 +665,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "detect hidden",
         "Ten czar wyostrza twoje zmysly i czujnosc. Osoba pod jego wplywem jest w stanie dostrzec rzeczy ukryte przed oczyma innych. Czar ten jest czarem personalnym, to znaczy ze mozesz go rzucac tylko na siebie.",
         0,
@@ -685,8 +685,8 @@
         0,
         "Dostrzegasz to, co ukryte",
         0
-    },
-    {
+    ],
+    [
         "detect invis",
         "Zdolnosc widzenia osob i rzeczy niewidzialnych. Czar ten mozna rzucac tylko na siebie. Nie sa w stanie go opanowac mistrzowie przywolan.",
         0,
@@ -705,8 +705,8 @@
         0,
         "Dostrzegasz to, co niewidzialne",
         0
-    },
-    {
+    ],
+    [
         "detect magic",
         "Czar ten sprawia, ze rzucajacy stanie sie wrazliwy na wszelkie formy umagiczniania przedmiotow. Jednym spojrzeniem na obiekt bedzie w stanie rozstrzygac czy jest on magiczny czy nie-magiczny.",
         0,
@@ -725,8 +725,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "detect poison",
         "Czar ten wykrywa trucizne w jedzeniu lub piciu, ktore masz w inwentarzu. Mozna ja potem usunac czarem 'PURIFY FOOD'.",
         0,
@@ -745,8 +745,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "dispel evil",
         "Ten czar wymyslili klerycy oddani Praworzadnosci. Przywoluje on skondensowana wiazke pozytywnej energii, ktorej zadaniem jest niszczenie wszelkiego zla, jakie napotka. Jednak aby rzucic ten czar nalezy byc naprawde dobra istota.",
         0,
@@ -763,9 +763,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "dispel good",
         "Czar ten opracowali klerycy, ale ci sluzacy ciemnej stronie. Pozwala niszczyc slugi Dobra, poprzez umieszczenie w ich sercu 'ostrza' z negatywnej, smiercionosnej energii. Aby uzywac tego czaru nalezy jednak byc naprawde zlym.",
         0,
@@ -782,9 +782,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "dispel magic",
         "Czar ten niszczy magie, zarowno pozytywna jak i negatywna, ktora wplywa na ciebie albo inna osobe. Jego uzycie na kims innym jest rownoznaczne z rozpoczeciem walki, dlatego czaru tego nalezy uzywac ostroznie. Mozna usunac niewidzialnosc z przedmiotow.",
         0,
@@ -801,9 +801,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "earthquake",
         "Poprzez stopy rzucajacego energia przekazywana jest do samych korzeni ziemi a nastepnie wraca w postaci fali uderzeniowej, ktora wywoluje trzesienie ziemi. Nalezy pamietac, ze czar dziala obszarowo i atakuje wszystkie istoty w danej lokacji.",
         0,
@@ -820,9 +820,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "enchant armor",
         "Czar ten wplata magie w zbroje, poprawiajac jej wlasciwosci ochronne. Chociaz efekt dzialania czaru jest trwaly, to jednak nalezy zauwazyc, ze 'przeciazenie' przedmiotu nadmierna iloscia energii magicznej moze spowodowac jego zniszczenie.",
         0,
@@ -839,9 +839,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "enchant weapon",
         "Czar ten czasowo umagicznia bron czyniac ja bardziej zabojcza i celna, taka bron po pewnym czasie ulegnie zniszczeniu kiedy magia sie z niej ulotni.",
         0,
@@ -858,9 +858,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "energy drain",
         "Przez wyssanie energi zyciowej przez wampira, ofiara nie moze zdobywac doswiadczenia.",
         "Zdejmuje restoration.",
@@ -878,9 +878,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "faerie fire",
         "Mozesz czasowo naruszyc strukture i spojnosc pancerza ofiary za pomoca tego czaru, znacznie pogarszajac jego wlasciwosci.",
         0,
@@ -898,9 +898,9 @@
         0,
         0,
         "Zostal.* otoczon.* aure rozowych ognikow"
-    },
+    ],
 
-    {
+    [
         "faerie fog",
         "Ten uzyteczny czar tworzy chmure purpurowego dymu, ktora otaczajac niewidzialne lub ukryte postacie, odkrywa je.",
         0,
@@ -918,9 +918,9 @@
         0,
         0,
         "Zostal.* otoczon.* chmure rozowego dymu"
-    },
+    ],
 
-    {
+    [
         "farsight",
         "Pozwala w trakcie wywolanego rozgladania sie wyostrzyc wzrok na dalej polozonych postaciach - tak jak to odruchowo robia elfy. ",
         0,
@@ -938,9 +938,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "fireball",
         "Tworzy sporych rozmiarow ognista kule, ktora uderza w cel zadajac obrazenia, dodatkowo moze czasami spalic jakies przedmioty w poblizu. Ogniste kule moga trafic kazdego, kto nie jest w grupie z magiem.",
         0,
@@ -957,9 +957,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "fireproof",
         "Czar ten zabezpiecza czasowo wybrany przedmiot przed splonieciem poprzez otoczenie go cienka niewidzialna warstewka ognioodpornej masci. Niestety, po jakims czasie masc wyparowuje.",
         0,
@@ -978,9 +978,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "flamestrike",
         "Czar ten jest jednym ze starszych czarow, uzywanych przez kaste kaplanska.Wywodzi sie z symbolicznych rytualow 'oczyszczania ogniem', podczas ktorych kaplan nad przeznaczonymi dla bogow ofiarami przepuszczal slup ognia. ",
         0,
@@ -997,9 +997,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "pyrotechnics",
         "Czar ten tworzy magiczna flare, blyszczaca oslepiajaco jasnym swiatlem. Pomijajac efekt dekoracyjny, flara ta moze zupelnie oslepic ofiare, utrudniajac jej skuteczna walke.",
         0,
@@ -1018,9 +1018,9 @@
         0,
         "Zostales oslepion.* magiczna flare swiatla",
         0
-    },
+    ],
 
-    {
+    [
         "float",
         "Ten czar sprawia, ze dana postac unosi sie nad ziemie i zaczyna lewitowac. Traci ona wtedy mniej punktow ruchu. Float to gorsza wersja czaru fly. Nie pozwala ona na dostanie sie do powietrznych lokacji.",
         0,
@@ -1039,9 +1039,9 @@
         0,
         "Unosisz sie lekko nad ziemia",
         0
-    },
+    ],
 
-    {
+    [
         "floating disc",
         "Nie dysponujacy wielka sila magowie opracowali ten czar, aby sprawnie przenosic duze i ciezkie przedmioty.",
         0,
@@ -1058,9 +1058,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "spiritual armor",
         "Czar ten tworzy magiczna widmowa zbroje w miejscach ekwipunku, ktore sa wolne. Zbroje mozna zalozyc tylko na siebie a po pewnym czasie rozpada sie w proch.",
         0,
@@ -1077,9 +1077,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "spiritual hammer",
         "Czar ten tworzy magiczna widmowy mlot w miejscach ekwipunku, ktore sa wolne. Orez moze dobyc tylko osoba, ktora go stworzyla. Mlot po pewnym czasie rozpada sie w proch.",
         0,
@@ -1096,9 +1096,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "flame blade",
         "Czar ten przywoluje skondensowana energie, ktora zmienia sie w magiczny, plonacy ogniem miecz, ktorego zaczynasz uzywac jako broni. Jest to jednak dar od twego Bostwa, i dlatego nie mozesz sie go pozbyc, zanim magiczne plomienie nie wypala sie i bron sama nie zniknie.",
         0,
@@ -1115,9 +1115,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "giant strength",
         "Zwieszka sile calej grupy za wyjatkiem istot, ktore nie moga otrzymac tego efektu np. nieumarlaki.",
         0,
@@ -1136,9 +1136,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "harm",
         "Harm, jest najsilniejszym ofensywnym zakleciem kleryka dzialajacym na istoty zywe. Nie dziala wiec np. na nieumarlych i konstrukty. Prawdziwa moc tego zaklecia mozna wywolac jednak uzywajac do tego trudno dostepnego komponentu.",
         0,
@@ -1155,9 +1155,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "haste",
         "Wplywajac na caly organizm, czar ten jest w stanie na krotka chwile znacznie przyspieszyc procesy zyciowe i skrocic czas reakcji danej osoby. Wymiernym tego efektem jest dodatkowy atak, jaki osoba ta zyskuje w trakcie walki.",
         0,
@@ -1176,9 +1176,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "heal",
         "Jeden z najsilniejszych znanych czarow leczniczych.",
         0,
@@ -1195,9 +1195,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "heat metal",
         "Moze byc uzywany przeciwko istotom, ktore nosza na sobie metalowe czesci zbroi. Czar nie uderza bezposrednio w ofiare ale w jej zbroje, nagrzewajac ja do wysokiej temperatury. Zmusza to ofiare do pospiesznego zdjecia i odrzucenia goracego kawalka pancerza.",
         0,
@@ -1214,9 +1214,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "identify",
         "Jest to jeden z bardziej przydatnych czarow, mozna go uzyc, by poznac dokladne informacje na temat jakiegos przedmiotu z inwentarza. Prawdziwa moc zaklecia jednak jest wyzwolona przy uzyciu odpowiednich komponentow.",
         0,
@@ -1233,9 +1233,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "infravision",
         "Niektore rasy, na przyklad elfy, wytworzyly w toku ewolucji specjalna umiejetnosc, pozwalajaca im widziec w absolutnej ciemnosci niektore rzeczy i zywe istoty w postaci czerwonawej otoczki i poswiaty.",
         0,
@@ -1254,9 +1254,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "invisibility",
         "Bardzo potezny czar, ktory wykorzystujac efekt 'obiegania' czasteczek swiatla naokolo postaci czyni ja niewidzialna. Niestety, efekt znika, gdy tylko niewidzialna postac zaangazuje sie w walke. Za pomoca tego czaru mozna takze czynic niewidzialnymi rozmaite obiekty.",
         0,
@@ -1275,9 +1275,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "undead invisibility",
         "Zaklecie, ktore sprawia, ze istoty nieumarle nie widza osob lub rzeczy nim objetych.",
         0,
@@ -1296,9 +1296,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "animal invisibility",
         "Zaklecie, ktore sprawia, ze zwierzeta nie widza osob lub rzeczy nim objetych.",
         0,
@@ -1317,9 +1317,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "know alignment",
         "To zaklecie delikatnie i dyskretnie penetruje umysl ofiary, sprawdzajac jakie mysli w nim przewazaja. Jesli umysl ofiary jest czysty i dobry, dostrzezesz zielonkawa aure, jesli zas zly krwistoczerwona. Osoby, ktore nie opowiadaja sie ani za zlem, ani za dobrem otoczone beda aura o niebieskawym zabarwieniu.",
         0,
@@ -1336,9 +1336,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "lightning bolt",
         "Ten klasyczny czar tworzy pojedyncze wyladowanie energii elektrycznej, w formie blyskawicy, ktora uderza w wybrany cel.",
         0,
@@ -1355,9 +1355,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "locate object",
         "Doswiadczony mag moze wyczuc a nawet poznac miejsce, w ktorym dany przedmiot aktualnie sie znajduje. Magia ta jest tak delikatna, iz nie zawsze udaje sie znalezc wszystkie poszukiwane przedmioty, dlatego zawsze warto probowac kilka razy.",
         0,
@@ -1374,9 +1374,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "magic missile",
         "Zaklecie przywoluje kilka pociskow magicznych. Magowie z odpowiednia specjalizacja moga przywolac wieksza ilosc.",
         0,
@@ -1393,9 +1393,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "mass invis",
         "Czar ten jest podobny do standardowego czaru niewidzialnosci z ta jednak roznica, ze cala grupa maga ktory go rzucil stojaca obok niego znajdzie sie pod jego dzialaniem.",
         0,
@@ -1413,9 +1413,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "nexus",
         "Formuje portal przed wybrana osoba, ktory umozliwia jej dostanie sie do miejsca gdzie znajduje sie czarodziej. Portal czasem bywa niestabilny i moze przeniesc cel do nieoczekiwanego miejsca. Do inkantancji zaklecia wymagany jest kamien portali.",
         0,
@@ -1432,9 +1432,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "pass door",
         "Pozwala czarodziejowi zmienic strukture czasteczek swojego ciala, umozliwiajac mu przejscie przez solidne przeszkody, takie jak zamkniete drzwi.",
         0,
@@ -1453,9 +1453,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "plague",
         0,
         0,
@@ -1474,9 +1474,9 @@
         0,
         "Zostal.* zarazony straszliwa choroba",
         0
-    },
+    ],
 
-    {
+    [
         "poison",
         "Jesli ten czar zostanie rzucony na postac redukuje jej sile, a takze pogarsza zdolnosc regeneracji. Mozliwe jest tez zatrucie jedzenia.",
         0,
@@ -1495,9 +1495,9 @@
         0,
         "Zostal.* zatrut.*",
         0
-    },
+    ],
 
-    {
+    [
         "portal",
         "Uzywajac kamieni portali, magowie tworza portal, ktory potrafi zabrac w konkretne miejsce, powiazane z kamieniem. Portal niekiedy bywa niestabilny i moze przeniesc podroznika do nieoczekiwanego miejsca",
         0,
@@ -1514,9 +1514,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "protection evil",
         "Jest to zaklecie dobrych klerykow i paladynow, ktorzy rzucajac je na siebie by chronic sie przed istotami z cienia.",
         0,
@@ -1535,9 +1535,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "protection good",
         "Jest to zaklecie zlych klerykow, ktorzy rzucajac je na siebie chronia sie przed dobrymi istotami.",
         0,
@@ -1556,9 +1556,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "refresh",
         "Pozwala druidowi szybko zregenerowac swoje cialo po dlugiej i meczacej podrozy. Zaklecie przywraca sily, usuwajac zmeczenie, bole miesniowe i inne negatywne skutki wyczerpania, przywracajac energie i swiezosc.",
         0,
@@ -1575,9 +1575,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "remove curse",
         "Ten czar oczyszcza wskazana osobe lub przedmiot z klatwy.",
         0,
@@ -1594,12 +1594,12 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "sanctuary",
         "Sluzy on do przyzwania najczystszej boskiej energii, ktora formuje sie w tarcze, chroniaca osobe bedaca pod wplywem tego czaru. Ochrona ta jest tak silna, ze niemozliwe staje sie zaatakowanie ofiary, dopoki nie minie efekt.",
-        0y,
+        0,
         0,
         0,
         0,
@@ -1615,9 +1615,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "regenerate",
         "Zmienia on strukture materii wokol ciala poddanej mu osoby w taki sposob, ze czas zdaje sie dla niej plynac o wiele szybciej. Przyspieszane sa wszelkie procesy zyciowe a takze... regeneracja ran.",
         0,
@@ -1636,10 +1636,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "shield",
         "Czar ten tworzy magiczna tarcze, ktora absorbuje przez czas trwania wszystkie pociski magiczne.",
         0,
@@ -1658,9 +1658,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "shocking grasp",
         "Gromadzi w ciele rzucajacego maga, a nastepnie kieruje na ofiare skondensowana wiazke energii elektrycznej.",
         0,
@@ -1677,9 +1677,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "sleep",
         "Czar ten tworzy obrazy zmeczenia i znuzenia w podswiadomosci ofiary, co powoduje, ze w razie gdy czar sie uda ta zapadnie w sen, z ktorego przez jakis czas na pewno sie nie obudzi.",
         0,
@@ -1698,9 +1698,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "slow",
         "Czar ten spowalnia poruszanie sie ofiary, a co za tym idzie takze szybkosc, z jaka zadaje ona ciosy w walce.",
         0,
@@ -1719,9 +1719,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "stone skin",
         "Ten personalny czar ochronny modyfikuje twoja skore w taki sposob, ze staje sie ona twarda niczym kamien. Dzieki temu stajesz sie na krotki czas praktycznie niewrazliwy na zwykle ciosy.",
         0,
@@ -1740,9 +1740,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "mirror image",
         "Ten czar to jedno z najwiekszych osiagniec iluzji. Tworzy on dookola maga jego lustrzane odbicia, sprawiajac, ze przeciwnik nie wie czy faktycznie uderza w zywa osobe. Niestety, gdy lustrzane odbicie zostanie trafione, znika.",
         0,
@@ -1761,9 +1761,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "blur",
         "Efekt 'rozmycia', jaki zaklecie daje, sprawia ze poddana jego dzialaniu postac jest o wiele bardziej odporna na ciosy.",
         0,
@@ -1782,9 +1782,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "summon",
         "Pozwala czarodziejowi przywolac wybrana osobe do siebie w obrabie okreslonego regionu. Zaklecie dziala na zasadzie magicznego polaczenia, które przyciaga ofiare, zmuszajac ja do fizycznego przeniesienia sie w wyznaczone miejsce.",
         0,
@@ -1801,9 +1801,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "recharge",
         "Mozna naladowac jednorazowo tym zakleciem rozdzki i kostury, ktore posiadaja ladunki z czarami. Zostaly odnotowane sporadyczne przypadki eksplozji przedmiotu.",
         0,
@@ -1820,10 +1820,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "weaken",
         "Czar tworzy w miesniach ofiary zakwasy, wywolujace uczucie zmeczenia i obnizajace sile.",
         0,
@@ -1842,28 +1842,28 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "finger of death",
         "Polega na wypuszczeniu z palca czarodzieja poteznej fali negatywnej energii. W zaleznosci od mocy czarodzieja, negatywna energia moze spowodowac przedwczesna smierc ofiary.",
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    },
+    ],
 
-    {
+    [
         "elemental devastation",
         "Najpotezniejszy czar mistrza inwokacji. Uwalnia moc wszystkich zywiolow.",
         0,
@@ -1880,9 +1880,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "change weapon",
         "To potezne zaklecie dostepne jest najwybitniejszym mistrzom przemian. Za jego pomoca potrafia oni zmienic dowolna bron w poteznego golema, ktory bedzie im sluzyl. Jakosc golema zalezy od wagi przedmiotu. Czar ten mozna uzyc na odpowiednich artefaktach, ktore nie zostana zniszczone w procesie inkantancji.",
         0,
@@ -1899,9 +1899,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "liveoak",
         "Ten czar sluzy do przywolania poteznego slugi - zywego drzewa. Jednak aby to zrobic musisz odprawic odpowiedni rytual przywolania, do ktorego potrzebny jest debowy zagajnik lub w ostatecznosci zwykly las. Zywodab bedzie przez jakis czas wykonywac Twoje polecenia, a potem zniknie, stapiajac sie z lasem.",
         0,
@@ -1918,9 +1918,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "stability",
         "Czar sprawia, ze zmysl rownowagi maga zaczyna pracowac idealnie, nie da sie go wywrocic.",
         0,
@@ -1938,9 +1938,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "hold person",
         "Czar ten na krotka chwile calkowicie paralizuje miesnie ofiary. Ofiara nie moze sie poruszac ani walczyc, a takze latwiej ja trafic. Zakleciem tym mozna sparalizowac tylko istoty czlekoksztaltne.",
         0,
@@ -1959,9 +1959,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "confusion",
         "Czar ten powoduje posianie zametu w umysle ofiary i odwrocenie jej uwagi od walki, przez co nie moze sie ona skoncentrowac i walczy gorzej.",
         0,
@@ -1980,9 +1980,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "command",
         "Czar ten wykorzystuje zdolnosci mentalne i sile woli rzucajacego, pozwalajac mu w ograniczonym zakresie kontrolowac umysl ofiary. ",
         0,
@@ -1999,9 +1999,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "hold animal",
         "Ten czar sluzy do zatrzymania w miejscu jakiegos zwierzecia. Sprowadza on na ofiare chwilowy paraliz miesni, przez co nie moze sie ona poruszac.",
         0,
@@ -2018,9 +2018,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "hold monster",
         "Zakleciem tym mozna sparalizowac kazda istote oprocz nieumarlych.",
         0,
@@ -2037,9 +2037,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "hold plant",
         "Ten czar sluzy do zatrzymania w miejscu rosliny. Sprowadza on na ofiare chwilowe otumanienie i zatrzymanie sokow, przez co nie moze sie ona poruszac. ",
         0,
@@ -2056,9 +2056,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "resist fire",
         "Czar ten poprzez rozbudzenie we wnetrzu ciala magicznego chlodu sprowadza na ciebie lub na ofiare czesciowa odpornosc na ataki przy pomocy ognia.",
         0,
@@ -2077,9 +2077,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "energy shield",
         "Jest to silny czar chroniacy przed negatywna i pozytywna energia. Mozna rzucic zarowno go na siebie jak i na wspoltowarzyszy swoich wedrowek.",
         0,
@@ -2098,10 +2098,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "resist cold",
         "Ten czar rozpala we wnetrznosciach ofiary plomien, dzieki ktoremu staje sie ona bardziej odporna na zimno.",
         0,
@@ -2120,9 +2120,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "resist lightning",
         "Czar ten w magiczny sposob uziemia ofiare, dzieki czemu wzrasta jej odpornosc na blyskawice i ataki za pomoca elektrycznosci.",
         0,
@@ -2141,9 +2141,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "resist magic",
         "Powstrzymuje czysta magie zawarta w zakleciach, ktora jest czescia wiekszosci czarow istniejacych.",
         0,
@@ -2162,9 +2162,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "brave cloak",
         "Czar ten dziala na cala grupe, w ktorej znajduje sie rzucajaca go osoba. Otacza on wszystkich magicznym plaszczem, sprawiajacym iz niesamowita odwaga splywa na grupe, przez co jej czlonkowie sa bardziej odporni na strach.",
         0,
@@ -2183,9 +2183,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "silence",
         "Powoduje on, ze jezyk kolowacieje i ofiara nie jest zdolna wydobyc z siebie zadnego dzwieku. Oznacza to oczywiscie takze niemoznosc recytowania zaklec.",
         0,
@@ -2204,9 +2204,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "bark skin",
         "Zmienia skore ofiary w kore, przez co staje sie ona twardsza. Ofiara jest wiec lepiej zabezpieczona przed ciosami wroga.",
         0,
@@ -2225,9 +2225,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "aid",
         "Gdy osoba natchniona tym czarem zbliza sie do smierci, moze liczyc na drobna pomoc od bogow w postaci uleczenia mniejszych ran.",
         0,
@@ -2246,9 +2246,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "chant",
         "Zaklecie to mozna rzucac wylacznie podczas walki. Jest to piesn blagajaca bogow o laske i przychylnosc, dzieki czemu wszystkie walczace w lokacji osoby maja szanse celniej uderzyc swego przeciwnika.",
         0,
@@ -2264,10 +2264,10 @@
         0,
         0,
         0,
-        0,
-    },
+        0
+    ],
 
-    {
+    [
         "first aid",
         "Kleryk uzywajac tej umiejetnosci moze probowac uleczyc najswiezsze rany odniesione przez postac w czasie ostatniej walki.",
         0,
@@ -2281,9 +2281,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "exile",
         "Wypedza wszystkie istoty, ktore zostaly przywolane na ten swiat za pomoca magii. Nalezy pamietac o tym, ze czar wygoni tez pomocnikow maga, ktory zainkantowal ten czar.",
         "Usun summony z flaga no_exp",
@@ -2300,9 +2300,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "revive",
         "Jest to jedno z najbardziej mrocznych i poteznych zaklec, jakie posiada mistrz nekromancji w swojej ksiedze. Zaklecie to pozwala calkowicie przywrocic do zycia martwa istote i przejac nad nia kontrole.",
         0,
@@ -2319,9 +2319,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "entangle",
         "Dookola ofiary powstaja pnacza i inne rosliny, ktore ja oplataja i utrudniaja poruszanie.",
         0,
@@ -2340,9 +2340,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "goodbarry",
         "Ten czar tworzy na ziemi kilka smacznych i pozywnych jagod. Nie tylko zaspokajaja one glod, ale takze wykazuja pewne slabe wlasciwosci lecznicze.",
         0,
@@ -2358,10 +2358,10 @@
         0,
         0,
         0,
-        0,
-    },
+        0
+    ],
 
-    {
+    [
         "waterwalk",
         "Ten czar pozwala rzucajacemu chodzic po wodzie tak jak po twardym gruncie, zapobiegajac utopieniu sie.",
         0,
@@ -2380,9 +2380,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "water breathing",
         "Zapobiega utopieniu sie w lokacjach podwodnych i umozliwia swobodne nurkowanie na czas dzialania czaru.",
         0,
@@ -2401,9 +2401,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "prayer",
         "Ta krotka modlitwe wyglosic mozna tylko w czasie walki. Na walczacych splywa blogoslawienstwo, poprawiajace celnosc ich ciosow.",
         0,
@@ -2420,9 +2420,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "free action",
         "Czar ten zapewnia celowi zaklecia czasowa ochrone przeciwko paralizowi i czarom ograniczajacym swobode ruchow.",
         0,
@@ -2441,9 +2441,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "remove paralysis",
         "Czar usuwajacy paraliz.",
         0,
@@ -2460,8 +2460,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "force bolt",
         "Czar ten uwalnia skondensowana wiazke energii z reki maga, ktora trafia cel i miazdzy go. Czar ten oddzialujac na plaszczyznie fizycznej moze ranic nawet istoty odporne na magie!",
         0,
@@ -2478,9 +2478,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "lay",
         "Paladyni raz na dobe moga przyzwac uzdrawiajaca moc swojego boga. Nakladanie rak slynie z mozliwosci wyleczenia nawet najciezszych przypadkow chorob i ran wojennych.",
         0,
@@ -2494,10 +2494,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "spray of thorns",
         "Zaklecie powoduje, ze z krzewow lub innych roslinnych elementow otoczenia wydobywaja sie ostre kolce, ktore zostaja wyrzucone w strone ofiary.",
         0,
@@ -2514,9 +2514,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "web",
         "Czar ten tworzy magiczna siec, ktora spada na ofiare i przy odrobinie szczescia tak ja oplatuje, ze ofiara nie moze skutecznie walczyc.",
         0,
@@ -2535,9 +2535,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "deafness",
         "Czar ten sprawia, ze wskazana osoba na jakis czas traci sluch.",
         0,
@@ -2556,9 +2556,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "mend",
         "Czar ten naprawia magicznie przedmiot, na ktory zostal rzucony. Przedmiot odzyskuje cala swoja wytrzymalosc.",
         0,
@@ -2575,9 +2575,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "hold undead",
         "Czar ten na krotka chwile calkowicie unieruchamia istote nieumarla.",
         0,
@@ -2594,9 +2594,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "fear",
         "Czar ten dziala na podswiadomosc ofiary w ten sposob, ze budzi w jej umysle najgorsze leki i koszmary. Ofiara bedzie probowala uciec przy pierwszej nadarzajacej sie okazji.",
         0,
@@ -2615,11 +2615,11 @@
         0,
         0,
         0
-    },
+    ],
 
 
 
-    {
+    [
         "darkness",
         "Czar opracowany przez nekromantow. Sluzy on do przywolania niezwyklej ciemnosci, ktorej nie rozswietli zadna latarnia.",
         0,
@@ -2636,9 +2636,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "resist acid",
         "Uzywajac tego czaru mozesz tak zmodyfikowac odczyn skory ofiary, aby w polaczeniu z kwasami stawal sie on obojetny. Dzieki temu zwiekszasz odpornosc ofiary na ataki kwasem.",
         0,
@@ -2657,9 +2657,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "resist normal weapon",
         "Bardzo silny ochronny czar personalny, zapewniajacy calkowita odpornosc na ciosy niemagiczna bronia, ktora po prostu odbija sie od ciala maga.",
         "Bron +0",
@@ -2678,8 +2678,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "resist magic weapon",
         "Bardzo silny ochronny czar personalny, zapewniajacy calkowita odpornosc na ciosy magicznym orezem.",
         "Bron +2 +3",
@@ -2698,8 +2698,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "resist elements",
         "Dodatkowa ochrona przed zywiolami tj. kwas, zimno, ogien, elektrycznosc.",
         0,
@@ -2718,8 +2718,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "lesser magic resist",
         "Slabsza wersja czaru resist magic.",
         0,
@@ -2738,8 +2738,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "fireshield",
         "Ten czar powoduje, ze wokol maga ktory rzucil to zaklecie pojawia sie ognista tarcza, ktora parzy i pali osoby chcace zadac cios rzucajacemu, jak rowniez zapewnia pewna odpornosc na ataki oparte na ogniu.",
         0,
@@ -2758,8 +2758,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "iceshield",
         "Ten czar powoduje, ze wokol ciala maga ktory rzucil to zaklecie pojawia sie tarcza z ostrych krysztalkow lodu, ktora mrozi osoby chcace zadac cios rzucajacemu. Dodatkowym efektem dzialania czaru jest pewna odpornosc na ataki oparte na zimnie.",
         0,
@@ -2778,9 +2778,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "reflect spell I",
         "Pole chroniace przed magia, odbijajace zaklecia. Im wiekszy poziom zaawansowania czaru tym lepsza ochrona, nawet przed poteznymi czarami.",
         "Kontruje Heal. Spada po malej sumie lacznej kregow spelli odbitych.",
@@ -2799,9 +2799,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "reflect spell II",
         "Pole chroniace przed magia, odbijajace zaklecia. Im wiekszy poziom zaawansowania czaru tym lepsza ochrona, nawet przed poteznymi czarami.",
         "Kontruje Heal. Spada po sredniej sumie lacznej kregow spelli odbitych.",
@@ -2820,9 +2820,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "reflect spell III",
         "Pole chroniace przed magia, odbijajace zaklecia. Im wiekszy poziom zaawansowania czaru tym lepsza ochrona, nawet przed poteznymi czarami.",
         "Kontruje Heal. Spada po duzej sumie lacznej kregow spelli odbitych.",
@@ -2841,8 +2841,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "cone of cold",
         "Zaklecie to pozwala magowi na wytworzenie poteznego stozka lodowatej energii i uderzenie nia wroga. Istnieje duza szansa, ze przedmioty noszone przez ofiare ulegna zamrozeniu i rozpadna sie.",
         0,
@@ -2859,9 +2859,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "mend",
         "Czar ten naprawia magicznie przedmiot, na ktory zostal rzucony. Przedmiot odzyskuje cala swoja wytrzymalosc.",
         0,
@@ -2875,8 +2875,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "bladethirst",
         "Gdy rzucisz ten czar na bron sprawisz, ze przez krotka chwile bedzie nia mozna o wiele latwiej zadac cios.",
         0,
@@ -2892,10 +2892,10 @@
         0,
         0,
         0,
-        0,
-    },
+        0
+    ],
 
-    {
+    [
         "acid hands",
         "Rzucajacy moze przywolac z powietrza zrace czasteczki i kropelki kwasu na swoje dlonie, nie odnoszac przy tym obrazen,",
         0,
@@ -2912,9 +2912,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "fire darts",
         "Za pomoca tego czaru mozna stworzyc kilka goracych, otoczonych plomieniami magicznych strzalek, a nastepnie poslac je prosto w cialo swego wroga, aby wywolac oparzenia i bable na skorze.",
         0,
@@ -2931,8 +2931,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "frost hands",
         "Czar ten tworzy na dloniach rzucajacego mnostwo ostrych lodowych krysztalkow, moze je potem strzasnac na swoja ofiare, by wbily sie w jej cialo.",
         0,
@@ -2949,8 +2949,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "cold snap",
         "Czar ten tworzy ostry sopel lodu, ktory z pomoca magii wylatuje z rak rzucajacego wbijajac sie w cialo jego wroga.",
         0,
@@ -2967,9 +2967,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "astral search",
         "Dluga inktantacja, ktora otwiera przejscia do astralnego planu. Celem jest nawiazanie wiezi z istota z innego wymiaru, ktora ma ostatecznie, po oswojeniu, sluzyc magowi.",
         "Komenda: familiar.",
@@ -2988,9 +2988,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "energize",
         "Pozwala na skrocenie czasu odpoczynku do minimum, po pewnym czasie jednak efekt odwraca sie.",
         0,
@@ -3009,9 +3009,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "healing sleep",
         "Czar ten dziala tylko na czlonkow grupy maga. Usypia on ranna osobe, ktora zapada w letarg podobny do spiaczki, z ktorej nie moze sama sie obudzic. W tym czasie procesy regeneracji ran ulegaja niezwyklemu przyspieszeniu.",
         0,
@@ -3030,9 +3030,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "ethereal armor",
         "Czar tworzy wokol rzucajacego nierzeczywisty pancerz, ktory nic nie wazy i zapewnia ochrone porownywalna do pelnej zbroi plytowej.",
         "Idealny do walki z Behemotem",
@@ -3051,9 +3051,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "domination",
         "Czar umozliwia rzucajacemu kontrolowanie wszystkich dzialan istoty bedacej pod jego wplywem.",
         0,
@@ -3070,9 +3070,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "increase wounds",
         "Ten opracowany przez nekromantow czar tworzy wokol ofiary pulsujaca czerwona aure, ktora w przypadku gdy ofiara otrzyma jakies obrazenia, bedzie je dodatkowo zwiekszac.",
         0,
@@ -3091,9 +3091,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "ray of enfeeblement",
         "Za pomoca tego czaru mozesz ugodzic swojego przeciwnika promieniem silnie oslabiajacej miesnie energii, aby zaburzyc koordynacje ruchowa ofiary i zwiekszyc swoje szanse w walce.",
         0,
@@ -3112,8 +3112,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "flame arrow",
         "Tworzy kilka ognistych strzal, ktore z wielka sila wbijaja sie w cialo ofiary.",
         0,
@@ -3130,9 +3130,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "minor globe of invulnerability",
         "Czar ten tworzy wokol rzucajacego sfere energii, ktora zatrzymuje wszystkie zaklecia do 3 kregu wlacznie.",
         0,
@@ -3151,8 +3151,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "globe of invulnerability",
         "Czar ten tworzy wokol rzucajacego sfere energii, ktora zatrzymuje wszystkie zaklecia do 4 kregu wlacznie.",
         0,
@@ -3171,9 +3171,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "major globe of invulnerability",
         "Czar ten tworzy wokol rzucajacego sfere energii, ktora zatrzymuje wszystkie zaklecia do 5 kregu wlacznie.",
         0,
@@ -3192,10 +3192,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "flare",
         "Uwalnia energie, ktora powoduje oslepiajacy przeciwnika wybuch, dezorientacje i oszolomienie. ",
         0,
@@ -3213,9 +3213,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "charm monster",
         "Zakleciem tym mozna przejac kontrole nad kazda istota oprocz nieumarlych.",
         0,
@@ -3232,9 +3232,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "comprehend languages",
         "Umysl rzucajacego ten czar staje sie otwarty na wszelkie proby porozumienia sie. Podczas jego dzialania wszystkie jezyki swiata zna jak swoj wlasny.",
         0,
@@ -3253,9 +3253,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "power word blind",
         "Niezwykle potezne zaklecie pozwalajace oslepic ofiare.",
         0,
@@ -3274,9 +3274,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "power word kill",
         "Niezwykle potezne zaklecie pozwalajace natychmiastowo usmiercic istote, ktora jest ledwo zywa.",
         "Mag przemian usmierca szybciej.",
@@ -3293,9 +3293,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "power word stun",
         "Jest to niezwykle potezne zaklecie, dzieki ktoremu mozna silnie ogluszyc mocno poraniona osobe.",
         0,
@@ -3312,8 +3312,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "dimension door",
         "Ten czar to rodzaj slabego teleportu. Przenosi on maga w obrebie jednej krainy do wybranej postaci. Nie zawsze jednak moze sie to udac, ze wzgledu na ochrone przed tym zakleciem.",
         "Do Tytana Gromowladnego",
@@ -3330,8 +3330,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "neutralize poison",
         "Po rzuceniu na zatruta osobe czar calkowicie neutralizuje trucizne.",
         0,
@@ -3348,9 +3348,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "slow poison",
         "Czar, dzieki ktoremu mozna spowolnic dzialanie prawie kazdej trucizny, tak aby ofiara miala szanse przezyc podroz do uzdrowiciela.",
         0,
@@ -3367,10 +3367,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "lesser restoration",
         "Pozwala odzyskac jasnosc umyslu osobom oglupionym.",
         "Na feeblemind.",
@@ -3387,8 +3387,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "restoration",
         "Pozwala odzyskac jasnosc umyslu osobom oglupionym, a takze pomoc osobom, ktore mialy kontakt z negatywna sfera energii.",
         "Na feeblemind, energy drain.",
@@ -3405,8 +3405,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "vampiric touch",
         "Ten nekromancki czar wysysa z ofiary sily zyciowe i czesc ich przekazuje magowi. Moze on czasowo zwiekszyc sily witalne powyzej maksymalnej wartosci. Jednak uzyty przeciw istocie nieumarlej lub powiazanej z planem negatywnym zadziala odwrotnie.",
         0,
@@ -3423,8 +3423,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "feeblemind",
         "Wampiry potrafia oglupic swoja ofiare. Na tego typu przeklenstwo moze pomoc oczyczajaca moc kleryka.",
         "Zdejmuje lesser restoration i restoration.",
@@ -3443,9 +3443,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "divine favor",
         "Rzucajacy odwoluje sie do swego boga, aby na krotki czas obdarzyl go czastka niebianskiej mocy. Po rzuceniu tego czaru sprawnosc bojowa czarujacego zauwazalnie wzrasta.",
         0,
@@ -3464,8 +3464,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "divine power",
         "Jest to wzmocniona wersja czaru 'divine favor', kleryk modli sie do swego boga o uzyczenie mu swej boskiej mocy. Wytrzymalosc, sila i celnosc rzucajacego zauwazalnie rosnie.",
         0,
@@ -3484,9 +3484,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "animate dead",
         "Czar wyciaga z ciala szkielet, animuje go i poddaje kontroli tego, ktory go stworzyl. Martwiak bedzie sluzyc magowi tak dlugo, az nie ulegnie zniszczeniu.",
         0,
@@ -3503,10 +3503,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "sunscorch",
         "Czarujacy przyzywa niewielki swietlny pocisk, ktory nastepnie pedzi z ogromna predkoscia w strone wskazana przez druida.",
         0,
@@ -3525,8 +3525,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "alicorn lance",
         "Sprzezony z silami natury druid potrafi przywolac polmaterialny rog jednorozca i skierowac go na swojego przeciwnika, zadajac mu niewielkie obrazenia.",
         0,
@@ -3545,9 +3545,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "bane",
         "Zaklecie sprawia, ze ofiare ogarnia uczucie zguby i beznadziei. Bedzie jej przez to trudniej trafic napastnika i zadac mu wieksze obrazenia.",
         0,
@@ -3566,8 +3566,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "inspire",
         "Najwybiniejsi magowie szkoly iluzji potrafia za pomoca tego czaru zrealizowac swoje ukryte pragnienia, dzieki czemu walcza bardziej zaciekle. Kiedy iluzja mija staja sie o wiele slabsi.",
         "Podczas trwania +dmg/+hit, jak spadnie -dmg/-hit.",
@@ -3584,9 +3584,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "inspiring presence",
         "Czar, ktory poprawia wyglad celu, dzieki czemu osoba wydaje sie bardziej charyzmatyczna.",
         "Mocny boost do charyzmy.",
@@ -3605,9 +3605,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "darkvision",
         "Modyfikuje wzrok osoby poddanej jego dzialaniu w taki sposob, ze jest ona w stanie nawet w najwiekszych ciemnosciach widziec calkiem wyraznie.",
         0,
@@ -3626,8 +3626,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "storm shell",
         "Potezny czar chroniacy przed dzialaniem czterech zywiolow, dzieki czemu zapewnia ochrone przed prawie kazdym rodzajem znanej magii.",
         0,
@@ -3646,8 +3646,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "chill metal",
         "Czar nie uderza bezposrednio w ofiare ale w jej zbroje, ochladzajac ja do przerazliwie niskiej temperatury. Zmusza to ofiare do pospiesznego zdjecia i odrzucenia zimnego kawalka pancerza.",
         0,
@@ -3664,10 +3664,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "blade barrier",
         "Tworzy bariere wirujacych, ostrych jak brzytwa, kawalkow skalnych. Kazda istota, ktora sprobuje zblizyc sie do druida lub zechce go zaatakowac zostanie narazona na spore obrazenia.",
         0,
@@ -3686,8 +3686,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "raise zombie",
         "Za pomoca tego czaru, nekromanci moga ozywic dowolne cialo humanoida, aby poddalo sie jego woli.",
         0,
@@ -3704,8 +3704,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "immolate",
         "Dzieki wytworzeniu jarzacej sie poswiaty dookola postaci, na ktora czar zostal rzucony, przeciwnikom trudniej jest w nia trafic.",
         0,
@@ -3724,8 +3724,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "shadow weapon",
         "Zaklecie tworzy niematerialne ostrze z cienia. Chodza sluchy, ze mistrzowie magii potrafia utworzyc orez, ktoremu zaden nie bedzie sie rownal.",
         0,
@@ -3741,10 +3741,10 @@
         0,
         0,
         0,
-        0,
-    },
+        0
+    ],
 
-    {
+    [
         "freezing rain",
         "Silny czar przywolujacy na otwartych przestrzeniach deszcz sporych bryl lodu uderzajacych wszystkich w lokacji oprocz rzucajacego i jego grupy. Moze on powalic wroga na ziemie.",
         0,
@@ -3761,8 +3761,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "animal rage",
         "Aby zwiekszyc zdolnosci bojowe swoich podopiecznych druidzi opracowali czar pozwalajacy na wprawienie swojego podopiecznego w zwierzecy szal.",
         0,
@@ -3781,8 +3781,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "burst of flame",
         "Ten prosty czar pozwala stworzyc swoisty jezyk ognia, posylajac go w strone swojego przeciwnika, raniac go czystym, zywiolowym ogniem.",
         0,
@@ -3799,8 +3799,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "burst of fire",
         "Ten prosty czar pozwala stworzyc swoisty jezyk ognia, posylajac go w strone swojego przeciwnika, raniac go czystym, zywiolowym ogniem.",
         0,
@@ -3817,8 +3817,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "endure fire",
         "Ta magiczna inkantacja tymczasowo zwieksza odpornosc czarujacego lub jego przyjaciol przed efektami dzialania niektorych zywiolow.",
         0,
@@ -3837,8 +3837,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "endure cold",
         "Ta magiczna inkantacja tymczasowo zwieksza odpornosc czarujacego lub jego przyjaciol przed efektami dzialania niektorych zywiolow.",
         0,
@@ -3857,8 +3857,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "endure acid",
         "Ta magiczna inkantacja tymczasowo zwieksza odpornosc czarujacego lub jego przyjaciol przed efektami dzialania niektorych zywiolow.",
         0,
@@ -3877,8 +3877,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "endure lightning",
         "Ta magiczna inkantacja tymczasowo zwieksza odpornosc czarujacego lub jego przyjaciol przed efektami dzialania niektorych zywiolow.",
         0,
@@ -3897,8 +3897,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "smashing wave",
         "Tworzy fale wody, ktora uderza w przeciwnika, raniac go. Uderzenie jest tak potezne, ze potrafi nawet przewrocic przeciwnika.",
         0,
@@ -3915,8 +3915,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "luck",
         "Sprzymierzency bogow potrafia zabiegac o ich szczegolne laski, dzieki czemu maja po prostu wiecej szczescia.",
         0,
@@ -3935,10 +3935,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "hold evil",
         "Czar ten na krotka chwile calkowicie paralizuje miesnie ofiary, ktora jest sluga ciemnosci.",
         0,
@@ -3957,8 +3957,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "divine shield",
         "Doswiadczeni paladyni potrafia utworzyc wokol siebie boska tarcze, ktora ochrania przed zywiolami oraz energia negatywna.",
         0,
@@ -3977,8 +3977,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "magic fang",
         "Dzieki temu czarowi druid potrafi tchnac w zwierze czastke magii, dzieki czemu ataki zwierzaka staja sie magiczne.",
         0,
@@ -3997,8 +3997,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "raise ghoul",
         "Dzieki temu czarowi wprawni nekromanci sš w stanie stworzyc ghoula  monstrum, ktorego jedynym celem jest zabijanie. Potrafi rowniez nosic przedmioty za maga.",
         0,
@@ -4015,8 +4015,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "raise ghast",
         "Czar ten z ciala ofiary tworzy ghasta. Ghast to mocniejsza wersja ghula, jest tak samo odrazajacy, jednak dysponuje wiekszymi szponami, oraz jest znacznie szybszy.",
         0,
@@ -4033,9 +4033,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "orb of entropy",
         "Czar ten wyzwala kule negatywnej energii, ktora uderza w cel i wysysa sily zyciowe ofiary. Nalezy pamietac, ze czar dziala tylko na istoty zywe, a nie na umarlaki, demony i inne podobne stworzenia.",
         0,
@@ -4052,8 +4052,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "might",
         "Mistrz przemian potrafi za pomoca tego czaru zmieniac cechy postaci na ktora zostanie rzucony ten czar. Niestety w tej wersji  czaru, mag nie potrafi wybrac cechy ktora ulegnie zwiekszeniu.",
         0,
@@ -4072,9 +4072,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "frost rift",
         "Ten prosty czar pozwala stworzyc niewielkie ostrze zimna, ktore skierowane na cel zadaje pewne obrazenia. Istnieje szansa na to, ze ofiara zostanie na chwile zamrozona.",
         0,
@@ -4091,8 +4091,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "spirit armor",
         "Przyzwane z innego wymiaru duchy, dodatkowo wzmocnione energia przyzywajacego, potrafia stworzyc calkiem mocny pancerz, dookola nekromanty.",
         0,
@@ -4111,8 +4111,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "create symbol",
         "Zarliwi wyznawcy swoich bogow, a wlasciwie ich przedstawiciele w Swiecie, klerycy potrafia ublagac swoich bogow o zeslanie im Swietego dla nich symbolu potrzebnego do odpedzania nieumarlych.",
         0,
@@ -4129,9 +4129,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "slow rot",
         "Czar zwieksza swiezosc produktow zywieniowych, dzieki czemu moga one byc duzo dluzej przechowywane, bez utraty jakosci. Czar nie dziala na juz zatrute jedzenie.",
         0,
@@ -4148,9 +4148,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "champion strength",
         "Czar, ktory zabiera czastke sily kazdemu z czlonkow druzyny, aby przekazac ja celowi zaklecia.",
         0,
@@ -4169,9 +4169,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "life transfer",
         "Doswiadczeni klerycy, dzieki wieloletnim praktykom, potrafia przekazac czastke swojej energi zyciowej innej osobie.",
         0,
@@ -4190,9 +4190,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "mass bless",
         "Obdarzenie blogoslawienstwem kazdego z czlonkow druzyny.",
         0,
@@ -4212,9 +4212,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "mass luck",
         "Obdarzenie szczesciem kazdego z czlonkow druzyny.",
         0,
@@ -4234,9 +4234,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "misfortune",
         "Magowie potrafia sprawic, ze ich przeciwnik ma mniej szczescia niz normalnie.",
         0,
@@ -4255,9 +4255,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "lower resistance",
         "Czar ten zmniejsza odpornosc na magie twojego przeciwnika.",
         0,
@@ -4276,11 +4276,11 @@
         0,
         0,
         0
-    },
+    ],
 
 
 
-    {
+    [
         "force missiles",
         "Za jego pomoca mistrz inwokacji tworzy kilka sporych pociskow mocy i wysyla je w kierunku wroga.",
         "Mocny czar inwokacji.",
@@ -4297,9 +4297,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "thunder bolt",
         "Ten potezny czar tworzy olbrzymie wyladowanie energii elektrycznej, w formie piorunu, ktore to mistrz inwokacji moze wypuscic w wybrany cel.",
         0,
@@ -4316,9 +4316,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "lava bolt",
         "Czar powoduje wyplyw lawy, ktora przez jakis czas zadaje obrazenia. Wrogom walczacym z druidem lub jego grupa.",
         "Tyka co jakis czas.",
@@ -4335,8 +4335,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "hellfire",
         "Ten czar pozwala przywolac piekielne jezyki, ktore otaczaja przeciwnika, raniac go czystym, zywiolowym ogniem. Czar jest mocniejsza wersja 'burst of fire'.",
         0,
@@ -4353,8 +4353,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "ice bolt",
         "Zaklecie wytwarza dzieki mocy druida lodowy pocisk, ktory materializuje sie z wody zawartej w powietrzu a potem leci w kierunku celu wybuchajac mnostwem ostrych, lodowych krysztalkow.",
         0,
@@ -4371,9 +4371,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "major haste",
         "Jest to niezwykle potezny czar, za pomoca ktorego mistrz przemian jest w stanie na dluzsza chwile znacznie przyspieszyc procesy zyciowe i skrocic czas reakcji grupy osob.",
         0,
@@ -4392,8 +4392,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "wind shield",
         "Czar ten powoduje, ze wokol rzucajacego zbiera sie wiatr i formuje ochronna tarcze. Trudniej trafic bedacego pod jej wplywem, poniewaz wiatr znosi ciosy wrogow na boki.",
         0,
@@ -4412,9 +4412,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "consecrate",
         "Prawidlowo wykonane zaklecie spowoduje, ze wszystkie dobre istoty wydadza sie milsze, oraz bedzie im bardziej sprzyjac szczescie. Blogoslawione miejsca nie sprzyjaja istotom umarlym.",
         0,
@@ -4431,9 +4431,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "desecrate",
         "Prawidlowo wykonane zaklecie spowoduje, ze wszystkie zle istoty zyskaja na sile przekonywania, oraz bedzie im bardziej sprzyjac szczescie.",
         0,
@@ -4450,30 +4450,30 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "daze",
         "Za pomoca tego zaklecia oszalamiasz przeciwnika. Traci on czesciowa kontrole nad cialem. Przez pewien czas nie moze on chodzic, ani nie moze nikogo atakowac.",
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    },
+    ],
 
-    {
+    [
         "summon lesser meteor",
         "Jest to potezny czar, dzieki ktoremu mistrz przywolan jest w stanie skierowac na wroga jeden z unoszacych sie w przestrzeni kosmicznej meteorytow. Wada zaklecia jest to, ze mozna je rzucic tylko na otwartym terenie.",
         0,
@@ -4490,9 +4490,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "eyes of the torturer",
         "Modyfikuje oczy maga, dzieki czemu widzi on wszystkie slabe punkty na ciele przeciwnika.",
         "Crit Chance x2",
@@ -4511,9 +4511,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "ghoul touch",
         "Dzieki badaniom nad jadem ghoulow udalo sie stworzyc czar, ktory potrafi sparalizowac ofiare.",
         0,
@@ -4531,9 +4531,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "transmute liquid",
         "Zamienia jeden plyn w drugi, nie da sie niestety przewidziec ostatecznego wyniku.",
         0,
@@ -4550,9 +4550,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "change liquid",
         "Za pomoca przywolywanej boskiej mocy kazdy kaplan potrafi przemienic wino w wode, a wode ponownie w wino.",
         0,
@@ -4569,9 +4569,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "decay",
         "Cialo celu doznaje okropnych obrazen spowodowanych przyspieszonym rozkladem komorek, mimo, ze czar nie usmierca na miejscu to jednak powoduje bardzo ciezkie zniszczenia na ciele ofiary.",
         "Leczy Nieumarlaki",
@@ -4588,9 +4588,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "horrid wilting",
         "Rzucenie tego zaklecia powoduje wyparowanie wilgoci z ciala wybranej istoty, co zadaje jej niewyobrazalne cierpienia, a takze wywoluje u niej pragnienie.",
         0,
@@ -4607,9 +4607,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "unholy fury",
         "Ten czar moze byc rzucony na nieumarlego stworzonego przez nekromante. Zadza mordu wyzwolona tym czarem powoduje, iz ozywieniec jest szybszy, jego ciosy sa celniejsze i mocniejsze.",
         0,
@@ -4628,9 +4628,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "protection from summon",
         "Ten czar zapewnia rzucajacemu lub dotknietej przez niego osobie czesciowa ochrone przed przed przywolaniem.",
         0,
@@ -4649,9 +4649,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "create lesser illusion",
         "Ten czar pozwala iluzjoniscie stworzyc iluzje dowolnej, slabej istoty. Bedzie ona pomagala magowi w walce, jednak jakiekolwiek w nia trafienie spowoduje, ze iluzja zniknie.",
         0,
@@ -4668,9 +4668,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "create greater illusion",
         "Ten czar pozwala iluzjoniscie stworzyc iluzje dowolnej, silnej istoty. Bedzie ona pomagala magowi w walce, jednak jakiekolwiek w nia trafienie spowoduje, ze iluzja zniknie.",
         0,
@@ -4687,9 +4687,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "mass fly",
         "Jest to ulepszona wersja czaru 'fly' pozwalajaca unosic sie w powietrzu nie tylko jednej osobie, ale calej grupie osob.",
         0,
@@ -4708,9 +4708,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "ray of light",
         "Zaklecie to rozprasza stworzony przez magie mrok.",
         0,
@@ -4727,9 +4727,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "embalm",
         "Za pomoca tego czaru mozna zabalsamowac cialo. Dzieki temu bedzie sie ono rozkladalo o wiele dluzej.",
         0,
@@ -4746,10 +4746,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "soul trap",
         "Za pomoca tego czaru nekromanci wieza dusze niedawno zmarlej istoty i zmuszaja ja do sluzenia sobie.",
         0,
@@ -4766,9 +4766,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "summon insect",
         "Jednym z pierwszych czarow, ktorych ucza sie mistrzowie przywolan jest przyzywanie niewielkich istot zywych.",
         0,
@@ -4785,9 +4785,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "summon greenskin",
         "Jest to lepsza wersja czaru summon insects. Przywoluje ona jednegoz zielonoskorych: tasloi, goblina lub hobgoblina.",
         0,
@@ -4804,9 +4804,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "summon flying creature",
         "Jest to lepsza wersja czaru 'summon greenskins'. Przywoluje ona jedna z latajacych istot: mantykore, gryfa lub harpie.",
         0,
@@ -4823,9 +4823,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "summon strong creature",
         "Jest to lepsza wersja czaru 'summon flying creatures'. Przywoluje ona jedna z silnych istot.",
         0,
@@ -4842,9 +4842,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "summon ancient creature",
         "Jest to lepsza wersja czaru 'summon strong creatures', jak i zarazem najmocniejsze tego typu zaklecie. Przywoluje ona jedna z mitycznych istot: dzina, hydre lub jednorozca.",
         0,
@@ -4861,9 +4861,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "summon greater meteor",
         "Jest to lepsza wersja poteznego czaru 'summon lesser meteor', dzieki ktoremu mistrz przywolan jest w stanie skierowac na wroga jeden z unoszacych sie w przestrzeni kosmicznej meteorytow.",
         0,
@@ -4880,9 +4880,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "razorblade hands",
         "Czar ten przemienia rece rzucajacego w dlugie na dwa lokcie ostrza, ktorymi to jest w stanie ciac swoich przeciwnikow nie gorzej niz wojownik. Niestety, taki stan dloni uniemozliwia mu wykonywania wielu czynnosci, w tym i czarowania.",
         0,
@@ -4901,9 +4901,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "beast claws",
         "Druidzi wyzwalaja moce przemian do przeksztalcenia swych rak w potezne szpony bestii. Nie mozna wtedy wykonywac prawie zadnych czynnosci, do ktorych potrzebne sa rece,  w tym i rzucac czarow. Dzieki sile i szybkosci swych szponow druid moze wykonac dodatkowy atak, a takze jego ataki sa znacznie silniejsze.",
         0,
@@ -4922,9 +4922,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "eye of vision",
         "Tworzy przedmiot, ktory moze miec 'detect invis', 'detect hidden', 'detect magic', 'detect good', 'detect evil' oraz 'darkvision'",
         0,
@@ -4941,9 +4941,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "dancing lights",
         "Zaklecie to rozprasza stworzony przez magie mrok.",
         0,
@@ -4960,9 +4960,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "holy weapons",
         "Tworzy dwie widmowe bronie, ktore po pewnym czasie znikaja.",
         0,
@@ -4980,11 +4980,11 @@
         0,
         0,
         0
-    },
+    ],
 
 
 
-    {
+    [
         "wind charger",
         "Czar ten wyzwala potezna fale wiatru, ktora uderzajac w cel moze zmiesc go z nog.",
         0,
@@ -5003,9 +5003,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "firefly swarm",
         "Druid, jako przyjaciel i obronca natury moze wezwac swietliki aby skupily sie wokol niego w formie roju i oswietlaly mu droge.",
         "Tylko w lesie.",
@@ -5022,8 +5022,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "floating skull",
         "Czaszka, czerpiaca sily witalne ciala, z ktorego zostala stworzona, rozprowadza wokolo aure bladoniebieskiego, upiornego swiatla, ktore calkiem dobrze oswietla teren.",
         0,
@@ -5040,8 +5040,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "hallucinations",
         "Wywolanie u ofiary halucynacji.",
         "50% szans na dobry/zly efekt.",
@@ -5059,9 +5059,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "spiritual light",
         "Czar ten przywoluje do zarliwego wyznawcy kule Boskiego Swiatla, ktora oswietla mu droge w ciemnosci krazac wokolo.",
         0,
@@ -5078,9 +5078,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "dismiss animal",
         "Za pomoca tego czaru mozna odeslac przyzwane oraz stworzone przez siebie lub kogos stworzenia.",
         0,
@@ -5097,9 +5097,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "confusion shell",
         "Zaklecie to pozwala stworzyc dookola siebie iluzje przerazajšcych potworow. Nie rania one przeciwnika w zaden sposob, jednak ich obecnosc potrafi przerazic mniej odporne osoby, czyniac je o  wiele mniej zdolnymi do walki.",
         0,
@@ -5118,9 +5118,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "perfect self",
         "Otaczasz sie doskonala iluzja samego siebie. Dzieki temu twoi wrogowie nie widza zadnych ran ktore odniosles w walce.",
         0,
@@ -5139,9 +5139,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "create tree",
         "Druidzi posiadaja wszelka wiedze na temat uprawiania i wzrostu roslin, dlatego tez potrafia sprawic aby prawie w kazdym miejscu, gdzie tylko mozna zapuscic korzenie, wyroslo i zakwitlo drzewo owocowe.",
         0,
@@ -5158,9 +5158,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "detect aggressive",
         "Po rzuceniu tego czaru, mag rozpoznaje, czy jego przeciwnik jest agresywny, czy nie. Widzi on to juz z daleka. Bardzo przydatne zaklecie przy poznawaniu nowych terenow.",
         0,
@@ -5179,9 +5179,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "animate staff",
         "Czar ten przemienia dowolna laske, kostur, wlocznie lub halabarde w weza. Niestety, kiedy czar przestanie dzialac, waz, a zarazem bron, znika.",
         0,
@@ -5198,9 +5198,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "force field",
         "Czar tworzy wokol maga kopule, odcinajac go calkowicie od swiata. Nie moze on nic robic przez czas dzialania zaklecia, w tym przerwac czaru. Przez ten czas nie mozna takze niczego zrobic magowi.",
         0,
@@ -5219,9 +5219,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "fly",
         "Czar ten pozwala lewitowac tuz nad ziemia. W odroznieniu od 'Float' pozwala na dostanie sie do lokacji powietrznych.",
         0,
@@ -5240,8 +5240,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "noble look",
         "Za pomoca tego czaru mag moze zwiekszyc swoja charyzme. Jest mu wtedy o wiele latwiej rzucac czary, zwiazane z jego wygladem.",
         0,
@@ -5260,8 +5260,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "resist weapon",
         "Najpotezniejszy czar ze szkoly odrzucania, zapewniajacy calkowita odpornosc na ciosy magiczna i niemagiczna bronia.",
         0,
@@ -5280,9 +5280,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "mantle",
         "Bardzo silny ochronny czar personalny, zapewniajacy calkowita odpornosc na niemagiczny oraz a takze niektore bronie magiczne.",
         "Bron +0 +1",
@@ -5301,9 +5301,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "ring of vanion",
         "Znani ze swego przywiazania do kregow mocy, druidzi stworzyli zaklecia pozwalajace na przeniesienie siebie do takiego wlasnie miejsca. Cel podrozy jest warunkowany posiadaniem odpowiedniego komponentu z danego regionu.",
         0,
@@ -5320,9 +5320,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "circle of vanion",
         "Dzieki odpowiednim komponentom mozliwa jest podroz do Kregu Druidow w puszczy Carralak.",
         0,
@@ -5339,9 +5339,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "heal animal",
         "Znajacy nature druidzi potrafia uleczyc rany zadane ich podopiecznym.",
         0,
@@ -5358,9 +5358,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "corrode",
         "Czar moze zostac wrzucony na przedmiot lub na postac. Wszystkie przedmioty wykonane z metalu podatnego na korozje zostana oslabione przez dzialanie rdzy.",
         0,
@@ -5377,9 +5377,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "puppet master",
         "Przejecie kontroli nad czyims sluga.",
         0,
@@ -5396,9 +5396,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "dismiss insect",
         "Za pomoca tego czaru mozna odeslac przyzwane oraz stworzone przez siebie lub kogos stworzenia.",
         0,
@@ -5415,9 +5415,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "dismiss person",
         "Za pomoca tego czaru mozna odeslac przyzwane oraz stworzone przez siebie lub kogos stworzenia.",
         0,
@@ -5434,9 +5434,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "dismiss monster",
         "Za pomoca tego czaru mozna odeslac przyzwane oraz stworzone przez siebie lub kogos stworzenia.",
         0,
@@ -5453,9 +5453,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "dismiss undead",
         "Za pomoca tego czaru mozna odeslac przyzwane oraz stworzone przez siebie lub kogos stworzenia.",
         0,
@@ -5472,9 +5472,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "nature curse",
         "Utrudnia poruszanie na terenach lesnych.",
         0,
@@ -5492,9 +5492,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "loyalty",
         "Chroni przed czarami 'puppet master' i 'repayment'. Utrudnia zerwanie wiezi podczas 'domination'.",
         0,
@@ -5511,9 +5511,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "repayment",
         "Sluga uwalnia sie spod kontroli i atakuje osobe, ktora przejela nad nim kontrole.",
         0,
@@ -5530,9 +5530,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "maze",
         "Tworzy sie istny labirynt, po ktorym mozna krazyc bez konca. Oczywiscie istnieje szansa, iz danej osobie uda sie dojsc tam, gdzie chce.",
         0,
@@ -5551,9 +5551,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "antimagic manacles",
         "Polmaterialne kajdany zarzucane na ofiare aby ta nie mogla wykonac ruchow niezbednych do wykonania zaklecia.",
         "PvP",
@@ -5572,9 +5572,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "great dispel magic",
         "Usuwa calkowicie magie z przedmiotu lub istoty.",
         0,
@@ -5591,9 +5591,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "deflect wounds",
         "Redukuje znacznie otrzymywane obrazenia. Im bardziej doswiadczony czarodziej, tym wieksza redukcja.",
         "Redukcja = Spell Level",
@@ -5612,9 +5612,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "imbue with element",
         0,
         0,
@@ -5631,10 +5631,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "psionic blast",
         0,
         0,
@@ -5651,9 +5651,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "astral journey",
         "Przeniesienie umyslu w inne miejsce.",
         0,
@@ -5671,9 +5671,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "healing ring",
         "Czar druidzki leczacy cala druzyne.",
         0,
@@ -5690,9 +5690,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "resist poison",
         "Wzmacnia odpornosc przeciwko truciznom.",
         0,
@@ -5711,9 +5711,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "wizard eye",
         "Pozwala zobaczyc swiat oczami ofiary.",
         "PvP",
@@ -5730,9 +5730,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "loop",
         "Jest to lepsza wersja zaklecia maze. Czar ten sprawia, ze przeciwnik maga, dostaje zawrotow glowy i traci orientacje w przestrzeni. Rzadko udaje mu sie wyjsc z lokacji, a jezeli juz wyjdzie, to najprawdopodobniej w zlym kierunku.",
         0,
@@ -5751,9 +5751,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "piercing sight",
         "Pozwala magowi widziec przez zamkniete drzwi oraz zagladac do zamknietych skrzynek. Pozwala zauwazyc osoby niewidzialne, jak i maga, pomiedzy lustrzanymi odbiciami.",
         0,
@@ -5772,9 +5772,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "acid arrow",
         "Mag tworzy kwasowa strzale, ktora wbija sie prosto w cialo przeciwnika, zadajac mu obrazenia. Dodatkowo niewielkie ilosci kwasu przez chwile utrzymuja sie we krwi ofiary, parzac go od srodka.",
         0,
@@ -5792,9 +5792,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "slippery floor",
         "Pokrycie podlogi tlusta i sliska substancja.",
         0,
@@ -5811,9 +5811,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "detect undead",
         "Kiedy mag jest pod wplywem tego czaru, rozpoznaje on, ktore istoty sa nieumarle.",
         0,
@@ -5832,9 +5832,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "confuse languages",
         "Ktos, kto znajduje sie pod dzialaniem tego czaru, nie jest w stanie dobrze poslugiwac sie jezykiem ktorym mowi naturalnie.",
         0,
@@ -5853,9 +5853,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "wall of mist",
         "Czar ten tworzy sciane mgly, przez ktora nic nie widac. W praktyce oznacza to, ze kiedy rozgladamy sie dookola, nie widzimy, kto stoi w sasiedniej lokacji.",
         "PvP",
@@ -5872,9 +5872,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "alarm",
         "Za pomoca tego zaklecia mag moze nalozyc na jakies wyjscie z lokacji alarm. Kiedy ktos przejdzie przez to przejscie, mag dostanie informacje o tym.",
         "PvP",
@@ -5891,9 +5891,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "summon distortion",
         "Zamienia miejscami osobe, ktora chce przywolac z osoba przywolywana.",
         0,
@@ -5912,9 +5912,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "banshee`s howl",
         "Najbardziej doswiadczeni z nekromantow potrafia tym czarem wywolac lament banshee. Wycie dosiega wszystkie zywe istoty w pomieszczeniu, ktore otrzymuja spore obrazenia. Mniej odporne istoty moga natychmiast umrzec.",
         0,
@@ -5932,9 +5932,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "blink",
         "Jest to bardzo potezny czar wynaleziony przez iluzjonistow. Powoduje on, ze cialo maga znajduje sie w stanie przejsciowym miedzy roznymi planami egzystencji, w skutek czego podczas proby trafienia czarodziej na chwile moze przeniesc sie na inny plan, a atak konczy sie pudlem.",
         0,
@@ -5952,9 +5952,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "remove fear",
         "Dodanie otuchy przerazonej osobie.",
         0,
@@ -5971,9 +5971,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "shadow conjuration",
         "Za pomoca tego czaru mag moze stworzyc cieniste istoty, ktore beda pomagac mu w walce. Iluzje sa jednag nietrwale i znikaja po jakimkolwiek w nie trafieniu.",
         0,
@@ -5990,9 +5990,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "fetch",
         "Zdolni iluzjonisci potrafia za pomoca tego zaklecia stworzyc iluzje samego siebie i pozostawic ja w wybranym przez siebie miejscu. Jak kazda iluzja, soboftor taki znika po jakimkolwiek trafieniu.",
         0,
@@ -6009,9 +6009,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "hardiness",
         "Po rzuceniu tego zaklecia na przedmiot, staje sie on niezniszczalny. Jednak ten czar ma tez wady. Podczas rzucania go, dany przedmiot musi byc w idealnym stanie. Natomiast, kiedy zaklecie przestanie dzialac, przedmiot bedzie bardzo zniszczony.",
         0,
@@ -6028,9 +6028,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "draining hands",
         "Czar sprawia, ze kazdy cios z reki zadany przez nekromante wysysa niewielka czesc sil zyciowych ofiary i przekazuje je magowi.",
         0,
@@ -6048,9 +6048,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "magic hands",
         "Ten czar sprawia, ze uderzenia maga staja sie magiczne. Niestety, nie dziala to wtedy, kiedy mag zalozy bron. Tak wiec, aby czar dzialal musi on walczyc piescia.",
         0,
@@ -6068,10 +6068,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "mental barrier",
         "Czar tworzy w umysle istoty rzucajacej czary bariere mentalna, powodujaca, ze ta osoba, nie jest w stanie rzucic danego zaklecia. Bariery mentalnej nie da sie rzucic na osoby nie uzywajacej magii.",
         0,
@@ -6090,10 +6090,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "defense curl",
         "Czar tworzy wokol maga cos w rodzaju magicznej spirali, ktora lekko przyhamowuje impet ciosow zadawanych magowi. Dzieki temu, dostaje on mniej obrazen.",
         0,
@@ -6112,9 +6112,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "shillelagh",
         "W wielu opowiesciach o druidach walcza oni za nature wykorzystujac magiczne kostury. Legendy te maja swe podloze miedzy innymi w tym czarze. Przywoluje on kostur zwany shillelagh. ",
         0,
@@ -6131,8 +6131,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "perfect senses",
         "Zaklecie to powoduje, ze zaden negatywny czar nie moze wplynac na zmysly maga. Tak wiec nie moze on stracic wzroku, sluchu, mowy, wechu, ani czucia.",
         0,
@@ -6151,8 +6151,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "cautious sleep",
         "Ten czar powoduje, ze mag wpada w lekki sen. Najmniejsze nawet zagrozenie wyrwie go ze snu.",
         0,
@@ -6171,8 +6171,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "mind fortess",
         "Czar, ktory laczy dwie osoby wiezia mentalna, przez co utrudnione jest rzucenie zaklecia oslabiajacego na cel zaklecia.",
         "Kosciany Smok, rzuty obronne na feeblemind.",
@@ -6191,8 +6191,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "fortitude",
         "To zaklecie tymczasowo zwieksza odpornosc czarujacego lub jego przyjaciol na niektore, negatywne efekty magii.",
         "Breath, Petri, Death?",
@@ -6211,9 +6211,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "lore undead",
         "Osoby wladajace magia doszly do takiej perfekcji w manipulowaniu martwiakami, ze potrafia ocenic ich stan poprzez jeden dotyk.",
         0,
@@ -6230,8 +6230,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "sense life",
         "Czar, ktory umozliwia ocene zdrowia wszystkich osob w druzynie.",
         0,
@@ -6250,9 +6250,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "shield of nature",
         "Ten potezny czar dostepny jedynie najpotezniejszym druidom, otacza rzucajacego bariera zlozona z czastek wszystkich czterech zywiolow. W przypadku zetknieciu sie z druidem, napastnik otrzyma obrazenia od jednego z elementow.",
         0,
@@ -6271,9 +6271,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "bonelace",
         "Czar powoduje niekontrolowany rozrost kosci na powierzchni ktorych pojawiaja sie ostre i cienkie igly, otaczajac kosc mgielka sciegu. Dla zyjacych posiadajacych cialo jest to bardzo bolesne przezycie, natomiast dla tych, ktorzy nie czuja juz swojego ciala lub go nie maja, czar wzmacnia ich oraz zwieksza mozliwosci.",
         0,
@@ -6292,9 +6292,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "heal plant",
         "Znajacy nature druidzi potrafia uleczyc rany zadane ich podopiecznym.",
         0,
@@ -6311,8 +6311,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "dismiss plant",
         "Za pomoca tego czaru mozna odeslac przyzwane oraz stworzone przez siebie lub kogos stworzenia.",
         0,
@@ -6329,8 +6329,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "aura of protection",
         "Aura paladynska, chroni przed obrazniami fizycznymi.",
         0,
@@ -6349,8 +6349,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "aura of precision",
         "Aura paladynska, dodaje precyzji przy zadawaniu ciosow.",
         0,
@@ -6369,8 +6369,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "aura of endurance",
         "Aura paladynska, dodaje ochrone przed zywiolami.",
         0,
@@ -6389,8 +6389,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "aura of battle lust",
         "Aura paladynska, dodaje sile w zadawanych ciosach.",
         0,
@@ -6409,8 +6409,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "aura of improved healing",
         "Aura paladynska, zwieksza regeneracje zycia.",
         0,
@@ -6430,8 +6430,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "aura of vigor",
         "Aura paladynska, przyspiesza regeneracje miesni przy dlugich podrozach.",
         0,
@@ -6450,9 +6450,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "fury of the wild",
         "Zwieksza sile ataku calej druzyny druida, ale tylko dla zwierzat i druidow.",
         0,
@@ -6471,8 +6471,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "shadow swarm",
         "To potezne zaklecie pozwala otoczyc ofiare gesta cienista sfera, z ktorej co jakis czas formuja sie iluzje ktore atakuja, lecz znikaja po jedym ciosie. Potrafi to jednak skutecznie przeszkadzac w odpoczynku, poruszaniu sie czy zapamietywaniu zaklec.",
         0,
@@ -6491,8 +6491,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "group unity",
         "Czar, ktory odbiera czastke jednej z cech fizycznych najsilniejszej osoby i oddaje ja reszcie druzyny.",
         "Sila, Kondycja, Zrecznosc.",
@@ -6511,8 +6511,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "share fitness",
         0,
         0,
@@ -6530,8 +6530,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "dazzling flash",
         "Sprowadza iluzje na oczy ofiary, by ta nie mogla dostrzec maga.",
         0,
@@ -6548,8 +6548,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "brainwash",
         "Usuwa zaklecia z glowy ofiary.",
         "remove_mem",
@@ -6566,9 +6566,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "spiritual weapon",
         "Czar ten to ulepszona, klerycka wersja czaru 'spiritual hammer'. Czar, zamiast magicznego widmowego mlota wzywa widmowa bron, w ktorej kleryk czuje sie najbieglejszy.",
         0,
@@ -6585,9 +6585,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "holy bolt",
         "Boska moc nie zadaje obrazen zywym istotom, jednak nadaje sie wprost doskonale do niszczenia nieumarlych.",
         0,
@@ -6604,9 +6604,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "flame lace",
         "Ogniste liny oplatajace cialo ofiary, parzac ja dotkliwie.",
         0,
@@ -6624,9 +6624,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "rain of blades",
         "Jest to potezne zaklecie ofensywne, tworzace co kilka tur serie magicznych ostrzy, ktore uderzaja w przeciwnika, zadajac ciezkie obrazenia.",
         0,
@@ -6643,9 +6643,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "chaotic shock",
         "Niestabilne porazenie, ktore wywoluje losowe obrazenia jednego z elementow zywiolow.",
         0,
@@ -6662,9 +6662,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "psychic scream",
         "Zaklecie to wywoluje w glowie ofiary przerazliwy wrzask, zadajacy dosc powazne obrazenia. Krzyk rozchodzi sie na cala lokacje i rozbrzmiewa w glowach wszystkich oprocz rzucajacego i jego grupy.",
         0,
@@ -6681,9 +6681,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "bull strength",
         "Ten czar tworzy we krwi i miesniach odzywcza substancje, sprawiajac, ze osoba objeta tym czarem staje sie na jakis czas duzo silniejsza.",
         0,
@@ -6702,9 +6702,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "cat grace",
         "Czar ten powoduje, ze refleks i koordynacja ruchowa osoby na ktora zostanie rzucony znacznie sie poprawia, co za tym idzie, tymczasowo wzrasta zrecznosc postaci.",
         0,
@@ -6723,9 +6723,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "owl wisdom",
         "Czar ten powoduje, ze osoba na ktora zostanie rzucony czar tymczasowo staje sie madrzejsza, potrafi patrzec na fakty z bardziej obiektywnego punktu widzenia i lepiej je kojarzyc.",
         0,
@@ -6744,9 +6744,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "fox cunning",
         "Czar ten powoduje, ze osoba na ktora zostanie rzucony czar tymczasowo bardziej inteligentna, potrafi szybciej kojarzyc fakty i uczyc sie nowych umiejetnosci.",
         0,
@@ -6765,9 +6765,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "bear endurance",
         "Czar ten powoduje, ze osoba na ktora zostanie rzucony czar tymczasowo staje sie bardziej wytrzymala a takze przyspiesza procesy metaboliczne zachodzace w organizmie.",
         0,
@@ -6786,9 +6786,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "eagle splendor",
         "Czar ten powoduje, ze osoba na ktora zostanie rzucony czar tymczasowo staje sie bardziej charyzmatyczna, wygadana i ciekawsza dla otoczenia.",
         0,
@@ -6807,9 +6807,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "nimbleness",
         "Lepsza wersja czaru 'Cat Grace'.",
         0,
@@ -6828,9 +6828,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "draconic wisdom",
         "Lepsza wersja czaru 'Owl Wisdom'.",
         0,
@@ -6849,9 +6849,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "insight",
         "Lepsza wersja czaru 'Fox Cunning'.",
         0,
@@ -6870,9 +6870,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "behemot toughness",
         "Lepsza wersja czaru 'Bear Endurance'.",
         0,
@@ -6891,10 +6891,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "mind strike",
         "Ten prosty czar bojowy przywoluje obrazy fizycznego bolu i ran, a nastepnie wysyla je w formie niewielkiego, purpurowego pocisku w kierunku wroga. Czar jednak nie sprawdza sie wogole w walce z nieumarlymi i konstruktami.",
         0,
@@ -6911,9 +6911,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "mind blast",
         "Czar ten to ulepszona wersja czaru 'Mind Strike'. Oczywiscie czar nie dziala na konstrukty i nieumarlych.",
         0,
@@ -6930,9 +6930,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "reverse gravity",
         "Czar, ktory podrzuca przeciwnikiem wysoko do gory. Jesli zaklecie uzywane jest w zamknietym pomieszczeniu ofiara otrzymuje jeszcze wieksze obrazenia, odbijajac sie od sufitu.",
         0,
@@ -6949,10 +6949,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "nature ally I",
         "Jedno z podstawowych zaklec dostepnych dla druidow. Pozwala przywolac zwierzecego towarzysza, ktory przez jakis czas bedzie sluzyl druidowi a potem zniknie.",
         0,
@@ -6969,9 +6969,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "nature ally II",
         "Jedno z podstawowych zaklec dostepnych dla druidow. Pozwala przywolac zwierzecego towarzysza, ktory przez jakis czas bedzie sluzyl druidowi a potem zniknie.",
         0,
@@ -6988,9 +6988,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "nature ally III",
         "Zaawansowane zaklecie dostepne dla druidow, ktore pozwala przywolac zwierzecego towarzysza. Przywolane w ten sposob zwierze bedzie o wiele mocniejsze niz w poprzednich wersjach tego czaru. ",
         0,
@@ -7009,9 +7009,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "nature ally IV",
         "Najpotezniejsze zaklecie z cyklu przywolywania zwierzecych towarzyszy. Najbardziej doswiadczeni druidzi sa w stanie uzyc tego czaru aby przywolac i kontrolowac zywiolaki roznych zywiolow.",
         0,
@@ -7030,9 +7030,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "cure animal",
         "Znajacy nature druidzi potrafia uleczyc rany zadane ich podopiecznym.",
         0,
@@ -7051,9 +7051,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "reinvigore animal",
         "Znajacy nature druidzi potrafia uleczyc rany zadane ich podopiecznym.",
         0,
@@ -7072,9 +7072,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "cure plant",
         "Znajacy nature druidzi potrafia uleczyc rany zadane ich podopiecznym.",
         0,
@@ -7093,12 +7093,12 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "reinvigore plant",
         "Znajacy nature druidzi potrafia uleczyc rany zadane ich podopiecznym.",
-        0.
+        0,
         0,
         0,
         0,
@@ -7114,9 +7114,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "bark guardian",
         "Pobudza jedno z okolicznych drzew do zycia.",
         0,
@@ -7135,9 +7135,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "wildthorn",
         "Pobudza jedno z okolicznych drzew do zycia. Lepsza wersja czaru 'Liveoak'.",
         0,
@@ -7156,9 +7156,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "mass refresh",
         "Regeneracja sil po dlugiej podrozy dla calej druzyny.",
         0,
@@ -7177,9 +7177,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "create healing water",
         "Wypelnia pusty pojemnik leczaca woda.",
         0,
@@ -7198,8 +7198,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "mend golem",
         "Dysponujac odpowiednim materialem mozna wypelnic ubytki golema.",
         0,
@@ -7218,10 +7218,10 @@
         0,
         0,
         0
-    },
+    ],
 
 
-    {
+    [
         "lesser cure poison",
         "Usuwa drobne zatrucia.",
         0,
@@ -7238,8 +7238,8 @@
         0,
         0,
         0
-    },
-    {
+    ],
+    [
         "greater cure poison",
         "Usuwa najgorsze z zatruc jakie istnieja.",
         0,
@@ -7256,11 +7256,11 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "light nova",
-        "Kula magicznego swiatla.",
+        "Pochlania swiatlo aby ostatecznie wybuchnac zadajac obrazenia wszystkim przeciwnikom na lokacji.",
         0,
         0,
         0,
@@ -7277,9 +7277,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "lightingshield",
         0,
         0,
@@ -7298,9 +7298,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "lightning storm",
         0,
         "110 control of magic na dwie zamiecie",
@@ -7319,9 +7319,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "blizzard storm",
         0,
         "110 control of magic na dwie zamiecie",
@@ -7340,9 +7340,9 @@
         0,
         0,
         0
-    },
+    ],
 
-    {
+    [
         "absolute magic protection",
         0,
         0,
@@ -7361,6 +7361,6 @@
         0,
         0,
         0
-    }
+    ]
 
 ]

@@ -117,7 +117,7 @@ function roller:catch(multimatches)
   printer:roller(render)
 
   if self.running then
-    tempTimer(0.3, function()
+    tempTimer(0.1, function()
       if match == 7 then
         scripts:beep()
       else
