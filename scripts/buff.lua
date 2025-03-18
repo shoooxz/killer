@@ -75,6 +75,7 @@ function buff:listAdd(name)
     	printer:error("Buff", err)
     return
   end
+  self:listRender()
 end
 
 function buff:setSerialized(res1, res2)
@@ -83,19 +84,21 @@ function buff:setSerialized(res1, res2)
   self:basicShow()
 end
 
+function buff:deleteSet(id)
+  db:delete(self.db.buff, id)
+  self:listRender()
+end
+
 function buff:listRender()
 	local res = db:fetch(self.db.buff, db:eq(self.db.buff.owner, profile:getName()), {self.db.buff.name})
 	local out = {}
 	for i=1, #res do
-		table.insert(out,
-			{
-				["label"] = res[i].name,
-				["command"] = [[buff:setSerialized("]]..res[i].set1..[[", ']]..res[i].set2..[[')]],
-				["tooltip"] = "",
-			}
-		)
+    local arr = {}
+    table.insert(arr, {"red", "X", [[buff:deleteSet(]]..res[i]._row_id..[[)]]})
+		table.insert(arr, {"white", res[i].name, [[buff:setSerialized("]]..res[i].set1..[[", ']]..res[i].set2..[[')]]})
+    table.insert(out, arr)
 	end
-	printer:gps(out)
+	printer:buff(out)
 end
 
 function buff:masterAllowed(target)

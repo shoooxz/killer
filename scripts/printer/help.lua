@@ -46,21 +46,20 @@ function printer:settings()
     self:command("/opcje s8 "..profile:get("s8"), "Fast Skill 8")
     self:command("/opcje s9 "..profile:get("s9"), "Fast Skill 9")
     self:command("/opcje s10 "..profile:get("s10"), "Fast Skill 10")
+    self:command("/opcje kill "..profile:get("kill"), "Opcja ataku np. bs, kill, charge")
     self:bottom()
 end
 
 function printer:scripts()
     self:title("Killer Skrypty")
-    self:command("/liaj_wyczysc", "Wyczysc mape Liaj (zmienia sie co apokalipse)")
-    self:info("W przypadku poruszania sie na terenie puszczy Liaj wyjscia")
-    self:info("generowane sa automatycznie")
     self:command("/aliasy", "Szybkie aliasy bez slash'a")
-    self:command("/zap", "Zapal lampe")
-    self:info("Do zapalenia lampy potrzebne sa 2 krzemienie i olej")
-    self:command("/medytuj", "Medytuj w gildii podroznikow, zapisz stan cech")
-    self:info("Przy kazdym uzyciu medytuj progres cech jest zapisywany w profilu")
-    self:info("oraz widoczny po wpisaniu komendy 'cechy'")
-    self:command("/napraw", "Napraw bron i zbroje")
+    self:space()
+    self:section("BUFF:")
+    self:command("/buff_set", "Ustal aktualny set buffow")
+    self:command("/buff_list", "Lista setow w bazie")
+    self:command("/buff_add (nazwa_setu)", "Dodaje set aktualny buffow do bazy")
+    self:command("/buff_reset", "Resetuje aktualny set buffow")
+    self:command("/buff", "Cast aktualny set buffow")
     self:space()
     self:section("GPS:")
     self:command("/npc (imie)", "Kieruj sie w strone NPC")
@@ -261,6 +260,20 @@ function printer:box(arr)
     end
     self:bottom(false, true)
 end
+
+function printer:buff(arr)
+  self:title("Buff")
+  self:line("Kliknij aby ustawic set buffow!", self.sectionColor)
+  self:space()
+  if next(arr) then
+      self:tableRow({2, 60}, {}, arr, true)
+  else
+      self:command("/buff_add (nazwa_setu)", "Dodaje set aktualny buffow do bazy")
+      self:command("/buff_reset", "Resetuje aktualny set buffow")
+  end
+  self:bottom(false, true)
+end
+
 
 function printer:gps(arr)
     self:title("GPS")

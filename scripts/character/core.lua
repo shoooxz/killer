@@ -6,16 +6,11 @@ function character:defensiveSpells()
   send(def)
 end
 
-function character:assist(sub)
-  local prefix = ""
-  if sub then
-    prefix = "order "..sub.." "
-  end
-  -- kazdy send musi miec prefix, order idzie ze state
+function character:assist()
   local fol = tonumber(profile:get("follower"))
   if fol > 0 then
     for i=1, fol do
-      send(prefix.."order "..i..".follower ass")
+      send("order "..i..".follower ass")
     end
   end
 end

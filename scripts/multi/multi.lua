@@ -2,14 +2,20 @@ multi = multi or {}
 multi.group = multi.group or {}
 
 function multi:processOrder(who, order)
-  -- learn, jesli ktos rozkazuje ci learn, odpal dodatkowo auto learn
   if who == profile:get("master") then
+    -- split args
+    local arg = utils:split(order, " ")
+    -- order
     if order ==  "learn" then
       learn.auto = true
     end
     if string.find(order, "buff") then
-      local arr = utils:split(order, " ")
-      buff:basicCast(arr[2])
+      buff:basicCast(arg[2])
+      return
+    end
+    if string.find(order, "kill") then
+      state:meKill(arg[2])()
+      return
     end
     if order ==  "eat" then
       inventory:eat()

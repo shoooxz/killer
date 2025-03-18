@@ -75,20 +75,32 @@ function exp:move(dir)
 end
 
 function exp:doThings()
-  if self:enemyExists() then
-    display("FIGHT")
+  local enemy = self:enemyExists()
+  if enemy then
+    -- order sub kill
+    -- assist leci z automatu
+    state:orderKill(enemy)()
   else
     self.paused = false
   end
 end
 
 function exp:enemyExists()
-  for i, p in pairs(gmcp.Room.People) do
-     if utils:inArray2(p.name, self.conf.enemy) then
-       return true
-     end
+  local loc = self:getRoomPeople()
+  for i=1, #self.conf.enemy do
+    if utils:inArray2(self.conf.enemy[i], loc) then
+      return self.conf.enemy[i]
+    end
   end
   return false
+end
+
+function exp:getRoomPeople()
+  local out = {}
+  for i, p in pairs(gmcp.Room.People) do
+    table.insert(out, p.name)
+  end
+  return out
 end
 
 function exp:stop()
@@ -96,3 +108,7 @@ function exp:stop()
     self.step = 1
     self.paused = false
 end
+
+scripts.events["exp.onEnemyKilled"] = registerAnonymousEventHandler("onEnemyKilled", function(event, arg)
+  exp:doThings()
+end)

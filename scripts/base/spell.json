@@ -5616,7 +5616,7 @@
 
     [
         "imbue with element",
-        0,
+        "Czar sprawia, ze przez pewien czas, bron zadaje dodatkowe obrazenia od jednego z zywiolow: ognia, zimna, blyskawic lub kwasu.",
         0,
         0,
         0,
@@ -5636,8 +5636,8 @@
 
     [
         "psionic blast",
-        0,
-        0,
+        "Potezne uderzenie mentalne.",
+        "Gracz nie moze tego czaru zdobyc.",
         0,
         0,
         0,

@@ -62,27 +62,48 @@ function scripts:prefix(str, color)
     resetFormat()
 end
 
-function scripts:dead(str)
-	-- zrobic check zeby nie examowalo
 
+function scripts:detectBody(arr)
+	for i=1, #arr do
+		if string.find(self.dead.name, arr[i]) then
+			return true
+		end
+	end
+	return false
+end
+
+function scripts:onEnemyKilled(str)
+	self.dead = {}
+	self.dead.name = str:lower()
+	self.dead.loot = "cialo"
+	self.dead.gem = false
+	self.dead.gold = false
 	who = str:lower()
-	if string.find(who, "keton") or string.find(who, "drzewiec") then
-		send("exam drzewo")
-	elseif string.find(who, "szkielet") then
-		send("exam kup")
-		send("get klej kup; get mon kup")
-	elseif string.find(who, "yugoloth") or string.find(who, "sniezny troll") or string.find(who, "lodowy troll") then
-		send("exam cialo; get all.klej cialo")
-	elseif string.find(who, "istota") or string.find(who, "blotny elemental") then
-		send("get all.klej;look")
-  elseif string.find(who, "goblin") or string.find(who, "ork") or string.find(who, "wzgorzowy gigant") then
-		send("exam cialo; get klej cialo")
+	if self:detectBody({"keton", "drzewiec"}) then
+		self.dead.loot = "drzewo"
+	elseif self:detectBody({"szkielet"}) then
+		self.dead.loot = "kupka"
+		self.dead.gem = true
+		self.dead.gold = true
+	elseif self:detectBody({"yugoloth", "troll", "gigant", "goblin", "ork", "krzykacz"})  then
+		self.dead.loot = "cialo"
+		self.dead.gem = true
+	elseif self:detectBody({"istota", "elemental"}) then
+		self.dead.loot = ""
+		self.dead.gem = true
+	end
+	if self.dead.gem then
+		send("get all.klej "..self.dead.loot)
+	end
+	if self.dead.gold then
+		send("get mon "..self.dead.loot)
+	end
+	if self.dead.loot == "" then
+		send("look")
 	else
-		send("exam cialo")
+		send("exam "..self.dead.loot)
 	end
-	if string.find(who, "krzykacz") then
-		send("get klej cialo")
-	end
+	raiseEvent("onEnemyKilled", self.dead)
 end
 
 function scripts:beep()

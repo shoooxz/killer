@@ -195,11 +195,24 @@ function state:checkForAss(me)
   end
 end
 
+function state:meKill(enemy)
+  return function()
+      local kill = profile:get("kill")
+      send(kill.." "..enemy)
+  end
+end
+
+function state:orderKill(enemy)
+  return function()
+      send("order "..state.sub.." kill "..enemy)
+  end
+end
+
 function state:printNeutral(obj)
   obj.name = utils:replacePolish(obj.name)
-  ls:cechoLink("<white>(<red>K<white>)", [[send("kill ]]..obj.name..[["); state:orderTeam("ass"); character:assist(false)]], "", true)
+  ls:cechoLink("<white>(<red>K<white>)", self:meKill(obj.name), "", true)
   ls:cecho(" <slate_grey>Order: ")
-  ls:cechoLink("<white><<red>K<white>>", [[send("order ]]..self.sub.." bs "..obj.name..[[; order ]]..self.sub.." kill "..obj.name..[[; ass"); character:assist("]]..self.sub..[[")]], "", true)
+  ls:cechoLink("<white><<red>K<white>>", self:orderKill(obj.name), "", true)
   ls:echo(" "..obj.name)
   ls:echo("\n")
 end
