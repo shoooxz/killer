@@ -96,7 +96,7 @@ function state:gmcpRoomPeople()
     if not gmcp.Char.Group then return false end
 
     for index, v in pairs(gmcp.Char.Group.members) do
-      local obj = v
+      local obj = utils:shallowCopy(v)
       -- convert data
       obj.mv = state:getMove(obj.mv)
       obj.hp = state:getHealth(obj.hp)
@@ -295,63 +295,30 @@ function state:printTeamMember(obj)
 end
 
 function state:getHealth(state)
-  local man = {
-    ["żadnych śladów"] =        "<green>#######",
-    ["zadrapania"] =            "<green>###### ",
-    ["lekkie rany"] =           "<green>#####  ",
-    ["średnie rany"] =          "<yellow>####   ",
-    ["ciężkie rany"] =          "<yellow>###    ",
-    ["ogromne rany"] =          "<red>##     ",
-    ["ledwo stoi"] =            "<red>#      ",
-    ["umiera"] =                "<red>       "
+  local s = character:getHealth(state)
+  local health = {
+    [8] = "<green>#######",
+    [7] = "<green>###### ",
+    [6] = "<green>#####  ",
+    [5] = "<yellow>####   ",
+    [4] = "<yellow>###    ",
+    [3] = "<red>##     ",
+    [2] = "<red>#      ",
+    [1] = "<red>       "
   }
-  local construct = {
-    ["żadnych śladów"] =        "<green>#######",
-    ["zadrapania"] =            "<green>###### ",
-    ["lekkie uszkodzenia"] =    "<green>#####  ",
-    ["średnie uszkodzenia"] =   "<yellow>####   ",
-    ["ciężkie uszkodzenia"] =   "<yellow>###    ",
-    ["ogromne uszkodzenia"] =   "<red>##     ",
-    ["ledwo stoi"] =            "<red>#      ",
-    ["unieruchomiony"] =        "<red>       "
-  }
-  local left = "<white>["
-  local right = "<white>]"
-  if man[state] then
-    return left..man[state]..right
-  elseif construct[state] then
-    return left..construct[state]..right
-  else
-    printer:one("State", "Podane zycie w gmcp nie istnieje")
-    return 0
-  end
+  return "<white>["..health[s].."<white>]"
 end
 
 function state:getMove(state)
-  local man = {
-    ["wypoczęty"] =         "<pale_green>#####",
-    ["lekko zmęczony"] =    "<pale_green>#### ",
-    ["zmęczony"] =          "<khaki>###  ",
-    ["bardzo zmęczony"] =   "<khaki>##   ",
-    ["zamęczony"] =         "<indian_red>#    ",
+  local s = character:getMove(state)
+  local move = {
+    [5] = "<pale_green>#####",
+    [4] = "<pale_green>#### ",
+    [3] = "<khaki>###  ",
+    [2] = "<khaki>##   ",
+    [1] = "<indian_red>#    ",
   }
-  local woman = {
-    ["wypoczęta"] =         "<pale_green>#####",
-    ["lekko zmęczona"] =    "<pale_green>#### ",
-    ["zmęczona"] =          "<khaki>###  ",
-    ["bardzo zmęczona"] =   "<khaki>##   ",
-    ["zamęczona"] =         "<indian_red>#    ",
-  }
-  local left = "<white>["
-  local right = "<white>]"
-  if man[state] then
-    return left..man[state]..right
-  elseif woman[state] then
-    return left..woman[state]..right
-  else
-    printer:one("State", "Podane zmeczenie w gmcp nie istnieje")
-    return 0
-  end
+  return "<white>["..move[s].."<white>]"
 end
 
 function state:twoSpaceNumber(i)
