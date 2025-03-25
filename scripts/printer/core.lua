@@ -55,6 +55,76 @@ function printer:title(str, nospace, nomargin)
 	if not nospace then self:space() end
 end
 
+function wrap(text, charLimit)
+    local lines = {}
+    local line = ""
+
+    -- Lista krótkich słów, które nie powinny pozostawać na końcu linii
+    local avoidOrphans = { "i", "a", "o", "u", "w", "z", "na", "do", "po", "od", "za", "bez", "przy", "pod" }
+
+    -- Funkcja sprawdzająca, czy słowo to "sierotka"
+    local function isOrphan(word)
+        for _, orphan in ipairs(avoidOrphans) do
+            if word == orphan then
+                return true
+            end
+        end
+        return false
+    end
+
+    -- Użycie gsub do iteracji przez słowa w tekście
+    text:gsub("%S+", function(word)
+        if #line + #word + 1 > charLimit then
+            -- Sprawdzenie, czy ostatnie słowo w linii jest "sierotką"
+            local lastWord = line:match("(%S+)$")
+            if lastWord and isOrphan(lastWord) then
+                -- Przenosimy sierotkę do nowej linii
+                line = line:sub(1, -(#lastWord + 2)) -- Usunięcie ostatniego słowa i spacji
+                table.insert(lines, line)
+                line = lastWord .. " " .. word  -- Nowa linia zaczyna się od sierotki i nowego słowa
+            else
+                table.insert(lines, line)
+                line = word  -- Nowa linia zaczyna się od bieżącego słowa
+            end
+        else
+            if #line > 0 then
+                line = line .. " " .. word
+            else
+                line = word
+            end
+        end
+    end)
+
+    -- Dodanie ostatniej linii, jeśli coś w niej jest
+    if #line > 0 then
+        table.insert(lines, line)
+    end
+
+    return lines
+end
+
+
+function printer:text(text, color)
+	local wrapped = wrap(text, 75)
+	for i=1, #wrapped do
+		printer:textLine(wrapped[i], color)
+	end
+end
+
+function printer:textLine(line, color)
+	color = color or "white"
+	local len = self.length-string.len(line)-self.tabLength  -- 2 : i spacja
+	cecho(
+		"<"..self.borderColor..">|"..string.rep(" ", self.tabLength)..
+		"<"..self.textColor..">".."<"..color..">"..line..string.rep(" ", len)..
+		"<"..self.borderColor..">|\n"
+	)
+end
+
+function printer:teacher(arr)
+  display(arr)
+end
+
 function printer:one(left, right, nomargin)
 	local len = self.length-string.len(left)-string.len(right)-self.tabLength-2  -- 2 : i spacja
 	self:top(true)
@@ -313,7 +383,7 @@ function printer:spellTeacher(list)
 	}
 	for i, v in pairs(list) do
 		local msg = v.mob
-		
+
 		local len = self.length-string.len(msg)-self.tabLength
 		cecho(
 			"<"..self.borderColor..">|"..string.rep(" ", self.tabLength)..

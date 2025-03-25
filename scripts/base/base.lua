@@ -3,6 +3,7 @@ base.jsonTeacher = {}
 base.jsonBook = {}
 base.jsonSpell = {}
 base.spellDictionary = {}
+base.spellDictionaryFull = {}
 --[[
 
 3. Wprowadzono nowe umiejętności ( skile dostępne tylko dla magów na 31 levelu ) (nauczyć się można wcześniej ale używać dopiero na 31) - dostępne tylko z ksiąg ze skilami.
@@ -29,6 +30,7 @@ function base:init()
   self.jsonBook = utils:readJson("scripts/base/book.json")
   self.jsonSpell = utils:readJson("scripts/base/spell.json")
   self:buildSpellDictionary()
+  self:buildSpellDictionaryFull()
 end
 
 function base:buildSpellDictionary()
@@ -50,6 +52,37 @@ function base:isInSpellDictionary(name)
   return false
 end
 
+-- zamien json na slownik i przerzuc dane do kluczy tablicy
+function base:buildSpellDictionaryFull()
+  for i=1, #self.jsonSpell do
+    local name = self.jsonSpell[i][1]
+    local first = string.sub(name, 1, 1)
+    if not self.spellDictionaryFull[first] then
+      self.spellDictionaryFull[first] = {}
+    end
+    --table.insert(, name)
+    self.spellDictionaryFull[first][name] = {}
+    self.spellDictionaryFull[first][name].name =  self.jsonSpell[i][1]
+    self.spellDictionaryFull[first][name].description =  self.jsonSpell[i][2]
+    self.spellDictionaryFull[first][name].comment =  self.jsonSpell[i][3]
+    -- tutaj dodawac kolejne
+  end
+end
+
+function base:help(name)
+  local first = string.sub(name, 1, 1)
+  if self.spellDictionaryFull[first][name] then
+    local out = {}
+    out.meta = self.spellDictionaryFull[first][name]
+    local tb = base:spellSearch(name)
+    out.teacher = tb[1]
+    out.book = tb[2]
+    printer:help(out)
+  else
+    printer:error("Help", "Brak spella w bazie!")
+  end
+end
+
 function base:spellSearch(spell)
   spell = string.lower(spell)
   local book = {}
@@ -62,16 +95,19 @@ function base:spellSearch(spell)
     end
   end
   for i, v in pairs(self.jsonTeacher) do
-
       for j, s in pairs(v.skills) do
-
         if string.lower(s.name) == spell then
-          display(i)
-          table.insert(teacher, v)
+          local out = {}
+          out.classes = v.classes
+          out.mob = v.mob
+          out.region = v.region
+          out.room = v.roomVnum
+          out.data = s
+          table.insert(teacher, out)
         end
       end
   end
-  printer:spellList(spell, teacher, book)
+  return {teacher, book}
 end
 
 -- DODAC DROWIEGO CZARNOKSIEZNIKA Z NK I JEGO KSIAZKWE   ksiega magii drowow

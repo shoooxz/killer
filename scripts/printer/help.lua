@@ -185,6 +185,21 @@ function printer:mapper()
     self:bottom()
 end
 
+function printer:help(arr)
+  self:title("Help")
+  self:section(string.upper(arr.meta.name))
+  self:text(arr.meta.description)
+  if arr.meta.comment ~= 0 then
+    self:space()
+    self:text(arr.meta.comment, "grey")
+  end
+  if next(arr.teacher) then
+    self:space()
+    self:teacher(arr.teacher)
+  end
+  self:bottom()
+end
+
 function printer:roomInfo(arr)
     self:title("Aktualna lokacja")
     self:dumpArray(arr, 20, {"Nazwa", "Wartosc"})
@@ -314,11 +329,4 @@ function printer:rollerHelp()
     self:command("/roller_start", "Sprawdza mozliwe statystyki")
     self:command("/roller_stop", "Zatrzymuje szukanie")
     self:bottom()
-end
-
-function printer:spellList(spell, teacher, book)
-  self:title(string.upper(spell))
-  if next(teacher) then
-    self:spellTeacher(teacher)
-  end
 end

@@ -1,7 +1,7 @@
 [
     [
         "acid blast",
-        "Mag uzywajacy tego silnego czaru tworzy przed soba chmure kwasu ktora pedzi w kierunku celu i dotkliwie go rani. Istnieje takze szansa, ze zracy kwas uszkodzi przedmioty, ktore ofiara ma na sobie lub w inwentarzu.",
+        "Mag uzywajacy tego silnego czaru tworzy przed soba chmure kwasu, ktora pedzi w kierunku celu i dotkliwie go rani. Istnieje takze szansa, ze zracy kwas uszkodzi przedmioty, ktore ofiara ma na sobie lub w inwentarzu.",
         0,
         0,
         0,
@@ -943,7 +943,7 @@
     [
         "fireball",
         "Tworzy sporych rozmiarow ognista kule, ktora uderza w cel zadajac obrazenia, dodatkowo moze czasami spalic jakies przedmioty w poblizu. Ogniste kule moga trafic kazdego, kto nie jest w grupie z magiem.",
-        0,
+        "Dobry czar obszarowy, niszczy mirrory.",
         0,
         0,
         0,
@@ -2897,7 +2897,7 @@
 
     [
         "acid hands",
-        "Rzucajacy moze przywolac z powietrza zrace czasteczki i kropelki kwasu na swoje dlonie, nie odnoszac przy tym obrazen,",
+        "Rzucajacy moze przywolac z powietrza zrace czasteczki i kropelki kwasu na swoje dlonie, nie odnoszac przy tym obrazen.",
         0,
         0,
         0,
