@@ -23,7 +23,50 @@ Można posiadać wiele masterek i rzucając czary różnych żywiołów można n
 
 
 ]]--
+function base:classToColor(long)
+	local out = {
+		["Wojownik"] = "sienna",
+		["Zlodziej"] = "dim_gray",
+		["Barbarzynca"] = "ansi_red",
+		["Czarny Rycerz"] = "dark_slate_blue",
+		["Nomad"] = "khaki",
+		["Mag"] = "dodger_blue",
+		["Druid"] = "ansi_green",
+		["Kleryk"] = "ansi_light_yellow",
+		["Paladyn"] = "dark_orange",
+	}
+	return out[long]
+end
 
+function base:rgetClass(long)
+	local out = {
+		["Wojownik"] = "WOJ",
+		["Zlodziej"] = "ZLO",
+		["Barbarzynca"] = "BAR",
+		["Czarny Rycerz"] = "CZA",
+		["Nomad"] = "NOM",
+		["Mag"] = "MAG",
+		["Druid"] = "DRU",
+		["Kleryk"] = "KLE",
+		["Paladyn"] = "PAL",
+	}
+	return out[long]
+end
+
+function base:getClass(short)
+	local out = {
+		["woj"] = "Wojownik",
+		["zlo"] = "Zlodziej",
+		["bar"] = "Barbarzynca",
+		["cza"] = "Czarny Rycerz",
+		["nom"] = "Nomad",
+		["mag"] = "Mag",
+		["dru"] = "Druid",
+		["kle"] = "Kleryk",
+		["pal"] = "Paladyn",
+	}
+	return out[short]
+end
 
 function base:init()
   self.jsonTeacher = utils:readJson("scripts/base/teachers.json")
@@ -83,31 +126,78 @@ function base:help(name)
   end
 end
 
+function base:showPath(room)
+  local path = getPath(mapper.room.id, room)
+  if path then
+    mapper:highlight(speedWalkPath)
+  end
+end
+
 function base:spellSearch(spell)
   spell = string.lower(spell)
   local book = {}
   local teacher = {}
+  local fclass = profile:get("fclass")
+  local sclass = profile:get("sclass")
+  local err = false
+  if fclass == "" or sclass == "" then
+    err = true
+  end
   for i, v in pairs(self.jsonBook) do
-    for j, s in pairs(v.spells) do
-      if string.lower(s) == spell then
-        table.insert(book, v)
+    -- jesli klasa z profilu pasuje
+    if v.class == self:getClass(fclass) or v.class == self:getClass(sclass) then
+      for j, s in pairs(v.spells) do
+        -- jesli spell znajduje sie w spellach
+        if string.lower(s) == spell then
+          local arr = {}
+          local stars = ""
+          local notes = ""
+          if v.boss then
+            stars = " ("..v.boss..")"
+          end
+          if v.notes then
+            notes = "Notka: "..v.notes
+          end
+          table.insert(arr, {self:classToColor(v.class), self:rgetClass(v.class), ""})
+      		table.insert(arr, {"tomato", v.mob..stars, ""})
+          table.insert(arr, {"white", v.region, ""})
+          table.insert(book, arr)
+          arr = {}
+          local temp = {false, "Ksiega: "..utils:concat(self:fixBookSpells(v.spells), ", ")}
+          if notes then
+            table.insert(temp, notes)
+          end
+          table.insert(arr, temp)
+          table.insert(book, arr)
+        end
       end
     end
   end
   for i, v in pairs(self.jsonTeacher) do
       for j, s in pairs(v.skills) do
         if string.lower(s.name) == spell then
-          local out = {}
-          out.classes = v.classes
-          out.mob = v.mob
-          out.region = v.region
-          out.room = v.roomVnum
-          out.data = s
-          table.insert(teacher, out)
+          local arr = {}
+          if utils:inArray2(self:getClass(fclass), v.classes) or utils:inArray2(self:getClass(sclass), v.classes) then
+            local arr = {}
+            -- s
+
+        		table.insert(arr, {"green", v.mob, ""})
+
+            table.insert(arr, {"white", v.region, ""})
+            table.insert(teacher, arr)
+          end
         end
       end
   end
   return {teacher, book}
+end
+
+function base:fixBookSpells(arr)
+  local out = {}
+  for i=1, #arr do
+    out[i] = string.lower(arr[i])
+  end
+  return out
 end
 
 -- DODAC DROWIEGO CZARNOKSIEZNIKA Z NK I JEGO KSIAZKWE   ksiega magii drowow

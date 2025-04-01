@@ -74,7 +74,7 @@ gag.spellTranslate = {
 }
 --yuiozf ay oculoahp   finger of death
 --saxzf xafe turr   power word kill
-
+-- candusgugh xzasai resist wvapan
 gag.spellTranslateFix = {
 	["DIEINE FAEAR"] = "DIVINE FAVOUR",
 	["DIEINE PAWER"] = "DIVINE POWER",
@@ -89,6 +89,7 @@ gag.spellTranslateFix = {
 	["DIEINE SHIELD"] = "DIVINE SHIELD",
 	["AURA AF BATTLE LUST"] = "AURA OF BATTLE LUST",
 	["STANE SKIN"] = "STONE SKIN",
+	["HALD MANSTER"] = "HOLD MONSTER",
 }
 
 function gag:spellTransGetPart(str)

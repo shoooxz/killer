@@ -85,7 +85,7 @@ function scripts:onEnemyKilled(str)
 		self.dead.loot = "kupka"
 		self.dead.gem = true
 		self.dead.gold = true
-	elseif self:detectBody({"yugoloth", "troll", "gigant", "goblin", "ork", "krzykacz"})  then
+	elseif self:detectBody({"yugoloth", "troll", "gigant", "goblin", "ork", "krzykacz", "yeti", "orenur"})  then
 		self.dead.loot = "cialo"
 		self.dead.gem = true
 	elseif self:detectBody({"istota", "elemental"}) then

@@ -2,6 +2,14 @@ profile = profile or {}
 profile.file = nil
 profile.list = profile.list or {}
 profile.func = {
+	["fclass"] = function(val)
+			profile.list.fclass = val
+			profile:save()
+	end,
+	["sclass"] = function(val)
+			profile.list.sclass = val
+			profile:save()
+	end,
 	["kill"] = function(val)
 			profile.list.kill = val
 			profile:save()
@@ -213,6 +221,8 @@ function profile:init(name)
 		table.load(self.file, self.list)
 	else
 		local default = {
+			["fclass"] = "",
+			["sclass"] = "",
 			["kill"] = "kill",
 			["buffbasic"] = {},
 			["buffbasic2"] = {},
@@ -264,9 +274,10 @@ end
 
 function profile:get(name)
 	if self.list[name] then
-		return self.list[name]
+			return self.list[name]
 	end
 end
+
 
 function profile:set(name, val)
 	if self.list[name] then
@@ -298,3 +309,7 @@ end
 function profile:loadLast()
 	self:init(self.last)
 end
+
+--[[
+Wojownik, Złodziej, Barbarzyńca, Czarny Rycerz, Nomad, Mag, Druid, Kleryk, Paladyn
+ ]]--

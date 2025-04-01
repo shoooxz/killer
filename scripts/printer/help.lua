@@ -17,8 +17,10 @@ function printer:settings()
     self:command("/opcje follower "..profile:get("follower"), "Ilosc followerow")
     self:command("/opcje fly "..profile:get("fly"), "Float albo Fly")
     self:command("/opcje master "..profile:get("master"), "Master")
+    --[[
     self:command("/opcje tryb "..profile:get("mode"), "Wlacz tryb przy ladowaniu profilu")
     self:dumpArray({{0, "brak"}, {1, "gornik"}, {2, "zielarz"}}, 4, nil, self.infoColor)
+    ]]--
     self:command("/opcje pojemnik "..profile:get("bag"), "Pojemnik")
     self:command("/opcje mh "..profile:get("mh"), "Bron pierwsza")
     self:command("/opcje oh "..profile:get("oh"), "Bron druga (0 brak)")
@@ -47,6 +49,9 @@ function printer:settings()
     self:command("/opcje s9 "..profile:get("s9"), "Fast Skill 9")
     self:command("/opcje s10 "..profile:get("s10"), "Fast Skill 10")
     self:command("/opcje kill "..profile:get("kill"), "Opcja ataku np. bs, kill, charge")
+    self:command("/opcje fclass "..profile:get("fclass"), "Pierwsza klasa")
+    self:command("/opcje sclass "..profile:get("sclass"), "Druga klasa")
+    self:info("woj, zlo, bar, cza, nom, mag, dru, kle, pal")
     self:bottom()
 end
 
@@ -195,7 +200,11 @@ function printer:help(arr)
   end
   if next(arr.teacher) then
     self:space()
-    self:teacher(arr.teacher)
+    self:tableRow({65, 12}, {}, arr.teacher, true)
+  end
+  if next(arr.book) then
+    self:space()
+    self:tableRow({4, 59, 12}, {}, arr.book, true, true)
   end
   self:bottom()
 end

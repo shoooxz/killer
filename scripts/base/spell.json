@@ -1786,7 +1786,7 @@
 
     [
         "summon",
-        "Pozwala czarodziejowi przywolac wybrana osobe do siebie w obrabie okreslonego regionu. Zaklecie dziala na zasadzie magicznego polaczenia, które przyciaga ofiare, zmuszajac ja do fizycznego przeniesienia sie w wyznaczone miejsce.",
+        "Pozwala czarodziejowi przywolac wybrana osobe do siebie w obrabie okreslonego regionu. Zaklecie dziala na zasadzie magicznego polaczenia, ktore przyciaga ofiare, zmuszajac ja do fizycznego przeniesienia sie w wyznaczone miejsce.",
         0,
         0,
         0,
@@ -7281,8 +7281,8 @@
 
     [
         "lightingshield",
-        0,
-        0,
+        "Ten czar powoduje, ze wokol maga, ktory rzucil to zaklecie pojawia sie tarcza z piorunow, ktora poraza osoby chcace zadac cios.",
+        "Mozna uzywac wraz z inna tarcza.",
         0,
         0,
         0,
@@ -7302,8 +7302,8 @@
 
     [
         "lightning storm",
-        0,
-        "110 control of magic na dwie zamiecie",
+        "Czar przywoluje burze z piorunami, ktora mag moze kontrolowac aby nie ranila przyjaciol.",
+        "110 control of magic na dwie zamiecie.",
         0,
         0,
         0,
@@ -7323,8 +7323,8 @@
 
     [
         "blizzard storm",
-        0,
-        "110 control of magic na dwie zamiecie",
+        "Czar przywoluje sniezna burze, ktora mag moze kontrolowac aby nie ranila przyjaciol.",
+        "110 control of magic na dwie zamiecie.",
         0,
         0,
         0,
@@ -7344,7 +7344,7 @@
 
     [
         "absolute magic protection",
-        0,
+        "Ulepszona wersja globa, chroni przed wszystkimi czarami.",
         0,
         0,
         0,

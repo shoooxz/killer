@@ -121,10 +121,6 @@ function printer:textLine(line, color)
 	)
 end
 
-function printer:teacher(arr)
-  display(arr)
-end
-
 function printer:one(left, right, nomargin)
 	local len = self.length-string.len(left)-string.len(right)-self.tabLength-2  -- 2 : i spacja
 	self:top(true)
@@ -179,7 +175,7 @@ function printer:command(name, desc)
 	)
 end
 
-function printer:tableRow(size, header, arr, link)
+function printer:tableRow(size, header, arr, link, nohr)
 	local len = 0
 	for i in pairs(size) do
 		len = len + size[i]+2 -- kreska + spacja odzielajace kazdy cell
@@ -191,6 +187,8 @@ function printer:tableRow(size, header, arr, link)
 		table.insert(arr, 1, header)
 	end
 
+	local finish = false
+
 	for row in pairs(arr) do
 		local color = self.textColor
 		if row == 1 then
@@ -198,30 +196,51 @@ function printer:tableRow(size, header, arr, link)
 		end
 		for index, value in pairs(arr[row]) do
 			--out = out.."<"..self.borderColor..">|"..string.rep(" ", 1)
-			cecho("<"..self.borderColor..">|"..string.rep(" ", 1))
+
+			-- skomplikowany uklad
 			if type(value) == "table" then
-				-- if array color it
-				local filler = string.rep(" ", size[index]-string.len(value[2]))
-				if link then
-					cechoLink("<"..value[1]..">"..value[2], value[3], "", true)
-					cecho(filler)
+				if not value[1] then
+					printer:text(value[2], "grey")
+					if value[3] then
+						printer:text(value[3], "grey")
+					end
+					if row < #arr then
+						--out = out..self:getHr()
+							cecho(self:getHr())
+					end
+					finish = true
 				else
-					--out = out.."<"..value[1]..">"..value[2]..filler
-					cecho("<"..value[1]..">"..value[2]..filler)
+					finish = false
+					cecho("<"..self.borderColor..">|"..string.rep(" ", 1))
+					-- if array color it
+					local filler = string.rep(" ", size[index]-string.len(value[2]))
+					if link then
+						cechoLink("<"..value[1]..">"..value[2], value[3], "", true)
+						cecho(filler)
+					else
+						cecho("<"..self.borderColor..">|"..string.rep(" ", 1))
+						--out = out.."<"..value[1]..">"..value[2]..filler
+						cecho("<"..value[1]..">"..value[2]..filler)
+					end
 				end
 			else
+					-- normalny text
 					local filler = string.rep(" ", size[index]-string.len(value))
 					--out = out.."<"..color..">"..value..filler
 					cecho("<"..color..">"..value..filler)
 			end
 		end
 
-		--out = out..string.rep(" ", fill).."<"..self.borderColor..">|\n"
-		cecho(string.rep(" ", fill).."<"..self.borderColor..">|\n")
+		if not finish then
+			--out = out..string.rep(" ", fill).."<"..self.borderColor..">|\n"
+			cecho(string.rep(" ", fill).."<"..self.borderColor..">|\n")
 
-		if row < #arr then
-			--out = out..self:getHr()
-			cecho(self:getHr())
+			if row < #arr then
+				--out = out..self:getHr()
+				if not nohr then
+					cecho(self:getHr())
+				end
+			end
 		end
 
 	end

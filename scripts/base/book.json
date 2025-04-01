@@ -27,6 +27,7 @@
     "mob": "Dostojny Mykonid",
     "region": "Podmrok",
     "class": "Kleryk",
+    "boss": "*",
     "spells": [
       "Cure Critical", "Cause Critical", "Free Action", "Remove Paralysis", "Cure Serious"
     ],
@@ -48,7 +49,7 @@
   },
   {
     "roomVnum": 34145,
-    "mob": "Posłaniec",
+    "mob": "Poslaniec",
     "region": "Carrallak'",
     "class": "Kleryk",
     "spells": [
@@ -93,7 +94,7 @@
   },
   {
     "roomVnum": 1963,
-    "mob": "Zły Adept Sha",
+    "mob": "Zly Adept Sha",
     "region": "Carrallak",
     "class": "Kleryk",
     "spells": [
@@ -106,7 +107,7 @@
   },
   {
     "roomVnum": 28595,
-    "mob": "Kleryk w żelaznej masce",
+    "mob": "Kleryk w zelaznej masce",
     "region": "Arras",
     "class": "Kleryk",
     "spells": [
@@ -118,7 +119,7 @@
   },
   {
     "roomVnum": 3903,
-    "mob": "Arcykapłan",
+    "mob": "Arcykaplan",
     "region": "Ukryta kaplica w puszczy pod Carrallak",
     "class": "Kleryk",
     "spells": [
@@ -131,7 +132,7 @@
   },
   {
     "roomVnum": 6435,
-    "mob": "Elfi Kapłan",
+    "mob": "Elfi Kaplan",
     "region": "Carrallak",
     "class": "Kleryk",
     "spells": [
@@ -153,7 +154,7 @@
   },
   {
     "roomVnum": 11482,
-    "mob": "Pieśniarz Kor'totha",
+    "mob": "Piesniarz Kor'totha",
     "region": "Arras",
     "class": "Kleryk",
     "spells": [
@@ -165,20 +166,20 @@
   },
   {
     "roomVnum": 3763,
-    "mob": "Widmo Kapłana",
+    "mob": "Widmo Kaplana",
     "region": "Forteca",
     "class": "Kleryk",
     "spells": [
       "create healing water", "Resist fire", "Resist fire", "Free Action"
     ],
-    "notes": "Niewidzialny, ksiega ładuje się w szczelinie po zabiciu",
+    "notes": "Niewidzialny, ksiega laduje sie w szczelinie po zabiciu",
     "locked": "t",
     "bookVnum": 3734,
     "bookName": "ksiega wiedzy"
   },
   {
     "roomVnum": 27682,
-    "mob": "Widmo Kapłanki",
+    "mob": "Widmo Kaplanki",
     "region": "Arras",
     "class": "Kleryk",
     "spells": [
@@ -190,7 +191,7 @@
   },
   {
     "roomVnum": 27613,
-    "mob": "Kapłanka Drowow",
+    "mob": "Kaplanka Drowow",
     "region": "Forteca",
     "class": "Kleryk",
     "spells": [
@@ -220,14 +221,14 @@
       "Hold Undead", "Remove paralysis", "Restoration", "Mass Cure Serious"
     ],
     "dangerous": "t",
-    "boss": "t",
+    "boss": "*",
     "notes": "W skrzyni, connect 2 czesci klucza z wodza i room wczesniej, wybuch fire",
     "bookVnum": 15905,
     "bookName": "zakurzona ksiega"
   },
   {
     "roomVnum": 4519,
-    "mob": "Kapłan Sahuaginów",
+    "mob": "Kaplan Sahuaginów",
     "region": "Carrallak",
     "class": "Kleryk",
     "spells": [
@@ -239,7 +240,7 @@
   },
   {
     "roomVnum": 6181,
-    "mob": "Armade Śmiały",
+    "mob": "Armade Smialy",
     "region": "Arras",
     "class": "Kleryk",
     "spells": [
@@ -250,7 +251,7 @@
   },
   {
     "roomVnum": 33098,
-    "mob": "Starożytna Mumia",
+    "mob": "Starozytna Mumia",
     "region": "Arras",
     "class": "Kleryk",
     "spells": [
@@ -269,7 +270,7 @@
       "mass cure critical", "mass protection evil", "mass bless", "harm", "heal"
     ],
     "dangerous": "t",
-    "boss": "t",
+    "boss": "**",
     "bookVnum": 10950,
     "bookName": "czarna ksiega"
   },
@@ -286,7 +287,7 @@
   },
   {
     "roomVnum": 30138,
-    "mob": "Kapłan Variotha",
+    "mob": "Kaplan Variotha",
     "region": "Forteca",
     "class": "Kleryk",
     "spells": [
@@ -339,7 +340,6 @@
     "spells": [
       "cure moderate", "hold evil", "remove fear", "undead invis"
     ],
-    "boss": "t",
     "notes": "Quest",
     "bookVnum": 6483,
     "bookName": "modlitewnik"
@@ -352,7 +352,7 @@
     "spells": [
       "brave cloak", "bull strength", "holy weapons", "eagle splendor"
     ],
-    "boss": "t",
+    "boss": "*",
     "bookVnum": 20353,
     "bookName": "zakurzona ksiega"
   },
@@ -364,7 +364,6 @@
     "spells": [
       "cure serious", "cure poison", "undead invisibility", "owl wisdom"
     ],
-    "boss": "t",
     "bookVnum": 6482,
     "bookName": "zdobiona ksiega"
   },
@@ -383,7 +382,7 @@
   {
     "roomVnum": 40899,
     "mob": "Barbarzyńca Efilof",
-    "region": "Nowy Kontynent",
+    "region": "NK",
     "class": "Paladyn",
     "spells": [
       "calm", "hold evil", "cure poison", "owl wisdom"
@@ -474,7 +473,7 @@
   },
   {
     "roomVnum": 1678,
-    "mob": "Druidzi Krąg",
+    "mob": "Druidzi Krag",
     "region": "Carrallak",
     "class": "Druid",
     "spells": [
@@ -538,7 +537,7 @@
     "spells": [
       "storm shell", "chill metal", "wind shield", "cure serious"
     ],
-    "boss": "t",
+    "boss": "*",
     "bookVnum": 24984,
     "bookName": "zielona ksiega"
   },
@@ -557,7 +556,7 @@
   {
     "roomVnum": 14232,
     "mob": "Druid Helnion",
-    "region": "Nowy Kontynent",
+    "region": "NK",
     "class": "Druid",
     "spells": [
       "flamestrike", "blade barrier", "shield of nature", "reinvigore animal", "hold person"
@@ -593,7 +592,7 @@
   {
     "roomVnum": 42425,
     "mob": "Dziwny starzec",
-    "region": "Nowy Kontynent",
+    "region": "NK",
     "class": "Druid",
     "spells": [
       "Nature ally III", "smashing wave", "freezing rain", "animal rage"
@@ -717,7 +716,7 @@
   },
   {
     "roomVnum": 10847,
-    "mob": "Świrnięty mag",
+    "mob": "Swirniety mag",
     "region": "Arras",
     "class": "Mag",
     "spells": [
@@ -740,7 +739,7 @@
   },
   {
     "roomVnum": 5642,
-    "mob": "Gnoll Czarnoksiężnik",
+    "mob": "Gnoll Czarnoksieznik",
     "region": "Carrallak",
     "class": "Mag",
     "spells": [
@@ -768,7 +767,7 @@
     "spells": [
       "Fox cunning", "Lightning bolt", "invisibility", "Maze"
     ],
-    "notes": "Wędruje",
+    "notes": "Wedruje",
     "roaming": "t",
     "bookVnum": 14079,
     "bookName": "magiczna ksiega"
@@ -857,13 +856,13 @@
   },
   {
     "roomVnum": 18443,
-    "mob": "Ożywieniec",
+    "mob": "Ozywieniec",
     "region": "Carrallak",
     "class": "Mag",
     "spells": [
       "Animate Dead", "Ghoul touch", "Embalm", "Ethereal armor"
     ],
-    "notes": "Ksiega niewidzialna, dwa chodzą po pustyni",
+    "notes": "Ksiega niewidzialna, dwa chodza po pustyni",
     "dangerous": "t",
     "difficulty": 5,
     "bookVnum": 6607,
@@ -918,7 +917,7 @@
   },
   {
     "roomVnum": 2519,
-    "mob": "Obłąkany staruch",
+    "mob": "Oblakany staruch",
     "region": "Carrallak",
     "class": "Mag",
     "spells": [
@@ -961,7 +960,7 @@
       "lesser magic resist", "Stability", "Mental barrier", "summon distortion"
     ],
     "dangerous": "t",
-    "boss": "t",
+    "boss": "*",
     "bookVnum": 14060,
     "bookName": "ksiega zaklec"
   },
@@ -992,7 +991,7 @@
   },
   {
     "roomVnum": 9317,
-    "mob": "Biała Smoczyca",
+    "mob": "Biala Smoczyca",
     "region": "Easterial",
     "class": "Mag",
     "spells": [
@@ -1019,8 +1018,8 @@
   },
   {
     "roomVnum": 42348,
-    "mob": "Wężoczłek Arauron",
-    "region": "Nowy Kontynent",
+    "mob": "Wezoczlek Arauron",
+    "region": "NK",
     "class": "Mag",
     "spells": [
       "shadow conjuration", "create greater illusion", "shadow swarm", "power word blind", "inspiring presence"
@@ -1038,7 +1037,7 @@
       "stone skin", "change weapon", "draconic wisdom", "major haste", "giant strength"
     ],
     "dangerous": "t",
-    "boss": "t",
+    "boss": "**",
     "difficulty": 8,
     "bookVnum": 5413,
     "bookName": "starozytna elfia ksiega"
@@ -1052,7 +1051,7 @@
       "great dispel magic", "behemot toughness", "deflect wounds", "major globe of invulnerability"
     ],
     "dangerous": "t",
-    "boss": "t",
+    "boss": "**",
     "bookVnum": 17957,
     "bookName": "stara ksiega"
   },
@@ -1066,7 +1065,7 @@
     ],
     "notes": "Ksiega Nekromancji: Ksiegi laduja sie w szczelinie, na mobie laduje sie klucz",
     "dangerous": "t",
-    "boss": "t",
+    "boss": "***",
     "bookVnum": 33020,
     "bookName": "ksiega najwyzszej nekromancji"
   },
@@ -1080,7 +1079,7 @@
     ],
     "notes": "Ksiega Magiczna Zakurzona: Ksiegi laduja sie w szczelinie, na mobie laduje sie klucz",
     "dangerous": "t",
-    "boss": "t",
+    "boss": "***",
     "bookVnum": 33021,
     "bookName": "magiczna ksiega"
   },
@@ -1093,7 +1092,7 @@
       "raise ghast", "horrid wilting", "power word stun", "unholy fury"
     ],
     "dangerous": "t",
-    "boss": "t",
+    "boss": "**",
     "difficulty": 5,
     "bookVnum": 25669,
     "bookName": "czarna ksiega"
@@ -1108,7 +1107,7 @@
     ],
     "notes": "Ksiega Magii Wysokiej: Ksiegi laduja sie w szczelinie, na mobie laduje sie klucz",
     "dangerous": "t",
-    "boss": "t",
+    "boss": "***",
     "bookVnum": 33027,
     "bookName": "ksiega magii wysokiej"
   },
@@ -1145,7 +1144,7 @@
     ],
     "notes": "Wymaga wlozenia pieczeci do posagu",
     "dangerous": "t",
-    "boss": "t",
+    "boss": "**",
     "bookVnum": 1811,
     "bookName": "starozytna ksiega"
   },
@@ -1157,7 +1156,7 @@
     "spells": [
       "inspire", "fetch", "create greater illusion", "psychic scream", "shadow conjuration"
     ],
-    "boss": "t",
+    "boss": "**",
     "difficulty": 10,
     "bookVnum": 27612,
     "bookName": "magiczna ksiega"
@@ -1196,7 +1195,7 @@
       "unholy fury", "horrid wilthing", "cone of cold", "power word blind", "Mend golem"
     ],
     "dangerous": "t",
-    "boss": "t",
+    "boss": "**",
     "difficulty": 7,
     "bookVnum": 2058,
     "bookName": "ksiega oprawiona w skore"
@@ -1210,7 +1209,7 @@
       "resist magic weapon", "charm monster", "summon strong creature", "summon greater meteor"
     ],
     "dangerous": "t",
-    "boss": "t",
+    "boss": "*",
     "bookVnum": 2895,
     "bookName": "ksiega zaklec magicznych"
   },
@@ -1223,7 +1222,7 @@
       "energy strike", "globe of invulnerability", "chain lightning", "rain of blades","thunder bolt"
     ],
     "dangerous": "t",
-    "boss": "t",
+    "boss": "**",
     "bookVnum": 19407,
     "bookName": "lodowa ksiega"
   },
@@ -1236,55 +1235,55 @@
       "summon greater meteor", "summon", "summon ancient creature", "draconic wisdom"
     ],
     "dangerous": "t",
-    "boss": "t",
+    "boss": "***",
     "bookVnum": 9303,
     "bookName": "prastara ksiega"
   },
   {
     "roomVnum": 41221,
     "mob": "Antyczny czerwony smok",
-    "region": "Nowy Kontynent",
+    "region": "NK",
     "class": "Mag",
     "spells": [
       "master of piercing sight", "enchant artefact", "absolute magic protection", "summon", "revive"
     ],
     "dangerous": "t",
-    "boss": "t",
+    "boss": "***",
     "bookVnum": 41232,
     "bookName": "antyczna, magiczna ksiega"
   },
   {
     "roomVnum": 41221,
     "mob": "Antyczny czerwony smok",
-    "region": "Nowy Kontynent",
+    "region": "NK",
     "class": "Kleryk",
     "spells": [
       "mass resist negative", "life transfer", "create healing water", "mass cure critical"
     ],
     "dangerous": "t",
-    "boss": "t"
+    "boss": "***"
   },
   {
     "roomVnum": 41221,
     "mob": "Antyczny czerwony smok",
-    "region": "Nowy Kontynent",
+    "region": "NK",
     "class": "Paladyn",
     "spells": [
       "holy weapons", "greater cure poison", "aura of improved healing", "aura of precision", "aura of endurance"
     ],
     "dangerous": "t",
-    "boss": "t"
+    "boss": "***"
   },
   {
     "roomVnum": 41221,
     "mob": "Antyczny czerwony smok",
-    "region": "Nowy Kontynent",
+    "region": "NK",
     "class": "Druid",
     "spells": [
      "mass refresh", "mass luck", "healing ring", "blade barrier"
     ],
     "dangerous": "t",
-    "boss": "t"
+    "boss": "***"
   },
   {
     "roomVnum": 11020,
@@ -1335,8 +1334,8 @@
   },
   {
     "roomVnum": 44471,
-    "mob": "Drowi Czarnoksiężnik",
-    "region": "Nowy Kontynent",
+    "mob": "Drowi Czarnoksieznik",
+    "region": "NK",
     "class": "Mag",
     "spells": [
       "charm monster", "summon flying creature", "cone of cold", "mass fly"
@@ -1347,15 +1346,28 @@
   {
     "roomVnum": 22795,
     "mob": "Arcymag",
-    "region": "Nowy Kontynent",
+    "region": "NK",
     "class": "Mag",
     "spells": [
       "nexus", "portal", "master of piercing sight", "enchant artefact", "lightingshield"
     ],
     "dangerous": "t",
-    "boss": "t",
+    "boss": "***",
     "bookVnum": 22704,
     "bookName": "ksiega arcymaga"
+  },
+  {
+    "roomVnum": 22795,
+    "mob": "Prastary Smok Kal'tean ",
+    "region": "Easterial",
+    "class": "Mag",
+    "spells": [
+      "blizzard storm", "power word kill", "chain lightning", "absolute magic protection"
+    ],
+    "dangerous": "t",
+    "boss": "***",
+    "bookVnum": 51007,
+    "bookName": "prastara lodowa ksiega"
   }
 
 ]
