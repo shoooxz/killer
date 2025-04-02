@@ -200,7 +200,7 @@ function printer:help(arr)
   end
   if next(arr.teacher) then
     self:space()
-    self:tableRow({65, 12}, {}, arr.teacher, true)
+    self:tableRow({6, 57, 12}, {}, arr.teacher, true)
   end
   if next(arr.book) then
     self:space()

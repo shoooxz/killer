@@ -126,7 +126,7 @@
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Mistrz cechu najemników",
+    "mob": "Mistrz cechu najemnikow",
     "region": "Arras",
     "roomVnum": "6095",
     "skills": [
@@ -336,7 +336,7 @@
       "Czarny Rycerz",
       "Nomad"
     ],
-    "mob": "Dowódca strażników",
+    "mob": "Dowodca straznikow",
     "region": "Karakris",
     "roomVnum": "60795",
     "skills": [
@@ -865,7 +865,7 @@
       "Czarny Rycerz"
     ],
 
-    "mob": "Rycerz śmierci",
+    "mob": "Rycerz smierci",
     "region": "Carrallak",
     "roomVnum": "43090",
     "skills": [
@@ -1148,7 +1148,7 @@
       "szaman"
     ],
 
-    "mob": "Doświadczony Barbarzynca",
+    "mob": "Doswiadczony Barbarzynca",
     "region": "Easterial",
     "skills": [
       {
@@ -1584,7 +1584,7 @@
         "reqSkill": 0
       }
     ],
-    "notes": "Gildia Nekromantów na cmentarzu w Carrallak"
+    "notes": "Gildia Nekromantow na cmentarzu w Carrallak"
   },
   "6163": {
     "classes": [
@@ -2100,7 +2100,7 @@
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Myśliwy",
+    "mob": "Mysliwy",
     "region": "Forteca",
     "roomVnum": "4561",
     "skills": [
@@ -2121,7 +2121,7 @@
       "Barbarzynca",
       "szaman"
     ],
-    "mob": "Dowódca straży",
+    "mob": "Dowodca strazy",
     "region": "Forteca",
     "roomVnum": "130",
     "skills": [
@@ -2492,7 +2492,7 @@
       "szaman"
     ],
 
-    "mob": "Pólork dozorca kopalni",
+    "mob": "Polork dozorca kopalni",
     "region": "Easterial",
     "roomVnum": "19033",
     "skills": [
@@ -3331,7 +3331,7 @@
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Przywódca szajki",
+    "mob": "Przywodca szajki",
     "region": "Arras",
     "roomVnum": "50942",
     "skills": [
@@ -3392,7 +3392,7 @@
       "Czarny Rycerz"
     ],
 
-    "mob": "Mroczny potępieniec",
+    "mob": "Mroczny potepieniec",
     "region": "Carrallak",
     "roomVnum": "45450",
     "skills": [
@@ -3793,7 +3793,7 @@
       "Barbarzynca",
       "szaman"
     ],
-    "mob": "Uwolniona dusza starożytnego paladyna",
+    "mob": "Uwolniona dusza starozytnego paladyna",
     "region": "Easterial",
     "skills": [
       {
@@ -5169,7 +5169,7 @@
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Potężny kaplan",
+    "mob": "Potezny kaplan",
     "region": "Forteca",
     "roomVnum": "45252",
     "skills": [
@@ -5613,7 +5613,7 @@
       }
     ],
     "roomVnum": 6644,
-    "notes": "Pojawia się po pokonaniu opętanego paladyna",
+    "notes": "Pojawia sie po pokonaniu opetanego paladyna",
     "boss": "t"
   },
   "3983": {
@@ -7251,7 +7251,7 @@
       "Wojownik",
       "Nomad"
     ],
-    "mob": "Dae'raira, róza pustyni",
+    "mob": "Dae'raira, roza pustyni",
     "region": "Carrallak",
     "roomVnum": "3638",
     "skills": [
@@ -7325,7 +7325,7 @@
       "Czarny Rycerz",
       "Nomad"
     ],
-    "mob": "Uwięziony stary Nomad",
+    "mob": "Uwieziony stary Nomad",
     "region": "Karakris",
     "roomVnum": "23695",
     "skills": [
@@ -7427,7 +7427,7 @@
     "classes": [
       "Nomad"
     ],
-    "mob": "Doświadczony Nomad",
+    "mob": "Doswiadczony Nomad",
     "region": "Karakris",
     "roomVnum": "62216",
     "skills": [
@@ -7705,7 +7705,7 @@
       "Nomad"
     ],
 
-    "mob": "Wędrowiec",
+    "mob": "Wedrowiec",
     "region": "Karakris",
     "roomVnum": "60721",
     "skills": [
@@ -7782,7 +7782,7 @@
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Przywódca szajki",
+    "mob": "Przywodca szajki",
     "region": "Forteca",
     "roomVnum": "40539",
     "skills": [
@@ -8212,7 +8212,7 @@
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Sędziwy krasnoludzki instruktor",
+    "mob": "Sedziwy krasnoludzki instruktor",
     "region": "Forteca",
     "roomVnum": "120",
     "skills": [
@@ -8800,7 +8800,7 @@
       "Zlodziej"
     ],
 
-    "mob": "Przelożony gildii",
+    "mob": "Przelozony gildii",
     "region": "Silea",
     "roomVnum": "50318",
     "skills": [
@@ -8979,7 +8979,7 @@
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Potężny Barbarzynca Grmar",
+    "mob": "Potezny Barbarzynca Grmar",
     "region": "Easterial",
     "roomVnum": "50605",
     "skills": [
@@ -9240,7 +9240,7 @@
         "reqSkill": 0
       }
     ],
-    "notes": "Wymaga umiejętności latania"
+    "notes": "Wymaga umiejetnosci latania"
   },
   "2114": {
     "classes": [
@@ -9271,7 +9271,7 @@
     "classes": [
       "Czarny Rycerz"
     ],
-    "mob": "Czarny strażnik",
+    "mob": "Czarny straznik",
     "region": "Arras",
     "roomVnum": "6788",
     "skills": [
@@ -9425,7 +9425,7 @@
       "Barbarzynca",
       "szaman"
     ],
-    "mob": "Mężny paladyn",
+    "mob": "Mezny paladyn",
     "region": "Arras",
     "roomVnum": "16005",
     "skills": [
@@ -9504,7 +9504,7 @@
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Wielki pólogr Haghburg",
+    "mob": "Wielki pologr Haghburg",
     "region": "Carrallak",
     "roomVnum": "6651",
     "skills": [
@@ -11090,7 +11090,7 @@
       }
     ],
     "roomVnum": 27682,
-    "notes": "Trzeba pokonać widmo kaplanki nie zabijając opętanego rycerza",
+    "notes": "Trzeba pokonać widmo kaplanki nie zabijając opetanego rycerza",
     "dangerous": "t"
   },
   "1960": {
@@ -11306,7 +11306,7 @@
     "classes": [
       "Nomad"
     ],
-    "mob": "Stary doświadczony Nomad",
+    "mob": "Stary doswiadczony Nomad",
     "region": "Szola Nomad",
     "roomVnum": "34766",
     "skills": [
@@ -11853,7 +11853,7 @@
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Wysoki pólork",
+    "mob": "Wysoki polork",
     "region": "Arras",
     "roomVnum": "10816",
     "skills": [
@@ -13598,7 +13598,7 @@
       }
     ],
     "locked": "t",
-    "notes": "Wymaga nacisnięcia jelenia przy źródelku"
+    "notes": "Wymaga nacisniecia jelenia przy źrodelku"
   },
   "1791": {
     "classes": [
@@ -13610,7 +13610,7 @@
       "Czarny Rycerz",
       "szaman"
     ],
-    "mob": "Ciężkozbrojny tarczownik",
+    "mob": "Ciezkozbrojny tarczownik",
     "region": "Carrallak",
     "roomVnum": "1430",
     "skills": [

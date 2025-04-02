@@ -7,6 +7,10 @@ function utils:arrayKeyExists(key, arr)
     return false
 end
 
+function utils:doubleDigit(n)
+  return string.format("%02d", n)
+end
+
 
 function utils:arrayRemoveByValue(val, arr)
     for i=1, #arr do
@@ -245,5 +249,5 @@ function utils:startsWith(str, prefix)
 end
 
 function utils:arrFirstInSecond(arr1, arr2)
-  
+
 end

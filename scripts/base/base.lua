@@ -2,8 +2,10 @@ base = base or {}
 base.jsonTeacher = {}
 base.jsonBook = {}
 base.jsonSpell = {}
+base.jsonSkill = {}
 base.spellDictionary = {}
 base.spellDictionaryFull = {}
+base.skillDictionaryFull = {}
 --[[
 
 3. Wprowadzono nowe umiejętności ( skile dostępne tylko dla magów na 31 levelu ) (nauczyć się można wcześniej ale używać dopiero na 31) - dostępne tylko z ksiąg ze skilami.
@@ -72,8 +74,13 @@ function base:init()
   self.jsonTeacher = utils:readJson("scripts/base/teachers.json")
   self.jsonBook = utils:readJson("scripts/base/book.json")
   self.jsonSpell = utils:readJson("scripts/base/spell.json")
+	self.jsonSkill = utils:readJson("scripts/base/skill.json")
   self:buildSpellDictionary()
   self:buildSpellDictionaryFull()
+	self:buildSkillDictionaryFull()
+	-- clear memory
+	self.jsonSpell = nil
+	self.jsonSkill = nil
 end
 
 function base:buildSpellDictionary()
@@ -112,18 +119,44 @@ function base:buildSpellDictionaryFull()
   end
 end
 
+
+
+-- zamien json na slownik i przerzuc dane do kluczy tablicy
+function base:buildSkillDictionaryFull()
+  for i=1, #self.jsonSkill do
+    local name = self.jsonSkill[i][1]
+    local first = string.sub(name, 1, 1)
+    if not self.skillDictionaryFull[first] then
+      self.skillDictionaryFull[first] = {}
+    end
+    --table.insert(, name)
+    self.skillDictionaryFull[first][name] = {}
+    self.skillDictionaryFull[first][name].name =  self.jsonSkill[i][1]
+    self.skillDictionaryFull[first][name].description =  self.jsonSkill[i][2]
+    self.skillDictionaryFull[first][name].comment =  self.jsonSkill[i][3]
+    -- tutaj dodawac kolejne
+  end
+end
+
 function base:help(name)
   local first = string.sub(name, 1, 1)
-  if self.spellDictionaryFull[first][name] then
-    local out = {}
-    out.meta = self.spellDictionaryFull[first][name]
-    local tb = base:spellSearch(name)
-    out.teacher = tb[1]
-    out.book = tb[2]
-    printer:help(out)
-  else
+	local out = {}
+	local found = false
+	if self.skillDictionaryFull[first][name] then
+		out.meta = self.skillDictionaryFull[first][name]
+		found = true
+	elseif self.spellDictionaryFull[first][name] then
+		out.meta = self.spellDictionaryFull[first][name]
+		found = true
+	end
+	if found then
+	  local tb = base:spellSearch(name)
+	  out.teacher = tb[1]
+	  out.book = tb[2]
+	  printer:help(out)
+	else
     printer:error("Help", "Brak spella w bazie!")
-  end
+	end
 end
 
 function base:showPath(room)
@@ -179,16 +212,41 @@ function base:spellSearch(spell)
           local arr = {}
           if utils:inArray2(self:getClass(fclass), v.classes) or utils:inArray2(self:getClass(sclass), v.classes) then
             local arr = {}
-            -- s
-
+						if not s.min or s.min < 0 then
+							s.min = 0
+						end
+						if not s.max or s.max < 0 then
+							s.max = 0
+						end
+						local minmax = ""
+						if s.max == 0 then
+							minmax = "Spell"
+							minmaxColor = "steel_blue"
+						else
+							minmax = utils:doubleDigit(s.min).."-"..utils:doubleDigit(s.max)
+							minmaxColor = "white"
+						end
+						table.insert(arr, {minmaxColor, minmax, ""})
         		table.insert(arr, {"green", v.mob, ""})
-
             table.insert(arr, {"white", v.region, ""})
             table.insert(teacher, arr)
           end
         end
       end
   end
+	-- sort teacher
+	table.sort(teacher, function(a, b)
+		local str2int = function(str)
+			return tonumber(string.gsub(str, "-", ""), 10)
+		end
+		if a[1][2] == "Spell" then
+			-- regionem sort
+			return a[3][2] < b[3][2]
+		else
+			-- minmaxem sort
+    	return str2int(a[1][2]) < str2int(b[1][2])
+		end
+	end)
   return {teacher, book}
 end
 
