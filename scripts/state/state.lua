@@ -82,6 +82,7 @@ function state:gmcpRoomPeople()
     if not gmcp then return false end
     mapper:detectGMCP()
     top:setTime(gmcp.Mud)
+    top:setCondition(gmcp.Char.Condition)
 
     ls:clear()
     state.team = {}

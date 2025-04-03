@@ -1,6 +1,6 @@
 footer = footer or {}
-footer.height = 150
 footer.promptHeight = 50
+footer.buttonHeight = 60
 footer.baseFunc = {
 	[1] = {
 		["name"] = "Stand",
@@ -94,6 +94,9 @@ function footer:init()
 	character.necroEnabled = true
 	-----------------------------------------------------
 	self.width = settings:get("mainWindowWidth")-settings:get("mapperWidth")-10
+	self.promptHeight = settings:applyDpiScaling(self.promptHeight)
+	self.buttonHeight = settings:applyDpiScaling(self.buttonHeight)
+	self.height = 3*self.buttonHeight
 	self:createUI()
 	self:createPrompt()
 end
@@ -186,13 +189,11 @@ function footer:createUI()
 
 	--self:createRightUI()
 
-	footer:createButtons("Basic2", footer.baseFunc, 100, false, [[
+	footer:createButtons("Basic2", footer.baseFunc, 2*self.buttonHeight, false, [[
 				background-color: rgba(135,206,250,100);
 				border-style: solid;
 				border-width: 1px;
-				border-color: white;
-				border-radius: 5px;
-				margin: 5px;
+				border-color: black;
 				qproperty-wordWrap: true;
 				padding: 0px;
 	]])
@@ -202,22 +203,18 @@ function footer:createUI()
 					background-color: #905923;
 					border-style: solid;
 					border-width: 1px;
-					border-color: white;
-					border-radius: 5px;
-					margin: 5px;
+					border-color: black;
 					qproperty-wordWrap: true;
 					padding: 0px;
 			]])
 	end
 
 	if character.necroEnabled then
-		footer:createButtons("Necro", character.necro, 50, footer:fastSpellCallback(), [[
+		footer:createButtons("Necro", character.necro, self.buttonHeight, footer:fastSpellCallback(), [[
 					background-color: #9400d3;
 					border-style: solid;
 					border-width: 1px;
-					border-color: white;
-					border-radius: 5px;
-					margin: 5px;
+					border-color: black;
 					qproperty-wordWrap: true;
 					padding: 0px;
 			]])
@@ -253,7 +250,7 @@ function footer:createButtons(name, data, y, func, style)
 		name = "MyButtons.TopHBox"..name,
 		x = 0, y = y,
 		width = "100%",
-		height = 50,
+		height = self.buttonHeight,
 		color = "black",
 		fgColor = "black"
 	}, footer.overlay)

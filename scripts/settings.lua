@@ -28,7 +28,7 @@ settings.func = {
 	["skalowanie_dpi"] = function(val)
 		settings.list.dpiScaling = tonumber(val)
 		settings:save()
-		settings:applyDpiScaling()
+		settings:setlyDpiScaling()
 		mapper:ui(settings:get("mapperWidth"), settings:get("mapperHeight"))
 		state:createLocationState()
 	end,
@@ -48,10 +48,14 @@ function settings:init()
 		self:save(default)
 		self.list = default
 	end
-	self:applyDpiScaling()
+	self:setlyDpiScaling()
 end
 
-function settings:applyDpiScaling()
+function settings:applyDpiScaling(val)
+	return val/self.dpiScaling
+end
+
+function settings:setlyDpiScaling()
 	self.dpiScaling = self:get("dpiScaling")/100
 end
 

@@ -39,7 +39,7 @@ mode.exec = {
 mode.button = {}
 
 function mode:init()
-	self:createUI()
+	--self:createUI()
 end
 
 function mode:active(name, msg)
