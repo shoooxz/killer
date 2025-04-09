@@ -103,6 +103,12 @@ function wrap(text, charLimit)
     return lines
 end
 
+function printer:helpClass(arr)
+	local wrapped = wrap(text, 75)
+	for i=1, #wrapped do
+		printer:textLine(wrapped[i], color)
+	end
+end
 
 function printer:text(text, color)
 	local wrapped = wrap(text, 75)

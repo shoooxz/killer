@@ -214,7 +214,7 @@
   },
   {
     "roomVnum": 15942,
-    "mob": "Wódz Ogrów",
+    "mob": "Wodz Ogrow",
     "region": "Forteca",
     "class": "Kleryk",
     "spells": [
@@ -228,7 +228,7 @@
   },
   {
     "roomVnum": 4519,
-    "mob": "Kaplan Sahuaginów",
+    "mob": "Kaplan Sahuaginow",
     "region": "Carrallak",
     "class": "Kleryk",
     "spells": [
@@ -894,7 +894,7 @@
   },
   {
     "roomVnum": 4519,
-    "mob": "Czarodziejka Sahuaginów",
+    "mob": "Czarodziejka Sahuaginow",
     "region": "Carrallak",
     "class": "Mag",
     "spells": [

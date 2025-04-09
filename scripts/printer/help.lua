@@ -193,10 +193,14 @@ end
 function printer:help(arr)
   self:title("Help")
   self:section(string.upper(arr.meta.name))
-  self:text(arr.meta.description)
-  if arr.meta.comment ~= 0 then
+  if arr.meta.additional then
+    self:tableRow({arr.meta.len, 60}, {}, arr.meta.additional, true)
     self:space()
-    self:text(arr.meta.comment, "grey")
+  end
+  self:text(arr.meta.info)
+  if arr.meta.note ~= 0 then
+    self:space()
+    self:text(arr.meta.note, "grey")
   end
   if next(arr.teacher) then
     self:space()

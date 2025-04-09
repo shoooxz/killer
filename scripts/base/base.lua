@@ -4,8 +4,10 @@ base.jsonBook = {}
 base.jsonSpell = {}
 base.jsonSkill = {}
 base.spellDictionary = {}
+base.spellSchool = {}
 base.spellDictionaryFull = {}
 base.skillDictionaryFull = {}
+base.spellClass = {}
 --[[
 
 3. Wprowadzono nowe umiejętności ( skile dostępne tylko dla magów na 31 levelu ) (nauczyć się można wcześniej ale używać dopiero na 31) - dostępne tylko z ksiąg ze skilami.
@@ -25,6 +27,36 @@ Można posiadać wiele masterek i rzucając czary różnych żywiołów można n
 
 
 ]]--
+
+function base:targetToFancy(tar)
+	local out = {
+		["TAR_IGNORE"] = "Brak celu",
+		["TAR_CHAR_OFFENSIVE"] = "Ofensywny",
+		["TAR_CHAR_DEFENSIVE"] = "Defensywny",
+		["TAR_CHAR_SELF"] = "Tylko na siebie",
+		["TAR_OBJ_INV"] = "Cel obiekt w inventory",
+		["TAR_OBJ_CHAR_DEF"] = "Cel obiekt albo postac, defensywny",
+		["TAR_OBJ_CHAR_OFF"] = "Cel obiekt albo postac, ofensywny",
+		["TAR_OBJ_ROOM"] = "Cel obiekt na lokacji",
+		["TAR_OBJ_IGNORE"] = "Na lokacje",
+	}
+	return out[tar]
+end
+
+function base:schoolToColor(school)
+	local out = {
+		["Odrzucanie"] = "white",
+		["Przemiany"] = "green",
+		["Przywolanie"] = "yellow",
+		["Poznanie"] = "blue",
+		["Zauroczenie"] = "deep_pink",
+		["Iluzje"] = "cyan",
+		["Inwokacje"] = "red",
+		["Nekromancja"] = "dim_grey",
+	}
+	return out[school]
+end
+
 function base:classToColor(long)
 	local out = {
 		["Wojownik"] = "sienna",
@@ -78,6 +110,7 @@ function base:init()
   self:buildSpellDictionary()
   self:buildSpellDictionaryFull()
 	self:buildSkillDictionaryFull()
+	self:buildSchool()
 	-- clear memory
 	self.jsonSpell = nil
 	self.jsonSkill = nil
@@ -85,7 +118,7 @@ end
 
 function base:buildSpellDictionary()
   for i=1, #self.jsonSpell do
-    local name = self.jsonSpell[i][1]
+    local name = self.jsonSpell[i]["name"]
     local first = string.sub(name, 1, 1)
     if not self.spellDictionary[first] then
       self.spellDictionary[first] = {}
@@ -105,16 +138,13 @@ end
 -- zamien json na slownik i przerzuc dane do kluczy tablicy
 function base:buildSpellDictionaryFull()
   for i=1, #self.jsonSpell do
-    local name = self.jsonSpell[i][1]
+    local name = self.jsonSpell[i]["name"]
     local first = string.sub(name, 1, 1)
     if not self.spellDictionaryFull[first] then
       self.spellDictionaryFull[first] = {}
     end
-    --table.insert(, name)
-    self.spellDictionaryFull[first][name] = {}
-    self.spellDictionaryFull[first][name].name =  self.jsonSpell[i][1]
-    self.spellDictionaryFull[first][name].description =  self.jsonSpell[i][2]
-    self.spellDictionaryFull[first][name].comment =  self.jsonSpell[i][3]
+    self.spellDictionaryFull[first][name] = self.jsonSpell[i]
+		--self.spellDictionaryFull[first][name].school =
     -- tutaj dodawac kolejne
   end
 end
@@ -147,6 +177,12 @@ function base:help(name)
 		found = true
 	elseif self.spellDictionaryFull[first] and self.spellDictionaryFull[first][name] then
 		out.meta = self.spellDictionaryFull[first][name]
+		local arr = {}
+		out.meta.additional = {}
+		out.meta.len = string.len(out.meta.school[1])+1
+		table.insert(arr, {self:schoolToColor(out.meta.school[1]), out.meta.school[1], ""})
+		table.insert(arr, {"white", self:targetToFancy(out.meta.target), ""})
+		table.insert(out.meta.additional, arr)
 		found = true
 	end
 	if found then
@@ -164,6 +200,46 @@ function base:showPath(room)
   if path then
     mapper:highlight(speedWalkPath)
   end
+end
+
+--[[
+odrzucenie  <> przemiany/iluzje
+przemiany   <> odrzucanie/nekromacja
+przywolanie <> poznanie/inwokacje
+zauroczenia <> inwokacje/nekromancja
+iluzje      <> inwokacje/nekromacja
+inwokacje   <> zauroczenia/przywolanie
+nekromancja <> iluzje/zauroczenia
+]]--
+function base:buildSchool()
+	for i=1, #self.jsonSpell do
+			if type(self.jsonSpell[i].class) == "table" and next(self.jsonSpell[i].class) then
+				for j=1, #self.jsonSpell[i].class do
+					local class = self.jsonSpell[i].class[j]
+					if not self.spellClass[class[1]] then
+							self.spellClass[class[1]] = {}
+					end
+					if not self.spellClass[class[1]][tostring(class[2])] then
+							self.spellClass[class[1]][tostring(class[2])] = {}
+					end
+					table.insert(self.spellClass[class[1]][tostring(class[2])], self.jsonSpell[i].name)
+				end
+			end
+
+
+
+
+		if type(self.jsonSpell[i].school) == "table" and next(self.jsonSpell[i].school) and self.jsonSpell[i].school[1]  then
+			if not self.spellSchool[self.jsonSpell[i].school[1]] then
+				self.spellSchool[self.jsonSpell[i].school[1]] = {}
+			end
+			table.insert(self.spellSchool[self.jsonSpell[i].school[1]], self.jsonSpell[i]["name"])
+		end
+	end
+end
+
+function base:test()
+	display(self.spellClass)
 end
 
 function base:spellSearch(spell)
