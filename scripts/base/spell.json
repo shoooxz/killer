@@ -22,6 +22,10 @@
             [
                 "mag",
                 1
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": [
@@ -41,6 +45,10 @@
             [
                 "pal",
                 1
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": [
@@ -53,6 +61,10 @@
         "info": "To prosty, ale czasem niezwykle uzyteczny czar. Gdy masz w inwentarzu jakies jedzenie lub pojemnik z napojem, i jest ono zatrute mozesz uzyc tego czaru, aby usunac trucizne z jedzenia czy napoju i przywrocic mu pelna wartosc.",
         "note": 0,
         "class": [
+            [
+                "mag",
+                2
+            ],
             [
                 "dru",
                 1
@@ -138,7 +150,7 @@
             ],
             [
                 "dru",
-                6
+                4
             ]
         ],
         "school": [
@@ -157,7 +169,7 @@
             ],
             [
                 "dru",
-                7
+                6
             ]
         ],
         "school": [
@@ -325,6 +337,10 @@
             [
                 "dru",
                 2
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": [
@@ -355,6 +371,10 @@
             [
                 "dru",
                 3
+            ],
+            [
+                "nom",
+                2
             ]
         ],
         "school": [
@@ -405,6 +425,21 @@
         "target": "TAR_IGNORE"
     },
     {
+        "name": "desert light",
+        "info": "Nomadzi dzieki temu zakleciu potrafia widziec w ciemnosci.",
+        "note": 0,
+        "class": [
+            [
+                "nom",
+                1
+            ]
+        ],
+        "school": [
+            "Przemiany"
+        ],
+        "target": "TAR_IGNORE"
+    },
+    {
         "name": "cure blindness",
         "info": "Czar ten generuje kojace cieplo, ktore splywa na oczy wybranej osoby, leczac slepote.",
         "note": 0,
@@ -434,7 +469,7 @@
             ],
             [
                 "dru",
-                7
+                6
             ]
         ],
         "school": [
@@ -454,6 +489,10 @@
             [
                 "pal",
                 1
+            ],
+            [
+                "nom",
+                4
             ]
         ],
         "school": [
@@ -476,7 +515,11 @@
             ],
             [
                 "dru",
-                3
+                1
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": [
@@ -499,7 +542,11 @@
             ],
             [
                 "dru",
-                6
+                4
+            ],
+            [
+                "nom",
+                4
             ]
         ],
         "school": [
@@ -518,6 +565,10 @@
             ],
             [
                 "pal",
+                3
+            ],
+            [
+                "nom",
                 3
             ]
         ],
@@ -541,7 +592,11 @@
             ],
             [
                 "dru",
-                5
+                2
+            ],
+            [
+                "nom",
+                2
             ]
         ],
         "school": [
@@ -610,6 +665,10 @@
             [
                 "kle",
                 4
+            ],
+            [
+                "nom",
+                6
             ]
         ],
         "school": [
@@ -629,6 +688,10 @@
             [
                 "kle",
                 3
+            ],
+            [
+                "nom",
+                6
             ]
         ],
         "school": [
@@ -659,6 +722,10 @@
             [
                 "kle",
                 2
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": [
@@ -735,6 +802,26 @@
         "target": "TAR_IGNORE"
     },
     {
+        "name": "quiet step",
+        "info": "Pozwala skradac sie w ekwipunku z metalowymi czesciami.",
+        "note": "Poprawia szanse na wejscie Backstab.",
+        "class": [
+            [
+                "mag",
+                5
+            ],
+            [
+                "nom",
+                4
+            ]
+        ],
+        "school": [
+            "Zauroczenie",
+            "SpellSpec"
+        ],
+        "target": "TAR_IGNORE"
+    },
+    {
         "name": "enchant armor",
         "info": "Czar ten wplata magie w zbroje, poprawiajac jej wlasciwosci ochronne. Chociaz efekt dzialania czaru jest trwaly, to jednak nalezy zauwazyc, ze 'przeciazenie' przedmiotu nadmierna iloscia energii magicznej moze spowodowac jego zniszczenie.",
         "note": 0,
@@ -768,12 +855,7 @@
         "name": "energy drain",
         "info": "Przez wyssanie energi zyciowej przez wampira, ofiara nie moze zdobywac doswiadczenia.",
         "note": "Zdejmuje restoration.",
-        "class": [
-            [
-                "mag",
-                8
-            ]
-        ],
+        "class": 0,
         "school": [
             "Nekromancja"
         ],
@@ -835,7 +917,7 @@
         "class": [
             [
                 "mag",
-                3
+                6
             ]
         ],
         "school": [
@@ -900,6 +982,10 @@
             [
                 "dru",
                 3
+            ],
+            [
+                "nom",
+                4
             ]
         ],
         "school": [
@@ -1014,6 +1100,10 @@
             [
                 "mag",
                 3
+            ],
+            [
+                "nom",
+                5
             ]
         ],
         "school": [
@@ -1127,6 +1217,10 @@
             [
                 "dru",
                 2
+            ],
+            [
+                "nom",
+                3
             ]
         ],
         "school": [
@@ -1296,6 +1390,10 @@
             [
                 "pal",
                 1
+            ],
+            [
+                "nom",
+                3
             ]
         ],
         "school": [
@@ -1326,6 +1424,10 @@
             [
                 "kle",
                 2
+            ],
+            [
+                "nom",
+                3
             ]
         ],
         "school": [
@@ -1468,7 +1570,7 @@
         "class": [
             [
                 "mag",
-                5
+                3
             ]
         ],
         "school": [
@@ -1580,12 +1682,7 @@
         "name": "finger of death",
         "info": "Polega na wypuszczeniu z palca czarodzieja poteznej fali negatywnej energii. W zaleznosci od mocy czarodzieja, negatywna energia moze spowodowac przedwczesna smierc ofiary.",
         "note": 0,
-        "class": [
-            [
-                "mag",
-                9
-            ]
-        ],
+        "class": 0,
         "school": [
             "Nekromancja"
         ],
@@ -1598,11 +1695,12 @@
         "class": [
             [
                 "mag",
-                9
+                8
             ]
         ],
         "school": [
-            "Inwokacje"
+            "Inwokacje",
+            "SpellSpec"
         ],
         "target": "TAR_CHAR_OFFENSIVE"
     },
@@ -1771,6 +1869,10 @@
             [
                 "dru",
                 4
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": [
@@ -1813,6 +1915,10 @@
             [
                 "dru",
                 4
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": [
@@ -1836,6 +1942,10 @@
             [
                 "dru",
                 4
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": [
@@ -1870,6 +1980,10 @@
             [
                 "pal",
                 4
+            ],
+            [
+                "nom",
+                5
             ]
         ],
         "school": [
@@ -1926,6 +2040,10 @@
             ],
             [
                 "pal",
+                2
+            ],
+            [
+                "nom",
                 2
             ]
         ],
@@ -2171,21 +2289,6 @@
         "target": "TAR_CHAR_OFFENSIVE"
     },
     {
-        "name": "mend",
-        "info": "Czar ten naprawia magicznie przedmiot, na ktory zostal rzucony. Przedmiot odzyskuje cala swoja wytrzymalosc.",
-        "note": 0,
-        "class": [
-            [
-                "mag",
-                5
-            ]
-        ],
-        "school": [
-            "Przemiany"
-        ],
-        "target": "TAR_IGNORE"
-    },
-    {
         "name": "hold undead",
         "info": "Czar ten na krotka chwile calkowicie unieruchamia istote nieumarla.",
         "note": 0,
@@ -2254,6 +2357,10 @@
             [
                 "dru",
                 4
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": [
@@ -2299,6 +2406,10 @@
             [
                 "mag",
                 6
+            ],
+            [
+                "nom",
+                5
             ]
         ],
         "school": [
@@ -2314,6 +2425,10 @@
             [
                 "mag",
                 5
+            ],
+            [
+                "nom",
+                4
             ]
         ],
         "school": [
@@ -2405,7 +2520,7 @@
         "class": [
             [
                 "mag",
-                6
+                7
             ]
         ],
         "school": [
@@ -2507,9 +2622,14 @@
         "name": "astral search",
         "info": "Dluga inktantacja, ktora otwiera przejscia do astralnego planu. Celem jest nawiazanie wiezi z istota z innego wymiaru, ktora ma ostatecznie, po oswojeniu, sluzyc magowi.",
         "note": "Komenda: familiar.",
-        "class": 0,
+        "class": [
+            [
+                "mag",
+                5
+            ]
+        ],
         "school": 0,
-        "target": 0
+        "target": "TAR_IGNORE"
     },
     {
         "name": "energize",
@@ -2548,7 +2668,7 @@
         "class": [
             [
                 "mag",
-                4
+                6
             ]
         ],
         "school": [
@@ -2610,6 +2730,10 @@
             [
                 "mag",
                 3
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": [
@@ -2686,6 +2810,21 @@
             [
                 "mag",
                 6
+            ]
+        ],
+        "school": [
+            "Zauroczenie"
+        ],
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "charm animal",
+        "info": "Zakleciem tym mozna przejac kontrole nad zwierzeciem.",
+        "note": 0,
+        "class": [
+            [
+                "dru",
+                3
             ]
         ],
         "school": [
@@ -2781,6 +2920,10 @@
             [
                 "dru",
                 5
+            ],
+            [
+                "nom",
+                2
             ]
         ],
         "school": [
@@ -2815,6 +2958,10 @@
             [
                 "pal",
                 4
+            ],
+            [
+                "nom",
+                6
             ]
         ],
         "school": [
@@ -3058,7 +3205,7 @@
         "class": [
             [
                 "dru",
-                6
+                7
             ]
         ],
         "school": [
@@ -3090,6 +3237,10 @@
             [
                 "dru",
                 2
+            ],
+            [
+                "nom",
+                3
             ]
         ],
         "school": [
@@ -3130,7 +3281,7 @@
     {
         "name": "animal rage",
         "info": "Aby zwiekszyc zdolnosci bojowe swoich podopiecznych druidzi opracowali czar pozwalajacy na wprawienie swojego podopiecznego w zwierzecy szal.",
-        "note": 0,
+        "note": "Na zwierze magic fang + animal rage.",
         "class": [
             [
                 "dru",
@@ -3160,6 +3311,21 @@
     {
         "name": "burst of fire",
         "info": "Ten prosty czar pozwala stworzyc swoisty jezyk ognia, posylajac go w strone swojego przeciwnika, raniac go czystym, zywiolowym ogniem.",
+        "note": 0,
+        "class": [
+            [
+                "dru",
+                2
+            ]
+        ],
+        "school": [
+            "Inwokacje"
+        ],
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "produce fire",
+        "info": "Ten prosty czar pozwala wywolac cala mase plomiennych jezorow pojawiajacych sie wprost z podloza.",
         "note": 0,
         "class": [
             [
@@ -3295,6 +3461,10 @@
             [
                 "dru",
                 2
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": [
@@ -3310,6 +3480,21 @@
             [
                 "pal",
                 3
+            ]
+        ],
+        "school": [
+            "Zauroczenie"
+        ],
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "stone master",
+        "info": "Ten potezny czar pozwala druidowi na magiczne podniesienie lezacych w okolicy kamieni i glazow, a nastepnie moze pokierowac je wprost na przeciwnika i zadac mu bardzo powazne obrazenia.",
+        "note": "Gory, jaskinie.",
+        "class": [
+            [
+                "dru",
+                8
             ]
         ],
         "school": [
@@ -3335,7 +3520,7 @@
     {
         "name": "magic fang",
         "info": "Dzieki temu czarowi druid potrafi tchnac w zwierze czastke magii, dzieki czemu ataki zwierzaka staja sie magiczne.",
-        "note": 0,
+        "note": "Na zwierze magic fang + animal rage.",
         "class": [
             [
                 "dru",
@@ -3467,6 +3652,10 @@
         "note": 0,
         "class": [
             [
+                "mag",
+                1
+            ],
+            [
                 "dru",
                 2
             ]
@@ -3564,6 +3753,10 @@
             [
                 "mag",
                 4
+            ],
+            [
+                "nom",
+                3
             ]
         ],
         "school": [
@@ -3611,7 +3804,7 @@
         "class": [
             [
                 "dru",
-                3
+                5
             ]
         ],
         "school": [
@@ -3673,6 +3866,10 @@
             [
                 "dru",
                 4
+            ],
+            [
+                "nom",
+                5
             ]
         ],
         "school": [
@@ -4505,6 +4702,21 @@
         "target": "TAR_CHAR_DEFENSIVE"
     },
     {
+        "name": "dismiss outsider",
+        "info": "Za pomoca tego czaru mozna odeslac przyzwane oraz stworzone przez siebie lub kogos stworzenia.",
+        "note": 0,
+        "class": [
+            [
+                "mag",
+                3
+            ]
+        ],
+        "school": [
+            "Odrzucanie"
+        ],
+        "target": "TAR_CHAR_DEFENSIVE"
+    },
+    {
         "name": "dismiss monster",
         "info": "Za pomoca tego czaru mozna odeslac przyzwane oraz stworzone przez siebie lub kogos stworzenia.",
         "note": 0,
@@ -4730,6 +4942,10 @@
             [
                 "dru",
                 7
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": [
@@ -4976,11 +5192,15 @@
     {
         "name": "fetch",
         "info": "Zdolni iluzjonisci potrafia za pomoca tego zaklecia stworzyc iluzje samego siebie i pozostawic ja w wybranym przez siebie miejscu. Jak kazda iluzja, soboftor taki znika po jakimkolwiek trafieniu.",
-        "note": 0,
+        "note": "Na summon smoka.",
         "class": [
             [
                 "mag",
                 7
+            ],
+            [
+                "nom",
+                5
             ]
         ],
         "school": [
@@ -5124,6 +5344,10 @@
             [
                 "mag",
                 3
+            ],
+            [
+                "nom",
+                3
             ]
         ],
         "school": [
@@ -5139,6 +5363,10 @@
         "class": [
             [
                 "mag",
+                2
+            ],
+            [
+                "nom",
                 2
             ]
         ],
@@ -5180,6 +5408,25 @@
             [
                 "kle",
                 3
+            ],
+            [
+                "nom",
+                2
+            ]
+        ],
+        "school": [
+            "Poznanie"
+        ],
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "sense fatigue",
+        "info": "Czar, ktory umozliwia ocene zmeczenia wszystkich osob w druzynie.",
+        "note": 0,
+        "class": [
+            [
+                "dru",
+                2
             ]
         ],
         "school": [
@@ -5540,6 +5787,10 @@
             [
                 "pal",
                 2
+            ],
+            [
+                "nom",
+                2
             ]
         ],
         "school": [
@@ -5558,6 +5809,10 @@
             ],
             [
                 "dru",
+                2
+            ],
+            [
+                "nom",
                 2
             ]
         ],
@@ -5740,12 +5995,7 @@
         "name": "reverse gravity",
         "info": "Czar, ktory podrzuca przeciwnikiem wysoko do gory. Jesli zaklecie uzywane jest w zamknietym pomieszczeniu ofiara otrzymuje jeszcze wieksze obrazenia, odbijajac sie od sufitu.",
         "note": 0,
-        "class": [
-            [
-                "mag",
-                9
-            ]
-        ],
+        "class": 0,
         "school": [
             "Przemiany"
         ],
@@ -6008,33 +6258,65 @@
         "name": "lightingshield",
         "info": "Ten czar powoduje, ze wokol maga, ktory rzucil to zaklecie pojawia sie tarcza z piorunow, ktora poraza osoby chcace zadac cios.",
         "note": "Mozna uzywac wraz z inna tarcza.",
-        "class": 0,
-        "school": 0,
-        "target": 0
+        "class": [
+            [
+                "mag",
+                8
+            ]
+        ],
+        "school": [
+            "Inwokacje",
+            "SpellSpec"
+        ],
+        "target": "TAR_CHAR_DEFENSIVE"
     },
     {
         "name": "lightning storm",
         "info": "Czar przywoluje burze z piorunami, ktora mag moze kontrolowac aby nie ranila przyjaciol.",
         "note": "110 control of magic na dwie zamiecie.",
-        "class": 0,
-        "school": 0,
-        "target": 0
+        "class":  [
+            [
+                "mag",
+                9
+            ]
+        ],
+        "school": [
+            "Inwokacje",
+            "SpellSpec"
+        ],
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "blizzard storm",
         "info": "Czar przywoluje sniezna burze, ktora mag moze kontrolowac aby nie ranila przyjaciol.",
         "note": "110 control of magic na dwie zamiecie.",
-        "class": 0,
-        "school": 0,
-        "target": 0
+        "class": [
+            [
+                "mag",
+                9
+            ]
+        ],
+        "school": [
+            "Inwokacje",
+            "SpellSpec"
+        ],
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "absolute magic protection",
         "info": "Ulepszona wersja globa, chroni przed wszystkimi czarami.",
         "note": 0,
-        "class": 0,
-        "school": 0,
-        "target": 0
+        "class": [
+            [
+                "mag",
+                9
+            ]
+        ],
+        "school": [
+            "Odrzucanie",
+            "SpellSpec"
+        ],
+        "target": "TAR_CHAR_DEFENSIVE"
     },
     {
         "name": "plague",
@@ -6073,25 +6355,46 @@
         "name": "mirage",
         "info": "Podstawowy czar defensywny Nomada.",
         "note": 0,
-        "class": 0,
-        "school": 0,
-        "target": 0
+        "class": [
+            [
+                "nom",
+                1
+            ]
+        ],
+        "school": [
+            "Iluzje"
+        ],
+        "target": "TAR_CHAR_DEFENSIVE"
     },
     {
         "name": "sand shroud",
         "info": "Najbardziej doswiadczeni nomadzi potrafia uformowac z piachu charakterystyczna oslone. Podnosi ona odpornosc na obrazenia fizyczne i magie rzucajacego.",
         "note": 0,
-        "class": 0,
-        "school": 0,
-        "target": 0
+        "class": [
+            [
+                "nom",
+                6
+            ]
+        ],
+        "school": [
+            "Przywolanie"
+        ],
+        "target": "TAR_CHAR_SELF"
     },
     {
         "name": "sand storm",
         "info": "Najbardziej doswiadczeni nomadzi potrafia uformowac z piachu burze piaskowa dookola siebie. Dotkliwie rani ona kazdego, kto probuje zadac cios nomadowi. Dodatkowo istnieje szansa na oslepienie ofiary.",
         "note": 0,
-        "class": 0,
-        "school": 0,
-        "target": 0
+        "class": [
+            [
+                "nom",
+                6
+            ]
+        ],
+        "school": [
+            "Inwokacje"
+        ],
+        "target": "TAR_CHAR_SELF"
     },
     {
         "name": "mass cure moderate",

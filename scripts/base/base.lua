@@ -211,24 +211,58 @@ iluzje      <> inwokacje/nekromacja
 inwokacje   <> zauroczenia/przywolanie
 nekromancja <> iluzje/zauroczenia
 ]]--
+
+function base:schoolSuccess(current, school, reverse1, reverse2)
+	if current == 0 then return true end
+	local firstPass = false
+	local secondPass = true
+	if current[1] ~= reverse1 and current[1] ~= reverse2 then
+		firstPass = true
+	end
+	for i=1, #current do
+		local s = current[i]
+		if s == "SpellSpec" and current[1] ~= school then
+			secondPass = false
+		end
+	end
+	return firstPass and secondPass
+end
+
+function base:declareSchool(name)
+	self.spellClass[name] = {}
+	self.spellClass[name]["1"] = {}
+	self.spellClass[name]["2"] = {}
+	self.spellClass[name]["3"] = {}
+	self.spellClass[name]["4"] = {}
+	self.spellClass[name]["5"] = {}
+	self.spellClass[name]["6"] = {}
+	self.spellClass[name]["7"] = {}
+	self.spellClass[name]["8"] = {}
+	self.spellClass[name]["9"] = {}
+end
+
 function base:buildSchool()
+	self:declareSchool("inwo")
 	for i=1, #self.jsonSpell do
 			if type(self.jsonSpell[i].class) == "table" and next(self.jsonSpell[i].class) then
 				for j=1, #self.jsonSpell[i].class do
 					local class = self.jsonSpell[i].class[j]
-					if not self.spellClass[class[1]] then
-							self.spellClass[class[1]] = {}
+					if class[1] == "mag" then
+						if self:schoolSuccess(self.jsonSpell[i].school, "Inwokacje", "Zauroczenie", "Przywolanie") then
+							table.insert(self.spellClass["inwo"][tostring(class[2])], self.jsonSpell[i].name)
+						end
+					else
+						if not self.spellClass[class[1]] then
+								self.spellClass[class[1]] = {}
+						end
+						if not self.spellClass[class[1]][tostring(class[2])] then
+								self.spellClass[class[1]][tostring(class[2])] = {}
+						end
+						table.insert(self.spellClass[class[1]][tostring(class[2])], self.jsonSpell[i].name)
 					end
-					if not self.spellClass[class[1]][tostring(class[2])] then
-							self.spellClass[class[1]][tostring(class[2])] = {}
-					end
-					table.insert(self.spellClass[class[1]][tostring(class[2])], self.jsonSpell[i].name)
 				end
 			end
-
-
-
-
+	  -- wyjebac ???
 		if type(self.jsonSpell[i].school) == "table" and next(self.jsonSpell[i].school) and self.jsonSpell[i].school[1]  then
 			if not self.spellSchool[self.jsonSpell[i].school[1]] then
 				self.spellSchool[self.jsonSpell[i].school[1]] = {}
@@ -236,10 +270,12 @@ function base:buildSchool()
 			table.insert(self.spellSchool[self.jsonSpell[i].school[1]], self.jsonSpell[i]["name"])
 		end
 	end
+
+
 end
 
 function base:test()
-	display(self.spellClass)
+	display(self.spellClass["inwo"])
 end
 
 function base:spellSearch(spell)
