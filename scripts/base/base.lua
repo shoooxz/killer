@@ -142,10 +142,10 @@ function base:help(name)
   local first = string.sub(name, 1, 1)
 	local out = {}
 	local found = false
-	if self.skillDictionaryFull[first][name] then
+	if self.skillDictionaryFull[first] and self.skillDictionaryFull[first][name] then
 		out.meta = self.skillDictionaryFull[first][name]
 		found = true
-	elseif self.spellDictionaryFull[first][name] then
+	elseif self.spellDictionaryFull[first] and self.spellDictionaryFull[first][name] then
 		out.meta = self.spellDictionaryFull[first][name]
 		found = true
 	end

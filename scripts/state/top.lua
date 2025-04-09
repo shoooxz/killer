@@ -104,12 +104,14 @@ end
 function top:setCondition(con)
   for name, value in pairs(con) do
     local btn = self:getButtonByGmcp(name)
-    if name == "position" then
-        -- position raczej wyjebac, position do okna kondycji, zamiast tego cos niestandardowego
-    elseif name == "drunk" then
-      self:setButtonStyle(btn, value, true)
-    else
-      self:setButtonStyle(btn, value)
+    if btn then
+      if name == "position" then
+          -- position raczej wyjebac, position do okna kondycji, zamiast tego cos niestandardowego
+      elseif name == "drunk" then
+        self:setButtonStyle(btn, value, true)
+      else
+        self:setButtonStyle(btn, value)
+      end
     end
   end
 end

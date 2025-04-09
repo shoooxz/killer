@@ -8,7 +8,7 @@ exp.conf = {}
 exp.members = {}
 exp.heal = {}
 exp.heal.proc = 5
-exp.heal.spell = "decay"
+exp.heal.spell = "cure serious"
 
 function exp:start(conf)
   self.conf = conf

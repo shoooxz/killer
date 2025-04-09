@@ -7,8 +7,8 @@ function inventory:eat()
   --local bag =  profile:get("bag")
   --send("get "..food.." "..bag..";get "..food.." "..bag)
   local f = ""
-  if food == "owoc" then
-    f = "eat owoc; eat owoc; eat owoc; feed "..sub.." owoc; feed "..sub.." owoc; feed "..sub.." owoc";
+  if food == "owoc" or food == "jagoda" then
+    f = "eat "..food.."; eat "..food.."; eat "..food.."; feed "..sub.." "..food.."; feed "..sub.." "..food.."; feed "..sub.." "..food;
   else
     f = "eat "..food..";eat "..food..";eat "..food
   end
