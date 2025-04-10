@@ -207,22 +207,27 @@ odrzucenie  <> przemiany/iluzje
 przemiany   <> odrzucanie/nekromacja
 przywolanie <> poznanie/inwokacje
 zauroczenia <> inwokacje/nekromancja
-iluzje      <> inwokacje/nekromacja
+iluzje      <> inwokacje/nekromacja/odrzucenie
 inwokacje   <> zauroczenia/przywolanie
 nekromancja <> iluzje/zauroczenia
 ]]--
 
-function base:schoolSuccess(current, school, reverse1, reverse2)
+function base:schoolSuccess(current, school, reverse1, reverse2, reverse3)
 	if current == 0 then return true end
-	local firstPass = false
+	local firstPass = true
 	local secondPass = true
-	if current[1] ~= reverse1 and current[1] ~= reverse2 then
-		firstPass = true
-	end
 	for i=1, #current do
-		local s = current[i]
-		if s == "SpellSpec" and current[1] ~= school then
-			secondPass = false
+		if current[i] == "SpellSpec" then
+			if current[1] ~= school then
+				secondPass = false
+			end
+		else
+			if current[i] == reverse1 or current[i] == reverse2 then
+				firstPass = false
+			end
+			if reverse3 and current[i] == reverse3 then
+				firstPass = false
+			end
 		end
 	end
 	return firstPass and secondPass
@@ -243,6 +248,13 @@ end
 
 function base:buildSchool()
 	self:declareSchool("inwo")
+	self:declareSchool("iluz")
+	self:declareSchool("nekr")
+	self:declareSchool("odrz")
+	self:declareSchool("prze")
+	self:declareSchool("przy")
+	self:declareSchool("zaur")
+	self:declareSchool("ogol")
 	for i=1, #self.jsonSpell do
 			if type(self.jsonSpell[i].class) == "table" and next(self.jsonSpell[i].class) then
 				for j=1, #self.jsonSpell[i].class do
@@ -250,6 +262,24 @@ function base:buildSchool()
 					if class[1] == "mag" then
 						if self:schoolSuccess(self.jsonSpell[i].school, "Inwokacje", "Zauroczenie", "Przywolanie") then
 							table.insert(self.spellClass["inwo"][tostring(class[2])], self.jsonSpell[i].name)
+						end
+						if self:schoolSuccess(self.jsonSpell[i].school, "Iluzje", "Inwokacje", "Nekromancja", "Odrzucanie") then
+							table.insert(self.spellClass["iluz"][tostring(class[2])], self.jsonSpell[i].name)
+						end
+						if self:schoolSuccess(self.jsonSpell[i].school, "Nekromancja", "Iluzje", "Zauroczenie") then
+							table.insert(self.spellClass["nekr"][tostring(class[2])], self.jsonSpell[i].name)
+						end
+						if self:schoolSuccess(self.jsonSpell[i].school, "Odrzucanie", "Przemiany", "Iluzje") then
+							table.insert(self.spellClass["odrz"][tostring(class[2])], self.jsonSpell[i].name)
+						end
+						if self:schoolSuccess(self.jsonSpell[i].school, "Przemiany", "Odrzucanie", "Nekromancja") then
+							table.insert(self.spellClass["prze"][tostring(class[2])], self.jsonSpell[i].name)
+						end
+						if self:schoolSuccess(self.jsonSpell[i].school, "Przywolanie", "Poznanie", "Inwokacje") then
+							table.insert(self.spellClass["przy"][tostring(class[2])], self.jsonSpell[i].name)
+						end
+						if self:schoolSuccess(self.jsonSpell[i].school, "Zauroczenie", "Inwokacje", "Nekromancja") then
+							table.insert(self.spellClass["zaur"][tostring(class[2])], self.jsonSpell[i].name)
 						end
 					else
 						if not self.spellClass[class[1]] then
@@ -275,7 +305,7 @@ function base:buildSchool()
 end
 
 function base:test()
-	display(self.spellClass["inwo"])
+	display(self.spellClass["ogol"])
 end
 
 function base:spellSearch(spell)

@@ -852,6 +852,22 @@
         "target": "TAR_OBJ_INV"
     },
     {
+        "name": "enchant artefact",
+        "info": "Czar ten pozwala na stale ulepszyc artefakt.",
+        "note": 0,
+        "class": [
+            [
+                "mag",
+                9
+            ]
+        ],
+        "school": [
+            "Zauroczenie",
+            "SpellSpec"
+        ],
+        "target": "TAR_OBJ_INV"
+    },
+    {
         "name": "energy drain",
         "info": "Przez wyssanie energi zyciowej przez wampira, ofiara nie moze zdobywac doswiadczenia.",
         "note": "Zdejmuje restoration.",
@@ -1607,7 +1623,9 @@
                 2
             ]
         ],
-        "school": [],
+        "school": [
+            "Iluzje"
+        ],
         "target": "TAR_CHAR_SELF"
     },
     {
@@ -1708,9 +1726,17 @@
         "name": "change weapon",
         "info": "To potezne zaklecie dostepne jest najwybitniejszym mistrzom przemian. Za jego pomoca potrafia oni zmienic dowolna bron w poteznego golema, ktory bedzie im sluzyl. Jakosc golema zalezy od wagi przedmiotu. Czar ten mozna uzyc na odpowiednich artefaktach, ktore nie zostana zniszczone w procesie inkantancji.",
         "note": 0,
-        "class": 0,
-        "school": 0,
-        "target": 0
+        "class": [
+            [
+                "mag",
+                7
+            ]
+        ],
+        "school": [
+            "Przemiany",
+            "SpellSpec"
+        ],
+        "target": "TAR_OBJ_INV"
     },
     {
         "name": "liveoak",
@@ -2544,21 +2570,6 @@
         "target": "TAR_OBJ_INV"
     },
     {
-        "name": "bladethirst",
-        "info": "Gdy rzucisz ten czar na bron sprawisz, ze przez krotka chwile bedzie nia mozna o wiele latwiej zadac cios.",
-        "note": 0,
-        "class": [
-            [
-                "mag",
-                2
-            ]
-        ],
-        "school": [
-            "Zauroczenie"
-        ],
-        "target": "TAR_OBJ_INV"
-    },
-    {
         "name": "acid hands",
         "info": "Rzucajacy moze przywolac z powietrza zrace czasteczki i kropelki kwasu na swoje dlonie, nie odnoszac przy tym obrazen.",
         "note": 0,
@@ -2672,7 +2683,7 @@
             ]
         ],
         "school": [
-            "Nekromancja"
+            "Przemiany"
         ],
         "target": "TAR_CHAR_SELF"
     },
@@ -3003,12 +3014,7 @@
         "name": "feeblemind",
         "info": "Wampiry potrafia oglupic swoja ofiare. Na tego typu przeklenstwo moze pomoc oczyczajaca moc kleryka.",
         "note": "Zdejmuje lesser restoration i restoration.",
-        "class": [
-            [
-                "mag",
-                6
-            ]
-        ],
+        "class": 0,
         "school": [
             "Zauroczenie"
         ],
@@ -3059,7 +3065,7 @@
         "class": [
             [
                 "mag",
-                5
+                4
             ],
             [
                 "kle",
@@ -3220,7 +3226,7 @@
         "class": [
             [
                 "mag",
-                6
+                5
             ]
         ],
         "school": [
@@ -3539,7 +3545,7 @@
         "class": [
             [
                 "mag",
-                7
+                6
             ]
         ],
         "school": [
@@ -3555,7 +3561,7 @@
         "class": [
             [
                 "mag",
-                8
+                7
             ]
         ],
         "school": [
@@ -3572,6 +3578,38 @@
             [
                 "mag",
                 8
+            ]
+        ],
+        "school": [
+            "Nekromancja",
+            "SpellSpec"
+        ],
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "vampiric aura",
+        "info": "Nekromanta otacza sie aura negatywnej energii, ktora po zetknieciu sie z istotami zywymi wysysa z nich zycie.",
+        "note": 0,
+        "class": [
+            [
+                "mag",
+                9
+            ]
+        ],
+        "school": [
+            "Nekromancja",
+            "SpellSpec"
+        ],
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "entrophy wave",
+        "info": "Czar ten wyzwala fale negatywnej energii, ktora uderza w grupe przeciwnikow. Nalezy pamietac, ze czar dziala tylko na istoty zywe, a nie na umarlaki, demony i inne podobne stworzenia.",
+        "note": 0,
+        "class": [
+            [
+                "mag",
+                6
             ]
         ],
         "school": [
@@ -3612,7 +3650,7 @@
         "target": "TAR_CHAR_OFFENSIVE"
     },
     {
-        "name": "spirit armor",
+        "name": "spirits armor",
         "info": "Przyzwane z innego wymiaru duchy, dodatkowo wzmocnione energia przyzywajacego, potrafia stworzyc calkiem mocny pancerz, dookola nekromanty.",
         "note": 0,
         "class": [
@@ -3954,7 +3992,7 @@
             ]
         ],
         "school": [
-            "Poznanie",
+            "Przemiany",
             "SpellSpec"
         ],
         "target": "TAR_CHAR_DEFENSIVE"
@@ -4156,7 +4194,7 @@
         "class": [
             [
                 "mag",
-                4
+                3
             ]
         ],
         "school": [
@@ -4303,7 +4341,7 @@
             ]
         ],
         "school": [
-            "Poznanie",
+            "Przemiany",
             "SpellSpec"
         ],
         "target": "TAR_IGNORE"
@@ -4487,7 +4525,7 @@
             ]
         ],
         "school": [
-            "Poznanie",
+            "Przemiany",
             "SpellSpec"
         ],
         "target": "TAR_CHAR_DEFENSIVE"
@@ -4888,12 +4926,7 @@
         "name": "psionic blast",
         "info": "Potezne uderzenie mentalne.",
         "note": "Gracz nie moze tego czaru zdobyc.",
-        "class": [
-            [
-                "mag",
-                8
-            ]
-        ],
+        "class": 0,
         "school": [
             "Inwokacje"
         ],
@@ -4965,7 +4998,7 @@
             ]
         ],
         "school": [
-            "Poznanie",
+            "Przemiany",
             "SpellSpec"
         ],
         "target": "TAR_IGNORE"
@@ -4993,14 +5026,30 @@
         "class": [
             [
                 "mag",
-                3
+                5
             ]
         ],
         "school": [
-            "Poznanie",
+            "Przemiany",
             "SpellSpec"
         ],
         "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "master of piercing sight",
+        "info": "Pozwala magowi widziec przez zamkniete drzwi oraz zagladac do zamknietych skrzynek. Pozwala zauwazyc osoby niewidzialne, jak i maga, pomiedzy lustrzanymi odbiciami.",
+        "note": "Mozna obczarowac grupe.",
+        "class": [
+            [
+                "mag",
+                9
+            ]
+        ],
+        "school": [
+            "Przemiany",
+            "SpellSpec"
+        ],
+        "target": "TAR_CHAR_DEFENSIVE"
     },
     {
         "name": "acid arrow",
@@ -5053,7 +5102,7 @@
             ]
         ],
         "school": [
-            "Poznanie",
+            "Przemiany",
             "SpellSpec"
         ],
         "target": "TAR_CHAR_SELF"
@@ -5101,7 +5150,7 @@
             ]
         ],
         "school": [
-            "Poznanie",
+            "Przemiany",
             "SpellSpec"
         ],
         "target": "TAR_IGNORE"
@@ -5149,7 +5198,7 @@
             ]
         ],
         "school": [
-            "Przywolanie",
+            "Iluzje",
             "SpellSpec"
         ],
         "target": "TAR_CHAR_SELF"
@@ -5416,6 +5465,22 @@
         ],
         "school": [
             "Poznanie"
+        ],
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "sense presence",
+        "info": "Czar, ktory umozliwia wykrycie obecnosci istot.",
+        "note": "Track pomiedzy krainami.",
+        "class": [
+            [
+                "mag",
+                9
+            ]
+        ],
+        "school": [
+            "Przemiany",
+            "SpellSpec"
         ],
         "target": "TAR_CHAR_SELF"
     },
@@ -6332,9 +6397,17 @@
         "name": "ethereal body",
         "info": "Powoduje, ze zwykle ataki przenikaja przez cialo maga, czarodziej jednak musi sie obawiac eterycznych atakow.",
         "note": "Slabszy blink.",
-        "class": 0,
-        "school": 0,
-        "target": 0
+        "class": [
+            [
+                "mag",
+                8
+            ]
+        ],
+        "school": [
+            "Przemiany",
+            "SpellSpec"
+        ],
+        "target": "TAR_CHAR_DEFENSIVE"
     },
     {
         "name": "deathward",
