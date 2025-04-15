@@ -799,9 +799,9 @@
 					<colorTriggerBgColor>#000000</colorTriggerBgColor>
 					<regexCodeList />
 					<regexCodePropertyList />
-					<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-						<name>Fort</name>
-						<script></script>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>REST</name>
+						<script>exp:onRestDone()</script>
 						<triggerType>0</triggerType>
 						<conditonLineDelta>0</conditonLineDelta>
 						<mStayOpen>0</mStayOpen>
@@ -812,30 +812,34 @@
 						<mSoundFile></mSoundFile>
 						<colorTriggerFgColor>#000000</colorTriggerFgColor>
 						<colorTriggerBgColor>#000000</colorTriggerBgColor>
-						<regexCodeList />
-						<regexCodePropertyList />
-						<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
-							<name>Dead</name>
-							<script>display("dead")</script>
-							<triggerType>0</triggerType>
-							<conditonLineDelta>0</conditonLineDelta>
-							<mStayOpen>0</mStayOpen>
-							<mCommand></mCommand>
-							<packageName></packageName>
-							<mFgColor>#ff0000</mFgColor>
-							<mBgColor>#ffff00</mBgColor>
-							<mSoundFile></mSoundFile>
-							<colorTriggerFgColor>#000000</colorTriggerFgColor>
-							<colorTriggerBgColor>#000000</colorTriggerBgColor>
-							<regexCodeList>
-								<string>Zolnierz nie zyje!!</string>
-							</regexCodeList>
-							<regexCodePropertyList>
-								<integer>0</integer>
-							</regexCodePropertyList>
-						</Trigger>
-					</TriggerGroup>
+						<regexCodeList>
+							<string>Zamykasz i chowasz swoja ksiege magiczna.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+						</regexCodePropertyList>
+					</Trigger>
 				</TriggerGroup>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Mowi ci</name>
+					<script>scripts:beep()</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>mowi ci </string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
 			</TriggerGroup>
 			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 				<name>Enemy</name>
@@ -1127,6 +1131,7 @@
 						<string>przewraca cie, walisz sie na ziemie!</string>
 						<string>przewracasz sie.</string>
 						<string>.*i padasz na plecy bez tchu.</string>
+						<string>wywraca cie na ziemie.</string>
 					</regexCodeList>
 					<regexCodePropertyList>
 						<integer>0</integer>
@@ -1137,6 +1142,7 @@
 						<integer>0</integer>
 						<integer>0</integer>
 						<integer>1</integer>
+						<integer>0</integer>
 					</regexCodePropertyList>
 				</Trigger>
 				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
@@ -1403,8 +1409,10 @@ end
 					<colorTriggerBgColor>#000000</colorTriggerBgColor>
 					<regexCodeList>
 						<string>Twoje magiczne pole, chroniace przed magiczna bronia zanika.</string>
+						<string>Nie udalo ci sie stworzyc pola chroniacego przed magiczna bronia.</string>
 					</regexCodeList>
 					<regexCodePropertyList>
+						<integer>0</integer>
 						<integer>0</integer>
 					</regexCodePropertyList>
 				</Trigger>
@@ -2675,11 +2683,11 @@ send("exam "..matches[2])</script>
 					<regex>^/bbc$</regex>
 				</Alias>
 				<Alias isActive="yes" isFolder="no">
-					<name>^/spell (.*)$</name>
-					<script>base:spellSearch(matches[2])</script>
+					<name>^/dif$</name>
+					<script>base:dif(matches[2], matches[3])</script>
 					<command></command>
 					<packageName></packageName>
-					<regex>^/spell (.*)$</regex>
+					<regex>^/dif (.*) (.*)$</regex>
 				</Alias>
 				<Alias isActive="yes" isFolder="no">
 					<name>^/teacher (.*)$</name>
@@ -2687,6 +2695,13 @@ send("exam "..matches[2])</script>
 					<command></command>
 					<packageName></packageName>
 					<regex>^/teacher (.*)$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>^/help (.*)$</name>
+					<script>base:help(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/help (.*)$</regex>
 				</Alias>
 			</AliasGroup>
 			<AliasGroup isActive="yes" isFolder="yes">
@@ -2745,6 +2760,13 @@ send("exam "..matches[2])</script>
 					<regex>^/buff$</regex>
 				</Alias>
 			</AliasGroup>
+			<Alias isActive="yes" isFolder="no">
+				<name>^/mem$</name>
+				<script>mem:show()</script>
+				<command></command>
+				<packageName></packageName>
+				<regex>^/mem$</regex>
+			</Alias>
 		</AliasGroup>
 		<Alias isActive="yes" isFolder="no">
 			<name>LUA</name>
@@ -2793,15 +2815,6 @@ send("rem miecz;turn;wield miecz;war;war;war;smite;over;over;over;stand;parry;")
 			<command></command>
 			<packageName></packageName>
 			<regex>^combo$</regex>
-		</Alias>
-		<Alias isActive="yes" isFolder="no">
-			<name>^/buff$</name>
-			<script>send("or kael c aura;or kael c shield; or kael c armor;or kael c bless; or kael c defen; or kael c divine;c blur; c mirror; c aid kael; c shield; c luck; c bull kael")
-send("c haste; c haste kael;c bless")
---send("c aid bin; c bless bin; c bear bin; order bin c cat; order bin c mirage; c bark bin")</script>
-			<command></command>
-			<packageName></packageName>
-			<regex>^/buff$</regex>
 		</Alias>
 		<Alias isActive="yes" isFolder="no">
 			<name>^cs$</name>

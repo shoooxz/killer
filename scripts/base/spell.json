@@ -3605,7 +3605,7 @@
     {
         "name": "entrophy wave",
         "info": "Czar ten wyzwala fale negatywnej energii, ktora uderza w grupe przeciwnikow. Nalezy pamietac, ze czar dziala tylko na istoty zywe, a nie na umarlaki, demony i inne podobne stworzenia.",
-        "note": 0,
+        "note": "Leczy nieumarlaki.",
         "class": [
             [
                 "mag",
@@ -5742,21 +5742,6 @@
             "SpellSpec"
         ],
         "target": "TAR_CHAR_OFFENSIVE"
-    },
-    {
-        "name": "spiritual weapon",
-        "info": "Czar ten to ulepszona, klerycka wersja czaru 'spiritual hammer'. Czar, zamiast magicznego widmowego mlota wzywa widmowa bron, w ktorej kleryk czuje sie najbieglejszy.",
-        "note": 0,
-        "class": [
-            [
-                "kle",
-                2
-            ]
-        ],
-        "school": [
-            "Przywolanie"
-        ],
-        "target": "TAR_IGNORE"
     },
     {
         "name": "holy bolt",

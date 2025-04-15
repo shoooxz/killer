@@ -120,7 +120,7 @@
   {
     "roomVnum": 3903,
     "mob": "Arcykaplan",
-    "region": "Ukryta kaplica w puszczy pod Carrallak",
+    "region": "Carrallak",
     "class": "Kleryk",
     "spells": [
       "Animate Dead", "Blindness", "Fear", "Cause serious"

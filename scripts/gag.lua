@@ -90,7 +90,10 @@ gag.spellTranslateFix = {
 	["AURA AF BATTLE LUST"] = "AURA OF BATTLE LUST",
 	["STANE SKIN"] = "STONE SKIN",
 	["HALD MANSTER"] = "HOLD MONSTER",
-	["LAEA BALT"] = "LAVA BOLT"
+	["LAEA BALT"] = "LAVA BOLT",
+	["THUNDER BALT"] = "THUNDER BOLT",
+	["HARRID WILTING"] = "HORRID WILTING",
+	["ARB AF ENTRAPY"] = "ORB OF ENTROPY",
 }
 
 function gag:spellTransGetPart(str)

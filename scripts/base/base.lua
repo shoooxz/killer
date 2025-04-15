@@ -233,6 +233,36 @@ function base:schoolSuccess(current, school, reverse1, reverse2, reverse3)
 	return firstPass and secondPass
 end
 
+function base:generalCheck(circle, spell, school)
+	-- niewiadomo czemu dominka przechodzi na ogolnego
+	if spell == "domination" then return true end
+	local skip5  = {
+		"detect undead",
+		"spirits armor",
+		"mass invis",
+		"lesser magic resist",
+		"summon lesser meteor",
+		"decay",
+		"unholy fury",
+		"flame lace",
+		"psychic scream",
+	}
+	if circle < 6 then
+		if utils:inArray2(spell, skip5) then
+			return false
+		end
+		return true
+	else
+		for i=1, #school do
+			if school[i] == "SpellSpec" then
+				return false
+			end
+		end
+		return true
+	end
+	return false
+end
+
 function base:declareSchool(name)
 	self.spellClass[name] = {}
 	self.spellClass[name]["1"] = {}
@@ -281,6 +311,9 @@ function base:buildSchool()
 						if self:schoolSuccess(self.jsonSpell[i].school, "Zauroczenie", "Inwokacje", "Nekromancja") then
 							table.insert(self.spellClass["zaur"][tostring(class[2])], self.jsonSpell[i].name)
 						end
+						if self:generalCheck(class[2], self.jsonSpell[i].name, self.jsonSpell[i].school) then
+							table.insert(self.spellClass["ogol"][tostring(class[2])], self.jsonSpell[i].name)
+						end
 					else
 						if not self.spellClass[class[1]] then
 								self.spellClass[class[1]] = {}
@@ -292,20 +325,60 @@ function base:buildSchool()
 					end
 				end
 			end
-	  -- wyjebac ???
+
 		if type(self.jsonSpell[i].school) == "table" and next(self.jsonSpell[i].school) and self.jsonSpell[i].school[1]  then
-			if not self.spellSchool[self.jsonSpell[i].school[1]] then
-				self.spellSchool[self.jsonSpell[i].school[1]] = {}
+			local short = self:schoolToShort(self.jsonSpell[i].school[1])
+			if not self.spellSchool[short] then
+				self.spellSchool[short] = {}
 			end
-			table.insert(self.spellSchool[self.jsonSpell[i].school[1]], self.jsonSpell[i]["name"])
+			table.insert(self.spellSchool[short], self.jsonSpell[i]["name"])
 		end
 	end
-
-
 end
 
-function base:test()
-	display(self.spellClass["ogol"])
+function base:schoolToShort(long)
+	local out = {
+		["Inwokacje"] = "inwo",
+		["Iluzje"] = "iluz",
+		["Nekromancja"] = "nekr",
+		["Odrzucanie"] = "odrz",
+		["Przemiany"] = "prze",
+		["Przywolanie"] = "przy",
+		["Zauroczenie"] = "zaur",
+		["Poznanie"] = "pozn",
+	}
+	return out[long]
+end
+
+function base:dif(first, second)
+	local reverse = {
+		["inwo"] = {"zaur", "przy"},
+		["iluz"] = {"inwo", "nekr", "odrz"},
+		["nekr"] = {"iluz", "zaur"},
+		["odrz"] = {"prze", "iluz"},
+		["prze"] = {"odrz", "nekr"},
+		["przy"] = {"pozn", "inwo"},
+		["zaur"] = {"inwo", "nekr"},
+	}
+	local removed = {}
+	for i=1, 5 do -- do 5 kregu
+		for j=1, #self.spellClass[second][tostring(i)] do   -- przez wszystkie spelle z kregu
+			local spell = self.spellClass[second][tostring(i)][j]
+			for k=1, #reverse[first] do  -- przez wszystkie przeciwne szkoly
+				local school = self.spellSchool[reverse[first][k]]
+				if utils:inArray2(spell, school) then
+					table.insert(removed, spell)
+				end
+			end
+		end
+	end
+	-- jesli w drugiej jest druid, zawsze usuwany jest na3
+	if second == "dru" then
+		if not utils:inArray2("nature ally III", removed) then
+			table.insert(removed, "nature ally III")
+		end
+	end
+	display(removed)
 end
 
 function base:spellSearch(spell)
