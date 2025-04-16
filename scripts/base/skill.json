@@ -1,1340 +1,739 @@
 [
-  [
-        "axe",
-        "Umiejetnosc, dzieki ktorej mozna poslugiwac sie roznej masci toporkami i toporzyskami.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "dagger",
-        "Umiejetnosc, dzieki ktorej mozna sie poslugiwac sztyletami.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "flail",
-        "Umiejetnosc, dzieki ktorej mozna walczyc roznego rodzaju cepami bojowymi i morgenszternami.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "mace",
-        "Umiejetnosc, dzieki ktorej mozna walczyc mlotami bojowymi i maczugami.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "polearm",
-        "Umiejetnosc, dzieki ktorej mozna walczyc roznymi broniami drzewcowymi.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "staff",
-        "Umiejetnosc, dzieki ktorej mozna poslugiwac sie w walce roznej masci laskami i kosturami.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "shield block",
-        "Umiejetnosc ta pozwala klasom umiejacym sie poslugiwac tarcza na odbijanie ciosow wrogow i zaslanianie sie nia podczas walki. Jesli jednak uderzenie bedzie zbyt silne, to cios mimo wszystko przebije obrone wojownika i trafi go, chociaz tarcza moze ow cios oslabic.",
-        "Umiejetnosc pasywna.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "spear",
-        "Umiejetnosc, dzieki ktorej mozna walczyc roznej masci dzidami i wloczniami.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "sword",
-        "Umiejetnosc, dzieki ktorej mozna walczyc mieczami.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "whip",
-        "Umiejetnosc, dzieki ktorej mozna walczyc biczami i batami.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "backstab",
-        "Przebiegly zlodziej wyposazony w sztylet moze zakrasc sie za plecy swojej ofiary i wbic jej sztylet miedzy lopatki. Taki cios zadaje olbrzymie obrazenia i moze natychmiast zakonczyc zywot ofiary lotrzyka.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "bash",
-        "Dzieki tej umiejetnosci silni wojownicy moga podczas walki wykorzystac mase wlasnego ciala aby powalic przeciwnika na ziemie. Aby skutecznie zwalic wroga z nog trzeba byc wyposazonym w przyzwoita tarcze.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "berserk",
-        "Barbarzynca podczas walki moze wprowadzic swoj umysl w stan szalu bitewnego dajacego maksymalne skupienie na walce, dzieki czemu zadaje wrogowi wieksze obrazenia. Jednak bedac pod wplywem szalu nie mozna wykonywac innych czynnosci - w tym uciekac z walki.",
-        "Ulatwia alkohol.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "disarm",
-        "Podczas walki zdolny wojownik moze wytracic na ziemie bron z rak swojego przeciwnika, czyniac go bezbronnym.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "dodge",
-        "Sprytni lotrzykowie moga w walce z kocia zwinnoscia uchylac sie od ciosow wroga tak, aby te nic im nie zrobily.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "envenom",
-        "Przebiegli zlodzieje moga zatruwac na krotki okres czasu swoja bron, czyniac ja o wiele grozniejsza podczas walki. Aby zatruc bron lotrzyk musi posiadac odpowiednia substancje trujaca.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "kick",
-        "Umiejetnosc, dzieki ktorej dobrze wyszkolony wojownik moze w trakcie walki zadac przeciwnikowi dodatkowe obrazenia dobrze wyprowadzonym kopnieciem. Jesli cios bedzie wystarczajaco silny przeciwnik zwali sie na ziemie.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "parry",
-        "Wyszkoleni wojownicy moga uzyc wlasnych broni aby zbic cios przeciwnika na bok, tak aby nikogo nie zranil.",
-        "Sword, short-sword, polearm, staff.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "rescue",
-        "Kiedy walka przyjmuje zly obrot bohaterski wojownik moze wepchnac sie przed swojego sojusznika aby przyjac na siebie wszystkie ciosy.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "trip",
-        "Zlodzieje preferuja spryt ponad sile fizyczna. Wyszkolony zlodziej moze w czasie walki podstepnie przewrocic swojego przeciwnika na ziemie, czyniac go o wiele bardziej podatnym na zadawane ciosy.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-
-    [
-        "riding",
-        "Wbrew pozorom jazda konna to ciezka do opanowania sztuka. Jej lepsze zrozumienie prowadzi do mniejszego zmeczenia spowodowanego dlugotrwala jazda na grzbiecie swojego wierzchowca.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "hide",
-        "Zlodziej moze ukryc sie w cieniu tak aby pozostac niezauwazalnym dla innych istot.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-
-    [
-        "lore item",
-        "Umiejetnosc dzieki ktorej doswiadczeni barbarzyncy moga duzo dowiedziec sie o pancerzu lub broni z samego wygladu.",
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0
-    ],
-    [
-      "pick lock",
-      "Sprytny lotrzyk moze sprobowac otworzyc drzwi zamkniete na klucz.",
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-  ],
-
-  [
-      "control of magic",
-      "Umiejetnosc ta wplywa na sile zaklec, poprawia skupienie przy inkantacji oraz wplywa na mniejsza szanse otrzymania obrazen od wlasnych czarow.",
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-  ],
-
-  [
-      "meditation",
-      "Umiejetnosc ta pozwala postaci, podczas odpoczynku, na szybsze zapamietanie czarow dzieki skupieniu i koncentracji. Medytujaca osoba nie moze nic robic, bowiem wyrwie sie z delikatnego transu.",
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-  ],
-
-  [
-      "peek",
-      "Zlodzieje moga przejrzec przedmioty posiadane przez kogos zanim dokonaja aktu kradziezy.",
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-  ],
-
-  [
-      "sneak",
-      "Zlodzieje wykorzystujac swoj wrodzony spryt moga poruszac sie bezszelestnie w cieniu, przechodzac z miejsca na miejsce bedac niezauwazalnymi przez inne istoty.",
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-  ],
-
-  [
-      "steal",
-      "Zlodzieje, jak to zlodzieje moga wykradac innym istotom rozne rzeczy z inwentarza, aby pozniej wykorzystac je samemu lub spieniezyc na czarnym rynku.",
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-  ],
-
-
-  [
-      "circle",
-      "Zdolnosc ta pozwala na zajscie ofiary od tylu i zadanie jej kilku szybkich pchniec, przeciwnik jednak nie moze koncentrowac sie bezposrednio na walce z toba. Do takiego ataku wymagany jest sztylet lub krotki miecz, zadajacy obrazenia klute.",
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-  ],
-
-  [
-      "track",
-      "Wojownicy moga tropic swoje ofiary po sladach zostawionych na ziemi. Lecz slady czesto sa mylne lub nieczytelne i szybko znikaja.",
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-  ],
-  [
-      "charge",
-      "Barbarzynca wyposazony w odpowiednia dwureczna bron moze zaszarzowac na swojego wroga zadajac o wiele wieksze obrazenia. Jesli cios jest wystarczajaco silny zwali przeciwnika na ziemie.",
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0,
-      0
-  ],
-
-      [
-          "twohanded weapon",
-          "Umiejetnosc umozliwiajaca walke trzymajac bron oburacz.",
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-      ],
-      [
-          "short-sword",
-          "Umiejetnosc, dzieki ktorej mozna walczyc krotkimi mieczami.",
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-      ],
-
-      [
-          "sharpen",
-          "Barbarzyncy zyjacy w dalekich ostepach mroznej polnocy nauczyli sie ostrzyc wlasna bron w miare potrzeb i ta wiedze przekazywali dalszym pokoleniom.",
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-      ],
-      [
-          "recuperate",
-          "Odpoczywajac barbarzynca moze wprowadzic swoje cialo w stan uzdrowicielskiego letargu, dzieki ktoremu szybciej odzyskuje sie sily i zdrowie.",
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-      ],
-      [
-          "wardance",
-          "Wojownik bedac w stanie szalu bitewnego, zwanego 'tancem', moze uzyskac dodatkowy atak w walce, nieco mniej koncentrujac sie na sile zadawanych ciosow.",
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0,
-          0
-      ],
-
-          [
-              "stun",
-              "Wojownik wyposazony w odpowiednia bron obuchowa moze wykorzystac mase swojego oreza aby w walce ogluszyc na krotki okres czasu swoja ofiare. Staje sie ona wtedy bardziej podatna na obrazenia.",
-              "Mace, Flail, Staff.",
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-          ],
-          [
-              "dualwield style",
-              "Umiejetnosc dajaca lepsze opanowanie walki dwoma bronmi naraz.",
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-          ],
-
-          [
-              "twohanded weapon style",
-              "Umiejetnosc dajaca lepsze opanowanie walki bronmi oburecznymi.",
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-          ],
-          [
-              "bandage",
-              "Aby szybciej wylizac sie z ran odniesionych w walce mozna zalozyc sobie lub swoim sojusznikom opatrunek, lecz nalezy uwazac, niedoswiadczeni medycy moga jedynie pogorszyc stan zdrowia swoj lub przyjaciela.",
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-          ],
-          [
-              "detect traps",
-              "Umiejetnosc pozwalajaca wykrywac pulapki.",
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-          ],
-          [
-              "disarm traps",
-              "Umiejetnosc pozwalajaca rozbrajac pulapki.",
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0,
-              0
-          ],
-
-            [
-                "target",
-                "Umiejetnosc pozwalajaca podczas walki z kilkoma przeciwnikami naraz zmienic cel swojego bezposredniego ataku na inna istote.",
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            [
-                "smite evil",
-                "Cwiczeni latami do walki z okrutnym zlem zalewajacym swiat, paladyn potrafi w akcie duchowej koncentracji zadawac duzo wieksze obrazenia zlym istotomy.",
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            [
-                "turn undead",
-                "Umiejetnosc ta pozwala paladynowi i klerykowi na spowodowanie wsrod martwiakow zametu lub natychmiastowe unicestwienie ofiary. Aby dokonac odpedzania postac powinna posiadac specjalny przedmiot wiary, w ktory mozna wyposazyc sie w kazdej swiatyni.",
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            [
-                "dagger mastery",
-                "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
-                "Zlodziej, wojownik.",
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            [
-                "power strike",
-                "Podczas walki barbarzynca moze zadac silniejsze uderzenie swojemu przeciwnikowi, lecz wymaga to wiekszej koncentracji i skupienia. Doprowadza to do gorszej celnosci zwyklych atakow.",
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            [
-                "critical strike",
-                "Jest to najsilniejsze uderzenie jakie moze zadac barbarzynca swojemu przeciwnikowi, lecz wymaga ogromnej koncentracji, ktora pogarsza celnosc zwyklych atakow.",
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            [
-                "damage reduction",
-                "Zdolnosc ta maja jedynie barbarzyncy. Mozna ja wykorzystac jedynie w walce. Dzieki tej umiejetnosci barbarzynca zmniejsza obrazenia cielesne jakie sa mu zadawane.",
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            [
-                "herbs knowledge",
-                "Umiejetnosc ta pozwala szukac w lokacji roznego rodzaju ziol, grzybow i innych rzeczy zwiazanych ze swiatem flory.",
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            [
-                "mace mastery",
-                "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
-                "Paladyn, wojownik.",
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            [
-                "devour",
-                "Nieumarli moga pozywic sie swiezym jeszcze cialem nieboszczyka aby odzyskac czesc sil witalnych.",
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            [
-                "mighty blow",
-                "Podczas walki barbarzynca moze zadac silniejsze uderzenie swojemu przeciwnikowi, lecz wymaga to wiekszej koncentracji i skupienia. Doprowadza to do gorszej celnosci zwyklych atakow.",
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-            [
-                "trapper",
-                "Umiejetnosc ta pozwala na zdzieranie skory z zabitych zwierzat oraz wycinanie komponentow z ich cial.",
-                "Skin, carve.",
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
-
-                [
-                    "trade",
-                    "Zdolnosc targowania sie z kupcami.",
-                    "Otrzymuje sie z achievement'u.",
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0,
-                    0
-                ],
-
-                    [
-                        "flail mastery",
-                        "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
-                        "Paladyn, wojownik, czarny rycerz.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "sword mastery",
-                        "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
-                        "Paladyn, wojownik, czarny rycerz, nomad.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "axe mastery",
-                        "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
-                        "Wojownik, barbarzynca, czarny rycerz.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "whip mastery",
-                        "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
-                        "Wojownik, nomad.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "short-sword mastery",
-                        "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
-                        "Wojownik.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "polearm mastery",
-                        "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
-                        "Wojownik, barbarzynca, czarny rycerz.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "staff mastery",
-                        "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
-                        "Wojownik.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-
-                    [
-                        "spear mastery",
-                        "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
-                        "Wojownik, barbarzynca.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        "torment",
-                        "Umiejetnosc, przy pomocy ktorej czarny rycerz zbiera w sobie negatywna energie i wysyla ja w kierunku wroga. Uzyta na istoty nieumarle zregeneruje utracona przez nie negatywna energie.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        "overwhelming strike",
-                        "Wyjatkowo silni wojownicy i czarni rycerze walczac bronia dwureczna potrafia po wzieciu ogromnego zamachu wyprowadzic niewiarygodnie silny cios, ktory moze powalic przeciwnika na ziemie.",
-                        "Flail.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        "cleave",
-                        "Dobrze wycwiczony czarny rycerz badz wojownik, uzywajacy dwurecznej broni siecznej, jest w stanie dzieki szerokiemu zamachowi i gibkim ruchom zadac cios kilku przeciwnikom naraz.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "demon aura",
-                        "Czarny rycerz przed walka moze wzniesc modly do swych mrocznych bogow, by uzyskac ich blogoslawienstwo. Otoczony demoniczna aura czarny rycerz jest trudnym przeciwnikiem, ale takze uciazliwym sojusznikiem dla wszystkich dobrych istot znajdujacych sie w poblizu.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "vertical slash",
-                        "Doskonale wycwiczeni i zwinni wojownicy i czarni rycerze walczac dwureczna bronia sieczna potrafia za jednym zamachem zadac wrogowi dwa ciosy.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        "damn weapon",
-                        "Czarny rycerz potrafi wydrzec dusze ze swiezych zwlok dobrej istoty i nasycic nia swa bron badz pancerz, dzieki czemu stanie sie znacznie skuteczniejszy w niszczeniu wszelakiego dobra. Nie nalezy zapominac, ze klatwa z czasem minie, ale przedmiot na wieki nabierze wstretu do dobrych istot.",
-                        "Heal przy atakach.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        "damn armor",
-                        "Czarny rycerz potrafi wydrzec dusze ze swiezych zwlok dobrej istoty i nasycic nia swa bron badz pancerz, dzieki czemu stanie sie znacznie skuteczniejszy w niszczeniu wszelakiego dobra. Nie nalezy zapominac, ze klatwa z czasem minie, ale przedmiot na wieki nabierze wstretu do dobrych istot.",
-                        "Regen zycia?",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        "smite good",
-                        "Cwiczeni latami do walki z dobrem zalewajacym swiat, czarni rycerze potrafia w akcie duchowej koncentracji zadawac duzo wieksze obrazenia.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        "call avatar",
-                        "Umiejetnosc, przy pomocy ktorej czarny rycerz moze przywolac awatara sfery negatywnej, ktory bedzie mu sluzyl. Takiego sluge mozna przywolac raz dziennie.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "hustle",
-                        "Kiedy walka przyjmuje zly obrot, czarny rycerz jest w stanie wepchnac przed siebie lub swego sojusznika innego sojusznika, by ten otrzymywal bolesne ciosy zamiast niego.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-                    [
-                        "control undead",
-                        "Umiejetnosc, przy pomocy ktorej czarny rycerz jest w stanie przejac kontrole nad nieumarlymi. Wymagany jest symbol wiary.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "undead resemblance",
-                        "Dzieki tej specyficznej magicznej wlasciwosci podroznik potrafi wtopic sie miedzy agresywnych nieumarlych, tak, ze nie poznaja oni w nim wroga.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "bleeding wound",
-                        "Krwawiace rany utrudniajace leczenie.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "mining",
-                        "Po znalezieniu odpowiedniego miejsca pracy pod ziemia oraz kilofa, mozna sprobowac swoich sil przy wydobywaniu skarbow.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "slam",
-                        "Mocne uderzenie, ktore potrafi ogluszyc przeciwnika.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "holy prayer",
-                        "Raz na jakis czas paladyn musi ukleknac do modlitwy. Dzieki tej modlitwie jest obserwowany przez bogow swiatlosci i w zaleznosci od jego uczynkow obdarzany moca lub jej pozbawiany. Dzieki temu paladyn nie moze zabijac dobrych istot, gdyz sprzeciwi sie swojej swietej misji a bogowie odwroca sie od niego, czyniac go bezradnym. ",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "lay",
-                        "Paladyni raz na dobe moga przyzwac uzdrawiajaca moc swojego boga. Nakladanie rak slynie z mozliwosci wyleczenia nawet najciezszych przypadkow chorob i ran wojennych.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ],
-
-                    [
-                        "first aid",
-                        "Kleryk uzywajac tej umiejetnosci moze probowac uleczyc najswiezsze rany odniesione przez postac w czasie ostatniej walki.",
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0,
-                        0
-                    ]
-
+    {
+        "name": "axe",
+        "info": "Umiejetnosc, dzieki ktorej mozna poslugiwac sie roznej masci toporkami i toporzyskami.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "dagger",
+        "info": "Umiejetnosc, dzieki ktorej mozna sie poslugiwac sztyletami.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "flail",
+        "info": "Umiejetnosc, dzieki ktorej mozna walczyc roznego rodzaju cepami bojowymi i morgenszternami.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "mace",
+        "info": "Umiejetnosc, dzieki ktorej mozna walczyc mlotami bojowymi i maczugami.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "polearm",
+        "info": "Umiejetnosc, dzieki ktorej mozna walczyc roznymi broniami drzewcowymi.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "staff",
+        "info": "Umiejetnosc, dzieki ktorej mozna poslugiwac sie w walce roznej masci laskami i kosturami.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "shield block",
+        "info": "Umiejetnosc ta pozwala klasom umiejacym sie poslugiwac tarcza na odbijanie ciosow wrogow i zaslanianie sie nia podczas walki. Jesli jednak uderzenie bedzie zbyt silne, to cios mimo wszystko przebije obrone wojownika i trafi go, chociaz tarcza moze ow cios oslabic.",
+        "note": "Umiejetnosc pasywna.",
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "spear",
+        "info": "Umiejetnosc, dzieki ktorej mozna walczyc roznej masci dzidami i wloczniami.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "sword",
+        "info": "Umiejetnosc, dzieki ktorej mozna walczyc mieczami.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "whip",
+        "info": "Umiejetnosc, dzieki ktorej mozna walczyc biczami i batami.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "backstab",
+        "info": "Przebiegly zlodziej wyposazony w sztylet moze zakrasc sie za plecy swojej ofiary i wbic jej sztylet miedzy lopatki. Taki cios zadaje olbrzymie obrazenia i moze natychmiast zakonczyc zywot ofiary lotrzyka.",
+        "note": 0,
+        "class": [
+            "zlo"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "bash",
+        "info": "Dzieki tej umiejetnosci silni wojownicy moga podczas walki wykorzystac mase wlasnego ciala aby powalic przeciwnika na ziemie. Aby skutecznie zwalic wroga z nog trzeba byc wyposazonym w przyzwoita tarcze.",
+        "note": 0,
+        "class": [
+            "woj",
+            "pal",
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "berserk",
+        "info": "Barbarzynca podczas walki moze wprowadzic swoj umysl w stan szalu bitewnego dajacego maksymalne skupienie na walce, dzieki czemu zadaje wrogowi wieksze obrazenia. Jednak bedac pod wplywem szalu nie mozna wykonywac innych czynnosci - w tym uciekac z walki.",
+        "note": "Ulatwia alkohol.",
+        "class": [
+            "bar"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "disarm",
+        "info": "Podczas walki zdolny wojownik moze wytracic na ziemie bron z rak swojego przeciwnika, czyniac go bezbronnym.",
+        "note": 0,
+        "class": [
+            "woj",
+            "pal",
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_DEFENSIVE"
+    },
+    {
+        "name": "dodge",
+        "info": "Sprytni lotrzykowie moga w walce z kocia zwinnoscia uchylac sie od ciosow wroga tak, aby te nic im nie zrobily.",
+        "note": 0,
+        "class": [
+            "zlo"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_DEFENSIVE"
+    },
+    {
+        "name": "envenom",
+        "info": "Przebiegli zlodzieje moga zatruwac na krotki okres czasu swoja bron, czyniac ja o wiele grozniejsza podczas walki. Aby zatruc bron lotrzyk musi posiadac odpowiednia substancje trujaca.",
+        "note": 0,
+        "class": [
+            "zlo",
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "kick",
+        "info": "Umiejetnosc, dzieki ktorej dobrze wyszkolony wojownik moze w trakcie walki zadac przeciwnikowi dodatkowe obrazenia dobrze wyprowadzonym kopnieciem. Jesli cios bedzie wystarczajaco silny przeciwnik zwali sie na ziemie.",
+        "note": 0,
+        "class": [
+            "zlo",
+            "woj",
+            "pal",
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "parry",
+        "info": "Wyszkoleni wojownicy moga uzyc wlasnych broni aby zbic cios przeciwnika na bok, tak aby nikogo nie zranil.",
+        "note": "Sword, short-sword, polearm, staff.",
+        "class": [
+            "woj",
+            "pal",
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_DEFENSIVE"
+    },
+    {
+        "name": "rescue",
+        "info": "Kiedy walka przyjmuje zly obrot bohaterski wojownik moze wepchnac sie przed swojego sojusznika aby przyjac na siebie wszystkie ciosy.",
+        "note": 0,
+        "class": [
+            "woj",
+            "pal",
+            "bar"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_DEFENSIVE"
+    },
+    {
+        "name": "trip",
+        "info": "Zlodzieje preferuja spryt ponad sile fizyczna. Wyszkolony zlodziej moze w czasie walki podstepnie przewrocic swojego przeciwnika na ziemie, czyniac go o wiele bardziej podatnym na zadawane ciosy.",
+        "note": 0,
+        "class": [
+            "zlo"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "riding",
+        "info": "Wbrew pozorom jazda konna to ciezka do opanowania sztuka. Jej lepsze zrozumienie prowadzi do mniejszego zmeczenia spowodowanego dlugotrwala jazda na grzbiecie swojego wierzchowca.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "hide",
+        "info": "Zlodziej moze ukryc sie w cieniu tak aby pozostac niezauwazalnym dla innych istot.",
+        "note": 0,
+        "class": [
+            "zlo"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "lore item",
+        "info": "Umiejetnosc dzieki ktorej doswiadczeni barbarzyncy moga duzo dowiedziec sie o pancerzu lub broni z samego wygladu.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "pick lock",
+        "info": "Sprytny lotrzyk moze sprobowac otworzyc drzwi zamkniete na klucz.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "control of magic",
+        "info": "Umiejetnosc ta zwieksza sile zaklec, poprawia skupienie przy inkantacji oraz wplywa na mniejsza szanse otrzymania obrazen od wlasnych czarow.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "meditation",
+        "info": "Umiejetnosc ta pozwala postaci, podczas odpoczynku, na szybsze zapamietanie czarow dzieki skupieniu i koncentracji. Medytujaca osoba nie moze nic robic, bowiem wyrwie sie z delikatnego transu.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "peek",
+        "info": "Zlodzieje moga przejrzec przedmioty posiadane przez kogos zanim dokonaja aktu kradziezy.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "sneak",
+        "info": "Zlodzieje wykorzystujac swoj wrodzony spryt moga poruszac sie bezszelestnie w cieniu, przechodzac z miejsca na miejsce bedac niezauwazalnymi przez inne istoty.",
+        "note": 0,
+        "class": [
+            "zlo"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "steal",
+        "info": "Zlodzieje, jak to zlodzieje moga wykradac innym istotom rozne rzeczy z inwentarza, aby pozniej wykorzystac je samemu lub spieniezyc na czarnym rynku.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "circle",
+        "info": "Zdolnosc ta pozwala na zajscie ofiary od tylu i zadanie jej kilku szybkich pchniec, przeciwnik jednak nie moze koncentrowac sie bezposrednio na walce z toba. Do takiego ataku wymagany jest sztylet lub krotki miecz, zadajacy obrazenia klute.",
+        "note": 0,
+        "class": [
+            "zlo"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "track",
+        "info": "Wojownicy moga tropic swoje ofiary po sladach zostawionych na ziemi. Lecz slady czesto sa mylne lub nieczytelne i szybko znikaja.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "charge",
+        "info": "Barbarzynca wyposazony w odpowiednia dwureczna bron moze zaszarzowac na swojego wroga zadajac o wiele wieksze obrazenia. Jesli cios jest wystarczajaco silny zwali przeciwnika na ziemie.",
+        "note": 0,
+        "class": [
+            "bar"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "twohanded weapon",
+        "info": "Umiejetnosc umozliwiajaca walke trzymajac bron oburacz.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "short-sword",
+        "info": "Umiejetnosc, dzieki ktorej mozna walczyc krotkimi mieczami.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "sharpen",
+        "info": "Barbarzyncy zyjacy w dalekich ostepach mroznej polnocy nauczyli sie ostrzyc wlasna bron w miare potrzeb i ta wiedze przekazywali dalszym pokoleniom.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "recuperate",
+        "info": "Odpoczywajac barbarzynca moze wprowadzic swoje cialo w stan uzdrowicielskiego letargu, dzieki ktoremu szybciej odzyskuje sie sily i zdrowie.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "wardance",
+        "info": "Wojownik bedac w stanie szalu bitewnego, zwanego 'tancem', moze uzyskac dodatkowy atak w walce, nieco mniej koncentrujac sie na sile zadawanych ciosow.",
+        "note": 0,
+        "class": [
+            "woj"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "stun",
+        "info": "Wojownik wyposazony w odpowiednia bron obuchowa moze wykorzystac mase swojego oreza aby w walce ogluszyc na krotki okres czasu swoja ofiare. Staje sie ona wtedy bardziej podatna na obrazenia.",
+        "note": "Mace, Flail, Staff.",
+        "class": [
+            "kle",
+            "woj",
+            "pal"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "dualwield style",
+        "info": "Umiejetnosc dajaca lepsze opanowanie walki dwoma bronmi naraz.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "twohanded weapon style",
+        "info": "Umiejetnosc dajaca lepsze opanowanie walki bronmi oburecznymi.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "bandage",
+        "info": "Aby szybciej wylizac sie z ran odniesionych w walce mozna zalozyc sobie lub swoim sojusznikom opatrunek, lecz nalezy uwazac, niedoswiadczeni medycy moga jedynie pogorszyc stan zdrowia swoj lub przyjaciela.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "detect traps",
+        "info": "Umiejetnosc pozwalajaca wykrywac pulapki.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "disarm traps",
+        "info": "Umiejetnosc pozwalajaca rozbrajac pulapki.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "target",
+        "info": "Umiejetnosc pozwalajaca podczas walki z kilkoma przeciwnikami naraz zmienic cel swojego bezposredniego ataku na inna istote.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "smite evil",
+        "info": "Cwiczeni latami do walki z okrutnym zlem zalewajacym swiat, paladyn potrafi w akcie duchowej koncentracji zadawac duzo wieksze obrazenia zlym istotomy.",
+        "note": 0,
+        "class": [
+            "pal"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "turn undead",
+        "info": "Umiejetnosc ta pozwala paladynowi i klerykowi na spowodowanie wsrod martwiakow zametu lub natychmiastowe unicestwienie ofiary. Aby dokonac odpedzania postac powinna posiadac specjalny przedmiot wiary, w ktory mozna wyposazyc sie w kazdej swiatyni.",
+        "note": 0,
+        "class": [
+            "kle",
+            "pal"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "dagger mastery",
+        "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
+        "note": "Zlodziej, wojownik.",
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "power strike",
+        "info": "Podczas walki barbarzynca moze zadac silniejsze uderzenie swojemu przeciwnikowi, lecz wymaga to wiekszej koncentracji i skupienia. Doprowadza to do gorszej celnosci zwyklych atakow.",
+        "note": 0,
+        "class": [
+            "bar"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "critical strike",
+        "info": "Jest to najsilniejsze uderzenie jakie moze zadac barbarzynca swojemu przeciwnikowi, lecz wymaga ogromnej koncentracji, ktora pogarsza celnosc zwyklych atakow.",
+        "note": 0,
+        "class": [
+            "bar"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "damage reduction",
+        "info": "Zdolnosc ta maja jedynie barbarzyncy. Mozna ja wykorzystac jedynie w walce. Dzieki tej umiejetnosci barbarzynca zmniejsza obrazenia cielesne jakie sa mu zadawane.",
+        "note": 0,
+        "class": [
+            "bar"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_DEFENSIVE"
+    },
+    {
+        "name": "herbs knowledge",
+        "info": "Umiejetnosc ta pozwala szukac w lokacji roznego rodzaju ziol, grzybow i innych rzeczy zwiazanych ze swiatem flory.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "mace mastery",
+        "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
+        "note": "Paladyn, wojownik.",
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "devour",
+        "info": "Nieumarli moga pozywic sie swiezym jeszcze cialem nieboszczyka aby odzyskac czesc sil witalnych.",
+        "note": 0,
+        "class": [
+            "mag",
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_DEFENSIVE"
+    },
+    {
+        "name": "mighty blow",
+        "info": "Podczas walki barbarzynca moze zadac silniejsze uderzenie swojemu przeciwnikowi, lecz wymaga to wiekszej koncentracji i skupienia. Doprowadza to do gorszej celnosci zwyklych atakow.",
+        "note": 0,
+        "class": [
+            "bar"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "trapper",
+        "info": "Umiejetnosc ta pozwala na zdzieranie skory z zabitych zwierzat oraz wycinanie komponentow z ich cial.",
+        "note": "Skin, carve.",
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "trade",
+        "info": "Zdolnosc targowania sie z kupcami.",
+        "note": "Otrzymuje sie z achievement'u.",
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "flail mastery",
+        "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
+        "note": "Paladyn, wojownik, czarny rycerz.",
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "sword mastery",
+        "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
+        "note": "Paladyn, wojownik, czarny rycerz, nomad.",
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "axe mastery",
+        "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
+        "note": "Wojownik, barbarzynca, czarny rycerz.",
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "whip mastery",
+        "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
+        "note": "Wojownik, nomad.",
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "short-sword mastery",
+        "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
+        "note": "Wojownik.",
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "polearm mastery",
+        "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
+        "note": "Wojownik, barbarzynca, czarny rycerz.",
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "staff mastery",
+        "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
+        "note": "Wojownik.",
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "spear mastery",
+        "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
+        "note": "Wojownik, barbarzynca.",
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "torment",
+        "info": "Umiejetnosc, przy pomocy ktorej czarny rycerz zbiera w sobie negatywna energie i wysyla ja w kierunku wroga. Uzyta na istoty nieumarle zregeneruje utracona przez nie negatywna energie.",
+        "note": 0,
+        "class": [
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "overwhelming strike",
+        "info": "Wyjatkowo silni wojownicy i czarni rycerze walczac bronia dwureczna potrafia po wzieciu ogromnego zamachu wyprowadzic niewiarygodnie silny cios, ktory moze powalic przeciwnika na ziemie.",
+        "note": "Flail.",
+        "class": [
+            "woj",
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "cleave",
+        "info": "Dobrze wycwiczony czarny rycerz badz wojownik, uzywajacy dwurecznej broni siecznej, jest w stanie dzieki szerokiemu zamachowi i gibkim ruchom zadac cios kilku przeciwnikom naraz.",
+        "note": 0,
+        "class": [
+            "woj",
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "demon aura",
+        "info": "Czarny rycerz przed walka moze wzniesc modly do swych mrocznych bogow, by uzyskac ich blogoslawienstwo. Otoczony demoniczna aura czarny rycerz jest trudnym przeciwnikiem, ale takze uciazliwym sojusznikiem dla wszystkich dobrych istot znajdujacych sie w poblizu.",
+        "note": 0,
+        "class": [
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "vertical slash",
+        "info": "Doskonale wycwiczeni i zwinni wojownicy i czarni rycerze walczac dwureczna bronia sieczna potrafia za jednym zamachem zadac wrogowi dwa ciosy.",
+        "note": 0,
+        "class": [
+            "woj",
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "damn weapon",
+        "info": "Czarny rycerz potrafi wydrzec dusze ze swiezych zwlok dobrej istoty i nasycic nia swa bron badz pancerz, dzieki czemu stanie sie znacznie skuteczniejszy w niszczeniu wszelakiego dobra. Nie nalezy zapominac, ze klatwa z czasem minie, ale przedmiot na wieki nabierze wstretu do dobrych istot.",
+        "note": "Heal przy atakach.",
+        "class": [
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_DEFENSIVE"
+    },
+    {
+        "name": "damn armor",
+        "info": "Czarny rycerz potrafi wydrzec dusze ze swiezych zwlok dobrej istoty i nasycic nia swa bron badz pancerz, dzieki czemu stanie sie znacznie skuteczniejszy w niszczeniu wszelakiego dobra. Nie nalezy zapominac, ze klatwa z czasem minie, ale przedmiot na wieki nabierze wstretu do dobrych istot.",
+        "note": "Regen zycia?",
+        "class": [
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_DEFENSIVE"
+    },
+    {
+        "name": "smite good",
+        "info": "Cwiczeni latami do walki z dobrem zalewajacym swiat, czarni rycerze potrafia w akcie duchowej koncentracji zadawac duzo wieksze obrazenia.",
+        "note": 0,
+        "class": [
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "call avatar",
+        "info": "Umiejetnosc, przy pomocy ktorej czarny rycerz moze przywolac awatara sfery negatywnej, ktory bedzie mu sluzyl. Takiego sluge mozna przywolac raz dziennie.",
+        "note": 0,
+        "class": [
+            "cza"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "hustle",
+        "info": "Kiedy walka przyjmuje zly obrot, czarny rycerz jest w stanie wepchnac przed siebie lub swego sojusznika innego sojusznika, by ten otrzymywal bolesne ciosy zamiast niego.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "control undead",
+        "info": "Umiejetnosc, przy pomocy ktorej czarny rycerz jest w stanie przejac kontrole nad nieumarlymi. Wymagany jest symbol wiary.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "undead resemblance",
+        "info": "Dzieki tej specyficznej magicznej wlasciwosci podroznik potrafi wtopic sie miedzy agresywnych nieumarlych, tak, ze nie poznaja oni w nim wroga.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "bleeding wound",
+        "info": "Krwawiace rany utrudniajace leczenie.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "mining",
+        "info": "Po znalezieniu odpowiedniego miejsca pracy pod ziemia oraz kilofa, mozna sprobowac swoich sil przy wydobywaniu skarbow.",
+        "note": 0,
+        "class": 0,
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "holy prayer",
+        "info": "Raz na jakis czas paladyn musi ukleknac do modlitwy. Dzieki tej modlitwie jest obserwowany przez bogow swiatlosci i w zaleznosci od jego uczynkow obdarzany moca lub jej pozbawiany. Dzieki temu paladyn nie moze zabijac dobrych istot, gdyz sprzeciwi sie swojej swietej misji a bogowie odwroca sie od niego, czyniac go bezradnym. ",
+        "note": 0,
+        "class": [
+            "pal"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "lay",
+        "info": "Paladyni raz na dobe moga przyzwac uzdrawiajaca moc swojego boga. Nakladanie rak slynie z mozliwosci wyleczenia nawet najciezszych przypadkow chorob i ran wojennych.",
+        "note": 0,
+        "class": [
+            "pal"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_DEFENSIVE"
+    },
+    {
+        "name": "first aid",
+        "info": "Kleryk uzywajac tej umiejetnosci moze probowac uleczyc najswiezsze rany odniesione przez postac w czasie ostatniej walki.",
+        "note": 0,
+        "class": [
+            "kle"
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_DEFENSIVE"
+    }
 ]

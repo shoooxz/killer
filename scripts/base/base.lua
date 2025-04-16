@@ -154,16 +154,13 @@ end
 -- zamien json na slownik i przerzuc dane do kluczy tablicy
 function base:buildSkillDictionaryFull()
   for i=1, #self.jsonSkill do
-    local name = self.jsonSkill[i][1]
+    local name = self.jsonSkill[i]["name"]
     local first = string.sub(name, 1, 1)
     if not self.skillDictionaryFull[first] then
       self.skillDictionaryFull[first] = {}
     end
     --table.insert(, name)
-    self.skillDictionaryFull[first][name] = {}
-    self.skillDictionaryFull[first][name].name =  self.jsonSkill[i][1]
-    self.skillDictionaryFull[first][name].description =  self.jsonSkill[i][2]
-    self.skillDictionaryFull[first][name].comment =  self.jsonSkill[i][3]
+    self.skillDictionaryFull[first][name] = self.jsonSkill[i]
     -- tutaj dodawac kolejne
   end
 end
@@ -379,6 +376,7 @@ function base:dif(first, second)
 		end
 	end
 	display(removed)
+	--display(self.spellClass)
 end
 
 function base:spellSearch(spell)
