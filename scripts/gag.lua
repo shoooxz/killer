@@ -94,6 +94,7 @@ gag.spellTranslateFix = {
 	["THUNDER BALT"] = "THUNDER BOLT",
 	["HARRID WILTING"] = "HORRID WILTING",
 	["ARB AF ENTRAPY"] = "ORB OF ENTROPY",
+	["RESIST PAISON"] = "RESIST POISON",
 }
 
 function gag:spellTransGetPart(str)

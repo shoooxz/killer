@@ -57,6 +57,7 @@ end
 
 function printer:scripts()
     self:title("Killer Skrypty")
+    self:command("/help", "Pomoc")
     self:command("/aliasy", "Szybkie aliasy bez slash'a")
     self:space()
     self:section("BUFF:")
@@ -65,19 +66,6 @@ function printer:scripts()
     self:command("/buff_add (nazwa_setu)", "Dodaje set aktualny buffow do bazy")
     self:command("/buff_reset", "Resetuje aktualny set buffow")
     self:command("/buff", "Cast aktualny set buffow")
-    self:space()
-    self:section("GPS:")
-    self:command("/npc (imie)", "Kieruj sie w strone NPC")
-    self:info("Wyszukiwanie dziala na bazie skrotow np: /npc barli /npc elro")
-    self:command("/gps", "Lista dostepnych lokacji w GPS dla domeny")
-    self:command("/gps (nazwa)", "Kieruj sie w strone lokacji z GPS")
-    self:info("Wyszukiwanie dziala na bazie skrotow np: /gps ered /gps mith")
-    self:command("/gps_dodaj (nazwa)", "Dodaj aktualna lokacje do bazy GPS")
-    self:space()
-    self:section("Tryby:")
-    self:command("/lucznik", "Opis trybu lucznika")
-    self:command("/drwal", "Opis trybu drwala")
-    self:command("/gornik", "Opis trybu gornika")
     self:bottom()
 end
 
@@ -130,9 +118,7 @@ function printer:aliases()
     self:title("Killer Aliasy")
     self:command("do", "dobadz bron z pokrowca")
     self:command("op", "opusc bron do pokrowca")
-    self:command("wem", "wez monety z kontenera")
-    self:command("wlm", "wloz monety do kontenera")
-    self:info("/opcje aby ustalic styl walki i kontenery")
+    self:command("bs (cel)", "Zacznij walke od bs")
     self:bottom()
 end
 
@@ -188,6 +174,20 @@ function printer:mapper()
     self:command("/blokuj (kierunek)", "Zablokuj wyjscie")
     self:command("/odblokuj (kierunek)", "Odblokuj wyjscie")
     self:bottom()
+end
+
+function printer:helpWeapon()
+  self:title("Help")
+  self:command("Wojownik", "wszystkie bronie, 50% efektywnosci na 2-klasach")
+  self:command("Barbarzynca", "Masterki broni w klasach")
+  self:bottom()
+end
+
+function printer:helpIndex()
+  self:title("Help")
+  self:command("/help (skill/spell)", "Pomoc dotyczaca skilla/spella")
+  self:command("/help bron", "Masterki broni w klasach")
+  self:bottom()
 end
 
 function printer:help(arr)

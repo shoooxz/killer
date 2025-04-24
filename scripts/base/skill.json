@@ -3,7 +3,24 @@
         "name": "axe",
         "info": "Umiejetnosc, dzieki ktorej mozna poslugiwac sie roznej masci toporkami i toporzyskami.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                1
+            ],
+            [
+                "pal",
+                1
+            ],
+            [
+                "bar",
+                1
+            ],
+            [
+                "cza",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -11,7 +28,12 @@
         "name": "dagger",
         "info": "Umiejetnosc, dzieki ktorej mozna sie poslugiwac sztyletami.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "all",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -19,7 +41,36 @@
         "name": "flail",
         "info": "Umiejetnosc, dzieki ktorej mozna walczyc roznego rodzaju cepami bojowymi i morgenszternami.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "kle",
+                1
+            ],
+            [
+                "zlo",
+                1
+            ],
+            [
+                "woj",
+                1
+            ],
+            [
+                "pal",
+                1
+            ],
+            [
+                "dru",
+                1
+            ],
+            [
+                "bar",
+                1
+            ],
+            [
+                "cza",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -27,7 +78,36 @@
         "name": "mace",
         "info": "Umiejetnosc, dzieki ktorej mozna walczyc mlotami bojowymi i maczugami.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "kle",
+                1
+            ],
+            [
+                "zlo",
+                1
+            ],
+            [
+                "woj",
+                1
+            ],
+            [
+                "pal",
+                1
+            ],
+            [
+                "dru",
+                1
+            ],
+            [
+                "bar",
+                1
+            ],
+            [
+                "cza",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -35,7 +115,24 @@
         "name": "polearm",
         "info": "Umiejetnosc, dzieki ktorej mozna walczyc roznymi broniami drzewcowymi.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                1
+            ],
+            [
+                "pal",
+                1
+            ],
+            [
+                "bar",
+                1
+            ],
+            [
+                "cza",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -43,7 +140,28 @@
         "name": "staff",
         "info": "Umiejetnosc, dzieki ktorej mozna poslugiwac sie w walce roznej masci laskami i kosturami.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "mag",
+                1
+            ],
+            [
+                "kle",
+                1
+            ],
+            [
+                "woj",
+                1
+            ],
+            [
+                "dru",
+                1
+            ],
+            [
+                "bar",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -51,7 +169,20 @@
         "name": "shield block",
         "info": "Umiejetnosc ta pozwala klasom umiejacym sie poslugiwac tarcza na odbijanie ciosow wrogow i zaslanianie sie nia podczas walki. Jesli jednak uderzenie bedzie zbyt silne, to cios mimo wszystko przebije obrone wojownika i trafi go, chociaz tarcza moze ow cios oslabic.",
         "note": "Umiejetnosc pasywna.",
-        "class": 0,
+        "class": [
+            [
+                "kle",
+                10
+            ],
+            [
+                "woj",
+                4
+            ],
+            [
+                "pal",
+                8
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -59,7 +190,24 @@
         "name": "spear",
         "info": "Umiejetnosc, dzieki ktorej mozna walczyc roznej masci dzidami i wloczniami.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                1
+            ],
+            [
+                "pal",
+                1
+            ],
+            [
+                "bar",
+                1
+            ],
+            [
+                "cza",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -67,7 +215,28 @@
         "name": "sword",
         "info": "Umiejetnosc, dzieki ktorej mozna walczyc mieczami.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "zlo",
+                1
+            ],
+            [
+                "woj",
+                1
+            ],
+            [
+                "pal",
+                1
+            ],
+            [
+                "bar",
+                1
+            ],
+            [
+                "cza",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -75,7 +244,24 @@
         "name": "whip",
         "info": "Umiejetnosc, dzieki ktorej mozna walczyc biczami i batami.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "zlo",
+                1
+            ],
+            [
+                "woj",
+                1
+            ],
+            [
+                "pal",
+                1
+            ],
+            [
+                "cza",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -84,7 +270,10 @@
         "info": "Przebiegly zlodziej wyposazony w sztylet moze zakrasc sie za plecy swojej ofiary i wbic jej sztylet miedzy lopatki. Taki cios zadaje olbrzymie obrazenia i moze natychmiast zakonczyc zywot ofiary lotrzyka.",
         "note": 0,
         "class": [
-            "zlo"
+            [
+                "zlo",
+                1
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -94,9 +283,18 @@
         "info": "Dzieki tej umiejetnosci silni wojownicy moga podczas walki wykorzystac mase wlasnego ciala aby powalic przeciwnika na ziemie. Aby skutecznie zwalic wroga z nog trzeba byc wyposazonym w przyzwoita tarcze.",
         "note": 0,
         "class": [
-            "woj",
-            "pal",
-            "cza"
+            [
+                "woj",
+                1
+            ],
+            [
+                "pal",
+                8
+            ],
+            [
+                "cza",
+                5
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -104,9 +302,12 @@
     {
         "name": "berserk",
         "info": "Barbarzynca podczas walki moze wprowadzic swoj umysl w stan szalu bitewnego dajacego maksymalne skupienie na walce, dzieki czemu zadaje wrogowi wieksze obrazenia. Jednak bedac pod wplywem szalu nie mozna wykonywac innych czynnosci - w tym uciekac z walki.",
-        "note": "Ulatwia alkohol.",
+        "note": "Ulatwia alkohol. Zmniejsza szanse na parry.",
         "class": [
-            "bar"
+            [
+                "bar",
+                10
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_SELF"
@@ -116,9 +317,18 @@
         "info": "Podczas walki zdolny wojownik moze wytracic na ziemie bron z rak swojego przeciwnika, czyniac go bezbronnym.",
         "note": 0,
         "class": [
-            "woj",
-            "pal",
-            "cza"
+            [
+                "woj",
+                12
+            ],
+            [
+                "pal",
+                12
+            ],
+            [
+                "cza",
+                14
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_DEFENSIVE"
@@ -128,7 +338,10 @@
         "info": "Sprytni lotrzykowie moga w walce z kocia zwinnoscia uchylac sie od ciosow wroga tak, aby te nic im nie zrobily.",
         "note": 0,
         "class": [
-            "zlo"
+            [
+                "zlo",
+                10
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_DEFENSIVE"
@@ -138,8 +351,14 @@
         "info": "Przebiegli zlodzieje moga zatruwac na krotki okres czasu swoja bron, czyniac ja o wiele grozniejsza podczas walki. Aby zatruc bron lotrzyk musi posiadac odpowiednia substancje trujaca.",
         "note": 0,
         "class": [
-            "zlo",
-            "cza"
+            [
+                "zlo",
+                12
+            ],
+            [
+                "cza",
+                14
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_SELF"
@@ -149,22 +368,43 @@
         "info": "Umiejetnosc, dzieki ktorej dobrze wyszkolony wojownik moze w trakcie walki zadac przeciwnikowi dodatkowe obrazenia dobrze wyprowadzonym kopnieciem. Jesli cios bedzie wystarczajaco silny przeciwnik zwali sie na ziemie.",
         "note": 0,
         "class": [
-            "zlo",
-            "woj",
-            "pal",
-            "cza"
+            [
+                "zlo",
+                4
+            ],
+            [
+                "woj",
+                1
+            ],
+            [
+                "pal",
+                4
+            ],
+            [
+                "cza",
+                1
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "parry",
-        "info": "Wyszkoleni wojownicy moga uzyc wlasnych broni aby zbic cios przeciwnika na bok, tak aby nikogo nie zranil.",
+        "info": "Dwureczne bronie sa w stanie parowac rzadziej ale wieksze obrazenia.",
         "note": "Sword, short-sword, polearm, staff.",
         "class": [
-            "woj",
-            "pal",
-            "cza"
+            [
+                "woj",
+                12
+            ],
+            [
+                "pal",
+                12
+            ],
+            [
+                "cza",
+                13
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_DEFENSIVE"
@@ -174,9 +414,18 @@
         "info": "Kiedy walka przyjmuje zly obrot bohaterski wojownik moze wepchnac sie przed swojego sojusznika aby przyjac na siebie wszystkie ciosy.",
         "note": 0,
         "class": [
-            "woj",
-            "pal",
-            "bar"
+            [
+                "woj",
+                1
+            ],
+            [
+                "pal",
+                4
+            ],
+            [
+                "bar",
+                4
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_DEFENSIVE"
@@ -186,7 +435,10 @@
         "info": "Zlodzieje preferuja spryt ponad sile fizyczna. Wyszkolony zlodziej moze w czasie walki podstepnie przewrocic swojego przeciwnika na ziemie, czyniac go o wiele bardziej podatnym na zadawane ciosy.",
         "note": 0,
         "class": [
-            "zlo"
+            [
+                "zlo",
+                8
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -195,7 +447,12 @@
         "name": "riding",
         "info": "Wbrew pozorom jazda konna to ciezka do opanowania sztuka. Jej lepsze zrozumienie prowadzi do mniejszego zmeczenia spowodowanego dlugotrwala jazda na grzbiecie swojego wierzchowca.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "all",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -204,7 +461,10 @@
         "info": "Zlodziej moze ukryc sie w cieniu tak aby pozostac niezauwazalnym dla innych istot.",
         "note": 0,
         "class": [
-            "zlo"
+            [
+                "zlo",
+                1
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_SELF"
@@ -213,7 +473,12 @@
         "name": "lore item",
         "info": "Umiejetnosc dzieki ktorej doswiadczeni barbarzyncy moga duzo dowiedziec sie o pancerzu lub broni z samego wygladu.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "bar",
+                10
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -221,23 +486,42 @@
         "name": "pick lock",
         "info": "Sprytny lotrzyk moze sprobowac otworzyc drzwi zamkniete na klucz.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "zlo",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
     {
         "name": "control of magic",
-        "info": "Umiejetnosc ta zwieksza sile zaklec, poprawia skupienie przy inkantacji oraz wplywa na mniejsza szanse otrzymania obrazen od wlasnych czarow.",
+        "info": "Umiejetnosc ta wplywa na sile zaklec, poprawia skupienie przy inkantacji oraz wplywa na mniejsza szanse otrzymania obrazen od wlasnych czarow.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "mag",
+                1
+            ]
+        ],
         "school": 0,
-        "target": "TAR_IGNORE"
+        "target": 0
     },
     {
         "name": "meditation",
         "info": "Umiejetnosc ta pozwala postaci, podczas odpoczynku, na szybsze zapamietanie czarow dzieki skupieniu i koncentracji. Medytujaca osoba nie moze nic robic, bowiem wyrwie sie z delikatnego transu.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "kle",
+                1
+            ],
+            [
+                "pal",
+                13
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -245,7 +529,12 @@
         "name": "peek",
         "info": "Zlodzieje moga przejrzec przedmioty posiadane przez kogos zanim dokonaja aktu kradziezy.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "zlo",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -254,7 +543,10 @@
         "info": "Zlodzieje wykorzystujac swoj wrodzony spryt moga poruszac sie bezszelestnie w cieniu, przechodzac z miejsca na miejsce bedac niezauwazalnymi przez inne istoty.",
         "note": 0,
         "class": [
-            "zlo"
+            [
+                "zlo",
+                1
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_SELF"
@@ -263,7 +555,12 @@
         "name": "steal",
         "info": "Zlodzieje, jak to zlodzieje moga wykradac innym istotom rozne rzeczy z inwentarza, aby pozniej wykorzystac je samemu lub spieniezyc na czarnym rynku.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "zlo",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -272,7 +569,10 @@
         "info": "Zdolnosc ta pozwala na zajscie ofiary od tylu i zadanie jej kilku szybkich pchniec, przeciwnik jednak nie moze koncentrowac sie bezposrednio na walce z toba. Do takiego ataku wymagany jest sztylet lub krotki miecz, zadajacy obrazenia klute.",
         "note": 0,
         "class": [
-            "zlo"
+            [
+                "zlo",
+                20
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -281,7 +581,24 @@
         "name": "track",
         "info": "Wojownicy moga tropic swoje ofiary po sladach zostawionych na ziemi. Lecz slady czesto sa mylne lub nieczytelne i szybko znikaja.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                8
+            ],
+            [
+                "pal",
+                12
+            ],
+            [
+                "bar",
+                9
+            ],
+            [
+                "cza",
+                8
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -290,7 +607,10 @@
         "info": "Barbarzynca wyposazony w odpowiednia dwureczna bron moze zaszarzowac na swojego wroga zadajac o wiele wieksze obrazenia. Jesli cios jest wystarczajaco silny zwali przeciwnika na ziemie.",
         "note": 0,
         "class": [
-            "bar"
+            [
+                "bar",
+                8
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -299,7 +619,36 @@
         "name": "twohanded weapon",
         "info": "Umiejetnosc umozliwiajaca walke trzymajac bron oburacz.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "mag",
+                1
+            ],
+            [
+                "kle",
+                1
+            ],
+            [
+                "woj",
+                1
+            ],
+            [
+                "pal",
+                1
+            ],
+            [
+                "dru",
+                1
+            ],
+            [
+                "bar",
+                1
+            ],
+            [
+                "cza",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -307,7 +656,36 @@
         "name": "short-sword",
         "info": "Umiejetnosc, dzieki ktorej mozna walczyc krotkimi mieczami.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "kle",
+                1
+            ],
+            [
+                "zlo",
+                1
+            ],
+            [
+                "woj",
+                1
+            ],
+            [
+                "pal",
+                1
+            ],
+            [
+                "dru",
+                1
+            ],
+            [
+                "bar",
+                1
+            ],
+            [
+                "cza",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -315,7 +693,12 @@
         "name": "sharpen",
         "info": "Barbarzyncy zyjacy w dalekich ostepach mroznej polnocy nauczyli sie ostrzyc wlasna bron w miare potrzeb i ta wiedze przekazywali dalszym pokoleniom.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "bar",
+                8
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -323,16 +706,24 @@
         "name": "recuperate",
         "info": "Odpoczywajac barbarzynca moze wprowadzic swoje cialo w stan uzdrowicielskiego letargu, dzieki ktoremu szybciej odzyskuje sie sily i zdrowie.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "bar",
+                8
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
     {
         "name": "wardance",
         "info": "Wojownik bedac w stanie szalu bitewnego, zwanego 'tancem', moze uzyskac dodatkowy atak w walce, nieco mniej koncentrujac sie na sile zadawanych ciosow.",
-        "note": 0,
+        "note": "Zwieksza szanse na parry.",
         "class": [
-            "woj"
+            [
+                "woj",
+                8
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_SELF"
@@ -342,9 +733,18 @@
         "info": "Wojownik wyposazony w odpowiednia bron obuchowa moze wykorzystac mase swojego oreza aby w walce ogluszyc na krotki okres czasu swoja ofiare. Staje sie ona wtedy bardziej podatna na obrazenia.",
         "note": "Mace, Flail, Staff.",
         "class": [
-            "kle",
-            "woj",
-            "pal"
+            [
+                "kle",
+                12
+            ],
+            [
+                "woj",
+                10
+            ],
+            [
+                "pal",
+                10
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -353,7 +753,16 @@
         "name": "dualwield style",
         "info": "Umiejetnosc dajaca lepsze opanowanie walki dwoma bronmi naraz.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                12
+            ],
+            [
+                "pal",
+                12
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -361,7 +770,24 @@
         "name": "twohanded weapon style",
         "info": "Umiejetnosc dajaca lepsze opanowanie walki bronmi oburecznymi.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                10
+            ],
+            [
+                "pal",
+                11
+            ],
+            [
+                "bar",
+                12
+            ],
+            [
+                "cza",
+                7
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -369,7 +795,12 @@
         "name": "bandage",
         "info": "Aby szybciej wylizac sie z ran odniesionych w walce mozna zalozyc sobie lub swoim sojusznikom opatrunek, lecz nalezy uwazac, niedoswiadczeni medycy moga jedynie pogorszyc stan zdrowia swoj lub przyjaciela.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "all",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -377,7 +808,12 @@
         "name": "detect traps",
         "info": "Umiejetnosc pozwalajaca wykrywac pulapki.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "zlo",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -385,7 +821,12 @@
         "name": "disarm traps",
         "info": "Umiejetnosc pozwalajaca rozbrajac pulapki.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "zlo",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -393,7 +834,16 @@
         "name": "target",
         "info": "Umiejetnosc pozwalajaca podczas walki z kilkoma przeciwnikami naraz zmienic cel swojego bezposredniego ataku na inna istote.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                8
+            ],
+            [
+                "pal",
+                12
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -402,7 +852,10 @@
         "info": "Cwiczeni latami do walki z okrutnym zlem zalewajacym swiat, paladyn potrafi w akcie duchowej koncentracji zadawac duzo wieksze obrazenia zlym istotomy.",
         "note": 0,
         "class": [
-            "pal"
+            [
+                "pal",
+                4
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -412,8 +865,14 @@
         "info": "Umiejetnosc ta pozwala paladynowi i klerykowi na spowodowanie wsrod martwiakow zametu lub natychmiastowe unicestwienie ofiary. Aby dokonac odpedzania postac powinna posiadac specjalny przedmiot wiary, w ktory mozna wyposazyc sie w kazdej swiatyni.",
         "note": 0,
         "class": [
-            "kle",
-            "pal"
+            [
+                "kle",
+                1
+            ],
+            [
+                "pal",
+                3
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -422,7 +881,16 @@
         "name": "dagger mastery",
         "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
         "note": "Zlodziej, wojownik.",
-        "class": 0,
+        "class": [
+            [
+                "zlo",
+                18
+            ],
+            [
+                "woj",
+                20
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -431,7 +899,10 @@
         "info": "Podczas walki barbarzynca moze zadac silniejsze uderzenie swojemu przeciwnikowi, lecz wymaga to wiekszej koncentracji i skupienia. Doprowadza to do gorszej celnosci zwyklych atakow.",
         "note": 0,
         "class": [
-            "bar"
+            [
+                "bar",
+                12
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -441,7 +912,10 @@
         "info": "Jest to najsilniejsze uderzenie jakie moze zadac barbarzynca swojemu przeciwnikowi, lecz wymaga ogromnej koncentracji, ktora pogarsza celnosc zwyklych atakow.",
         "note": 0,
         "class": [
-            "bar"
+            [
+                "bar",
+                20
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -451,7 +925,10 @@
         "info": "Zdolnosc ta maja jedynie barbarzyncy. Mozna ja wykorzystac jedynie w walce. Dzieki tej umiejetnosci barbarzynca zmniejsza obrazenia cielesne jakie sa mu zadawane.",
         "note": 0,
         "class": [
-            "bar"
+            [
+                "bar",
+                12
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_DEFENSIVE"
@@ -460,7 +937,12 @@
         "name": "herbs knowledge",
         "info": "Umiejetnosc ta pozwala szukac w lokacji roznego rodzaju ziol, grzybow i innych rzeczy zwiazanych ze swiatem flory.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "all",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -468,7 +950,16 @@
         "name": "mace mastery",
         "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
         "note": "Paladyn, wojownik.",
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                20
+            ],
+            [
+                "pal",
+                20
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -477,8 +968,14 @@
         "info": "Nieumarli moga pozywic sie swiezym jeszcze cialem nieboszczyka aby odzyskac czesc sil witalnych.",
         "note": 0,
         "class": [
-            "mag",
-            "cza"
+            [
+                "mag",
+                6
+            ],
+            [
+                "cza",
+                5
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_DEFENSIVE"
@@ -488,7 +985,10 @@
         "info": "Podczas walki barbarzynca moze zadac silniejsze uderzenie swojemu przeciwnikowi, lecz wymaga to wiekszej koncentracji i skupienia. Doprowadza to do gorszej celnosci zwyklych atakow.",
         "note": 0,
         "class": [
-            "bar"
+            [
+                "bar",
+                4
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -497,7 +997,12 @@
         "name": "trapper",
         "info": "Umiejetnosc ta pozwala na zdzieranie skory z zabitych zwierzat oraz wycinanie komponentow z ich cial.",
         "note": "Skin, carve.",
-        "class": 0,
+        "class": [
+            [
+                "all",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -505,7 +1010,12 @@
         "name": "trade",
         "info": "Zdolnosc targowania sie z kupcami.",
         "note": "Otrzymuje sie z achievement'u.",
-        "class": 0,
+        "class": [
+            [
+                "all",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -513,7 +1023,20 @@
         "name": "flail mastery",
         "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
         "note": "Paladyn, wojownik, czarny rycerz.",
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                20
+            ],
+            [
+                "pal",
+                20
+            ],
+            [
+                "cza",
+                20
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -521,7 +1044,20 @@
         "name": "sword mastery",
         "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
         "note": "Paladyn, wojownik, czarny rycerz, nomad.",
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                20
+            ],
+            [
+                "pal",
+                20
+            ],
+            [
+                "cza",
+                20
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -529,7 +1065,16 @@
         "name": "axe mastery",
         "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
         "note": "Wojownik, barbarzynca, czarny rycerz.",
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                20
+            ],
+            [
+                "cza",
+                20
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -537,7 +1082,16 @@
         "name": "whip mastery",
         "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
         "note": "Wojownik, nomad.",
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                20
+            ],
+            [
+                "nom",
+                20
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -545,7 +1099,12 @@
         "name": "short-sword mastery",
         "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
         "note": "Wojownik.",
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                20
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -553,7 +1112,16 @@
         "name": "polearm mastery",
         "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
         "note": "Wojownik, barbarzynca, czarny rycerz.",
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                20
+            ],
+            [
+                "cza",
+                20
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -561,7 +1129,12 @@
         "name": "staff mastery",
         "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
         "note": "Wojownik.",
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                20
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -569,7 +1142,12 @@
         "name": "spear mastery",
         "info": "Specjalizacja wladania okreslonym typem broni - zwieksza precyzje i zadawane obrazenia.",
         "note": "Wojownik, barbarzynca.",
-        "class": 0,
+        "class": [
+            [
+                "woj",
+                20
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -578,7 +1156,10 @@
         "info": "Umiejetnosc, przy pomocy ktorej czarny rycerz zbiera w sobie negatywna energie i wysyla ja w kierunku wroga. Uzyta na istoty nieumarle zregeneruje utracona przez nie negatywna energie.",
         "note": 0,
         "class": [
-            "cza"
+            [
+                "cza",
+                1
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -588,8 +1169,14 @@
         "info": "Wyjatkowo silni wojownicy i czarni rycerze walczac bronia dwureczna potrafia po wzieciu ogromnego zamachu wyprowadzic niewiarygodnie silny cios, ktory moze powalic przeciwnika na ziemie.",
         "note": "Flail.",
         "class": [
-            "woj",
-            "cza"
+            [
+                "woj",
+                16
+            ],
+            [
+                "cza",
+                19
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -599,8 +1186,14 @@
         "info": "Dobrze wycwiczony czarny rycerz badz wojownik, uzywajacy dwurecznej broni siecznej, jest w stanie dzieki szerokiemu zamachowi i gibkim ruchom zadac cios kilku przeciwnikom naraz.",
         "note": 0,
         "class": [
-            "woj",
-            "cza"
+            [
+                "woj",
+                9
+            ],
+            [
+                "cza",
+                8
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -610,7 +1203,10 @@
         "info": "Czarny rycerz przed walka moze wzniesc modly do swych mrocznych bogow, by uzyskac ich blogoslawienstwo. Otoczony demoniczna aura czarny rycerz jest trudnym przeciwnikiem, ale takze uciazliwym sojusznikiem dla wszystkich dobrych istot znajdujacych sie w poblizu.",
         "note": 0,
         "class": [
-            "cza"
+            [
+                "cza",
+                9
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_SELF"
@@ -620,8 +1216,14 @@
         "info": "Doskonale wycwiczeni i zwinni wojownicy i czarni rycerze walczac dwureczna bronia sieczna potrafia za jednym zamachem zadac wrogowi dwa ciosy.",
         "note": 0,
         "class": [
-            "woj",
-            "cza"
+            [
+                "woj",
+                14
+            ],
+            [
+                "cza",
+                15
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -631,7 +1233,10 @@
         "info": "Czarny rycerz potrafi wydrzec dusze ze swiezych zwlok dobrej istoty i nasycic nia swa bron badz pancerz, dzieki czemu stanie sie znacznie skuteczniejszy w niszczeniu wszelakiego dobra. Nie nalezy zapominac, ze klatwa z czasem minie, ale przedmiot na wieki nabierze wstretu do dobrych istot.",
         "note": "Heal przy atakach.",
         "class": [
-            "cza"
+            [
+                "cza",
+                11
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_DEFENSIVE"
@@ -641,7 +1246,10 @@
         "info": "Czarny rycerz potrafi wydrzec dusze ze swiezych zwlok dobrej istoty i nasycic nia swa bron badz pancerz, dzieki czemu stanie sie znacznie skuteczniejszy w niszczeniu wszelakiego dobra. Nie nalezy zapominac, ze klatwa z czasem minie, ale przedmiot na wieki nabierze wstretu do dobrych istot.",
         "note": "Regen zycia?",
         "class": [
-            "cza"
+            [
+                "cza",
+                11
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_DEFENSIVE"
@@ -651,7 +1259,10 @@
         "info": "Cwiczeni latami do walki z dobrem zalewajacym swiat, czarni rycerze potrafia w akcie duchowej koncentracji zadawac duzo wieksze obrazenia.",
         "note": 0,
         "class": [
-            "cza"
+            [
+                "cza",
+                4
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_OFFENSIVE"
@@ -661,7 +1272,10 @@
         "info": "Umiejetnosc, przy pomocy ktorej czarny rycerz moze przywolac awatara sfery negatywnej, ktory bedzie mu sluzyl. Takiego sluge mozna przywolac raz dziennie.",
         "note": 0,
         "class": [
-            "cza"
+            [
+                "cza",
+                2
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_SELF"
@@ -670,7 +1284,12 @@
         "name": "hustle",
         "info": "Kiedy walka przyjmuje zly obrot, czarny rycerz jest w stanie wepchnac przed siebie lub swego sojusznika innego sojusznika, by ten otrzymywal bolesne ciosy zamiast niego.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "cza",
+                5
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -678,7 +1297,12 @@
         "name": "control undead",
         "info": "Umiejetnosc, przy pomocy ktorej czarny rycerz jest w stanie przejac kontrole nad nieumarlymi. Wymagany jest symbol wiary.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "cza",
+                3
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -686,15 +1310,16 @@
         "name": "undead resemblance",
         "info": "Dzieki tej specyficznej magicznej wlasciwosci podroznik potrafi wtopic sie miedzy agresywnych nieumarlych, tak, ze nie poznaja oni w nim wroga.",
         "note": 0,
-        "class": 0,
-        "school": 0,
-        "target": "TAR_IGNORE"
-    },
-    {
-        "name": "bleeding wound",
-        "info": "Krwawiace rany utrudniajace leczenie.",
-        "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "mag",
+                1
+            ],
+            [
+                "cza",
+                1
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -702,7 +1327,12 @@
         "name": "mining",
         "info": "Po znalezieniu odpowiedniego miejsca pracy pod ziemia oraz kilofa, mozna sprobowac swoich sil przy wydobywaniu skarbow.",
         "note": 0,
-        "class": 0,
+        "class": [
+            [
+                "all",
+                4
+            ]
+        ],
         "school": 0,
         "target": "TAR_IGNORE"
     },
@@ -711,7 +1341,10 @@
         "info": "Raz na jakis czas paladyn musi ukleknac do modlitwy. Dzieki tej modlitwie jest obserwowany przez bogow swiatlosci i w zaleznosci od jego uczynkow obdarzany moca lub jej pozbawiany. Dzieki temu paladyn nie moze zabijac dobrych istot, gdyz sprzeciwi sie swojej swietej misji a bogowie odwroca sie od niego, czyniac go bezradnym. ",
         "note": 0,
         "class": [
-            "pal"
+            [
+                "pal",
+                1
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_SELF"
@@ -721,7 +1354,10 @@
         "info": "Paladyni raz na dobe moga przyzwac uzdrawiajaca moc swojego boga. Nakladanie rak slynie z mozliwosci wyleczenia nawet najciezszych przypadkow chorob i ran wojennych.",
         "note": 0,
         "class": [
-            "pal"
+            [
+                "pal",
+                1
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_DEFENSIVE"
@@ -731,9 +1367,329 @@
         "info": "Kleryk uzywajac tej umiejetnosci moze probowac uleczyc najswiezsze rany odniesione przez postac w czasie ostatniej walki.",
         "note": 0,
         "class": [
-            "kle"
+            [
+                "kle",
+                1
+            ]
         ],
         "school": 0,
         "target": "TAR_CHAR_DEFENSIVE"
+    },
+    {
+        "name": "light armor",
+        "info": "Najlzejsza wersja uzbrojenia. Ulatwia wykonywanie unikow i poslugiwanie sie bronia.",
+        "note": "Wieksza ilosc atakow bronia, pasywne uniki.",
+        "class": [
+            [
+                "all",
+                1
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "medium armor",
+        "info": "Srednia wersja uzbrojenia. Zloty srodek pomiedzy ciezkim pancerzem a lekka zbroja.",
+        "note": 0,
+        "class": [
+            [
+                "woj",
+                1
+            ],
+            [
+                "bar",
+                1
+            ],
+            [
+                "pal",
+                1
+            ],
+            [
+                "dru",
+                1
+            ],
+            [
+                "zlo",
+                1
+            ],
+            [
+                "cza",
+                1
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "heavy armor",
+        "info": "Ciezka wersja uzbrojenia. Krepuje ruchy ale zapewnia dobra ochrone przed atakami.",
+        "note": "Mniejsza ilosc atakow bronia, slabsze uniki.",
+        "class": [
+            [
+                "woj",
+                1
+            ],
+            [
+                "pal",
+                1
+            ],
+            [
+                "cza",
+                1
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "whirlwind",
+        "info": "Umiejetnosc ta pozwala na wykonanie gwaltownego obrotu z bronia, zadajac obrazenia wszystkim przeciwnikom. Liczba obrotow zwieksza sie wraz z wyuczeniem umiejetnosci.",
+        "note": "Tylko bronie dwureczne.",
+        "class": [
+            [
+                "woj",
+                25
+            ],
+            [
+                "bar",
+                25
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "cyclone",
+        "info": "Umiejetnosc ta pozwala na wykonanie gwaltownego obrotu z bronia, zadajac obrazenia wszystkim przeciwnikom. Liczba obrotow zwieksza sie wraz z wyuczeniem umiejetnosci.",
+        "note": "Tylko dwie bronie jednoreczne.",
+        "class": [
+            [
+                "woj",
+                25
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "wardance mastery",
+        "info": "Mistrzowie wojennego rzemiosla potrafia znaczaco zmniejszyc niekorzystny wplyw umiejetnosci, a takze zwiekszyc jej pozytywne dzialania, jak wplyw na zrecznosc czy ilosc wyprowadzanych atakow.",
+        "note": "Bonus do AC.",
+        "class": [
+            [
+                "woj",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "shield mastery",
+        "info": "Podnosi szanse na udane uzycie i obniza przyjete obrazenia.",
+        "note": 0,
+        "class": [
+            [
+                "woj",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "parry mastery",
+        "info": "Podnosi szanse na udane uzycie i obniza przyjete obrazenia.",
+        "note": 0,
+        "class": [
+            [
+                "woj",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "weapon mastery",
+        "info": "Umozliwia wojownikowi mistrzowskie poslugiwanie sie kazdym typem broni.",
+        "note": "50% efektywnosci na 2-klasach.",
+        "class": [
+            [
+                "woj",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "whirlwind mastery",
+        "info": "Wzmacnia umiejetnosc whirlwind zwiekszajac ilosc dodatkowych atakow.",
+        "note": "115 maksymalnie.",
+        "class": [
+            [
+                "woj",
+                31
+            ],
+            [
+                "bar",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "cyclone mastery",
+        "info": "Wzmacnia umiejetnosc cyclone zwiekszajac ilosc dodatkowych atakow.",
+        "note": "115 maksymalnie.",
+        "class": [
+            [
+                "woj",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "twohanded weapon mastery",
+        "info": "Umozliwia barbarzyncy mistrzowskie poslugiwanie sie kazdym typem broni dwurecznej.",
+        "note": "115 maksymalnie.",
+        "class": [
+            [
+                "bar",
+                20
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "berserk mastery",
+        "info": "Zwieksza obrazenia w stosunku do utraconego zdrowia. Redukuje ograniczenia umyslowe podczas szalu.",
+        "note": "Zmniejsza szanse na udane auto rescue do max 10%.",
+        "class": [
+            [
+                "bar",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "damage reduction mastery",
+        "info": "Zwieksza redukcje obrazen.",
+        "note": "115 maksymalnie.",
+        "class": [
+            [
+                "bar",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "recuperate mastery",
+        "info": "Wzmacnia umiejetnosc recuperate.",
+        "note": 0,
+        "class": [
+            [
+                "bar",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "charge mastery",
+        "info": "Zwieksza szanse na udana szarze oraz redukuje zuzycie furii.",
+        "note": "Skraca waita po uzyciu.",
+        "class": [
+            [
+                "bar",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "seize soul",
+        "info": "Umiejetnosc ta sluzy do lapania dusz umarlych do magicznego naczynia, zwanego filakterium.",
+        "note": "Czarny Rycerz do damn. Nekromanta zalozone dziala jak mirrory.",
+        "class": [
+            [
+                "mag",
+                7
+            ],
+            [
+                "cza",
+                11
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "envenom mastery",
+        "info": "Zdolnosc ta zwieksza szybkosc nakladania trucizn na bron, a takze od odpowiedniego wyuczenia, pozwala zatruc ja nawet jesli posiada juz jakis inny efekt (np. damn).",
+        "note": "Zlodziej wszystkie trucizny, czarny rycerz nieco gorzej.",
+        "class": [
+            [
+                "cza",
+                31
+            ],
+            [
+                "zlo",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "unholy mastery",
+        "info": "Ataki przeciwko dobrym istotom staja sie o wiele potezniejsze. Umiejetnosci takie jak torment czy smite good mozna uzywac czesciej a ich sila wzrasta.",
+        "note": 0,
+        "class": [
+            [
+                "cza",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "avatar mastery",
+        "info": "Wzmacnia umiejetnosc call avatar.",
+        "note": 0,
+        "class": [
+            [
+                "cza",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "demon aura mastery",
+        "info": "Wydluza czas dzialania demon aury. Dodatkowo, wraz ze wzrostem umiejetnosci, dookola czarnego rycerza pojawiaja sie ciernie.",
+        "note": "Skaluje sie czestotliwosc cierni.",
+        "class": [
+            [
+                "cza",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
     }
 ]

@@ -1,5 +1,16 @@
 utils = utils or {}
 
+function utils:arrayMerge(tab1, tab2)
+    local wynik = {}
+    for i = 1, #tab1 do
+        table.insert(wynik, tab1[i])
+    end
+    for i = 1, #tab2 do
+        table.insert(wynik, tab2[i])
+    end
+    return wynik
+end
+
 function utils:arrayKeyExists(key, arr)
     for k,v in pairs(arr) do
       if k == key then return true end

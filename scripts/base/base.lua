@@ -8,6 +8,7 @@ base.spellSchool = {}
 base.spellDictionaryFull = {}
 base.skillDictionaryFull = {}
 base.spellClass = {}
+base.skillClass = {}
 --[[
 
 3. Wprowadzono nowe umiejętności ( skile dostępne tylko dla magów na 31 levelu ) (nauczyć się można wcześniej ale używać dopiero na 31) - dostępne tylko z ksiąg ze skilami.
@@ -111,6 +112,7 @@ function base:init()
   self:buildSpellDictionaryFull()
 	self:buildSkillDictionaryFull()
 	self:buildSchool()
+	self:buildSkillLevel()
 	-- clear memory
 	self.jsonSpell = nil
 	self.jsonSkill = nil
@@ -165,30 +167,52 @@ function base:buildSkillDictionaryFull()
   end
 end
 
-function base:help(name)
-  local first = string.sub(name, 1, 1)
-	local out = {}
-	local found = false
-	if self.skillDictionaryFull[first] and self.skillDictionaryFull[first][name] then
-		out.meta = self.skillDictionaryFull[first][name]
-		found = true
-	elseif self.spellDictionaryFull[first] and self.spellDictionaryFull[first][name] then
-		out.meta = self.spellDictionaryFull[first][name]
-		local arr = {}
-		out.meta.additional = {}
-		out.meta.len = string.len(out.meta.school[1])+1
-		table.insert(arr, {self:schoolToColor(out.meta.school[1]), out.meta.school[1], ""})
-		table.insert(arr, {"white", self:targetToFancy(out.meta.target), ""})
-		table.insert(out.meta.additional, arr)
-		found = true
-	end
-	if found then
-	  local tb = base:spellSearch(name)
-	  out.teacher = tb[1]
-	  out.book = tb[2]
-	  printer:help(out)
+function base:topic(key)
+	local topics = {
+		["bron"] = function()  printer:helpWeapon() end,
+	}
+	if utils:arrayKeyExists(key, topics) then
+		topics[key]()
+		return true
 	else
-    printer:error("Help", "Brak spella w bazie!")
+		return false
+	end
+end
+
+function base:help(name)
+	if name == "" then
+		-- pokaz help instrukcje
+		printer:helpIndex()
+	else
+		name = utils:trim(name)
+		-- pokaz tematy
+		if not base:topic(name) then
+			-- pokaze spell/skill
+		  local first = string.sub(name, 1, 1)
+			local out = {}
+			local found = false
+			if self.skillDictionaryFull[first] and self.skillDictionaryFull[first][name] then
+				out.meta = self.skillDictionaryFull[first][name]
+				found = true
+			elseif self.spellDictionaryFull[first] and self.spellDictionaryFull[first][name] then
+				out.meta = self.spellDictionaryFull[first][name]
+				local arr = {}
+				out.meta.additional = {}
+				out.meta.len = string.len(out.meta.school[1])+1
+				table.insert(arr, {self:schoolToColor(out.meta.school[1]), out.meta.school[1], ""})
+				table.insert(arr, {"white", self:targetToFancy(out.meta.target), ""})
+				table.insert(out.meta.additional, arr)
+				found = true
+			end
+			if found then
+			  local tb = base:spellSearch(name)
+			  out.teacher = tb[1]
+			  out.book = tb[2]
+			  printer:help(out)
+			else
+		    printer:error("Help", "Brak spella w bazie!")
+			end
+		end
 	end
 end
 
@@ -377,6 +401,53 @@ function base:dif(first, second)
 	end
 	display(removed)
 	--display(self.spellClass)
+end
+
+function base:buildSkillLevel()
+	for i=1, #self.jsonSkill do
+		if type(self.jsonSkill[i].class) == "table" and next(self.jsonSkill[i].class) then
+			for j=1, #self.jsonSkill[i].class do
+				local class = self.jsonSkill[i].class[j]
+				if class[1] then
+					if not self.skillClass[class[1]] then
+							self.skillClass[class[1]] = {}
+					end
+					if not self.skillClass[class[1]][tostring(class[2])] then
+							self.skillClass[class[1]][tostring(class[2])] = {}
+					end
+					table.insert(self.skillClass[class[1]][tostring(class[2])], self.jsonSkill[i].name)
+				end
+			end
+		end
+	end
+	-- dodaj all do wszystkich klas
+	for class, classSkills in pairs(self.skillClass) do
+		-- self.skillClass["all"]
+		if class ~= "all" then
+			  -- przez caly all
+				for level, skills in pairs(self.skillClass["all"]) do
+						-- jesli level nie istnieje w klasy skillach
+						if not utils:arrayKeyExists(level, classSkills) then
+							-- utworz nowy level
+							self.skillClass[class][level] = {}
+						end
+						-- dodaj do klasy levelu spelle z all
+						self.skillClass[class][level] = utils:arrayMerge(self.skillClass[class][level], skills)
+				end
+		end
+	end
+	-- nie potrzebny juz all
+	self.skillClass["all"]  = nil
+end
+
+function base:test()
+	-- zrobic druida z php
+	-- zrobic druida z php
+	-- zrobic druida z php
+	-- zrobic druida z php
+	display(self.skillClass)
+
+
 end
 
 function base:spellSearch(spell)

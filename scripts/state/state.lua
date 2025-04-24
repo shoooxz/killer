@@ -186,6 +186,7 @@ function state:checkForAss(me)
     if not me.is_fighting then
       for _, mate in pairs(state.team) do
          if mate.is_fighting and me.room == mate.room then
+            --display(mate)
             send("ass")
             character:assist()
             self.tevent = utils:setTimeEvent(3)

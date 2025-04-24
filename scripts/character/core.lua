@@ -6,6 +6,12 @@ function character:defensiveSpells()
   send(def)
 end
 
+function character:bs(who)
+  local sub = profile:get("sub")
+  send("or "..sub.." bs "..who)
+  send("bs "..who)
+end
+
 function character:assist()
   local fol = tonumber(profile:get("follower"))
   if fol > 0 then

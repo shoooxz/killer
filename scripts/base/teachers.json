@@ -7351,13 +7351,6 @@
         "price": 90
       },
       {
-        "min": 75,
-        "name": "weapon mastery",
-        "max": 95,
-        "reqSkill": 75,
-        "price": 77
-      },
-      {
         "min": 65,
         "name": "hustle",
         "max": 85,
