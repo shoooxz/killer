@@ -6,6 +6,7 @@ state.iTeamColor = "gold"
 state.iEnemyColor = "light_coral"
 state.enemyHP = ""
 state.tevent = 0
+state.opener = false
 
 function state:init()
   state:createLocationState()
@@ -55,6 +56,10 @@ function state:wakeTeam()
 end
 
 function state:orderSub(order)
+  -- zamen c na x, nie-caster nie mozna dawac orderow z c
+  if utils:startsWith(order, "c ") then
+    order = "x "..order:sub(3)
+  end
   send("order "..state.sub.." "..order)
 end
 
@@ -136,6 +141,15 @@ function state:gmcpRoomPeople()
           loc[i] = nil
           -- a dany obiekt tankiem
           obj.tank = true
+          -- jesli tank to ja - opener tankowy
+          if obj.name == profile.name and state.opener == false then
+            local opener = profile:get("kiopener")
+            send(opener, true)
+            state.opener = true
+          end
+          -- MOZE BYC KILKU TANKOW ????? cos tu sie zjebie TODO
+          -- ustal enemy do assysty do bsow
+          obj.enemy = state:clearTarget(p.name)
         elseif p.name == obj.name then
             loc[i] = nil
         end
@@ -168,8 +182,12 @@ function state:gmcpRoomPeople()
       state:printTeamMember(v)
     end
     -- enemy
-    for i, v in pairs(enemy) do
-      state:printEnemy(i, v, attacking[v.name], targetColor[v.name])
+    if next(enemy) then
+      for i, v in pairs(enemy) do
+        state:printEnemy(i, v, attacking[v.name], targetColor[v.name])
+      end
+    else
+      state.opener = false
     end
     -- neutral
     for _, v in pairs(loc) do
@@ -186,8 +204,15 @@ function state:checkForAss(me)
     if not me.is_fighting then
       for _, mate in pairs(state.team) do
          if mate.is_fighting and me.room == mate.room then
-            --display(mate)
-            send("ass")
+            local kill = profile:get("kill")
+            local opener = profile:get("asopener")
+            if kill == "kill" then
+              send("ass")
+            else
+              send(kill.." "..mate.enemy)
+              send("ass")
+            end
+            send(opener)
             character:assist()
             self.tevent = utils:setTimeEvent(3)
             return true
@@ -210,8 +235,12 @@ function state:orderKill(enemy)
   end
 end
 
+function state:clearTarget(name)
+  return string.gsub(utils:replacePolish(name), "{.", "");
+end
+
 function state:printNeutral(obj)
-  obj.name = utils:replacePolish(obj.name)
+  obj.name = state:clearTarget(obj.name)
   ls:cechoLink("<white>(<red>K<white>)", self:meKill(obj.name), "", true)
   ls:cecho(" <slate_grey>Order: ")
   ls:cechoLink("<white><<red>K<white>>", self:orderKill(obj.name), "", true)
@@ -220,7 +249,7 @@ function state:printNeutral(obj)
 end
 
 function state:printEnemy(i, obj, att, targetColor)
-  obj.name = utils:replacePolish(obj.name)
+  obj.name = state:clearTarget(obj.name)
   ls:echo("   ")
   ls:cecho("<white>[<white><"..state.iEnemyColor..">"..self:twoSpaceNumber(i).."<white>] ")
   if not targetColor then
@@ -258,7 +287,7 @@ function state:setDoubleMem(mem)
 end
 
 function state:printTeamMember(obj)
-  obj.name = utils:replacePolish(obj.name)
+  obj.name = state:clearTarget(obj.name)
 
   -- RESUCE
   if obj.name == "JA" then

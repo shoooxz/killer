@@ -28,7 +28,6 @@ function loadObjects(force)
         "scripts/inventory/rating",
         "scripts/inventory/repair",
         "scripts/roller/roller",
-        "scripts/multi/multi",
         "scripts/gag",
         "scripts/box",
         "scripts/miner",

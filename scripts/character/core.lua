@@ -1,5 +1,33 @@
 character = character or {}
 
+function character:processOrder(who, order)
+  if who == profile:get("master") then
+    -- split args
+    local arg = utils:split(order, " ")
+    -- order
+    if order ==  "learn" then
+      learn.auto = true
+    end
+    if string.find(order, "buff") then
+      buff:basicCast(arg[2])
+      return
+    end
+    if string.find(order, "kill") then
+      state:meKill(arg[2])()
+      return
+    end
+    if order ==  "eat" then
+      inventory:eat()
+      return
+    end
+    -- x - cast gdy master nie ma castera
+    if utils:startsWith(order, "x ") then
+      order = "c "..order:sub(3)
+    end
+    send(order)
+  end
+end
+
 function character:defensiveSpells()
   local def = "c shield; c armor"
   state:orderTeam(def)

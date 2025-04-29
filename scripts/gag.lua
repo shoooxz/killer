@@ -95,6 +95,8 @@ gag.spellTranslateFix = {
 	["HARRID WILTING"] = "HORRID WILTING",
 	["ARB AF ENTRAPY"] = "ORB OF ENTROPY",
 	["RESIST PAISON"] = "RESIST POISON",
+	["HALD PERSON"] = "HOLD PERSON",
+	["IMMALATE"] = "IMMOLATE",
 }
 
 function gag:spellTransGetPart(str)

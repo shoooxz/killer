@@ -511,7 +511,7 @@ function base:spellSearch(spell)
 							minmaxColor = "white"
 						end
 						table.insert(arr, {minmaxColor, minmax, ""})
-        		table.insert(arr, {"green", v.mob, ""})
+        		table.insert(arr, {"green", v.mob, "gotoRoom('"..v.roomVnum.."')"})
             table.insert(arr, {"white", v.region, ""})
             table.insert(teacher, arr)
           end

@@ -2,6 +2,14 @@ profile = profile or {}
 profile.file = nil
 profile.list = profile.list or {}
 profile.func = {
+	["asopener"] = function(val)
+			profile.list.asopener = val
+			profile:save()
+	end,
+	["kiopener"] = function(val)
+			profile.list.kiopener = val
+			profile:save()
+	end,
 	["fclass"] = function(val)
 			profile.list.fclass = val
 			profile:save()
@@ -221,6 +229,8 @@ function profile:init(name)
 		table.load(self.file, self.list)
 	else
 		local default = {
+			["asopener"] = "",
+			["kiopener"] = "",
 			["fclass"] = "",
 			["sclass"] = "",
 			["kill"] = "kill",
@@ -274,7 +284,11 @@ end
 
 function profile:get(name)
 	if self.list[name] then
-			return self.list[name]
+			if name == "kiopener" or name == "asopener" then
+				return string.gsub(self.list[name], "#", ";")
+			else
+				return self.list[name]
+			end
 	end
 end
 

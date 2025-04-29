@@ -14,8 +14,9 @@ footer.baseFunc = {
 	[2] = {
 		["name"] = "Rest",
 		["func"] = function()
-			 state:orderTeam("rest;medi")
+			 state:orderTeam("rest;recup;medi")
 			 send("rest")
+			 send("recup")
 			 send("medit")
 		end,
 		["style"] = ""
@@ -222,6 +223,7 @@ function footer:createUI()
 end
 
 function footer:fastSpellCallback()
+	-- order na c nie dziala jak master nie ma castera
 	return function(i)
 		local v = "c '"..profile:get("k"..i).."'"
 		state:orderSub(v)
