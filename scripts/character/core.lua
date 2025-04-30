@@ -8,6 +8,10 @@ function character:processOrder(who, order)
     if order ==  "learn" then
       learn.auto = true
     end
+    if string.find(order, "opener") then
+      opener:setByName(arg[2])
+      return
+    end
     if string.find(order, "buff") then
       buff:basicCast(arg[2])
       return

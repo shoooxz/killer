@@ -8,13 +8,31 @@ function path:start(what)
   if what == "ketony" then
     self:ketonyStart()
   end
+  if what == "wlosci" then
+    self:wlosciStart()
+  end
 end
 
 function path:fortStart()
   self.conf = {
     ["path"] = {"e", "n", "s", "s", "n", "e", "n", "s", "s"},
-    ["enemy"] = {},
+    ["enemy"] = {"Żolnierz", "Oficer", "Straznik"},
     ["buff"] = "exp",
+    ["ident"] = "fort",
+  }
+  exp:start(self.conf)
+end
+
+function path:wlosciStart()
+  self.conf = {
+    ["path"] = {"u", "w", "s", "w", "w", "n", "n", "n", "n", "s", "s", "s", "s", "e", "e", "e", "e", "n", "n", "n", "n", "n", "e", "n", "n",
+                "s", "s", "w", "s", "s", "s", "s", "s", "w", "w", "n", "e", "d",
+                "n", "w", "w", "n", "e", "e", "n", "w", "w", "e", "n", "n", "w", "n", "e", "e", "n", "n", "n", "n",
+                "w", "w", "n", "e", "e", "s", "s", "s", "s", "w", "w", "n", "u", "n",
+                "w", "n", "n", "n", "e", "e", "e", "e", "s", "s", "s", "w", "w", "w"},
+    ["enemy"] = {"Szkielet lucznika", "Szkielet wojownika"},
+    ["buff"] = "exp",
+    ["ident"] = "wlosci",
   }
   exp:start(self.conf)
 end
@@ -32,6 +50,7 @@ function path:ketonyStart()
                 "e", "e", "e", "n", "n", "e"},
     ["enemy"] = {"Korowy keton", "Drzewiec", "Mlody keton"},
     ["buff"] = "exp",
+    ["ident"] = "ketony",
   }
   exp:start(self.conf)
 end

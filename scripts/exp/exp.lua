@@ -9,6 +9,7 @@ exp.members = {}
 exp.heal = {}
 exp.heal.proc = 5
 exp.heal.spell = "cure serious"
+exp.heal.reverse = true
 
 function exp:start(conf)
   self.conf = conf
@@ -17,6 +18,8 @@ function exp:start(conf)
     self.step = 1
     self.path = self.conf.path
     self.members = self:getMembers()
+    opener:setByName(self.conf.ident)
+    state:orderTeam("opener "..self.conf.ident)
     self:speedwalk()
   end
 end
@@ -92,8 +95,8 @@ function exp:doThings()
       self.paused = false
     else
       -- rest
-      state:orderTeam("rest;medi")
-      send("rest;medi")
+      state:orderTeam("rest;recup;medi")
+      send("rest;recup;medi")
     end
   end
 end
@@ -149,13 +152,16 @@ end)
 scripts.events["exp.gmcpRoomPeople"] = registerAnonymousEventHandler("gmcp.Room.People", function(event, arg)
   if exp.going then
     local now = exp:getMembers()
-
+    local sub = profile:get("sub")
     for name, member in pairs(now) do
       -- jesli zycie mniejsze od poprzedniego
       if now[name].hp < exp.members[name].hp then
         -- jesli osiagnelo dany prog zycia
         if now[name].hp == exp.heal.proc then
           -- cast heala
+          if exp.heal.reverse then
+            send("order "..sub.." x '"..exp.heal.spell.."' "..name)
+          end
           send("c '"..exp.heal.spell.."' "..name)
         end
       end
