@@ -3177,6 +3177,13 @@
     "roomVnum": "2521",
     "skills": [
       {
+        "min": 0,
+        "name": "claws mastery",
+        "max": 10,
+        "reqSkill": 0,
+        "price": 0
+      },
+      {
         "min": 40,
         "name": "staff",
         "max": 95,
@@ -3217,13 +3224,6 @@
         "max": 95,
         "reqSkill": 45,
         "price": 50
-      },
-      {
-        "min": 45,
-        "name": "shapeshift",
-        "max": 95,
-        "reqSkill": 55,
-        "price": 90
       },
       {
         "min": 40,
@@ -13130,6 +13130,27 @@
     "skills": [
       {
         "min": 0,
+        "name": "wolf form",
+        "max": 10,
+        "reqSkill": 0,
+        "price": 0
+      },
+      {
+        "min": 0,
+        "name": "bear form",
+        "max": 10,
+        "reqSkill": 0,
+        "price": 0
+      },
+      {
+        "min": 0,
+        "name": "panther form",
+        "max": 10,
+        "reqSkill": 0,
+        "price": 0
+      },
+      {
+        "min": 0,
         "name": "mace",
         "max": 10,
         "reqSkill": 0,
@@ -13141,13 +13162,6 @@
         "max": 40,
         "reqSkill": 0,
         "price": 0
-      },
-      {
-        "min": 20,
-        "name": "shapeshift",
-        "max": 60,
-        "reqSkill": 35,
-        "price": 90
       },
       {
         "min": 40,

@@ -50,7 +50,7 @@ function path:ketonyStart()
                 "e", "e", "e", "n", "n", "e"},
     ["enemy"] = {"Korowy keton", "Drzewiec", "Mlody keton"},
     ["buff"] = "exp",
-    ["ident"] = "ketony",
+    ["ident"] = "fort",
   }
   exp:start(self.conf)
 end

@@ -25,6 +25,19 @@
         "target": "TAR_IGNORE"
     },
     {
+        "name": "claw-weapons",
+        "info": "Umiejetnosc, dzieki ktorej mozna poslugiwac sie szponami.",
+        "note": 0,
+        "class": [
+            [
+                "dru",
+                1
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
         "name": "dagger",
         "info": "Umiejetnosc, dzieki ktorej mozna sie poslugiwac sztyletami.",
         "note": 0,
@@ -206,6 +219,10 @@
             [
                 "cza",
                 1
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": 0,
@@ -235,6 +252,10 @@
             [
                 "cza",
                 1
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": 0,
@@ -259,6 +280,10 @@
             ],
             [
                 "cza",
+                1
+            ],
+            [
+                "nom",
                 1
             ]
         ],
@@ -328,6 +353,10 @@
             [
                 "cza",
                 14
+            ],
+            [
+                "nom",
+                18
             ]
         ],
         "school": 0,
@@ -340,7 +369,11 @@
         "class": [
             [
                 "zlo",
-                10
+                8
+            ],
+            [
+                "nom",
+                8
             ]
         ],
         "school": 0,
@@ -358,6 +391,10 @@
             [
                 "cza",
                 14
+            ],
+            [
+                "nom",
+                16
             ]
         ],
         "school": 0,
@@ -383,6 +420,10 @@
             [
                 "cza",
                 1
+            ],
+            [
+                "nom",
+                6
             ]
         ],
         "school": 0,
@@ -404,6 +445,10 @@
             [
                 "cza",
                 13
+            ],
+            [
+                "nom",
+                16
             ]
         ],
         "school": 0,
@@ -438,6 +483,10 @@
             [
                 "zlo",
                 8
+            ],
+            [
+                "nom",
+                12
             ]
         ],
         "school": 0,
@@ -464,6 +513,10 @@
             [
                 "zlo",
                 1
+            ],
+            [
+                "nom",
+                6
             ]
         ],
         "school": 0,
@@ -490,6 +543,10 @@
             [
                 "zlo",
                 1
+            ],
+            [
+                "nom",
+                20
             ]
         ],
         "school": 0,
@@ -520,6 +577,10 @@
             [
                 "pal",
                 13
+            ],
+            [
+                "nom",
+                15
             ]
         ],
         "school": 0,
@@ -532,6 +593,10 @@
         "class": [
             [
                 "zlo",
+                1
+            ],
+            [
+                "nom",
                 1
             ]
         ],
@@ -546,6 +611,10 @@
             [
                 "zlo",
                 1
+            ],
+            [
+                "nom",
+                8
             ]
         ],
         "school": 0,
@@ -559,6 +628,10 @@
             [
                 "zlo",
                 1
+            ],
+            [
+                "nom",
+                4
             ]
         ],
         "school": 0,
@@ -571,7 +644,7 @@
         "class": [
             [
                 "zlo",
-                20
+                15
             ]
         ],
         "school": 0,
@@ -684,6 +757,10 @@
             [
                 "cza",
                 1
+            ],
+            [
+                "nom",
+                1
             ]
         ],
         "school": 0,
@@ -697,6 +774,10 @@
             [
                 "bar",
                 8
+            ],
+            [
+                "nom",
+                8
             ]
         ],
         "school": 0,
@@ -709,6 +790,10 @@
         "class": [
             [
                 "bar",
+                8
+            ],
+            [
+                "nom",
                 8
             ]
         ],
@@ -761,6 +846,14 @@
             [
                 "pal",
                 12
+            ],
+            [
+                "zlo",
+                3
+            ],
+            [
+                "nom",
+                3
             ]
         ],
         "school": 0,
@@ -818,7 +911,7 @@
         "target": "TAR_IGNORE"
     },
     {
-        "name": "disarm traps",
+        "name": "traps disarm",
         "info": "Umiejetnosc pozwalajaca rozbrajac pulapki.",
         "note": 0,
         "class": [
@@ -841,6 +934,10 @@
             ],
             [
                 "pal",
+                12
+            ],
+            [
+                "nom",
                 12
             ]
         ],
@@ -889,6 +986,10 @@
             [
                 "woj",
                 20
+            ],
+            [
+                "nom",
+                20
             ]
         ],
         "school": 0,
@@ -928,6 +1029,10 @@
             [
                 "bar",
                 12
+            ],
+            [
+                "nom",
+                16
             ]
         ],
         "school": 0,
@@ -1056,6 +1161,10 @@
             [
                 "cza",
                 20
+            ],
+            [
+                "nom",
+                20
             ]
         ],
         "school": 0,
@@ -1103,6 +1212,10 @@
             [
                 "woj",
                 20
+            ],
+            [
+                "nom",
+                20
             ]
         ],
         "school": 0,
@@ -1145,6 +1258,10 @@
         "class": [
             [
                 "woj",
+                20
+            ],
+            [
+                "nom",
                 20
             ]
         ],
@@ -1275,6 +1392,10 @@
             [
                 "cza",
                 2
+            ],
+            [
+                "nom",
+                11
             ]
         ],
         "school": 0,
@@ -1288,6 +1409,10 @@
             [
                 "cza",
                 5
+            ],
+            [
+                "nom",
+                9
             ]
         ],
         "school": 0,
@@ -1365,11 +1490,15 @@
     {
         "name": "first aid",
         "info": "Kleryk uzywajac tej umiejetnosci moze probowac uleczyc najswiezsze rany odniesione przez postac w czasie ostatniej walki.",
-        "note": 0,
+        "note": "aid <cel>.",
         "class": [
             [
                 "kle",
                 1
+            ],
+            [
+                "nom",
+                11
             ]
         ],
         "school": 0,
@@ -1467,6 +1596,10 @@
             [
                 "woj",
                 25
+            ],
+            [
+                "nom",
+                25
             ]
         ],
         "school": 0,
@@ -1493,6 +1626,10 @@
             [
                 "woj",
                 31
+            ],
+            [
+                "pal",
+                31
             ]
         ],
         "school": 0,
@@ -1505,6 +1642,10 @@
         "class": [
             [
                 "woj",
+                31
+            ],
+            [
+                "pal",
                 31
             ]
         ],
@@ -1691,5 +1832,369 @@
         ],
         "school": 0,
         "target": "TAR_IGNORE"
+    },
+    {
+        "name": "bear form",
+        "info": "Przemiana w niedzwiedzia. Udostepnia nowe umiejetnosci: rage roar, trampling, lethargy. Dzieki przemianie druid uzyskuje o wiele wieksza odpornosc na ciosy i magie, zwieksza sie jego sila i kondycja kosztem zrecznosci.",
+        "note": 0,
+        "class": [
+            [
+                "dru",
+                12
+            ]
+        ],
+        "school": "Czarowanie umozliwia tatuaz zmiennoksztaltny.",
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "panther form",
+        "info": "Przemiana w pantere. Udostepnia nowe umiejetnosci: lurk, ambush, dismember. Dzieki przemianie druid staje sie bardziej zreczny, zwieksza sie takze jego sila i kondycja.",
+        "note": "Czarowanie umozliwia tatuaz zmiennoksztaltny.",
+        "class": [
+            [
+                "dru",
+                12
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "wolf form",
+        "info": "Przemiana w wilka. Udostepnia nowe umiejetnosci: terrible howling, howling, wolves assalut. Dzieki przemianie druid staje sie bardziej inteligetny.",
+        "note": "Czarowanie umozliwia tatuaz zmiennoksztaltny.",
+        "class": [
+            [
+                "dru",
+                12
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "rage roar",
+        "info": "Dzieki przerazliwemu ryczeniu, niedzwiedz potrafi skupic uwage wszystkich przeciwnikow na sobie.",
+        "note": "Mass resuce.",
+        "class": [
+            [
+                "dru",
+                12
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_DEFENSIVE"
+    },
+    {
+        "name": "trampling",
+        "info": "Niedzwiedz pedzi w kierunku celu tratujac wszystkich walczacych przeciwnikow po drodze.",
+        "note": "Tylko glowny cel jak rozpoczyna walke.",
+        "class": [
+            [
+                "dru",
+                12
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "lethargy",
+        "info": "Niedzwiedz wpada w gleboki sen. Po wybudzeniu sie, jest w pelni zdrowia oraz sil mentalnych.",
+        "note": 0,
+        "class": [
+            [
+                "dru",
+                12
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "lurk",
+        "info": "Pantera kryje sie w cieniu, aby zaatakowac nieswiadoma ofiare.",
+        "note": 0,
+        "class": [
+            [
+                "dru",
+                12
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "ambush",
+        "info": "Pantera, skryta w cieniu, potrafi zaskoczyc ofiare, zadajac powazne obrazenia.",
+        "note": 0,
+        "class": [
+            [
+                "dru",
+                12
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "dismember",
+        "info": "Potezny atak pantery, rozszarpujacy cialo ofiary.",
+        "note": 0,
+        "class": [
+            [
+                "dru",
+                12
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "terrible howling",
+        "info": "Oslabia bojowe mozliwosci przeciwnika oraz potrafi przerazic ofiare.",
+        "note": "-hit, -dam, -ac",
+        "class": [
+            [
+                "dru",
+                12
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_DEFENSIVE"
+    },
+    {
+        "name": "howling",
+        "info": "Wzmacnia bojowy zapal wilka i druzyny.",
+        "note": "+hit, +dam",
+        "class": [
+            [
+                "dru",
+                12
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "wolves assalut",
+        "info": "Przyzwanie widmowej watahy, duchow poleglych wilkow, ktorzy rzucaja sie na przeciwnika, po czym rozplywaja sie na wietrze.",
+        "note": "100% hit, kontruje blink, mirror, ethereal body.",
+        "class": [
+            [
+                "dru",
+                12
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "claws mastery",
+        "info": "Specjalizacja wladania szponami - zwieksza precyzje i zadawane obrazenia.",
+        "note": "109+, komponent beast claws.",
+        "class": [
+            [
+                "dru",
+                20
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "advance claws mastery",
+        "info": "Przy odpowiednim stopniu wyszkolenia, dodaje do szponow dodatkowe wlasciwosci: ataki zywiolami, obrone przed elementalnymi tarczami oraz ostrosc szponow.",
+        "note": "109+, komponent beast claws.",
+        "class": [
+            [
+                "dru",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "nature ally mastery",
+        "info": "Wzmacnia i pozwala przywolac wieksza ilosc towarzyszy.",
+        "note": "91% +1 do max summonow.",
+        "class": [
+            [
+                "dru",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "transformation mastery",
+        "info": "Wzmacnia przemiany druida.",
+        "note": 0,
+        "class": [
+            [
+                "dru",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "holy mastery",
+        "info": "Umiejetnosc pozwala rozpoznac zle oraz nieumarle istoty. Rozswietla pomieszczenie, a przy odpowiednim opanowaniu paladyn widzi wszystko nawet w magicznej ciemnosci. Dzieki emanujacej od niego aurze swietosci wszystkie zle istoty zostaja oslabione, a dobre wzmocnione.",
+        "note": "Odpornosci przed negative.",
+        "class": [
+            [
+                "pal",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "turn mastery",
+        "info": "Mistrzowie w odpedzaniu nieumarlych, dzieki dlugotrwalemu szkoleniu, potrafia znacznie czesciej korzystac z umiejetnosci turn undead, a takze zadaja potezniejsze obrazenia istotom nieumarlym.",
+        "note": 0,
+        "class": [
+            [
+                "pal",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "unity with familiar",
+        "info": "Umiejetnosc powiazana z czarem astral search. Magowie, przywolujac istoty z astralnego planu, staja sie w tym coraz lepsi. Mistrzowie tej sztuki potrafia nie tylko przywolac potezne chowance, ale takze sprawic, by ich moc stopniowo wzrastala.",
+        "note": "Komenda: familiar.",
+        "class": [
+            [
+                "mag",
+                13
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "fire mastery",
+        "info": "Umiejetnosc wzmacnia zaklecia oraz zmniejsza odpornosc przeciwnika na wybrany typ zywiolu. Dodatkowo nakladany jest efekt powiazany z danym zywiolem. Efekt ognia to podpalenie ofiary.",
+        "note": 0,
+        "class": [
+            [
+                "mag",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "cold mastery",
+        "info": "Umiejetnosc wzmacnia zaklecia oraz zmniejsza odpornosc przeciwnika na wybrany typ zywiolu. Dodatkowo nakladany jest efekt powiazany z danym zywiolem. Efekt zimna to szansa na zamrozenie.",
+        "note": 0,
+        "class": [
+            [
+                "mag",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "lighting mastery",
+        "info": "Umiejetnosc wzmacnia zaklecia oraz zmniejsza odpornosc przeciwnika na wybrany typ zywiolu. Dodatkowo nakladany jest efekt powiazany z danym zywiolem. Efekt blyskawic to szansa na wywrocenie przeciwnika.",
+        "note": 0,
+        "class": [
+            [
+                "mag",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "acid mastery",
+        "info": "Umiejetnosc wzmacnia zaklecia oraz zmniejsza odpornosc przeciwnika na wybrany typ zywiolu. Dodatkowo nakladany jest efekt powiazany z danym zywiolem. Efekt kwasu to zwiekszone obrazenia od czarow.",
+        "note": 0,
+        "class": [
+            [
+                "mag",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "entropy mastery",
+        "info": "Umiejetnosc wzmacnia zaklecia oraz zmniejsza odpornosc przeciwnika na energie negatywna.",
+        "note": 0,
+        "class": [
+            [
+                "mag",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "desert bond",
+        "info": "Nomadzi przystosowali sie do trudow zycia na pustyni i potrafia o wiele lepiej niz inni obyc sie bez wody, a ich regeneracja w warunkach pustynnych jest szybsza.",
+        "note": 0,
+        "class": [
+            [
+                "nom",
+                1
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "bladedance",
+        "info": "Styl walki pustynnych wojownikow, w ktorym nomad porusza sie niczym wiatr. Skupia sie glownie na obronie, przez co rosnie skutecznosc unikania i parowania, ale maleje sila i liczba atakow. Aby wykonac taniec, nomad musi trzymac bronie w obu rekach.",
+        "note": 0,
+        "class": [
+            [
+                "nom",
+                9
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "onehand weapon mastery",
+        "info": "Umozliwia nomadowi mistrzowskie poslugiwanie sie bronia jednoreczna: wlocznie, miecze, bicze i sztylety.",
+        "note": 0,
+        "class": [
+            [
+                "nom",
+                20
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "bladefury",
+        "info": "Nomad atakuje szybciej i celniej, zwiekszajac liczbe ciosow oraz szanse na trafienie krytyczne. Ciosy sa trudne do zablokowania i unikniecia. Styl wymaga broni w obu rekach. W czasie jego trwania skutecznosc unikow i parowania spada.",
+        "note": 0,
+        "class": [
+            [
+                "nom",
+                25
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
     }
 ]

@@ -9,25 +9,8 @@ base.spellDictionaryFull = {}
 base.skillDictionaryFull = {}
 base.spellClass = {}
 base.skillClass = {}
---[[
 
-3. Wprowadzono nowe umiejętności ( skile dostępne tylko dla magów na 31 levelu ) (nauczyć się można wcześniej ale używać dopiero na 31) - dostępne tylko z ksiąg ze skilami.
-- fire mastery
-- cold mastery
-- acid mastery
-- lighting mastery
-
-Dana masterka szkoli się podczas używania speli ofensywnych z danego żywiołu.
-Jak masterka się odpali nakłada na przeciwnika czasowy affekt.
-- zmiejsza odporność przeciwnika na dany żywioł (wartość zależna od poziomu masterki)
-- co runde mob otrzymuje dodatkowe obrażenia od danego affektu.
-- rzucając czar z tego samego żywiołu co mob otrzymal affect mamy szansę ( zależy od masterki) na wzrost obrażeń danego spella + bonus zależnie od zywiołu
-(ogien - mocniejsze obrazenia, zimno - szansa na zamrozenie, pioruny - szansa na porażenie i wywrotkę, kwas - mocniejsze obrazenia ).
-
-Można posiadać wiele masterek i rzucając czary różnych żywiołów można na przeciwnika nałożyć affecty ze wszystkich masterek.
-
-
-]]--
+--TODO SKILLS klecha, zlodziej i masterki do klechy, nomada i zlodzieja
 
 function base:targetToFancy(tar)
 	local out = {
@@ -54,6 +37,7 @@ function base:schoolToColor(school)
 		["Iluzje"] = "cyan",
 		["Inwokacje"] = "red",
 		["Nekromancja"] = "dim_grey",
+		["Brak"] = "white",
 	}
 	return out[school]
 end
@@ -198,8 +182,15 @@ function base:help(name)
 				out.meta = self.spellDictionaryFull[first][name]
 				local arr = {}
 				out.meta.additional = {}
-				out.meta.len = string.len(out.meta.school[1])+1
-				table.insert(arr, {self:schoolToColor(out.meta.school[1]), out.meta.school[1], ""})
+				local schol = ""
+				if type(out.meta.school) == "table" then
+					out.meta.len = string.len(out.meta.school[1])+1
+					school = out.meta.school[1]
+				else
+					out.meta.len = 5
+					school = "Brak"
+				end
+				table.insert(arr, {self:schoolToColor(school), school, ""})
 				table.insert(arr, {"white", self:targetToFancy(out.meta.target), ""})
 				table.insert(out.meta.additional, arr)
 				found = true

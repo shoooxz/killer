@@ -1,5 +1,5 @@
 opener = opener or {}
-
+-- BAZA JEST UPOSLEDZONA, NIE DZIALA NA DWA PROFILE, TRZEBA OTWIERAC I ZAMYKAC
 function opener:open()
   return db:create("opener", {
       opener = {
