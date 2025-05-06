@@ -11099,6 +11099,13 @@
     "roomVnum": "1971",
     "skills": [
       {
+        "min": 0,
+        "name": "bladesplash",
+        "max": 40,
+        "reqSkill": 0,
+        "price": 0
+      },
+      {
         "min": 55,
         "name": "backstab",
         "max": 70,

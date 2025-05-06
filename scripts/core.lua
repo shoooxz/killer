@@ -93,15 +93,15 @@ function scripts:onEnemyKilled(str)
 		self.dead.gem = true
 	end
 	if self.dead.gem then
-		send("get all.klej "..self.dead.loot)
+		--send("get all.klej "..self.dead.loot)
 	end
 	if self.dead.gold then
-		send("get mon "..self.dead.loot)
+		--send("get mon "..self.dead.loot)
 	end
 	if self.dead.loot == "" then
-		send("look")
+		--send("look")
 	else
-		send("exam "..self.dead.loot)
+		--send("exam "..self.dead.loot)
 	end
 	raiseEvent("onEnemyKilled", self.dead)
 end

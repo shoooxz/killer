@@ -1,4 +1,53 @@
 inventory = inventory or {}
+inventory.lootContainer  = "cialo"
+inventory.lootEnd = 1
+inventory.lootCount = 1
+inventory.lootBody = "cialo"
+
+function inventory:tryLoot(count, body)
+  self.lootCount = 1
+  self.lootEnd = count
+  self.lootBody = body
+  self.lootContainer = body
+  send("exam "..self.lootContainer)
+end
+
+function inventory:lootDone()
+  setTriggerStayOpen("LOOT", 0)
+  self.lootCount = self.lootCount+1
+  if self.lootCount > self.lootEnd then
+    display("LOOT END")
+    raiseEvent("onBodyLooted")
+  else
+    self.lootContainer = self.lootCount.."."..self.lootBody
+    send("exam "..self.lootContainer)
+  end
+end
+
+
+function inventory:loot(name)
+  local get = {
+    "dzielo",
+    "cymelium",
+    "tom",
+    "inkunabul",
+    "wolumen",
+    "wolumin",
+    "folial",
+    "foliant",
+    "papirus",
+    "rekopis",
+    "ksiega",
+    "ksiazka",
+    "fiolka",
+    "zwoj",
+  }
+  for i=1, #get do
+    if string.find(name, get[i]) then
+      send("get "..get[i].." "..self.lootContainer)
+    end
+  end
+end
 
 function inventory:eat()
   local food = profile:get("food")

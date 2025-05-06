@@ -369,7 +369,7 @@
         "class": [
             [
                 "zlo",
-                8
+                10
             ],
             [
                 "nom",
@@ -849,7 +849,7 @@
             ],
             [
                 "zlo",
-                3
+                8
             ],
             [
                 "nom",
@@ -900,7 +900,7 @@
     {
         "name": "detect traps",
         "info": "Umiejetnosc pozwalajaca wykrywac pulapki.",
-        "note": 0,
+        "note": "trap search <obiekt>",
         "class": [
             [
                 "zlo",
@@ -913,7 +913,7 @@
     {
         "name": "traps disarm",
         "info": "Umiejetnosc pozwalajaca rozbrajac pulapki.",
-        "note": 0,
+        "note": "trap disarm <obiekt>",
         "class": [
             [
                 "zlo",
@@ -1215,6 +1215,10 @@
             ],
             [
                 "nom",
+                20
+            ],
+            [
+                "zlo",
                 20
             ]
         ],
@@ -1647,6 +1651,10 @@
             [
                 "pal",
                 31
+            ],
+            [
+                "nom",
+                31
             ]
         ],
         "school": 0,
@@ -1689,6 +1697,10 @@
         "class": [
             [
                 "woj",
+                31
+            ],
+            [
+                "nom",
                 31
             ]
         ],
@@ -2062,6 +2074,10 @@
             [
                 "pal",
                 31
+            ],
+            [
+                "kle",
+                31
             ]
         ],
         "school": 0,
@@ -2134,8 +2150,8 @@
     },
     {
         "name": "entropy mastery",
-        "info": "Umiejetnosc wzmacnia zaklecia oraz zmniejsza odpornosc przeciwnika na energie negatywna.",
-        "note": 0,
+        "info": "Umiejetnosc wzmacnia zaklecia oraz zmniejsza odpornosc przeciwnika na ciosy bronia.",
+        "note": "Redukcja slash, bash, pierce.",
         "class": [
             [
                 "mag",
@@ -2196,5 +2212,126 @@
         ],
         "school": 0,
         "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "loth prayer",
+        "info": "Drowie kaplanki, dzieki modlitwie do Loth, moga otrzymac jej blogoslawienstwo, co pozwala im korzystac z magii w celu dreczenia ofiar. Bez modlitwy sa bezsilne i nie moga uzywac zadnych zaklec poza leczniczymi.",
+        "note": "Mocny+ do zaklec ofensywnych.",
+        "class": [
+            [
+                "kle",
+                1
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_SELF"
+    },
+    {
+        "name": "healing touch",
+        "info": "Kaplani, poza walka, potrafia przywolac swieta moc, sprawiajac, ze przez ich dlonie przeplywa leczniczy strumien energii. Proces ten trwa chwile, uzdrawia rannego, po czym rytual dobiega konca.",
+        "note": 0,
+        "class": [
+            [
+                "kle",
+                18
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_DEFENSIVE"
+    },
+    {
+        "name": "alacrity mastery",
+        "info": "Kaplani, uzywajac swoich zaklec, z czasem staja sie coraz lepsi w ich stosowaniu i potrafia wymawiac je znacznie szybciej.",
+        "note": 0,
+        "class": [
+            [
+                "kle",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "bladesplash",
+        "info": "Zlodziej, uzywajac specjalnego przedmiotu, ostrzy zatykanych za pas, moze rzucac nimi w przeciwnika, zadajac obrazenia zalezne od ich jakosci. Wersja magiczna tych ostrzy nie wyczerpuje sie, dzieki czemu moga byc uzywane wielokrotnie.",
+        "note": 0,
+        "class": [
+            [
+                "zlo",
+                25
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_CHAR_OFFENSIVE"
+    },
+    {
+        "name": "backstab mastery",
+        "info": "Umiejetnosc ta zmniejsza czas potrzebny do wykonania backstab i circle, a takze wzmacnia dzialanie obu tych technik.",
+        "note": 0,
+        "class": [
+            [
+                "zlo",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "steal mastery",
+        "info": "Umiejetnosc ta pozwala na kradziez wszelkich dostepnych przedmiotow od ofiary.",
+        "note": 0,
+        "class": [
+            [
+                "zlo",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "dodge mastery",
+        "info": "W zaleznosci od poziomu wytrenowania umiejetnosci, podczas uzycia dodge istnieje szansa na unikniecie zaklec. Na skutecznosc dodge mastery wplywa szybkosc postaci.",
+        "note": "Speed ze score zwieksza szanse.",
+        "class": [
+            [
+                "zlo",
+                31
+            ],
+            [
+                "nom",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "bladesplash mastery",
+        "info": "Umiejetnosc wplywa na to, czy rzucimy nozem tylko w przeciwnika, z ktorym walczymy, czy tez trafimy kilku przeciwnikow naraz.",
+        "note": 0,
+        "class": [
+            [
+                "zlo",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
+    },
+    {
+        "name": "hustle mastery",
+        "info": "Pozwala przy mistrzowskim opanowaniu calkowicie wycofac sie z walki i ukryc, przenoszac uwage wroga na inna osobe.",
+        "note": 0,
+        "class": [
+            [
+                "nom",
+                31
+            ]
+        ],
+        "school": 0,
+        "target": "TAR_IGNORE"
     }
 ]

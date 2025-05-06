@@ -10,6 +10,7 @@ exp.heal = {}
 exp.heal.proc = 5
 exp.heal.spell = "cure serious"
 exp.heal.reverse = true
+exp.deadCount = 0
 
 function exp:start(conf)
   self.conf = conf
@@ -39,6 +40,7 @@ function exp:speedwalk()
       if self.going and not self.paused then
           self.paused = true
           self.num = self:move(self.path[self.step])
+          self.deadCount = 0
           self.step = self.step+1
           self:waitForNewRoom()
       end
@@ -92,12 +94,25 @@ function exp:doThings()
     -- jesli heal jest w memie
     if mem:canCast(self.heal.spell) then
       -- odpauzuj
-      self.paused = false
+      self:loot()
     else
       -- rest
       state:orderTeam("rest;recup;medi")
       send("rest;recup;medi")
     end
+  end
+end
+
+function exp:loot()
+  if self.deadCount > 0 then
+    if self.conf.loot == "gleba" then
+      send("look;get all")
+      self.paused = false
+    else
+      inventory:tryLoot(self.deadCount, self.conf.loot)
+    end
+  else
+    self.paused = false
   end
 end
 
@@ -139,12 +154,19 @@ function exp:onRestDone()
   if self.going then
     send("stand")
     state:orderTeam("stand")
-    self.paused = false
+    self:loot()
   end
 end
 
+scripts.events["exp.onBodyLooted"] = registerAnonymousEventHandler("onBodyLooted", function(event, arg)
+  if exp.going then
+    exp.paused = false
+  end
+end)
+
 scripts.events["exp.onEnemyKilled"] = registerAnonymousEventHandler("onEnemyKilled", function(event, arg)
   if exp.going then
+    exp.deadCount = exp.deadCount+1
     exp:doThings()
   end
 end)
@@ -170,23 +192,3 @@ scripts.events["exp.gmcpRoomPeople"] = registerAnonymousEventHandler("gmcp.Room.
     exp.members = now
   end
 end)
-
---[[
-{ {
-    hp = "żadnych śladów",
-    is_npc = false,
-    mem = 0,
-    mv = "wypoczęty",
-    name = "Zorath",
-    pos = "odpoczywa",
-    room = 42657
-  }, {
-    hp = "żadnych śladów",
-    is_npc = false,
-    mem = 0,
-    mv = "wypoczęty",
-    name = "Boren",
-    pos = "odpoczywa",
-    room = 42657
-  } }
-]]--

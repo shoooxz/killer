@@ -98,6 +98,7 @@ gag.spellTranslateFix = {
 	["HALD PERSON"] = "HOLD PERSON",
 	["IMMALATE"] = "IMMOLATE",
 	["HALY WEAPANS"] = "HOLY WEAPONS",
+	["DARKEISIAN"] = "DARKVISION",
 }
 
 function gag:spellTransGetPart(str)
