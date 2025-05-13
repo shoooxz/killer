@@ -49,7 +49,7 @@ footer.baseFunc = {
 	[6] = {
 		["name"] = "Dupa",
 		["func"] = function()
-			echo("Sraka")
+			--echo("Sraka")
 		end,
 		["style"] = ""
 	},

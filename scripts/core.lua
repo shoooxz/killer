@@ -17,6 +17,7 @@ function scripts:init()
 	mode:init()
 	state:init()
 	base:init()
+	boss:init()
 	setMainWindowSize(settings:get("mainWindowWidth"), settings:get("mainWindowHeight"))
 
 end
@@ -101,7 +102,9 @@ function scripts:onEnemyKilled(str)
 	if self.dead.loot == "" then
 		--send("look")
 	else
-		--send("exam "..self.dead.loot)
+		if not exp:isGoing() then
+			send("exam "..self.dead.loot)
+		end
 	end
 	raiseEvent("onEnemyKilled", self.dead)
 end

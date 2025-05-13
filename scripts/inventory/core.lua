@@ -16,7 +16,7 @@ function inventory:lootDone()
   setTriggerStayOpen("LOOT", 0)
   self.lootCount = self.lootCount+1
   if self.lootCount > self.lootEnd then
-    display("LOOT END")
+    --display("LOOT END")
     raiseEvent("onBodyLooted")
   else
     self.lootContainer = self.lootCount.."."..self.lootBody
@@ -24,12 +24,13 @@ function inventory:lootDone()
   end
 end
 
-
+-- dzielo|cymelium|tom|rycina|inkunabul|wolumen|wolumin|folial|foliant|papirus|rekopis|ksiega|ksiazka
 function inventory:loot(name)
   local get = {
     "dzielo",
     "cymelium",
     "tom",
+    "rycina",
     "inkunabul",
     "wolumen",
     "wolumin",
@@ -39,12 +40,23 @@ function inventory:loot(name)
     "rekopis",
     "ksiega",
     "ksiazka",
-    "fiolka",
+    "magiczna fiolka",
     "zwoj",
+    "%(pulsuje%)",
+    "gigantyczny",
+    "kamien mocy",
+    "klanowy",
+    "esencji zycia",
   }
+  -- (pulsuje)
   for i=1, #get do
     if string.find(name, get[i]) then
-      send("get "..get[i].." "..self.lootContainer)
+      if get[i] == "(pulsuje)" then
+        local item = utils:trim(string.gsub(name, "%(pulsuje%)", ""))
+        send("get '"..item.."' "..self.lootContainer)
+      else
+        send("get '"..get[i].."' "..self.lootContainer)
+      end
     end
   end
 end

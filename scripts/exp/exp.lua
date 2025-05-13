@@ -12,6 +12,10 @@ exp.heal.spell = "cure serious"
 exp.heal.reverse = true
 exp.deadCount = 0
 
+function exp:isGoing()
+  return self.going
+end
+
 function exp:start(conf)
   self.conf = conf
   if not self.going then
@@ -117,21 +121,13 @@ function exp:loot()
 end
 
 function exp:enemyExists()
-  local loc = self:getRoomPeople()
+  local loc = utils:getRoomPeople()
   for i=1, #self.conf.enemy do
     if utils:inArray2(self.conf.enemy[i], loc) then
       return self.conf.enemy[i]
     end
   end
   return false
-end
-
-function exp:getRoomPeople()
-  local out = {}
-  for i, p in pairs(gmcp.Room.People) do
-    table.insert(out, p.name)
-  end
-  return out
 end
 
 function exp:getMembers()

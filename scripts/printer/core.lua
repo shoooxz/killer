@@ -117,6 +117,22 @@ function printer:text(text, color)
 	end
 end
 
+function printer:tags(arr)
+	cecho("<"..self.borderColor..">|"..string.rep(" ", self.tabLength))
+	local len = 0
+	for i=1, #arr do
+		local value = arr[i]
+		len = len+string.len(value[2])
+		cechoLink("<u><"..value[1]..">"..value[2], value[3], "", true)
+		if i ~= #arr then
+			cecho("<white>, ")
+		end
+	end
+  local rep = self.length-self.tabLength-len-((#arr-1)*2)
+
+	cecho(string.rep(" ", rep).."<"..self.borderColor..">|\n")
+end
+
 function printer:textLine(line, color)
 	color = color or "white"
 	local len = self.length-string.len(line)-self.tabLength  -- 2 : i spacja

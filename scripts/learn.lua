@@ -123,3 +123,30 @@ function learn:onClick(max, skill, last)
     send("say Gotowe")
   end
 end
+
+function learn:env(state)
+  local sub = profile:get("sub")
+  if state == "1" then
+    send("order "..sub.." env 1")
+    learn:envStart()
+  else
+    send("order "..sub.." env 0")
+    learn:envStop()
+  end
+end
+
+function learn:envStart()
+  printer:success("Learn", "Timer envenom start!")
+  enableTimer("env")
+end
+
+function learn:envTick()
+  local mh = profile:get("mh")
+  local oh = profile:get("oh")
+  send("envenom "..mh.." jag; envenom "..oh.." jag")
+end
+
+function learn:envStop()
+  printer:error("Learn", "Timer anulowany!")
+  disableTimer("env")
+end

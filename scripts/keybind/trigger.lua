@@ -24,7 +24,7 @@ end
 -- WATER BIND
 function keybind:water(from)
 	if self.show then
-		echo("sraka")
+		--echo("sraka")
 		self.triggerCommand = "drink "..from
 		printer:bind(self.conf.keybindWater.modifier, self.conf.keybindWater.key, "napij sie")
 		self.show = false

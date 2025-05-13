@@ -4,6 +4,7 @@ function mapper:move(dir)
 	end]]--
 	keybind.show = true
 	self:walkerStop()
+	boss:timerStop()
 
 	-- BLOKUJ WYJSCIA  /blokuj /odblokuj
 	if utils:inArray2(dir, utils:split(getRoomUserData(self.room.id, "block"), "#")) then

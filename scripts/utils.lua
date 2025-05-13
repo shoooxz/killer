@@ -1,5 +1,21 @@
 utils = utils or {}
 
+function utils:getRoomPeople()
+  local out = {}
+  for i, p in pairs(gmcp.Room.People) do
+    table.insert(out, p.name)
+  end
+  return out
+end
+
+function utils:rArray(tablica)
+    local odwrocona = {}
+    for i = #tablica, 1, -1 do
+        table.insert(odwrocona, tablica[i])
+    end
+    return odwrocona
+end
+
 function utils:arrayMerge(tab1, tab2)
     local wynik = {}
     for i = 1, #tab1 do

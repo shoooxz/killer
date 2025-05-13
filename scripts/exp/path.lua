@@ -1,7 +1,14 @@
 path = path or {}
 path.conf = {}
 
-function path:start(what)
+function path:reverseDirection(path)
+  for i=1, #path do
+    path[i] = mapper.shortMirror[path[i]]
+  end
+  return path
+end
+
+function path:start(what, reverse)
   if what == "fort" then
     self:fortStart()
   end
@@ -18,7 +25,7 @@ function path:start(what)
     self:trzewiaStart()
   end
   if what == "ezuri" then
-    self:ezuriStart()
+    self:ezuriStart(reverse)
   end
   if what == "zboje" then
     self:zbojeStart()
@@ -28,6 +35,24 @@ function path:start(what)
   end
   if what == "czarny" then
     self:czarnyStart()
+  end
+  if what == "yugo" then
+    self:yugoStart(reverse)
+  end
+  if what == "barby" then
+    self:barbyStart()
+  end
+  if what == "centaury" then
+    self:centauryStart(reverse)
+  end
+  if what == "statek" then
+    self:statekStart(reverse)
+  end
+  if what == "lodowiec" then
+    self:lodowiecStart(reverse)
+  end
+  if what == "barbynk" then
+    self:barbynkStart()
   end
 end
 
@@ -104,7 +129,7 @@ function path:trzewiaStart()
   exp:start(self.conf)
 end
 
-function path:ezuriStart()
+function path:ezuriStart(reverse)
   self.conf = {
     ["path"] = {"e", "n", "u", "w", "u", "e", "n", "e", "u", "w", "s", "w", "u", "u", "n", "u", "e", "e", "s", "u", "u", "w", "n", "u"},
     ["enemy"] = {"Pomniejsza cienista istota"},
@@ -112,6 +137,9 @@ function path:ezuriStart()
     ["ident"] = "ezuri",
     ["loot"] = "gleba",
   }
+  if reverse then
+    self.conf.path = path:reverseDirection(utils:rArray(self.conf.path))
+  end
   exp:start(self.conf)
 end
 
@@ -146,6 +174,96 @@ function path:czarnyStart()
     ["enemy"] = {"Elitarny gwardzista", "Gwardzista", "Kat"},
     ["buff"] = "exp",
     ["ident"] = "czarny",
+    ["loot"] = "cialo",
+  }
+  exp:start(self.conf)
+end
+
+function path:yugoStart(reverse)
+  self.conf = {
+    ["path"] = {"n", "n", "n", "d", "d", "s", "s", "e", "e", "n", "n", "w", "s"},
+    ["enemy"] = {"Yugoloth", "Ogromny yugoloth"},
+    ["buff"] = "exp",
+    ["ident"] = "yugo",
+    ["loot"] = "cialo",
+  }
+  if reverse then
+    self.conf.path = path:reverseDirection(utils:rArray(self.conf.path))
+  end
+  exp:start(self.conf)
+end
+
+function path:barbyStart(reverse)
+  self.conf = {
+    ["path"] = {"n", "n", "szałas", "wyjście", "n", "szałas", "wyjście", "n", "e", "szałas", "wyjście", "n", "szałas", "wyjście", "n",
+                "n", "s", "w", "szałas", "wyjście", "w", "szałas", "wyjście", "w", "szałas", "wyjście", "n", "e", "n", "e", "szałas", "wyjście", "e", "szałas", "wyjście",
+                "w", "w", "n", "w", "w", "w", "s", "szałas", "wyjście", "s", "szałas", "wyjście", "s", "szałas", "wyjście", "e", "s", "s", "szałas", "wyjście",
+                "e", "s", "szałas", "wyjście", "e", "szałas", "wyjście", "e"},
+    ["enemy"] = {"Barbarzynska kobieta", "Barbarzynski chlopczyk", "Dziewczynka", "Stary barbarzynca", "Barczysty barbarzynca", "Chlopiec", "Mlody barbarzynca"},
+    ["buff"] = "exp",
+    ["ident"] = "barby",
+    ["loot"] = "cialo",
+  }
+  exp:start(self.conf)
+end
+
+
+function path:centauryStart(reverse)
+  self.conf = {
+    ["path"] = {"w", "n", "n", "w", "w", "n", "e", "e", "n", "w", "w", "n", "e", "e", "n", "w", "e", "n", "n", "e", "n", "e", "s", "s", "w", "s",
+                "s", "s", "s", "s", "s", "e", "n", "n", "n", "n", "n", "e", "e", "n", "n", "n", "n", "w", "s", "s", "s", "s",
+                "s", "s", "s", "s", "e", "s", "n", "n", "n", "n", "n", "n", "e", "s", "s", "s", "e", "n", "n", "n", "n", "s", "e", "e", "e", "e",
+                "n", "w", "n", "n", "w", "s", "s", "w", "s", "s", "s", "s", "s", "w", "s", "e", "e", "n", "e", "n", "w", "n", "e", "e", "n", "w", "w"},
+    ["enemy"] = {"Kobieta centaurow", "Mlody centaur", "Centaur wojownik", "Kaplanka centaurow", "Dziecko centaurow", "Centaur zwiadowca", "Lider centaurow", "Wojowniczka centaurow", "Kaplan centaurow", "Centaur druid"},
+    ["buff"] = "exp",
+    ["ident"] = "centaury",
+    ["loot"] = "cialo",
+  }
+  if reverse then
+    self.conf.path = path:reverseDirection(utils:rArray(self.conf.path))
+  end
+  exp:start(self.conf)
+end
+
+function path:statekStart(reverse)
+  self.conf = {
+    ["path"] = {"s", "s", "n", "w", "w", "n", "e", "w", "s", "s", "e", "w", "n", "w", "u", "n", "n", "e", "e", "e", "w", "n", "s", "w", "s", "w", "s",
+                "s", "w", "e", "e", "w", "s", "d", "e", "s", "e", "e", "n", "w", "e", "u", "n", "e", "s", "d", "e", "e", "n", "w"},
+    ["enemy"] = {"Duch wioslarza", "Duch barczystego marynarza", "Duch pierwszego oficera", "Duch kucharza", "Widmo Risatha"},
+    ["buff"] = "exp",
+    ["ident"] = "statek",
+    ["loot"] = "gleba",
+  }
+  if reverse then
+    self.conf.path = path:reverseDirection(utils:rArray(self.conf.path))
+  end
+  exp:start(self.conf)
+end
+
+function path:lodowiecStart(reverse)
+  self.conf = {
+    ["path"] = {"n", "n", "e", "w", "w", "n", "e", "n", "w", "n", "e", "n", "s", "e", "s", "s", "e", "n", "n", "e", "s", "e", "n", "n", "e", "s", "n", "e", "e", "e",
+                "n", "w", "w", "w", "w", "n", "e", "e", "e", "n", "e", "w", "w", "w", "w", "n", "w", "e", "e", "e", "e", "e", "e", "n", "w", "w", "w", "w", "w", "w",
+                "n", "n", "e", "s", "e", "e", "e", "n", "w", "w", "n", "e", "w", "n", "n", "n", "n", "e", "s", "s", "s", "e", "s", "e", "s", "e", "s"},
+    ["enemy"] = {"Śniezny robal", "Ogromny yeti", "Śniezne monstrum", "Śniezny potwor", "Lodowy golem"},
+    ["buff"] = "exp",
+    ["ident"] = "lodowiec",
+    ["loot"] = "cialo",
+  }
+  if reverse then
+    self.conf.path = path:reverseDirection(utils:rArray(self.conf.path))
+  end
+  exp:start(self.conf)
+end
+
+function path:barbynkStart()
+  self.conf = {
+    ["path"] = {"wyjście", "d", "s", "d", "s", "s", "s", "w", "w", "w", "n", "n", "n", "e", "e", "e", "n", "n", "n", "w", "w", "w", "w", "w", "w", "s", "s", "s",
+                "s", "s", "s", "e", "e", "e", "n", "barak", "wyjście", "chata", "wyjście", "n", "n", "w", "w", "e", "e", "n", "w", "e", "n", "barak", "wyjście",
+                "e", "barak"},
+    ["enemy"] = {"Wartownik barbarzynca", "Barbarzynska kobieta", "Stary barbarzynca"},
+    ["buff"] = "exp",
+    ["ident"] = "barbynk",
     ["loot"] = "cialo",
   }
   exp:start(self.conf)
