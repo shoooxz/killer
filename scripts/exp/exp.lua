@@ -11,6 +11,7 @@ exp.heal.proc = 5
 exp.heal.spell = "cure serious"
 exp.heal.reverse = true
 exp.deadCount = 0
+exp.tankSub = true
 
 function exp:isGoing()
   return self.going
@@ -93,7 +94,11 @@ function exp:doThings()
   if enemy then
     -- order sub kill
     -- assist leci z automatu
-    state:orderKill(enemy)()
+    if self.tankSub then
+      state:orderKill(enemy)()
+    else
+      state:meKill(enemy)()
+    end
   else
     -- jesli heal jest w memie
     if mem:canCast(self.heal.spell) then

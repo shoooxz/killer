@@ -86,8 +86,6 @@ function state:gmcpRoomPeople()
     if not mapper then return false end
     if not gmcp then return false end
     mapper:detectGMCP()
-    top:setTime(gmcp.Mud)
-    top:setCondition(gmcp.Char.Condition)
 
     ls:clear()
     state.team = {}
@@ -194,7 +192,12 @@ function state:gmcpRoomPeople()
       state:printNeutral(v)
     end
 
+    -- USTAW TOP CO TICK
+    top:setTime(gmcp.Mud)
+    top:setCondition(gmcp.Char.Condition)
+    top:setAffects(gmcp.Char.Affects)
   end
+
 end
 
   -- jesli ja nie walcze a ktos z teamu zwiazany jest walka
@@ -359,51 +362,3 @@ function state:twoSpaceNumber(i)
     return i
   end
 end
-
-
---[[
-},
-People = { {
-    enemy = "Giraz ogrodnik",
-    is_fighting = true,
-    name = "Meier"
-  }, {
-    enemy = "   ",
-    is_fighting = false,
-    name = "Krasnoludzkie dziecko"
-  }, {
-    enemy = "Meier",
-    is_fighting = true,
-    name = "Giraz ogrodnik"
-  }, {
-    enemy = "   ",
-    is_fighting = false,
-    name = "Krasnoludzkie dziecko"
-  } }
-]]--
-  --echo(gmcp.Room.People[1].name)
-
---[[
-
-Group = {
-  leader = "Meier",
-  members = { {
-      hp = "żadnych śladów",
-      is_npc = false,
-      mem = 0,
-      mv = "wypoczęty",
-      name = "Meier",
-      pos = "stoi",
-      room = 109
-    }, {
-      hp = "żadnych śladów",
-      is_npc = false,
-      mem = 0,
-      mv = "wypoczęty",
-      name = "Link",
-      pos = "stoi",
-      room = 109
-    } }
-},
-
-]]

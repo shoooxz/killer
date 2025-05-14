@@ -8,7 +8,7 @@ buff.db = db:create("buff", {
         _index = { "name" },
 		    _violations = "IGNORE",
     }
-})
+}) 
 -- zjawa w domku ressist frost
 -- basic
 buff.basic = {

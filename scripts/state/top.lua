@@ -3,6 +3,25 @@ top.height = 100
 top.overlay = {}
 top.container = {}
 top.buttons = {}
+top.aff = {}
+top.affWidth = 200
+top.affHeight = 22
+top.affChildren = {}
+top.affToColor = {
+  ["wardance"] = "cyan",
+  ["berserk"] = "cyan",
+  ["bladedance"] = "cyan",
+  ["bladefury"] = "cyan",
+  ["continual light"] = "yellow",
+  ["light"] = "yellow",
+  ["desert light"] = "yellow",
+  ["spiritual light"] = "yellow",
+  ["firefly swarm"] = "yellow",
+  ["darkvision"] = "yellow",
+  ["sneak"] = "dim_grey",
+  ["hide"] = "dim_grey",
+}
+top.affToRemove = {}
 
 function top:init()
   self.height = settings:applyDpiScaling(self.height)
@@ -27,6 +46,15 @@ function top:init()
     ]]
   self:createConditionLabels("ConTop", self:getConTop(), 0, buttonStyle)
   self:createConditionLabels("ConBot", self:getConBot(), "50%", buttonStyle)
+  self.aff = Geyser.Label:new({
+	  name = "Top.Aff",
+	  x = self.width-self.affWidth-20, y = self.height+5,
+	  width = self.affWidth,
+	  height = 10,
+	})
+  self.aff:setStyleSheet([[
+    background-color: black;
+  ]])
 
 end
 
@@ -130,23 +158,6 @@ function top:setTime(mud)
   if mud then
     local time = mud.TimeInfo
     local weather = mud.Weather or {}
-  --[[
-
-  Wymawiasz slowa, 'astral search'.
-
-  Znowu mozesz przeszukiwac plany astralne
-
-  TimeInfo = {
-  day = 20,
-  dayname = "Przyjaciół",
-  era = "Pierwsza Era Magicznych Portali",
-  month = "Wielkiego Zła",
-  time = 5,
-  timename = "godzina piąta",
-  year = 70
-
-
-  ]]
 
     self.time:cecho("<center><white>Godzina: <gold>"..time.time.."    <white>Dzien: "..time.day.." ("..utils:replacePolish(time.dayname)..") ")
 
@@ -221,18 +232,6 @@ function top:createConditionLabels(name, data, y, style)
 	end
 end
 
---[[
-Condition = {
-  bleed = false,
-  bleedingWound = false,
-  drunk = false,
-  hungry = false,
-  overweight = false,
-  sleepy = false,
-  thirsty = false
-},
-
-]]--
 function top:getConTop()
   return {
     {["name"] = "Krwawienie"},
@@ -254,39 +253,73 @@ function top:getConBot()
 end
 
 --[[
-gmcp.Mud
 
-{
-TimeInfo = {
-day = 20,
-dayname = "Przyjaciół",
-era = "Pierwsza Era Magicznych Portali",
-month = "Wielkiego Zła",
-time = 5,
-timename = "godzina piąta",
-year = 70
-},
-Weather = {
-sky = "deszczowe",
-wind = "wieje lekko ciepły, południowy wiatr"
-}
-}
+{ {
+    desc = "Możesz widzieć w ciemnościach",
+    ending = false,
+    extraValue = <userdata 1>,
+    name = "desert light",
+    negative = false
+  } }
 
+]]--
 
+function top:setAffects(aff)
+  self:affClear()
+  self.aff:resize(self.affWidth, #aff*self.affHeight)
+  local name = ""
+  for i = 1, #aff do
+    if aff[i].name == "" then
+      name = aff[i].desc
+    else
+      name = aff[i].name
+    end
+    if not utils:inArray2(name, self.affToRemove) then
+      self.affChildren[i] = Geyser.Label:new({
+        name = "affChildLabel_" .. i,
+        x = 0, y = (i-1)*self.affHeight,
+        width = "100%", height = self.affHeight,
+      }, self.aff)
+      self.affChildren[i]:echo(name)
+      self.affChildren[i]:setStyleSheet([[
+        background-color: black;
+        text-align: right;
+        qproperty-alignment: 'AlignRight';
+      ]])
+      self.affChildren[i]:setFontSize(14)
+      self.affChildren[i]:setFgColor(self:affColor(name, aff[i].negative, aff[i].ending))
+    end
+  end
+end
 
+function top:affColor(name, negative, ending)
+  if utils:arrayKeyExists(name, self.affToColor) then
+    if ending then
+      -- swiatlo sie wyczerpuje
+      if self.affToColor[name] == "yellow" then
+        return "light_yellow"
+      else
+        return self.affToColor[name]
+      end
+    else
+      return self.affToColor[name]
+    end
+  end
+  if negative then
+    return "red"
+  else
+    if ending then
+      return "ansi_green"
+    else
+      return "green"
+    end
+  end
+end
 
-{
-  TimeInfo = {
-    day = 20,
-    dayname = "Przyjaciół",
-    era = "Pierwsza Era Magicznych Portali",
-    month = "Wielkiego Zła",
-    time = 5,
-    timename = "godzina piąta",
-    year = 70
-  },
-  Weather = {
-    sky = "Nie widać nieba"
-  }
-}
-]]
+function top:affClear()
+  for _, lbl in pairs(self.affChildren) do
+    lbl:hide()
+    lbl = nil
+  end
+  self.affChildren = {}
+end

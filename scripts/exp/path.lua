@@ -229,7 +229,7 @@ function path:statekStart(reverse)
   self.conf = {
     ["path"] = {"s", "s", "n", "w", "w", "n", "e", "w", "s", "s", "e", "w", "n", "w", "u", "n", "n", "e", "e", "e", "w", "n", "s", "w", "s", "w", "s",
                 "s", "w", "e", "e", "w", "s", "d", "e", "s", "e", "e", "n", "w", "e", "u", "n", "e", "s", "d", "e", "e", "n", "w"},
-    ["enemy"] = {"Duch wioslarza", "Duch barczystego marynarza", "Duch pierwszego oficera", "Duch kucharza", "Widmo Risatha"},
+    ["enemy"] = {"Duch wioslarza", "Duch barczystego marynarza", "Duch pierwszego oficera", "Duch kucharza", "Widmo Risatha", "Duch bosmana"},
     ["buff"] = "exp",
     ["ident"] = "statek",
     ["loot"] = "gleba",
