@@ -2006,5 +2006,18 @@
         "load": [
           29822, 29127
         ]
+    },
+    {
+        "name": "Opiekunka domu",
+        "note": "Harmy",
+        "star": 1,
+        "region": "Podmrok",
+        "room": 16787,
+        "spells": 0,
+        "damage": [
+          "BASH"
+        ],
+        "agro": 0,
+        "load": 0
     }
 ]

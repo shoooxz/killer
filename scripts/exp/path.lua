@@ -54,6 +54,25 @@ function path:start(what, reverse)
   if what == "barbynk" then
     self:barbynkStart()
   end
+  if what == "podmrokw2" then
+    self:podmrokw2Start(reverse)
+  end
+  if what == "podmrokn1" then
+    self:podmrokn1Start(reverse)
+  end
+  if what == "podmroke1" then
+    self:podmroke1Start(reverse)
+  end
+  if what == "podmroks1" then
+    self:podmroks1Start(reverse)
+  end
+  if what == "podmrokw1" then
+    self:podmrokw1Start(reverse)
+  end
+  if what == "pajaki" then
+    self:pajakiStart()
+  end
+
 end
 
 function path:fortStart()
@@ -266,5 +285,111 @@ function path:barbynkStart()
     ["ident"] = "barbynk",
     ["loot"] = "cialo",
   }
+  exp:start(self.conf)
+end
+
+function path:podmrokw2Start(reverse)
+  self.conf = {
+    ["path"] = { "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w",
+                  "s", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", 
+                  "w", "w", "w", "s", "s", "w", "w", "w", "w", "w", "w", "n", "w", "w", "w", "w", "w", "w", "w", "w" },
+    ["enemy"] = {"Beholder", "Gigantyczny robak", "Drapiezny pajak"},
+    ["buff"] = "exp",
+    ["ident"] = "podmrok",
+    ["loot"] = "cialo",
+  }
+  if reverse then
+    self.conf.path = path:reverseDirection(utils:rArray(self.conf.path))
+  end
+  exp:start(self.conf)
+end
+
+function path:podmrokn1Start(reverse)
+  self.conf = {
+    ["path"] = { "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n",
+    "n", "e", "e", "e", "e", "e", "e", "e", "e", "n", "n", "e", "n", "e", "e", "e", "e", "e", "e", "e",
+    "e", "e", "e", "e", "e", "e", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n",
+    "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n", "n" },
+    ["enemy"] = {"Gigantyczny robak", "Drapiezny pajak", "Goblin", "Ork"},
+    ["buff"] = "exp",
+    ["ident"] = "podmrok",
+    ["loot"] = "cialo",
+  }
+  if reverse then
+    self.conf.path = path:reverseDirection(utils:rArray(self.conf.path))
+  end
+  exp:start(self.conf)
+end
+
+function path:pajakiStart()
+  self.conf = {
+    ["path"] = { "e", "e", "e", "e", "e", "e", "e", "stopnie", "u", "e", "d", "e", "s", "e", "e", "e", "s",
+                 "e", "s", "s", "s", "s", "w", "w", "w", "w", "s", "w", "s", "w", "e", "n", "e", "n", "n", "e", "w",
+                  "n", "w", "n", "w", "w", "w", "w", "s", "w", "s", "s", "s", "s", "w", "s", "s",
+                  "e", "e", "e", "n", "e", "n", "s", "s", "e", "e", "e", "e", "e", "e", "e", "e", "e", "n", "n", "s", "s",
+                  "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "n", "e", "n", "e", "w",
+                  "n", "w", "w", "n", "w", "n", "n", "e", "w", "s", "w", "w", "n", "w", "n", "w", "n", "w", "w", "n", "w", "n",
+                  "e", "e", "e", "e", "e", "s", "s", "e", "s", "e", "e", "e", "e", "n", "n", "n", "e", "e",
+                  "s", "s", "w", "s", "s", "s", "e", "s", "w", "w", "w", "w", "s", "e", "e", "s", "s", "w", "s", "w", "w",
+                  "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w",
+                  "d", "d", "w", "w", "w"},
+    ["enemy"] = {"Ogromny pajak", "Paskudny pajak", "Drapiezny pajak", "Gigantyczny robak"},
+    ["buff"] = "exp",
+    ["ident"] = "podmrok",
+    ["loot"] = "cialo",
+  }
+  exp:start(self.conf)
+end
+
+function path:podmroke1Start(reverse)
+  self.conf = {
+    ["path"] = {  "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e",
+                  "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e",
+                  "n", "n", "n", "e", "n", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "n", "n", "n", "n",
+                  "n", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e", "e" },
+    ["enemy"] = {"Gigantyczny robak", "Drapiezny pajak"},
+    ["buff"] = "exp",
+    ["ident"] = "podmrok",
+    ["loot"] = "cialo",
+  }
+  if reverse then
+    self.conf.path = path:reverseDirection(utils:rArray(self.conf.path))
+  end
+  exp:start(self.conf)
+end
+
+function path:podmroks1Start(reverse)
+  self.conf = {
+    ["path"] = { "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s",
+                  "s", "s", "s", "e", "e", "e", "e", "e", "e", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s",
+                  "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "e", "e", "e", "e", "e", "e", "e", "e",
+                  "e", "e", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "e", "e", "e",
+                  "e", "e", "s", "s", "s", "s", "s", "s", "s", "s", "s", "s", "e", "e", "e", "e", "e", "e", "e", "e",
+                  "e", "e", "e", "e", "e", "e", "e", "e", "e", "e" },
+    ["enemy"] = {"Gigantyczny robak", "Drapiezny pajak", "Dlugi bialy waz"},
+    ["buff"] = "exp",
+    ["ident"] = "podmrok",
+    ["loot"] = "cialo",
+  }
+  if reverse then
+    self.conf.path = path:reverseDirection(utils:rArray(self.conf.path))
+  end
+  exp:start(self.conf)
+end
+
+function path:podmrokw1Start(reverse)
+  self.conf = {
+    ["path"] = { "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w",
+                  "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "n", "n", "w", "w", "w", "w",
+                  "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w",
+                  "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w" },
+    ["enemy"] = {"Gigantyczny robak", "Drapiezny pajak"},
+    ["buff"] = "exp",
+    ["ident"] = "podmrok",
+    ["loot"] = "cialo",
+  }
+  if reverse then
+    self.conf.path = path:reverseDirection(utils:rArray(self.conf.path))
+  end
   exp:start(self.conf)
 end

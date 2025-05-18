@@ -99,6 +99,9 @@ gag.spellTranslateFix = {
 	["IMMALATE"] = "IMMOLATE",
 	["HALY WEAPANS"] = "HOLY WEAPONS",
 	["DARKEISIAN"] = "DARKVISION",
+	["NATURE ALLY IE"] = "NATURE ALLY IV",
+	["PRATECTIAN EEIL"] = "PROTECTION EVIL",
+	["PYRATECHNICS"] = "PYROTECHNICS",
 }
 
 function gag:spellTransGetPart(str)

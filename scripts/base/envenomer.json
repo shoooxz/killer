@@ -1,0 +1,38 @@
+[
+    {
+        "name": "pojemnik z czerwonym proszkiem",
+        "note": "",
+        "mob": "Mag Villert",
+        "power": 8,
+        "use": 2,
+        "region": "Arras",
+        "room": 28626,
+    },
+    {
+        "name": "fiolka z zielonym plynem",
+        "note": "",
+        "mob": "Mag Villert",
+        "power": 2,
+        "use": 6,
+        "region": "Arras",
+        "room": 28626,
+    },
+    {
+        "name": "zolta masc",
+        "note": "",
+        "mob": "Mag Villert",
+        "power": 3,
+        "use": 3,
+        "region": "Arras",
+        "room": 28626,
+    },
+    {
+        "name": "pokrzyk, wilcza jagoda",
+        "note": "",
+        "mob": "Mag Villert",
+        "power": 3,
+        "use": 3,
+        "region": "Arras",
+        "room": 28626,
+    },
+}

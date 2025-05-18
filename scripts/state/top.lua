@@ -33,6 +33,7 @@ function top:init()
 	  width = self.width,
 	  height = self.height,
 	})
+  local affX = -settings:get("mapperWidth")-self.affWidth-25
   self:createLeft()
   self:createCondition()
   local buttonStyle = [[
@@ -48,7 +49,7 @@ function top:init()
   self:createConditionLabels("ConBot", self:getConBot(), "50%", buttonStyle)
   self.aff = Geyser.Label:new({
 	  name = "Top.Aff",
-	  x = self.width-self.affWidth-20, y = self.height+5,
+	  x = affX, y = self.height+5,
 	  width = self.affWidth,
 	  height = 10,
 	})

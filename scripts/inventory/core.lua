@@ -42,7 +42,7 @@ function inventory:loot(name)
     "ksiazka",
     "magiczna fiolka",
     "zwoj",
-    "%(pulsuje%)",
+    "(pulsuje)",
     "gigantyczny",
     "kamien mocy",
     "klanowy",

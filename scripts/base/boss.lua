@@ -3,7 +3,7 @@ boss.list = {}
 boss.waiting = ""
 
 function boss:init()
-  self.list = utils:readJson("scripts/boss/boss.json")
+  self.list = utils:readJson("scripts/base/boss.json")
 end
 
 function boss:enemyExists()

@@ -5,6 +5,7 @@ function doSpeedWalk()
     --speedWalkPath
     --display(speedWalkDir)
     if not mapper.walker.going then
+      display(speedWalkDir)
         mapper.walker.path = speedWalkDir
         mapper.walker.going = true
         mapper.walker.ids = speedWalkPath
