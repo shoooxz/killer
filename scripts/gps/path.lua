@@ -82,6 +82,14 @@ function path:fortStart()
     ["buff"] = "exp",
     ["ident"] = "fort",
     ["loot"] = "cialo",
+    ["onStart"] = function()
+      state:orderSub("wield 0")
+      inventory:weaponRemove()
+    end,
+    ["onEnd"] = function()
+      state:orderSub("wield 1")
+      inventory:weaponWield()
+    end,
   }
   exp:start(self.conf)
 end
@@ -97,6 +105,9 @@ function path:wlosciStart()
     ["buff"] = "exp",
     ["ident"] = "wlosci",
     ["loot"] = "kupa",
+    ["onStart"] = function()
+      send("get kosc")
+    end,
   }
   exp:start(self.conf)
 end
@@ -291,7 +302,7 @@ end
 function path:podmrokw2Start(reverse)
   self.conf = {
     ["path"] = { "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w",
-                  "s", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", 
+                  "s", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w", "w",
                   "w", "w", "w", "s", "s", "w", "w", "w", "w", "w", "w", "n", "w", "w", "w", "w", "w", "w", "w", "w" },
     ["enemy"] = {"Beholder", "Gigantyczny robak", "Drapiezny pajak"},
     ["buff"] = "exp",

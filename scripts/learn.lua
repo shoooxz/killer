@@ -143,7 +143,7 @@ end
 function learn:envTick()
   local mh = profile:get("mh")
   local oh = profile:get("oh")
-  send("envenom "..mh.." jag; envenom "..oh.." jag")
+  send("envenom "..mh.." kanister; envenom "..oh.." kanister")
 end
 
 function learn:envStop()

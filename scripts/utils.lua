@@ -1,5 +1,20 @@
 utils = utils or {}
 
+function utils:diceToAverage(format)
+    -- Dopasowanie do wzorca "XdY", np. "2d5"
+    local ilosc, sciany = string.match(format, "(%d+)d(%d+)")
+
+    -- Konwersja na liczby
+    ilosc = tonumber(ilosc)
+    sciany = tonumber(sciany)
+
+    -- Obliczenie średniej: każda kostka ma średnią (1 + sciany) / 2
+    local srednia = ilosc * (1 + sciany) / 2
+
+    -- Zaokrąglenie do najbliższej liczby całkowitej
+    return math.floor(srednia + 0.5)
+end
+
 function utils:getRoomPeople()
   local out = {}
   for i, p in pairs(gmcp.Room.People) do

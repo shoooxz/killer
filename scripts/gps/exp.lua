@@ -26,6 +26,10 @@ function exp:start(conf)
     self.members = self:getMembers()
     opener:setByName(self.conf.ident)
     state:orderTeam("opener "..self.conf.ident)
+    -- TODO dodac buff set na start
+    if self.conf.onStart then
+      self.conf.onStart()
+    end
     self:speedwalk()
   end
 end
@@ -149,6 +153,9 @@ function exp:stop()
     self.going = false
     self.step = 1
     self.paused = false
+    if self.conf.onEnd then
+      self.conf.onEnd()
+    end
 end
 
 function exp:onRestDone()

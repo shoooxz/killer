@@ -7,6 +7,11 @@ state.iEnemyColor = "light_coral"
 state.enemyHP = ""
 state.tevent = 0
 state.opener = false
+state.weapon = true
+
+function state:weaponState(state)
+  self.weapon = state
+end
 
 function state:init()
   state:createLocationState()
@@ -228,7 +233,12 @@ end
 function state:meKill(enemy)
   return function()
       local kill = profile:get("kill")
-      send(kill.." "..enemy)
+      if state.weapon then
+        send(kill.." "..enemy)
+      else
+        send("kill "..enemy)
+        send("say Nie mam broni! Nie mam KURWA broni!")
+      end
   end
 end
 

@@ -91,6 +91,7 @@ function inventory:weaponRemove(ret)
     cmd = cmd.."remove "..oh..";"
   end
 	if ret then return cmd end
+  state:weaponState(false)
 	send(cmd)
 end
 
@@ -102,5 +103,6 @@ function inventory:weaponWield(ret)
     cmd = cmd.."hold "..oh..";"
   end
 	if ret then return cmd end
+  state:weaponState(true)
 	send(cmd)
 end

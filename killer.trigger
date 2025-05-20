@@ -102,9 +102,13 @@
 					<string>Twoja rasa nie jest mile widziana w tym miejscu. Nie mozesz tam wejsc.</string>
 					<string>Jestes zbyt oszolomiony, zeby to zrobic!</string>
 					<string>Furtka jest zamknieta na klucz.</string>
+					<string>Ruszasz przed siebie, jednak po chwili orientujesz sie, ze wrociles do punktu wyjscia.</string>
+					<string>Idziesz przed siebie, nagle przecierasz oczy, ku twemu zaskoczeniu jestes w tym samym miejscu.</string>
 				</regexCodeList>
 				<regexCodePropertyList>
 					<integer>1</integer>
+					<integer>0</integer>
+					<integer>0</integer>
 					<integer>0</integer>
 					<integer>0</integer>
 					<integer>0</integer>
@@ -430,6 +434,122 @@
 						<integer>0</integer>
 					</regexCodePropertyList>
 				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>demon ksiega</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#48ff2c</mFgColor>
+					<mBgColor>#000000</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Lezy tutaj ksiega, cala porosnieta mchem.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>ksiegi</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#00ffff</mFgColor>
+					<mBgColor>#000000</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(dzielo|cymelium|tom|rycina|inkunabul|wolumen|wolumin|folial|foliant|papirus|rekopis|ksiega|ksiazka)</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>trade ok</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#04ff00</mFgColor>
+					<mBgColor>#000000</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Dlugo klocisz sie ze sklepikarzem, w koncu udaje ci sie wytargowac najkorzystniejsza cene.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>trade bad</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#000000</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Starasz sie wytargowac jak najwyzsza cene, jednak sprzedawca pozostaje nieugiety.</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>Envenom</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList />
+					<regexCodePropertyList />
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="yes" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>trzesie</name>
+						<script></script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#b9cb1b</mFgColor>
+						<mBgColor>#000000</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>trzesie sie i cierpi.</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>0</integer>
+						</regexCodePropertyList>
+					</Trigger>
+				</TriggerGroup>
 			</TriggerGroup>
 			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
 				<name>Miner</name>
@@ -1057,6 +1177,7 @@
 						<string>przewracasz sie.</string>
 						<string>.*i padasz na plecy bez tchu.</string>
 						<string>wywraca cie na ziemie.</string>
+						<string>napotykajac oporu tracisz rownowage</string>
 					</regexCodeList>
 					<regexCodePropertyList>
 						<integer>0</integer>
@@ -1067,6 +1188,7 @@
 						<integer>0</integer>
 						<integer>0</integer>
 						<integer>1</integer>
+						<integer>0</integer>
 						<integer>0</integer>
 					</regexCodePropertyList>
 				</Trigger>
@@ -1537,6 +1659,86 @@ cechoLink("&lt;yellow&gt;  ident", [[InventoryItem("]]..matches[2]..[[")]], "", 
 					<regexCodePropertyList>
 						<integer>1</integer>
 					</regexCodePropertyList>
+				</Trigger>
+			</TriggerGroup>
+			<TriggerGroup isActive="yes" isFolder="yes" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+				<name>Loot</name>
+				<script></script>
+				<triggerType>0</triggerType>
+				<conditonLineDelta>0</conditonLineDelta>
+				<mStayOpen>0</mStayOpen>
+				<mCommand></mCommand>
+				<packageName></packageName>
+				<mFgColor>#ff0000</mFgColor>
+				<mBgColor>#ffff00</mBgColor>
+				<mSoundFile></mSoundFile>
+				<colorTriggerFgColor>#000000</colorTriggerFgColor>
+				<colorTriggerBgColor>#000000</colorTriggerBgColor>
+				<regexCodeList />
+				<regexCodePropertyList />
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>LOOT</name>
+					<script></script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>100</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>(Cialo) (.*) zawiera:</string>
+						<string>(Kosci) (.*) zawiera:</string>
+						<string>Powalone drzewo (.*) zawiera:</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>1</integer>
+						<integer>1</integer>
+						<integer>1</integer>
+					</regexCodePropertyList>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Item</name>
+						<script>inventory:loot(matches[2])</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string>(.*)</string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>1</integer>
+						</regexCodePropertyList>
+					</Trigger>
+					<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+						<name>Prompt</name>
+						<script>inventory:lootDone()</script>
+						<triggerType>0</triggerType>
+						<conditonLineDelta>0</conditonLineDelta>
+						<mStayOpen>0</mStayOpen>
+						<mCommand></mCommand>
+						<packageName></packageName>
+						<mFgColor>#ff0000</mFgColor>
+						<mBgColor>#ffff00</mBgColor>
+						<mSoundFile></mSoundFile>
+						<colorTriggerFgColor>#000000</colorTriggerFgColor>
+						<colorTriggerBgColor>#000000</colorTriggerBgColor>
+						<regexCodeList>
+							<string></string>
+						</regexCodeList>
+						<regexCodePropertyList>
+							<integer>7</integer>
+						</regexCodePropertyList>
+					</Trigger>
 				</Trigger>
 			</TriggerGroup>
 		</TriggerGroup>
@@ -2029,26 +2231,19 @@ keybind.show = true</script>
 			<packageName></packageName>
 			<time>00:01:00.000</time>
 		</Timer>
-		<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
-			<name>New timer</name>
-			<script>send("get jab torb;eat jab; drink but")</script>
+		<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+			<name>env</name>
+			<script>learn:envTick()</script>
 			<command></command>
 			<packageName></packageName>
-			<time>00:03:59.000</time>
+			<time>00:00:30.000</time>
 		</Timer>
-		<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
-			<name>New timer</name>
-			<script>send("who")</script>
+		<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+			<name>boss</name>
+			<script>boss:timerTick()</script>
 			<command></command>
 			<packageName></packageName>
-			<time>00:00:55.000</time>
-		</Timer>
-		<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
-			<name>New timer</name>
-			<script></script>
-			<command></command>
-			<packageName></packageName>
-			<time>00:00:00.000</time>
+			<time>00:00:30.000</time>
 		</Timer>
 	</TimerPackage>
 	<AliasPackage>
@@ -2707,10 +2902,17 @@ send("exam "..matches[2])</script>
 				<regex></regex>
 				<Alias isActive="yes" isFolder="no">
 					<name>^/exp$</name>
-					<script>path:start(matches[2])</script>
+					<script>path:start(matches[2], matches[3])</script>
 					<command></command>
 					<packageName></packageName>
-					<regex>^/exp (.*)$</regex>
+					<regex>^/exp ([a-z0-9]+)( r)?$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>^/exp_go$</name>
+					<script>exp.paused=false</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/exp_go$</regex>
 				</Alias>
 			</AliasGroup>
 			<AliasGroup isActive="yes" isFolder="yes">
@@ -2781,6 +2983,34 @@ send("exam "..matches[2])</script>
 					<command></command>
 					<packageName></packageName>
 					<regex>^/opener_add (.*) (.*) (.*)$</regex>
+				</Alias>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>Boss</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>^/boss (.*)$</name>
+					<script>boss:search(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/boss (.*)$</regex>
+				</Alias>
+			</AliasGroup>
+			<AliasGroup isActive="yes" isFolder="yes">
+				<name>Other</name>
+				<script></script>
+				<command></command>
+				<packageName></packageName>
+				<regex></regex>
+				<Alias isActive="yes" isFolder="no">
+					<name>^/env (.*)$</name>
+					<script>learn:env(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/env (.*)$</regex>
 				</Alias>
 			</AliasGroup>
 		</AliasGroup>

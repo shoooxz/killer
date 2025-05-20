@@ -16,6 +16,14 @@ function character:processOrder(who, order)
       end
       return
     end
+    if string.find(order, "wield") then
+      if arg[2] == "1" then
+        inventory:weaponWield()
+      else
+        inventory:weaponRemove()
+      end
+      return
+    end
     if string.find(order, "opener") then
       opener:setByName(arg[2])
       return
