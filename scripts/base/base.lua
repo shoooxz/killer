@@ -7,6 +7,7 @@ base.spellDictionary = {}
 base.spellSchool = {}
 base.spellDefensive = {}
 base.spellOffensive = {}
+base.spellHeal = {}
 base.skipDebuff = true
 base.spellDictionaryFull = {}
 base.skillDictionaryFull = {}
@@ -26,6 +27,7 @@ function base:targetToFancy(tar)
 		["TAR_OBJ_CHAR_OFF"] = "Cel obiekt albo postac, ofensywny",
 		["TAR_OBJ_ROOM"] = "Cel obiekt na lokacji",
 		["TAR_OBJ_IGNORE"] = "Na lokacje",
+		["TAR_CHAR_HEAL"] = "Regenerujacy",
 	}
 	return out[tar]
 end
@@ -322,21 +324,40 @@ function base:declareDefensive(name)
 	self.spellDefensive[name]["9"] = {}
 end
 
-function base:isSpellOffensive(name, target)
+function base:declareNonMage(class, circle)
+	if not self.spellClass[class] then
+			self.spellClass[class] = {}
+			self.spellOffensive[class] = {}
+			self.spellDefensive[class] = {}
+			self.spellHeal[class] = {}
+	end
+	if not self.spellClass[class][tostring(circle)] then
+			self.spellClass[class][tostring(circle)] = {}
+			self.spellOffensive[class][tostring(circle)] = {}
+			self.spellDefensive[class][tostring(circle)] = {}
+			self.spellHeal[class][tostring(circle)] = {}
+	end
+end
+
+function base:isSpellHeal(target)
+	return (target == "TAR_CHAR_HEAL")
+end
+
+function base:isSpellOffensive(target)
 	return (target == "TAR_CHAR_OFFENSIVE" or target == "TAR_OBJ_CHAR_OFF")
 end
 
-function base:isSpellDefensive(name, target)
+function base:isSpellDefensive(target)
 	return (target == "TAR_CHAR_DEFENSIVE" or target == "TAR_OBJ_CHAR_DEF" or target == "TAR_CHAR_SELF" or target == "TAR_IGNORE")
 end
 
 function base:getSpellOffensive(fclass, sclass)
-	display(self.spellOffensive["ogol"])
+	--display(self.spellOffensive["nom"])
 end
 
 function base:getSpellDefensive(fclass, sclass)
 	--display(fclass, sclass)
-	--display(self.spellDefensive["ogol"])
+	display(self.spellDefensive["nom"])
 end
 
 function base:buildSchool()
@@ -371,6 +392,19 @@ function base:buildSchool()
 		"daze",
 		"domination",
 		"puppet master",
+		"flare",
+		"poison",
+		"entangle",
+		"charm animal",
+		"corrode",
+		"heat metal",
+		"chill metal",
+		"nature curse",
+		"bane",
+		"blindness",
+		"curse",
+		"pyrotechnics",
+		"fear",
 	}
 	local skipIt = {
 		"light",
@@ -383,7 +417,6 @@ function base:buildSchool()
 		"dismiss plant",
 		"change sex",
 		"continual light",
-		"detect invis",
 		"invisibility",
 		"energize",
 		"darkvision",
@@ -396,7 +429,6 @@ function base:buildSchool()
 		"healing sleep",
 		"dismiss outsider",
 		"dismiss monster",
-		"detect hidden",
 		"floating disc",
 		"remove paralysis",
 		"dismiss undead",
@@ -430,12 +462,38 @@ function base:buildSchool()
 		"slippery floor",
 		"wizard eye",
 		"sense presence",
-		"summon insect",
-		"summon greenskin",
-		"summon flying creature",
-		"summon strong creature",
-		"summon ancient creature",
-
+		"firefly swarm",
+		"shillelagh",
+		"create food",
+		"animal invisibility",
+		"goodbarry",
+		"sense fatigue",
+		"create spring",
+		"flame blade",
+		"slow poison",
+		"magic fang",
+		"ring of vanion",
+		"control weather",
+		"neutralize poison",
+		"animal rage",
+		"circle of vanion",
+		"command",
+		"create symbol",
+		"spiritual light",
+		"detect evil",
+		"detect good",
+		"ray of light",
+		"undead invisibility",
+		"know alignment",
+		"consecrate",
+		"desecrate",
+		"sense life",
+		"calm",
+		"lesser restoration",
+		"restoration",
+		"life transfer",
+		"hold evil",
+		"desert light",
 	}
 	-- define tables
 	self:declareSchool("inwo")
@@ -463,12 +521,14 @@ function base:buildSchool()
 	self:declareOffensive("ogol")
 	self:declareDefensive("ogol")
 
+-- PETLA JAKUBOWA
 	for i=1, #self.jsonSpell do
 			if type(self.jsonSpell[i].class) == "table" and next(self.jsonSpell[i].class) then
 
 				-- przygotuj do filtru ofesnywne i defensywne
-				local isOffensive = self:isSpellOffensive(self.jsonSpell[i].name, self.jsonSpell[i].target)
-				local isDefensive = self:isSpellDefensive(self.jsonSpell[i].name, self.jsonSpell[i].target)
+				local isHeal = self:isSpellHeal(self.jsonSpell[i].target)
+				local isOffensive = self:isSpellOffensive(self.jsonSpell[i].target)
+				local isDefensive = self:isSpellDefensive(self.jsonSpell[i].target)
 				local skip = utils:inArray2(self.jsonSpell[i].name, skipIt) -- skip useless
 				local skip2 = (utils:inArray2(self.jsonSpell[i].name, debuff) and self.skipDebuff) -- skip debuffs
 				local use = not (skip or skip2)
@@ -517,17 +577,16 @@ function base:buildSchool()
 							self:filterSpellType(use, "ogol", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
 						end
 					else
-						if not self.spellClass[class[1]] then
-								self.spellClass[class[1]] = {}
-						end
-						if not self.spellClass[class[1]][tostring(class[2])] then
-								self.spellClass[class[1]][tostring(class[2])] = {}
-						end
+						self:declareNonMage(class[1], class[2])
 						table.insert(self.spellClass[class[1]][tostring(class[2])], self.jsonSpell[i].name)
+						-- filter offensive/defensive
+						self:filterSpellType(use, class[1], isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
+						-- filter heal
+						self:filterSpellHeal(use, class[1], isHeal, class[2], self.jsonSpell[i].name)
 					end
 				end
 			end
-
+    -- SZKOLY WYJEBAC ???
 		if type(self.jsonSpell[i].school) == "table" and next(self.jsonSpell[i].school) and self.jsonSpell[i].school[1]  then
 			local short = self:schoolToShort(self.jsonSpell[i].school[1])
 			if not self.spellSchool[short] then
@@ -545,6 +604,14 @@ function base:filterSpellType(use, school, off, def, circle, name)
 		end
 		if def then
 			table.insert(self.spellDefensive[school][tostring(circle)], name)
+		end
+	end
+end
+
+function base:filterSpellHeal(use, class, isHeal, circle, name)
+	if use then
+		if isHeal then
+			table.insert(self.spellHeal[class][tostring(circle)], name)
 		end
 	end
 end

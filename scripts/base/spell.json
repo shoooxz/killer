@@ -118,7 +118,7 @@
         "school": [
             "Inwokacje"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "calm",
@@ -456,7 +456,7 @@
         "school": [
             "Odrzucanie"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "cure critical",
@@ -475,7 +475,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "cure disease",
@@ -498,7 +498,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "cure light",
@@ -525,7 +525,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "cure serious",
@@ -552,7 +552,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "cure poison",
@@ -575,7 +575,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "cure moderate",
@@ -602,7 +602,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "curse",
@@ -799,7 +799,7 @@
         "school": [
             "Przemiany"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "quiet step",
@@ -1140,7 +1140,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "heat metal",
@@ -1479,7 +1479,7 @@
         "school": [
             "Przemiany"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "remove curse",
@@ -1498,7 +1498,7 @@
         "school": [
             "Odrzucanie"
         ],
-        "target": "TAR_OBJ_CHAR_DEF"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "sanctuary",
@@ -1532,7 +1532,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "shield",
@@ -1751,7 +1751,7 @@
         "school": [
             "Zauroczenie"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "stability",
@@ -3282,7 +3282,7 @@
         "school": [
             "Przywolanie"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "animal rage",
@@ -3848,7 +3848,7 @@
         "school": [
             "Przywolanie"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "hellfire",
@@ -4217,7 +4217,7 @@
             "Przywolanie",
             "SpellSpec"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "summon greenskin",
@@ -4233,7 +4233,7 @@
             "Przywolanie",
             "SpellSpec"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "summon flying creature",
@@ -4249,7 +4249,7 @@
             "Przywolanie",
             "SpellSpec"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "summon strong creature",
@@ -4265,7 +4265,7 @@
             "Przywolanie",
             "SpellSpec"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "summon ancient creature",
@@ -4281,7 +4281,7 @@
             "Przywolanie",
             "SpellSpec"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "summon greater meteor",
@@ -4512,7 +4512,7 @@
         "school": [
             "Przemiany"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "detect aggressive",
@@ -4672,7 +4672,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "corrode",
@@ -4961,7 +4961,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "resist poison",
@@ -5220,7 +5220,7 @@
         "school": [
             "Odrzucanie"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "shadow conjuration",
@@ -5542,7 +5542,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "dismiss plant",
@@ -6064,7 +6064,7 @@
         "school": [
             "Przywolanie"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "nature ally II",
@@ -6079,7 +6079,7 @@
         "school": [
             "Przywolanie"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "nature ally III",
@@ -6094,7 +6094,7 @@
         "school": [
             "Przywolanie"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "nature ally IV",
@@ -6109,7 +6109,7 @@
         "school": [
             "Przywolanie"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "cure animal",
@@ -6124,7 +6124,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "reinvigore animal",
@@ -6139,7 +6139,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "cure plant",
@@ -6154,7 +6154,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "reinvigore plant",
@@ -6169,7 +6169,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "bark guardian",
@@ -6184,7 +6184,7 @@
         "school": [
             "Zauroczenie"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "wildthorn",
@@ -6199,7 +6199,7 @@
         "school": [
             "Zauroczenie"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "mass refresh",
@@ -6214,7 +6214,7 @@
         "school": [
             "Przemiany"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "create healing water",
@@ -6268,7 +6268,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "greater cure poison",
@@ -6287,7 +6287,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "light nova",
@@ -6467,7 +6467,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "mass cure serious",
@@ -6482,7 +6482,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "mass cure critical",
@@ -6497,7 +6497,7 @@
         "school": [
             "Nekromancja"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_HEAL"
     },
     {
         "name": "mass aid",

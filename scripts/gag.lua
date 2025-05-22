@@ -102,6 +102,7 @@ gag.spellTranslateFix = {
 	["NATURE ALLY IE"] = "NATURE ALLY IV",
 	["PRATECTIAN EEIL"] = "PROTECTION EVIL",
 	["PYRATECHNICS"] = "PYROTECHNICS",
+	["NABLE LOAK"] = "NOBLE LOOK",
 }
 
 function gag:spellTransGetPart(str)
