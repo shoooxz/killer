@@ -75,6 +75,13 @@ function printer:scripts()
     self:bottom()
 end
 
+function printer:effect(eff)
+  self:title("Efekt")
+  self:section(eff.name)
+  self:text(eff.note, "grey")
+  self:bottom()
+end
+
 function printer:boss(boss)
   self:title("Boss")
   self:section(boss.name2)

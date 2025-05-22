@@ -8,7 +8,7 @@ buff.db = db:create("buff", {
         _index = { "name" },
 		    _violations = "IGNORE",
     }
-}) 
+})
 -- zjawa w domku ressist frost
 -- basic
 buff.basic = {
@@ -68,6 +68,13 @@ buff.short = {
   "reflect spell",
   "divine power",
 }
+
+function buff:test()
+  local fclass = profile:get("fclass")
+  local sclass = profile:get("sclass")
+  local buffs = base:getSpellOffensive(fclass, sclass)
+  base:getSpellDefensive(fclass, sclass)
+end
 
 function buff:listAdd(name)
   local ok, err = db:add(self.db.buff, {name = name, set1 = yajl.to_string(profile:get("buffbasic")), set2 = yajl.to_string(profile:get("buffbasic2")), owner = profile:getName()})

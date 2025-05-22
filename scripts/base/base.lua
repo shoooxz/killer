@@ -5,11 +5,14 @@ base.jsonSpell = {}
 base.jsonSkill = {}
 base.spellDictionary = {}
 base.spellSchool = {}
+base.spellDefensive = {}
+base.spellOffensive = {}
+base.skipDebuff = true
 base.spellDictionaryFull = {}
 base.skillDictionaryFull = {}
 base.spellClass = {}
 base.skillClass = {}
-
+base.effect = {}
 --TODO SKILLS klecha, zlodziej i masterki do klechy, nomada i zlodzieja
 
 function base:targetToFancy(tar)
@@ -92,6 +95,7 @@ function base:init()
   self.jsonBook = utils:readJson("scripts/base/book.json")
   self.jsonSpell = utils:readJson("scripts/base/spell.json")
 	self.jsonSkill = utils:readJson("scripts/base/skill.json")
+	self.effect = utils:readJson("scripts/base/effect.json")
   self:buildSpellDictionary()
   self:buildSpellDictionaryFull()
 	self:buildSkillDictionaryFull()
@@ -100,6 +104,10 @@ function base:init()
 	-- clear memory
 	self.jsonSpell = nil
 	self.jsonSkill = nil
+end
+
+function base:effectPrint(type)
+
 end
 
 function base:buildSpellDictionary()
@@ -288,43 +296,225 @@ function base:declareSchool(name)
 	self.spellClass[name]["9"] = {}
 end
 
+function base:declareOffensive(name)
+	self.spellOffensive[name] = {}
+	self.spellOffensive[name]["1"] = {}
+	self.spellOffensive[name]["2"] = {}
+	self.spellOffensive[name]["3"] = {}
+	self.spellOffensive[name]["4"] = {}
+	self.spellOffensive[name]["5"] = {}
+	self.spellOffensive[name]["6"] = {}
+	self.spellOffensive[name]["7"] = {}
+	self.spellOffensive[name]["8"] = {}
+	self.spellOffensive[name]["9"] = {}
+end
+
+function base:declareDefensive(name)
+	self.spellDefensive[name] = {}
+	self.spellDefensive[name]["1"] = {}
+	self.spellDefensive[name]["2"] = {}
+	self.spellDefensive[name]["3"] = {}
+	self.spellDefensive[name]["4"] = {}
+	self.spellDefensive[name]["5"] = {}
+	self.spellDefensive[name]["6"] = {}
+	self.spellDefensive[name]["7"] = {}
+	self.spellDefensive[name]["8"] = {}
+	self.spellDefensive[name]["9"] = {}
+end
+
+function base:isSpellOffensive(name, target)
+	return (target == "TAR_CHAR_OFFENSIVE" or target == "TAR_OBJ_CHAR_OFF")
+end
+
+function base:isSpellDefensive(name, target)
+	return (target == "TAR_CHAR_DEFENSIVE" or target == "TAR_OBJ_CHAR_DEF" or target == "TAR_CHAR_SELF" or target == "TAR_IGNORE")
+end
+
+function base:getSpellOffensive(fclass, sclass)
+	display(self.spellOffensive["ogol"])
+end
+
+function base:getSpellDefensive(fclass, sclass)
+	--display(fclass, sclass)
+	--display(self.spellDefensive["ogol"])
+end
+
 function base:buildSchool()
+	local debuff = {
+		"faerie fire",
+		"weaken",
+		"slow",
+		"web",
+		"increase wounds",
+		"maze",
+		"dispel magic",
+		"dazzling flash",
+		"sleep",
+		"silence",
+		"deafness",
+		"hold person",
+		"loop",
+		"charm person",
+		"confusion",
+		"hold animal",
+		"hold undead",
+		"hold monster",
+		"hold plant",
+		"charm monster",
+		"hallucinations",
+		"antimagic manacles",
+		"brainwash",
+		"mental barrier",
+		"lower resistance",
+		"misfortune",
+		"confuse languages",
+		"daze",
+		"domination",
+		"puppet master",
+	}
+	local skipIt = {
+		"light",
+		"detect magic",
+		"infravision",
+		"comprehend languages",
+		"dismiss animal",
+		"dismiss insect",
+		"lore undead",
+		"dismiss plant",
+		"change sex",
+		"continual light",
+		"detect invis",
+		"invisibility",
+		"energize",
+		"darkvision",
+		"dismiss person",
+		"faerie fog",
+		"farsight",
+		"float",
+		"waterwalk",
+		"water breathing",
+		"healing sleep",
+		"dismiss outsider",
+		"dismiss monster",
+		"detect hidden",
+		"floating disc",
+		"remove paralysis",
+		"dismiss undead",
+		"dimension door",
+		"locate object",
+		"pass door",
+		"fly",
+		"recharge",
+		"mass invis",
+		"create lesser illusion",
+		"astral search",
+		"summon",
+		"portal",
+		"fetch",
+		"create greater illusion",
+		"nexus",
+		"unholy fury",
+		"mind fortess",
+		"force field",
+		"repayment",
+		"summon distortion",
+		"exile",
+		"detect aggressive",
+		"detect undead",
+		"alarm",
+		"wall of mist",
+		"share fitness",
+		"mass fly",
+		"eye of vision",
+		"mend golem",
+		"slippery floor",
+		"wizard eye",
+		"sense presence",
+		"summon insect",
+		"summon greenskin",
+		"summon flying creature",
+		"summon strong creature",
+		"summon ancient creature",
+
+	}
+	-- define tables
 	self:declareSchool("inwo")
+	self:declareOffensive("inwo")
+	self:declareDefensive("inwo")
 	self:declareSchool("iluz")
+	self:declareOffensive("iluz")
+	self:declareDefensive("iluz")
 	self:declareSchool("nekr")
+	self:declareOffensive("nekr")
+	self:declareDefensive("nekr")
 	self:declareSchool("odrz")
+	self:declareOffensive("odrz")
+	self:declareDefensive("odrz")
 	self:declareSchool("prze")
+	self:declareOffensive("prze")
+	self:declareDefensive("prze")
 	self:declareSchool("przy")
+	self:declareOffensive("przy")
+	self:declareDefensive("przy")
 	self:declareSchool("zaur")
+	self:declareOffensive("zaur")
+	self:declareDefensive("zaur")
 	self:declareSchool("ogol")
+	self:declareOffensive("ogol")
+	self:declareDefensive("ogol")
+
 	for i=1, #self.jsonSpell do
 			if type(self.jsonSpell[i].class) == "table" and next(self.jsonSpell[i].class) then
+
+				-- przygotuj do filtru ofesnywne i defensywne
+				local isOffensive = self:isSpellOffensive(self.jsonSpell[i].name, self.jsonSpell[i].target)
+				local isDefensive = self:isSpellDefensive(self.jsonSpell[i].name, self.jsonSpell[i].target)
+				local skip = utils:inArray2(self.jsonSpell[i].name, skipIt) -- skip useless
+				local skip2 = (utils:inArray2(self.jsonSpell[i].name, debuff) and self.skipDebuff) -- skip debuffs
+				local use = not (skip or skip2)
+
 				for j=1, #self.jsonSpell[i].class do
 					local class = self.jsonSpell[i].class[j]
 					if class[1] == "mag" then
 						if self:schoolSuccess(self.jsonSpell[i].school, "Inwokacje", "Zauroczenie", "Przywolanie") then
 							table.insert(self.spellClass["inwo"][tostring(class[2])], self.jsonSpell[i].name)
+							-- filter offensive/defensive
+							self:filterSpellType(use, "inwo", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
 						end
 						if self:schoolSuccess(self.jsonSpell[i].school, "Iluzje", "Inwokacje", "Nekromancja", "Odrzucanie") then
 							table.insert(self.spellClass["iluz"][tostring(class[2])], self.jsonSpell[i].name)
+							-- filter offensive/defensive
+							self:filterSpellType(use, "iluz", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
 						end
 						if self:schoolSuccess(self.jsonSpell[i].school, "Nekromancja", "Iluzje", "Zauroczenie") then
 							table.insert(self.spellClass["nekr"][tostring(class[2])], self.jsonSpell[i].name)
+							-- filter offensive/defensive
+							self:filterSpellType(use, "nekr", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
 						end
 						if self:schoolSuccess(self.jsonSpell[i].school, "Odrzucanie", "Przemiany", "Iluzje") then
 							table.insert(self.spellClass["odrz"][tostring(class[2])], self.jsonSpell[i].name)
+							-- filter offensive/defensive
+							self:filterSpellType(use, "odrz", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
 						end
 						if self:schoolSuccess(self.jsonSpell[i].school, "Przemiany", "Odrzucanie", "Nekromancja") then
 							table.insert(self.spellClass["prze"][tostring(class[2])], self.jsonSpell[i].name)
+							-- filter offensive/defensive
+							self:filterSpellType(use, "prze", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
 						end
 						if self:schoolSuccess(self.jsonSpell[i].school, "Przywolanie", "Poznanie", "Inwokacje") then
 							table.insert(self.spellClass["przy"][tostring(class[2])], self.jsonSpell[i].name)
+							-- filter offensive/defensive
+							self:filterSpellType(use, "przy", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
 						end
 						if self:schoolSuccess(self.jsonSpell[i].school, "Zauroczenie", "Inwokacje", "Nekromancja") then
 							table.insert(self.spellClass["zaur"][tostring(class[2])], self.jsonSpell[i].name)
+							-- filter offensive/defensive
+							self:filterSpellType(use, "zaur", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
 						end
 						if self:generalCheck(class[2], self.jsonSpell[i].name, self.jsonSpell[i].school) then
 							table.insert(self.spellClass["ogol"][tostring(class[2])], self.jsonSpell[i].name)
+							-- filter offensive/defensive
+							self:filterSpellType(use, "ogol", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
 						end
 					else
 						if not self.spellClass[class[1]] then
@@ -344,6 +534,17 @@ function base:buildSchool()
 				self.spellSchool[short] = {}
 			end
 			table.insert(self.spellSchool[short], self.jsonSpell[i]["name"])
+		end
+	end
+end
+
+function base:filterSpellType(use, school, off, def, circle, name)
+	if use then
+		if off then
+			table.insert(self.spellOffensive[school][tostring(circle)], name)
+		end
+		if def then
+			table.insert(self.spellDefensive[school][tostring(circle)], name)
 		end
 	end
 end
@@ -436,7 +637,7 @@ function base:test()
 	-- zrobic druida z php
 	-- zrobic druida z php
 	-- zrobic druida z php
-	display(self.skillClass)
+	display(self.spellClass)
 
 
 end
@@ -592,6 +793,9 @@ end
 
 
 --[[
+
+
+
 <<============= lista ksiag dla klasy: Czarodziej =============>>
 
 Dodac:

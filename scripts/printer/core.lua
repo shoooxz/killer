@@ -45,6 +45,11 @@ printer.key2short = {
 	["Semicolon"] = ";",
 	["Bar"] = "|",
 }
+
+function printer:link(color, text, func)
+	cechoLink("<u><"..color..">"..text, func, "", true)
+end
+
 function printer:title(str, nospace, nomargin)
 	local len = string.len(str)
 	local left = string.rep("-", self.length-len-4-self.titleMargin) -- -4 dwie spacje i nawias

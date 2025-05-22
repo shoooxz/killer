@@ -3979,7 +3979,7 @@
             "Przywolanie",
             "SpellSpec"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "eyes of the torturer",
@@ -4297,7 +4297,7 @@
             "Przywolanie",
             "SpellSpec"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "razorblade hands",
@@ -4431,7 +4431,7 @@
             "Iluzje",
             "SpellSpec"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "spiritual light",
@@ -4742,7 +4742,7 @@
     {
         "name": "dismiss outsider",
         "info": "Za pomoca tego czaru mozna odeslac przyzwane oraz stworzone przez siebie lub kogos stworzenia.",
-        "note": 0,
+        "note": "Odwolanie zywiolakow",
         "class": [
             [
                 "mag",
@@ -5185,7 +5185,7 @@
             "Nekromancja",
             "SpellSpec"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "blink",
@@ -5697,7 +5697,7 @@
     },
     {
         "name": "share fitness",
-        "info": 0,
+        "info": "?",
         "note": 0,
         "class": [
             [
@@ -5788,7 +5788,7 @@
             "Inwokacje",
             "SpellSpec"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "chaotic shock",
@@ -6302,7 +6302,7 @@
         "school": [
             "Inwokacje"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "lightingshield",

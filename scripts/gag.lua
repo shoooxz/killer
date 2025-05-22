@@ -264,8 +264,82 @@ function gag:color(s, dmg, threat)
 	return col[threat]..s.." <reset>("..col[threat]..dmg.."<reset>)"
 end
 
+function gag:eff(type)
+	echo(" ")
+	printer:link("tomato", "("..base.effect[type].name..")", "printer:effect(base.effect['"..type.."'])")
+--[[
+ITEM_BLESS
+ITEM_EVIL
+ITEM_DARK
+WEAPON_VAMPIRIC
+WEAPON_POISON
+WEAPON_KEEN
+]]--
+end
+
 
 --[[
+
+
+
+if ( IS_SET( obj->value[ 4 ], WEAPON_FLAMING ) )
+		print_char( ch, "%s okrywa ledwo widoczna, ognista aura.\n\r", capitalize( obj->name4 ) );
+
+if ( IS_SET( obj->value[ 4 ], WEAPON_FROST ) )
+		print_char( ch, "%s okrywa ledwo widoczna, zamra�aj�ca aura.\n\r", capitalize( obj->name4 ) );
+
+if ( IS_SET( obj->value[ 4 ], WEAPON_TOXIC ) )
+		print_char( ch, "%s okrywa ledwo widoczna, �r�ca aura.\n\r", capitalize( obj->name4 ) );
+
+if ( IS_SET( obj->value[ 4 ], WEAPON_SACRED ) )
+		print_char( ch, "%s okrywa pot��na, �wi�ta aura.\n\r", capitalize( obj->name4 ) );
+
+if ( IS_SET( obj->value[ 4 ], WEAPON_SHOCKING ) )
+		print_char( ch, "W %s zgromadzono pote�ny, elektryczny �adunek.\n\r", obj->name5 );
+
+if ( IS_SET( obj->value[ 4 ], WEAPON_VAMPIRIC ) )
+		print_char( ch, "Czujesz, jakby %s wysysa�o z otoczenia si�y witalne.\n\r", obj->name5 );
+
+if ( IS_SET( obj->value[ 4 ], WEAPON_RESONANT ) )
+		print_char( ch, "Z %s wydobywaj� si� lekkie wibracje.\n\r", obj->name2 );
+
+
+
+
+
+
+
+		#define WEAPON_FLAMING           (A) // wali od ognia
+		#define WEAPON_FROST             (B) // wali od zimna
+		#define WEAPON_VAMPIRIC          (C) // wysysa hapki
+		#define WEAPON_SHARP             (D) // ostre, niewielkie premie do dama, moze wrzucic bleeding wound
+		#define WEAPON_VORPAL            (E) // bardzo ostre, przebija stona, znaczace premie do dama, moze wrzucic bleeding wound
+		#define WEAPON_TWO_HANDS         (F) // trzyma sie to w dwoch lapkach
+		#define WEAPON_SHOCKING          (G) // wali od elektrycznosci
+		#define WEAPON_POISON            (H) // jebniety dostaje poisona
+		#define WEAPON_DISPEL            (I) // teoretycznie castuje przy ciosie dispel magic, ale to chyba nie dziala
+		#define WEAPON_RANDOM_MAGIC_PLUS (J) // randomowo dodaje broni ummagicznienie na poziomie 0-3
+		#define WEAPON_PRIMARY           (K) // tylko w wiodaca reka
+		#define WEAPON_TOXIC             (L) // wali od kwasu
+		#define WEAPON_SACRED            (M) // taka swieta bron - dodatkowe damy w undeady
+		#define WEAPON_RESONANT          (N) // wali od dzwieku
+		#define WEAPON_INJURIOUS         (O) // wrzuca flage bleeding wound na 25% niezaleznie od conow
+		#define WEAPON_KEEN              (Q) // Wywarzone ostrze(lub ogolnie - bron) ktorym latwiej jest zadac cios krytyczny
+		#define WEAPON_THUNDERING        (R) // W broni zakleta jest esencja sily, udany cios krytyczny zada jeszcze wieksze obrazenia
+		#define WEAPON_UNBALANCED        (S) // bron przekleta ze stala szansa na nie trafienie
+		#define WEAPON_WICKED            (T) // bron przekleta - wysysa punkty zycia w momencie zadania ciosu z trzymajacego bron
+		#define WEAPON_HEARTSEEKER       (U) // bron samodzielnie dazy do serca przeciwnika, bonus dla BS'a oraz hitroll
+
+
+
+
+
+
+
+
+
+
+
 -- osoba moja 'cie'
 -- Moje
 Probujesz wyprowadzic cios, ale chybiasz (.*) haniebnie\.

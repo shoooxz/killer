@@ -267,7 +267,9 @@ end
 
 function top:setAffects(aff)
   self:affClear()
-  self.aff:resize(self.affWidth, #aff*self.affHeight)
+  if self.aff then
+    self.aff:resize(self.affWidth, #aff*self.affHeight)
+  end
   local name = ""
   for i = 1, #aff do
     if aff[i].name == "" then

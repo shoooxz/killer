@@ -1,0 +1,27 @@
+{
+  "ITEM_BLESS": {
+    "name": "BLESS",
+    "note": "Zwieksza szanse na trafienie.",
+    "crystal": 0
+  },
+  "ITEM_EVIL": {
+    "name": "EVIL",
+    "note": "Przedmiot przesiakniety zlem.",
+    "crystal": 0
+  },
+  "ITEM_DARK": {
+    "name": "DARK",
+    "note": "?",
+    "crystal": 0
+  },
+  "WEAPON_POISON": {
+    "name": "POISON",
+    "note": "Na bron nalozona jest trucizna.",
+    "crystal": 0
+  },
+  "WEAPON_KEEN": {
+    "name": "KEEN",
+    "note": "Zwieksza szanse na cios krytyczny.",
+    "crystal": 0
+  }
+}
