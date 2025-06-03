@@ -138,15 +138,28 @@ end
 function learn:envStart()
   printer:success("Learn", "Timer envenom start!")
   enableTimer("env")
+  --state:orderSub("wield 0")
+  --inventory:weaponRemove()
+  for i=1, 10 do
+    send("get sztylet torb")
+  end
 end
 
 function learn:envTick()
   local mh = profile:get("mh")
   local oh = profile:get("oh")
-  send("envenom "..mh.." kanister; envenom "..oh.." kanister")
+  for i=1, 10 do
+  send("envenom "..i..".szty kanister")
+  end
+  --send("envenom "..mh.." kanister; envenom "..oh.." kanister")
 end
 
 function learn:envStop()
   printer:error("Learn", "Timer anulowany!")
   disableTimer("env")
+  --state:orderSub("wield 1")
+  --inventory:weaponWield()
+  for i=1, 10 do
+    send("put sztylet torb")
+  end
 end

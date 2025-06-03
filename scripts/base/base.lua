@@ -163,7 +163,10 @@ end
 
 function base:topic(key)
 	local topics = {
-		["bron"] = function()  printer:helpWeapon() end,
+		["masterki"] = function()  printer:helpWeapon() end,
+		["skradanie"] = function()  printer:helpSneak() end,
+		["mem"] = function()  printer:helpMem() end,
+		["dwuklasowosc"] = function()  printer:helpDualclass() end,
 	}
 	if utils:arrayKeyExists(key, topics) then
 		topics[key]()

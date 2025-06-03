@@ -5,8 +5,8 @@ printer.titleMargin = 4
 printer.borderColor = "white"
 printer.tabLength = 1
 printer.commandColor = "orange"
-printer.descriptionColor = "white"
-printer.textColor = "white"
+printer.descriptionColor = "light_grey"
+printer.textColor = "light_grey"
 printer.sectionColor = "yellow"
 printer.errorColor = "red"
 printer.infoColor = "DeepSkyBlue"
@@ -49,6 +49,7 @@ printer.key2short = {
 function printer:link(color, text, func)
 	cechoLink("<u><"..color..">"..text, func, "", true)
 end
+
 
 function printer:title(str, nospace, nomargin)
 	local len = string.len(str)
@@ -139,7 +140,7 @@ function printer:tags(arr)
 end
 
 function printer:textLine(line, color)
-	color = color or "white"
+	color = color or self.textColor
 	local len = self.length-string.len(line)-self.tabLength  -- 2 : i spacja
 	cecho(
 		"<"..self.borderColor..">|"..string.rep(" ", self.tabLength)..
@@ -186,7 +187,7 @@ function printer:section(name)
 	local len = self.length-string.len(name)-self.tabLength
 	cecho(
 		"<"..self.borderColor..">|"..string.rep(" ", self.tabLength)..
-		"<"..self.sectionColor..">"..name..string.rep(" ", len)..
+		"<"..self.sectionColor..">"..string.upper(name)..string.rep(" ", len)..
 		"<"..self.borderColor..">|\n"
 	)
 	self:space()
@@ -285,9 +286,9 @@ function printer:desc(name, desc)
 end
 
 function printer:info(desc)
-	local len = self.length-string.len(desc)-self.tabLength*2
+	local len = self.length-string.len(desc)-self.tabLength
 	cecho(
-		"<"..self.borderColor..">|"..string.rep(" ", self.tabLength*2)..
+		"<"..self.borderColor..">|"..string.rep(" ", self.tabLength)..
 		"<"..self.infoColor..">"..desc..string.rep(" ", len)..
 		"<"..self.borderColor..">|\n"
 	)

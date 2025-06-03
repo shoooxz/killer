@@ -4,11 +4,19 @@ inventory.lootEnd = 1
 inventory.lootCount = 1
 inventory.lootBody = "cialo"
 
+function inventory:lootGems()
+  if self.lootBody == "kupa" then
+    send("get all.klej "..self.lootContainer)
+    send("get kupka "..self.lootContainer)
+  end
+end
+
 function inventory:tryLoot(count, body)
   self.lootCount = 1
   self.lootEnd = count
   self.lootBody = body
   self.lootContainer = body
+  self:lootGems()
   send("exam "..self.lootContainer)
 end
 
@@ -20,6 +28,7 @@ function inventory:lootDone()
     raiseEvent("onBodyLooted")
   else
     self.lootContainer = self.lootCount.."."..self.lootBody
+    self:lootGems()
     send("exam "..self.lootContainer)
   end
 end
@@ -53,6 +62,9 @@ function inventory:loot(name)
     if string.find(name, get[i]) then
       if get[i] == "(pulsuje)" then
         local item = utils:trim(string.gsub(name, "%(pulsuje%)", ""))
+        scripts:beep()
+        scripts:beep()
+        scripts:beep()
         send("get '"..item.."' "..self.lootContainer)
       else
         send("get '"..get[i].."' "..self.lootContainer)

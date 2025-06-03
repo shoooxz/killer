@@ -1,7 +1,8 @@
 character = character or {}
+character.form = ""
 
 function character:processOrder(who, order)
-  if who == profile:get("master") then
+  if who == profile:get("master") or state:druidMasterCheck(who) then
     -- split args
     local arg = utils:split(order, " ")
     -- order

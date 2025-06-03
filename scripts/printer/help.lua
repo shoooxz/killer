@@ -166,20 +166,6 @@ function printer:mapper()
     self:bottom()
 end
 
-function printer:helpWeapon()
-  self:title("Help")
-  self:command("Wojownik", "wszystkie bronie, 50% efektywnosci na 2-klasach")
-  self:command("Barbarzynca", "Masterki broni w klasach")
-  self:bottom()
-end
-
-function printer:helpIndex()
-  self:title("Help")
-  self:command("/help (skill/spell)", "Pomoc dotyczaca skilla/spella")
-  self:command("/help bron", "Masterki broni w klasach")
-  self:bottom()
-end
-
 function printer:help(arr)
   self:title("Help")
   self:section(string.upper(arr.meta.name))
@@ -333,4 +319,88 @@ function printer:rollerHelp()
     self:command("/roller_start", "Sprawdza mozliwe statystyki")
     self:command("/roller_stop", "Zatrzymuje szukanie")
     self:bottom()
+end
+
+function printer:dif(fclass, sclass)
+  if not fclass then
+    -- index
+    self:title("Help")
+    self:command("/roller_start", "Sprawdza mozliwe statystyki")
+    self:command("/roller_stop", "Zatrzymuje szukanie")
+    self:bottom()
+  else
+
+  end
+end
+
+function printer:helpIndex()
+  self:title("Help")
+  self:command("/help (skill/spell)", "Pomoc dotyczaca skilla/spella")
+  self:command("/help masterki", "Masterki broni w klasach")
+  self:command("/help skradanie", "Mechanika skradania")
+  self:command("/help dwuklasowosc", "Zasady laczenia klas")
+  self:command("/help mem", "Priorytet cech przy memie")
+  self:bottom()
+end
+
+function printer:helpWeapon()
+  self:title("Help")
+  self:section("Masterki")
+  self:command("Wojownik", "wszystkie bronie, 50% efektywnosci na 2-klasach")
+  self:command("Barbarzynca", "wszystkie bronie 2h")
+  self:command("Nomad", "wszystkie bronie 1h oprocz mace/axe/flail/staff/polearm")
+  self:command("Paladyn", "sword, flail, mace")
+  self:command("Czarny Rycerz", "sword, flail, axe, polearm")
+  self:command("Zlodziej", "dagger, short-sword")
+  self:command("Druid", "claws")
+  self:bottom()
+end
+
+function printer:helpSneak()
+  self:title("Help")
+  self:section("Skradanie")
+  self:line("Istnieja dwa rodzaje progow w przypadku skradania sie:")
+  self:space()
+  self:line("Prog aktywacji niewidzialnosci na lokacji.", "orange")
+  self:text("Jesli postac posiada przedmiot dajacy efekt sneak, szansa aktywacji wynosi 100%. Gdy postac korzysta z umiejetnosci sneak, szansa zalezy od jej wartosci. Dodatkowo, jesli postac posiada zarowno przedmiot, jak i umiejetnosc sneak, to przedmiot bedzie wykorzystywal wartosc sneak wlasciciela.")
+  self:space()
+  self:line("Prog wykrycia przez przeciwnika podczas skradania sie.", "orange")
+  self:text("W jego wyliczeniu brany jest pod uwage skill sneak + (hide / 10). Na przyklad, przy wartosciach sneak = 91 i hide = 90, mozna osiagnac 100% szansy na niewykrycie. Dodatkowo na ten prog wplywa czar Quiet Step, ktory dodaje 1/4 calkowitej wartosci (sneak + hide). Przyklad: jesli sneak + hide = 80, z czarem Quiet Step koncowy wynik to 80 + 80/4 = 100.")
+  self:bottom()
+end
+
+function printer:helpMem()
+  self:title("Help")
+  self:section("MEM")
+  self:command("Mag", "INT")
+  self:command("Nomad", "INT, LUC")
+  self:command("Kleryk/Paladyn/Druid", "WIS")
+  self:bottom()
+end
+
+function printer:helpDualclass()
+  local link = {}
+  table.insert(link, { "cyan", "(/dif)", "printer:dif(false)"})
+  self:title("Help")
+  self:section("Dwuklasowosc")
+  self:line("W procesie laczenia klas branych jest pod uwage kilka czynnikow:", "orange")
+  self:space()
+  self:text("Umiejetnosci noszenia zbroi (light, medium, heavy) pochodza wylacznie z pierwszej klasy.")
+  self:space()
+  self:text("Masterki dostepne na 31 poziomie sa dostepne tylko dla pierwszej klasy.")
+  self:space()
+  self:text("Dorolki statystyk co poziom: 2/3 pochodza z pierwszej klasy, 1/3 z drugiej klasy.")
+  self:info("(Przy kombinacji mag/wojownik, wojownik obniza intelekt maga)")
+  self:space()
+  self:text("Zapamietywanie czarow zalezy od pierwszej klasy, wyjatkiem sa czary dostepne tylko w drugiej klasie.")
+  self:space()
+  self:text("Czary z drugiej klasy ograniczone sa do 5 kregu wlacznie.")
+  self:space()
+  self:text("Jesli pierwsza klasa to mag specjalista, dziedziczone sa tylko czary niebedace przeciwnymi szkolami.")
+  self:info("(Zasada ta dotyczy rowniez tatuazu swiety wojownik)")
+  self:space()
+  self:text("Przy dziedziczeniu czaru, ktory juz istnieje, brany jest pod uwage krag z pierwszej klasy.")
+  self:space()
+  self:tags(link)
+  self:bottom()
 end

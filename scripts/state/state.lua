@@ -8,6 +8,38 @@ state.enemyHP = ""
 state.tevent = 0
 state.opener = false
 state.weapon = true
+state.druid = "normal"
+state.druidMaster = "normal"
+state.druidToName = {
+  ["bear"] = "Wielki brunatny niedźwiedź",
+  ["wolf"] = "Wielki szary wilk",
+  ["panther"] = "Wielka czarna pantera",
+  ["reform"] = "normal",
+}
+
+function state:setDruidMaster(name, form)
+  if name == profile:get("master") then
+    self.druidMaster = utils:replacePolish(self.druidToName[form])
+  end
+end
+
+function state:setDruidForm(form)
+    self.druid = self.druidToName[form]
+end
+
+function state:druidCheck(name)
+  if self.druid ~= "normal" then
+    return name == self.druid
+  end
+  return false
+end
+
+function state:druidMasterCheck(name)
+  if self.druidMaster ~= "normal" then
+    return name == self.druidMaster
+  end
+  return false
+end
 
 function state:weaponState(state)
   self.weapon = state
@@ -73,7 +105,7 @@ function state:orderTeam(order, skipSub)
     if skipSub and (v.name == state.sub) then else
       local arr = utils:split(order, ";")
       for _, o in pairs(arr) do
-        send("order "..v.name.." "..o)
+        send("order '"..v.name.."' "..o)
       end
     end
   end
@@ -158,7 +190,7 @@ function state:gmcpRoomPeople()
         end
       end
       -- order objects
-      if obj.name == profile.name then
+      if obj.name == profile.name or self:druidCheck(obj.name) then
         me = obj
         me.name = "JA"
         state.myroom = me.room
@@ -249,7 +281,9 @@ function state:orderKill(enemy)
 end
 
 function state:clearTarget(name)
-  return string.gsub(utils:replacePolish(name), "{.", "");
+  if name then
+    return string.gsub(utils:replacePolish(name), "{.", "");
+  end
 end
 
 function state:printNeutral(obj)
@@ -309,7 +343,7 @@ function state:printTeamMember(obj)
     if obj.name then
       ls:cechoLink("<white>(<green>R<white>)", [[send("rescue ]]..obj.name..[[")]], "", true)
     else
-      display(obj)
+      --display(obj)
     end
   end
 

@@ -606,7 +606,7 @@
     {
         "name": "sneak",
         "info": "Zlodzieje wykorzystujac swoj wrodzony spryt moga poruszac sie bezszelestnie w cieniu, przechodzac z miejsca na miejsce bedac niezauwazalnymi przez inne istoty.",
-        "note": 0,
+        "note": "Lepiej dziala z hide i quiet step",
         "class": [
             [
                 "zlo",
@@ -1792,7 +1792,7 @@
     {
         "name": "envenom mastery",
         "info": "Zdolnosc ta zwieksza szybkosc nakladania trucizn na bron, a takze od odpowiedniego wyuczenia, pozwala zatruc ja nawet jesli posiada juz jakis inny efekt (np. damn).",
-        "note": "Zlodziej wszystkie trucizny, czarny rycerz nieco gorzej.",
+        "note": "Zlodziej/Nomad wszystkie trucizny, czarny rycerz nieco gorzej.",
         "class": [
             [
                 "cza",
@@ -1800,6 +1800,10 @@
             ],
             [
                 "zlo",
+                31
+            ],
+            [
+                "nom",
                 31
             ]
         ],

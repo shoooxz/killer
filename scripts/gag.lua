@@ -103,6 +103,7 @@ gag.spellTranslateFix = {
 	["PRATECTIAN EEIL"] = "PROTECTION EVIL",
 	["PYRATECHNICS"] = "PYROTECHNICS",
 	["NABLE LOAK"] = "NOBLE LOOK",
+	["LOAP"] = "LOOP",
 }
 
 function gag:spellTransGetPart(str)
@@ -267,7 +268,7 @@ end
 
 function gag:eff(type)
 	echo(" ")
-	printer:link("tomato", "("..base.effect[type].name..")", "printer:effect(base.effect['"..type.."'])")
+	printer:link("cyan", "("..base.effect[type].name..")", "printer:effect(base.effect['"..type.."'])")
 --[[
 ITEM_BLESS
 ITEM_EVIL
