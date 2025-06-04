@@ -108,10 +108,6 @@ function base:init()
 	self.jsonSkill = nil
 end
 
-function base:effectPrint(type)
-
-end
-
 function base:buildSpellDictionary()
   for i=1, #self.jsonSpell do
     local name = self.jsonSpell[i]["name"]
@@ -161,12 +157,30 @@ function base:buildSkillDictionaryFull()
   end
 end
 
+function base:effects()
+	local out = {
+		["weapon"] = {},
+		["shield"] = {},
+	}
+	for type, eff in pairs(self.effect) do
+    if string.find(type, "WEAPON") then
+			table.insert(out.weapon, eff)
+		end
+		if string.find(type, "SHIELD") then
+			table.insert(out.shield, eff)
+		end
+  end
+	return out
+end
+
 function base:topic(key)
 	local topics = {
 		["masterki"] = function()  printer:helpWeapon() end,
 		["skradanie"] = function()  printer:helpSneak() end,
 		["mem"] = function()  printer:helpMem() end,
 		["dwuklasowosc"] = function()  printer:helpDualclass() end,
+		["kamienie"] = function()  printer:helpStone() end,
+		["efekty"] = function()  printer:helpEffects(base:effects()) end,
 	}
 	if utils:arrayKeyExists(key, topics) then
 		topics[key]()

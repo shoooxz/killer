@@ -277,7 +277,8 @@ function profile:init(name)
 		printer:one("Profil", msg)
 		profile:onProfileLoaded()
 		if self.list.mode > 0 then
-			mode.exec[mode.order[self.list.mode]].func()
+			-- TODO jak wejda mody dodac ?
+			--mode.exec[mode.order[self.list.mode]].func()
 		end
 	end)
 end

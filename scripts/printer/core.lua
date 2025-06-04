@@ -46,7 +46,8 @@ printer.key2short = {
 	["Bar"] = "|",
 }
 
-function printer:link(color, text, func)
+function printer:link(text, func)
+	color = "cyan"
 	cechoLink("<u><"..color..">"..text, func, "", true)
 end
 
@@ -199,6 +200,26 @@ function printer:command(name, desc)
 		"<"..self.borderColor..">|"..string.rep(" ", self.tabLength)..
 		"<"..self.commandColor..">"..name..
 		"<"..self.descriptionColor.."> - "..desc..string.rep(" ", len)..
+		"<"..self.borderColor..">|\n"
+	)
+end
+
+function printer:commandLink(name, desc, func)
+	local len = self.length-string.len(name)-string.len(desc)-3-self.tabLength -- -3  2 spacje i myslnik
+	cecho(
+		"<"..self.borderColor..">|"..string.rep(" ", self.tabLength))
+		printer:link(name, func)
+		cecho("<"..self.descriptionColor.."> - "..desc..string.rep(" ", len)..
+		"<"..self.borderColor..">|\n"
+	)
+end
+
+function printer:prefix(name, desc)
+	local len = self.length-string.len(name)-string.len(desc)-2-self.tabLength -- -2  1 spacja i dwurkropek
+	cecho(
+		"<"..self.borderColor..">|"..string.rep(" ", self.tabLength)..
+		"<"..self.textColor..">"..name..":"..
+		"<"..self.commandColor.."> "..desc..string.rep(" ", len)..
 		"<"..self.borderColor..">|\n"
 	)
 end

@@ -75,19 +75,13 @@ function printer:scripts()
     self:bottom()
 end
 
-function printer:effect(eff)
-  self:title("Efekt")
-  self:section(eff.name)
-  self:text(eff.note, "grey")
-  self:bottom()
-end
 
 function printer:boss(boss)
   self:title("Boss")
   self:section(boss.name2)
   self:tableRow({12, 51, 12}, {}, boss.basic, true)
   self:space()
-  self:text(boss.note, "grey")
+  self:text(boss.note, self.textColor)
   self:space()
   self:tags(boss.actions)
   self:bottom()
@@ -176,7 +170,7 @@ function printer:help(arr)
   self:text(arr.meta.info)
   if arr.meta.note ~= 0 then
     self:space()
-    self:text(arr.meta.note, "grey")
+    self:text(arr.meta.note, self.textColor)
   end
   if next(arr.teacher) then
     self:space()
@@ -340,6 +334,7 @@ function printer:helpIndex()
   self:command("/help skradanie", "Mechanika skradania")
   self:command("/help dwuklasowosc", "Zasady laczenia klas")
   self:command("/help mem", "Priorytet cech przy memie")
+  self:command("/help kamienie", "Kamienie i krysztaly mocy")
   self:bottom()
 end
 
@@ -361,10 +356,10 @@ function printer:helpSneak()
   self:section("Skradanie")
   self:line("Istnieja dwa rodzaje progow w przypadku skradania sie:")
   self:space()
-  self:line("Prog aktywacji niewidzialnosci na lokacji.", "orange")
+  self:line("Prog aktywacji niewidzialnosci na lokacji.", self.commandColor)
   self:text("Jesli postac posiada przedmiot dajacy efekt sneak, szansa aktywacji wynosi 100%. Gdy postac korzysta z umiejetnosci sneak, szansa zalezy od jej wartosci. Dodatkowo, jesli postac posiada zarowno przedmiot, jak i umiejetnosc sneak, to przedmiot bedzie wykorzystywal wartosc sneak wlasciciela.")
   self:space()
-  self:line("Prog wykrycia przez przeciwnika podczas skradania sie.", "orange")
+  self:line("Prog wykrycia przez przeciwnika podczas skradania sie.", self.commandColor)
   self:text("W jego wyliczeniu brany jest pod uwage skill sneak + (hide / 10). Na przyklad, przy wartosciach sneak = 91 i hide = 90, mozna osiagnac 100% szansy na niewykrycie. Dodatkowo na ten prog wplywa czar Quiet Step, ktory dodaje 1/4 calkowitej wartosci (sneak + hide). Przyklad: jesli sneak + hide = 80, z czarem Quiet Step koncowy wynik to 80 + 80/4 = 100.")
   self:bottom()
 end
@@ -383,7 +378,7 @@ function printer:helpDualclass()
   table.insert(link, { "cyan", "(/dif)", "printer:dif(false)"})
   self:title("Help")
   self:section("Dwuklasowosc")
-  self:line("W procesie laczenia klas branych jest pod uwage kilka czynnikow:", "orange")
+  self:line("W procesie laczenia klas branych jest pod uwage kilka czynnikow:", self.commandColor)
   self:space()
   self:text("Umiejetnosci noszenia zbroi (light, medium, heavy) pochodza wylacznie z pierwszej klasy.")
   self:space()
@@ -402,5 +397,53 @@ function printer:helpDualclass()
   self:text("Przy dziedziczeniu czaru, ktory juz istnieje, brany jest pod uwage krag z pierwszej klasy.")
   self:space()
   self:tags(link)
+  self:bottom()
+end
+
+function printer:helpStone()
+  local link = {}
+  table.insert(link, { "cyan", "(/help efekty)", "base:topic('efekty')"})
+  self:title("Help")
+  self:section("Kamienie")
+  self:text("Kamienie mocy, wlozone w odpowiednie wyposazenie, zwiekszaja: moc umiejetnosci (zbroja), poziom czarow (bizuteria), oraz dodaja unikatowe efekty (bron/tarcza).")
+  self:space()
+  self:text("Kamienie mocy mozna pozyskac na kilka sposobow: zabijajac zwykle moby i bossy, rozbijajac okruchy z bossow i instancji, rozbijajac normalne artefakty oraz artefakty z instancji.")
+  self:space()
+  self:text("Artefakty i okruchy mozna rozbic za pomoca komendy gainstone u Keleborna w Szkole Magow w Arras. Rozbicie broni albo zbroi zwraca kamien odpowiadajacy rodzajowi wyposazenia.")
+  self:space()
+  self:text("Okruchy rozbija sie przy pomocy komendy gainstone okruch weapon/armor/shield. Z okruchow broni lub tarcz mozna uzyskac kamienie 0/0 z losowym efektem.")
+  self:space()
+  self:text("Specjalnym rodzajem kamieni sa krysztaly mocy, kamienie 1/1 z wybranym efektem, dostepne tylko od najbardziej wymagajacych przeciwnikow.")
+  self:space()
+  self:text("Kamienie mozna wprawiac (embedstone) oraz usuwac (breakstone) u Kowala w Fortecy.")
+  self:space()
+  self:text("Ogolnie przyjeta taktyka to niszczenie artefaktow (destroyartefact) w Kuzni w Wulkanie. Okruchy przetwarza sie glownie na armor, z wyjatkiem broni lub tarczy w sytuacji, gdy nie mozemy zdobyc krysztalow.")
+  self:space()
+  self:tags(link)
+  self:bottom()
+end
+
+function printer:effect(eff)
+  self:title("Efekt")
+  self:section(eff.name)
+  self:text(eff.note, self.textColor)
+  if eff.crystal ~= 0 then
+    self:space()
+    self:prefix("Krysztal", eff.crystal)
+  end
+  self:bottom()
+end
+
+function printer:helpEffects(arr)
+  self:title("Help")
+  self:section("Efekty")
+  self:line("Bronie:", self.commandColor)
+  for i=1, #arr.weapon do
+    local crystal = arr.weapon[i].crystal
+    if arr.weapon[i].crystal == 0 then
+      crystal = "Brak krysztalu."
+    end
+    self:commandLink(arr.weapon[i].name, crystal, function() printer:effect(arr.weapon[i]) end)
+  end
   self:bottom()
 end

@@ -163,7 +163,7 @@ dziala jakos:
 
 function gag:hit(me, type, rest)
 	-- czasem podobne sa chybienia, nie przerabiaj ich
-	if string.find(rest, "chybiasz") or string.find(rest, "chybiajac") or string.find(rest, "chybia") then
+	if string.find(rest, "chybiasz") or string.find(rest, "chybiajac") or string.find(rest, "chybia") or string.find(rest, "zadna moc nie bylaby w stanie") then
 		return
   end
 
@@ -187,7 +187,6 @@ function gag:hit(me, type, rest)
 	if not rest  or rest == "" then
 		--printer:error("gag", "Error: ".. debug)
 	end
-
 end
 
 
@@ -268,7 +267,7 @@ end
 
 function gag:eff(type)
 	echo(" ")
-	printer:link("cyan", "("..base.effect[type].name..")", "printer:effect(base.effect['"..type.."'])")
+	printer:link("("..base.effect[type].name..")", "printer:effect(base.effect['"..type.."'])")
 --[[
 ITEM_BLESS
 ITEM_EVIL
@@ -276,6 +275,7 @@ ITEM_DARK
 WEAPON_VAMPIRIC
 WEAPON_POISON
 WEAPON_KEEN
+WEAPON_FLAMING
 ]]--
 end
 
