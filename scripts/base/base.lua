@@ -181,6 +181,7 @@ function base:topic(key)
 		["dwuklasowosc"] = function()  printer:helpDualclass() end,
 		["kamienie"] = function()  printer:helpStone() end,
 		["efekty"] = function()  printer:helpEffects(base:effects()) end,
+		["trutki"] = function()  printer:helpEnvenomers(envenomer:getTypes()) end,
 	}
 	if utils:arrayKeyExists(key, topics) then
 		topics[key]()
@@ -721,7 +722,7 @@ function base:test()
 	-- zrobic druida z php
 	-- zrobic druida z php
 	-- zrobic druida z php
-	display(self.spellClass)
+	display(self.jsonSpell)
 
 
 end
@@ -756,7 +757,7 @@ function base:spellSearch(spell)
           table.insert(arr, {"white", v.region, ""})
           table.insert(book, arr)
           arr = {}
-          local temp = {false, "Ksiega: "..utils:concat(self:fixBookSpells(v.spells), ", ")}
+          local temp = {"book", "Ksiega: "..utils:concat(self:fixBookSpells(v.spells), ", ")}
           if notes then
             table.insert(temp, notes)
           end

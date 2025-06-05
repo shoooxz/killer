@@ -18,6 +18,7 @@ function scripts:init()
 	state:init()
 	base:init()
 	boss:init()
+	envenomer:init()
 	setMainWindowSize(settings:get("mainWindowWidth"), settings:get("mainWindowHeight"))
 
 end

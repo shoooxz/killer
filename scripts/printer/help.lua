@@ -79,7 +79,7 @@ end
 function printer:boss(boss)
   self:title("Boss")
   self:section(boss.name2)
-  self:tableRow({12, 51, 12}, {}, boss.basic, true)
+  self:tableRow({12, 51, 12}, {}, boss.basic)
   self:space()
   self:text(boss.note, self.textColor)
   self:space()
@@ -164,7 +164,7 @@ function printer:help(arr)
   self:title("Help")
   self:section(string.upper(arr.meta.name))
   if arr.meta.additional then
-    self:tableRow({arr.meta.len, 60}, {}, arr.meta.additional, true)
+    self:tableRow({arr.meta.len, 60}, {}, arr.meta.additional)
     self:space()
   end
   self:text(arr.meta.info)
@@ -174,11 +174,11 @@ function printer:help(arr)
   end
   if next(arr.teacher) then
     self:space()
-    self:tableRow({6, 57, 12}, {}, arr.teacher, true)
+    self:tableRow({6, 57, 12}, {}, arr.teacher)
   end
   if next(arr.book) then
     self:space()
-    self:tableRow({4, 59, 12}, {}, arr.book, true, true)
+    self:tableRow({4, 59, 12}, {}, arr.book, true)
   end
   self:bottom()
 end
@@ -265,7 +265,7 @@ function printer:buff(arr, name)
   self:line("Kliknij aby ustawic set!", self.sectionColor)
   self:space()
   if next(arr) then
-      self:tableRow({2, 60}, {}, arr, true)
+      self:tableRow({2, 60}, {}, arr)
   else
       self:command("/buff_add (nazwa_setu)", "Dodaje set aktualny buffow do bazy")
       self:command("/buff_reset", "Resetuje aktualny set buffow")
@@ -289,7 +289,7 @@ function printer:buffBasic(arr)
   self:line("M - cast na master'a  S - cast na slave'a  Kliknij aby wybrac", self.sectionColor)
   self:space()
   if next(arr) then
-      self:tableRow({1, 1, 20, 1, 1, 19, 1, 1, 16}, {}, arr, true)
+      self:tableRow({1, 1, 20, 1, 1, 19, 1, 1, 16}, {}, arr)
   end
   self:bottom(false, true)
 end
@@ -300,7 +300,7 @@ function printer:roller(arr)
     --self:line("Perfect oznacza trafienie maxa w sesji.", self.sectionColor)
     --self:space()
     if next(arr) then
-        self:tableRow({10,10,10, 10, 10}, {"Stat", "Obecnie", "Max", "Target", "Perfect"}, arr)
+        self:tableRow({10,10,10, 10, 10}, {"Stat", "Obecnie", "Max", "Target", "Perfect"})
     end
     self:bottom(false, true)
 end
@@ -335,6 +335,8 @@ function printer:helpIndex()
   self:command("/help dwuklasowosc", "Zasady laczenia klas")
   self:command("/help mem", "Priorytet cech przy memie")
   self:command("/help kamienie", "Kamienie i krysztaly mocy")
+  self:command("/help efekty", "Efekty na broni i tarczy")
+  self:command("/help trutki", "Lista trucizn")
   self:bottom()
 end
 
@@ -375,7 +377,7 @@ end
 
 function printer:helpDualclass()
   local link = {}
-  table.insert(link, { "cyan", "(/dif)", "printer:dif(false)"})
+  table.insert(link, { false, "(/dif)", "printer:dif(false)"})
   self:title("Help")
   self:section("Dwuklasowosc")
   self:line("W procesie laczenia klas branych jest pod uwage kilka czynnikow:", self.commandColor)
@@ -402,7 +404,7 @@ end
 
 function printer:helpStone()
   local link = {}
-  table.insert(link, { "cyan", "(/help efekty)", "base:topic('efekty')"})
+  table.insert(link, { false, "(/help efekty)", "base:topic('efekty')"})
   self:title("Help")
   self:section("Kamienie")
   self:text("Kamienie mocy, wlozone w odpowiednie wyposazenie, zwiekszaja: moc umiejetnosci (zbroja), poziom czarow (bizuteria), oraz dodaja unikatowe efekty (bron/tarcza).")
@@ -445,5 +447,12 @@ function printer:helpEffects(arr)
     end
     self:commandLink(arr.weapon[i].name, crystal, function() printer:effect(arr.weapon[i]) end)
   end
+  self:bottom()
+end
+
+function printer:helpEnvenomers(arr)
+  self:title("Help")
+  self:section("Trutki")
+  self:tableRow({5, 5, 48}, {"Dmg", "Czas", "Nazwa"}, arr)
   self:bottom()
 end

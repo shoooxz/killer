@@ -19,6 +19,7 @@ function loadObjects(force)
         "scripts/character/necro",
         "scripts/base/base",
         "scripts/base/boss",
+        "scripts/base/envenomer",
         "scripts/core",
         "scripts/keybind/callback",
         "scripts/keybind/core",

@@ -5,6 +5,7 @@ printer.titleMargin = 4
 printer.borderColor = "white"
 printer.tabLength = 1
 printer.commandColor = "orange"
+printer.linkColor = "cyan"
 printer.descriptionColor = "light_grey"
 printer.textColor = "light_grey"
 printer.sectionColor = "yellow"
@@ -46,8 +47,8 @@ printer.key2short = {
 	["Bar"] = "|",
 }
 
-function printer:link(text, func)
-	color = "cyan"
+function printer:link(color, text, func)
+	color = color or self.linkColor
 	cechoLink("<u><"..color..">"..text, func, "", true)
 end
 
@@ -130,7 +131,7 @@ function printer:tags(arr)
 	for i=1, #arr do
 		local value = arr[i]
 		len = len+string.len(value[2])
-		cechoLink("<u><"..value[1]..">"..value[2], value[3], "", true)
+		self:link(false, value[2], value[3])
 		if i ~= #arr then
 			cecho("<white>, ")
 		end
@@ -208,7 +209,7 @@ function printer:commandLink(name, desc, func)
 	local len = self.length-string.len(name)-string.len(desc)-3-self.tabLength -- -3  2 spacje i myslnik
 	cecho(
 		"<"..self.borderColor..">|"..string.rep(" ", self.tabLength))
-		printer:link(name, func)
+		printer:link(false, name, func)
 		cecho("<"..self.descriptionColor.."> - "..desc..string.rep(" ", len)..
 		"<"..self.borderColor..">|\n"
 	)
@@ -224,7 +225,7 @@ function printer:prefix(name, desc)
 	)
 end
 
-function printer:tableRow(size, header, arr, link, nohr)
+function printer:tableRow(size, header, arr, nohr)
 	local len = 0
 	for i in pairs(size) do
 		len = len + size[i]+2 -- kreska + spacja odzielajace kazdy cell
@@ -244,48 +245,51 @@ function printer:tableRow(size, header, arr, link, nohr)
 			color = self.commandColor
 		end
 		for index, value in pairs(arr[row]) do
-			--out = out.."<"..self.borderColor..">|"..string.rep(" ", 1)
 
-			-- skomplikowany uklad
+			-- jesli value to table
 			if type(value) == "table" then
-				if not value[1] then
+				if value[1] == "book" then
+
+					-- jesli value[1] ma string book - zastosuj specjalna budowe
 					printer:text(value[2], "grey")
 					if value[3] then
 						printer:text(value[3], "grey")
 					end
+
 					if row < #arr then
-						--out = out..self:getHr()
 							cecho(self:getHr())
 					end
+
 					finish = true
 				else
 					finish = false
 					cecho("<"..self.borderColor..">|"..string.rep(" ", 1))
-					-- if array color it
 					local filler = string.rep(" ", size[index]-string.len(value[2]))
-					if link then
-						cechoLink("<"..value[1]..">"..value[2], value[3], "", true)
+
+					-- jesli sa 3 elementy uznaj to za link
+					if #value == 3 then
+						self:link(value[1], value[2], value[3])
 						cecho(filler)
 					else
+						-- jesli sa 2 elementy uznaj to za text
 						cecho("<"..self.borderColor..">|"..string.rep(" ", 1))
-						--out = out.."<"..value[1]..">"..value[2]..filler
 						cecho("<"..value[1]..">"..value[2]..filler)
 					end
+
 				end
 			else
+
 					-- normalny text
+					cecho("<"..self.borderColor..">|"..string.rep(" ", 1))
 					local filler = string.rep(" ", size[index]-string.len(value))
-					--out = out.."<"..color..">"..value..filler
 					cecho("<"..color..">"..value..filler)
+
 			end
 		end
 
 		if not finish then
-			--out = out..string.rep(" ", fill).."<"..self.borderColor..">|\n"
 			cecho(string.rep(" ", fill).."<"..self.borderColor..">|\n")
-
 			if row < #arr then
-				--out = out..self:getHr()
 				if not nohr then
 					cecho(self:getHr())
 				end
@@ -293,7 +297,6 @@ function printer:tableRow(size, header, arr, link, nohr)
 		end
 
 	end
-	--cecho(out)
 end
 
 function printer:desc(name, desc)

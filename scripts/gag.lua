@@ -267,7 +267,7 @@ end
 
 function gag:eff(type)
 	echo(" ")
-	printer:link("("..base.effect[type].name..")", "printer:effect(base.effect['"..type.."'])")
+	printer:link(false, "("..base.effect[type].name..")", "printer:effect(base.effect['"..type.."'])")
 --[[
 ITEM_BLESS
 ITEM_EVIL

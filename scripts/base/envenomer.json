@@ -6,7 +6,7 @@
         "power": 8,
         "use": 2,
         "region": "Arras",
-        "room": 28626,
+        "room": 28626
     },
     {
         "name": "fiolka z zielonym plynem",
@@ -15,7 +15,7 @@
         "power": 2,
         "use": 6,
         "region": "Arras",
-        "room": 28626,
+        "room": 28626
     },
     {
         "name": "zolta masc",
@@ -24,7 +24,7 @@
         "power": 3,
         "use": 3,
         "region": "Arras",
-        "room": 28626,
+        "room": 28626
     },
     {
         "name": "mala czarna buteleczka",
@@ -33,7 +33,7 @@
         "power": 2,
         "use": 1,
         "region": "Naugrimy",
-        "room": 30071,
+        "room": 30071
     },
     {
         "name": "kanister z roztworem fluorowodoru",
@@ -42,7 +42,7 @@
         "power": 1,
         "use": 12,
         "region": "Naugrimy",
-        "room": 30099,
+        "room": 30099
     },
     {
         "name": "tykwa z trucizna",
@@ -51,7 +51,7 @@
         "power": 1,
         "use": 7,
         "region": "Naugrimy",
-        "room": 30099,
+        "room": 30099
     },
     {
         "name": "pastylka ziolowa",
@@ -60,7 +60,7 @@
         "power": 1,
         "use": 1,
         "region": "Arras",
-        "room": 6042,
+        "room": 6042
     },
     {
         "name": "male puzderko",
@@ -69,7 +69,7 @@
         "power": 2,
         "use": 2,
         "region": "Arras",
-        "room": 6179,
+        "room": 6179
     },
     {
         "name": "czarna grudka dziwnej substancji",
@@ -78,7 +78,7 @@
         "power": 1,
         "use": 4,
         "region": "Arras",
-        "room": 6179,
+        "room": 6179
     },
     {
         "name": "brazowa grudka dziwnej substancji",
@@ -87,7 +87,7 @@
         "power": 1,
         "use": 5,
         "region": "Arras",
-        "room": 6179,
+        "room": 6179
     },
     {
         "name": "pokrzyk, wilcza jagoda",
@@ -96,7 +96,7 @@
         "power": 0,
         "use": 1,
         "region": "Carrallak",
-        "room": 533,
+        "room": 533
     },
     {
         "name": "lulek czarny",
@@ -105,7 +105,7 @@
         "power": 1,
         "use": 3,
         "region": "Carrallak",
-        "room": 533,
+        "room": 533
     },
     {
         "name": "peranskie szczekniecie",
@@ -114,7 +114,7 @@
         "power": 2,
         "use": 4,
         "region": "Carrallak",
-        "room": 533,
+        "room": 533
     },
     {
         "name": "buteleczka z muskaryna",
@@ -123,7 +123,7 @@
         "power": 2,
         "use": 3,
         "region": "Arras",
-        "room": 10852,
+        "room": 10852
     },
     {
         "name": "smocza slina",
@@ -132,7 +132,7 @@
         "power": 3,
         "use": 7,
         "region": "Easterial",
-        "room": 9300,
+        "room": 9300
     },
     {
         "name": "metna mikstura",
@@ -141,7 +141,7 @@
         "power": 9,
         "use": 1,
         "region": "Arras",
-        "room": 15990,
+        "room": 15990
     },
     {
         "name": "niebieski lisc",
@@ -150,7 +150,7 @@
         "power": 2,
         "use": 1,
         "region": "Arras",
-        "room": 5342,
+        "room": 5342
     },
     {
         "name": "amoniak w tykwie",
@@ -159,7 +159,7 @@
         "power": 9,
         "use": 2,
         "region": "Narshe",
-        "room": 28138,
+        "room": 28138
     },
     {
         "name": "zielonozolta trucizna",
@@ -168,7 +168,7 @@
         "power": 2,
         "use": 6,
         "region": "Narshe",
-        "room": 28138,
+        "room": 28138
     },
     {
         "name": "trucizna paralizujaca",
@@ -177,7 +177,7 @@
         "power": 7,
         "use": 1,
         "region": "Narshe",
-        "room": 28145,
+        "room": 28145
     },
     {
         "name": "fiolka z brunatnym plynem",
@@ -186,7 +186,7 @@
         "power": 1,
         "use": 10,
         "region": "Obilon",
-        "room": 27439,
+        "room": 27439
     },
     {
         "name": "buteleczka z zielona ciecza",
@@ -195,7 +195,7 @@
         "power": 2,
         "use": 3,
         "region": "Obilon",
-        "room": 27442,
+        "room": 27442
     },
     {
         "name": "buteleczka z jaskrawo niebieska ciecza",
@@ -204,7 +204,7 @@
         "power": 4,
         "use": 1,
         "region": "Obilon",
-        "room": 27442,
+        "room": 27442
     },
     {
         "name": "buteleczka z czerwonawa ciecza",
@@ -213,7 +213,7 @@
         "power": 3,
         "use": 2,
         "region": "Obilon",
-        "room": 27442,
+        "room": 27442
     },
     {
         "name": "hebanowe pudelko",
@@ -222,7 +222,7 @@
         "power": 6,
         "use": 3,
         "region": "Obilon",
-        "room": 27442,
+        "room": 27442
     },
     {
         "name": "pudelko z narysowana czaszka gnolla",
@@ -231,7 +231,7 @@
         "power": 7,
         "use": 1,
         "region": "Obilon",
-        "room": 27442,
+        "room": 27442
     },
     {
         "name": "pudeleczko zielonkawej mazi",
@@ -240,6 +240,6 @@
         "power": 2,
         "use": 3,
         "region": "Silea",
-        "room": 50226,
+        "room": 50226
     }
 ]
