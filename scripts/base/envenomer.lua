@@ -62,7 +62,7 @@ envenomer.type = {
     ["saved"] = "4d35",
     ["full"] = "0",
     ["duration"] = "2d3",
-    ["note"] = "W przypadku braku mastery envenom zabija uzywajacego",
+    ["note"] = "W przypadku braku mastery envenom zabija uzywajacego.",
   },
   ["9"] = {
     ["name"] = "oslabiajaca sile",
@@ -104,6 +104,35 @@ function envenomer:countDamageDuration()
   end
 end
 
+function envenomer:getListById(id)
+  local out = {}
+  for i=1, #self.list do
+    if self.list[i].power == tonumber(id) then
+      table.insert(out, self.list[i])
+    end
+  end
+  return out
+end
+
+function envenomer:printList(id)
+  local out = {}
+  local list = self:getListById(id)
+  out.meta = self.type[id]
+  out.list = {}
+  for i=1, #list do
+    local temp = {}
+    table.insert(out.list, {{"text", "orange", utils:ucfirst(list[i].name)}})
+    table.insert(temp, list[i].mob)
+    table.insert(temp, list[i].use)
+    table.insert(temp, list[i].region)
+    table.insert(temp, {false, "Wyznacz droge", "display("..(list[i].room)..")"})
+    table.insert(out.list, temp)
+    table.insert(out.list, {{"text", "dim_grey", list[i].note, true}})
+  end
+  printer:helpEnvenomersList(out)
+end
+
+
 function envenomer:getTypes()
   local sorted = self:sortTypes(self.type)
   local out = {}
@@ -111,7 +140,7 @@ function envenomer:getTypes()
     local temp = {}
     table.insert(temp, sorted[i].full)
     table.insert(temp, sorted[i].duration)
-    table.insert(temp, {false, sorted[i].name, ""})
+    table.insert(temp, {false, utils:ucfirst(sorted[i].name), "envenomer:printList('"..(i-1).."')"})
     table.insert(out, temp)
   end
   return out

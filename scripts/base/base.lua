@@ -743,26 +743,28 @@ function base:spellSearch(spell)
       for j, s in pairs(v.spells) do
         -- jesli spell znajduje sie w spellach
         if string.lower(s) == spell then
+
           local arr = {}
           local stars = ""
           local notes = ""
+					local endOnBook = true
           if v.boss then
             stars = " ("..v.boss..")"
           end
-          if v.notes then
-            notes = "Notka: "..v.notes
-          end
+
           table.insert(arr, {self:classToColor(v.class), self:rgetClass(v.class), ""})
       		table.insert(arr, {"tomato", v.mob..stars, ""})
           table.insert(arr, {"white", v.region, ""})
           table.insert(book, arr)
-          arr = {}
-          local temp = {"book", "Ksiega: "..utils:concat(self:fixBookSpells(v.spells), ", ")}
-          if notes then
-            table.insert(temp, notes)
-          end
-          table.insert(arr, temp)
-          table.insert(book, arr)
+
+					if v.notes then
+						endOnBook = false
+					end
+					table.insert(book, {{"text", "grey", "Ksiega: "..utils:concat(self:fixBookSpells(v.spells), ", "), endOnBook}})
+					if v.notes then
+						table.insert(book, {{"text", "dim_grey", "Notka: "..v.notes, true}})
+					end
+
         end
       end
     end

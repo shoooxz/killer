@@ -248,19 +248,18 @@ function printer:tableRow(size, header, arr, nohr)
 
 			-- jesli value to table
 			if type(value) == "table" then
-				if value[1] == "book" then
+				if value[1] == "text" then
 
-					-- jesli value[1] ma string book - zastosuj specjalna budowe
-					printer:text(value[2], "grey")
-					if value[3] then
-						printer:text(value[3], "grey")
-					end
+					-- jesli value[1] ma string text - zastosuj specjalna budowe
+					printer:text(value[3], value[2])
 
-					if row < #arr then
+					-- jesli to nie jest ostatni wiersz i w texcie wymuszony jest HR
+					if row < #arr and value[4] then
 							cecho(self:getHr())
 					end
 
 					finish = true
+
 				else
 					finish = false
 					cecho("<"..self.borderColor..">|"..string.rep(" ", 1))

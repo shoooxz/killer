@@ -1,7 +1,7 @@
 [
     {
         "name": "pojemnik z czerwonym proszkiem",
-        "note": "",
+        "note": "Zabic",
         "mob": "Mag Villert",
         "power": 8,
         "use": 2,
@@ -10,7 +10,7 @@
     },
     {
         "name": "fiolka z zielonym plynem",
-        "note": "",
+        "note": "Zabic",
         "mob": "Mag Villert",
         "power": 2,
         "use": 6,
@@ -19,7 +19,7 @@
     },
     {
         "name": "zolta masc",
-        "note": "",
+        "note": "Zabic",
         "mob": "Mag Villert",
         "power": 3,
         "use": 3,
@@ -241,5 +241,41 @@
         "use": 3,
         "region": "Silea",
         "room": 50226
+    },
+    {
+        "name": "mala czarna buteleczka",
+        "note": "W szafce",
+        "mob": "Pokoj",
+        "power": 2,
+        "use": 1,
+        "region": "Carrallak",
+        "room": 34148
+    },
+    {
+        "name": "siny grzyb",
+        "note": "Zabic",
+        "mob": "Mykonid",
+        "power": 9,
+        "use": 1,
+        "region": "Podmrok",
+        "room": 41638
+    },
+    {
+        "name": "grzyb plamisty",
+        "note": "Zabic",
+        "mob": "Mykonid",
+        "power": 11,
+        "use": 1,
+        "region": "Podmrok",
+        "room": 41638
+    },
+    {
+        "name": "trucizna grzybiego krola",
+        "note": "Zabic",
+        "mob": "Krol Mykonidow",
+        "power": 10,
+        "use": 1,
+        "region": "Podmrok",
+        "room": 16900
     }
 ]

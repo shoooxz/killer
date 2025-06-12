@@ -456,3 +456,18 @@ function printer:helpEnvenomers(arr)
   self:tableRow({5, 5, 48}, {"Dmg", "Czas", "Nazwa"}, arr)
   self:bottom()
 end
+
+function printer:helpEnvenomersList(arr)
+  self:title("Help")
+  self:section(arr.meta.name)
+  if arr.meta.note ~= "" then
+    self:text(arr.meta.note, self.textColor)
+    self:space()
+  end
+  if arr.list then
+    self:tableRow({44, 3, 12, 14}, {}, arr.list, true)
+  else
+    self:text("Brak")
+  end
+  self:bottom()
+end
