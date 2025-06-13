@@ -125,20 +125,23 @@ function printer:text(text, color)
 	end
 end
 
-function printer:tags(arr)
-	cecho("<"..self.borderColor..">|"..string.rep(" ", self.tabLength))
-	local len = 0
-	for i=1, #arr do
-		local value = arr[i]
-		len = len+string.len(value[2])
-		self:link(false, value[2], value[3])
-		if i ~= #arr then
-			cecho("<white>, ")
+function printer:tags(arr, arg)
+	if type(arr) == "table" then
+		cecho("<"..self.borderColor..">|"..string.rep(" ", self.tabLength))
+		local len = 0
+		for i=1, #arr do
+			local value = arr[i]
+			len = len+string.len(value[2])
+			self:link(false, value[2], value[3])
+			if i ~= #arr then
+				cecho("<white>, ")
+			end
 		end
+	  local rep = self.length-self.tabLength-len-((#arr-1)*2)
+		cecho(string.rep(" ", rep).."<"..self.borderColor..">|\n")
+	else
+		self:tags({{false, arr, arg}})
 	end
-  local rep = self.length-self.tabLength-len-((#arr-1)*2)
-
-	cecho(string.rep(" ", rep).."<"..self.borderColor..">|\n")
 end
 
 function printer:textLine(line, color)

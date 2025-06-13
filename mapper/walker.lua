@@ -5,7 +5,6 @@ function doSpeedWalk()
     --speedWalkPath
     --display(speedWalkDir)
     if not mapper.walker.going then
-      display(speedWalkDir)
         mapper.walker.path = speedWalkDir
         mapper.walker.going = true
         mapper.walker.ids = speedWalkPath
@@ -13,6 +12,10 @@ function doSpeedWalk()
         mapper:speedwalk()
         -- TODO obliczyc czas delay x ilosc lokacji
     end
+end
+
+function mapper:showPath()
+
 end
 
 function mapper:highlight(path)

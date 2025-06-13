@@ -648,36 +648,52 @@ function base:schoolToShort(long)
 	return out[long]
 end
 
-function base:dif(first, second)
-	local reverse = {
-		["inwo"] = {"zaur", "przy"},
-		["iluz"] = {"inwo", "nekr", "odrz"},
-		["nekr"] = {"iluz", "zaur"},
-		["odrz"] = {"prze", "iluz"},
-		["prze"] = {"odrz", "nekr"},
-		["przy"] = {"pozn", "inwo"},
-		["zaur"] = {"inwo", "nekr"},
-	}
-	local removed = {}
-	for i=1, 5 do -- do 5 kregu
-		for j=1, #self.spellClass[second][tostring(i)] do   -- przez wszystkie spelle z kregu
-			local spell = self.spellClass[second][tostring(i)][j]
-			for k=1, #reverse[first] do  -- przez wszystkie przeciwne szkoly
-				local school = self.spellSchool[reverse[first][k]]
-				if utils:inArray2(spell, school) then
-					table.insert(removed, spell)
+function base:dif(cmd)
+	if cmd == "" then
+		-- index
+		printer:difIndex()
+	else
+		local arr = utils:split(utils:trim(cmd), " ")
+		local first = arr[1]
+		local second = arr[2]
+		local reverse = {
+			["inwo"] = {"zaur", "przy"},
+			["iluz"] = {"inwo", "nekr", "odrz"},
+			["nekr"] = {"iluz", "zaur"},
+			["odrz"] = {"prze", "iluz"},
+			["prze"] = {"odrz", "nekr"},
+			["przy"] = {"pozn", "inwo"},
+			["zaur"] = {"inwo", "nekr"},
+		}
+		local removed = {}
+		for i=1, 5 do -- do 5 kregu
+			for j=1, #self.spellClass[second][tostring(i)] do   -- przez wszystkie spelle z kregu
+				local spell = self.spellClass[second][tostring(i)][j]
+				for k=1, #reverse[first] do  -- przez wszystkie przeciwne szkoly
+					local school = self.spellSchool[reverse[first][k]]
+					if utils:inArray2(spell, school) then
+						if not removed[i] then
+							removed[i] = {}
+						end
+						table.insert(removed[i], spell)
+					end
 				end
 			end
 		end
-	end
-	-- jesli w drugiej jest druid, zawsze usuwany jest na3
-	if second == "dru" then
-		if not utils:inArray2("nature ally III", removed) then
-			table.insert(removed, "nature ally III")
+		-- jesli w drugiej jest druid, zawsze usuwany jest na3
+		if second == "dru" then
+			if not utils:inArray2("nature ally III", removed[5]) then
+				table.insert(removed[5], "nature ally III")
+			end
 		end
+		local out = {}
+		for i=1, 5 do
+			if removed[i] then
+				table.insert(out, {{"text", "grey", "("..i..") "..utils:concat(removed[i], ", "), true}})
+			end
+    end
+		printer:difCheck(out)
 	end
-	display(removed)
-	--display(self.spellClass)
 end
 
 function base:buildSkillLevel()

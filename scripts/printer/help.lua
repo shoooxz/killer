@@ -53,8 +53,18 @@ function printer:settings()
     self:command("/opcje kiopener "..profile:get("kiopener"), "Opener def (oddzielone #)")
     self:command("/opcje fclass "..profile:get("fclass"), "Pierwsza klasa")
     self:command("/opcje sclass "..profile:get("sclass"), "Druga klasa")
-    self:info("woj, zlo, bar, cza, nom, mag, dru, kle, pal")
+    self:tags("Jak uzupelniac klasy?", "printer:classInfo()")
     self:bottom()
+end
+
+function printer:classInfo()
+  self:title("Help")
+  self:text("Identyfikacja klas w skryptach odbywa sie w kilku miejscach i opiera sie na skrotach. W przypadku maga-specjalisty sa to pierwsze CZTERY litery nazwy szkoly, np.: Inwokacje - inwo")
+  self:info("inwo, iluz, nekr, odrz, prze, przy, zaur, ogol")
+  self:space()
+  self:text("W przypadku innych klas sa to pierwsze TRZY litery nazwy klasy, np.: Wojownik - woj")
+  self:info("woj, zlo, bar, cza, nom, dru, kle, pal")
+  self:bottom()
 end
 
 function printer:scripts()
@@ -315,16 +325,24 @@ function printer:rollerHelp()
     self:bottom()
 end
 
-function printer:dif(fclass, sclass)
-  if not fclass then
-    -- index
+function printer:difCheck(arr)
     self:title("Help")
-    self:command("/roller_start", "Sprawdza mozliwe statystyki")
-    self:command("/roller_stop", "Zatrzymuje szukanie")
+    self:tableRow({60}, {}, arr, true)
     self:bottom()
-  else
+end
 
-  end
+function printer:difIndex()
+    self:title("Help")
+    self:text("Szczegolnym przypadkiem laczenia klas jest mag ogolny. Mag ogolny dziedziczy wszystkie czary ze wszystkich szkol, z pewnymi wyjatkami.")
+    self:space()
+    self:text("Czary, ktore zostana usuniete: detect undead, spirits armor, mass invis, lesser magic resist, summon lesser meteor, decay, unholy fury, flame lace, psychic scream.")
+    self:text("Czary, ktore otrzymuje na 1 klasie: domination")
+    self:space()
+    self:text("Dodatkowo, w przypadku dziedziczenia czaru fetch nomada, zgodnie z zasada przenoszenia kregu czaru na pierwsza klase, czar ten zostanie usuniety.")
+    self:space()
+    self:command("/dif (klasa) (klasa)", "Jakie czary traci sie przy laczeniu klas")
+    self:tags("Jak uzupelniac klasy?", "printer:classInfo()")
+    self:bottom()
 end
 
 function printer:helpIndex()
@@ -376,8 +394,6 @@ function printer:helpMem()
 end
 
 function printer:helpDualclass()
-  local link = {}
-  table.insert(link, { false, "(/dif)", "printer:dif(false)"})
   self:title("Help")
   self:section("Dwuklasowosc")
   self:line("W procesie laczenia klas branych jest pod uwage kilka czynnikow:", self.commandColor)
@@ -398,13 +414,11 @@ function printer:helpDualclass()
   self:space()
   self:text("Przy dziedziczeniu czaru, ktory juz istnieje, brany jest pod uwage krag z pierwszej klasy.")
   self:space()
-  self:tags(link)
+  self:tags("(/dif)", "printer:difIndex()")
   self:bottom()
 end
 
 function printer:helpStone()
-  local link = {}
-  table.insert(link, { false, "(/help efekty)", "base:topic('efekty')"})
   self:title("Help")
   self:section("Kamienie")
   self:text("Kamienie mocy, wlozone w odpowiednie wyposazenie, zwiekszaja: moc umiejetnosci (zbroja), poziom czarow (bizuteria), oraz dodaja unikatowe efekty (bron/tarcza).")
@@ -421,7 +435,7 @@ function printer:helpStone()
   self:space()
   self:text("Ogolnie przyjeta taktyka to niszczenie artefaktow (destroyartefact) w Kuzni w Wulkanie. Okruchy przetwarza sie glownie na armor, z wyjatkiem broni lub tarczy w sytuacji, gdy nie mozemy zdobyc krysztalow.")
   self:space()
-  self:tags(link)
+  self:tags("(/help efekty)", "base:topic('efekty')")
   self:bottom()
 end
 
