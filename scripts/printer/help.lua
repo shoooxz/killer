@@ -63,7 +63,7 @@ function printer:classInfo()
   self:info("inwo, iluz, nekr, odrz, prze, przy, zaur, ogol")
   self:space()
   self:text("W przypadku innych klas sa to pierwsze TRZY litery nazwy klasy, np.: Wojownik - woj")
-  self:info("woj, zlo, bar, cza, nom, dru, kle, pal")
+  self:info("woj, zlo, bar, cza, nom, dru, kle, pal, mag")
   self:bottom()
 end
 
@@ -167,6 +167,7 @@ function printer:mapper()
     self:command("/poi (kierunek)", "Dodaj specjalne przejscie z `wyjscie` i kolorem poi")
     self:command("/blokuj (kierunek)", "Zablokuj wyjscie")
     self:command("/odblokuj (kierunek)", "Odblokuj wyjscie")
+    self:command("/brama (komenda)", "Jaka komenda otworzyc brame")
     self:bottom()
 end
 
@@ -179,8 +180,7 @@ function printer:help(arr)
   end
   self:text(arr.meta.info)
   if arr.meta.note ~= 0 then
-    self:space()
-    self:text(arr.meta.note, self.textColor)
+    self:text(arr.meta.note, self.commentColor)
   end
   if next(arr.teacher) then
     self:space()

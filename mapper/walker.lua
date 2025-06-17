@@ -1,5 +1,10 @@
 -- ZROBIC W BACKWARD -1 step do walkera WIESZ O CO BEBE
 
+function mapper:goTo(id)
+
+  gotoRoom(id)
+end
+
 function doSpeedWalk()
     --speedWalkDir
     --speedWalkPath
@@ -83,7 +88,6 @@ function mapper:walkerMove(dir)
         end
         send(dir)
         unHighlightRoom(roomID)
-        --send("herb") --- TODO Ogarnac alias
         self:center(roomID)
     else
         printer:error("Walker", "Chodzik wstrzymany!")

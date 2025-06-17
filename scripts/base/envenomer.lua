@@ -125,7 +125,7 @@ function envenomer:printList(id)
     table.insert(temp, list[i].mob)
     table.insert(temp, list[i].use)
     table.insert(temp, list[i].region)
-    table.insert(temp, {false, "Wyznacz droge", "display("..(list[i].room)..")"})
+    table.insert(temp, {false, "Wyznacz droge", "mapper:goTo("..tostring(list[i].room)..")"})
     table.insert(out.list, temp)
     table.insert(out.list, {{"text", "dim_grey", list[i].note, true}})
   end

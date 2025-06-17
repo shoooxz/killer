@@ -218,8 +218,8 @@ function base:help(name)
 					out.meta.len = 5
 					school = "Brak"
 				end
-				table.insert(arr, {self:schoolToColor(school), school, ""})
-				table.insert(arr, {"white", self:targetToFancy(out.meta.target), ""})
+				table.insert(arr, {self:schoolToColor(school), school})
+				table.insert(arr, {"white", self:targetToFancy(out.meta.target)})
 				table.insert(out.meta.additional, arr)
 				found = true
 			end
@@ -768,9 +768,9 @@ function base:spellSearch(spell)
             stars = " ("..v.boss..")"
           end
 
-          table.insert(arr, {self:classToColor(v.class), self:rgetClass(v.class), ""})
-      		table.insert(arr, {"tomato", v.mob..stars, ""})
-          table.insert(arr, {"white", v.region, ""})
+          table.insert(arr, {self:classToColor(v.class), self:rgetClass(v.class)})
+      		table.insert(arr, {false, v.mob..stars, "mapper:goTo("..tostring(v.roomVnum)..")"})
+          table.insert(arr, {"white", v.region})
           table.insert(book, arr)
 
 					if v.notes then
@@ -803,11 +803,11 @@ function base:spellSearch(spell)
 							minmaxColor = "steel_blue"
 						else
 							minmax = utils:doubleDigit(s.min).."-"..utils:doubleDigit(s.max)
-							minmaxColor = "white"
+							minmaxColor = printer.textColor
 						end
-						table.insert(arr, {minmaxColor, minmax, ""})
-        		table.insert(arr, {"green", v.mob, "gotoRoom('"..v.roomVnum.."')"})
-            table.insert(arr, {"white", v.region, ""})
+						table.insert(arr, {minmaxColor, minmax})
+        		table.insert(arr, {false, v.mob, "mapper:goTo("..tostring(v.roomVnum)..")"})
+            table.insert(arr, {printer.textColor, v.region})
             table.insert(teacher, arr)
           end
         end

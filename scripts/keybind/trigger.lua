@@ -35,13 +35,7 @@ end
 
 -- GATE BIND
 function keybind:gate(str)
-	local gate2command = {
-		["Wschodnia brama jest zamknieta."] = "zastukaj we wschodnie wrota",
-	}
-	local command = "pociagnij;zapukaj;zadzwon"
-	if gate2command[str] then
-		command = gate2command[str]
-	end
+	local command = getRoomUserData(mapper.room.id, "gate")
 	self.gateCommand = command
 	mapper:walkerInterrupted(command)
 	printer:bind(self.conf.keybindGate.modifier, self.conf.keybindGate.key, command)

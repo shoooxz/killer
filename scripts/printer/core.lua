@@ -6,6 +6,7 @@ printer.borderColor = "white"
 printer.tabLength = 1
 printer.commandColor = "orange"
 printer.linkColor = "cyan"
+printer.commentColor = "dim_grey"
 printer.descriptionColor = "light_grey"
 printer.textColor = "light_grey"
 printer.sectionColor = "yellow"
@@ -274,7 +275,6 @@ function printer:tableRow(size, header, arr, nohr)
 						cecho(filler)
 					else
 						-- jesli sa 2 elementy uznaj to za text
-						cecho("<"..self.borderColor..">|"..string.rep(" ", 1))
 						cecho("<"..value[1]..">"..value[2]..filler)
 					end
 

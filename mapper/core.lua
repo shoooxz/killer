@@ -205,7 +205,6 @@ function mapper:setMode(mode)
 end
 
 function mapper:getRoomInfo()
-	-- TODO rozwinac ta funkcje, zastanowic sie nad exits
 	local info = {
 		{
 			'ID gmcp',
@@ -213,13 +212,39 @@ function mapper:getRoomInfo()
 		},
 		{
 			"Opis gmcp",
-			self.gmcp.short
+			utils:replacePolish(self.gmcp.short)
 		},
-		{
-			"Wyjscia gmcp",
-			false--self.gmcp.exits
-		}
 	}
+	local water = getRoomUserData(self.room.id, "water")
+	if water ~= "" then
+		table.insert(info, {
+			'Woda',
+			water
+		})
+	end
+	local gate = getRoomUserData(self.room.id, "gate")
+	if gate ~= "" then
+		table.insert(info, {
+			'Brama',
+			gate
+		})
+	end
+	local block = getRoomUserData(self.room.id, "block")
+	if block ~= "" then
+		local exits = utils:split(utils:ltrim(block, "#"), "#")
+		table.insert(info, {
+			'Blokuj',
+			exits
+		})
+	end
+	local bind = getRoomUserData(self.room.id, "bind")
+	if bind ~= "" then
+		local binds = utils:split(bind, "#")
+		table.insert(info, {
+			'Bindy',
+			binds
+		})
+	end
 	if next(self.room) then
 		local areaID, areaName = self:getArea(self.room.area)
 		table.insert(info, {
@@ -363,4 +388,10 @@ function mapper:unbindEvents()
 	end
 end
 
+function mapper:gate(command)
+	setRoomUserData(self.room.id, "gate", command)
+	printer:success("Mapper",
+		"Dodano brame za pomoca komendy '"..command.."'"
+	)
+end
 mapper:init()

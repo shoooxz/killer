@@ -2815,7 +2815,7 @@ keybind.show = true</script>
 			<packageName></packageName>
 			<time>00:01:00.000</time>
 		</Timer>
-		<Timer isActive="no" isFolder="no" isTempTimer="no" isOffsetTimer="no">
+		<Timer isActive="yes" isFolder="no" isTempTimer="no" isOffsetTimer="no">
 			<name>env</name>
 			<script>learn:envTick()</script>
 			<command></command>
@@ -2934,6 +2934,13 @@ keybind.show = true</script>
 					<command></command>
 					<packageName></packageName>
 					<regex>^/zlok$</regex>
+				</Alias>
+				<Alias isActive="yes" isFolder="no">
+					<name>^/brama (.*)$</name>
+					<script>mapper:gate(matches[2])</script>
+					<command></command>
+					<packageName></packageName>
+					<regex>^/brama (.*)$</regex>
 				</Alias>
 			</AliasGroup>
 			<Alias isActive="yes" isFolder="no">
@@ -3461,7 +3468,7 @@ send("exam "..matches[2])</script>
 					<script>base:dif(matches[2], matches[3])</script>
 					<command></command>
 					<packageName></packageName>
-					<regex>^/dif (.*) (.*)$</regex>
+					<regex>^/dif(.*)$</regex>
 				</Alias>
 				<Alias isActive="yes" isFolder="no">
 					<name>^/test$</name>

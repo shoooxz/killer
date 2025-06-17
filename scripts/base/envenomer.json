@@ -256,7 +256,7 @@
         "note": "Zabic",
         "mob": "Mykonid",
         "power": 9,
-        "use": 1,
+        "use": 5,
         "region": "Podmrok",
         "room": 41638
     },
@@ -265,7 +265,7 @@
         "note": "Zabic",
         "mob": "Mykonid",
         "power": 11,
-        "use": 1,
+        "use": 3,
         "region": "Podmrok",
         "room": 41638
     },
@@ -274,8 +274,44 @@
         "note": "Zabic",
         "mob": "Krol Mykonidow",
         "power": 10,
-        "use": 1,
+        "use": 3,
         "region": "Podmrok",
         "room": 16900
+    },
+    {
+        "name": "fiolka z czerwona ciecza",
+        "note": "Po wykonaniu zadan, 5% szans na reset",
+        "mob": "Sprzedawca",
+        "power": 8,
+        "use": 1,
+        "region": "NK",
+        "room": 55324
+    },
+    {
+        "name": "niewielki szklany sloiczek",
+        "note": "Po wykonaniu zadan, 15% szans na reset",
+        "mob": "Sprzedawca",
+        "power": 6,
+        "use": 3,
+        "region": "NK",
+        "room": 55324
+    },
+    {
+        "name": "fiolka z przezroczystym plynem",
+        "note": "Po wykonaniu zadan, 30% szans na reset",
+        "mob": "Sprzedawca",
+        "power": 4,
+        "use": 4,
+        "region": "NK",
+        "room": 55324
+    },
+    {
+        "name": "pojemnik z zielona mascia",
+        "note": "Po wykonaniu zadan, 10% szans na reset",
+        "mob": "Sprzedawca",
+        "power": 7,
+        "use": 2,
+        "region": "NK",
+        "room": 55324
     }
 ]
