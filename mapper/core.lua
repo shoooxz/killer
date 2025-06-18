@@ -16,11 +16,6 @@ mapper.gmcpNextLocation = nil -- zsiadz ze statku, wyjdz z dylizansu
 mapper.spe2dir = {} -- special exit dla dir
 mapper.dir2spe = {} -- dir dla special exit
 mapper.dir2door = {} -- dir dla drzwi
-mapper.walker = {
-	["step"] = 1,
-	["going"] = false,
-	["path"] = {},
-}
 mapper.color2sector = {
 	["miasto"] = 272,
 	["jaskinia"] = 272,

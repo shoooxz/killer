@@ -3,7 +3,7 @@ function mapper:move(dir)
 		send(dir)
 	end]]--
 	keybind.show = true
-	self:walkerStop()
+	exp:stop()
 	boss:timerStop()
 
 	-- BLOKUJ WYJSCIA  /blokuj /odblokuj

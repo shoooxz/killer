@@ -244,7 +244,7 @@ function profile:init(name)
 			["oh"] = "",
 			["stats_progress"] = 0,
 			["mode"] = 1,
-			["walker"] = 1,
+			["walker"] = 10,
 			["water"] = "butla",
 			["food"] = "jablko",
 			["sub"] = "Link",

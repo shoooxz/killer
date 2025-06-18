@@ -235,13 +235,6 @@ function base:help(name)
 	end
 end
 
-function base:showPath(room)
-  local path = getPath(mapper.room.id, room)
-  if path then
-    mapper:highlight(speedWalkPath)
-  end
-end
-
 --[[
 odrzucenie  <> przemiany/iluzje
 przemiany   <> odrzucanie/nekromacja
@@ -769,7 +762,7 @@ function base:spellSearch(spell)
           end
 
           table.insert(arr, {self:classToColor(v.class), self:rgetClass(v.class)})
-      		table.insert(arr, {false, v.mob..stars, "mapper:goTo("..tostring(v.roomVnum)..")"})
+      		table.insert(arr, {false, v.mob..stars, "exp:goTo("..tostring(v.roomVnum)..")"})
           table.insert(arr, {"white", v.region})
           table.insert(book, arr)
 
@@ -806,7 +799,7 @@ function base:spellSearch(spell)
 							minmaxColor = printer.textColor
 						end
 						table.insert(arr, {minmaxColor, minmax})
-        		table.insert(arr, {false, v.mob, "mapper:goTo("..tostring(v.roomVnum)..")"})
+        		table.insert(arr, {false, v.mob, "exp:goTo("..tostring(v.roomVnum)..")"})
             table.insert(arr, {printer.textColor, v.region})
             table.insert(teacher, arr)
           end

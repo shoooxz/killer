@@ -12,6 +12,76 @@ exp.heal.spell = "cure serious"
 exp.heal.reverse = true
 exp.deadCount = 0
 exp.tankSub = true
+exp.ids = {}
+
+function exp:goTo(id)
+  --gotoRoom(id)
+  display(id)
+end
+
+function exp:showPath(room)
+  local path = getPath(mapper.room.id, room)
+  if path then
+    display(path)
+  end
+end
+
+function exp:highlight(path)
+  for _, roomId in ipairs(path) do
+    highlightRoom(tonumber(roomId), 255, 255, 255, 0, 0, 0, 1, 255, 0)
+  end
+end
+
+function exp:unhighlight(path)
+  if path then
+    for _, roomId in ipairs(path) do
+      if roomId then
+        unHighlightRoom(roomId)
+      end
+    end
+  end
+end
+
+function exp:dirHasDoor(exit)
+  local doors = getDoors(getPlayerRoom())
+  if exit == "d" then exit = "down" end
+  if exit == "u" then exit = "up" end
+  for dir, _ in pairs(doors) do
+    if dir == exit then
+      return true
+    end
+  end
+  return false
+end
+
+function exp:interrupted(command)
+    if self.going then
+        -- w tym momencie jest spauzowane, czeka na nowa lokacje
+        send(command)
+        stopRecursion = true
+        tempTimer(5, function()
+            -- po 5 sec cofnij step i odpauzuj
+            stopRecursion = false
+            exp.step = exp.step - 1
+            exp.paused = false
+            self:speedwalk()
+        end)
+    end
+end
+
+function doSpeedWalk()
+    if not exp.going then
+        exp.ids = speedWalkPath
+        exp:highlight(speedWalkPath)
+        exp:start({
+          ["path"] = speedWalkDir,
+          ["enemy"] = {},
+          ["ident"] = false,
+          ["loot"] = "cialo",
+        })
+        -- TODO obliczyc czas delay x ilosc lokacji
+    end
+end
 
 function exp:isGoing()
   return self.going
@@ -24,9 +94,11 @@ function exp:start(conf)
     self.step = 1
     self.path = self.conf.path
     self.members = self:getMembers()
-    opener:setByName(self.conf.ident)
-    state:orderTeam("opener "..self.conf.ident)
-    -- TODO dodac buff set na start
+    if self.conf.ident then
+      opener:setByName(self.conf.ident)
+      state:orderTeam("opener "..self.conf.ident)
+      -- TODO dodac buff set na start
+    end
     if self.conf.onStart then
       self.conf.onStart()
     end
@@ -36,7 +108,10 @@ end
 
 function exp:pause()
   if self.paused then
-    tempTimer(2, function()
+    if stopRecursion then
+      return false
+    end
+    tempTimer(1, function()
       self:pause()
     end)
   else
@@ -54,8 +129,8 @@ function exp:speedwalk()
           self:waitForNewRoom()
       end
   else
-      tempTimer(2, function()
-          printer:error("Exp", "Koniec!")
+      tempTimer(1, function()
+          printer:error("GPS", "Koniec!")
       end)
       self:stop()
   end
@@ -63,7 +138,10 @@ end
 
 function exp:waitForNewRoom()
   if gmcp.Room.Info.num ~= self.num then
-    tempTimer(1, function()
+    if stopRecursion then
+      return false
+    end
+    tempTimer(profile:get("walker")/10, function()
       self:waitForNewRoom()
     end)
   else
@@ -81,14 +159,15 @@ function exp:move(dir)
         end
     end
     if roomID then
-        if mapper:walkerDirHasDoor(dir) then
+        if self:dirHasDoor(dir) then
           send("open "..dir)
         end
         send(dir)
         mapper:center(roomID)
+        unHighlightRoom(roomID)
         return roomID
     else
-        printer:error("Exp", "Nie mozna znalezc Room ID!")
+        printer:error("GPS", "Nie mozna znalezc Room ID!")
         self:stop()
     end
 end
@@ -104,14 +183,18 @@ function exp:doThings()
       state:meKill(enemy)()
     end
   else
-    -- jesli heal jest w memie
-    if mem:canCast(self.heal.spell) then
-      -- odpauzuj
-      self:loot()
+    if self.conf.ident then
+      -- jesli heal jest w memie
+      if mem:canCast(self.heal.spell) then
+        -- odpauzuj
+        self:loot()
+      else
+        -- rest
+        state:orderTeam("rest;recup;medi")
+        send("rest;recup;medi")
+      end
     else
-      -- rest
-      state:orderTeam("rest;recup;medi")
-      send("rest;recup;medi")
+      self.paused = false
     end
   end
 end
@@ -150,12 +233,16 @@ function exp:getMembers()
 end
 
 function exp:stop()
+  if self.going then
     self.going = false
     self.step = 1
     self.paused = false
     if self.conf.onEnd then
       self.conf.onEnd()
     end
+    self:unhighlight(self.ids)
+    printer:error("GPS", "Chodzik przerwany!")
+  end
 end
 
 function exp:onRestDone()
@@ -180,7 +267,7 @@ scripts.events["exp.onEnemyKilled"] = registerAnonymousEventHandler("onEnemyKill
 end)
 
 scripts.events["exp.gmcpRoomPeople"] = registerAnonymousEventHandler("gmcp.Room.People", function(event, arg)
-  if exp.going then
+  if exp.going and exp.conf.ident then
     local now = exp:getMembers()
     local sub = profile:get("sub")
     for name, member in pairs(now) do

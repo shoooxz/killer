@@ -1,4 +1,5 @@
 loaded = loaded or false
+stopRecursion = false
 function loadObjects(force)
     if not force and loaded then
         return
@@ -37,7 +38,7 @@ function loadObjects(force)
         "scripts/learn",
         "scripts/buff",
         "scripts/opener",
-        "scripts/gps/exp",
+        "scripts/gps/explore",
         "scripts/gps/path",
         "mapper/core",
         "mapper/area",
@@ -46,7 +47,6 @@ function loadObjects(force)
         "mapper/draw",
         "mapper/events",
         "mapper/bind",
-        "mapper/walker",
         "mapper/gps",
     }
     for i = 1, #obj do
@@ -57,10 +57,14 @@ function loadObjects(force)
     printer:success("Skrypty Killer", "Zaladowane!")
 end
 function reloadObjects()
-    package.loaded.init = nil
-    require("init")
-    loadObjects(true)
-    profile:loadLast()
-    mapper:centerGMCP()
+    stopRecursion = true
+    cecho("\n<cyan>Przerywam reukrencje...\n")
+    tempTimer(1, function()
+      package.loaded.init = nil
+      require("init")
+      loadObjects(true)
+      profile:loadLast()
+      mapper:centerGMCP()
+    end)
 end
 loadObjects(false)

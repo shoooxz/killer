@@ -37,6 +37,6 @@ end
 function keybind:gate(str)
 	local command = getRoomUserData(mapper.room.id, "gate")
 	self.gateCommand = command
-	mapper:walkerInterrupted(command)
+	exp:interrupted(command)
 	printer:bind(self.conf.keybindGate.modifier, self.conf.keybindGate.key, command)
 end
