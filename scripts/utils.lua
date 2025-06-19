@@ -1,5 +1,13 @@
 utils = utils or {}
 
+function utils:ellipsis(s, maxLen)
+    if #s <= maxLen then
+        return s
+    else
+        return string.sub(s, 1, maxLen)
+    end
+end
+
 function utils:diceToAverage(format)
     -- Dopasowanie do wzorca "XdY", np. "2d5"
     local ilosc, sciany = string.match(format, "(%d+)d(%d+)")

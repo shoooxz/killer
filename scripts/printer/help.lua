@@ -304,6 +304,20 @@ function printer:buffBasic(arr)
   self:bottom(false, true)
 end
 
+function printer:buffBasic2(arr)
+  self:title("Buff")
+  self:line("M - cast na master'a  S - cast na slave'a  Kliknij aby wybrac", self.sectionColor)
+
+  if next(arr) then
+    for circle, spells in pairs(arr) do
+      self:space()
+      self:section("Krag "..circle)
+      self:tableRow({1, 1, 20, 1, 1, 19, 1, 1, 18}, {}, spells)
+    end
+  end
+  self:bottom(false, true)
+end
+
 function printer:roller(arr)
     self:title("Roller")
     --self:line("Im dluzej rollujesz - maxy sie zwiekszaja.", self.sectionColor)

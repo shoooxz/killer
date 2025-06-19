@@ -264,6 +264,9 @@ function printer:tableRow(size, header, arr, nohr)
 
 					finish = true
 
+				elseif value[1] == "empty" then
+					-- jesli to nie jest ostatni empty
+					cecho(string.rep(" ", size[index]+2))
 				else
 					finish = false
 					cecho("<"..self.borderColor..">|"..string.rep(" ", 1))

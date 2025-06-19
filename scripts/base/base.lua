@@ -14,6 +14,19 @@ base.skillDictionaryFull = {}
 base.spellClass = {}
 base.skillClass = {}
 base.effect = {}
+base.schoolIdent = {
+	"inwo", "iluz", "nekr", "odrz", "prze", "przy", "zaur", "ogol"
+}
+base.schoolIdentToReverse = {
+	["inwo"] = {"Inwokacje", "Zauroczenie", "Przywolanie"},
+	["iluz"] = {"Iluzje", "Inwokacje", "Nekromancja", "Odrzucanie"},
+	["nekr"] = {"Nekromancja", "Iluzje", "Zauroczenie"},
+	["odrz"] = {"Odrzucanie", "Przemiany", "Iluzje"},
+	["prze"] = {"Przemiany", "Odrzucanie", "Nekromancja"},
+	["przy"] = {"Przywolanie", "Poznanie", "Inwokacje"},
+	["zaur"] = {"Zauroczenie", "Inwokacje", "Nekromancja"},
+}
+
 --TODO SKILLS klecha, zlodziej i masterki do klechy, nomada i zlodzieja
 
 function base:targetToFancy(tar)
@@ -245,7 +258,11 @@ inwokacje   <> zauroczenia/przywolanie
 nekromancja <> iluzje/zauroczenia
 ]]--
 
-function base:schoolSuccess(current, school, reverse1, reverse2, reverse3)
+function base:schoolSuccess(current, arr)
+	local school = arr[1]
+	local reverse1 = arr[2]
+	local reverse2 = arr[3]
+	local reverse3 = arr[4] -- ?
 	if current == 0 then return true end
 	local firstPass = true
 	local secondPass = true
@@ -366,9 +383,125 @@ function base:getSpellOffensive(fclass, sclass)
 	--display(self.spellOffensive["nom"])
 end
 
+function base:removeReverseSchool(school, arr)
+	local out = {}
+	for circle, spells in pairs(arr) do
+		for i = 1, #spells do
+			if self:schoolSuccess(spells[i][2], self.schoolIdentToReverse[school]) then
+				if not out[circle] then
+					out[circle] = {}
+				end
+				table.insert(out[circle], spells[i])
+			end
+		end
+	end
+	return out
+end
+
+function base:removeGeneralSchool(arr)
+	local out = {}
+	for circle, spells in pairs(arr) do
+		for i = 1, #spells do
+			if self:generalCheck(tonumber(circle), spells[i][1], spells[i][2]) then
+				if not out[circle] then
+					out[circle] = {}
+				end
+				table.insert(out[circle], spells[i])
+			end
+		end
+	end
+	return out
+end
+
+function base:reduceSpellsTo5Circle(arr)
+	for circle, spells in pairs(arr) do
+		if tonumber(circle) > 5 then
+			arr[circle] = nil
+		end
+	end
+	return arr
+end
+
+function base:combineSpells(t1, t2)
+    local wynik = {}
+
+    -- Pomocnicza mapa: nazwa_czaru -> {poziom, dane}
+    local mapaSpell = {}
+
+    -- Najpierw zapisz wszystko z t2 (bazowa tabela)
+    for poziom, lista in pairs(t2) do
+        for _, czar in ipairs(lista) do
+            local nazwa = czar[1]
+            mapaSpell[nazwa] = { tonumber(poziom), czar }
+        end
+    end
+
+    -- Teraz porównuj z t1
+    for poziom, lista in pairs(t1) do
+        for _, czar in ipairs(lista) do
+            local nazwa = czar[1]
+            local p1 = tonumber(poziom)
+
+            if mapaSpell[nazwa] then
+                local p2 = mapaSpell[nazwa][1]
+                -- Jeśli poziom w t1 jest większy, to używamy wersji z t1
+                if p1 > p2 then
+                    mapaSpell[nazwa] = { p1, czar }
+                end
+            else
+                -- Jeśli nie ma w t2, dodaj z t1
+                mapaSpell[nazwa] = { p1, czar }
+            end
+        end
+    end
+
+    -- Teraz rozbij z powrotem na strukturę wg poziomów
+    for _, entry in pairs(mapaSpell) do
+        local poziom = tostring(entry[1])
+        local czar = entry[2]
+
+        if not wynik[poziom] then
+            wynik[poziom] = {}
+        end
+        table.insert(wynik[poziom], czar)
+    end
+
+    return wynik
+end
+
 function base:getSpellDefensive(fclass, sclass)
-	--display(fclass, sclass)
-	display(self.spellDefensive["nom"])
+	if sclass == "mag" then
+		sclass = "ogol"
+	end
+	local first = self.spellDefensive[fclass]
+	local second = self.spellDefensive[sclass]
+	-- jesli rozne klasy
+	if fclass ~= sclass then
+		-- jesli spelle drugiej istnieja
+		if second then
+			-- jesli spelle pierwszej istnieja
+			if first then
+				-- jesli pierwsza klasa ma ident szkoly - polacz spelle uwazajac na przeciwne szkoly
+				if utils:inArray2(fclass, self.schoolIdent) then
+					if fclass == "ogol" then
+						second = self:removeGeneralSchool(second)
+					else
+						second = self:removeReverseSchool(fclass, second)
+					end
+				end
+				-- ogolne laczenie klas magicznych
+				second = self:reduceSpellsTo5Circle(second)
+				return self:combineSpells(first, second)
+			else
+				-- jesli pierwsza klasa nie jest magiczna, zwroc po prostu spelle z drugiej zredukowane do 5
+				return self:reduceSpellsTo5Circle(second)
+			end
+		else
+			return first
+		end
+	else
+		return first
+	end
 end
 
 function base:buildSchool()
@@ -547,57 +680,33 @@ function base:buildSchool()
 				for j=1, #self.jsonSpell[i].class do
 					local class = self.jsonSpell[i].class[j]
 					if class[1] == "mag" then
-						if self:schoolSuccess(self.jsonSpell[i].school, "Inwokacje", "Zauroczenie", "Przywolanie") then
-							table.insert(self.spellClass["inwo"][tostring(class[2])], self.jsonSpell[i].name)
-							-- filter offensive/defensive
-							self:filterSpellType(use, "inwo", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
-						end
-						if self:schoolSuccess(self.jsonSpell[i].school, "Iluzje", "Inwokacje", "Nekromancja", "Odrzucanie") then
-							table.insert(self.spellClass["iluz"][tostring(class[2])], self.jsonSpell[i].name)
-							-- filter offensive/defensive
-							self:filterSpellType(use, "iluz", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
-						end
-						if self:schoolSuccess(self.jsonSpell[i].school, "Nekromancja", "Iluzje", "Zauroczenie") then
-							table.insert(self.spellClass["nekr"][tostring(class[2])], self.jsonSpell[i].name)
-							-- filter offensive/defensive
-							self:filterSpellType(use, "nekr", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
-						end
-						if self:schoolSuccess(self.jsonSpell[i].school, "Odrzucanie", "Przemiany", "Iluzje") then
-							table.insert(self.spellClass["odrz"][tostring(class[2])], self.jsonSpell[i].name)
-							-- filter offensive/defensive
-							self:filterSpellType(use, "odrz", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
-						end
-						if self:schoolSuccess(self.jsonSpell[i].school, "Przemiany", "Odrzucanie", "Nekromancja") then
-							table.insert(self.spellClass["prze"][tostring(class[2])], self.jsonSpell[i].name)
-							-- filter offensive/defensive
-							self:filterSpellType(use, "prze", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
-						end
-						if self:schoolSuccess(self.jsonSpell[i].school, "Przywolanie", "Poznanie", "Inwokacje") then
-							table.insert(self.spellClass["przy"][tostring(class[2])], self.jsonSpell[i].name)
-							-- filter offensive/defensive
-							self:filterSpellType(use, "przy", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
-						end
-						if self:schoolSuccess(self.jsonSpell[i].school, "Zauroczenie", "Inwokacje", "Nekromancja") then
-							table.insert(self.spellClass["zaur"][tostring(class[2])], self.jsonSpell[i].name)
-							-- filter offensive/defensive
-							self:filterSpellType(use, "zaur", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
-						end
+
+						-- filter spell by school, use and defensive/offensive
+						self:schoolCheck("inwo", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive)
+						self:schoolCheck("iluz", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive)
+						self:schoolCheck("nekr", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive)
+						self:schoolCheck("odrz", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive)
+						self:schoolCheck("prze", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive)
+						self:schoolCheck("przy", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive)
+						self:schoolCheck("zaur", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive)
+
 						if self:generalCheck(class[2], self.jsonSpell[i].name, self.jsonSpell[i].school) then
-							table.insert(self.spellClass["ogol"][tostring(class[2])], self.jsonSpell[i].name)
+							--table.insert(self.spellClass["ogol"][tostring(class[2])], self.jsonSpell[i].name)
 							-- filter offensive/defensive
-							self:filterSpellType(use, "ogol", isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
+							self:filterSpellType(use, "ogol", isOffensive, isDefensive, class[2], self.jsonSpell[i].name, self.jsonSpell[i].school)
 						end
 					else
 						self:declareNonMage(class[1], class[2])
-						table.insert(self.spellClass[class[1]][tostring(class[2])], self.jsonSpell[i].name)
+						--table.insert(self.spellClass[class[1]][tostring(class[2])], self.jsonSpell[i].name)
 						-- filter offensive/defensive
-						self:filterSpellType(use, class[1], isOffensive, isDefensive, class[2], self.jsonSpell[i].name)
+						self:filterSpellType(use, class[1], isOffensive, isDefensive, class[2], self.jsonSpell[i].name, self.jsonSpell[i].school)
 						-- filter heal
 						self:filterSpellHeal(use, class[1], isHeal, class[2], self.jsonSpell[i].name)
 					end
 				end
 			end
     -- SZKOLY WYJEBAC ???
+		--[[
 		if type(self.jsonSpell[i].school) == "table" and next(self.jsonSpell[i].school) and self.jsonSpell[i].school[1]  then
 			local short = self:schoolToShort(self.jsonSpell[i].school[1])
 			if not self.spellSchool[short] then
@@ -605,16 +714,25 @@ function base:buildSchool()
 			end
 			table.insert(self.spellSchool[short], self.jsonSpell[i]["name"])
 		end
+		]]--
 	end
 end
 
-function base:filterSpellType(use, school, off, def, circle, name)
+function base:schoolCheck(ident, circle, name, school, use, isOffensive, isDefensive)
+	if self:schoolSuccess(school, self.schoolIdentToReverse[ident]) then
+		-- table.insert(self.spellClass[ident][tostring(circle)], name)
+		-- filter offensive/defensive
+		self:filterSpellType(use, ident, isOffensive, isDefensive, circle, name, school)
+	end
+end
+
+function base:filterSpellType(use, ident, off, def, circle, name, school)
 	if use then
 		if off then
-			table.insert(self.spellOffensive[school][tostring(circle)], name)
+			table.insert(self.spellOffensive[ident][tostring(circle)], {name, school})
 		end
 		if def then
-			table.insert(self.spellDefensive[school][tostring(circle)], name)
+			table.insert(self.spellDefensive[ident][tostring(circle)], {name, school})
 		end
 	end
 end
@@ -731,16 +849,23 @@ function base:test()
 	-- zrobic druida z php
 	-- zrobic druida z php
 	-- zrobic druida z php
-	display(self.jsonSpell)
+	--display(self.spellClass["iluz"])
 
 
+end
+
+function base:schoolToMage(class)
+	if utils:inArray2(class, self.schoolIdent) then
+		return "mag"
+	end
+	return class
 end
 
 function base:spellSearch(spell)
   spell = string.lower(spell)
   local book = {}
   local teacher = {}
-  local fclass = profile:get("fclass")
+  local fclass = self:schoolToMage(profile:get("fclass"))
   local sclass = profile:get("sclass")
   local err = false
   if fclass == "" or sclass == "" then

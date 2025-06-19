@@ -13,17 +13,34 @@ exp.heal.reverse = true
 exp.deadCount = 0
 exp.tankSub = true
 exp.ids = {}
+exp.showingPath = false
 
 function exp:goTo(id)
-  --gotoRoom(id)
-  display(id)
+  if id == 0 then
+    printer:error("GPS", "Sciezka do "..tostring(id).." nie istnieje!")
+    return
+  end
+  self.showingPath = true
+  if not gotoRoom(id) then
+    printer:error("GPS", "Sciezka do "..tostring(id).." nie istnieje!")
+    return
+  end
 end
 
-function exp:showPath(room)
-  local path = getPath(mapper.room.id, room)
-  if path then
-    display(path)
+function exp:showPath(path, ids)
+  if path and next(ids) then
+    for i, roomId in ipairs(ids) do
+      tempTimer(i/20, function()
+          highlightRoom(tonumber(roomId), 255, 255, 255, 0, 0, 0, 1, 255, 0)
+          centerview(tonumber(roomId))
+          if i == #ids then
+            exp:unhighlight(ids)
+            mapper:centerGMCP(true)
+          end
+      end)
+    end
   end
+  self.showingPath = false
 end
 
 function exp:highlight(path)
@@ -70,16 +87,21 @@ function exp:interrupted(command)
 end
 
 function doSpeedWalk()
-    if not exp.going then
-        exp.ids = speedWalkPath
-        exp:highlight(speedWalkPath)
-        exp:start({
-          ["path"] = speedWalkDir,
-          ["enemy"] = {},
-          ["ident"] = false,
-          ["loot"] = "cialo",
-        })
-        -- TODO obliczyc czas delay x ilosc lokacji
+    if exp.showingPath then
+      exp:showPath(speedWalkDir, speedWalkPath)
+    else
+      if not exp.going then
+          exp.ids = speedWalkPath
+          exp:highlight(speedWalkPath)
+          --display(speedWalkDir)
+          exp:start({
+            ["path"] = speedWalkDir,
+            ["enemy"] = {},
+            ["ident"] = false,
+            ["loot"] = "cialo",
+          })
+          -- TODO obliczyc czas delay x ilosc lokacji
+      end
     end
 end
 
@@ -151,6 +173,9 @@ function exp:waitForNewRoom()
 end
 
 function exp:move(dir)
+    if mapper.en2short[dir] then
+      dir = mapper.en2short[dir]
+    end
     local roomID = mapper:getRoomViaExit(dir)
     if not roomID then
         local special = getSpecialExitsSwap(mapper.room.id)

@@ -9,7 +9,6 @@ buff.db = db:create("buff", {
 		    _violations = "IGNORE",
     }
 })
--- zjawa w domku ressist frost
 -- basic
 buff.basic = {
   ["shield"] = 1,
@@ -72,8 +71,33 @@ buff.short = {
 function buff:test()
   local fclass = profile:get("fclass")
   local sclass = profile:get("sclass")
-  local buffs = base:getSpellOffensive(fclass, sclass)
-  base:getSpellDefensive(fclass, sclass)
+  local buffs = base:getSpellDefensive(fclass, sclass)
+  local print = {}
+  local arr = {}
+  for circle, spells in pairs(buffs) do
+    if not print[circle] then print[circle] = {} end
+    for i=1, #spells do
+      table.insert(arr, {"grey", "M", ""})
+      table.insert(arr, {"grey", "S", ""})
+      table.insert(arr, {"grey", utils:ellipsis(spells[i][1], 17), ""})
+      if utils:mod(i, 3) == 0 then
+        table.insert(print[circle], arr)
+        arr = {}
+      end
+    end
+    if next(arr) then
+      -- uzupelnij brakujace miejsca w tabeli
+      local addEmpty = 3-#arr/3 -- w tablicy jest 3*3 elementy max
+      for i=1, addEmpty do
+        table.insert(arr, {"empty", false})
+        table.insert(arr, {"empty", false})
+        table.insert(arr, {"empty", true})
+      end
+      table.insert(print[circle], arr)
+      arr = {}
+    end
+  end
+  printer:buffBasic2(print)
 end
 
 function buff:listAdd(name)
