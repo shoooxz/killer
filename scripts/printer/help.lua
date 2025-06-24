@@ -1,3 +1,10 @@
+function printer:updater(ver)
+    self:title("Aktualizacja".." "..ver)
+    self:section("Uwaga! Dostepna jest nowa wersja skryptow "..ver.."!")
+    self:commandLink("AKTUALIZUJ", "Kliknij aby sciagnac nowa wersje", "updater:update(true)")
+    self:bottom()
+end
+
 function printer:help()
     self:title("Killer Pomoc")
     self:command("/opcje", "Ustawienia ui, mappera i skryptow")

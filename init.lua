@@ -40,6 +40,7 @@ function loadObjects(force)
         "scripts/opener",
         "scripts/gps/explore",
         "scripts/gps/path",
+        "scripts/updater",
         "mapper/core",
         "mapper/area",
         "mapper/helper",
