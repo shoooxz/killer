@@ -302,7 +302,6 @@ end
 
 function mapper:start()
 	if self.drawing == false then
-		self.walker.going = false
 		self.drawing = true
 		printer:success("Mapowanie", "Maper wlaczony, pomocnik wlaczony")
 	end

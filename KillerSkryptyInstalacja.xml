@@ -76,7 +76,7 @@
 									os.remove(dir.."/killer_mapa.dat")
 									--os.remove(dir.."/Database_gps.db")  -- TODO dodac gps
 
-									os.rename(scripts_dst.."killer_mapa.dat", dir.."/barsawia_mapa.dat")
+									os.rename(scripts_dst.."killer_mapa.dat", dir.."/killer_mapa.dat")
 									--os.rename(scripts_dst.."Database_gps.db", dir.."/Database_gps.db") -- TODO dodac gps
 
 									installPackage(scripts_dst.."killer.trigger")
