@@ -280,7 +280,7 @@
     },
     {
         "name": "fiolka z czerwona ciecza",
-        "note": "Po wykonaniu zadan, 5% szans na reset",
+        "note": "Po wykonaniu zadan, 5% szans na copy",
         "mob": "Sprzedawca",
         "power": 8,
         "use": 1,
@@ -289,7 +289,7 @@
     },
     {
         "name": "niewielki szklany sloiczek",
-        "note": "Po wykonaniu zadan, 15% szans na reset",
+        "note": "Po wykonaniu zadan, 15% szans na copy",
         "mob": "Sprzedawca",
         "power": 6,
         "use": 3,
@@ -298,7 +298,7 @@
     },
     {
         "name": "fiolka z przezroczystym plynem",
-        "note": "Po wykonaniu zadan, 30% szans na reset",
+        "note": "Po wykonaniu zadan, 30% szans na copy",
         "mob": "Sprzedawca",
         "power": 4,
         "use": 4,
@@ -307,7 +307,7 @@
     },
     {
         "name": "pojemnik z zielona mascia",
-        "note": "Po wykonaniu zadan, 10% szans na reset",
+        "note": "Po wykonaniu zadan, 10% szans na copy",
         "mob": "Sprzedawca",
         "power": 7,
         "use": 2,

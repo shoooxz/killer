@@ -30,7 +30,7 @@ function character:processOrder(who, order)
       return
     end
     if string.find(order, "buff") then
-      buff:basicCast(arg[2])
+      buff:cast(arg[2])
       return
     end
     if string.find(order, "kill") then

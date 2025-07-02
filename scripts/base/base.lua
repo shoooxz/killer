@@ -1,3 +1,4 @@
+-- DODAWAC W SPELL I SKILL JSONACH NA KONCU ABY ZACHOWAC INTEGRALNOSC SEJVOW
 base = base or {}
 base.jsonTeacher = {}
 base.jsonBook = {}
@@ -682,24 +683,24 @@ function base:buildSchool()
 					if class[1] == "mag" then
 
 						-- filter spell by school, use and defensive/offensive
-						self:schoolCheck("inwo", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive)
-						self:schoolCheck("iluz", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive)
-						self:schoolCheck("nekr", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive)
-						self:schoolCheck("odrz", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive)
-						self:schoolCheck("prze", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive)
-						self:schoolCheck("przy", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive)
-						self:schoolCheck("zaur", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive)
+						self:schoolCheck("inwo", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive, i)
+						self:schoolCheck("iluz", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive, i)
+						self:schoolCheck("nekr", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive, i)
+						self:schoolCheck("odrz", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive, i)
+						self:schoolCheck("prze", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive, i)
+						self:schoolCheck("przy", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive, i)
+						self:schoolCheck("zaur", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive, i)
 
 						if self:generalCheck(class[2], self.jsonSpell[i].name, self.jsonSpell[i].school) then
 							--table.insert(self.spellClass["ogol"][tostring(class[2])], self.jsonSpell[i].name)
 							-- filter offensive/defensive
-							self:filterSpellType(use, "ogol", isOffensive, isDefensive, class[2], self.jsonSpell[i].name, self.jsonSpell[i].school)
+							self:filterSpellType(use, "ogol", isOffensive, isDefensive, class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, i)
 						end
 					else
 						self:declareNonMage(class[1], class[2])
 						--table.insert(self.spellClass[class[1]][tostring(class[2])], self.jsonSpell[i].name)
 						-- filter offensive/defensive
-						self:filterSpellType(use, class[1], isOffensive, isDefensive, class[2], self.jsonSpell[i].name, self.jsonSpell[i].school)
+						self:filterSpellType(use, class[1], isOffensive, isDefensive, class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, i)
 						-- filter heal
 						self:filterSpellHeal(use, class[1], isHeal, class[2], self.jsonSpell[i].name)
 					end
@@ -718,21 +719,21 @@ function base:buildSchool()
 	end
 end
 
-function base:schoolCheck(ident, circle, name, school, use, isOffensive, isDefensive)
+function base:schoolCheck(ident, circle, name, school, use, isOffensive, isDefensive, i)
 	if self:schoolSuccess(school, self.schoolIdentToReverse[ident]) then
 		-- table.insert(self.spellClass[ident][tostring(circle)], name)
 		-- filter offensive/defensive
-		self:filterSpellType(use, ident, isOffensive, isDefensive, circle, name, school)
+		self:filterSpellType(use, ident, isOffensive, isDefensive, circle, name, school, i)
 	end
 end
 
-function base:filterSpellType(use, ident, off, def, circle, name, school)
+function base:filterSpellType(use, ident, off, def, circle, name, school, i)
 	if use then
 		if off then
-			table.insert(self.spellOffensive[ident][tostring(circle)], {name, school})
+			table.insert(self.spellOffensive[ident][tostring(circle)], {name, school, i})
 		end
 		if def then
-			table.insert(self.spellDefensive[ident][tostring(circle)], {name, school})
+			table.insert(self.spellDefensive[ident][tostring(circle)], {name, school, i})
 		end
 	end
 end

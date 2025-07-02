@@ -10,6 +10,7 @@ function loadObjects(force)
         "scripts/printer/notice",
         "scripts/utils",
         "scripts/settings",
+        "scripts/db",
         "scripts/mem",
         "scripts/mode",
         "scripts/state/top",

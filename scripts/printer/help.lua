@@ -276,10 +276,14 @@ function printer:box(arr)
     self:bottom(false, true)
 end
 
-function printer:buff(arr, name)
+function printer:buffList(arr, name)
   name = name or "Buff"
   self:title(name)
-  self:line("Kliknij aby ustawic set!", self.sectionColor)
+  if next(arr) then
+    self:line("Kliknij aby ustawic set!", self.sectionColor)
+  else
+    self:line("Brak zapisanych setow.", self.commentColor)
+  end
   self:space()
   if next(arr) then
       self:tableRow({2, 60}, {}, arr)
@@ -301,17 +305,7 @@ function printer:gps(arr)
     self:bottom(false, true)
 end
 
-function printer:buffBasic(arr)
-  self:title("Buff")
-  self:line("M - cast na master'a  S - cast na slave'a  Kliknij aby wybrac", self.sectionColor)
-  self:space()
-  if next(arr) then
-      self:tableRow({1, 1, 20, 1, 1, 19, 1, 1, 16}, {}, arr)
-  end
-  self:bottom(false, true)
-end
-
-function printer:buffBasic2(arr)
+function printer:buffShow(arr)
   self:title("Buff")
   self:line("M - cast na master'a  S - cast na slave'a  Kliknij aby wybrac", self.sectionColor)
 

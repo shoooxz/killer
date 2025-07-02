@@ -104,9 +104,13 @@
 					<string>Furtka jest zamknieta na klucz.</string>
 					<string>Ruszasz przed siebie, jednak po chwili orientujesz sie, ze wrociles do punktu wyjscia.</string>
 					<string>Idziesz przed siebie, nagle przecierasz oczy, ku twemu zaskoczeniu jestes w tym samym miejscu.</string>
+					<string>Oceniasz odleglosc do drugiego brzegu, i nie widzisz zadnych szans na to, by tam bezpiecznie doskoczyc.</string>
+					<string>Niestety, nie potrafisz latac.</string>
 				</regexCodeList>
 				<regexCodePropertyList>
 					<integer>1</integer>
+					<integer>0</integer>
+					<integer>0</integer>
 					<integer>0</integer>
 					<integer>0</integer>
 					<integer>0</integer>
@@ -2377,7 +2381,7 @@ cechoLink("&lt;yellow&gt;  ident", [[InventoryItem("]]..matches[2]..[[")]], "", 
 						<string>W ciemnosciach nie udalo ci sie zauwazyc wyrastajacego przed toba drzewa.*</string>
 						<string>Klapa jest zamknieta.</string>
 						<string>Nie da rady! Ciagle walczysz!</string>
-						<string>Wrota sa zamkniete.</string>
+						<string>Wrota sa zamkniete</string>
 					</regexCodeList>
 					<regexCodePropertyList>
 						<integer>0</integer>
@@ -2420,6 +2424,7 @@ mapper:moveBackward()
 						<string>Brama jest dosyc solidna i na dodatek zamknieta. Jakim cudem chcesz opuscic miasto??</string>
 						<string>.*(Alez most nie jest opuszczony).*</string>
 						<string>Drzwi sa zamkniete.</string>
+						<string>Wrota sa zamkniete.</string>
 					</regexCodeList>
 					<regexCodePropertyList>
 						<integer>1</integer>
@@ -2434,6 +2439,7 @@ mapper:moveBackward()
 						<integer>0</integer>
 						<integer>0</integer>
 						<integer>1</integer>
+						<integer>0</integer>
 						<integer>0</integer>
 					</regexCodePropertyList>
 				</Trigger>
@@ -2613,6 +2619,69 @@ keybind.show = true</script>
 						<string>Po chwili stoisz we wnetrzu Wiezy.</string>
 					</regexCodeList>
 					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>gnoll</name>
+					<script>send("say dyscyplina")</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Gnoll wartownik krzyczy z wiezy 'Haslo?'</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+					</regexCodePropertyList>
+				</Trigger>
+				<Trigger isActive="yes" isFolder="no" isTempTrigger="no" isMultiline="no" isPerlSlashGOption="no" isColorizerTrigger="no" isFilterTrigger="no" isSoundTrigger="no" isColorTrigger="no" isColorTriggerFg="no" isColorTriggerBg="no">
+					<name>CENTER_GMCP</name>
+					<script>mapper:centerGMCP(true)
+keybind.show = true</script>
+					<triggerType>0</triggerType>
+					<conditonLineDelta>0</conditonLineDelta>
+					<mStayOpen>0</mStayOpen>
+					<mCommand></mCommand>
+					<packageName></packageName>
+					<mFgColor>#ff0000</mFgColor>
+					<mBgColor>#ffff00</mBgColor>
+					<mSoundFile></mSoundFile>
+					<colorTriggerFgColor>#000000</colorTriggerFgColor>
+					<colorTriggerBgColor>#000000</colorTriggerBgColor>
+					<regexCodeList>
+						<string>Wchodzisz w czerwony portal, przez chwile otacza cie ciemnosc i cisza.</string>
+						<string>Wchodzisz w portal i nagle jestes gdzies indziej...</string>
+						<string>Blyskawicznie wbiegasz do tajnego korytarza.</string>
+						<string>Slyszysz jak tajne przejscie zamyka sie z gluchym lomotem.</string>
+						<string>Wchodzisz w ognisty portal i nagle jestes gdzies indziej...</string>
+						<string>Wchodzisz w okragly portal i nagle jestes gdzies indziej...</string>
+						<string>Wchodzisz w czarny portal i nagle jestes gdzies indziej...</string>
+						<string>Nagle pojawiasz sie w calkowicie innym miejscu.</string>
+						<string>Wchodzisz w portal instancji.</string>
+						<string>Wchodzisz w cienisty portal i nagle jestes gdzies indziej...</string>
+						<string>Przechodzac przez niego ogladasz sie ostatni raz przez ramie na to pieklo.</string>
+						<string>Uciekasz z walki!</string>
+					</regexCodeList>
+					<regexCodePropertyList>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
+						<integer>0</integer>
 						<integer>0</integer>
 					</regexCodePropertyList>
 				</Trigger>

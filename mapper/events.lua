@@ -1,6 +1,5 @@
 function mapper:roomLoaded()
 	return function()
-
 		local gmcpID = gmcp.Room.Info.num
 
 		-- CONNECT

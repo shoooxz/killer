@@ -1,5 +1,16 @@
 path = path or {}
 path.conf = {}
+path.db = dbi:new("gps", {
+  gps = {
+      name = "",
+      id = "",
+      region = "",
+      enemy = "",
+      loot = "",
+      _index = { "name" },
+      _violations = "IGNORE",
+  }
+})
 
 function path:reverseDirection(path)
   for i=1, #path do
