@@ -236,6 +236,19 @@ function base:help(name)
 				table.insert(arr, {"white", self:targetToFancy(out.meta.target)})
 				table.insert(out.meta.additional, arr)
 				found = true
+			else
+				-- nie pasuje, sprawdz po skrotach
+				local skill = self:skillByParts(first, name)
+				if skill then
+					self:help(skill)
+					return false
+				end
+				local spell = self:spellByParts(first, name)
+				if spell then
+					self:help(spell)
+					return false
+				end
+				found = false
 			end
 			if found then
 			  local tb = base:spellSearch(name)
@@ -247,6 +260,28 @@ function base:help(name)
 			end
 		end
 	end
+end
+
+function base:spellByParts(first, name)
+	if self.spellDictionary[first] then
+		for i=1, #self.spellDictionary[first] do
+			if utils:partsMatch(name, self.spellDictionary[first][i]) then
+				return self.spellDictionary[first][i]
+			end
+		end
+	end
+	return false
+end
+
+function base:skillByParts(first, name)
+	if self.skillDictionaryFull[first] then
+		for spell in pairs(self.skillDictionaryFull[first]) do
+			if utils:partsMatch(name, spell) then
+				return spell
+			end
+		end
+	end
+	return false
 end
 
 --[[

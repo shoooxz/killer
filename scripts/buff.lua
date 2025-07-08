@@ -92,10 +92,10 @@ function buff:listRender()
 	for i=1, #res do
     local arr = {}
     table.insert(arr, {"red", "X", [[buff:deleteSet(]]..res[i]._row_id..[[)]]})
-		table.insert(arr, {"white", res[i].name, [[buff:setSerialized("]]..res[i].set1..[[", ']]..res[i].set2..[[')]]})
+		table.insert(arr, {false, res[i].name, [[buff:setSerialized("]]..res[i].set1..[[", ']]..res[i].set2..[[')]]})
     table.insert(out, arr)
 	end
-	printer:buffList(out)
+	printer:simpleList(out, "Buff")
   self.db:close()
 end
 

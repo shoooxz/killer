@@ -17,10 +17,10 @@ function opener:listRender()
 	for i=1, #res do
     local arr = {}
     table.insert(arr, {"red", "X", [[opener:deleteSet(]]..res[i]._row_id..[[)]]})
-		table.insert(arr, {"white", res[i].name, [[opener:setCurrent("]]..res[i].ass..[[", ']]..res[i].def..[[')]]})
+		table.insert(arr, {false, res[i].name, [[opener:setCurrent("]]..res[i].ass..[[", ']]..res[i].def..[[')]]})
     table.insert(out, arr)
 	end
-	printer:buff(out, "Opener")
+	printer:simpleList(out, "Opener")
   self.db:close()
 end
 

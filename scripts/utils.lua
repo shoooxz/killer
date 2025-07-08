@@ -1,5 +1,20 @@
 utils = utils or {}
 
+function utils:partsMatch(input, full)
+  local input_parts = input:lower():split(" ")
+  local full_parts = full:lower():split(" ")
+  if #input_parts < #full_parts then
+    return false
+  end
+  for i, part in ipairs(input_parts) do
+    if not full_parts[i] then return false end
+    if not full_parts[i]:find("^" .. part) then
+      return false
+    end
+  end
+  return true
+end
+
 function utils:deleteDir(dir)
     for file in lfs.dir(dir) do
         local file_path = dir .. '/' .. file

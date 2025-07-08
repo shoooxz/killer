@@ -3,14 +3,100 @@ path.conf = {}
 path.db = dbi:new("gps", {
   gps = {
       name = "",
-      id = "",
-      region = "",
-      enemy = "",
-      loot = "",
+      id = 0,
+      domain = "",
       _index = { "name" },
       _violations = "IGNORE",
   }
 })
+
+function path:getArea()
+	if mapper.room.area then
+		local nk = {
+			19,
+			18,
+			21,
+		}
+    if utils:inArray2(mapper.room.area, nk) then
+      return 2
+    else
+      return 1
+    end
+  else
+    printer:error("GPS", "Nie mozna odnalezc area id!")
+	end
+end
+
+function path:partsMatch(input, res)
+  for i=1, #res do
+    if utils:partsMatch(input, res[i].name) then
+      return {res[i].id, res[i].name}
+    end
+  end
+  return false
+end
+
+function path:search(str)
+  if utils:startsWith(str, "_add") then
+    return false
+  end
+  str = utils:trim(str)
+	if str ~= "" then
+    self.db:open()
+		local res = self.db:fetch("gps", {["domain"] = self:getArea()})
+    local go = self:partsMatch(str, res)
+    if go then
+      self:go(go[1], go[2])
+    else
+      printer:error("GPS", "Brak lokacji w bazie!")
+    end
+    self.db:close()
+	else
+		self:list()
+	end
+end
+
+function path:list()
+  self.db:open()
+  local res = self.db:fetch("gps", {["domain"] = self:getArea()}, {"name"})
+	local out = {}
+	for i=1, #res do
+    local arr = {}
+    table.insert(arr, {"red", "X", [[path:delete(]]..res[i]._row_id..[[)]]})
+    table.insert(arr, {false, res[i].name, "path:go("..res[i].id..", \""..res[i].name.."\")"})
+    table.insert(out, arr)
+	end
+  self.db:close()
+	printer:simpleList(out, "GPS")
+end
+
+function path:delete(id)
+  self.db:open()
+  self.db:delete("gps", id)
+  self:list()
+end
+
+function path:go(roomID, name)
+	printer:success("GPS", "Podazam w strone "..name)
+	gotoRoom(roomID)
+end
+
+function path:add(arg)
+	if arg ~= "" then
+    local t = utils:split(utils:ltrim(arg, " "), "#")
+    local name = t[1]
+    local id = mapper.room.id
+    if t[2] and t[2] ~= "" then
+      id = tonumber(t[2])
+    end
+    self.db:open()
+		self.db:add("gps", {name = name, id = id, domain = self:getArea()})
+		printer:success("GPS", "Dodano punkt "..name.." do GPS")
+    self.db:close()
+	else
+		printer:error("GPS", "Brak nazwy GPS")
+	end
+end
 
 function path:reverseDirection(path)
   for i=1, #path do
@@ -69,6 +155,7 @@ function path:start(what, reverse)
     self:podmrokw2Start(reverse)
   end
   if what == "podmrokn1" then
+    display("dupa")
     self:podmrokn1Start(reverse)
   end
   if what == "podmroke1" then

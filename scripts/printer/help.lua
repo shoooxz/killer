@@ -74,10 +74,21 @@ function printer:classInfo()
   self:bottom()
 end
 
+function printer:searchInfo()
+  self:title("Help")
+  self:text("Szukanie opiera sie, podobnie jak na killerze, o skrocona wersje nazw. Czyli np. w przypadku frazy 'fire', wyszukiwarka znajdzie 'fireball' ale nie znajdzie 'fire mastery'. Aby wyszukac 'fire mastery' nalezy wpisac 'fire m', 'fire ma', 'fire mastery'.")
+  self:bottom()
+end
+
 function printer:scripts()
     self:title("Killer Skrypty")
     self:command("/help", "Pomoc")
     self:command("/aliasy", "Szybkie aliasy bez slash'a")
+    self:space()
+    self:section("GPS:")
+    self:command("/gps (fraza)", "Podarzaj w strone zapisanej lokacji")
+    self:tags("Wyszukiwanie?", "printer:searchInfo()")
+    self:command("/gps_add (nazwa)#(id)", "Dodaj lokacje (id opcjonalne)")
     self:space()
     self:section("BUFF:")
     self:command("/buff_set", "Ustal aktualny set buffow")
@@ -117,9 +128,6 @@ end
 
 function printer:aliases()
     self:title("Killer Aliasy")
-    self:command("do", "dobadz bron z pokrowca")
-    self:command("op", "opusc bron do pokrowca")
-    self:command("bs (cel)", "Zacznij walke od bs")
     self:bottom()
 end
 
@@ -244,65 +252,33 @@ function printer:stats(improve, arr, line, info)
     self:bottom(false, true)
 end
 
-function printer:rating(arr, sum, nomargin)
-    self:title(sum, true, nomargin)
-    self:dumpArray(arr, 11, {"Typ", "Ocena"})
-    self:bottom(true)
-end
-
-function printer:wood(arr, sum, quest)
-    self:title(sum)
-    self:line("Kliknij na drzewo aby je sciac!", self.sectionColor)
-    self:space()
-    if quest then
-        self:line(quest, self.successColor)
-        self:space()
-    end
-    if next(arr) then
-        self:dumpArrayLink(arr, "Nazwa")
-    else
-        self:line("Brak drzew", self.errorColor)
-    end
-    self:bottom(false, true)
-end
-
-function printer:box(arr)
-    self:title("Paczki")
-    self:line("Kliknij na paczke aby ja pobrac!", self.sectionColor)
-    self:space()
-    if next(arr) then
-        self:dumpArrayLink(arr, "Nazwa")
-    end
-    self:bottom(false, true)
-end
-
-function printer:buffList(arr, name)
+function printer:simpleList(arr, name)
   name = name or "Buff"
   self:title(name)
   if next(arr) then
-    self:line("Kliknij aby ustawic set!", self.sectionColor)
+    self:line("Kliknij aby wybrac pozycje!", self.sectionColor)
   else
-    self:line("Brak zapisanych setow.", self.commentColor)
+    self:line("Brak zapisow w bazie.", self.commentColor)
   end
   self:space()
   if next(arr) then
-      self:tableRow({2, 60}, {}, arr)
+    self:tableRow({2, 60}, {}, arr)
   else
-      self:command("/buff_add (nazwa_setu)", "Dodaje set aktualny buffow do bazy")
-      self:command("/buff_reset", "Resetuje aktualny set buffow")
+    self:simpleListEmpty(name)
   end
   self:bottom(false, true)
 end
 
-
-function printer:gps(arr)
-    self:title("GPS")
-    self:line("Kliknij na lokacje aby dotrzec do niej!", self.sectionColor)
-    self:space()
-    if next(arr) then
-        self:dumpArrayLink(arr, "Nazwa")
-    end
-    self:bottom(false, true)
+function printer:simpleListEmpty(name)
+  if name == "Buff" then
+    self:command("/buff_add (nazwa_setu)", "Dodaje set aktualny buffow do bazy")
+  end
+  if name == "GPS" then
+    self:command("/gps_add (nazwa)#(id)", "Dodaj lokacje (id opcjonalne)")
+  end
+  if name == "Opener" then
+    self:command("/opener_add (nazwa) (ass) (def)", "Dodaje set (Oddzielone #)")
+  end
 end
 
 function printer:buffShow(arr)
@@ -363,6 +339,7 @@ end
 function printer:helpIndex()
   self:title("Help")
   self:command("/help (skill/spell)", "Pomoc dotyczaca skilla/spella")
+  self:tags("Wyszukiwanie?", "printer:searchInfo()")
   self:command("/help masterki", "Masterki broni w klasach")
   self:command("/help skradanie", "Mechanika skradania")
   self:command("/help dwuklasowosc", "Zasady laczenia klas")

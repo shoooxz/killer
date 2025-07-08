@@ -96,7 +96,7 @@ function doSpeedWalk()
           --display(speedWalkDir)
           exp:start({
             ["path"] = speedWalkDir,
-            ["enemy"] = {},
+            ["enemy"] = {"Wychudzona harpia"},
             ["ident"] = false,
             ["loot"] = "cialo",
           })
