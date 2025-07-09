@@ -187,6 +187,15 @@ function base:effects()
 	return out
 end
 
+function base:topicByParts(input, topics)
+	for key, value in pairs(topics) do
+		if utils:partsMatch(input, key) then
+			return key
+		end
+	end
+	return false
+end
+
 function base:topic(key)
 	local topics = {
 		["masterki"] = function()  printer:helpWeapon() end,
@@ -196,13 +205,21 @@ function base:topic(key)
 		["kamienie"] = function()  printer:helpStone() end,
 		["efekty"] = function()  printer:helpEffects(base:effects()) end,
 		["trutki"] = function()  printer:helpEnvenomers(envenomer:getTypes()) end,
+		["biblioteka"] = function()  printer:helpLibrary() end,
+		["tick"] = function()  printer:helpTick() end,
 	}
 	if utils:arrayKeyExists(key, topics) then
 		topics[key]()
 		return true
 	else
-		return false
+		local topic = self:topicByParts(key, topics)
+		if topic then
+			return self:topic(topic)
+		else
+			return false
+		end
 	end
+	return false
 end
 
 function base:help(name)
