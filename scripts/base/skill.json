@@ -2211,7 +2211,7 @@
     {
         "name": "bladefury",
         "info": "Nomad atakuje szybciej i celniej, zwiekszajac liczbe ciosow oraz szanse na trafienie krytyczne. Ciosy sa trudne do zablokowania i unikniecia. Styl wymaga broni w obu rekach. W czasie jego trwania skutecznosc unikow i parowania spada.",
-        "note": 0,
+        "note": "Obniza odpornosci na kazdy rodzaj broni.",
         "class": [
             [
                 "nom",

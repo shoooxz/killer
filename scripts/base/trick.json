@@ -1,0 +1,267 @@
+[
+  {
+    "name": "Vertical Kick",
+    "info": "Podwojny kopniak, ktory jest bardziej skuteczny w metalowych butach, a slabszy bez obuwia. Powala przeciwnika na ziemie.",
+    "requirements": [
+      ["kick", 85]
+    ],
+    "mob": "Mnich Keredel",
+    "cost": 5000,
+    "chance": 25,
+    "roomVnum": 1335,
+    "notes": "4,5% przy uzyciu skilla kick, max. raz na 7 tickow."
+  },
+  {
+    "name": "Staff Swirl",
+    "info": "Dodatkowy atak kosturem.",
+    "requirements": [
+      ["staff", 75],
+      ["twohanded weapon", 75]
+    ],
+    "mob": "Mnich Keredel",
+    "cost": 5250,
+    "chance": 23,
+    "roomVnum": 1335,
+    "notes": "6% na kazda runde walki."
+  },
+  {
+    "name": "Entwine",
+    "info": "Powala przeciwnikow, ale nie radzi sobie z wiekszymi.",
+    "requirements": [
+      ["whip", 80]
+    ],
+    "mob": "Drowi instruktor",
+    "cost": 8000 ,
+    "chance": 20,
+    "roomVnum": 27617,
+    "notes": "4,5% na kazde trafienie batem (whip)."
+  },
+  {
+    "name": "Weapon Wrench",
+    "info": "Wytraca bron przeciwnikowi z reki. Trudniej jest wytracic bronie dwureczne.",
+    "requirements": [
+      ["whip mastery", 75],
+      ["disarm ", 75]
+    ],
+    "mob": "Drowi instruktor",
+    "cost": 9000,
+    "chance": 23,
+    "roomVnum": 27617,
+    "notes": "2,5% na przy zwyklym ciosie, 25% gdy ktos probuje parowac."
+  },
+  {
+    "name": "Riposte",
+    "info": "Przy parowaniu szansa na dodatkowy atak.",
+    "requirements": [
+      ["parry ", 85]
+    ],
+    "mob": "Kapral Ordalys",
+    "cost": 11000,
+    "chance": 19,
+    "roomVnum": 27629,
+    "notes": "5,3% na kazde udane parowanie."
+  },
+  {
+    "name": "Cyclone",
+    "info": "Szansa na dodatkowe ataki w turze, zwiekszana przez podobna wage broni, haste oraz wardance.",
+    "requirements": [
+      ["dualwield style", 85]
+    ],
+    "mob": "Wielki pologr Haghburg",
+    "cost": 7500,
+    "chance": 18,
+    "roomVnum": 6651,
+    "notes": "1,5% na kazda runde walki."
+  },
+  {
+    "name": "Flabbergast",
+    "info": "Uderzenie tarcza zadajace obrazenia w zaleznosci od jej wielkosci. Dodatkowo oglusza przeciwnika, uniemozliwiajac mu atakowanie.",
+    "requirements": [
+      ["bash", 75]
+    ],
+    "mob": "Zbrojmistrz garnizonu",
+    "cost": 3700,
+    "chance": 12,
+    "roomVnum": 6180,
+    "notes": "9,5% na kazde udane powalenie (bash)."
+  },
+  {
+    "name": "Dragon Strike",
+    "info": "Zamiast rundy walki wyzwala potezny cios, ktory moze powalic przeciwnika. Cios jest slabszy przeciwko szkieletom i liczom. Wszystkie efekty na broni wzmacniaja sile ataku.",
+    "requirements": [
+      ["spear", 91],
+      ["twohanded weapon", 91]
+    ],
+    "mob": "Mistrz Moran",
+    "cost": 10000,
+    "chance": 16,
+    "roomVnum": 6455,
+    "notes": "2% na kazda runde walki."
+  },
+  {
+    "name": "Glorious Impale",
+    "info": "Paralizuje cel. Gdy ofiara wychodzi z paralizu, otrzymuje obrazenia podczas wyciagania wloczni.",
+    "requirements": [
+      ["spear", 82],
+      ["twohanded weapon", 82]
+    ],
+    "mob": "Mistrz Moran",
+    "cost": 8188,
+    "chance": 16,
+    "roomVnum": 6455,
+    "notes": "1,6% na kazdy trafiony cios."
+  },
+  {
+    "name": "Decapitation",
+    "info": "Smiertelne uderzenie, ktore natychmiast usmierca ofiare i odrabuje jej glowe. Przeciwnik musi miec materialna forme i odpowiedni wzrost.",
+    "requirements": [
+      ["axe", 91],
+      ["critical strike", 91]
+    ],
+    "mob": "Oprawca",
+    "cost": 6000,
+    "chance": 11,
+    "roomVnum": 28621,
+    "notes": "1% przy udanym trafionym critical strike."
+  },
+  {
+    "name": "Thundering Whack",
+    "info": "Oglusza przeciwnika, uniemozliwiajac mu atakowanie. Wszystkie efekty na broni wzmacniaja sile ataku.",
+    "requirements": [
+      ["stun", 85]
+    ],
+    "mob": "uwolniona dusza starozytnego paladyna",
+    "cost": 7450,
+    "chance": 18,
+    "roomVnum": 10959,
+    "notes": "4% przy jakimkolwiek ogluszeniu (stun)."
+  },
+  {
+    "name": "Strucking Wallop",
+    "info": "Oglusza przeciwnika na krotka chwile, uniemozliwiajac mu atakowanie. Wytraca ofierze bron z reki.",
+    "requirements": [
+      ["charge", 85],
+      ["mighty blow", 85]
+    ],
+    "mob": "Stary barbarzynski mistrz",
+    "cost": 7111,
+    "chance": 19,
+    "roomVnum": 17995,
+    "notes": "7,5% przy szarzy powalajacej."
+  },
+  {
+    "name": "Shove",
+    "info": "Przy udanym uniku istnieje szansa na powalenie przeciwnika.",
+    "requirements": [
+      ["dodge", 75],
+      ["trip", 75]
+    ],
+    "mob": "Pirat Tankartez",
+    "cost": 5900,
+    "chance": 35,
+    "roomVnum": 16628,
+    "notes": "7% przy udanym uniku."
+  },
+  {
+    "name": "Thigh Jab",
+    "info": "Dzgniecie ofiary, ktore powoduje krwawienie i obnizenie zrecznosci.",
+    "requirements": [
+      [
+        "dagger",
+        80
+      ]
+    ],
+    "mob": "Pirat Tankartez",
+    "cost": 6666,
+    "chance": 25,
+    "roomVnum": 16628,
+    "notes": "1,8% przy kazdym trafieniu."
+  },
+  {
+    "name": "Bleed (Sword)",
+    "info": "Wywoluje krwawienie u ofiary.",
+    "requirements": [
+      ["sword", 80]
+    ],
+    "mob": "mistrz Gregor",
+    "cost": 7878,
+    "chance": 21,
+    "roomVnum": 4522,
+    "notes": "1,8% przy kazdym trafieniu."
+  },
+  {
+    "name": "Bleed (Short-sword)",
+    "info": "Wywoluje krwawienie u ofiary.",
+    "requirements": [
+      ["short-sword", 80]
+    ],
+    "mob": "mistrz Gregor",
+    "cost": 7878,
+    "chance": 21,
+    "roomVnum": 4522,
+    "notes": "1,8% przy kazdym trafieniu."
+  },
+  {
+    "name": "Ravaging Orb",
+    "info": "Zamiast rundy walki wyzwala potezny cios, ktory moze ogluszyc przeciwnika, uniemozliwiajac mu atakowanie. Wszystkie efekty na broni wzmacniaja sile ataku.",
+    "requirements": [
+      ["flail", 80],
+      ["twohanded weapon", 80]
+    ],
+    "mob": "stary sniezny troll",
+    "cost": 8000,
+    "chance": 23,
+    "roomVnum": 43932,
+    "notes": "2,5% na kazda runde."
+  },
+  {
+    "name": "Crushing Mace",
+    "info": "Uderzenie bronia obuchowa, ktore moze zniszczyc pancerz przeciwnika, zadajac przy tym powazne obrazenia.",
+    "requirements": [
+      ["mace", 80],
+      ["mace mastery", 80]
+    ],
+    "mob": "paladyn Marteg",
+    "cost": 6543,
+    "chance": 25,
+    "roomVnum": 40325,
+    "notes": "2% przy zwyklym ciosie obuchem (mace)."
+  },
+  {
+    "name": "Thousandslayer",
+    "info": "",
+    "requirements": [
+      ["cleave", 75],
+      ["overwhelming strike", 75]
+    ],
+    "mob": "wladca mroku",
+    "cost": 8765,
+    "chance": 21,
+    "roomVnum": 33073,
+    "notes": "15% przy cleave."
+  },
+  {
+    "name": "Divine Impact (Smite Good)",
+    "info": "",
+    "requirements": [
+      ["smite good", 75]
+    ],
+    "mob": "wladca mroku",
+    "cost": 7240,
+    "chance": 15,
+    "roomVnum": 33073,
+    "notes": "4,8% przy smite good"
+  },
+  {
+    "name": "Divine Impact (Smite Evil)",
+    "info": "",
+    "requirements": [
+      ["smite evil", 75]
+    ],
+    "mob": "paladyn Federmel ev Kenrah",
+    "cost": 7250,
+    "chance": 15,
+    "roomVnum": 929,
+    "notes": "4,8% przy smite good"
+  }
+]
