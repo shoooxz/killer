@@ -245,7 +245,7 @@ function printer:tableRow(size, header, arr, nohr)
 
 	for row in pairs(arr) do
 		local color = self.textColor
-		if row == 1 then
+		if row == 1 and  next(header) then
 			color = self.commandColor
 		end
 		for index, value in pairs(arr[row]) do

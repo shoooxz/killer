@@ -52,7 +52,7 @@ function boss:search(what)
       table.insert(arr, {"white", boss.region, ""})
       table.insert(boss.basic, arr)
       boss.actions = {}
-      table.insert(boss.actions, { "cyan", "Wyznacz droge", ""})
+      table.insert(boss.actions, { "cyan", "Wyznacz droge", "exp:goTo("..tostring(boss.room)..")"})
       table.insert(boss.actions, { "cyan", "Czekaj na bossa", 'boss:timerStart("'..boss.name..'")'})
       -- TODO SPELLS
       boss.arte = {}

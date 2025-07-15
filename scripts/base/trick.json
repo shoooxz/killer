@@ -40,8 +40,8 @@
     "name": "Weapon Wrench",
     "info": "Wytraca bron przeciwnikowi z reki. Trudniej jest wytracic bronie dwureczne.",
     "requirements": [
-      ["whip mastery", 75],
-      ["disarm ", 75]
+      ["disarm ", 75],
+      ["whip mastery", 75]
     ],
     "mob": "Drowi instruktor",
     "cost": 9000,
@@ -178,7 +178,7 @@
     "notes": "1,8% przy kazdym trafieniu."
   },
   {
-    "name": "Bleed (Sword)",
+    "name": "Bleed",
     "info": "Wywoluje krwawienie u ofiary.",
     "requirements": [
       ["sword", 80]
@@ -190,7 +190,7 @@
     "notes": "1,8% przy kazdym trafieniu."
   },
   {
-    "name": "Bleed (Short-sword)",
+    "name": "Bleed",
     "info": "Wywoluje krwawienie u ofiary.",
     "requirements": [
       ["short-sword", 80]
@@ -229,7 +229,7 @@
   },
   {
     "name": "Thousandslayer",
-    "info": "",
+    "info": "Na zakonczenie Cleave wykonuje dodatkowy atak. Cleave nie redukuje obrazen na kolejnych przeciwnikach.",
     "requirements": [
       ["cleave", 75],
       ["overwhelming strike", 75]
@@ -241,8 +241,8 @@
     "notes": "15% przy cleave."
   },
   {
-    "name": "Divine Impact (Smite Good)",
-    "info": "",
+    "name": "Divine Impact",
+    "info": "Atak we wszystkich dobrych przeciwnikow na lokacji.",
     "requirements": [
       ["smite good", 75]
     ],
@@ -250,11 +250,11 @@
     "cost": 7240,
     "chance": 15,
     "roomVnum": 33073,
-    "notes": "4,8% przy smite good"
+    "notes": "4,8% przy smite good."
   },
   {
-    "name": "Divine Impact (Smite Evil)",
-    "info": "",
+    "name": "Divine Impact",
+    "info": "Atak we wszystkich zlych przeciwnikow na lokacji.",
     "requirements": [
       ["smite evil", 75]
     ],
@@ -262,6 +262,32 @@
     "cost": 7250,
     "chance": 15,
     "roomVnum": 929,
-    "notes": "4,8% przy smite good"
+    "notes": "4,8% przy smite good."
+  },
+  {
+    "name": "Lethal Blow",
+    "info": "Szansa na natychmiastowe zabicie przeciwnika.",
+    "requirements": [
+      ["backstab", 91],
+      ["backstab mastery", 91]
+    ],
+    "mob": "Snat",
+    "cost": 0,
+    "chance": 0,
+    "roomVnum": 14963,
+    "notes": "Niewielka szansa przy backstabie."
+  },
+  {
+    "name": "Blade Splash",
+    "info": "Szansa na oslepienie lub uciszenie przeciwnika w zaleznosci od tego, czy trafimy w oko, czy w gardlo.",
+    "requirements": [
+      ["bladesplash", 91],
+      ["bladesplash mastery", 91]
+    ],
+    "mob": "Drowi zwiadowca",
+    "cost": 0,
+    "chance": 0,
+    "roomVnum": 20410,
+    "notes": "Niewielka szansa przy udanym bladesplash."
   }
 ]

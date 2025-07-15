@@ -14,7 +14,6 @@ base.spellDictionaryFull = {}
 base.skillDictionaryFull = {}
 base.spellClass = {}
 base.skillClass = {}
-base.effect = {}
 base.schoolIdent = {
 	"inwo", "iluz", "nekr", "odrz", "prze", "przy", "zaur", "ogol"
 }
@@ -111,7 +110,6 @@ function base:init()
   self.jsonBook = utils:readJson("scripts/base/book.json")
   self.jsonSpell = utils:readJson("scripts/base/spell.json")
 	self.jsonSkill = utils:readJson("scripts/base/skill.json")
-	self.effect = utils:readJson("scripts/base/effect.json")
   self:buildSpellDictionary()
   self:buildSpellDictionaryFull()
 	self:buildSkillDictionaryFull()
@@ -155,8 +153,6 @@ function base:buildSpellDictionaryFull()
   end
 end
 
-
-
 -- zamien json na slownik i przerzuc dane do kluczy tablicy
 function base:buildSkillDictionaryFull()
   for i=1, #self.jsonSkill do
@@ -172,11 +168,12 @@ function base:buildSkillDictionaryFull()
 end
 
 function base:effects()
+	local effects = utils:readJson("scripts/base/effect.json")
 	local out = {
 		["weapon"] = {},
 		["shield"] = {},
 	}
-	for type, eff in pairs(self.effect) do
+	for type, eff in pairs(effects) do
     if string.find(type, "WEAPON") then
 			table.insert(out.weapon, eff)
 		end
@@ -184,6 +181,33 @@ function base:effects()
 			table.insert(out.shield, eff)
 		end
   end
+	return out
+end
+
+function base:getTrickReq(arr)
+	local out = {}
+	for i=1, #arr do
+		table.insert(out, utils:concat(arr[i], ": "))
+	end
+	if #out < 2 then
+		table.insert(out, {"empty", false})
+	end
+	return out
+end
+
+function base:tricks()
+	local tricks = utils:readJson("scripts/base/trick.json")
+	local out = {}
+	for _, tr in pairs(tricks) do
+		local req = self:getTrickReq(tr["requirements"])
+		local temp = {}
+		tr["cost"] = utils:copper2mithryl(tr["cost"])
+		tr["req"] = utils:concat(req, " | ")
+		table.insert(temp, {false, tr.name, function() printer:trick(tr) end})
+		table.insert(temp, req[1])
+		table.insert(temp, req[2])
+		table.insert(out, temp)
+	end
 	return out
 end
 
@@ -207,6 +231,7 @@ function base:topic(key)
 		["trutki"] = function()  printer:helpEnvenomers(envenomer:getTypes()) end,
 		["biblioteka"] = function()  printer:helpLibrary() end,
 		["tick"] = function()  printer:helpTick() end,
+		["triki"] = function()  printer:helpTricks(base:tricks()) end,
 	}
 	if utils:arrayKeyExists(key, topics) then
 		topics[key]()

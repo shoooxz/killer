@@ -241,7 +241,9 @@ function utils:concat(arr, glue)
     local concat = ""
     if type(arr) == "table" then
         for k, v in pairs(arr) do
-            concat = concat .. v .. glue
+            if type(v) ~= "table" then
+              concat = concat .. v .. glue
+            end
         end
         return utils:rtrim(concat, glue)
     else
@@ -327,6 +329,17 @@ function utils:startsWith(str, prefix)
     return string.sub(str, 1, #prefix) == prefix
 end
 
-function utils:arrFirstInSecond(arr1, arr2)
-
+function utils:copper2mithryl(miedz)
+    local miedzi_na_zloto = 15 * 60
+    local miedzi_na_mithril = 12 * miedzi_na_zloto
+    local mithril = miedz / miedzi_na_mithril
+    -- Zaokrąglamy do 2 miejsc po przecinku
+    local wynik = string.format("%.2f", mithril)
+    -- Zamieniamy kropkę na przecinek
+    wynik = wynik:gsub("%.", ",")
+    -- Obcinamy niepotrzebne zera po przecinku
+    wynik = wynik:gsub(",(%d-)0+$", ",%1")
+    -- Jeśli zostało tylko przecinek (np. 1, → 1)
+    wynik = wynik:gsub(",$", "")
+    return wynik
 end

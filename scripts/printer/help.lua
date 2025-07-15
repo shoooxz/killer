@@ -458,6 +458,27 @@ function printer:helpEffects(arr)
   self:bottom()
 end
 
+function printer:trick(trick)
+  self:title("Help")
+  self:section(trick.name)
+  self:line(trick.req)
+  self:space()
+  self:text(trick.info)
+  self:space()
+  self:line(trick.notes, self.commandColor)
+  self:space()
+  self:line(utils:ucfirst(trick.mob).." | "..trick.chance.."% szans | "..trick.cost.."M")
+  self:tags("Wyznacz droge", "exp:goTo("..tostring(trick.roomVnum)..")")
+  self:bottom()
+end
+
+function printer:helpTricks(arr)
+  self:title("Help")
+  self:section("Triki")
+  self:tableRow({17, 23, 35}, {}, arr)
+  self:bottom()
+end
+
 function printer:helpEnvenomers(arr)
   self:title("Help")
   self:section("Trutki")
