@@ -338,8 +338,8 @@ end
 
 function printer:helpIndex()
   self:title("Help")
-  self:command("/help (skill/spell)", "Pomoc dotyczaca skilla/spella")
   self:tags("Wyszukiwanie?", "printer:searchInfo()")
+  self:command("/help (skill/spell)", "Pomoc dotyczaca skilla/spella")
   self:command("/help masterki", "Masterki broni w klasach")
   self:command("/help skradanie", "Mechanika skradania")
   self:command("/help dwuklasowosc", "Zasady laczenia klas")
@@ -349,6 +349,22 @@ function printer:helpIndex()
   self:command("/help trutki", "Lista trucizn")
   self:command("/help biblioteka", "Widmowa biblioteka")
   self:command("/help tick", "Czym jest tick?")
+  self:command("/help triki", "Lista trikow")
+  self:command("/help tatuaze", "Tatuaze")
+  self:bottom()
+end
+
+function printer:helpTat()
+  self:title("Help")
+  self:section("Tatuaze")
+  self:command("/tat (feat)", "Wyszukaj feat")
+  self:space()
+  self:line("Bonus mistrzowski:")
+  self:text("Umiejetnosci moga byc wytrenowane do poziomu 100 (nauka u nauczycieli do 95/96)")
+  self:line("+2 mem na kazdy krag")
+  self:line("+10% obrazen od czarow")
+  self:line("+10% obrazen od broni")
+  self:line("+1 spell level do kazdego zaklecia")
   self:bottom()
 end
 
@@ -447,14 +463,9 @@ end
 function printer:helpEffects(arr)
   self:title("Help")
   self:section("Efekty")
-  self:line("Bronie:", self.commandColor)
-  for i=1, #arr.weapon do
-    local crystal = arr.weapon[i].crystal
-    if arr.weapon[i].crystal == 0 then
-      crystal = "Brak krysztalu."
-    end
-    self:commandLink(arr.weapon[i].name, crystal, function() printer:effect(arr.weapon[i]) end)
-  end
+  self:tableRow({25, 40}, {"Tarcza", "Krysztal"}, arr.shield)
+  self:space()
+  self:tableRow({25, 40}, {"Bron", "Krysztal"}, arr.weapon)
   self:bottom()
 end
 

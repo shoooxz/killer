@@ -17,11 +17,11 @@
   "WEAPON_VAMPIRIC": {
     "name": "VAMPIRIC",
     "note": "Wysysa odrobine zycia z ofiary.",
-    "crystal": "Kaplan Licz w Piramidzie."
+    "crystal": "Kaplan Licz w Piramidzie"
   },
   "WEAPON_HEARTSEEKER": {
     "name": "HEARTSEEKER",
-    "note": "Zwieksza sile i celnosc umiejetnosci backstab.",
+    "note": "Zwieksza sile i celnosc umiejetnosci backstab",
     "crystal": 0
   },
   "WEAPON_SHARP": {
@@ -32,11 +32,16 @@
   "WEAPON_VORPAL": {
     "name": "VORPAL",
     "note": "Szansa na dodatkowe 50% obrazen uzalezniona od wytrenowania broni. Ponadto zwieksza szanse na trafienie krytyczne oraz wywoluje powaznie krwawiace rany. Wylacznie do broni z ostrzem.",
-    "crystal": "Gryf Krolewski NK."
+    "crystal": "Gryf Krolewski NK"
   },
   "WEAPON_HOLY": {
     "name": "HOLY",
     "note": "Przy kazdym ataku zadaje obrazenia od energii pozytywnej.",
+    "crystal": 0
+  },
+  "WEAPON_UNHOLY": {
+    "name": "UNHOLY",
+    "note": "Przy kazdym ataku zadaje obrazenia od energii negatywnej.",
     "crystal": 0
   },
   "WEAPON_RESONANT": {
@@ -52,22 +57,22 @@
   "WEAPON_SHOCKING": {
     "name": "SHOCKING",
     "note": "Dodatkowe obrazenia od elektrycznosci.",
-    "crystal": "Czarny Smok w instancji."
+    "crystal": "Czarny Smok w instancji"
   },
   "WEAPON_ELEMENTAL_ABSORB": {
     "name": "ELEMENTAL ABSORB",
     "note": "Niweluje efekty wszystkich tarczy zywiolow.",
-    "crystal": "Arcymag NK."
+    "crystal": "Arcymag NK"
   },
   "WEAPON_FLAMING": {
     "name": "FLAMING",
     "note": "Przy kazdym ataku zadaje obrazenia od ognia. Neguje tarcze mrozu.",
-    "crystal": "Ognisty Smok w instancji."
+    "crystal": "Ognisty Smok w instancji"
   },
   "WEAPON_FROST": {
     "name": "FROST",
     "note": "Przy kazdym ataku zadaje obrazenia od zimna. Neguje tarcze ognista.",
-    "crystal": "Kosciany Smok."
+    "crystal": "Kosciany Smok"
   },
   "WEAPON_POISON": {
     "name": "POISON",
@@ -77,6 +82,61 @@
   "WEAPON_KEEN": {
     "name": "KEEN",
     "note": "Zwieksza szanse na cios krytyczny.",
+    "crystal": 0
+  },
+  "WEAPON_THUNDERING": {
+    "name": "THUNDERING",
+    "note": "Zwieksza sile krytycznych ciosow.",
+    "crystal": "Pustynny Smok"
+  },
+  "WEAPON_RANDOM_ELEMENTS": {
+    "name": "RANDOM_ELEMENTS",
+    "note": "Szansa na losowy efekt zywiolu przy ciosie.",
+    "crystal": "Fenix w piramidzie"
+  },
+  "SHIELD_FLAMING": {
+    "name": "FLAMING",
+    "note": "Przy kazdym ataku zadaje obrazenia od ognia. Neguje tarcze mrozu.",
+    "crystal": "Kratos"
+  },
+  "SHIELD_HOLY": {
+    "name": "HOLY",
+    "note": "Przy kazdym ataku zadaje obrazenia od energii pozytywnej.",
+    "crystal": "Zloty Smok"
+  },
+  "SHIELD_SHOCKING": {
+    "name": "SHOCKING",
+    "note": "Dodatkowe obrazenia od elektrycznosci.",
+    "crystal": "Arcylicz"
+  },
+  "SHIELD_FROST": {
+    "name": "FROST",
+    "note": "Przy kazdym ataku zadaje obrazenia od zimna. Neguje tarcze ognista.",
+    "crystal": "Lodowy Smok"
+  },
+  "SHIELD_REFLECT": {
+    "name": "REFLECT",
+    "note": "Odbija czesc obrazen fizycznych.",
+    "crystal": "Czerwony Smok"
+  },
+  "SHIELD_RESONANT": {
+    "name": "RESONANT",
+    "note": "Dodatkowe obrazenia od dzwieku oraz szansa na utrate sluchu u ofiary (dobre przeciwko magom)",
+    "crystal": "Archeon Zapomniany Bog"
+  },
+  "SHIELD_UNHOLY": {
+    "name": "UNHOLY",
+    "note": "Przy kazdym ataku zadaje obrazenia od energii negatywnej.",
+    "crystal": "Nekromanta Nagash"
+  },
+  "SHIELD_VAMPIRIC": {
+    "name": "VAMPIRIC",
+    "note": "Wysysa odrobine zycia z ofiary.",
+    "crystal": "Arcymag NK"
+  },
+  "SHIELD_BURST_REFLECT": {
+    "name": "BURST_REFLECT",
+    "note": "Efekt zarezerwowany tylko dla artefaktow - powoduje odbicie obrazen do wszystkich przeciwnikow. Skutecznosc otrzymanego leczenia jest znaczaco nizsza.",
     "crystal": 0
   }
 }

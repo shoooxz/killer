@@ -14,6 +14,7 @@ base.spellDictionaryFull = {}
 base.skillDictionaryFull = {}
 base.spellClass = {}
 base.skillClass = {}
+base.effect = {}
 base.schoolIdent = {
 	"inwo", "iluz", "nekr", "odrz", "prze", "przy", "zaur", "ogol"
 }
@@ -110,6 +111,7 @@ function base:init()
   self.jsonBook = utils:readJson("scripts/base/book.json")
   self.jsonSpell = utils:readJson("scripts/base/spell.json")
 	self.jsonSkill = utils:readJson("scripts/base/skill.json")
+	self.effect = utils:readJson("scripts/base/effect.json")
   self:buildSpellDictionary()
   self:buildSpellDictionaryFull()
 	self:buildSkillDictionaryFull()
@@ -168,17 +170,30 @@ function base:buildSkillDictionaryFull()
 end
 
 function base:effects()
-	local effects = utils:readJson("scripts/base/effect.json")
 	local out = {
 		["weapon"] = {},
 		["shield"] = {},
 	}
-	for type, eff in pairs(effects) do
+	for type, eff in pairs(self.effect) do
     if string.find(type, "WEAPON") then
-			table.insert(out.weapon, eff)
+			local temp = {}
+			local crystal = {"empty", false}
+			if eff.crystal ~= 0 then
+				crystal = eff.crystal
+			end
+			table.insert(temp, {false, eff.name, function() printer:effect(eff) end})
+			table.insert(temp, crystal)
+			table.insert(out.weapon, temp)
 		end
 		if string.find(type, "SHIELD") then
-			table.insert(out.shield, eff)
+			local temp = {}
+			local crystal = {"empty", false}
+			if eff.crystal ~= 0 then
+				crystal = eff.crystal
+			end
+			table.insert(temp, {false, eff.name, function() printer:effect(eff) end})
+			table.insert(temp, crystal)
+			table.insert(out.shield, temp)
 		end
   end
 	return out
@@ -232,6 +247,7 @@ function base:topic(key)
 		["biblioteka"] = function()  printer:helpLibrary() end,
 		["tick"] = function()  printer:helpTick() end,
 		["triki"] = function()  printer:helpTricks(base:tricks()) end,
+		["tatuaze"] = function()  printer:helpTat() end,
 	}
 	if utils:arrayKeyExists(key, topics) then
 		topics[key]()
@@ -769,13 +785,11 @@ function base:buildSchool()
 						self:schoolCheck("zaur", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, use, isOffensive, isDefensive, i)
 
 						if self:generalCheck(class[2], self.jsonSpell[i].name, self.jsonSpell[i].school) then
-							--table.insert(self.spellClass["ogol"][tostring(class[2])], self.jsonSpell[i].name)
 							-- filter offensive/defensive
 							self:filterSpellType(use, "ogol", isOffensive, isDefensive, class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, i)
 						end
 					else
 						self:declareNonMage(class[1], class[2])
-						--table.insert(self.spellClass[class[1]][tostring(class[2])], self.jsonSpell[i].name)
 						-- filter offensive/defensive
 						self:filterSpellType(use, class[1], isOffensive, isDefensive, class[2], self.jsonSpell[i].name, self.jsonSpell[i].school, i)
 						-- filter heal
@@ -783,8 +797,7 @@ function base:buildSchool()
 					end
 				end
 			end
-    -- SZKOLY WYJEBAC ???
-		--[[
+    -- szkoly wykorzystywane as w /dif
 		if type(self.jsonSpell[i].school) == "table" and next(self.jsonSpell[i].school) and self.jsonSpell[i].school[1]  then
 			local short = self:schoolToShort(self.jsonSpell[i].school[1])
 			if not self.spellSchool[short] then
@@ -792,19 +805,18 @@ function base:buildSchool()
 			end
 			table.insert(self.spellSchool[short], self.jsonSpell[i]["name"])
 		end
-		]]--
 	end
 end
 
 function base:schoolCheck(ident, circle, name, school, use, isOffensive, isDefensive, i)
 	if self:schoolSuccess(school, self.schoolIdentToReverse[ident]) then
-		-- table.insert(self.spellClass[ident][tostring(circle)], name)
 		-- filter offensive/defensive
 		self:filterSpellType(use, ident, isOffensive, isDefensive, circle, name, school, i)
 	end
 end
 
 function base:filterSpellType(use, ident, off, def, circle, name, school, i)
+	table.insert(self.spellClass[ident][tostring(circle)], name)
 	if use then
 		if off then
 			table.insert(self.spellOffensive[ident][tostring(circle)], {name, school, i})
