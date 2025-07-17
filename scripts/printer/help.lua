@@ -365,6 +365,7 @@ function printer:helpTat()
   self:line("+10% obrazen od czarow")
   self:line("+10% obrazen od broni")
   self:line("+1 spell level do kazdego zaklecia")
+  --TODO DODAC UPDATE NOWY Z TATAMI SREDNIMI I WIELGACHNYMI z runa
   self:bottom()
 end
 
@@ -400,6 +401,21 @@ function printer:helpMem()
   self:command("Mag", "INT")
   self:command("Nomad", "INT, LUC")
   self:command("Kleryk/Paladyn/Druid", "WIS")
+  self:bottom()
+end
+
+function printer:tat(name, tat)
+  self:title("Help")
+  self:section(name)
+  self:text(tat.info)
+  if tat.note ~= 0 then
+    self:space()
+    self:text(tat.note)
+  end
+  self:space()
+  for i=1, #tat.class do
+    self:line(tat.class[i][1], tat.class[i][2])
+  end
   self:bottom()
 end
 

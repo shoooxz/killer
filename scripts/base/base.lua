@@ -72,6 +72,8 @@ function base:classToColor(long)
 		["Druid"] = "ansi_green",
 		["Kleryk"] = "ansi_light_yellow",
 		["Paladyn"] = "dark_orange",
+		["Wszystkie"] = "pink",
+		["Nekromanta"] = "dodger_blue",
 	}
 	return out[long]
 end
@@ -167,6 +169,29 @@ function base:buildSkillDictionaryFull()
     self.skillDictionaryFull[first][name] = self.jsonSkill[i]
     -- tutaj dodawac kolejne
   end
+end
+
+function base:tatClassToStr(arr)
+	local out = {}
+	for i=1, #arr do
+		table.insert(out, {arr[i],  self:classToColor(arr[i])})
+	end
+	return out
+end
+
+function base:tat(str)
+	local tats = utils:readJson("scripts/base/tat.json")
+	if tats[str] then
+		tats[str].class = self:tatClassToStr(tats[str].class)
+		printer:tat(str, tats[str])
+	else
+		for key, value in pairs(tats) do
+			if utils:partsMatch(str, key) then
+				return self:tat(key)
+			end
+		end
+		printer:error("Help", "Brak tatuazu!")
+	end
 end
 
 function base:effects()

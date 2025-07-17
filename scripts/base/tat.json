@@ -1,0 +1,197 @@
+{
+  "cien": {
+    "info": "Podczas dzialania Sneak zlodziej automatycznie ukrywa sie, wykorzystujac umiejetnosc Hide.",
+    "class": ["Zlodziej"],
+    "note": 0
+  },
+  "szaleniec": {
+    "info": "Znaczaco wydluza czas dzialania i wzmacnia dzialanie umiejetnosci berserk.",
+    "class": ["Barbarzynca"],
+    "note": 0
+  },
+  "rebacz": {
+    "info": "Wzmacnia umiejetnosc charge, szanse na wywrocenie przeciwnika oraz daje mozliwosc uzycia umiejetnosci podczas tankowania.",
+    "class": ["Barbarzynca"],
+    "note": 0
+  },
+  "nieumarly": {
+    "info": "Przemiana w nieumarla istote.",
+    "class": ["Nekromanta", "Czarny Rycerz"],
+    "note": 0
+  },
+  "mistrz parowania": {
+    "info": "Znaczaco wzmacnia umiejetnosc parry i shield block, dodatkowo istnieje szansa na bierne parry.",
+    "class": ["Wojownik"],
+    "note": 0
+  },
+  "swiety wojownik": {
+    "info": "Daje dostep do piatego kregu wraz z czarami sanctuary, divine power oraz consecrate.",
+    "class": ["Paladyn"],
+    "note": "Czary na drugiej klasie nie przejda na maga z odwrotna szkola."
+  },
+  "wybraniec bogow": {
+    "info": "Znacznie wzmacnia czary leczace.",
+    "class": ["Kleryk"],
+    "note": 0
+  },
+  "mistrz zaklec": {
+    "info": "Ma wplyw na przebicie odpornosci i sile rzucanych czarow, dodatkowo podczas walki ma szanse na odzyskanie rzuconego czaru.",
+    "class": ["Mag"],
+    "note": "+1 spell level do wszystkich zaklec."
+  },
+  "obronca natury": {
+    "info": "Umozliwia rzucanie czarow podczas posiadania szponow oraz daje dostep do czaru nature ally IV.",
+    "class": ["Druid"],
+    "note": 0
+  },
+  "mistrz zamkow": {
+    "info": "Od poziomu mistrzowskiego wzmacnia umiejetnosc otwierania zamkow w skrzyniach, omija wszelkie blokady.",
+    "class": ["Zlodziej"],
+    "note": 0
+  },
+  "niewzruszony obronca": {
+    "info": "Wojownik pewnie stoi na ziemi i ciezko poslac go na ziemie, dodatkowo skraca czas ogluszenia i unieruchomienia.",
+    "class": ["Wojownik"],
+    "note": 0
+  },
+  "charyzmatyczny przywodca": {
+    "info": "Umozliwia wydanie rozkazu wszystkim podwladnym za jednym razem - order all.",
+    "class": ["Wszystkie"],
+    "note": 0
+  },
+  "mistrz unikow": {
+    "info": "Wzmacnia umiejetnosc dodge, oraz dodge uzyskuje szanse na bierne uzycie.",
+    "class": ["Zlodziej"],
+    "note": 0
+  },
+  "twardy blok": {
+    "info": "Daje dostep do umiejetnosci shield block na 31 poziomie.",
+    "class": ["Czarny Rycerz"],
+    "note": 0
+  },
+  "oko cyklonu": {
+    "info": "Zwieksza szanse na trick cyclone.",
+    "class": ["Wszystkie"],
+    "note": 0
+  },
+  "lowca niewolnikow": {
+    "info": "Zwieksza szanse na trick entwine.",
+    "class": ["Wsystkie"],
+    "note": 0
+  },
+  "miedzy mlotem a kowadlem": {
+    "info": "Zwieksza szanse na trick thundering whack.",
+    "class": ["Wszystkie"],
+    "note": 0
+  },
+  "bitewne przeszkolenie": {
+    "info": "Wzmacnia mozliwosci bojowe kaplana, dodatkowo podczas walki ma szanse na odzyskanie rzuconego czaru.",
+    "class": ["Kleryk"],
+    "note": "Poprawia resisty i wzmacnia shieldblock."
+  },
+  "wladca marionetek": {
+    "info": "Wzmacnia czas kontrolowania nieumarlych i avatara niemal bez konca.",
+    "class": ["Czarny rycerz"],
+    "note": 0
+  },
+  "obronca wiary": {
+    "info": "Wzmacnia umiejetnosci obronne.",
+    "class": ["Paladyn"],
+    "note": "Wzmacnia shieldblock i parry, zmniejsza obrazenia od evili o 10%."
+  },
+  "drzewko szczescia": {
+    "info": "Czyni kazde miejsce przyjaznym dla druida.",
+    "class": ["Druid"],
+    "note": "Lepszy mem, +1 spell level do wszystkich czarow."
+  },
+  "tancerz": {
+    "info": "Umozliwia zmiane stylu walki bladefury/bladedance w walce.",
+    "class": ["Nomad"],
+    "note": 0
+  },
+  "wirujace ostrza": {
+    "info": "Wzmacnia umiejetnosc cyclone, oraz cyclone uzyskuje szanse na bierne uzycie.",
+    "class": ["Nomad"],
+    "note": 0
+  },
+  "piaski pustyni": {
+    "info": "Czyni kazde miejsce przyjaznym dla nomada.",
+    "class": ["Nomad"],
+    "note": "+4 spell level do wylacznie nomadowych spelli, +1 do magicznej na drugiej."
+  },
+  "pakt ze smiercia": {
+    "info": "Pan smierci czasem odwraca wzrok, co czyni smierc znacznie przyjemniejsza.",
+    "class": ["Wszystkie"],
+    "note": 0
+  },
+  "cios smierci": {
+    "info": "Znaczaco zwieksza zabojcze umiejetnosci zlodzieja.",
+    "class": ["Zlodziej"],
+    "note": "Wzmacnia backstab i trick lethal blow. Wykorzystuje backstab mastery aby bardziej sprzyjal zlodziejowi na pierwszej klasie. Majac backstab mastery przesuwa granice wielkosci moba do backstaba."
+  },
+  "wirujaca zaglada": {
+    "info": "Wzmacnia umiejetnosc whirlwind, oraz whirlwind uzyskuje szanse na bierne uzycie.",
+    "class": ["Barbarzynca"],
+    "note": 0
+  },
+  "fechmistrz": {
+    "info": "Wzmacnia umiejetnosc wardance. Stan skupienia utrzymuje sie takze poza walka a ucieczka zmienia sie w taktyczny odwrot.",
+    "class": ["Wojownik"],
+    "note": "Niewielka szansa na nauke wardance i wardance mastery podczas walki i pod wplywem wardance."
+  },
+  "myto ogarow": {
+    "info": "Oplacone myto (trzeba miec przy sobie kase) daje szanse na zachowanie czesci ekwipuinku przy smierci. Nie dziala przy pvp.",
+    "class": ["Wszystkie"],
+    "note": 0
+  },
+  "bezpieczny skarbiec": {
+    "info": "Daje szanse na zachowanie czesci ekwipuinku przy smierci. Nie dziala przy pvp.",
+    "class": ["Wszystkie"],
+    "note": 0
+  },
+  "glebokie kieszenie": {
+    "info": "Podczas pladrowania zwlok rabus moze cos przeoczyc. Daje szanse na zachowanie czesci ekwipuinku przy smierci. Nie dziala przy pvp.",
+    "class": ["Wszystkie"],
+    "note": 0
+  },
+  "przytlaczajace ataki": {
+    "info": "Pozwala uzywac przytlaczajacych atakow might blows w tyrbie automatycznym. Berserk podtrzymuje ten stan.",
+    "class": ["Barbarzynca"],
+    "note": 0
+  },
+  "zmiennoksztaltny": {
+    "info": "Wzmacnia przemiany druida oraz pozwala uzywac zaklec w zwierzecej formie.",
+    "class": ["Druid"],
+    "note": 0
+  },
+  "przyczajony lowca": {
+    "info": "Pantera zawsze szuka cienia aby sie przyczaic.",
+    "class": ["Druid"],
+    "note": 0
+  },
+  "wilczy skowyt": {
+    "info": "Wilk moze uzyc wiecej niz jednego wilczego wycia w danym czasie.",
+    "class": ["Druid"],
+    "note": 0
+  },
+  "taran": {
+    "info": "Podczas tratowania niedzwiedz moze powalic znacznie wiekszego przeciwnika.",
+    "class": ["Druid"],
+    "note": 0
+  },
+  "taneczny krok": {
+    "info": "Nomad nieprzerwanie pozostaje w swoim tanecznym transie, ale rownoczesnie wie kiedy zejsc z parkietu niepokonanym.",
+    "class": ["Nomad"],
+    "note": "Taniec konczy sie po pewnym czasie."
+  },
+  "miazdzyciel": {
+    "info": "Wzmacnia umiejetnosc overwhelming strike. W stanie skupienia umiejetnosc staje sie bierna.",
+    "class": ["Wojownik"],
+    "note": "Wardance + overwhelming na start walki."
+  },
+  "wachlarz ostrzy": {
+    "info": "Podczas uzywania unikow zlodziej ma szanse na bierne uzycie bladesplash w przeciwnika, ktorego ataku uniknal.",
+    "class": ["Zlodziej"],
+    "note": "Sprzyja zlodziejowi na pierwszej klasie wykorzystujac bladesplash mastery. Zwieksza nieco szanse na trick."
+  }
+}
