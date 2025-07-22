@@ -37,6 +37,25 @@ function utils:ellipsis(s, maxLen)
     end
 end
 
+function utils:fillGaps(t, default_value)
+  -- Znajdź największy indeks numeryczny
+  local max_index = 0
+  for k in pairs(t) do
+    if type(k) == "number" and k > max_index then
+      max_index = k
+    end
+  end
+
+  -- Uzupełnij brakujące indeksy
+  for i = 1, max_index do
+    if t[i] == nil then
+      t[i] = default_value
+    end
+  end
+
+  return t
+end
+
 function utils:diceToAverage(format)
     -- Dopasowanie do wzorca "XdY", np. "2d5"
     local ilosc, sciany = string.match(format, "(%d+)d(%d+)")

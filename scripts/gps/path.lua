@@ -181,12 +181,12 @@ function path:fortStart()
     ["ident"] = "fort",
     ["loot"] = "cialo",
     ["onStart"] = function()
-      state:orderSub("wield 0")
-      inventory:weaponRemove()
+      --state:orderSub("wield 0")
+      --inventory:weaponRemove()
     end,
     ["onEnd"] = function()
-      state:orderSub("wield 1")
-      inventory:weaponWield()
+      --state:orderSub("wield 1")
+      --inventory:weaponWield()
     end,
   }
   exp:start(self.conf)

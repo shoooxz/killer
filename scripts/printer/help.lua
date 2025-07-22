@@ -281,15 +281,30 @@ function printer:simpleListEmpty(name)
   end
 end
 
+function printer:actionShow(school, arr)
+  self:title("Akcje")
+  if school then
+    self:line(school[1], school[2])
+    self:space()
+  end
+  if next(arr) then
+    for circle, spells in ipairs(arr) do
+      if spells then
+        self:tableRow({25, 25, 25}, {}, spells, true)
+      end
+    end
+  end
+  self:bottom(false, true)
+end
+
 function printer:buffShow(arr)
   self:title("Buff")
   self:line("M - cast na master'a  S - cast na slave'a  Kliknij aby wybrac", self.sectionColor)
-
   if next(arr) then
     for circle, spells in pairs(arr) do
-      self:space()
-      self:section("Krag "..circle)
-      self:tableRow({1, 1, 20, 1, 1, 19, 1, 1, 18}, {}, spells)
+      --self:space()
+      --self:section("Krag "..circle)
+      self:tableRow({1, 1, 20, 1, 1, 19, 1, 1, 18}, {}, spells, true)
     end
   end
   self:bottom(false, true)

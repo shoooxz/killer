@@ -122,7 +122,7 @@
   "pakt ze smiercia": {
     "info": "Pan smierci czasem odwraca wzrok, co czyni smierc znacznie przyjemniejsza.",
     "class": ["Wszystkie"],
-    "note": 0
+    "note": "Chroni przed Power Word Kill."
   },
   "cios smierci": {
     "info": "Znaczaco zwieksza zabojcze umiejetnosci zlodzieja.",

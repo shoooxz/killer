@@ -46,6 +46,19 @@ function base:targetToFancy(tar)
 	return out[tar]
 end
 
+function base:identToSchool(ident)
+	local out = {
+		["inwo"] = "Inwokacje",
+		["iluz"] = "Iluzje",
+		["nekr"] = "Nekromancja",
+		["odrz"] = "Odrzucanie",
+		["prze"] = "Przemiany",
+		["przy"] = "Przywolanie",
+		["zaur"] = "Zauroczenie",
+	}
+	return out[ident]
+end
+
 function base:schoolToColor(school)
 	local out = {
 		["Odrzucanie"] = "white",
@@ -122,6 +135,20 @@ function base:init()
 	-- clear memory
 	self.jsonSpell = nil
 	self.jsonSkill = nil
+end
+
+function base:isSpecialist(ident)
+	return utils:inArray2(ident, self.schoolIdent)
+end
+
+function base:getSkills(fclass, sclass)
+	if self:isSpecialist(fclass) then
+		fclass = "mag"
+	end
+	local first = self.skillClass[fclass]
+	local second = self.skillClass[sclass]
+	second["31"] = nil
+	return self:combineSkills(first, second)
 end
 
 function base:buildSpellDictionary()
@@ -541,6 +568,37 @@ function base:reduceSpellsTo5Circle(arr)
 	return arr
 end
 
+function base:combineSkills(t1, t2)
+  local result = {}
+  local seen = {} -- globalny zbiór wartości
+
+  -- Zbierz wszystkie klucze i posortuj rosnąco
+  local keys = {}
+  for key in pairs(t1) do table.insert(keys, key) end
+  for key in pairs(t2) do
+    if not t1[key] then table.insert(keys, key) end
+  end
+  table.sort(keys, function(a, b) return tonumber(a) < tonumber(b) end)
+
+  -- Iteruj po posortowanych kluczach
+  for _, key in ipairs(keys) do
+    result[key] = {}
+    local function add_values(list)
+      for _, v in ipairs(list) do
+        if not seen[v] then
+          table.insert(result[key], v)
+          seen[v] = true
+        end
+      end
+    end
+
+    if t1[key] then add_values(t1[key]) end
+    if t2[key] then add_values(t2[key]) end
+  end
+
+  return result
+end
+
 function base:combineSpells(t1, t2)
     local wynik = {}
 
@@ -588,12 +646,19 @@ function base:combineSpells(t1, t2)
     return wynik
 end
 
-function base:getSpellDefensive(fclass, sclass)
+function base:getSpells(type, fclass, sclass)
 	if sclass == "mag" then
 		sclass = "ogol"
 	end
-	local first = self.spellDefensive[fclass]
-	local second = self.spellDefensive[sclass]
+	local first = {}
+	local second = {}
+	if type == "offensive" then
+		first = self.spellOffensive[fclass]
+		second = self.spellOffensive[sclass]
+	else
+		first = self.spellDefensive[fclass]
+		second = self.spellDefensive[sclass]
+	end
 	-- jesli rozne klasy
 	if fclass ~= sclass then
 		-- jesli spelle drugiej istnieja
@@ -601,7 +666,7 @@ function base:getSpellDefensive(fclass, sclass)
 			-- jesli spelle pierwszej istnieja
 			if first then
 				-- jesli pierwsza klasa ma ident szkoly - polacz spelle uwazajac na przeciwne szkoly
-				if utils:inArray2(fclass, self.schoolIdent) then
+				if self:isSpecialist(fclass) then
 					if fclass == "ogol" then
 						second = self:removeGeneralSchool(second)
 					else
@@ -970,7 +1035,7 @@ function base:test()
 end
 
 function base:schoolToMage(class)
-	if utils:inArray2(class, self.schoolIdent) then
+	if self:isSpecialist(class) then
 		return "mag"
 	end
 	return class

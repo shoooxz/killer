@@ -120,6 +120,7 @@ function footer:promptFight(matches)
 end
 
 function footer:promptUpdate()
+	-- TODO sprawdzic czy to sprawia, ze jest czarny prompt
 	-- "[<Lin: (******  )>n:k ] "  dziwny prompt jak jest walka
 	if string.find(getCurrentLine(), ": %(") then
 		-- walka

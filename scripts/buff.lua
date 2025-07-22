@@ -25,7 +25,7 @@ buff.short = {
 function buff:show()
   local fclass = profile:get("fclass")
   local sclass = profile:get("sclass")
-  local buffs = base:getSpellDefensive(fclass, sclass)
+  local buffs = base:getSpells("defensive", fclass, sclass)
   local saved = profile:get("buffbasic")
   local saved2 = profile:get("buffbasic2")
   local print = {}

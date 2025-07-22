@@ -16,6 +16,7 @@ function loadObjects(force)
         "scripts/state/top",
         "scripts/state/state",
         "scripts/footer",
+        "scripts/action",
         "scripts/character/core",
         "scripts/character/warrior",
         "scripts/character/necro",
