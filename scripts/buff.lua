@@ -112,7 +112,7 @@ end
 function buff:cast(target)
   local fclass = profile:get("fclass")
   local sclass = profile:get("sclass")
-  local buffs = base:getSpellDefensive(fclass, sclass)
+  local buffs = base:getSpells("defensive", fclass, sclass)
 
   send("order "..profile:get("sub").." buff "..target)
 

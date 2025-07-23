@@ -333,6 +333,7 @@ function printer:top(nospace)
 end
 
 function printer:bottom(nospace, nomargin)
+	nomargin = false
 	local margin = "\n\n"
 	if not nospace then self:space() end
 	if nomargin then margin = "" end

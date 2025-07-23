@@ -1,20 +1,25 @@
 action = action or {}
 
-function action:test()
+function action:skill(slot, type)
   local fclass = profile:get("fclass")
   local sclass = profile:get("sclass")
   local skills = self:cleanSkills(base:getSkills(fclass, sclass))
+  self:print(false, skills, function(name, color) return function() footer:actionSet(slot, type, name, false, color) end end, slot, type)
+end
+
+function action:spell(slot, type)
+  local fclass = profile:get("fclass")
+  local sclass = profile:get("sclass")
   local spells = base:getSpells("offensive", fclass, sclass)
   local school = nil
   if base:isSpecialist(fclass) and fclass ~= "ogol" then
     local s = base:identToSchool(fclass)
     school = {s, base:schoolToColor(s)}
   end
-  self:print(school, spells, function(name) return function() display(name) end end)
-  --self:print(false, skills, function(name) return function() display(name) end end)
+  self:print(school, spells, function(name, color) return function() footer:actionSet(slot, type, name, true, color) end end, slot, type)
 end
 
-function action:print(school, t, func)
+function action:print(school, t, func, slot, typee)
   local print = {}
   local arr = {}
   for circle, spells in pairs(t) do
@@ -25,13 +30,13 @@ function action:print(school, t, func)
     if not print[c] then print[c] = {} end
     for i=1, #spells do
       local name = spells[i]
-      local color = false
+      local color = "sienna"
       --- spells maja budowe tabelowa
       if type(spells[i]) == "table" then
         name = spells[i][1]
         color = base:schoolToColor(spells[i][2][1])
       end
-      table.insert(arr, {color, utils:ellipsis(name, 24), func(name)})
+      table.insert(arr, {color, utils:ellipsis(name, 24), func(name, color)})
       if utils:mod(i, 3) == 0 then
         table.insert(print[c], arr)
         arr = {}
@@ -47,7 +52,7 @@ function action:print(school, t, func)
       arr = {}
     end
   end
-  printer:actionShow(school, utils:fillGaps(print, false))
+  printer:actionShow(school, utils:fillGaps(print, false), slot, typee)
 end
 
 function action:cleanSkills(arr)

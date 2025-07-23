@@ -1,8 +1,34 @@
 footer = footer or {}
 footer.promptHeight = 50
 footer.buttonHeight = 60
+footer.action = false
+footer.count = 7
+footer.btnEmpty = [[
+			background-color: #555555;
+			border-style: solid;
+			border-width: 1px;
+			border-color: black;
+			qproperty-wordWrap: true;
+			padding: 0px;
+ ]]
+footer.btnChange = [[
+			background-color: #333333;
+			border-style: dotted;
+			border-width: 1px;
+			border-color: #00FFFF;
+			qproperty-wordWrap: true;
+			padding: 0px;
+ ]]
+footer.btnBasic = [[
+			background-color: rgba(135,206,250,100);
+			border-style: solid;
+			border-width: 1px;
+			border-color: black;
+			qproperty-wordWrap: true;
+			padding: 0px;
+]]
 footer.baseFunc = {
-	[1] = {
+	[15] = {
 		["name"] = "Stand",
 		["func"] = function()
 			 send("stand")
@@ -11,7 +37,7 @@ footer.baseFunc = {
 		end,
 		["style"] = ""
 	},
-	[2] = {
+	[16] = {
 		["name"] = "Rest",
 		["func"] = function()
 			 state:orderTeam("rest;recup;medi")
@@ -21,7 +47,7 @@ footer.baseFunc = {
 		end,
 		["style"] = ""
 	},
-	[3] = {
+	[17] = {
 		["name"] = "Sleep",
 		["func"] = function()
 		 	state:orderTeam("sleep")
@@ -29,31 +55,7 @@ footer.baseFunc = {
 		end,
 		["style"] = ""
 	},
-	[4] = {
-		["name"] = "Learn",
-		["func"] = function()
-			send("learn")
-			state:orderTeam("learn")
-		end,
-		["style"] = ""
-	},
-	[5] = {
-		["name"] = "Jablon",
-		["func"] = function()
-			for i = 1, 25 do
-			  send("zerwij jablko; get jablko")
-			end
-		end,
-		["style"] = ""
-	},
-	[6] = {
-		["name"] = "Dupa",
-		["func"] = function()
-			--echo("Sraka")
-		end,
-		["style"] = ""
-	},
-	[7] = {
+	[18] = {
 		["name"] = "Rent",
 		["func"] = function()
 			state:orderTeam("rent here")
@@ -61,7 +63,7 @@ footer.baseFunc = {
 		end,
 		["style"] = ""
 	},
-	[8] = {
+	[19] = {
 		["name"] = "Fly",
 		["func"] = function()
 			local s = profile:get("fly")
@@ -69,14 +71,14 @@ footer.baseFunc = {
 		end,
 		["style"] = ""
 	},
-	[9] = {
+	[20] = {
 		["name"] = "Light",
 		["func"] = function()
 			send("c light; wear kula")
 		end,
 		["style"] = ""
 	},
-	[10] = {
+	[21] = {
 		["name"] = "Pic/Jesc",
 		["func"] = function()
 			inventory:eat()
@@ -88,12 +90,7 @@ footer.container = {}
 footer.overlay = {}
 footer.buttons = {}
 
-
 function footer:init()
-	-- pozniej moze to przerzucic do opcji
-	character.warriorEnabled = true
-	character.necroEnabled = true
-	-----------------------------------------------------
 	self.width = settings:get("mainWindowWidth")-settings:get("mapperWidth")-10
 	self.promptHeight = settings:applyDpiScaling(self.promptHeight)
 	self.buttonHeight = settings:applyDpiScaling(self.buttonHeight)
@@ -111,7 +108,6 @@ function footer:createPrompt()
 	})
 	self.prompt:setFontSize(15)
 	self.prompt:setStyleSheet([[background-color: black]])
-
 end
 
 function footer:promptFight(matches)
@@ -132,17 +128,16 @@ function footer:promptUpdate()
 	end
 end
 
+-------------------------------------------------------------------------------
+-- TODO ogarnac right UI albo zrobic cos innego
 function footer:createRightUI()
-
 	footer.right = Geyser.Label:new({
 		name = "MyButtons.FooterRight",
 		x = footer.width+10, y = -70,
 		height = 70,
 		width = settings:get("mapperWidth")-20
 	})
-
 	footer.right:raise()
-
 	local btnStyle = [[
 				background-color: rgba(135,206,250,100);
 				border-style: solid;
@@ -152,12 +147,10 @@ function footer:createRightUI()
 				margin: 0px;
 				padding: 0px;
 	]]
-
 	self:createButton("RES", function() echo("sraka") end, btnStyle, 10)
 	self:createButton("BMS", function() buff:basicCast("ms") end, btnStyle, 80)
 	self:createButton("BM", function() buff:basicCast("m")  end, btnStyle, 150)
 	self:createButton("BS", function() buff:basicCast("s")  end, btnStyle, 220)
-
 end
 
 function footer:createButton(name, func, style, x)
@@ -176,51 +169,34 @@ function footer:createButton(name, func, style, x)
 	footer.buttons["FRight"..name]:setClickCallback(callback)
 	footer.buttons["FRight"..name]:raise()
 end
+------------------------------------------------------------------------------
 
 function footer:createUI()
 	setBorderBottom(self.height+self.promptHeight)
-
 	footer.overlay = Geyser.Label:new({
 	  name = "MyButtons.Overlay",
 	  x = 0, y = -self.height,
 	  width = self.width,
 	  height = self.height,
 	})
-
-
-
-	--self:createRightUI()
-
-	footer:createButtons("Basic2", footer.baseFunc, 2*self.buttonHeight, false, [[
-				background-color: rgba(135,206,250,100);
-				border-style: solid;
-				border-width: 1px;
-				border-color: black;
-				qproperty-wordWrap: true;
-				padding: 0px;
-	]])
-
-	if character.warriorEnabled then
-		footer:createButtons("Warrior", character.warrior, 0, footer:fastSkillCallback(),  [[
-					background-color: #905923;
-					border-style: solid;
-					border-width: 1px;
-					border-color: black;
-					qproperty-wordWrap: true;
-					padding: 0px;
-			]])
-	end
-
-	if character.necroEnabled then
-		footer:createButtons("Necro", character.necro, self.buttonHeight, footer:fastSpellCallback(), [[
-					background-color: #9400d3;
-					border-style: solid;
-					border-width: 1px;
-					border-color: black;
-					qproperty-wordWrap: true;
-					padding: 0px;
-			]])
-	end
+	footer:createButtons("Row1",
+		0, 1,
+		footer:fastSkillCallback(),
+		self.btnEmpty,
+		{}
+	)
+	footer:createButtons("Row2",
+		self.buttonHeight, 1+self.count,
+		footer:fastSpellCallback(),
+		self.btnEmpty,
+		{}
+	)
+  footer:createButtons("Row3",
+		2*self.buttonHeight, 1+2*self.count,
+		false,
+		self.btnBasic,
+		footer.baseFunc
+	)
 end
 
 function footer:fastSpellCallback()
@@ -241,35 +217,66 @@ function footer:fastSkillCallback()
 end
 
 function footer:setFastSpellLabel(i, name)
-	footer.buttons["MyButtonNecro"..i]:echo("<center>"..name)
+	footer.buttons["Footer.Button"..10+i]:echo("<center>"..name)
 end
 
 function footer:setFastSkillLabel(i, name)
-	footer.buttons["MyButtonWarrior"..i]:echo("<center>"..name)
+	footer.buttons["Footer.Button"..i]:echo("<center>"..name)
 end
 
-function footer:createButtons(name, data, y, func, style)
+function footer:createButtons(name, y, index, func, style, data)
 	footer.container[name] = Geyser.HBox:new({
-		name = "MyButtons.TopHBox"..name,
+		name = "Footer."..name,
 		x = 0, y = y,
 		width = "100%",
-		height = self.buttonHeight,
+		height =  self.buttonHeight,
 		color = "black",
 		fgColor = "black"
 	}, footer.overlay)
-	for i=1,10 do
-			footer.buttons["MyButton"..name..i] = Geyser.Label:new({
-				name = "MyButtons.Button"..name..i,
-			}, footer.container[name])
-			footer.buttons["MyButton"..name..i]:echo("<center>"..data[i]["name"])
-			footer.buttons["MyButton"..name..i]:setStyleSheet(style)
-			footer.buttons["MyButton"..name..i]:setFontSize(12)
-			local callback = data[i]["func"]
-			if func then
-				callback = function() func(i) end
-			else
-
-			end
-			footer.buttons["MyButton"..name..i]:setClickCallback(callback)
+	for i=index, index+self.count-1 do
+		local ident = "Footer.Button"..i
+		footer.buttons[ident] = Geyser.Label:new({
+			name = ident,
+		}, footer.container[name])
+		footer.buttons[ident]:setStyleSheet(style)
+		footer.buttons[ident]:setFontSize(12)
+		if next(data) then
+			footer.buttons[ident]:setClickCallback(data[i]["func"])
+			footer.buttons[ident]:echo("<center>"..data[i].name)
+		else
+			footer.buttons[ident]:echo("<center>[]")
+			footer.buttons[ident]:setClickCallback(function() func(i) end)
+		end
 	end
+end
+
+function footer:actionMode(state)
+	self.action = state
+	if state then
+		self:actionStart()
+	else
+		self:actionStop()
+	end
+end
+
+function footer:actionStart()
+	for i=1,self.count*2 do
+		local ident = "Footer.Button"..i
+			footer.buttons[ident]:setStyleSheet(self.btnChange)
+			footer.buttons[ident]:setClickCallback(function()
+				printer:actionPick1(i)
+			end)
+	end
+
+end
+
+function footer:actionStop()
+end
+
+function footer:actionSet(slot, type, name, cast, color)
+	display(slot)
+	display(type)
+	display(name)
+	display(cast)
+	display(color)
 end

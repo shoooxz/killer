@@ -18,8 +18,6 @@ function loadObjects(force)
         "scripts/footer",
         "scripts/action",
         "scripts/character/core",
-        "scripts/character/warrior",
-        "scripts/character/necro",
         "scripts/base/base",
         "scripts/base/boss",
         "scripts/base/envenomer",

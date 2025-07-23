@@ -281,8 +281,47 @@ function printer:simpleListEmpty(name)
   end
 end
 
-function printer:actionShow(school, arr)
-  self:title("Akcje")
+function printer:actionPick1(slot)
+  self:title("Akcja")
+  self:section("Slot "..slot)
+  self:line("Akcje dziela sie na dwa rodzaje:")
+  self:text("1. Wyzwalanie w dwoch miejscach jednoczesnie. Ustawiajac np. na pierwszym slocie u siebie Circle, a u drugiej postaci na tym samym slocie Dodge, wcisniecie przycisku spowoduje uzycie Circle na pierwszej postaci oraz Dodge na drugiej postaci.")
+  self:text("2. Wyzwalanie tylko u siebie. Akcja przypisana do tego samego slotu u drugiej postaci nie zostanie uruchomiona.")
+  self:space()
+  self:tags({
+    {false, "Wyzwalanie w dwoch miejscach jednoczesnie", function() printer:actionPick2(slot, 1) end},
+    {false, "Wyzwalanie tylko u siebie", function() printer:actionPick2(slot, 2) end},
+  })
+  self:bottom(false, true)
+end
+
+function printer:actionPick2(slot, type)
+  self:title("Akcja")
+  self:section("Slot "..slot)
+  if type == 1 then
+    self:line("Wyzwalanie w dwoch miejscach jednoczesnie", self.commandColor)
+  else
+    self:line("Wyzwalanie tylko u siebie", self.commandColor)
+  end
+  self:space()
+  self:text("Jesli jest problem z wyborem czarow/umiejetnosci nalezy ustawic pierwsza i druga klase w /opcje.")
+  self:space()
+  self:tags({
+    {false, "Wybierz umiejetnosc", function() action:skill(slot, type) end},
+    {false, "Wybierz czar", function() action:spell(slot, type) end},
+  })
+  self:bottom(false, true)
+end
+
+function printer:actionShow(school, arr, slot, type)
+  self:title("Akcja")
+  self:section("Slot "..slot)
+  if type == 1 then
+    self:line("Wyzwalanie w dwoch miejscach jednoczesnie", self.commandColor)
+  else
+    self:line("Wyzwalanie tylko u siebie", self.commandColor)
+  end
+  self:space()
   if school then
     self:line(school[1], school[2])
     self:space()
