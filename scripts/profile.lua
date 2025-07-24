@@ -1,6 +1,41 @@
 profile = profile or {}
 profile.file = nil
 profile.list = profile.list or {}
+profile.default = {
+	["asopener"] = "",
+	["kiopener"] = "",
+	["fclass"] = "",
+	["sclass"] = "",
+	["kill"] = "kill",
+	["buffbasic"] = {},
+	["buffbasic2"] = {},
+	["follower"] = 0,
+	["fly"] = "float",
+	["master"] = "Thalorian",
+	["bag"] = "torba",
+	["mh"] = "miecz",
+	["oh"] = "",
+	["stats_progress"] = 0,
+	["mode"] = 1,
+	["walker"] = 10,
+	["water"] = "butla",
+	["food"] = "jablko",
+	["sub"] = "Link",
+	["a1"] = "",
+	["a2"] = "",
+	["a3"] = "",
+	["a4"] = "",
+	["a5"] = "",
+	["a6"] = "",
+	["a7"] = "",
+	["a8"] = "",
+	["a9"] = "",
+	["a10"] = "",
+	["a11"] = "",
+	["a12"] = "",
+	["a13"] = "",
+	["a14"] = "",
+}
 profile.func = {
 	["asopener"] = function(val)
 			profile.list.asopener = val
@@ -40,106 +75,6 @@ profile.func = {
 	end,
 	["master"] = function(val)
 			profile.list.master = val
-			profile:save()
-	end,
-	["s1"] = function(val)
-			profile.list.s1 = val
-			footer:setFastSkillLabel(1, val);
-			profile:save()
-	end,
-	["s2"] = function(val)
-			profile.list.s2 = val
-			footer:setFastSkillLabel(2, val)
-			profile:save()
-	end,
-	["s3"] = function(val)
-			profile.list.s3 = val
-			footer:setFastSkillLabel(3, val)
-			profile:save()
-	end,
-	["s4"] = function(val)
-			profile.list.s4 = val
-			footer:setFastSkillLabel(4, val)
-			profile:save()
-	end,
-	["s5"] = function(val)
-			profile.list.s5 = val
-			footer:setFastSkillLabel(5, val)
-			profile:save()
-	end,
-	["s6"] = function(val)
-			profile.list.s6 = val
-			footer:setFastSkillLabel(6, val)
-			profile:save()
-	end,
-	["s7"] = function(val)
-			profile.list.s7 = val
-			footer:setFastSkillLabel(7, val)
-			profile:save()
-	end,
-	["s8"] = function(val)
-			profile.list.s8 = val
-			footer:setFastSkillLabel(8, val)
-			profile:save()
-	end,
-	["s9"] = function(val)
-			profile.list.s9 = val
-			footer:setFastSkillLabel(9, val)
-			profile:save()
-	end,
-	["s10"] = function(val)
-			profile.list.s10 = val
-			footer:setFastSkillLabel(10, val)
-			profile:save()
-	end,
-	["k1"] = function(val)
-			profile.list.k1 = val
-			footer:setFastSpellLabel(1, val);
-			profile:save()
-	end,
-	["k2"] = function(val)
-			profile.list.k2 = val
-			footer:setFastSpellLabel(2, val)
-			profile:save()
-	end,
-	["k3"] = function(val)
-			profile.list.k3 = val
-			footer:setFastSpellLabel(3, val)
-			profile:save()
-	end,
-	["k4"] = function(val)
-			profile.list.k4 = val
-			footer:setFastSpellLabel(4, val)
-			profile:save()
-	end,
-	["k5"] = function(val)
-			profile.list.k5 = val
-			footer:setFastSpellLabel(5, val)
-			profile:save()
-	end,
-	["k6"] = function(val)
-			profile.list.k6 = val
-			footer:setFastSpellLabel(6, val)
-			profile:save()
-	end,
-	["k7"] = function(val)
-			profile.list.k7 = val
-			footer:setFastSpellLabel(7, val)
-			profile:save()
-	end,
-	["k8"] = function(val)
-			profile.list.k8 = val
-			footer:setFastSpellLabel(8, val)
-			profile:save()
-	end,
-	["k9"] = function(val)
-			profile.list.k9 = val
-			footer:setFastSpellLabel(9, val)
-			profile:save()
-	end,
-	["k10"] = function(val)
-			profile.list.k10 = val
-			footer:setFastSpellLabel(10, val)
 			profile:save()
 	end,
 	["cel"] = function(val)
@@ -191,28 +126,21 @@ profile.func = {
 
 function profile:onProfileLoaded()
 	state.sub = profile:get("sub")
-	-- spells
-	footer:setFastSpellLabel(1, profile:get("k1"));
-	footer:setFastSpellLabel(2, profile:get("k2"));
-	footer:setFastSpellLabel(3, profile:get("k3"));
-	footer:setFastSpellLabel(4, profile:get("k4"));
-	footer:setFastSpellLabel(5, profile:get("k5"));
-	footer:setFastSpellLabel(6, profile:get("k6"));
-	footer:setFastSpellLabel(7, profile:get("k7"));
-	footer:setFastSpellLabel(8, profile:get("k8"));
-	footer:setFastSpellLabel(9, profile:get("k9"));
-	footer:setFastSpellLabel(10, profile:get("k10"));
-	-- skills
-	footer:setFastSkillLabel(1, profile:get("s1"));
-	footer:setFastSkillLabel(2, profile:get("s2"));
-	footer:setFastSkillLabel(3, profile:get("s3"));
-	footer:setFastSkillLabel(4, profile:get("s4"));
-	footer:setFastSkillLabel(5, profile:get("s5"));
-	footer:setFastSkillLabel(6, profile:get("s6"));
-	footer:setFastSkillLabel(7, profile:get("s7"));
-	footer:setFastSkillLabel(8, profile:get("s8"));
-	footer:setFastSkillLabel(9, profile:get("s9"));
-	footer:setFastSkillLabel(10, profile:get("s10"));
+	-- load actions
+  footer:actionLoad(1, profile:get("a1"))
+	footer:actionLoad(2, profile:get("a2"))
+	footer:actionLoad(3, profile:get("a3"))
+	footer:actionLoad(4, profile:get("a4"))
+	footer:actionLoad(5, profile:get("a5"))
+	footer:actionLoad(6, profile:get("a6"))
+	footer:actionLoad(7, profile:get("a7"))
+	footer:actionLoad(8, profile:get("a8"))
+	footer:actionLoad(9, profile:get("a9"))
+	footer:actionLoad(10, profile:get("a10"))
+	footer:actionLoad(11, profile:get("a11"))
+	footer:actionLoad(12, profile:get("a12"))
+	footer:actionLoad(13, profile:get("a13"))
+	footer:actionLoad(14, profile:get("a14"))
 end
 
 function profile:getName()
@@ -228,49 +156,9 @@ function profile:init(name)
 	if io.exists(self.file) then
 		table.load(self.file, self.list)
 	else
-		local default = {
-			["asopener"] = "",
-			["kiopener"] = "",
-			["fclass"] = "",
-			["sclass"] = "",
-			["kill"] = "kill",
-			["buffbasic"] = {},
-			["buffbasic2"] = {},
-			["follower"] = 0,
-			["fly"] = "float",
-			["master"] = "Thalorian",
-			["bag"] = "torba",
-			["mh"] = "miecz",
-			["oh"] = "",
-			["stats_progress"] = 0,
-			["mode"] = 1,
-			["walker"] = 10,
-			["water"] = "butla",
-			["food"] = "jablko",
-			["sub"] = "Link",
-			["k1"] = "Magic Missile",
-			["k2"] = "Chill Touch",
-			["k3"] = "Lightning Bolt",
-			["k4"] = "Vampiric Touch",
-			["k5"] = "Force Bolt",
-			["k6"] = "Fireball",
-			["k7"] = "Horrid Wilting",
-			["k8"] = "Orb of Entropy",
-			["k9"] = "Banshee",
-			["k10"] = "Nexus",
-			["s1"] = "Wardance",
-			["s2"] = "Disarm",
-			["s3"] = "Stun",
-			["s4"] = "Bash",
-			["s5"] = "Cleave",
-			["s6"] = "Vertical",
-			["s7"] = "Overwhelming",
-			["s8"] = "Parry",
-			["s9"] = "Kick",
-			["s10"] = "Bandage",
- 		}
-		self:save(default)
-		self.list = default
+		-- INIT NEW PROFILE
+		self:save(self.default)
+		self.list = self.default
 		msg = name..", utworzono twoj nowy profil, mozesz go modyfikowac w /opcje"
 	end
 	tempTimer(.3, function ()
@@ -295,9 +183,11 @@ end
 
 
 function profile:set(name, val)
-	if self.list[name] then
+	if self.default[name] then
 		self.list[name] = val
 		self:save()
+	else
+		printer:error("Profil", "Nie mozna zapisac zmiennej!")
 	end
 end
 
@@ -324,7 +214,3 @@ end
 function profile:loadLast()
 	self:init(self.last)
 end
-
---[[
-Wojownik, Złodziej, Barbarzyńca, Czarny Rycerz, Nomad, Mag, Druid, Kleryk, Paladyn
- ]]--

@@ -1,8 +1,17 @@
 footer = footer or {}
 footer.promptHeight = 50
 footer.buttonHeight = 60
-footer.action = false
 footer.count = 7
+footer.action = {}
+footer.actionPick = false
+footer.btnDefault = [[
+			background-color: #111111;
+			border-style: solid;
+			border-width: 1px;
+			border-color: black;
+			qproperty-wordWrap: true;
+			padding: 0px;
+ ]]
 footer.btnEmpty = [[
 			background-color: #555555;
 			border-style: solid;
@@ -12,7 +21,7 @@ footer.btnEmpty = [[
 			padding: 0px;
  ]]
 footer.btnChange = [[
-			background-color: #333333;
+			background-color: #222222;
 			border-style: dotted;
 			border-width: 1px;
 			border-color: #00FFFF;
@@ -202,6 +211,8 @@ end
 function footer:fastSpellCallback()
 	-- order na c nie dziala jak master nie ma castera
 	return function(i)
+		i= i-7 -- WYJEBAC TO WYJEBAC TO WYJEBAC TO
+
 		local v = "c '"..profile:get("k"..i).."'"
 		state:orderSub(v)
 		send(v)
@@ -210,6 +221,8 @@ end
 
 function footer:fastSkillCallback()
 	return function(i)
+		if i > 7 then return false end -- WYJEBAC TO WYJEBAC TO WYJEBAC TO
+
 		local v = profile:get("s"..i)
 		state:orderSub(v)
 		send(v)
@@ -217,11 +230,23 @@ function footer:fastSkillCallback()
 end
 
 function footer:setFastSpellLabel(i, name)
-	footer.buttons["Footer.Button"..10+i]:echo("<center>"..name)
+	--footer.buttons["Footer.Button"..i]:echo("<center>"..name)
 end
 
 function footer:setFastSkillLabel(i, name)
-	footer.buttons["Footer.Button"..i]:echo("<center>"..name)
+	--footer.buttons["Footer.Button"..i]:echo("<center>"..name)
+end
+
+function footer:getActionIdent(slot)
+	return "Footer.Button"..slot
+end
+
+function footer:getActionButton(slot)
+	return footer.buttons[self:getActionIdent(slot)]
+end
+
+function footer:getAction(slot)
+	return footer.action[slot]
 end
 
 function footer:createButtons(name, y, index, func, style, data)
@@ -234,7 +259,7 @@ function footer:createButtons(name, y, index, func, style, data)
 		fgColor = "black"
 	}, footer.overlay)
 	for i=index, index+self.count-1 do
-		local ident = "Footer.Button"..i
+		local ident = self:getActionIdent(i)
 		footer.buttons[ident] = Geyser.Label:new({
 			name = ident,
 		}, footer.container[name])
@@ -244,14 +269,14 @@ function footer:createButtons(name, y, index, func, style, data)
 			footer.buttons[ident]:setClickCallback(data[i]["func"])
 			footer.buttons[ident]:echo("<center>"..data[i].name)
 		else
-			footer.buttons[ident]:echo("<center>[]")
+			footer.buttons[ident]:echo("<center>")
 			footer.buttons[ident]:setClickCallback(function() func(i) end)
 		end
 	end
 end
 
 function footer:actionMode(state)
-	self.action = state
+	self.actionPick = state
 	if state then
 		self:actionStart()
 	else
@@ -261,11 +286,11 @@ end
 
 function footer:actionStart()
 	for i=1,self.count*2 do
-		local ident = "Footer.Button"..i
-			footer.buttons[ident]:setStyleSheet(self.btnChange)
-			footer.buttons[ident]:setClickCallback(function()
-				printer:actionPick1(i)
-			end)
+		local btn = self:getActionButton(i)
+		btn:setStyleSheet(self.btnChange)
+		btn:setClickCallback(function()
+			printer:actionPick1(i)
+		end)
 	end
 
 end
@@ -274,9 +299,30 @@ function footer:actionStop()
 end
 
 function footer:actionSet(slot, type, name, cast, color)
-	display(slot)
-	display(type)
-	display(name)
-	display(cast)
-	display(color)
+	local save = tostring(type).."#"..name.."#"..tostring(cast).."#"..color
+	profile:set("a"..tostring(slot), save)
+	self:actionLoad(slot, save, true)
+end
+
+function footer:actionLoad(slot, str, skipStyle)
+	if str then
+		local data = utils:split(str, "#")
+		self.action[slot] = {
+			["type"] = data[1],
+			["name"] = data[2],
+			["cast"] = data[3],
+		}
+ 		local btn = self:getActionButton(slot)
+		btn:cecho("<center><b><"..data[4]..">"..utils:abbr(data[2]))
+
+		if not skipStyle then
+			btn:setStyleSheet(self.btnDefault)
+		end
+	else
+		-- default action state
+	end
+end
+
+function footer:actionDelete(slot)
+	self:actionLoad(slot, false, true)
 end

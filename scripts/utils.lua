@@ -29,6 +29,26 @@ function utils:deleteDir(dir)
     lfs.rmdir(dir)
 end
 
+function utils:abbr(name)
+  local words = {}
+  -- Rozdziel string na słowa
+  for word in string.gmatch(name, "%S+") do
+      table.insert(words, word)
+  end
+  -- Dwa lub więcej słów: użyj pierwszych liter
+  if #words >= 2 then
+      local initials = ""
+      for _, word in ipairs(words) do
+          initials = initials .. string.upper(string.sub(word, 1, 1))
+      end
+      return initials
+  else
+      -- Jedno słowo: zwróć do 3 pierwszych liter jako wielkie litery
+      local singleWord = words[1]
+      return string.upper(string.sub(singleWord, 1, 3))
+  end
+end
+
 function utils:ellipsis(s, maxLen)
     if #s <= maxLen then
         return s

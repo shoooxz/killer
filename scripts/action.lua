@@ -4,7 +4,7 @@ function action:skill(slot, type)
   local fclass = profile:get("fclass")
   local sclass = profile:get("sclass")
   local skills = self:cleanSkills(base:getSkills(fclass, sclass))
-  self:print(false, skills, function(name, color) return function() footer:actionSet(slot, type, name, false, color) end end, slot, type)
+  self:print(false, skills, function(name, color) return function() footer:actionSet(slot, type, name, 0, color) end end, slot, type)
 end
 
 function action:spell(slot, type)
@@ -16,7 +16,11 @@ function action:spell(slot, type)
     local s = base:identToSchool(fclass)
     school = {s, base:schoolToColor(s)}
   end
-  self:print(school, spells, function(name, color) return function() footer:actionSet(slot, type, name, true, color) end end, slot, type)
+  self:print(school, spells, function(name, color) return function() footer:actionSet(slot, type, name, 1, color) end end, slot, type)
+end
+
+function action:shortName(name)
+  return utils:abbr(name)
 end
 
 function action:print(school, t, func, slot, typee)

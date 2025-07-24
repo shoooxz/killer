@@ -133,7 +133,7 @@ function printer:tags(arr, arg)
 		for i=1, #arr do
 			local value = arr[i]
 			len = len+string.len(value[2])
-			self:link(false, value[2], value[3])
+			self:link(value[1], value[2], value[3])
 			if i ~= #arr then
 				cecho("<white>, ")
 			end
