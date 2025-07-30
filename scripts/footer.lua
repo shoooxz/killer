@@ -182,51 +182,27 @@ end
 
 function footer:createUI()
 	setBorderBottom(self.height+self.promptHeight)
-	footer.overlay = Geyser.Label:new({
+	self.overlay = Geyser.Label:new({
 	  name = "MyButtons.Overlay",
 	  x = 0, y = -self.height,
 	  width = self.width,
 	  height = self.height,
 	})
-	footer:createButtons("Row1",
+	self:createButtons("Row1",
 		0, 1,
-		footer:fastSkillCallback(),
 		self.btnEmpty,
 		{}
 	)
-	footer:createButtons("Row2",
+	self:createButtons("Row2",
 		self.buttonHeight, 1+self.count,
-		footer:fastSpellCallback(),
 		self.btnEmpty,
 		{}
 	)
-  footer:createButtons("Row3",
+  self:createButtons("Row3",
 		2*self.buttonHeight, 1+2*self.count,
-		false,
 		self.btnBasic,
-		footer.baseFunc
+		self.baseFunc
 	)
-end
-
-function footer:fastSpellCallback()
-	-- order na c nie dziala jak master nie ma castera
-	return function(i)
-		i= i-7 -- WYJEBAC TO WYJEBAC TO WYJEBAC TO
-
-		local v = "c '"..profile:get("k"..i).."'"
-		state:orderSub(v)
-		send(v)
-	end
-end
-
-function footer:fastSkillCallback()
-	return function(i)
-		if i > 7 then return false end -- WYJEBAC TO WYJEBAC TO WYJEBAC TO
-
-		local v = profile:get("s"..i)
-		state:orderSub(v)
-		send(v)
-	end
 end
 
 function footer:setFastSpellLabel(i, name)
@@ -242,35 +218,63 @@ function footer:getActionIdent(slot)
 end
 
 function footer:getActionButton(slot)
-	return footer.buttons[self:getActionIdent(slot)]
+	return self.buttons[self:getActionIdent(slot)]
 end
 
 function footer:getAction(slot)
-	return footer.action[slot]
+	return self.action[slot]
 end
 
-function footer:createButtons(name, y, index, func, style, data)
-	footer.container[name] = Geyser.HBox:new({
+function footer:actionCallback(i)
+	return function()
+		-- jesli na slocie jest jakas akcja
+		local action = self:getAction(i)
+		if action then
+			if action.type == 1 then
+				-- podwojny
+				state:orderSub("action "..i)
+				if action.cast then
+					send("c "..action.name)
+				else
+					send(action.name)
+				end
+			elseif action.type == 2 then
+				-- tylko master
+				if action.cast then
+					send("c "..action.name)
+				else
+					send(action.name)
+				end
+			elseif action.type == 3 then
+				-- tylko slave ?
+
+			end
+		end
+	end
+end
+
+function footer:createButtons(name, y, index, style, data)
+	self.container[name] = Geyser.HBox:new({
 		name = "Footer."..name,
 		x = 0, y = y,
 		width = "100%",
 		height =  self.buttonHeight,
 		color = "black",
 		fgColor = "black"
-	}, footer.overlay)
+	}, self.overlay)
 	for i=index, index+self.count-1 do
 		local ident = self:getActionIdent(i)
-		footer.buttons[ident] = Geyser.Label:new({
+		self.buttons[ident] = Geyser.Label:new({
 			name = ident,
-		}, footer.container[name])
-		footer.buttons[ident]:setStyleSheet(style)
-		footer.buttons[ident]:setFontSize(12)
+		}, self.container[name])
+		self.buttons[ident]:setStyleSheet(style)
+		self.buttons[ident]:setFontSize(12)
 		if next(data) then
-			footer.buttons[ident]:setClickCallback(data[i]["func"])
-			footer.buttons[ident]:echo("<center>"..data[i].name)
+			self.buttons[ident]:setClickCallback(data[i]["func"])
+			self.buttons[ident]:echo("<center>"..data[i].name)
 		else
-			footer.buttons[ident]:echo("<center>")
-			footer.buttons[ident]:setClickCallback(function() func(i) end)
+			self.buttons[ident]:echo("<center>")
+			self.buttons[ident]:setClickCallback(self:actionCallback(i))
 		end
 	end
 end
@@ -292,10 +296,18 @@ function footer:actionStart()
 			printer:actionPick1(i)
 		end)
 	end
-
 end
 
 function footer:actionStop()
+	for i=1,self.count*2 do
+		local btn = self:getActionButton(i)
+		if self:getAction(i) then
+			btn:setStyleSheet(self.btnDefault)
+		else
+			btn:setStyleSheet(self.btnEmpty)
+		end
+		btn:setClickCallback(self:actionCallback(i))
+	end
 end
 
 function footer:actionSet(slot, type, name, cast, color)
@@ -308,13 +320,12 @@ function footer:actionLoad(slot, str, skipStyle)
 	if str then
 		local data = utils:split(str, "#")
 		self.action[slot] = {
-			["type"] = data[1],
+			["type"] = tonumber(data[1]),
 			["name"] = data[2],
-			["cast"] = data[3],
+			["cast"] = self:castToBool(data[3]),
 		}
  		local btn = self:getActionButton(slot)
 		btn:cecho("<center><b><"..data[4]..">"..utils:abbr(data[2]))
-
 		if not skipStyle then
 			btn:setStyleSheet(self.btnDefault)
 		end
@@ -324,5 +335,18 @@ function footer:actionLoad(slot, str, skipStyle)
 end
 
 function footer:actionDelete(slot)
-	self:actionLoad(slot, false, true)
+	-- delete save
+	profile:set("a"..tostring(slot), false)
+	-- delte action in memory
+	self.action[slot] = nil
+	-- edit button
+	local btn = self:getActionButton(slot)
+	btn:echo("<center>")
+	btn:setStyleSheet(self.btnChange)
+end
+
+function footer:castToBool(str)
+	if str == "0" then return false end
+	if str == "1" then return true end
+	return false
 end

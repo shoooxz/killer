@@ -9,6 +9,10 @@ function character:processOrder(who, order)
     if order ==  "learn" then
       learn.auto = true
     end
+    if string.find(order, "action") then
+      footer:actionCallback(tonumber(arg[2]))()
+      return
+    end
     if string.find(order, "env") then
       if arg[2] == "1" then
         learn:envStart()
