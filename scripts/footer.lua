@@ -227,27 +227,27 @@ end
 
 function footer:actionCallback(i)
 	return function()
-		-- jesli na slocie jest jakas akcja
-		local action = self:getAction(i)
+		local action = footer:getAction(i)
+		display(footer.action[i])
 		if action then
 			if action.type == 1 then
 				-- podwojny
 				state:orderSub("action "..i)
 				if action.cast then
-					send("c "..action.name)
+					send("c '"..action.name.."'")
 				else
 					send(action.name)
 				end
 			elseif action.type == 2 then
 				-- tylko master
 				if action.cast then
-					send("c "..action.name)
+					send("c '"..action.name.."'")
 				else
 					send(action.name)
 				end
 			elseif action.type == 3 then
 				-- tylko slave ?
-
+				state:orderSub("action "..i)
 			end
 		end
 	end
@@ -332,6 +332,12 @@ function footer:actionLoad(slot, str, skipStyle)
 	else
 		-- default action state
 	end
+end
+
+function footer:subOnly(slot, name)
+	self:actionSet(slot, 3, name, 0, "orange")
+	local btn = self:getActionButton(slot)
+	btn:setStyleSheet(self.btnDefault)
 end
 
 function footer:actionDelete(slot)

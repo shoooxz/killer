@@ -30,7 +30,15 @@ base.schoolIdentToReverse = {
 
 --TODO SKILLS klecha, zlodziej i masterki do klechy, nomada i zlodzieja
 
-function base:targetToFancy(tar)
+function base:targetToFancy(tar, spell)
+	local light = {
+		"desert light",
+		"darkvision",
+		"infravision",
+	}
+	if utils:inArray2(spell, light) then
+		return "Tylko na siebie"
+	end
 	local out = {
 		["TAR_IGNORE"] = "Brak celu",
 		["TAR_CHAR_OFFENSIVE"] = "Ofensywny",
@@ -343,7 +351,7 @@ function base:help(name)
 					school = "Brak"
 				end
 				table.insert(arr, {self:schoolToColor(school), school})
-				table.insert(arr, {"white", self:targetToFancy(out.meta.target)})
+				table.insert(arr, {"white", self:targetToFancy(out.meta.target, name)})
 				table.insert(out.meta.additional, arr)
 				found = true
 			else
@@ -737,7 +745,6 @@ function base:buildSchool()
 	local skipIt = {
 		"light",
 		"detect magic",
-		"infravision",
 		"comprehend languages",
 		"dismiss animal",
 		"dismiss insect",
@@ -747,7 +754,6 @@ function base:buildSchool()
 		"continual light",
 		"invisibility",
 		"energize",
-		"darkvision",
 		"dismiss person",
 		"faerie fog",
 		"farsight",
@@ -821,7 +827,6 @@ function base:buildSchool()
 		"restoration",
 		"life transfer",
 		"hold evil",
-		"desert light",
 	}
 	-- define tables
 	self:declareSchool("inwo")

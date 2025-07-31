@@ -437,7 +437,7 @@
         "school": [
             "Przemiany"
         ],
-        "target": "TAR_IGNORE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "cure blindness",
@@ -1189,7 +1189,7 @@
         "school": [
             "Przemiany"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "invisibility",
@@ -3168,7 +3168,7 @@
         "school": [
             "Poznanie"
         ],
-        "target": "TAR_CHAR_DEFENSIVE"
+        "target": "TAR_CHAR_OFFENSIVE"
     },
     {
         "name": "storm shell",
