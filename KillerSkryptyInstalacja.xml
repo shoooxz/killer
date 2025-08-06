@@ -74,10 +74,10 @@
 									uninstallPackage("generic_mapper")
 									os.rename(dir.."/killer-"..version.."/", scripts_dst) -- zmien sciagnieta paczke na docelowa nazwe
 									os.remove(dir.."/killer_mapa.dat")
-									--os.remove(dir.."/Database_gps.db")  -- TODO dodac gps
+									os.remove(dir.."/Database_gps.db")
 
 									os.rename(scripts_dst.."killer_mapa.dat", dir.."/killer_mapa.dat")
-									--os.rename(scripts_dst.."Database_gps.db", dir.."/Database_gps.db") -- TODO dodac gps
+									os.rename(scripts_dst.."Database_gps.db", dir.."/Database_gps.db")
 
 									installPackage(scripts_dst.."killer.trigger")
 									debug("Installer", "Killer skrypty zainstalowane poprawnie!", true)

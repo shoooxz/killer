@@ -35,8 +35,14 @@ profile.default = {
 	["a12"] = "",
 	["a13"] = "",
 	["a14"] = "",
+	["ass"] = 0,
 }
 profile.func = {
+	["ass"] = function(val)
+		  val = tonumber(val)
+			profile.list.ass = val
+			profile:save()
+	end,
 	["asopener"] = function(val)
 			profile.list.asopener = val
 			profile:save()

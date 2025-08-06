@@ -22,9 +22,10 @@ function keybindSupport()
 	character:assist()
 end
 
-function keybindWater(from)
+function keybindWater()
 	if keybind.triggerCommand then
-		send(keybind.triggerCommand)
+		state:orderSub("water "..keybind.triggerCommand)
+		send(keybind:getWaterCommand(keybind.triggerCommand))
 	end
 end
 

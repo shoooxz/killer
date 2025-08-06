@@ -228,7 +228,7 @@ end
 function footer:actionCallback(i)
 	return function()
 		local action = footer:getAction(i)
-		display(footer.action[i])
+		--display(footer.action[i])
 		if action then
 			if action.type == 1 then
 				-- podwojny

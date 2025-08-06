@@ -24,6 +24,7 @@ function printer:settings()
     self:command("/opcje follower "..profile:get("follower"), "Ilosc followerow")
     self:command("/opcje fly "..profile:get("fly"), "Float albo Fly")
     self:command("/opcje master "..profile:get("master"), "Master")
+    self:command("/opcje ass "..profile:get("ass"), "Autowsparcie")
     --[[
     self:command("/opcje tryb "..profile:get("mode"), "Wlacz tryb przy ladowaniu profilu")
     self:dumpArray({{0, "brak"}, {1, "gornik"}, {2, "zielarz"}}, 4, nil, self.infoColor)

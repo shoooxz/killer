@@ -9,6 +9,10 @@ function character:processOrder(who, order)
     if order ==  "learn" then
       learn.auto = true
     end
+    if string.find(order, "water") then
+      send(keybind:getWaterCommand(arg[2]))
+      return
+    end
     if string.find(order, "action") then
       footer:actionCallback(tonumber(arg[2]))()
       return

@@ -22,14 +22,15 @@ function keybind:room(command)
 end
 
 -- WATER BIND
+function keybind:getWaterCommand(from)
+	return "drink "..from..";drink "..from..";drink "..from..";fill "..profile:get("water")
+end
+
 function keybind:water(from)
 	if self.show then
-		--echo("sraka")
-		self.triggerCommand = "drink "..from
+		self.triggerCommand = from
 		printer:bind(self.conf.keybindWater.modifier, self.conf.keybindWater.key, "napij sie")
 		self.show = false
-		send("drink "..from..";drink "..from..";drink "..from)
-		send("fill "..profile:get("water"))
 	end
 end
 

@@ -204,7 +204,9 @@ function state:gmcpRoomPeople()
     end
 
     --WSPARCIE ZROBIC CHECK CZY MA BYC
-    state:checkForAss(me)
+    if profile:get("ass") ~= 0  then
+      state:checkForAss(me)
+    end
 
     -- print all    me > mates > npc
     if me then

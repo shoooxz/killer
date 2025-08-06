@@ -1,6 +1,7 @@
 keybind = keybind or {}
 keybind.ids = keybind.ids or {}
 keybind.triggerCommand = nil
+keybind.arg = nil
 keybind.roomCommand = nil
 keybind.gateCommand = nil
 keybind.conf = {
