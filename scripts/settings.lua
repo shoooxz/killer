@@ -3,6 +3,14 @@ settings.file = getMudletHomeDir().."/settings.lua"
 settings.list = settings.list or {}
 settings.dpiScaling = 100
 settings.func = {
+	["top"] = function(val)
+		settings.list.top = tonumber(val)
+		settings:save()
+	end,
+	["btn"] = function(val)
+		settings.list.btn = tonumber(val)
+		settings:save()
+	end,
 	["szerokosc"] = function(val)
 		settings.list.mainWindowWidth = tonumber(val)
 		settings:save()
@@ -44,6 +52,8 @@ function settings:init()
 			["mapperWidth"] = 700,
 			["mapperHeight"] = 400,
 			["dpiScaling"] = 100,
+			["top"] = 60,
+			["btn"] = 40,
 		}
 		self:save(default)
 		self.list = default

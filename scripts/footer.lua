@@ -100,6 +100,7 @@ footer.overlay = {}
 footer.buttons = {}
 
 function footer:init()
+	self.buttonHeight = settings:get("btn")
 	self.width = settings:get("mainWindowWidth")-settings:get("mapperWidth")-10
 	self.promptHeight = settings:applyDpiScaling(self.promptHeight)
 	self.buttonHeight = settings:applyDpiScaling(self.buttonHeight)

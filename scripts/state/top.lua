@@ -27,6 +27,7 @@ top.affToColor = {
 top.affToRemove = {}
 
 function top:init()
+  self.height = settings:get("top")
   self.height = settings:applyDpiScaling(self.height)
   setBorderTop(self.height)
   self.width = settings:get("mainWindowWidth")-settings:get("mapperWidth")-10
