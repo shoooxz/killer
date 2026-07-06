@@ -25,12 +25,15 @@ function roller:stop()
 end
 
 function roller:catch(multimatches)
-  local str = tonumber ( multimatches[1][2] )
-  local int = tonumber ( multimatches[1][3] )
-  local wis = tonumber ( multimatches[2][2] )
-  local dex = tonumber ( multimatches[2][3] )
-  local con = tonumber ( multimatches[3][2] )
-  local cha = tonumber ( multimatches[3][3] )
+
+
+  local str = math.floor(tonumber ( multimatches[1][2] ))
+  local int = math.floor(tonumber ( multimatches[1][3] ))
+  local wis = math.floor(tonumber ( multimatches[2][2] ))
+  local dex = math.floor(tonumber ( multimatches[2][3] ))
+  local con = math.floor(tonumber ( multimatches[3][2] ))
+  local cha = math.floor(tonumber ( multimatches[3][3] ))
+
   local sum = str + int + wis + dex + con + cha
   local localStats = { sum = sum, str = str, int = int, wis = wis, dex = dex, con = con, cha = cha}
 

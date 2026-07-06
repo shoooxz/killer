@@ -360,7 +360,7 @@ function printer:roller(arr)
     --self:line("Perfect oznacza trafienie maxa w sesji.", self.sectionColor)
     --self:space()
     if next(arr) then
-        self:tableRow({10,10,10, 10, 10}, {"Stat", "Obecnie", "Max", "Target", "Perfect"})
+        self:tableRow({10,10,10, 10, 10}, {"Stat", "Obecnie", "Max", "Target", "Perfect"}, arr)
     end
     self:bottom(false, true)
 end
@@ -460,6 +460,8 @@ function printer:helpMem()
   self:command("Mag", "INT")
   self:command("Nomad", "INT, LUC")
   self:command("Kleryk/Paladyn/Druid", "WIS")
+  self:space()
+  self:text("Czas memowania jest sprawdzany osobno dla obu klas przy danym czarze, a nastepnie wybierana jest nizsza wartosc.")
   self:bottom()
 end
 

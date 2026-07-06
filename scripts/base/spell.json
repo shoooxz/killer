@@ -2632,7 +2632,7 @@
     {
         "name": "astral search",
         "info": "Dluga inktantacja, ktora otwiera przejscia do astralnego planu. Celem jest nawiazanie wiezi z istota z innego wymiaru, ktora ma ostatecznie, po oswojeniu, sluzyc magowi.",
-        "note": "Komenda: familiar.",
+        "note": "Komenda: familiar. Summony sa zalezne od sektorow gdzie wystepuja i charyzmy na wyzszym poziomie.",
         "class": [
             [
                 "mag",
