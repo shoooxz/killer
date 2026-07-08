@@ -13,6 +13,7 @@ function character:processOrder(who, order)
       send(keybind:getWaterCommand(arg[2]))
       return
     end
+
     if string.find(order, "action") then
       footer:actionCallback(tonumber(arg[2]))()
       return
@@ -43,6 +44,7 @@ function character:processOrder(who, order)
     end
     if string.find(order, "kill") then
       state:meKill(arg[2])()
+      self:assist()
       return
     end
     if order ==  "eat" then

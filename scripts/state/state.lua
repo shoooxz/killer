@@ -340,10 +340,10 @@ function state:printTeamMember(obj)
 
   -- RESUCE
   if obj.name == "JA" then
-    ls:cechoLink("<white><<green>R<white>>", [[send("order ]]..self.sub.." rescue "..profile.name..[[")]], "", true)
+    ls:cechoLink("<white><<green>R<white>>", [[send("order ]]..self.sub.." rescue "..profile.name..[[; hustle ]]..self.sub..[[")]], "", true)
   else
     if obj.name then
-      ls:cechoLink("<white>(<green>R<white>)", [[send("rescue ]]..obj.name..[[")]], "", true)
+      ls:cechoLink("<white>(<green>R<white>)", [[send("order ]]..self.sub.." hustle "..profile.name..[[; rescue ]]..obj.name..[[")]], "", true)
     else
       --display(obj)
     end

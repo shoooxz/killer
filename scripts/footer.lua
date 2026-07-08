@@ -230,6 +230,10 @@ function footer:actionCallback(i)
 	return function()
 		local action = footer:getAction(i)
 		--display(footer.action[i])
+		-- TUTAJ JAK SKILLE NIE DZIALAJA PO NAZWIE TRZEBA POZAMIENIAC
+		if action.name == "demon aura" then
+			action.name = "aura"
+		end
 		if action then
 			if action.type == 1 then
 				-- podwojny

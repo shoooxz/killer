@@ -555,7 +555,7 @@
     {
         "name": "control of magic",
         "info": "Umiejetnosc ta wplywa na sile zaklec, poprawia skupienie przy inkantacji oraz wplywa na mniejsza szanse otrzymania obrazen od wlasnych czarow.",
-        "note": 0,
+        "note": "Aby szkolic wyzsze levele skilla trzeba rzucac czary z wyzszych kregow.",
         "class": [
             [
                 "mag",
