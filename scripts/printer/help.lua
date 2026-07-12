@@ -318,6 +318,18 @@ function printer:actionPick2(slot, type)
   self:bottom(false, true)
 end
 
+function printer:cir(arr)
+  self:title("Szkola")
+  if next(arr) then
+    for circle, spells in pairs(arr) do
+      self:space()
+      self:section("Krag "..circle)
+      self:text(utils:concat(spells, ", "))
+    end
+  end
+  self:bottom(false, true)
+end
+
 function printer:actionShow(school, arr, slot, type)
   self:title("Akcja")
   self:section("Slot "..slot)

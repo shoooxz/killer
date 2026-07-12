@@ -49,10 +49,11 @@ footer.baseFunc = {
 	[16] = {
 		["name"] = "Rest",
 		["func"] = function()
-			 state:orderTeam("rest;recup;medi")
+			 state:orderTeam("rest;recup;medi;wiez smierc")
 			 send("rest")
 			 send("recup")
 			 send("medit")
+			 send("wiez smierc")
 		end,
 		["style"] = ""
 	},

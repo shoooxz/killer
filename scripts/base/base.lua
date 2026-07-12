@@ -15,6 +15,7 @@ base.skillDictionaryFull = {}
 base.spellClass = {}
 base.skillClass = {}
 base.effect = {}
+base.cir = {}
 base.schoolIdent = {
 	"inwo", "iluz", "nekr", "odrz", "prze", "przy", "zaur", "ogol"
 }
@@ -413,28 +414,39 @@ nekromancja <> iluzje/zauroczenia
 ]]--
 
 function base:schoolSuccess(current, arr)
-	local school = arr[1]
-	local reverse1 = arr[2]
-	local reverse2 = arr[3]
-	local reverse3 = arr[4] -- ?
-	if current == 0 then return true end
-	local firstPass = true
-	local secondPass = true
-	for i=1, #current do
-		if current[i] == "SpellSpec" then
-			if current[1] ~= school then
-				secondPass = false
-			end
-		else
-			if current[i] == reverse1 or current[i] == reverse2 then
-				firstPass = false
-			end
-			if reverse3 and current[i] == reverse3 then
-				firstPass = false
+	if type(arr) == "string" then
+		-- dla cir
+		if current == 0 then return true end
+		for i=1, #current do
+			if current[i] == arr then
+					return true
 			end
 		end
+		return false
+	else
+		local school = arr[1]
+		local reverse1 = arr[2]
+		local reverse2 = arr[3]
+		local reverse3 = arr[4] -- ?
+		if current == 0 then return true end
+		local firstPass = true
+		local secondPass = true
+		for i=1, #current do
+			if current[i] == "SpellSpec" then
+				if current[1] ~= school then
+					secondPass = false
+				end
+			else
+				if current[i] == reverse1 or current[i] == reverse2 then
+					firstPass = false
+				end
+				if reverse3 and current[i] == reverse3 then
+					firstPass = false
+				end
+			end
+		end
+		return firstPass and secondPass
 	end
-	return firstPass and secondPass
 end
 
 function base:generalCheck(circle, spell, school)
@@ -478,6 +490,18 @@ function base:declareSchool(name)
 	self.spellClass[name]["7"] = {}
 	self.spellClass[name]["8"] = {}
 	self.spellClass[name]["9"] = {}
+
+	-- cir
+	self.cir[name] = {}
+	self.cir[name]["1"] = {}
+	self.cir[name]["2"] = {}
+	self.cir[name]["3"] = {}
+	self.cir[name]["4"] = {}
+	self.cir[name]["5"] = {}
+	self.cir[name]["6"] = {}
+	self.cir[name]["7"] = {}
+	self.cir[name]["8"] = {}
+	self.cir[name]["9"] = {}
 end
 
 function base:declareOffensive(name)
@@ -868,6 +892,17 @@ function base:buildSchool()
 
 				for j=1, #self.jsonSpell[i].class do
 					local class = self.jsonSpell[i].class[j]
+
+					-- CIR CHECK
+					self:cirCheck("inwo", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school)
+					self:cirCheck("iluz", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school)
+					self:cirCheck("nekr", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school)
+					self:cirCheck("odrz", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school)
+					self:cirCheck("prze", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school)
+					self:cirCheck("przy", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school)
+					self:cirCheck("zaur", class[2], self.jsonSpell[i].name, self.jsonSpell[i].school)
+
+
 					if class[1] == "mag" then
 
 						-- filter spell by school, use and defensive/offensive
@@ -900,6 +935,12 @@ function base:buildSchool()
 			end
 			table.insert(self.spellSchool[short], self.jsonSpell[i]["name"])
 		end
+	end
+end
+
+function base:cirCheck(ident, circle, name, school)
+	if self:schoolSuccess(school, self:identToSchool(ident)) then
+		table.insert(self.cir[ident][tostring(circle)], name)
 	end
 end
 
@@ -942,6 +983,14 @@ function base:schoolToShort(long)
 		["Poznanie"] = "pozn",
 	}
 	return out[long]
+end
+
+function base:circle(cmd)
+	for i, v in pairs(self.cir[cmd]) do
+		self.cir[cmd][i] = utils:unique2(v)
+		printer:cir(self.cir[cmd])
+	end
+	--display(self.cir[cmd])
 end
 
 function base:dif(cmd)

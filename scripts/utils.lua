@@ -311,8 +311,23 @@ function utils:replacePolish(text)
   end
 end
 
+function utils:unique2(inputTable)
+  local seen = {}
+  local result = {}
+  for _, value in ipairs(inputTable) do
+      -- Check if the value is a string and hasn't been seen yet
+      if type(value) == "string" and not seen[value] then
+          seen[value] = true
+          table.insert(result, value)
+      end
+  end
+  return result
+end
+
+
 function utils:uniqueTable(Table)
     local EndTable = {}
+    if not table then return {} end
     for i, v in pairs(Table) do
         if not table.find(EndTable, v) then
             table.insert(EndTable, v)
