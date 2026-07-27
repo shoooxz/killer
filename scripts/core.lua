@@ -85,6 +85,8 @@ function scripts:onEnemyKilled(str)
 	who = str:lower()
 	if self:detectBody({"keton", "drzewiec"}) then
 		self.dead.loot = "drzewo"
+		inventory.lootBody = self.dead.loot
+		inventory.lootContainer = self.dead.loot
 	elseif self:detectBody({"szkielet"}) then
 		self.dead.loot = "kupa"
 		self.dead.gem = true

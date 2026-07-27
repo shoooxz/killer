@@ -3,6 +3,7 @@ learn.sessionSpells = {}
 learn.sessionSkills = {}
 learn.auto = false
 learn.i = 1
+learn.afk = false
 
 function learn:startSession()
   learn.sessionSpells = {}
@@ -162,4 +163,47 @@ function learn:envStop()
   for i=1, 10 do
     send("put sztylet torb")
   end
+end
+
+function learn:afkStart()
+  self.afk = true
+  self:afkLoop()
+end
+
+function learn:afkLoop()
+  -- przemian start z cast 'trans liq' buk
+  --[[for i=1, 6 do
+        send("cast 'trans liq' buk")
+      end
+      send("rest; wiez przem") ]]--
+  -- poznania start z c alarm e n w s   proc jest nawet jak tam jest juz alarm
+  --[[
+  send("c alarm e")
+  send("c alarm n")
+  send("c alarm w")
+  send("c alarm s")
+  send("c alarm e")
+  send("c alarm n")
+  tempTimer(5, function()
+    send("rest; wiez pozn")
+  end)
+  ]]--
+  -- przywolan summon inset dis inseect
+  if self.afk then
+    send("stand; drink font; eat jab")
+    send("c 'summon insect'")
+    send("c 'dismiss insect' fol")
+    send("c 'summon insect'")
+    send("c 'dismiss insect' fol")
+    send("c 'summon insect'")
+    send("c 'dismiss insect' fol")
+    tempTimer(5, function()
+        send("rest; wiez przyw")
+    end)
+  end
+end
+
+function learn:afkStop()
+  self.afk = false
+  printer:error("Learn", "Afk stop!")
 end

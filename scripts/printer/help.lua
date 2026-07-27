@@ -24,7 +24,7 @@ function printer:settings()
     self:command("/opcje top "..settings:get("top"), "Wysokosc gory")
     self:command("/opcje btn "..settings:get("btn"), "Wysokosc dolnych przyciskow")
     self:command("/opcje follower "..profile:get("follower"), "Ilosc followerow")
-    self:command("/opcje fly "..profile:get("fly"), "Float albo Fly")
+    self:command("/opcje fly "..profile:get("fly"), "Float2 albo fly2 jak odpalane tu i tu")
     self:command("/opcje master "..profile:get("master"), "Master")
     self:command("/opcje ass "..profile:get("ass"), "Autowsparcie")
     --[[

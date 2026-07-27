@@ -49,11 +49,11 @@ footer.baseFunc = {
 	[16] = {
 		["name"] = "Rest",
 		["func"] = function()
-			 state:orderTeam("rest;recup;medi;wiez smierc")
+			 state:orderTeam("rest;recup;medi;wiez przyw")
 			 send("rest")
 			 send("recup")
 			 send("medit")
-			 send("wiez smierc")
+			 send("wiez przyw")
 		end,
 		["style"] = ""
 	},
@@ -77,7 +77,13 @@ footer.baseFunc = {
 		["name"] = "Fly",
 		["func"] = function()
 			local s = profile:get("fly")
-			send("c "..s.."; c "..s.." "..profile:get("sub"))
+			if s == "float2" or s == "fly2" then
+				s = utils:rtrim(s, "2")
+				state:orderTeam("c "..s)
+				send("c "..s)
+			else
+				send("c "..s.."; c "..s.." "..profile:get("sub"))
+			end
 		end,
 		["style"] = ""
 	},
