@@ -42,18 +42,19 @@ footer.baseFunc = {
 		["func"] = function()
 			 send("stand")
 			 state:wakeTeam()
-			 state:orderTeam("stand")
+			 state:orderTeam("stand;aura")
+			 send("aura")
 		end,
 		["style"] = ""
 	},
 	[16] = {
 		["name"] = "Rest",
 		["func"] = function()
-			 state:orderTeam("rest;recup;medi;wiez przyw")
+			 state:orderTeam("rest;recup;medi;wiez odrz")
 			 send("rest")
 			 send("recup")
 			 send("medit")
-			 send("wiez przyw")
+			 send("wiez odrz")
 		end,
 		["style"] = ""
 	},

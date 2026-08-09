@@ -4,6 +4,7 @@ learn.sessionSkills = {}
 learn.auto = false
 learn.i = 1
 learn.afk = false
+learn.count = 0
 
 function learn:startSession()
   learn.sessionSpells = {}
@@ -190,17 +191,28 @@ function learn:afkLoop()
   ]]--
   -- przywolan summon inset dis inseect
   if self.afk then
-    send("stand; drink font; eat jab")
-    send("c 'summon insect'")
-    send("c 'dismiss insect' fol")
-    send("c 'summon insect'")
-    send("c 'dismiss insect' fol")
-    send("c 'summon insect'")
-    send("c 'dismiss insect' fol")
-    tempTimer(5, function()
-        send("rest; wiez przyw")
-    end)
+      self:afkSummon()
   end
+end
+
+function learn:afkSummon()
+    -- ta funkcje poprostu odpalic w afkLoop do odrzuta jebanego
+    self.count = self.count + 1
+    send("stand")
+    send("c 'summon insect'")
+    send("c 'dismiss insect' fol")
+
+    if self.count < 3 then
+      tempTimer(50, function()
+          self:afkSummon()
+      end)
+    else
+      self.count = 0
+      tempTimer(50, function()
+        send("c create; eat owoc; eat owoc; eat owoc; drink studnia; drink studnia; drink studnia")
+        send("rest; wiez odrz")
+      end)
+    end
 end
 
 function learn:afkStop()

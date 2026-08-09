@@ -179,6 +179,7 @@ function state:gmcpRoomPeople()
           -- jesli tank to ja - opener tankowy
           if obj.name == profile.name and state.opener == false then
             local opener = profile:get("kiopener")
+            character:assist()
             send(opener, true)
             state.opener = true
           end
@@ -254,9 +255,9 @@ function state:checkForAss(me)
               send(kill.." "..mate.enemy)
               send("ass")
             end
-            send(opener)
             character:assist()
-            self.tevent = utils:setTimeEvent(3)
+            send(opener)
+            self.tevent = utils:setTimeEvent(10)
             return true
         end
       end

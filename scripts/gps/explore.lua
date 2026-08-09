@@ -10,6 +10,7 @@ exp.heal = {}
 exp.heal.proc = 5
 exp.heal.spell = "cure serious"
 exp.heal.reverse = true
+exp.spell = "flame arrow"
 exp.deadCount = 0
 exp.tankSub = true
 exp.ids = {}
@@ -210,7 +211,7 @@ function exp:doThings()
   else
     if self.conf.ident then
       -- jesli heal jest w memie
-      if mem:canCast(self.heal.spell) then
+      if mem:canCast(self.heal.spell) and mem:canCast(self.spell) then
         -- odpauzuj
         self:loot()
       else

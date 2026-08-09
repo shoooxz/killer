@@ -90,7 +90,7 @@ function printer:scripts()
     self:space()
     self:section("OPENER:")
     self:command("/opener_list", "Lista setow w bazie")
-    self:command("/opener_add (nazwa) (ass) (def)", "Dodaje set (Oddzielone #)")
+    self:command("/opener_add (nazwa)@(ass)@(def)", "Dodaje set (Oddzielone #)")
     self:bottom()
 end
 
