@@ -50,11 +50,11 @@ footer.baseFunc = {
 	[16] = {
 		["name"] = "Rest",
 		["func"] = function()
-			 state:orderTeam("rest;recup;medi;wiez odrz")
-			 send("rest")
+			 state:orderTeam("touch doren;rest;recup;medi;wiez smierc")
+			 send("touch foren;rest")
 			 send("recup")
 			 send("medit")
-			 send("wiez odrz")
+			 send("wiez smierc")
 		end,
 		["style"] = ""
 	},
@@ -330,7 +330,7 @@ function footer:actionSet(slot, type, name, cast, color)
 end
 
 function footer:actionLoad(slot, str, skipStyle)
-	if str then
+	if str and str ~= "" then
 		local data = utils:split(str, "#")
 		self.action[slot] = {
 			["type"] = tonumber(data[1]),

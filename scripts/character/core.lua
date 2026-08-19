@@ -87,8 +87,19 @@ function character:knockdown()
   cecho("\n<red>UWAGA! POWALENIE!")
   scripts:beep()
   send("stand")
+  self:afterStand()
 end
 
+
+function character:afterDisarm()
+  local s = profile:get("adisarm")
+  send(s)
+end
+
+function character:afterStand()
+  local s = profile:get("astand")
+  send(s)
+end
 
 function character:disarm()
   deleteLine()

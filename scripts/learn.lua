@@ -209,7 +209,7 @@ function learn:afkSummon()
     else
       self.count = 0
       tempTimer(50, function()
-        send("c create; eat owoc; eat owoc; eat owoc; drink studnia; drink studnia; drink studnia")
+        send("c create; eat owoc; eat owoc; eat owoc; drink font; drink font; drink font")
         send("rest; wiez odrz")
       end)
     end

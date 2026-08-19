@@ -10,7 +10,7 @@ exp.heal = {}
 exp.heal.proc = 5
 exp.heal.spell = "cure serious"
 exp.heal.reverse = true
-exp.spell = "flame arrow"
+exp.spell = "chill touch"
 exp.deadCount = 0
 exp.tankSub = true
 exp.ids = {}
@@ -216,8 +216,8 @@ function exp:doThings()
         self:loot()
       else
         -- rest
-        state:orderTeam("rest;recup;medi")
-        send("rest;recup;medi")
+        state:orderTeam("touch doren;rest;recup;medi;wiez smierc")
+        send("touch foren;rest;recup;medi;wiez smierc")
       end
     else
       self.paused = false
@@ -241,6 +241,7 @@ end
 function exp:enemyExists()
   local loc = utils:getRoomPeople()
   for i=1, #self.conf.enemy do
+    --display(loc)
     if utils:inArray2(self.conf.enemy[i], loc) then
       return self.conf.enemy[i]
     end

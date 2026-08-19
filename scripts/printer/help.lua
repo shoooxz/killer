@@ -43,6 +43,8 @@ function printer:settings()
     self:command("/opcje kiopener "..profile:get("kiopener"), "Opener def (oddzielone #)")
     self:command("/opcje fclass "..profile:get("fclass"), "Pierwsza klasa")
     self:command("/opcje sclass "..profile:get("sclass"), "Druga klasa")
+    self:command("/opcje adisarm "..profile:get("adisarm"), "Akcja po Twoim udanym disarmie (oddzielone #)")
+    self:command("/opcje astand "..profile:get("astand"), "Akcja po Twoim stand (oddzielone #)")
     self:tags("Jak uzupelniac klasy?", "printer:classInfo()")
     self:bottom()
 end

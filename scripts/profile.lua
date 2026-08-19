@@ -2,6 +2,8 @@ profile = profile or {}
 profile.file = nil
 profile.list = profile.list or {}
 profile.default = {
+	["adisarm"] = "",
+	["astand"] = "",
 	["asopener"] = "",
 	["kiopener"] = "",
 	["fclass"] = "",
@@ -38,6 +40,14 @@ profile.default = {
 	["ass"] = 0,
 }
 profile.func = {
+	["adisarm"] = function(val)
+			profile.list.adisarm = val
+			profile:save()
+	end,
+	["astand"] = function(val)
+			profile.list.astand = val
+			profile:save()
+	end,
 	["ass"] = function(val)
 		  val = tonumber(val)
 			profile.list.ass = val
@@ -179,7 +189,7 @@ end
 
 function profile:get(name)
 	if self.list[name] then
-			if name == "kiopener" or name == "asopener" then
+			if name == "kiopener" or name == "asopener" or name == "adisarm" or name == "astand" then
 				return string.gsub(self.list[name], "#", ";")
 			else
 				return self.list[name]

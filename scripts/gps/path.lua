@@ -196,7 +196,7 @@ function path:wlosciStart()
   self.conf = {
     ["path"] = {"u", "w", "s", "w", "w", "n", "n", "n", "n", "s", "s", "s", "s", "e", "e", "e", "e", "n", "n", "n", "n", "n", "e", "n", "n",
                 "s", "s", "w", "s", "s", "s", "s", "s", "w", "w", "n", "e", "d",
-                "n", "w", "w", "n", "e", "e", "n", "w", "w", "e", "n", "n", "w", "n", "e", "e", "n", "n", "n", "n",
+                "n", "w", "w", "n", "n", "e", "n", "n", "w", "n", "e", "e", "n", "n", "n", "n",
                 "w", "w", "n", "e", "e", "s", "s", "s", "s", "w", "w", "n", "u", "n",
                 "w", "n", "n", "n", "e", "e", "e", "e", "s", "s", "s", "w", "w", "w"},
     ["enemy"] = {"Szkielet lucznika", "Szkielet wojownika"},
@@ -288,7 +288,7 @@ function path:szkarlatnyStart()
     ["path"] = {"brama", "s", "w", "e", "s", "e", "w", "s", "tawerna", "e", "s", "w", "n", "wyjście", "s", "s", "s", "s",
                 "u", "d", "n", "e", "więzienie", "d", "d", "e", "w", "u", "u", "wyjście", "w",
                 "n", "n", "n", "n", "n", "e", "e", "u", "kwatery", "e", "komnata"},
-    ["enemy"] = {"Żoldak", "Szkarlatny rycerz", "Gwardzista", "Wartownik", "Straznik magazynu"},
+    ["enemy"] = {"Żoldak", "Szkarlatny rycerz", "Gwardzista", "Wartownik", "Straznik magazynu", "Szkarłatny rycerz", "Straznik wiezienny"},
     ["buff"] = "exp",
     ["ident"] = "szkarlatny",
     ["loot"] = "cialo",
