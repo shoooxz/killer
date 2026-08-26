@@ -678,6 +678,35 @@ function base:combineSpells(t1, t2)
     return wynik
 end
 
+function base:getAdvSpells(type) --
+	local spellKeys = {
+			"dru", "iluz", "inwo", "kle",
+			"nekr", "nom", "odrz", "ogol",
+			"pal", "prze", "przy", "zaur"
+	}
+	if type == "offensive" then
+		-- Główna tabela docelowa
+		local mainTable = {}
+		-- Pętla pobierająca tablice na podstawie stringów z kluczami i scalająca je
+		for i = 1, #spellKeys do
+				local keyName = spellKeys[i]
+				mainTable = self:combineSpells(mainTable, self.spellOffensive[keyName])
+		end
+
+		return mainTable
+	else
+		-- Główna tabela docelowa
+		local mainTable = {}
+		-- Pętla pobierająca tablice na podstawie stringów z kluczami i scalająca je
+		for i = 1, #spellKeys do
+		    local keyName = spellKeys[i]
+		    mainTable = self:combineSpells(mainTable, self.spellDefensive[keyName])
+		end
+
+		return mainTable
+	end
+end
+
 function base:getSpells(type, fclass, sclass)
 	if sclass == "mag" then
 		sclass = "ogol"
@@ -690,6 +719,11 @@ function base:getSpells(type, fclass, sclass)
 	else
 		first = self.spellDefensive[fclass]
 		second = self.spellDefensive[sclass]
+	end
+	-- adv
+	if fclass == "adv" then
+		sclass = "adv"
+		first = self:getAdvSpells(type)
 	end
 	-- jesli rozne klasy
 	if fclass ~= sclass then
